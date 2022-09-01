@@ -12,8 +12,8 @@ const images = [
 
 export default function App() {
   return (
-    <>
+    <div className="bg-homeBody -mt-48">
       <Loading3D />
-    </>
+    </div>
   );
 }
