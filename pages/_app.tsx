@@ -1,4 +1,4 @@
-import "../styles/input.css";
+import "../styles/globals.css";
 import type { AppProps } from "next/app";
 import Navbar from "../components/Global/Navbars/Navbar";
 import SideNavModal from "../components/Global/Navbars/SideNavModal";
