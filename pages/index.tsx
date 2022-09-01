@@ -1,14 +1,7 @@
-import HeroSlides from "../components/UI/HeroSlides";
-
-const Home = () => {
-  return (
-    <>
-      <HeroSlides />
-    </>
-  );
-};
-
-export default Home;
+import Index from "../components/HomePage/Index";
+export default function App() {
+  return <Index />;
+}
 
 // import { useEffect, useState } from "react";
 // import axios from "axios";

@@ -29,7 +29,14 @@
     "react-icons": "^4.4.0",
     "react-responsive-carousel": "^3.2.23",
     "react-slick": "^0.29.0",
-    "sharp": "^0.30.7"
+    "sharp": "^0.30.7",
+    "three": "^0.143.0",
+    "@react-three/drei": "^9.17.3",
+    "@react-three/fiber": "^8.6.0",
+    "@splinetool/loader": "^0.9.103",
+    "@splinetool/r3f-spline": "^1.0.1",
+    "@splinetool/react-spline": "^2.2.1",
+    "@splinetool/runtime": "^0.9.103"
   },
   "devDependencies": {
     "@types/node": "18.7.14",
