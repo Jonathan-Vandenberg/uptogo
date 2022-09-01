@@ -1,3 +1,9 @@
+/* purgecss start ignore */
+@tailwind base;
+@tailwind components;
+/* purgecss end ignore */
+@tailwind utilities;
+
 html,
 body {
   padding: 0;
@@ -16,12 +22,9 @@ a {
   font-family: "ClearSans", sans-serif;
 }
 
-@tailwind base;
-@tailwind utilities;
-@tailwind components;
 
 @font-face {
-  font-family: 'SourceCodePro';
+  font-family: 'ClearSans';
   font-style: normal;
   font-weight: normal;
   font-display: swap;

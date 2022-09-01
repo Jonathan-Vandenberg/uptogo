@@ -1,20 +1,19 @@
 import HeroSlides from "../../components/UI/HeroSlides";
-import Stationary from "../UI/Stationary";
+import slide1 from "../../public/heroImages/biawweb.jpeg";
+import slide2 from "../../public/heroImages/Du-hoc-Sp-jain-01.jpeg";
+import slide3 from "../../public/heroImages/Gold-and-Blue-Trendy-New-Season-Boutique-Ads-Facebook-Cover-820-×-312-px-820-×-258-px.png";
 import Image from "next/image";
-import landingImage2 from "../../public/landingImage2.png";
+import Loading3D from "../UI/Loading3D";
+const images = [
+  "https://picsum.photos/200/300",
+  "https://picsum.photos/200/300",
+  "https://picsum.photos/200/300",
+];
 
 export default function App() {
   return (
     <>
-      {/* <Image src={landingImage} width={375} height={812} alt="landing Image" /> */}
-      <Image
-        src={landingImage2}
-        alt="lading image"
-        width={390}
-        height={844}
-        layout="responsive"
-      />
-      <HeroSlides />
+      <Loading3D />
     </>
   );
 }

@@ -1,11 +1,7 @@
 import { motion } from "framer-motion";
 import { NextPage } from "next";
 import Image, { StaticImageData } from "next/image";
-import "react-responsive-carousel/lib/styles/carousel.min.css";
 import Slider from "react-slick";
-import slide1 from "../../public/heroImages/biawweb.jpeg";
-import slide2 from "../../public/heroImages/Du-hoc-Sp-jain-01.jpeg";
-import slide3 from "../../public/heroImages/Gold-and-Blue-Trendy-New-Season-Boutique-Ads-Facebook-Cover-820-×-312-px-820-×-258-px.png";
 
 interface Props {
   /**Array of image links or imports */
@@ -18,22 +14,31 @@ interface Props {
   scaleOnHover: boolean;
 }
 
-const images = [slide3];
-
-const HeroSlideshow = () => {
+const HeroSlideshow: NextPage<Props> = ({
+  imageData,
+  width,
+  height,
+  scaleOnHover,
+}) => {
   const renderSlides = () =>
-    images.map((img, i) => (
+    imageData.map((img, i) => (
       <div key={i}>
-        <div key={img.toString()}>
+        <motion.div
+          whileHover={{
+            scale: scaleOnHover ? 1.02 : 1,
+            transition: { duration: 0.3 },
+          }}
+          key={img.toString()}
+        >
           <Image
             src={img}
-            alt="uptogo hero image"
-            width={820}
-            height={258}
-            className="object-cover"
+            alt="VPBank Hero Image"
+            width={width}
+            height={height}
             layout="responsive"
+            className="object-cover"
           />
-        </div>
+        </motion.div>
       </div>
     ));
   return (
