@@ -1,9 +1,18 @@
-import HeroSlider from "../UI/HeroSlider";
+import Image from "next/image";
+import image from "../../public/heroImages/biawweb.jpeg";
 
 export default function App() {
   return (
     <div className="bg-homeBody -mt-48">
-      <HeroSlider />
+      <div className="mt-48">
+        <Image
+          src={image}
+          alt="image"
+          width={950}
+          height={280}
+          layout="responsive"
+        />
+      </div>
       <div className="px-10 container mx-auto">
         <h2 className="text-5xl font-semibold pt-16 text-center">
           Lý Do Lựa Chọn Uptogo?

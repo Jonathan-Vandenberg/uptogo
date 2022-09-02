@@ -1,10 +1,8 @@
 import HomeMain from "../components/HomePage/Index";
-import Globes from "../components/UI/Globes";
 export default function App() {
   return (
     <>
       <HomeMain />
-      <Globes />
       <div className="h-96 flex items-center justify-center">SPACER TIME</div>
     </>
   );
