@@ -21,7 +21,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       opacity: 0,
       transition: {
         duration: 0.5,
-        delay: 3.5,
+        delay: 3.2,
       },
     });
     setTimeout(() => {
