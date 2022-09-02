@@ -334,7 +334,7 @@ const SideNavModal: NextPage = () => {
   );
 
   return (
-    <div className="sticky top-0 z-50 flex items-center justify-between bg-white p-2 sm:px-4 lg:hidden">
+    <div className="sticky bg-body top-0 z-40 flex items-center justify-between p-2 sm:px-4 lg:hidden">
       <div className="cursor-pointer p-1 flex items-center justify-center">
         <Image
           src={uptogoLogoSmall}
@@ -358,7 +358,7 @@ const SideNavModal: NextPage = () => {
           className="hamburger align-center top-1 right-1 z-50 flex flex-col justify-center focus:outline-none lg:hidden"
           aria-label="Menu Dropdown"
         >
-          <span className="hamburger-top z-50"></span>
+          <span className="hamburger-top"></span>
           <span className="hamburger-middle"></span>
           <span className="hamburger-bottom"></span>
         </button>
