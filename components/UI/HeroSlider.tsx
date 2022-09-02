@@ -3,7 +3,6 @@ import { Slide } from "react-slideshow-image";
 import slide1 from "../../public/heroImages/biawweb.jpeg";
 import slide2 from "../../public/heroImages/Du-hoc-Sp-jain-01.jpeg";
 import slide3 from "../../public/heroImages/Gold-and-Blue-Trendy-New-Season-Boutique-Ads-Facebook-Cover-820-×-312-px-820-×-258-px.png";
-import slide4 from "../../public/heroImages/hero3D.png";
 import Image from "next/image";
 const slideImages = [
   {
@@ -16,10 +15,6 @@ const slideImages = [
   },
   {
     url: slide3,
-    caption: "Slide 3",
-  },
-  {
-    url: slide4,
     caption: "Slide 3",
   },
 ];
