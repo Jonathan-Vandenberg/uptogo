@@ -39,7 +39,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         <motion.div
           initial={{ opacity: 1 }}
           animate={controls}
-          className="z-50 w-60 mx-auto absolute top-32 left-0 my-auto"
+          className="z-50 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-2/3"
         >
           <Spline
             onLoad={handleLoad}
