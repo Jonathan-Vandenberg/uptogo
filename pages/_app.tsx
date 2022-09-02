@@ -32,7 +32,7 @@ function MyApp({ Component, pageProps }: AppProps) {
           duration: 0.5,
         },
       });
-    }, 4800);
+    }, 4500);
   };
 
   const styles = splashComplete ? "" : "bg-blueBody h-screen w-screen";
