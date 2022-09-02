@@ -7,6 +7,7 @@ import Loading3D from "../components/UI/Loading3D";
 import { motion, useAnimationControls } from "framer-motion";
 import Spline from "@splinetool/react-spline";
 import { useEffect, useState } from "react";
+import NextNProgress from "nextjs-progressbar";
 
 function MyApp({ Component, pageProps }: AppProps) {
   const [splashComplete, setSplashComplete] = useState(false);
@@ -35,11 +36,12 @@ function MyApp({ Component, pageProps }: AppProps) {
 
   return (
     <div className="relative bg-blueBody">
+      <NextNProgress color="rgb(248,149,41)" height={1} />
       {!splashComplete && (
         <motion.div
           initial={{ opacity: 1 }}
           animate={controls}
-          className="z-50 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-2/3"
+          className="z-50 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-[540px]"
         >
           <Spline
             onLoad={handleLoad}
