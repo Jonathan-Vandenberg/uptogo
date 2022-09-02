@@ -41,13 +41,13 @@ const CompareDropdown: NextPage<Props> = ({ leave }) => (
     </div>
     <div className="col-span-1 flex flex-col">
       <div>
-        <Image
-          src={"https://picsum.photos/id/269/300/300"}
+        {/* <Image
+          src={""}
           width="300"
           height="300"
           layout="responsive"
           alt="dropdown-item"
-        />
+        /> */}
       </div>
 
       <div className="text-md block py-5 text-gray-500">

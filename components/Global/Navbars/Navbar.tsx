@@ -9,7 +9,6 @@ import SMEDropdown from "./Dropdowns/SMEDropdown";
 
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { BsSearch } from "react-icons/bs";
 import { FaHeart, FaMobileAlt, FaRegQuestionCircle } from "react-icons/fa";
 import { HiOutlineLocationMarker } from "react-icons/hi";
 import NavbarTop from "./NavbarTop";
@@ -48,7 +47,7 @@ const NavbarBottom: NextPage = () => {
       <NavbarTop onMouseEnter={handleCloseDropdowns} />
       <div
         id="bottom-nav"
-        className="sticky top-0 z-50 hidden bg-white lg:block"
+        className="sticky top-0 z-50 hidden bg-white/25 lg:block backdrop-blur-md"
         onMouseLeave={handleCloseDropdowns}
       >
         <div className="relative flex h-16 items-center justify-around">
@@ -66,7 +65,7 @@ const NavbarBottom: NextPage = () => {
               <div
                 id="retailLink"
                 key="retail"
-                className="cursor-pointer font-medium hover:text-iwanttoColor text-gray-800"
+                className="cursor-pointer text-lg hover:text-iwanttoColor text-black"
                 onMouseEnter={() => {
                   setMajorsDropdown(false);
                   setSMEDropdown(false);
@@ -80,7 +79,7 @@ const NavbarBottom: NextPage = () => {
               <div
                 id="householdLink"
                 key="household"
-                className="cursor-pointer font-medium hover:text-iwanttoColor text-gray-800"
+                className="cursor-pointer text-lg hover:text-iwanttoColor text-black"
                 onMouseEnter={() => {
                   setMajorsDropdown(true);
                   setSMEDropdown(false);
@@ -105,7 +104,7 @@ const NavbarBottom: NextPage = () => {
               <div
                 id="smeLink"
                 key="sme"
-                className="cursor-pointer font-medium hover:text-iwanttoColor text-gray-800"
+                className="cursor-pointer text-lg hover:text-iwanttoColor text-black"
                 onMouseEnter={() => {
                   setSMEDropdown(true);
                   setMajorsDropdown(false);
@@ -139,7 +138,7 @@ const NavbarBottom: NextPage = () => {
               <div
                 id="corporateLink"
                 key="corporate"
-                className="cursor-pointer font-medium hover:text-iwanttoColor text-gray-800"
+                className="cursor-pointer text-lg hover:text-iwanttoColor text-black"
                 onMouseEnter={() => {
                   setCorporateDropdown(true);
                   setMajorsDropdown(false);
@@ -162,7 +161,7 @@ const NavbarBottom: NextPage = () => {
             </div>
             <Link key="vp_bank" href={"/compare"}>
               <p
-                className="cursor-pointer font-medium hover:text-iwanttoColor text-gray-800"
+                className="cursor-pointer text-lg hover:text-iwanttoColor text-black"
                 onMouseEnter={() => {
                   setCorporateDropdown(false);
                   setMajorsDropdown(false);

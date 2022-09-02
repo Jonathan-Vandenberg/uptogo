@@ -4,13 +4,13 @@ import { useRouter } from "next/router";
 import { AiOutlineMail } from "react-icons/ai";
 import { BsFillTelephoneOutboundFill } from "react-icons/bs";
 import { GrMapLocation } from "react-icons/gr";
-import uptogoLogo from "../../../../public/uptogoLogoBig.png";
+import uptogoLogo from "../../../public/uptogoLogoBig.png";
 import CollapseMenus from "./CollapseMenus";
 import UnCollapassedMenu from "./UnCollapassedMenu";
-import facebookLogo from "../../../../public/social-media/facebook.svg";
-import zaloLogo from "../../../../public/social-media/zalo.svg";
-import youtubeLogo from "../../../../public/social-media/youtube.svg";
-import appStoreLogo from "../../../../public/social-media/appStoreGooglePlayLogo.png";
+import facebookLogo from "../../../public/social-media/facebook.svg";
+import zaloLogo from "../../../public/social-media/zalo.svg";
+import youtubeLogo from "../../../public/social-media/youtube.svg";
+import appStoreLogo from "../../../public/social-media/appStoreGooglePlayLogo.png";
 
 const Footer = () => {
   const router = useRouter();

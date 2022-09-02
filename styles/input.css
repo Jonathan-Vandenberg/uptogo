@@ -3,6 +3,7 @@
 @tailwind components;
 /* purgecss end ignore */
 @tailwind utilities;
+@import "react-slideshow-image/dist/styles.css";
 
 html,
 body {

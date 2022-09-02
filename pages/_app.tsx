@@ -2,11 +2,10 @@ import "../styles/input.css";
 import type { AppProps } from "next/app";
 import Navbar from "../components/Global/Navbars/Navbar";
 import SideNavModal from "../components/Global/Navbars/SideNavModal";
-import Footer from "../components/Global/Navbars/Footer/Footer";
-import Loading3D from "../components/UI/Loading3D";
+import Footer from "../components/Global/Footer/Footer";
 import { motion, useAnimationControls } from "framer-motion";
 import Spline from "@splinetool/react-spline";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import NextNProgress from "nextjs-progressbar";
 
 function MyApp({ Component, pageProps }: AppProps) {

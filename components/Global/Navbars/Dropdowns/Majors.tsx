@@ -38,13 +38,13 @@ const Majors: NextPage<Props> = ({ leave }) => (
     </div>
     <div className="col-span-1 flex flex-col">
       <div>
-        <Image
+        {/* <Image
           src={"https://picsum.photos/id/299/600/600"}
           width="600"
           height="600"
           layout="responsive"
           alt="dropdown-item"
-        />
+        /> */}
       </div>
 
       <div className="text-md block py-5 text-gray-500">
