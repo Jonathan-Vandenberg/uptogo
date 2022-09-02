@@ -43,7 +43,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         <motion.div
           initial={{ opacity: 1 }}
           animate={controls}
-          className="z-50 absolute top-60 left-1/2 transform -translate-x-1/2"
+          className="z-50 absolute top-52 left-1/2 transform -translate-x-1/2"
         >
           <Spline
             onLoad={handleLoad}
@@ -54,7 +54,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       {loadingSpinner && (
         <div
           role="status"
-          className="absolute top-52 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+          className="absolute top-60 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
         >
           <svg
             aria-hidden="true"
