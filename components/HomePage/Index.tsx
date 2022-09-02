@@ -15,7 +15,7 @@ export default function App() {
       </div>
       <div className="px-10 container mx-auto">
         <h2 className="text-5xl font-semibold pt-16 text-center">
-          Lý Do Lựa Chọn Uptogo?
+          Lý Do Lựa Chọn Uptogo??
         </h2>
         <p className="py-4 text-xl">
           Tư vấn hàng đầu Việt Nam, thành lập bởi chuyên gia có kinh nghiệm hơn
