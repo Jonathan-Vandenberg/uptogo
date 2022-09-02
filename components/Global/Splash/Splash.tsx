@@ -1,15 +1,8 @@
-import "../styles/input.css";
-import type { AppProps } from "next/app";
-import Navbar from "../components/Global/Navbars/Navbar";
-import SideNavModal from "../components/Global/Navbars/SideNavModal";
-import Footer from "../components/Global/Navbars/Footer/Footer";
-import Loading3D from "../components/UI/Loading3D";
-import { motion, useAnimationControls } from "framer-motion";
 import Spline from "@splinetool/react-spline";
-import { useEffect, useState } from "react";
-import NextNProgress from "nextjs-progressbar";
+import { useAnimationControls, motion } from "framer-motion";
+import { useState } from "react";
 
-function MyApp({ Component, pageProps }: AppProps) {
+export default function App() {
   const [splashComplete, setSplashComplete] = useState(false);
   const [loadingSpinner, setLoadingSpinner] = useState(true);
   const controls = useAnimationControls();
@@ -24,25 +17,15 @@ function MyApp({ Component, pageProps }: AppProps) {
         delay: 4,
       },
     });
-    controlsBody.start({
-      opacity: 1,
-      transition: {
-        duration: 0.5,
-        delay: 4,
-      },
-    });
     setTimeout(() => {
       setSplashComplete(true);
     }, 4200);
   };
 
-  const styles = splashComplete ? "" : "bg-blueBody h-screen w-screen";
-
   return (
-    <div className={styles}>
-      <NextNProgress color="rgb(248,149,41)" height={1} />
+    <>
       {!splashComplete && (
-        <div className="relative h-screen w-screen">
+        <div className="absolute h-screen w-screen  bg-blueBody">
           {!splashComplete && (
             <motion.div
               initial={{ opacity: 1 }}
@@ -78,18 +61,6 @@ function MyApp({ Component, pageProps }: AppProps) {
           )}
         </div>
       )}
-      <motion.div initial={{ opacity: 0 }} animate={controlsBody}>
-        {splashComplete && (
-          <>
-            <Navbar />
-            <SideNavModal />
-            <Component {...pageProps} />
-            <Footer />
-          </>
-        )}
-      </motion.div>
-    </div>
+    </>
   );
 }
-
-export default MyApp;
