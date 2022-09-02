@@ -17,7 +17,7 @@ module.exports = {
         body: "rgb(244,247,248)",
         cardBg: "rgb(244, 247, 248)",
         filterDropdown: "rgb(196, 245, 208)",
-        homeBody: "rgb(19, 37, 83)",
+        blueBody: "rgb(19, 37, 83)",
       },
       backgroundImage: {
         "hero-pattern": "url('/public/6057300.jpg')",

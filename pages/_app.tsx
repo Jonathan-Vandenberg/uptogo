@@ -34,15 +34,17 @@ function MyApp({ Component, pageProps }: AppProps) {
   };
 
   return (
-    <div className="realtive">
+    <div className="relative bg-blueBody">
       {!splashComplete && (
-        <motion.div initial={{ opacity: 1 }} animate={controls}>
-          <div className="z-50 absolute top-0 left-0">
-            <Spline
-              onLoad={handleLoad}
-              scene="https://prod.spline.design/gg0modFcZyGWPqfY/scene.splinecode"
-            />
-          </div>
+        <motion.div
+          initial={{ opacity: 1 }}
+          animate={controls}
+          className="z-50 w-60 mx-auto absolute top-32 left-0 my-auto"
+        >
+          <Spline
+            onLoad={handleLoad}
+            scene="https://prod.spline.design/gg0modFcZyGWPqfY/scene.splinecode"
+          />
         </motion.div>
       )}
       <motion.div initial={{ opacity: 0 }} animate={controlsBody}>
