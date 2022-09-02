@@ -54,7 +54,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       {loadingSpinner && (
         <div
           role="status"
-          className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+          className="absolute top-52 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
         >
           <svg
             aria-hidden="true"
