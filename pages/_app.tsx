@@ -20,7 +20,7 @@ function MyApp({ Component, pageProps }: AppProps) {
     controls.start({
       opacity: 0,
       transition: {
-        duration: 0.5,
+        duration: 1.5,
         delay: 4.2,
       },
     });
@@ -29,7 +29,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       controlsBody.start({
         opacity: 1,
         transition: {
-          duration: 0.5,
+          duration: 1.5,
         },
       });
     }, 4200);
@@ -39,7 +39,7 @@ function MyApp({ Component, pageProps }: AppProps) {
 
   return (
     <div className={styles}>
-      <NextNProgress color="rgb(19, 37, 83)" height={2} />
+      <NextNProgress color="rgb(19, 37, 83)" height={3} />
       {!splashComplete && (
         <div className="relative h-screen w-screen">
           {!splashComplete && (
