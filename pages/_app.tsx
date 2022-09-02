@@ -21,18 +21,17 @@ function MyApp({ Component, pageProps }: AppProps) {
       opacity: 0,
       transition: {
         duration: 0.5,
-        delay: 4,
-      },
-    });
-    controlsBody.start({
-      opacity: 1,
-      transition: {
-        duration: 0.5,
-        delay: 4,
+        delay: 3.8,
       },
     });
     setTimeout(() => {
       setSplashComplete(true);
+      controlsBody.start({
+        opacity: 1,
+        transition: {
+          duration: 0.5,
+        },
+      });
     }, 4200);
   };
 
