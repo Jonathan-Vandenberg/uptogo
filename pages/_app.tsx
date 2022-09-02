@@ -21,7 +21,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       opacity: 0,
       transition: {
         duration: 0.5,
-        delay: 3.2,
+        delay: 3.8,
       },
     });
     setTimeout(() => {
@@ -32,7 +32,7 @@ function MyApp({ Component, pageProps }: AppProps) {
           duration: 0.5,
         },
       });
-    }, 4200);
+    }, 4800);
   };
 
   const styles = splashComplete ? "" : "bg-blueBody h-screen w-screen";
