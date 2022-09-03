@@ -103,22 +103,6 @@ const Footer = () => {
               <Image src={zaloLogo} width={35} height={35} alt="zalo logo" />
             </div>
           </div>
-
-          <div className=" space-y-2 lg:flex lg:flex-col lg:items-center lg:justify-center">
-            <div>
-              <p className="text-md  text-center font-bold text-gray-600">
-                VPBANK MOBILE APP
-              </p>
-            </div>
-            <div>
-              <Image
-                src={appStoreLogo}
-                height={40}
-                width={250}
-                alt="app store logo"
-              />
-            </div>
-          </div>
         </div>
         <div className="bg-blue py-2 md:py-4">
           <div className="mx-auto flex flex-col-reverse items-center justify-evenly space-y-2 px-3 text-sm md:container  md:flex-row md:space-y-0">
