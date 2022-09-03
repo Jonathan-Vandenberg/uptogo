@@ -44,17 +44,17 @@ const App = () => {
           transitionTime={200}
           trigger={
             <div className="flex items-center justify-between px-6 bg-blue text-white">
-              <p className="p-2 ml-2 text-gray-100">Information Technology</p>
+              <p className="p-4 ml-2 text-gray-100">Information Technology</p>
               <div className="pr-4">
                 <FaAngleRight fontSize={20} />
               </div>
             </div>
           }
         >
-          <p className="pl-12 cursor-pointer p-2  hover:bg-lightBlue">
+          <p className="pl-12 cursor-pointer p-4  hover:bg-lightBlue">
             Computer Science
           </p>
-          <p className="cursor-pointer p-2 pl-12 hover:bg-lightBlue">
+          <p className="cursor-pointer p-4 pl-12 hover:bg-lightBlue">
             Web Development
           </p>
         </Collapsible>
