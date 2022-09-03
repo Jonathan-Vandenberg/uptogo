@@ -335,8 +335,8 @@ const SideNavModal: NextPage = () => {
   );
 
   return (
-    <div className="sticky bg-body top-0 z-40 flex items-center justify-between p-2 sm:px-4 lg:hidden">
-      <div className="cursor-pointer p-1 flex items-center justify-center">
+    <div className="sticky bg-blue top-0 z-40 flex items-center justify-between p-2 sm:px-4 lg:hidden">
+      <div className="ml-5 cursor-pointer p-1 flex items-center justify-center">
         <Image
           src={uptogoLogoSmall}
           width="45"
@@ -345,11 +345,8 @@ const SideNavModal: NextPage = () => {
           onClick={() => router.push("/")}
         />
       </div>
-      <div className="flex h-full items-center justify-end space-x-6">
-        <div className="text-xl text-iwanttoColor">
-          <BsSearch />
-        </div>
-        <div className="divide-slate-300 border-x-2 px-6 text-2xl text-iwanttoColor">
+      <div className="flex h-full items-center justify-end space-x-6 mr-5">
+        <div className="px-6 text-2xl text-white">
           <FaMobileAlt />
         </div>
         <button

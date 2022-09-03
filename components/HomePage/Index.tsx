@@ -1,6 +1,6 @@
 import Image from "next/image";
 import image from "../../public/heroImages/biawweb.jpeg";
-import Divider from "../../components/UI/Divider";
+import InitDivider from "../UI/InitDivider";
 import TopDivider from "../UI/TopDivider";
 
 export default function App() {
@@ -15,10 +15,17 @@ export default function App() {
           layout="responsive"
         />
       </div>
-      <TopDivider color="blue" />
+      <div className="md:hidden">
+        <InitDivider color="blue" />
+      </div>
+      <div className="hidden md:block">
+        <TopDivider color="blue" />
+      </div>
       <div className="px-10 container mx-auto">
-        <h2>Lý Do Lựa Chọn Uptogo?</h2>
-        <p className="py-4 text-xl">
+        <h2 className="text-2xl font-semibold text-gray-800 md:text-4xl lg:text-5xl">
+          Lý Do Lựa Chọn Uptogo?
+        </h2>
+        <p className="py-4 text-xl text-gray-600">
           Tư vấn hàng đầu Việt Nam, thành lập bởi chuyên gia có kinh nghiệm hơn
           12 năm trong nghề. Không chỉ dừng lại ở kinh nghiệm tư vấn, đội ngũ tư
           vấn viên là những người đã từng học tập, sinh sống và làm việc tại

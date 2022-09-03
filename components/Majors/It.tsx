@@ -6,8 +6,14 @@ export default function It() {
   return (
     <div className="">
       <div>
-        <div className="md:mt-12 flex items-center justify-center">
-          <Image src={image1} width={600} height={400} alt="IT image" />
+        <div className="md:pt-12 flex items-center justify-center bg-blue">
+          <Image
+            src={image1}
+            width={600}
+            height={400}
+            alt="IT image"
+            className="rounded-md"
+          />
         </div>
         <TopDivider color="blue" />
         <div className="px-10 container mx-auto">
