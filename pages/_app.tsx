@@ -35,7 +35,7 @@ function MyApp({ Component, pageProps }: AppProps) {
     }, 5000);
   };
 
-  const styles = splashComplete ? "" : "bg-blueBody h-screen w-screen";
+  const styles = splashComplete ? "" : "bg-blue h-screen w-screen";
 
   return (
     <div className={styles}>

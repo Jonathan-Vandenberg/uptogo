@@ -1,5 +1,6 @@
 import Image from "next/image";
 import image1 from "../../public/Subjects/IT/QUẢN-LÝ-DỰ-ÁN-1-600x400.png";
+import TopDivider from "../UI/TopDivider";
 
 export default function It() {
   return (
@@ -8,8 +9,9 @@ export default function It() {
         <div className="md:mt-12 flex items-center justify-center">
           <Image src={image1} width={600} height={400} alt="IT image" />
         </div>
+        <TopDivider color="blue" />
         <div className="px-10 container mx-auto">
-          <h2 className="text-2xl font-semibold pb-3 pt-12 ">
+          <h2 className="text-2xl font-semibold pb-3">
             “Nếu như bạn không có kế hoạch, bạn đã mặc định sẵn kế hoạch là sự
             thất bại”
           </h2>
