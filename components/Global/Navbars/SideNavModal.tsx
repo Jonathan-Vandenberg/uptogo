@@ -7,17 +7,15 @@ import Image from "next/image";
 import router from "next/router";
 import { NextPage } from "next/types";
 import * as React from "react";
-import { BsSearch } from "react-icons/bs";
 import { FaHeart, FaMobileAlt, FaRegQuestionCircle } from "react-icons/fa";
 import {
   MdOutlineArrowForwardIos,
   MdOutlineArrowBackIos,
 } from "react-icons/md";
-import uptogoLogoSmall from "../../../public/uptogoLogoSmall.png";
+import fullLogo from "../../../public/fullLogo.png";
 import Link from "next/link";
 import { HiOutlineLocationMarker } from "react-icons/hi";
 import { useState } from "react";
-import LoginBtn from "../../UI/LoginBtn";
 
 const style = {
   position: "absolute" as "absolute",
@@ -105,12 +103,12 @@ const SideNavModal: NextPage = () => {
       </div>
 
       <div className="flex cursor-pointer items-center justify-center">
-        <Image src={uptogoLogoSmall} width="100" height="100" alt="logo" />
+        <Image src={fullLogo} width="100" height="100" alt="logo" />
       </div>
 
       <div className="flex flex-col items-center justify-evenly space-y-2 whitespace-nowrap">
         <Link href="/compare">
-          <a className="cursor-pointer px-4">Compare Cards</a>
+          <a className="cursor-pointer px-4">Compare Courses</a>
         </Link>
 
         <Link href="/about">
@@ -122,7 +120,7 @@ const SideNavModal: NextPage = () => {
         </div>
 
         <div>
-          <a className="cursor-pointer px-4">Lorem Recruit</a>
+          <a className="cursor-pointer px-4">Recruit</a>
         </div>
       </div>
 
@@ -142,7 +140,7 @@ const SideNavModal: NextPage = () => {
           <div className="text-xl">
             <FaRegQuestionCircle />
           </div>
-          <p>Lorem Support</p>
+          <p>Support</p>
         </div>
       </Link>
 
@@ -151,7 +149,13 @@ const SideNavModal: NextPage = () => {
           <div className="text-xl">
             <HiOutlineLocationMarker />
           </div>
-          <p>Lorem Branches & ATMs</p>
+          <a
+            href="https://www.google.com/maps/dir/?api=1&destination=10.814211192365%2C106.7785692215"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <p>Visit Uptogo</p>
+          </a>
         </div>
       </Link>
     </div>
@@ -338,7 +342,7 @@ const SideNavModal: NextPage = () => {
     <div className="sticky bg-blue top-0 z-40 flex items-center justify-between p-2 sm:px-4 lg:hidden">
       <div className="ml-5 cursor-pointer p-1 flex items-center justify-center">
         <Image
-          src={uptogoLogoSmall}
+          src={fullLogo}
           width="45"
           height="45"
           alt="logo"

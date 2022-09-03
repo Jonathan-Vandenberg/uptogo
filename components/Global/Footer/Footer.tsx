@@ -4,7 +4,7 @@ import { useRouter } from "next/router";
 import { AiOutlineMail } from "react-icons/ai";
 import { BsFillTelephoneOutboundFill } from "react-icons/bs";
 import { GrMapLocation } from "react-icons/gr";
-import uptogoLogo from "../../../public/uptogoLogoBig.png";
+import fullLogo from "../../../public/fullLogo.png";
 import CollapseMenus from "./CollapseMenus";
 import UnCollapassedMenu from "./UnCollapassedMenu";
 import facebookLogo from "../../../public/social-media/facebook.svg";
@@ -67,7 +67,7 @@ const Footer = () => {
         <div className="flex flex-col items-center justify-center space-y-6 py-8 px-28 lg:flex lg:flex-row lg:items-center lg:justify-evenly lg:space-y-0 lg:space-x-6">
           <div className="hover:cursor-pointer">
             <Image
-              src={uptogoLogo}
+              src={fullLogo}
               width="120"
               height="120"
               alt="logo"
@@ -83,14 +83,18 @@ const Footer = () => {
             </p>
           </div>
           <div className="flex items-center justify-center space-x-6">
-            <div>
+            <a
+              target="_blank"
+              rel="noreferrer"
+              href="https://www.facebook.com/uptogo.vn/"
+            >
               <Image
                 src={facebookLogo}
                 width={35}
                 height={35}
                 alt="facebook logo"
               />
-            </div>
+            </a>
             <div>
               <Image
                 src={youtubeLogo}
@@ -106,16 +110,16 @@ const Footer = () => {
         </div>
         <div className="bg-blue py-2 md:py-4">
           <div className="mx-auto flex flex-col-reverse items-center justify-evenly space-y-2 px-3 text-sm md:container  md:flex-row md:space-y-0">
-            <p className="text-white">
+            <p className="text-gray-400 text-xs">
               © Copyright 2009 Uptogo. All rights reserved.
             </p>
 
             <div className="flex items-center justify-center space-x-2 md:flex-row">
-              <p className="text-md cursor-pointer text-center text-white hover:text-green-300">
+              <p className="text-md cursor-pointer text-center text-gray-300 hover:text-green-300">
                 Safe and Secure
               </p>
-              <p className="text-white">|</p>
-              <p className="text-md cursor-pointer text-center text-white hover:text-green-300">
+              <p className="text-gray-300">|</p>
+              <p className="text-md cursor-pointer text-center text-gray-300 hover:text-green-300">
                 Sitemap
               </p>
             </div>
