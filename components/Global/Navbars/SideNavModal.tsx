@@ -13,6 +13,7 @@ import {
   MdOutlineArrowBackIos,
 } from "react-icons/md";
 import fullLogo from "../../../public/fullLogo.png";
+import faviconLogo from "../../../public/uptogoFavicon.png";
 import Link from "next/link";
 import { HiOutlineLocationMarker } from "react-icons/hi";
 import { useState } from "react";
@@ -340,9 +341,9 @@ const SideNavModal: NextPage = () => {
 
   return (
     <div className="sticky bg-blue top-0 z-40 flex items-center justify-between p-2 sm:px-4 lg:hidden">
-      <div className="ml-5 cursor-pointer p-1 flex items-center justify-center">
+      <div className="ml-5 cursor-pointer flex items-center justify-center">
         <Image
-          src={fullLogo}
+          src={faviconLogo}
           width="45"
           height="45"
           alt="logo"

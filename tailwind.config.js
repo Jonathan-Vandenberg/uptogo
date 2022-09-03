@@ -18,6 +18,8 @@ module.exports = {
         cardBg: "rgb(244, 247, 248)",
         filterDropdown: "rgb(196, 245, 208)",
         blue: "rgb(19, 37, 83)",
+        lightBlue: "rgb(0, 88, 161)",
+        lightestBlue: "rgb(121, 166, 173)",
         orange: "#F69724",
       },
       backgroundImage: {
