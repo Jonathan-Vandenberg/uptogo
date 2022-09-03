@@ -9,23 +9,23 @@ const App = () => {
         transitionTime={200}
         trigger={
           <div className="flex items-center justify-between bg-darkBlue text-gray-100">
-            <p className="text-md p-4">Application Process</p>
+            <p className="p-4">Application Process</p>
             <div className="pr-4">
               <FaAngleRight fontSize={20} />
             </div>
           </div>
         }
       >
-        <p className="cursor-pointer p-2 pl-6 text-sm hover:bg-lightBlue">
+        <p className="cursor-pointer pl-6 p-4 hover:bg-lightBlue">
           Step 1: Choose Your Course
         </p>
-        <p className="cursor-pointer p-2 pl-6 text-sm hover:bg-lightBlue">
+        <p className="cursor-pointer p-4 pl-6 hover:bg-lightBlue">
           step 2: Speak with our Consultants
         </p>
-        <p className="cursor-pointer p-2 pl-6 text-sm hover:bg-lightBlue">
+        <p className="cursor-pointer pl-6 p-4 hover:bg-lightBlue">
           Step 3: Prepare for Visa Application
         </p>
-        <p className="cursor-pointer p-2 pl-6 text-sm hover:bg-lightBlue">
+        <p className="cursor-pointer p-4 pl-6 hover:bg-lightBlue">
           Step 4: Study Abroad!
         </p>
       </Collapsible>
@@ -33,7 +33,7 @@ const App = () => {
         transitionTime={200}
         trigger={
           <div className="flex items-center justify-between bg-darkBlue text-gray-100">
-            <p className="text-md p-4">Courses</p>
+            <p className="p-4">Courses</p>
             <div className="pr-4">
               <FaAngleRight fontSize={20} />
             </div>
@@ -44,9 +44,7 @@ const App = () => {
           transitionTime={200}
           trigger={
             <div className="flex items-center justify-between px-6 bg-blue text-white">
-              <p className="text-md p-2 ml-2 text-gray-100">
-                Information Technology
-              </p>
+              <p className="p-2 ml-2 text-gray-100">Information Technology</p>
               <div className="pr-4">
                 <FaAngleRight fontSize={20} />
               </div>
@@ -65,7 +63,7 @@ const App = () => {
         transitionTime={200}
         trigger={
           <div className="flex items-center justify-between bg-darkBlue text-gray-100">
-            <p className="text-md p-4">Secured Loans</p>
+            <p className="p-4">Secured Loans</p>
             <div className="pr-4">
               <FaAngleRight fontSize={20} />
             </div>
@@ -86,7 +84,7 @@ const App = () => {
         transitionTime={200}
         trigger={
           <div className="flex items-center justify-between">
-            <p className="text-md p-4">Savings Account</p>
+            <p className="p-4">Savings Account</p>
             <div className="pr-4">
               <FaAngleRight fontSize={20} />
             </div>
@@ -104,7 +102,7 @@ const App = () => {
         transitionTime={200}
         trigger={
           <div className="flex items-center justify-between">
-            <p className="text-md p-4">Other Products</p>
+            <p className="p-4">Other Products</p>
             <div className="pr-4">
               <FaAngleRight fontSize={20} />
             </div>
@@ -126,7 +124,7 @@ const App = () => {
         transitionTime={200}
         trigger={
           <div className="flex items-center justify-between">
-            <p className="text-md p-4">Things you should know</p>
+            <p className="p-4">Things you should know</p>
             <div className="pr-4">
               <FaAngleRight fontSize={20} />
             </div>
