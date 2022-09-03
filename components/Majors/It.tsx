@@ -17,10 +17,10 @@ export default function It() {
         </div>
         <TopDivider color="blue" />
         <div className="px-10 container mx-auto">
-          <h2 className="text-2xl font-semibold pb-3">
+          <h1 className="text-2xl font-semibold pb-3">
             “Nếu như bạn không có kế hoạch, bạn đã mặc định sẵn kế hoạch là sự
             thất bại”
-          </h2>
+          </h1>
           <p className=" py-4 text-xl">
             Bạn có thấy mình đi đầu trong các dự án, quản lý chúng để đáp ứng
             các kỳ vọng về thời gian, tiền bạc và phạm vi? Bạn có thích chịu

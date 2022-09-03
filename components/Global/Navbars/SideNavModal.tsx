@@ -17,6 +17,7 @@ import faviconLogo from "../../../public/uptogoFavicon.png";
 import Link from "next/link";
 import { HiOutlineLocationMarker } from "react-icons/hi";
 import { useState } from "react";
+import logoWords from "../../../public/logoWords.png";
 
 const style = {
   position: "absolute" as "absolute",
@@ -341,7 +342,7 @@ const SideNavModal: NextPage = () => {
 
   return (
     <div className="sticky bg-blue top-0 z-40 flex items-center justify-between p-2 sm:px-4 lg:hidden">
-      <div className="ml-5 cursor-pointer flex items-center justify-center">
+      <div className="ml-5 cursor-pointer flex items-center gap-3 justify-center">
         <Image
           src={faviconLogo}
           width="45"
@@ -349,6 +350,15 @@ const SideNavModal: NextPage = () => {
           alt="logo"
           onClick={() => router.push("/")}
         />
+        <div className="flex items-center justify-center mt-[4px]">
+          <Image
+            src={logoWords}
+            width="100"
+            height="31"
+            alt="logo"
+            onClick={() => router.push("/")}
+          />
+        </div>
       </div>
       <div className="flex h-full items-center justify-end space-x-6 mr-5">
         <div className="px-6 text-2xl text-white">

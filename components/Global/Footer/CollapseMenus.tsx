@@ -4,56 +4,67 @@ import { FaAngleRight } from "react-icons/fa";
 
 const App = () => {
   return (
-    <div className="divide-y-2 border-b-2 md:hidden">
+    <div className="divide-y-2 divide-blue border-b-2 border-blue md:hidden">
       <Collapsible
         transitionTime={200}
         trigger={
-          <div className="flex items-center justify-between">
-            <p className="text-md p-4">Credit Card</p>
+          <div className="flex items-center justify-between bg-darkBlue text-gray-100">
+            <p className="text-md p-4">Application Process</p>
             <div className="pr-4">
               <FaAngleRight fontSize={20} />
             </div>
           </div>
         }
       >
-        <p className="cursor-pointer p-2 pl-6 text-sm hover:bg-white">
-          VPBank MC2
+        <p className="cursor-pointer p-2 pl-6 text-sm hover:bg-lightBlue">
+          Step 1: Choose Your Course
         </p>
-        <p className="cursor-pointer p-2 pl-6 text-sm  hover:bg-white ">
-          VPBank Step Up
+        <p className="cursor-pointer p-2 pl-6 text-sm hover:bg-lightBlue">
+          step 2: Speak with our Consultants
         </p>
-        <p className="cursor-pointer p-2 pl-6 text-sm  hover:bg-white ">
-          VPBank Lady
+        <p className="cursor-pointer p-2 pl-6 text-sm hover:bg-lightBlue">
+          Step 3: Prepare for Visa Application
         </p>
-        <p className="cursor-pointer p-2 pl-6 text-sm  hover:bg-white ">
-          VPBank Platinum
-        </p>
-        <p className="cursor-pointer p-2 pl-6 text-sm  hover:bg-white ">
-          VPBank World
+        <p className="cursor-pointer p-2 pl-6 text-sm hover:bg-lightBlue">
+          Step 4: Study Abroad!
         </p>
       </Collapsible>
       <Collapsible
         transitionTime={200}
         trigger={
-          <div className="flex items-center justify-between">
-            <p className="text-md p-4">Personal Loans</p>
+          <div className="flex items-center justify-between bg-darkBlue text-gray-100">
+            <p className="text-md p-4">Courses</p>
             <div className="pr-4">
               <FaAngleRight fontSize={20} />
             </div>
           </div>
         }
       >
-        <p className="cursor-pointer p-2 pl-6 text-sm hover:bg-white">
-          Overview
-        </p>
-        <p className="cursor-pointer p-2 pl-6 text-sm  hover:bg-white ">
-          Conditions and Fees
-        </p>
+        <Collapsible
+          transitionTime={200}
+          trigger={
+            <div className="flex items-center justify-between px-6 bg-blue text-white">
+              <p className="text-md p-2 ml-2 text-gray-100">
+                Information Technology
+              </p>
+              <div className="pr-4">
+                <FaAngleRight fontSize={20} />
+              </div>
+            </div>
+          }
+        >
+          <p className="pl-12 cursor-pointer p-2  hover:bg-lightBlue">
+            Computer Science
+          </p>
+          <p className="cursor-pointer p-2 pl-12 hover:bg-lightBlue">
+            Web Development
+          </p>
+        </Collapsible>
       </Collapsible>
       <Collapsible
         transitionTime={200}
         trigger={
-          <div className="flex items-center justify-between">
+          <div className="flex items-center justify-between bg-darkBlue text-gray-100">
             <p className="text-md p-4">Secured Loans</p>
             <div className="pr-4">
               <FaAngleRight fontSize={20} />

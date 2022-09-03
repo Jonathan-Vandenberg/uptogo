@@ -1,7 +1,8 @@
 import Image from "next/image";
-import image from "../../public/heroImages/biawweb.jpeg";
+import image from "../../public/heroImages/Du-hoc-Sp-jain-01.jpeg";
 import InitDivider from "../UI/InitDivider";
 import TopDivider from "../UI/TopDivider";
+import asianMale from "../../public/it/asianMale.jpg";
 
 export default function App() {
   return (
@@ -22,6 +23,16 @@ export default function App() {
         <TopDivider color="blue" />
       </div>
       <div className="px-10 container mx-auto">
+        <div className="relative">
+          <Image
+            src={asianMale}
+            alt="one"
+            width={604}
+            height={410}
+            className="rounded-tl-2xl"
+          />
+          <div className="bg-black/50 top-0 left-0 absolute w-full h-full"></div>
+        </div>
         <h2 className="text-2xl font-semibold text-gray-800 md:text-4xl lg:text-5xl">
           Lý Do Lựa Chọn Uptogo?
         </h2>
