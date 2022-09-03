@@ -120,7 +120,7 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <div className="bg-gradient-to-r from-startColor to-endColor py-2 md:py-4">
+        <div className="bg-blue py-2 md:py-4">
           <div className="mx-auto flex flex-col-reverse items-center justify-evenly space-y-2 px-3 text-sm md:container  md:flex-row md:space-y-0">
             <p className="text-white">
               © Copyright 2009 Uptogo. All rights reserved.
