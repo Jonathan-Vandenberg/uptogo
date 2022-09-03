@@ -17,6 +17,7 @@ import uptogoLogoSmall from "../../../public/uptogoLogoSmall.png";
 import Link from "next/link";
 import { HiOutlineLocationMarker } from "react-icons/hi";
 import { useState } from "react";
+import LoginBtn from "../../UI/LoginBtn";
 
 const style = {
   position: "absolute" as "absolute",

@@ -19,19 +19,20 @@ function MyApp({ Component, pageProps }: AppProps) {
     controls.start({
       opacity: 0,
       transition: {
-        duration: 1.5,
-        delay: 4.2,
+        duration: 1,
+        delay: 4,
+      },
+    });
+    controlsBody.start({
+      opacity: 1,
+      transition: {
+        duration: 1,
+        delay: 4,
       },
     });
     setTimeout(() => {
       setSplashComplete(true);
-      controlsBody.start({
-        opacity: 1,
-        transition: {
-          duration: 1.5,
-        },
-      });
-    }, 4200);
+    }, 5000);
   };
 
   const styles = splashComplete ? "" : "bg-blueBody h-screen w-screen";
