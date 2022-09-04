@@ -7,7 +7,11 @@ generates:
       enumValues: true
       mapperTypeSuffix: Model
       mappers:
-        Post: "@prisma/client#Post"
+        BlogPost: "@prisma/client#BlogPost"
+        Account: "@prisma/client#Account"
+        Session: "@prisma/client#Session"
+        User: "@prisma/client#User"
+        VerificationToken: "@prisma/client#VerificationToken"
       contextType: ./pages/api/index#GraphQLContext
     plugins:
       - "typescript"

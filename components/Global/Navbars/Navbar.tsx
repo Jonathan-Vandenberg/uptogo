@@ -12,6 +12,7 @@ import Link from "next/link";
 import { FaHeart, FaMobileAlt, FaRegQuestionCircle } from "react-icons/fa";
 import { HiOutlineLocationMarker } from "react-icons/hi";
 import NavbarTop from "./NavbarTop";
+import AuthBtn from "../../UI/AuthBtn";
 
 const NavbarBottom: NextPage = () => {
   const [majorsDropdown, setMajorsDropdown] = useState(false);
@@ -200,7 +201,7 @@ const NavbarBottom: NextPage = () => {
             </motion.div>
           ) : (
             <div className="cursor-pointer">
-              {/* <Image src={uptogoLogo} width="45" height="45" alt="logo" /> */}
+              <AuthBtn />
             </div>
           )}
         </div>

@@ -1,6 +1,0 @@
-fragment Post on Post {
-  id
-  slug
-  title
-  body
-}

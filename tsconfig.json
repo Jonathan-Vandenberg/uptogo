@@ -17,6 +17,6 @@
     "sourceMap": true,
     "outDir": "dist"
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "pages/api/posts/[postId].js", "components/NavBar.jsx", "pages/_app.jsx", "pages/index.tsx", "components/UI/UniLogos.jsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "pages/api/posts/[postId].js", "components/NavBar.jsx", "pages/_app.jsx", "pages/index.tsx", "components/UI/UniLogos.jsx", "pages/api/auth/[...nextauth].js"],
   "exclude": ["node_modules"]
 }

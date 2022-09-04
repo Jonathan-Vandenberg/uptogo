@@ -1,4 +1,5 @@
 import "../styles/input.css";
+import { SessionProvider } from "next-auth/react";
 import type { AppProps } from "next/app";
 import { ApolloProvider } from "@apollo/client";
 import { useClient } from "../lib/client";
@@ -10,7 +11,7 @@ import Spline from "@splinetool/react-spline";
 import { useState } from "react";
 import NextNProgress from "nextjs-progressbar";
 
-function MyApp({ Component, pageProps }: AppProps) {
+function MyApp({ Component, pageProps: { session, ...pageProps } }: AppProps) {
   const [splashComplete, setSplashComplete] = useState(false);
   const [loadingSpinner, setLoadingSpinner] = useState(true);
   const controls = useAnimationControls();
@@ -84,12 +85,14 @@ function MyApp({ Component, pageProps }: AppProps) {
       <motion.div initial={{ opacity: 0 }} animate={controlsBody}>
         {splashComplete && (
           <>
-            <ApolloProvider client={client}>
-              <Navbar />
-              <SideNavModal />
-              <Component {...pageProps} />
-              <Footer />
-            </ApolloProvider>
+            <SessionProvider session={session}>
+              <ApolloProvider client={client}>
+                <Navbar />
+                <SideNavModal />
+                <Component {...pageProps} />
+                <Footer />
+              </ApolloProvider>
+            </SessionProvider>
           </>
         )}
       </motion.div>

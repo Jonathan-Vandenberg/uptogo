@@ -4,7 +4,7 @@ const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   images: {
-    domains: ["picsum.photos"],
+    domains: ["lh3.googleusercontent.com"],
   },
 };
 

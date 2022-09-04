@@ -1,3 +1,5 @@
+// ./prisma/schema.prisma
+
 datasource db {
   provider = "mongodb"
   url      = env("DATABASE_URL")
@@ -7,12 +9,92 @@ generator client {
   provider = "prisma-client-js"
 }
 
-// Comments contain a comment string and connect back to the post.
-// postId must have @db.ObjectId to match up with Post's id type
+model Account {
+  id                String  @id @default(auto()) @map("_id") @db.ObjectId
+  userId            String
+  type              String
+  provider          String
+  providerAccountId String
+  refresh_token     String? @db.String
+  access_token      String? @db.String
+  expires_at        Int?
+  token_type        String?
+  scope             String?
+  id_token          String? @db.String
+  session_state     String?
+  user              User    @relation(fields: [userId], references: [id], onDelete: Cascade)
 
-model Post {
-  id    String @id @default(auto()) @map("_id") @db.ObjectId
-  slug  String @unique
-  title String
-  body  String
+  @@unique([provider, providerAccountId])
+}
+
+model Session {
+  id           String   @id @default(auto()) @map("_id") @db.ObjectId
+  sessionToken String   @unique
+  userId       String
+  expires      DateTime
+  user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+model User {
+  id            String    @id @default(auto()) @map("_id") @db.ObjectId
+  name          String?
+  email         String?   @unique
+  emailVerified DateTime?
+  image         String?
+  accounts      Account[]
+  sessions      Session[]
+}
+
+model VerificationToken {
+  identifier String   @id @default(auto()) @map("_id") @db.ObjectId
+  token      String   @unique
+  expires    DateTime
+
+  @@unique([identifier, token])
+}
+
+model BlogPost {
+  id String @id @default(auto()) @map("_id") @db.ObjectId
+
+  title String?
+
+  subtitle1 String?
+
+  tableContents1 String?
+  tableContents2 String?
+  tableContents3 String?
+  tableContents4 String?
+  tableContents5 String?
+
+  p1        String?
+  p2        String?
+  p3        String?
+  subtitle2 String?
+  p4        String?
+  p5        String?
+
+  l1 String?
+  l2 String?
+  l3 String?
+  l4 String?
+  l5 String?
+
+  subtitle3 String?
+
+  p6 String?
+  p7 String?
+
+  conclusion1 String?
+  conclusion2 String?
+  conclusion3 String?
+
+  reference1 String?
+  reference2 String?
+  reference3 String?
+  reference4 String?
+  reference5 String?
+
+  authorName  String?
+  authorAbout String?
+  authorLink  String?
 }

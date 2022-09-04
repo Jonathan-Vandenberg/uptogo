@@ -1,7 +1,0 @@
-# import Post from "./PostFragment.graphql"
-
-query Posts {
-  posts {
-    ...Post
-  }
-}
