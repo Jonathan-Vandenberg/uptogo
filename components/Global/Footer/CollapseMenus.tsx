@@ -26,7 +26,7 @@ const App = () => {
           <p className="cursor-pointer pl-6 p-4 hover:bg-lightBlue">
             Step 3: Prepare for Visa Application
           </p>
-          <p className="cursor-pointer p-4 pl-6 hover:bg-lightBlue">
+          <p className="cursor-pointer p-4 pl-6 hover:bg-lightBlue border-b-2 border-blue">
             Step 4: Study Abroad!
           </p>
         </div>
@@ -68,7 +68,7 @@ const App = () => {
           <p className="cursor-pointer p-4 pl-6 hover:bg-lightBlue ">
             Something Else
           </p>
-          <p className="cursor-pointer p-4 pl-6 hover:bg-lightBlue">
+          <p className="cursor-pointer p-4 pl-6 hover:bg-lightBlue border-b-2 border-blue">
             Another thing
           </p>
         </div>
