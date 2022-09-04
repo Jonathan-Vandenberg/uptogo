@@ -47,11 +47,11 @@ const NavbarBottom: NextPage = () => {
       <NavbarTop onMouseEnter={handleCloseDropdowns} />
       <div
         id="bottom-nav"
-        className="sticky top-0 z-50 hidden bg-white/25 backdrop-blur-lg lg:block "
+        className="sticky top-0 z-50 hidden bg-white lg:block"
         onMouseLeave={handleCloseDropdowns}
       >
         <div className="relative flex h-16 items-center justify-around">
-          <div className="cursor-pointer flex items-center justify-center bg-white rounded-tr-xl rounded-bl-xl p-2">
+          <div className="cursor-pointer flex items-center justify-center p-2">
             <Image
               src={uptogoLogoSmall}
               width="42"
@@ -65,7 +65,7 @@ const NavbarBottom: NextPage = () => {
               <div
                 id="retailLink"
                 key="retail"
-                className="cursor-pointer text-lg hover:text-iwanttoColor text-black"
+                className="cursor-pointer text-lg hover:text-iwanttoColor text-gray-800"
                 onMouseEnter={() => {
                   setMajorsDropdown(false);
                   setSMEDropdown(false);
@@ -79,7 +79,7 @@ const NavbarBottom: NextPage = () => {
               <div
                 id="householdLink"
                 key="household"
-                className="cursor-pointer text-lg hover:text-iwanttoColor text-black"
+                className="cursor-pointer text-lg hover:text-iwanttoColor text-gray-800"
                 onMouseEnter={() => {
                   setMajorsDropdown(true);
                   setSMEDropdown(false);
@@ -104,7 +104,7 @@ const NavbarBottom: NextPage = () => {
               <div
                 id="smeLink"
                 key="sme"
-                className="cursor-pointer text-lg hover:text-iwanttoColor text-black"
+                className="cursor-pointer text-lg hover:text-iwanttoColor text-gray-800"
                 onMouseEnter={() => {
                   setSMEDropdown(true);
                   setMajorsDropdown(false);
@@ -138,7 +138,7 @@ const NavbarBottom: NextPage = () => {
               <div
                 id="corporateLink"
                 key="corporate"
-                className="cursor-pointer text-lg hover:text-iwanttoColor text-black"
+                className="cursor-pointer text-lg hover:text-iwanttoColor text-gray-800"
                 onMouseEnter={() => {
                   setCorporateDropdown(true);
                   setMajorsDropdown(false);
@@ -161,7 +161,7 @@ const NavbarBottom: NextPage = () => {
             </div>
             <Link key="vp_bank" href={"/compare"}>
               <p
-                className="cursor-pointer text-lg hover:text-iwanttoColor text-black"
+                className="cursor-pointer text-lg hover:text-iwanttoColor text-gray-800"
                 onMouseEnter={() => {
                   setCorporateDropdown(false);
                   setMajorsDropdown(false);

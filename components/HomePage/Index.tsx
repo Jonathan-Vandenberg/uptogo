@@ -3,8 +3,11 @@ import image from "../../public/heroImages/Du-hoc-Sp-jain-01.jpeg";
 import InitDivider from "../UI/InitDivider";
 import TopDivider from "../UI/TopDivider";
 import asianMale from "../../public/it/asianMale.jpg";
+import { usePostsQuery } from "../../types";
 
 export default function App() {
+  const { data } = usePostsQuery();
+
   return (
     <div className="bg-homeBody md:-mt-48">
       <div className="mt-0 md:mt-48 hidden md:block">

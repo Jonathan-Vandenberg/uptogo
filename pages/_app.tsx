@@ -1,5 +1,7 @@
 import "../styles/input.css";
 import type { AppProps } from "next/app";
+import { ApolloProvider } from "@apollo/client";
+import { useClient } from "../lib/client";
 import Navbar from "../components/Global/Navbars/Navbar";
 import SideNavModal from "../components/Global/Navbars/SideNavModal";
 import Footer from "../components/Global/Footer/Footer";
@@ -13,6 +15,8 @@ function MyApp({ Component, pageProps }: AppProps) {
   const [loadingSpinner, setLoadingSpinner] = useState(true);
   const controls = useAnimationControls();
   const controlsBody = useAnimationControls();
+
+  const client = useClient();
 
   const handleLoad = () => {
     setLoadingSpinner(false);
@@ -80,10 +84,12 @@ function MyApp({ Component, pageProps }: AppProps) {
       <motion.div initial={{ opacity: 0 }} animate={controlsBody}>
         {splashComplete && (
           <>
-            <Navbar />
-            <SideNavModal />
-            <Component {...pageProps} />
-            <Footer />
+            <ApolloProvider client={client}>
+              <Navbar />
+              <SideNavModal />
+              <Component {...pageProps} />
+              <Footer />
+            </ApolloProvider>
           </>
         )}
       </motion.div>
