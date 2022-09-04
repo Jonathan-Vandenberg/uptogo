@@ -22,6 +22,7 @@ export default function BlogPostMarkup({ data }: IProps) {
         </div>
         <TopDivider color="blue" />
         <div className="px-10 container mx-auto">
+          <p>Title of the post</p>
           <h1 className="text-2xl font-semibold pb-3">
             {data?.blogPost?.title}
           </h1>
