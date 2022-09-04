@@ -43,7 +43,7 @@ function MyApp({ Component, pageProps }: AppProps) {
 
   return (
     <div className={styles}>
-      <NextNProgress color="rgb(19, 37, 83)" height={3} />
+      <NextNProgress color="rgb(89, 97, 73)" height={3} />
       {!splashComplete && (
         <div className="relative h-screen w-screen">
           {!splashComplete && (

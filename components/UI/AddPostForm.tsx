@@ -95,7 +95,7 @@ const AddClientForm = () => {
         }}
       >
         <Button htmlType="submit" className="px-10 h-10 rounded-full">
-          Add
+          Add Post
         </Button>
       </Form.Item>
     </Form>
