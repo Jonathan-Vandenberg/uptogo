@@ -168,7 +168,7 @@ const CoursesManagement = () => {
         <p className="pl-12 cursor-pointer p-4  hover:bg-lightBlue">
           Business Management
         </p>
-        <p className="cursor-pointer p-4 pl-12 hover:bg-lightBlue">
+        <p className="cursor-pointer p-4 pl-12 hover:bg-lightBlue border-b-2 border-darkBlue">
           Hotel Management
         </p>
       </div>
