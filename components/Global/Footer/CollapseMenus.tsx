@@ -16,7 +16,7 @@ const App = () => {
           </div>
         }
       >
-        <div className="divide-y-[1px] divide-gray-300">
+        <div className="divide-y-2 divide-gray-300">
           <p className="cursor-pointer pl-6 p-4 hover:bg-lightBlue">
             Step 1: Choose Your Course
           </p>
@@ -61,7 +61,7 @@ const App = () => {
           </div>
         }
       >
-        <div className="divide-y-[1px] divide-gray-300">
+        <div className="divide-y-2 divide-gray-300">
           <p className="cursor-pointer p-4 pl-6 hover:bg-lightBlue">
             Visa Requirements
           </p>
@@ -84,7 +84,7 @@ const App = () => {
           </div>
         }
       >
-        <div className="divide-y-[1px] divide-gray-300">
+        <div className="divide-y-2 divide-gray-300">
           <p className="cursor-pointer p-4 pl-6 hover:bg-lightBlue">
             Promotions
           </p>
@@ -116,7 +116,7 @@ const CoursesIT = () => {
         </div>
       }
     >
-      <div className="divide-y-[1px] divide-gray-300">
+      <div className="divide-y-2 divide-gray-300">
         <p className="pl-12 cursor-pointer p-4  hover:bg-lightBlue">
           Computer Science
         </p>
@@ -141,7 +141,7 @@ const CoursesHealth = () => {
         </div>
       }
     >
-      <div className="divide-y-[1px] divide-gray-300">
+      <div className="divide-y-2 divide-gray-300">
         <p className="pl-12 cursor-pointer p-4  hover:bg-lightBlue">Nursing</p>
         <p className="cursor-pointer p-4 pl-12 hover:bg-lightBlue">Medicine</p>
         <p className="cursor-pointer p-4 pl-12 hover:bg-lightBlue">Pharma</p>
@@ -164,7 +164,7 @@ const CoursesManagement = () => {
         </div>
       }
     >
-      <div className="divide-y-[1px] divide-gray-300">
+      <div className="divide-y-2 divide-gray-300">
         <p className="pl-12 cursor-pointer p-4  hover:bg-lightBlue">
           Business Management
         </p>
