@@ -2,7 +2,7 @@ import Image from "next/image";
 import { useRouter } from "next/router";
 import { NextPage } from "next/types";
 import { useEffect, useState } from "react";
-import uptogoLogoSmall from "../../../public/uptogoLogoSmall.png";
+import uptogoFavicon from "../../../public/uptogoFavicon.png";
 import CompareDropdown from "./Dropdowns/CompareDropdown";
 import HouseholdDropdown from "./Dropdowns/Majors";
 import SMEDropdown from "./Dropdowns/SMEDropdown";
@@ -52,14 +52,15 @@ const NavbarBottom: NextPage = () => {
         onMouseLeave={handleCloseDropdowns}
       >
         <div className="relative flex h-16 items-center justify-around">
-          <div className="cursor-pointer flex items-center justify-center p-2">
+          <div className="cursor-pointer flex items-center justify-start p-1 space-x-2">
             <Image
-              src={uptogoLogoSmall}
+              src={uptogoFavicon}
               width="42"
               height="42"
               alt="logo"
               onClick={() => router.push("/")}
             />
+            <p className="logoFont text-orange text-2xl">Uptogo</p>
           </div>
           <div className="flex items-center justify-evenly space-x-14">
             <div className="relative flex flex-col items-center justify-center">
@@ -73,7 +74,7 @@ const NavbarBottom: NextPage = () => {
                   setCorporateDropdown(false);
                 }}
               >
-                Định Hướng (overview)
+                Định Hướng
               </div>
             </div>
             <div className="relative flex flex-col items-center justify-center">
@@ -92,7 +93,7 @@ const NavbarBottom: NextPage = () => {
                   setCorporateDropdown(false);
                 }}
               >
-                Ngành Học (majors)
+                Ngành Học
               </div>
               {majorsDropdown && (
                 <div
@@ -151,7 +152,7 @@ const NavbarBottom: NextPage = () => {
                   setCorporateDropdown(!corporateDropdown);
                 }}
               >
-                Tin Tức (News)
+                Tin Tức
               </div>
               {corporateDropdown && (
                 <div
@@ -169,7 +170,7 @@ const NavbarBottom: NextPage = () => {
                   setSMEDropdown(false);
                 }}
               >
-                Sự Kiện (events)
+                Sự Kiện
               </p>
             </Link>
           </div>

@@ -8,26 +8,33 @@ const AuthBtn = () => {
   if (status === "unauthenticated") {
     return (
       <div className="auth-btn">
-        <button onClick={() => signIn()}>Login</button>
+        <button
+          onClick={() => signIn()}
+          className="text-lg text-orange logoFont"
+        >
+          Login
+        </button>
       </div>
     );
   }
   return (
-    <div className="auth-btn">
-      <div className="auth-info pr-2">
-        <Image
-          /* @ts-ignore */
-          src={session.user.image}
-          /* @ts-ignore */
-          alt={session.user.name}
-          width={30}
-          height={30}
-          className="rounded-full"
-        />
-        <p>Hi, {session?.user?.name}</p>
-      </div>
-      <div className="dropdown">
-        <button onClick={() => signOut()}>Logout</button>
+    <div className="flex items-center justify-center space-x-3">
+      <Image
+        /* @ts-ignore */
+        src={session.user.image}
+        /* @ts-ignore */
+        alt={session.user.name}
+        width={30}
+        height={30}
+        className="rounded-full"
+      />
+      <div className="">
+        <button
+          onClick={() => signOut()}
+          className="text-lg logoFont text-orange"
+        >
+          Logout
+        </button>
       </div>
     </div>
   );

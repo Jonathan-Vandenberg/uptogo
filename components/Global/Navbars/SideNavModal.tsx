@@ -350,15 +350,7 @@ const SideNavModal: NextPage = () => {
           alt="logo"
           onClick={() => router.push("/")}
         />
-        <div className="flex items-center justify-center mt-[4px]">
-          <Image
-            src={logoWords}
-            width="100"
-            height="31"
-            alt="logo"
-            onClick={() => router.push("/")}
-          />
-        </div>
+        <p className="logoFont text-orange text-2xl">Uptogo</p>
       </div>
       <div className="flex h-full items-center justify-end space-x-6 mr-5">
         <div className="px-6 text-2xl text-white">

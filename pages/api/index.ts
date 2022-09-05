@@ -76,7 +76,12 @@ const resolvers: Resolvers = {
 
         authorName: input?.authorName,
         authorAbout: input?.authorAbout,
-        authorLink: input?.authorLink
+        authorLink: input?.authorLink,
+        authorImage: input?.authorImage,
+
+        photoCredit: input?.photoCredit,
+        editedBy: input?.editedBy,
+        mainImage: input?.mainImage
       }
     })
     return blogPost

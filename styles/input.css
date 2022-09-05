@@ -32,6 +32,20 @@ a {
   src: local('ClearSans'), url(/fonts/ClearSans-medium.ttf) format('woff2');
 }
 
+@font-face {
+  font-family: 'UTM-Nokia-StandardB';
+  font-style: normal;
+  font-weight: bold;
+  font-display: swap;
+  src: local('UTM-Nokia-StandardB'), url(/fonts/UTM-Nokia-StandardB.ttf) format('woff2');
+}
+
+.logoFont {
+  font-family: 'UTM-Nokia-StandardB';
+}
+
+
+
 input,
 textarea,
 button,

@@ -41,8 +41,14 @@ const AddClientForm = () => {
   const [reference5, setReference5] = useState("");
 
   const [authorName, setAuthorName] = useState("");
+  const [authorImage, setAuthorImage] = useState("");
   const [authorAbout, setAuthorAbout] = useState("");
   const [authorLink, setAuthorLink] = useState("");
+
+  const [editedBy, setEditedBy] = useState("");
+  const [publishedDate, setPublishedDate] = useState("");
+  const [mainImage, setMainImage] = useState("");
+  const [photoCredit, setPhotocredit] = useState("");
 
   const [addBlogPostMutation] = useAddBlogPostMutation();
 

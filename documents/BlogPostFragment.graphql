@@ -1,5 +1,7 @@
 fragment BlogPost on BlogPost {
   id
+  publishedDate
+
   title
   subtitle1
 
@@ -40,6 +42,11 @@ fragment BlogPost on BlogPost {
   reference5
 
   authorName
+  authorImage
   authorAbout
   authorLink
+
+  photoCredit
+  editedBy
+  mainImage
 }

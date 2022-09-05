@@ -19,9 +19,11 @@ export default function BlogPostMarkup({ data }: IProps) {
         <li className="text-lg">{data?.blogPost?.tableContents5}</li>
       </ul>
 
-      <p className=" py-4 text-xl">{data?.blogPost?.p1}</p>
-      <p className=" py-4 text-xl">{data?.blogPost?.p2}</p>
-      <p className=" py-4 text-xl">{data?.blogPost?.p3}</p>
+      <div className="flex-col space-y-8 py-6">
+        <p className="text-xl">{data?.blogPost?.p1}</p>
+        <p className="text-xl">{data?.blogPost?.p2}</p>
+        <p className="text-xl">{data?.blogPost?.p3}</p>
+      </div>
       <h2 className="text-2xl font-semibold pb-3 pt-12 ">
         {data?.blogPost?.subtitle2}
       </h2>
