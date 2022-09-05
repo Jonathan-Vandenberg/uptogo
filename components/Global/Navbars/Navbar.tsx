@@ -150,6 +150,7 @@ const NavbarBottom: NextPage = () => {
                   setMajorsDropdown(false);
                   setSMEDropdown(false);
                   setCorporateDropdown(!corporateDropdown);
+                  router.push("/blog");
                 }}
               >
                 Tin Tức
