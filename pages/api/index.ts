@@ -36,7 +36,6 @@ const resolvers: Resolvers = {
       data: {
         title: input?.title,
         subtitle1: input?.subtitle1,
-
         tableContents1: input?.tableContents1,
         tableContents2: input?.tableContents2,
         tableContents3: input?.tableContents3,
