@@ -3,7 +3,7 @@ export default function App() {
   return (
     <>
       <HomeMain />
-      <div className="h-96 flex items-center justify-center">SPACER TIME</div>
+      <div className="h-96 flex items-center justify-center">SPACER TIMER</div>
     </>
   );
 }
