@@ -81,7 +81,8 @@ const resolvers: Resolvers = {
 
         photoCredit: input?.photoCredit,
         editedBy: input?.editedBy,
-        mainImage: input?.mainImage
+        mainImage: input?.mainImage,
+        publishedDate: input?.publishedDate
       }
     })
     return blogPost
