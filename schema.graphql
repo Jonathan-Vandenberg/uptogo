@@ -55,7 +55,6 @@ type BlogPost {
   tableContents2: String
   tableContents3: String
   tableContents4: String
-  tableContents5: String
   p1: String
   p2: String
   p3: String
@@ -75,9 +74,6 @@ type BlogPost {
   conclusion3: String
   reference1: String
   reference2: String
-  reference3: String
-  reference4: String
-  reference5: String
   authorName: String
   authorAbout: String
   authorLink: String
@@ -95,7 +91,6 @@ input BlogPostInput {
   tableContents2: String
   tableContents3: String
   tableContents4: String
-  tableContents5: String
   p1: String
   p2: String
   p3: String
@@ -115,9 +110,6 @@ input BlogPostInput {
   conclusion3: String
   reference1: String
   reference2: String
-  reference3: String
-  reference4: String
-  reference5: String
   authorName: String
   authorAbout: String
   authorLink: String

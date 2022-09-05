@@ -16,7 +16,6 @@ export default function BlogPostMarkup({ data }: IProps) {
         <li className="text-lg">{data?.blogPost?.tableContents2}</li>
         <li className="text-lg">{data?.blogPost?.tableContents3}</li>
         <li className="text-lg">{data?.blogPost?.tableContents4}</li>
-        <li className="text-lg">{data?.blogPost?.tableContents5}</li>
       </ul>
 
       <div className="flex-col space-y-8 py-6">

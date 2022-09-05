@@ -7,7 +7,6 @@ fragment BlogPost on BlogPost {
   tableContents2
   tableContents3
   tableContents4
-  tableContents5
   p1
   p2
   p3
@@ -27,9 +26,6 @@ fragment BlogPost on BlogPost {
   conclusion3
   reference1
   reference2
-  reference3
-  reference4
-  reference5
   authorName
   authorAbout
   authorLink

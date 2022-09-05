@@ -63,9 +63,6 @@ export type BlogPost = {
   publishedDate?: Maybe<Scalars['String']>;
   reference1?: Maybe<Scalars['String']>;
   reference2?: Maybe<Scalars['String']>;
-  reference3?: Maybe<Scalars['String']>;
-  reference4?: Maybe<Scalars['String']>;
-  reference5?: Maybe<Scalars['String']>;
   subtitle1?: Maybe<Scalars['String']>;
   subtitle2?: Maybe<Scalars['String']>;
   subtitle3?: Maybe<Scalars['String']>;
@@ -73,7 +70,6 @@ export type BlogPost = {
   tableContents2?: Maybe<Scalars['String']>;
   tableContents3?: Maybe<Scalars['String']>;
   tableContents4?: Maybe<Scalars['String']>;
-  tableContents5?: Maybe<Scalars['String']>;
   title?: Maybe<Scalars['String']>;
 };
 
@@ -103,9 +99,6 @@ export type BlogPostInput = {
   publishedDate?: InputMaybe<Scalars['String']>;
   reference1?: InputMaybe<Scalars['String']>;
   reference2?: InputMaybe<Scalars['String']>;
-  reference3?: InputMaybe<Scalars['String']>;
-  reference4?: InputMaybe<Scalars['String']>;
-  reference5?: InputMaybe<Scalars['String']>;
   subtitle1?: InputMaybe<Scalars['String']>;
   subtitle2?: InputMaybe<Scalars['String']>;
   subtitle3?: InputMaybe<Scalars['String']>;
@@ -113,7 +106,6 @@ export type BlogPostInput = {
   tableContents2?: InputMaybe<Scalars['String']>;
   tableContents3?: InputMaybe<Scalars['String']>;
   tableContents4?: InputMaybe<Scalars['String']>;
-  tableContents5?: InputMaybe<Scalars['String']>;
   title?: InputMaybe<Scalars['String']>;
 };
 
@@ -305,9 +297,6 @@ export type BlogPostResolvers<ContextType = GraphQLContext, ParentType extends R
   publishedDate?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   reference1?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   reference2?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
-  reference3?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
-  reference4?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
-  reference5?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   subtitle1?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   subtitle2?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   subtitle3?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
@@ -315,7 +304,6 @@ export type BlogPostResolvers<ContextType = GraphQLContext, ParentType extends R
   tableContents2?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   tableContents3?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   tableContents4?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
-  tableContents5?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   title?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 };
@@ -377,7 +365,6 @@ export const BlogPostFragmentDoc = gql`
   tableContents2
   tableContents3
   tableContents4
-  tableContents5
   p1
   p2
   p3
@@ -397,9 +384,6 @@ export const BlogPostFragmentDoc = gql`
   conclusion3
   reference1
   reference2
-  reference3
-  reference4
-  reference5
   authorName
   authorAbout
   authorLink
@@ -515,18 +499,18 @@ export type AddBlogPostMutationVariables = Exact<{
 }>;
 
 
-export type AddBlogPostMutation = { __typename?: 'Mutation', addBlogPost?: { __typename?: 'BlogPost', id: string, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, tableContents5?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, reference3?: string | null, reference4?: string | null, reference5?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null } | null };
+export type AddBlogPostMutation = { __typename?: 'Mutation', addBlogPost?: { __typename?: 'BlogPost', id: string, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null } | null };
 
 export type BlogPostQueryVariables = Exact<{
   id: Scalars['ID'];
 }>;
 
 
-export type BlogPostQuery = { __typename?: 'Query', blogPost?: { __typename?: 'BlogPost', id: string, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, tableContents5?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, reference3?: string | null, reference4?: string | null, reference5?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null } | null };
+export type BlogPostQuery = { __typename?: 'Query', blogPost?: { __typename?: 'BlogPost', id: string, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null } | null };
 
-export type BlogPostFragment = { __typename?: 'BlogPost', id: string, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, tableContents5?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, reference3?: string | null, reference4?: string | null, reference5?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null };
+export type BlogPostFragment = { __typename?: 'BlogPost', id: string, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null };
 
 export type BlogPostsQueryVariables = Exact<{ [key: string]: never; }>;
 
 
-export type BlogPostsQuery = { __typename?: 'Query', blogPosts?: Array<{ __typename?: 'BlogPost', id: string, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, tableContents5?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, reference3?: string | null, reference4?: string | null, reference5?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null } | null> | null };
+export type BlogPostsQuery = { __typename?: 'Query', blogPosts?: Array<{ __typename?: 'BlogPost', id: string, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null } | null> | null };

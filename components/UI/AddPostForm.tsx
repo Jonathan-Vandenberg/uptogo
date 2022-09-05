@@ -13,7 +13,6 @@ const AddClientForm = () => {
   const [tableContents2, setTableContents2] = useState("");
   const [tableContents3, setTableContents3] = useState("");
   const [tableContents4, setTableContents4] = useState("");
-  const [tableContents5, setTableContents5] = useState("");
 
   const [p1, setP1] = useState("");
   const [p2, setP2] = useState("");
@@ -36,9 +35,6 @@ const AddClientForm = () => {
 
   const [reference1, setReference1] = useState("");
   const [reference2, setReference2] = useState("");
-  const [reference3, setReference3] = useState("");
-  const [reference4, setReference4] = useState("");
-  const [reference5, setReference5] = useState("");
 
   const [authorName, setAuthorName] = useState("");
   const [authorAbout, setAuthorAbout] = useState("");
@@ -66,7 +62,6 @@ const AddClientForm = () => {
             tableContents2: tableContents2,
             tableContents3: tableContents3,
             tableContents4: tableContents4,
-            tableContents5: tableContents5,
             p1: p1,
             p2: p2,
             p3: p3,
@@ -86,9 +81,6 @@ const AddClientForm = () => {
             conclusion3: conslusion3,
             reference1: reference1,
             reference2: reference2,
-            reference3: reference3,
-            reference4: reference4,
-            reference5: reference5,
             authorName: authorName,
             authorAbout: authorAbout,
             authorLink: authorLink,
@@ -242,21 +234,6 @@ const AddClientForm = () => {
         <Input
           value={tableContents4}
           onChange={(e) => setTableContents4(e.target.value)}
-        />
-      </Form.Item>
-
-      <Form.Item
-        label="Table of content 5"
-        name="tableContents5"
-        rules={[
-          {
-            required: true,
-          },
-        ]}
-      >
-        <Input
-          value={tableContents5}
-          onChange={(e) => setTableContents5(e.target.value)}
         />
       </Form.Item>
 
@@ -547,51 +524,6 @@ const AddClientForm = () => {
         <Input
           value={reference2}
           onChange={(e) => setReference2(e.target.value)}
-        />
-      </Form.Item>
-
-      <Form.Item
-        label="Reference 3"
-        name="reference3"
-        rules={[
-          {
-            required: true,
-          },
-        ]}
-      >
-        <Input
-          value={reference3}
-          onChange={(e) => setReference3(e.target.value)}
-        />
-      </Form.Item>
-
-      <Form.Item
-        label="Reference 4"
-        name="reference4"
-        rules={[
-          {
-            required: true,
-          },
-        ]}
-      >
-        <Input
-          value={reference4}
-          onChange={(e) => setReference4(e.target.value)}
-        />
-      </Form.Item>
-
-      <Form.Item
-        label="Reference 5"
-        name="reference5"
-        rules={[
-          {
-            required: true,
-          },
-        ]}
-      >
-        <Input
-          value={reference5}
-          onChange={(e) => setReference5(e.target.value)}
         />
       </Form.Item>
 
