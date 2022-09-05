@@ -61,7 +61,9 @@ const Footer = () => {
       <MobileFooterHeader />
       <div className="bg-body">
         <div className="">
-          <CollapseMenus />
+          <div className="md:hidden">
+            <CollapseMenus />
+          </div>
           <UnCollapassedMenu />
         </div>
         <div className="flex flex-col items-center justify-center space-y-6 py-8 px-28 lg:flex lg:flex-row lg:items-center lg:justify-evenly lg:space-y-0 lg:space-x-6">
@@ -110,7 +112,7 @@ const Footer = () => {
         </div>
         <div className="bg-blue py-2 md:py-4">
           <div className="mx-auto flex flex-col-reverse items-center justify-evenly space-y-2 px-3 text-sm md:container  md:flex-row md:space-y-0">
-            <p className="text-gray-400 text-xs">
+            <p className="text-gray-300 text-xs">
               © Copyright 2009 Uptogo. All rights reserved.
             </p>
 

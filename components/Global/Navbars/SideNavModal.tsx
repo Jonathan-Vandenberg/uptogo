@@ -18,13 +18,12 @@ import Link from "next/link";
 import { HiOutlineLocationMarker } from "react-icons/hi";
 import { useState } from "react";
 import logoWords from "../../../public/logoWords.png";
-import CollapseMenus from "../Footer/CollapseMenus";
 
 const style = {
   position: "absolute" as "absolute",
   top: 0,
   left: 0,
-  width: "80vw",
+  maxWidth: "80vw",
   height: "100vh",
   bgcolor: "background.paper",
   outline: "none",
@@ -32,6 +31,11 @@ const style = {
 
 const SideNavModal: NextPage = () => {
   const [open, setOpen] = React.useState(false);
+
+  const [showMajors, setShowMajors] = useState(false);
+  const [showHouseholdMenu, setShowHouseholdMenu] = useState(false);
+  const [showSMEMenu, setShowSMEMenu] = useState(false);
+  const [showCorporate, setShowCorporate] = useState(false);
 
   const btnRef = React.useRef<HTMLButtonElement>();
   const menuRef = React.useRef<HTMLDivElement>();
@@ -43,11 +47,67 @@ const SideNavModal: NextPage = () => {
 
   const handleClose = () => {
     btnRef?.current?.classList.toggle("open");
-    setOpen(false);
+    setOpen(false),
+      setShowCorporate(false),
+      setShowMajors(false),
+      setShowHouseholdMenu(false),
+      setShowSMEMenu(false);
   };
 
   const MainMenu = () => (
     <div className="h-[screen] w-[80vw] space-y-5">
+      <div
+        onClick={() => {
+          setShowMajors(!showMajors);
+        }}
+        className="flex items-center justify-between pt-2"
+      >
+        <div className="cursor-pointer pl-4 font-semibold">Ngành Học</div>
+        <div className="px-4">
+          <MdOutlineArrowForwardIos />
+        </div>
+      </div>
+
+      <div
+        onClick={() => setShowHouseholdMenu(!showHouseholdMenu)}
+        className="flex items-center justify-between"
+      >
+        <div className="cursor-pointer pl-4 font-semibold">
+          Lorem HouseHold Business
+        </div>
+        <div className="px-4">
+          <MdOutlineArrowForwardIos />
+        </div>
+      </div>
+
+      <div
+        onClick={() => setShowSMEMenu(!showSMEMenu)}
+        className="flex items-center justify-between"
+      >
+        <div className="cursor-pointer pl-4 font-semibold">Lorem SMEs</div>
+        <div className="px-4">
+          <MdOutlineArrowForwardIos />
+        </div>
+      </div>
+
+      <div
+        onClick={() => setShowCorporate(!showCorporate)}
+        className="flex items-center justify-between"
+      >
+        <div className="cursor-pointer pl-4 font-semibold">Lorem Corporate</div>
+        <div className="px-4">
+          <MdOutlineArrowForwardIos />
+        </div>
+      </div>
+
+      <div className="cursor-pointer pl-4 pb-1 font-semibold">
+        Lorem VPBank Diamond
+      </div>
+
+      <div className="flex cursor-pointer items-center justify-center">
+        <Image src={fullLogo} width="100" height="100" alt="logo" />
+      </div>
+
       <div className="flex flex-col items-center justify-evenly space-y-2 whitespace-nowrap">
         <Link href="/compare">
           <a className="cursor-pointer px-4">Compare Courses</a>
@@ -100,6 +160,183 @@ const SideNavModal: NextPage = () => {
           </a>
         </div>
       </Link>
+    </div>
+  );
+
+  const MajorsMenu = () => (
+    <div className="w-[80vw]">
+      <div className="flex w-full" onClick={() => setShowMajors(!showMajors)}>
+        <div className="p-3">
+          <MdOutlineArrowBackIos />
+        </div>
+        <div className=" p-2 text-xl font-semibold text-iwanttoColor">
+          Ngành Học
+        </div>
+      </div>
+
+      <div className="flex flex-col items-start justify-center">
+        <div
+          onClick={() => handleClose()}
+          className="w-full cursor-pointer p-3 pl-6 pt-6 font-semibold"
+        >
+          <Link href={"/information-technology"}>
+            <p className="font-semibold">Công nghệ thông tin (IT)</p>
+          </Link>
+        </div>
+
+        <div
+          className="w-full cursor-pointer p-3 pl-6 font-semibold"
+          onClick={() => handleClose()}
+        >
+          <Link href={"/hospitality"}>Nhà hàng – Khách sạn (Hospitality)</Link>
+        </div>
+        <div
+          className="w-full cursor-pointer p-3 pl-6 font-semibold"
+          onClick={() => handleClose()}
+        >
+          <Link href={"/management"}>Quản Lý (Mangement)</Link>
+        </div>
+        <div
+          className="w-full cursor-pointer p-3 pl-6 font-semibold"
+          onClick={() => handleClose()}
+        >
+          <Link href={"/health"}>Sức khỏe (Health)</Link>
+        </div>
+        <div
+          className="w-full cursor-pointer p-3 pl-6 font-semibold"
+          onClick={() => handleClose()}
+        >
+          <Link href={"/sports-trade"}>
+            Thương mại & Thể thao (Trade & Sports)
+          </Link>
+        </div>
+        <div
+          className="w-full cursor-pointer p-3 pl-6 font-semibold"
+          onClick={() => handleClose()}
+        >
+          <Link href={"/design"}>Thiết kế (Design)</Link>
+        </div>
+      </div>
+    </div>
+  );
+
+  const HouseholdMenu = () => (
+    <div className="w-[80vw]">
+      <div
+        className="flex w-full"
+        onClick={() => setShowHouseholdMenu(!showHouseholdMenu)}
+      >
+        <div className="p-3">
+          <MdOutlineArrowBackIos />
+        </div>
+        <div className=" p-2 text-xl font-semibold text-iwanttoColor">
+          Lorem Household
+        </div>
+      </div>
+
+      <div className="flex flex-col items-start justify-center">
+        <div className="w-full cursor-pointer p-3 pl-6 pt-6 font-semibold">
+          Lorem Unsecured Loan
+        </div>
+        <div className="w-full cursor-pointer p-3 pl-6 font-semibold">
+          Lorem Secured Loans
+        </div>
+        <div className="w-full cursor-pointer p-3 pl-6 font-semibold">
+          Lorem Bank Assurance
+        </div>
+        <div className="w-full cursor-pointer p-3 pl-6 font-semibold">
+          Lorem Card Services
+        </div>
+      </div>
+    </div>
+  );
+
+  const SMEMenu = () => (
+    <div className="w-[80vw]">
+      <div className="flex w-full" onClick={() => setShowSMEMenu(!showSMEMenu)}>
+        <div className="p-3">
+          <MdOutlineArrowBackIos />
+        </div>
+        <div className=" p-2 text-xl font-semibold text-iwanttoColor">
+          Lorem SME
+        </div>
+      </div>
+
+      <div className="flex flex-col items-start justify-center">
+        <div className="w-full cursor-pointer p-3 pl-6 pt-6 font-semibold">
+          Lorem Account Service
+        </div>
+        <div className="w-full cursor-pointer p-3 pl-6 font-semibold">
+          Lorem Business Loans
+        </div>
+        <div className="w-full cursor-pointer p-3 pl-6 font-semibold">
+          Lorem VPBIZ Payment Card
+        </div>
+        <div className="w-full cursor-pointer p-3 pl-6 font-semibold">
+          Lorem Card Payment Services
+        </div>
+        <div className="w-full cursor-pointer p-3 pl-6 font-semibold">
+          Lorem Payment Service
+        </div>
+        <div className="w-full cursor-pointer p-3 pl-6 font-semibold">
+          Lorem Trade Finance
+        </div>
+        <div className="w-full cursor-pointer p-3 pl-6 font-semibold">
+          Lorem Deposit Products
+        </div>
+        <div className="w-full cursor-pointer p-3 pl-6 font-semibold">
+          Lorem Online Chiropractic
+        </div>
+        <div className="w-full cursor-pointer p-3 pl-6 font-semibold">
+          Lorem Online Disbursement
+        </div>
+        <div className="w-full cursor-pointer p-3 pl-6 font-semibold">
+          Lorem Business Account Online
+        </div>
+      </div>
+    </div>
+  );
+
+  const CorporateMenu = () => (
+    <div className="w-[80vw]">
+      <div
+        className="justify-startflex flex w-full items-center"
+        onClick={() => setShowCorporate(!showCorporate)}
+      >
+        <div className="p-3">
+          <MdOutlineArrowBackIos />
+        </div>
+        <div className=" p-2 text-xl font-semibold text-iwanttoColor">
+          Lorem Corporate
+        </div>
+      </div>
+
+      <div className="flex flex-col items-start justify-center">
+        <div className="w-full cursor-pointer p-3 pl-6 pt-6 font-semibold">
+          Lorem Guarantee
+        </div>
+        <div className="w-full cursor-pointer p-3 pl-6 font-semibold">
+          Lorem Loans
+        </div>
+        <div className="w-full cursor-pointer p-3 pl-6 font-semibold">
+          Lorem Services and Trade Finance
+        </div>
+        <div className="w-full cursor-pointer p-3 pl-6 font-semibold">
+          Lorem Account services
+        </div>
+        <div className="w-full cursor-pointer p-3 pl-6 font-semibold">
+          Lorem Card Services
+        </div>
+        <div className="w-full cursor-pointer p-3 pl-6 font-semibold">
+          Lorem Financial Market Products
+        </div>
+        <div className="w-full cursor-pointer p-3 pl-6 font-semibold">
+          Lorem Internet Banking
+        </div>
+        <div className="w-full cursor-pointer p-3 pl-6 font-semibold">
+          Lorem Email Transactions
+        </div>
+      </div>
     </div>
   );
 
@@ -156,11 +393,14 @@ const SideNavModal: NextPage = () => {
               id="menu"
               className="items-left mt-4 flex flex-col justify-center space-y-4 overflow-y-auto"
             >
-              <div className="flex cursor-pointer items-center justify-center">
-                <Image src={fullLogo} width="100" height="100" alt="logo" />
-              </div>
-              <CollapseMenus />
-              <MainMenu />
+              {!showMajors &&
+                !showHouseholdMenu &&
+                !showSMEMenu &&
+                !showCorporate && <MainMenu />}
+              {showMajors && <MajorsMenu />}
+              {showHouseholdMenu && <HouseholdMenu />}
+              {showSMEMenu && <SMEMenu />}
+              {showCorporate && <CorporateMenu />}
             </motion.div>
           </Box>
         </Fade>

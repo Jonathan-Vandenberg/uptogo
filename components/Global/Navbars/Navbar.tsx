@@ -48,7 +48,7 @@ const NavbarBottom: NextPage = () => {
       <NavbarTop onMouseEnter={handleCloseDropdowns} />
       <div
         id="bottom-nav"
-        className="sticky top-0 z-50 hidden bg-white lg:block"
+        className="sticky top-0 z-50 hidden bg-white border-b-4 border-orange lg:block"
         onMouseLeave={handleCloseDropdowns}
       >
         <div className="relative flex h-16 items-center justify-around">

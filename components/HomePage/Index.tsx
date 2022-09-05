@@ -1,28 +1,24 @@
 import Image from "next/image";
-import image from "../../public/heroImages/Du-hoc-Sp-jain-01.jpeg";
-import InitDivider from "../UI/InitDivider";
-import TopDivider from "../UI/TopDivider";
+import { useState } from "react";
 import asianMale from "../../public/it/asianMale.jpg";
+import CollapseMenus, { Courses } from "../Global/Footer/CollapseMenus";
+import CourseStepper from "./CourseStepper";
 
 export default function App() {
+  const [step, setStep] = useState(0);
+
   return (
-    <div className="bg-homeBody md:-mt-48">
-      <div className="mt-0 md:mt-48 hidden md:block">
-        <Image
-          src={image}
-          alt="image"
-          width={950}
-          height={280}
-          layout="responsive"
-        />
+    <div className="bg-homeBody">
+      <div className="flex flex-col items-center justify-center space-y-24 py-20">
+        <CourseStepper step={step} />
+        <div className="border-y-2 border-blue">
+          <Courses />
+        </div>
       </div>
-      <div className="md:hidden">
-        <InitDivider color="blue" />
-      </div>
-      <div className="hidden md:block">
-        <TopDivider color="blue" />
-      </div>
-      <div className="px-10 container mx-auto">
+      <div className="px-10 container mx-auto ">
+        <div className="my-16 lg:hidden">
+          <CollapseMenus />
+        </div>
         <div className="relative">
           <Image
             src={asianMale}

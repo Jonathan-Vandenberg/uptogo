@@ -4,7 +4,7 @@ import { FaAngleRight } from "react-icons/fa";
 
 const App = () => {
   return (
-    <div className="divide-y-2 divide-blue border-b-2 border-t-2 border-blue md:hidden">
+    <div className="divide-y-2 divide-blue border-b-2 border-t-2 border-blue">
       <Collapsible
         transitionTime={200}
         trigger={
@@ -17,7 +17,7 @@ const App = () => {
         }
       >
         <div className="divide-y-2 divide-gray-300">
-          <p className="cursor-pointer pl-6 p-4 hover:bg-lightBlue">
+          <p className="cursor-pointer pl-6 p-4 hover:bg-lightBlue border-t-2 border-gray-200">
             Step 1: Choose Your Course
           </p>
           <p className="cursor-pointer p-4 pl-6 hover:bg-lightBlue">
@@ -32,26 +32,7 @@ const App = () => {
         </div>
       </Collapsible>
 
-      <Collapsible
-        transitionTime={200}
-        trigger={
-          <div className="flex  items-center justify-between bg-darkBlue text-gray-100">
-            <p className="p-4 text-blue">Ngành Học</p>
-            <div className="pr-4">
-              <FaAngleRight fontSize={20} color={"black"} />
-            </div>
-          </div>
-        }
-      >
-        <div className="divide-y-2 divide-darkBlue">
-          <CoursesIT />
-          <CoursesHealth />
-          <CoursesManagement />
-          <CoursesDesign />
-          <CoursesHospitality />
-          <CoursesTrades />
-        </div>
-      </Collapsible>
+      <Courses />
 
       <Collapsible
         transitionTime={200}
@@ -105,6 +86,31 @@ const App = () => {
 };
 
 export default App;
+
+export const Courses = () => {
+  return (
+    <Collapsible
+      transitionTime={200}
+      trigger={
+        <div className="flex  items-center justify-between bg-darkBlue text-gray-100">
+          <p className="p-4 text-blue">Ngành Học</p>
+          <div className="pr-4">
+            <FaAngleRight fontSize={20} color={"black"} />
+          </div>
+        </div>
+      }
+    >
+      <div className="divide-y-2 divide-darkBlue">
+        <CoursesIT />
+        <CoursesHealth />
+        <CoursesManagement />
+        <CoursesDesign />
+        <CoursesHospitality />
+        <CoursesTrades />
+      </div>
+    </Collapsible>
+  );
+};
 
 const CoursesIT = () => {
   return (
