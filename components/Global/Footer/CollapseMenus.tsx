@@ -9,9 +9,9 @@ const App = () => {
         transitionTime={200}
         trigger={
           <div className="flex items-center justify-between bg-darkBlue text-gray-100">
-            <p className="p-4">Application Process</p>
+            <p className="p-4 text-blue">Application Process</p>
             <div className="pr-4">
-              <FaAngleRight fontSize={20} />
+              <FaAngleRight color={"black"} fontSize={20} />
             </div>
           </div>
         }
@@ -36,9 +36,9 @@ const App = () => {
         transitionTime={200}
         trigger={
           <div className="flex  items-center justify-between bg-darkBlue text-gray-100">
-            <p className="p-4">Courses</p>
+            <p className="p-4 text-blue">Ngành Học</p>
             <div className="pr-4">
-              <FaAngleRight fontSize={20} />
+              <FaAngleRight fontSize={20} color={"black"} />
             </div>
           </div>
         }
@@ -47,6 +47,9 @@ const App = () => {
           <CoursesIT />
           <CoursesHealth />
           <CoursesManagement />
+          <CoursesDesign />
+          <CoursesHospitality />
+          <CoursesTrades />
         </div>
       </Collapsible>
 
@@ -54,9 +57,9 @@ const App = () => {
         transitionTime={200}
         trigger={
           <div className="flex items-center justify-between bg-darkBlue text-gray-100">
-            <p className="p-4">Visa Application</p>
+            <p className="p-4 text-blue">Visa Application</p>
             <div className="pr-4">
-              <FaAngleRight fontSize={20} />
+              <FaAngleRight color={"black"} fontSize={20} />
             </div>
           </div>
         }
@@ -77,9 +80,9 @@ const App = () => {
         transitionTime={200}
         trigger={
           <div className="flex items-center justify-between bg-darkBlue text-gray-100">
-            <p className="p-4">Things you should know</p>
+            <p className="p-4 text-blue">Things you should know</p>
             <div className="pr-4">
-              <FaAngleRight fontSize={20} />
+              <FaAngleRight color={"black"} fontSize={20} />
             </div>
           </div>
         }
@@ -109,7 +112,9 @@ const CoursesIT = () => {
       transitionTime={200}
       trigger={
         <div className="flex items-center justify-between px-6 bg-blue text-white">
-          <p className="p-4 ml-2 text-gray-100">Information Technology</p>
+          <p className="p-4 ml-2 text-gray-100">
+            Công nghệ thông tin - Information Technology
+          </p>
           <div className="pr-4">
             <FaAngleRight fontSize={20} />
           </div>
@@ -118,10 +123,37 @@ const CoursesIT = () => {
     >
       <div className="divide-y-2 divide-gray-300">
         <p className="pl-12 cursor-pointer p-4  hover:bg-lightBlue">
-          Computer Science
+          Phát triển phần mền – Software Development
         </p>
         <p className="cursor-pointer p-4 pl-12 hover:bg-lightBlue">
-          Web Development
+          Mạng máy tính – Compute Networking
+        </p>
+        <p className="cursor-pointer p-4 pl-12 hover:bg-lightBlue">
+          Điện toán đám mây – Cloud Computing
+        </p>
+        <p className="cursor-pointer p-4 pl-12 hover:bg-lightBlue">
+          Phân tích kinh doanh – Business Analysis
+        </p>
+        <p className="cursor-pointer p-4 pl-12 hover:bg-lightBlue">
+          Viễn thông – Telecommunication
+        </p>
+        <p className="cursor-pointer p-4 pl-12 hover:bg-lightBlue">
+          Lập trình trò chơi - Game Programming
+        </p>
+        <p className="cursor-pointer p-4 pl-12 hover:bg-lightBlue">
+          Phát triển Website – Website Development
+        </p>
+        <p className="cursor-pointer p-4 pl-12 hover:bg-lightBlue">
+          Phương tiện máy móc – Machine Learing
+        </p>
+        <p className="cursor-pointer p-4 pl-12 hover:bg-lightBlue">
+          Quản lý dữ liệu – Data Management
+        </p>
+        <p className="cursor-pointer p-4 pl-12 hover:bg-lightBlue">
+          Công nghệ tiền ảo – Blockchain Technology
+        </p>
+        <p className="cursor-pointer p-4 pl-12 hover:bg-lightBlue">
+          Trí tuệ nhân tạo - Artificial Intelligence (AI)
         </p>
       </div>
     </Collapsible>
@@ -134,7 +166,7 @@ const CoursesHealth = () => {
       transitionTime={200}
       trigger={
         <div className="flex items-center justify-between px-6 bg-blue text-white">
-          <p className="p-4 ml-2 text-gray-100">Health</p>
+          <p className="p-4 ml-2 text-gray-100">Sức khỏe - Health</p>
           <div className="pr-4">
             <FaAngleRight fontSize={20} />
           </div>
@@ -142,10 +174,31 @@ const CoursesHealth = () => {
       }
     >
       <div className="divide-y-2 divide-gray-300">
-        <p className="pl-12 cursor-pointer p-4  hover:bg-lightBlue">Nursing</p>
-        <p className="cursor-pointer p-4 pl-12 hover:bg-lightBlue">Medicine</p>
-        <p className="cursor-pointer p-4 pl-12 hover:bg-lightBlue">Pharma</p>
-        <p className="cursor-pointer p-4 pl-12 hover:bg-lightBlue">Dentistry</p>
+        <p className="pl-12 cursor-pointer p-4  hover:bg-lightBlue">
+          Chăm sóc người già – Aged Care
+        </p>
+        <p className="cursor-pointer p-4 pl-12 hover:bg-lightBlue">
+          Dinh dưỡng – Nutrition
+        </p>
+        <p className="cursor-pointer p-4 pl-12 hover:bg-lightBlue">
+          Y tá – Nursing
+        </p>
+        <p className="cursor-pointer p-4 pl-12 hover:bg-lightBlue">
+          Thú ý – Veterinary
+        </p>
+        <p className="cursor-pointer p-4 pl-12 hover:bg-lightBlue">
+          Dược sĩ – Medicine{" "}
+        </p>
+        <p className="cursor-pointer p-4 pl-12 hover:bg-lightBlue">
+          Sức khỏe cộng đồng – Public health
+        </p>
+        <p className="cursor-pointer p-4 pl-12 hover:bg-lightBlue">
+          Nha khoa – Dental{" "}
+        </p>
+        <p className="cursor-pointer p-4 pl-12 hover:bg-lightBlue">Massage</p>
+        <p className="cursor-pointer p-4 pl-12 hover:bg-lightBlue">
+          Tâm lý học – Mental Health
+        </p>
       </div>
     </Collapsible>
   );
@@ -157,7 +210,7 @@ const CoursesManagement = () => {
       transitionTime={200}
       trigger={
         <div className="flex items-center justify-between px-6 bg-blue text-white">
-          <p className="p-4 ml-2 text-gray-100">Management</p>
+          <p className="p-4 ml-2 text-gray-100">Quản lý - Management</p>
           <div className="pr-4">
             <FaAngleRight fontSize={20} />
           </div>
@@ -166,10 +219,167 @@ const CoursesManagement = () => {
     >
       <div className="divide-y-2 divide-gray-300">
         <p className="pl-12 cursor-pointer p-4  hover:bg-lightBlue">
-          Business Management
+          Quản lý dự án – Project Management
         </p>
         <p className="cursor-pointer p-4 pl-12 hover:bg-lightBlue border-b-2 border-darkBlue">
-          Hotel Management
+          Quản trị kinh doanh – Business Management
+        </p>
+        <p className="cursor-pointer p-4 pl-12 hover:bg-lightBlue border-b-2 border-darkBlue">
+          Quản lý nhân sự - Human Resources
+        </p>
+        <p className="cursor-pointer p-4 pl-12 hover:bg-lightBlue border-b-2 border-darkBlue">
+          Ngân hàng – Banking Management
+        </p>
+        <p className="cursor-pointer p-4 pl-12 hover:bg-lightBlue border-b-2 border-darkBlue">
+          Kinh doanh quốc tế - International Business
+        </p>
+        <p className="cursor-pointer p-4 pl-12 hover:bg-lightBlue border-b-2 border-darkBlue">
+          Truyền thông xã hội & Tiếp thị - Social Media & Marketing
+        </p>
+        <p className="cursor-pointer p-4 pl-12 hover:bg-lightBlue border-b-2 border-darkBlue">
+          Quản lý nông nghiệp – Agribusiness Management
+        </p>
+        <p className="cursor-pointer p-4 pl-12 hover:bg-lightBlue border-b-2 border-darkBlue">
+          Quản lý chuỗi cung ứng – Supply chain Management
+        </p>
+        <p className="cursor-pointer p-4 pl-12 hover:bg-lightBlue border-b-2 border-darkBlue">
+          Lãnh đạo & Quản lý – Leadership & Management
+        </p>
+      </div>
+    </Collapsible>
+  );
+};
+
+const CoursesDesign = () => {
+  return (
+    <Collapsible
+      transitionTime={200}
+      trigger={
+        <div className="flex items-center justify-between px-6 bg-blue text-white">
+          <p className="p-4 ml-2 text-gray-100">Thiết kế - Design</p>
+          <div className="pr-4">
+            <FaAngleRight fontSize={20} />
+          </div>
+        </div>
+      }
+    >
+      <div className="divide-y-2 divide-gray-300">
+        <p className="pl-12 cursor-pointer p-4  hover:bg-lightBlue">
+          Thiết kế thời trang – Fashion Design
+        </p>
+        <p className="cursor-pointer p-4 pl-12 hover:bg-lightBlue border-b-2 border-darkBlue">
+          Kiến trúc môi trường – Landscape
+        </p>
+        <p className="cursor-pointer p-4 pl-12 hover:bg-lightBlue border-b-2 border-darkBlue">
+          Âm nhạc & Âm thanh – Music & Audio
+        </p>
+        <p className="cursor-pointer p-4 pl-12 hover:bg-lightBlue border-b-2 border-darkBlue">
+          Phim & Truyền thông – Film & Media
+        </p>
+        <p className="cursor-pointer p-4 pl-12 hover:bg-lightBlue border-b-2 border-darkBlue">
+          Thiết kế đồ họa – Graphic Design
+        </p>
+        <p className="cursor-pointer p-4 pl-12 hover:bg-lightBlue border-b-2 border-darkBlue">
+          Thiết kế nội thất – Interior Design
+        </p>
+        <p className="cursor-pointer p-4 pl-12 hover:bg-lightBlue border-b-2 border-darkBlue">
+          Truyền thông kỹ thuật số - Digital Media
+        </p>
+        <p className="cursor-pointer p-4 pl-12 hover:bg-lightBlue border-b-2 border-darkBlue">
+          Diễn viên – Acting
+        </p>
+        <p className="cursor-pointer p-4 pl-12 hover:bg-lightBlue border-b-2 border-darkBlue">
+          Hoạt hình & 3D – Animation 3D
+        </p>
+      </div>
+    </Collapsible>
+  );
+};
+
+const CoursesHospitality = () => {
+  return (
+    <Collapsible
+      transitionTime={200}
+      trigger={
+        <div className="flex items-center justify-between px-6 bg-blue text-white">
+          <p className="p-4 ml-2 text-gray-100">
+            Nhà hàng khách sạn – Hospitality
+          </p>
+          <div className="pr-4">
+            <FaAngleRight fontSize={20} />
+          </div>
+        </div>
+      }
+    >
+      <div className="divide-y-2 divide-gray-300">
+        <p className="pl-12 cursor-pointer p-4  hover:bg-lightBlue">
+          Bếp bánh – Patisserie & Baking
+        </p>
+        <p className="cursor-pointer p-4 pl-12 hover:bg-lightBlue border-b-2 border-darkBlue">
+          Bếp – Commercial Cookery
+        </p>
+        <p className="cursor-pointer p-4 pl-12 hover:bg-lightBlue border-b-2 border-darkBlue">
+          Du lịch lữ hành – Travel & Tourism
+        </p>
+        <p className="cursor-pointer p-4 pl-12 hover:bg-lightBlue border-b-2 border-darkBlue">
+          Events – Sự kiện
+        </p>
+        <p className="cursor-pointer p-4 pl-12 hover:bg-lightBlue border-b-2 border-darkBlue">
+          Quản lý khách sạn quốc tế - International Hotel Management
+        </p>
+        <p className="cursor-pointer p-4 pl-12 hover:bg-lightBlue border-b-2 border-darkBlue">
+          Quản lý nhà hàng khách sạn – Hospitality Management
+        </p>
+      </div>
+    </Collapsible>
+  );
+};
+
+const CoursesTrades = () => {
+  return (
+    <Collapsible
+      transitionTime={200}
+      trigger={
+        <div className="flex items-center justify-between px-6 bg-blue text-white">
+          <p className="p-4 ml-2 text-gray-100">
+            Thương mại & Thể thao – Trades & Sport
+          </p>
+          <div className="pr-4">
+            <FaAngleRight fontSize={20} />
+          </div>
+        </div>
+      }
+    >
+      <div className="divide-y-2 divide-gray-300">
+        <p className="pl-12 cursor-pointer p-4  hover:bg-lightBlue">
+          Máy móc – Automotive
+        </p>
+        <p className="cursor-pointer p-4 pl-12 hover:bg-lightBlue border-b-2 border-darkBlue">
+          Làm đẹp – Beauty
+        </p>
+        <p className="cursor-pointer p-4 pl-12 hover:bg-lightBlue border-b-2 border-darkBlue">
+          Công trình xây dựng – Building & Construction
+        </p>
+        <p className="cursor-pointer p-4 pl-12 hover:bg-lightBlue border-b-2 border-darkBlue">
+          Mộc – Carpentry
+        </p>
+        <p className="cursor-pointer p-4 pl-12 hover:bg-lightBlue border-b-2 border-darkBlue">
+          Giáo dục – Education
+        </p>
+        <p className="cursor-pointer p-4 pl-12 hover:bg-lightBlue border-b-2 border-darkBlue">
+          Thể thao – Fitness
+        </p>
+        <p className="cursor-pointer p-4 pl-12 hover:bg-lightBlue border-b-2 border-darkBlue">
+          Làm tóc – Hairdressing
+        </p>
+        <p className="cursor-pointer p-4 pl-12 hover:bg-lightBlue border-b-2 border-darkBlue">
+          Làm vườn – Horticulture
+        </p>
+        <p className="cursor-pointer p-4 pl-12 hover:bg-lightBlue border-b-2 border-darkBlue">
+          Giáo dục thể chất – Sport Development
+        </p>
+        <p className="cursor-pointer p-4 pl-12 hover:bg-lightBlue border-b-2 border-darkBlue">
+          Yoga
         </p>
       </div>
     </Collapsible>

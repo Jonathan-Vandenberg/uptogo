@@ -64,7 +64,7 @@ const BlogHeader = ({ data }: IProps) => {
           />
           {data?.blogPost?.photoCredit && (
             <p className="text-xs text-gray-500 mt-1">
-              {data?.blogPost?.photoCredit}
+              Image Credit: {data?.blogPost?.photoCredit}
             </p>
           )}
         </div>
