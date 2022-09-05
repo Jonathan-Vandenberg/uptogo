@@ -26,11 +26,14 @@ export default function App() {
 
   return (
     <div className="bg-homeBody">
-      <div className="flex flex-col items-center justify-center space-y-24 py-20">
+      <div className="flex flex-col items-center justify-center space-y-12 pt-12 pb-12">
         <CourseStepper step={step} />
         <div className="border-y-2 border-blue">
           <Courses handleStepper={handleStepper} />
         </div>
+      </div>
+      <div className="bg-whote w-full h-60 flex items-center justify-center">
+        spacer
       </div>
       <div className="px-10 container mx-auto ">
         <div className="relative">
