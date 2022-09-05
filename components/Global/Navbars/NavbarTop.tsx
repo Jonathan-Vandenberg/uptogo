@@ -4,10 +4,7 @@ import { HiOutlineLocationMarker } from "react-icons/hi";
 
 const NavbarTop = ({ onMouseEnter }: any) => {
   return (
-    <div
-      className="bg-gradient-to-r from-startColor to-endColor"
-      onMouseEnter={onMouseEnter}
-    >
+    <div className="bg-sky-200" onMouseEnter={onMouseEnter}>
       <div className="hidden lg:grid lg:grid-cols-3">
         <div className="flex items-center justify-evenly  whitespace-nowrap text-sm ">
           <p className="cursor-pointer text-gray-800 ">About Us</p>
@@ -18,12 +15,7 @@ const NavbarTop = ({ onMouseEnter }: any) => {
 
           <p className="text-gray-800 ">Lorem</p>
         </div>
-
-        <input
-          placeholder="Search keyword"
-          className="input-field mx-auto my-2 h-7 max-w-[280px] self-center rounded-md px-2"
-        />
-
+        <div></div>
         <div className="flex items-center justify-evenly whitespace-nowrap">
           <Link href="/favorites">
             <div className="flex cursor-pointer items-center text-gray-800 ">
