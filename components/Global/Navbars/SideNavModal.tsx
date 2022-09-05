@@ -23,7 +23,7 @@ const style = {
   position: "absolute" as "absolute",
   top: 0,
   left: 0,
-  maxWidth: "80vw",
+  width: "80vw",
   height: "100vh",
   bgcolor: "background.paper",
   outline: "none",
