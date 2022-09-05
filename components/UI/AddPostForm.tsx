@@ -41,14 +41,13 @@ const AddClientForm = () => {
   const [reference5, setReference5] = useState("");
 
   const [authorName, setAuthorName] = useState("");
-  const [authorImage, setAuthorImage] = useState("");
   const [authorAbout, setAuthorAbout] = useState("");
   const [authorLink, setAuthorLink] = useState("");
 
   const [editedBy, setEditedBy] = useState("");
   const [publishedDate, setPublishedDate] = useState("");
   const [mainImage, setMainImage] = useState("");
-  const [photoCredit, setPhotocredit] = useState("");
+  const [photoCredit, setPhotoCredit] = useState("");
 
   const [addBlogPostMutation] = useAddBlogPostMutation();
 
@@ -57,6 +56,10 @@ const AddClientForm = () => {
       addBlogPostMutation({
         variables: {
           input: {
+            editedBy: editedBy,
+            publishedDate: publishedDate,
+            mainImage: mainImage,
+            photoCredit: photoCredit,
             title: title,
             subtitle1: subtitle1,
             tableContents1: tableContents1,
@@ -116,6 +119,45 @@ const AddClientForm = () => {
       autoComplete="off"
       className="space-y-12"
     >
+      <Form.Item
+        label="Date (2 September 2022)"
+        name="publishedDate"
+        rules={[
+          {
+            required: true,
+          },
+        ]}
+      >
+        <Input
+          value={publishedDate}
+          onChange={(e) => setPublishedDate(e.target.value)}
+        />
+      </Form.Item>
+      <Form.Item
+        label="Edited By"
+        name="editedBy"
+        rules={[
+          {
+            required: true,
+          },
+        ]}
+      >
+        <Input value={editedBy} onChange={(e) => setEditedBy(e.target.value)} />
+      </Form.Item>
+      <Form.Item
+        label="Photo Credit"
+        name="photoCredit"
+        rules={[
+          {
+            required: true,
+          },
+        ]}
+      >
+        <Input
+          value={photoCredit}
+          onChange={(e) => setPhotoCredit(e.target.value)}
+        />
+      </Form.Item>
       <Form.Item
         label="Title"
         name="title"

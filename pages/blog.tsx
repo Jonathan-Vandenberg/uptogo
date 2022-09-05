@@ -8,7 +8,7 @@ import BlogHeader from "../components/UI/BlogHeader";
 export default function Blog() {
   const { data, loading, error } = useBlogPostQuery({
     variables: {
-      id: "63156c7bde4a2b16eb02f02e",
+      id: "6315d649d375ad6ee10f6670",
     },
   });
   return (
