@@ -8,7 +8,7 @@ export default function App({ color }: IProps) {
   return (
     <>
       <div className="relative">
-        <div className="w-full h-12 md:h-32 rounded-tl-full z-10 bg-white flex items-center justify-center"></div>
+        <div className="w-full h-12 md:h-32 rounded-tl-full z-10 bg-bgGradientStart flex items-center justify-center"></div>
         <div className={style}></div>
       </div>
     </>

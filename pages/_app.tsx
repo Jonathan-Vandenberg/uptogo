@@ -1,5 +1,4 @@
 import "../styles/input.css";
-import "antd/dist/antd.css";
 import { SessionProvider } from "next-auth/react";
 import type { AppProps } from "next/app";
 import { ApolloProvider } from "@apollo/client";

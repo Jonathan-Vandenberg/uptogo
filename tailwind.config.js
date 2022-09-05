@@ -21,6 +21,7 @@ module.exports = {
         darkBlue: "rgb(19, 37, 83)",
         lightBlue: "#B0E3F5",
         orange: "#F69724",
+        bgGradientStart: "#F1F5F9",
       },
       backgroundImage: {
         "hero-pattern": "url('/public/6057300.jpg')",
