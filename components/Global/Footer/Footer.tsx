@@ -10,7 +10,6 @@ import UnCollapassedMenu from "./UnCollapassedMenu";
 import facebookLogo from "../../../public/social-media/facebook.svg";
 import zaloLogo from "../../../public/social-media/zalo.svg";
 import youtubeLogo from "../../../public/social-media/youtube.svg";
-import appStoreLogo from "../../../public/social-media/appStoreGooglePlayLogo.png";
 
 const Footer = () => {
   const router = useRouter();
@@ -62,7 +61,11 @@ const Footer = () => {
       <div className="bg-body">
         <div className="">
           <div className="md:hidden">
-            <CollapseMenus />
+            <CollapseMenus
+              handleStepper={function (): void {
+                throw new Error("Function not implemented.");
+              }}
+            />
           </div>
           <UnCollapassedMenu />
         </div>

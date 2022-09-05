@@ -1,8 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import Collapsible from "react-collapsible";
 import { FaAngleRight } from "react-icons/fa";
 
-const App = () => {
+const App = ({ handleStepper }: IStepper) => {
   return (
     <div className="divide-y-2 divide-blue border-b-2 border-t-2 border-blue">
       <Collapsible
@@ -32,7 +32,7 @@ const App = () => {
         </div>
       </Collapsible>
 
-      <Courses />
+      <Courses handleStepper={handleStepper} />
 
       <Collapsible
         transitionTime={200}
@@ -87,7 +87,7 @@ const App = () => {
 
 export default App;
 
-export const Courses = () => {
+export const Courses = ({ handleStepper }: IStepper) => {
   return (
     <Collapsible
       transitionTime={200}
@@ -101,23 +101,30 @@ export const Courses = () => {
       }
     >
       <div className="divide-y-2 divide-darkBlue">
-        <CoursesIT />
-        <CoursesHealth />
-        <CoursesManagement />
-        <CoursesDesign />
-        <CoursesHospitality />
-        <CoursesTrades />
+        <CoursesIT handleStepper={handleStepper} />
+        <CoursesHealth handleStepper={handleStepper} />
+        <CoursesManagement handleStepper={handleStepper} />
+        <CoursesDesign handleStepper={handleStepper} />
+        <CoursesHospitality handleStepper={handleStepper} />
+        <CoursesTrades handleStepper={handleStepper} />
       </div>
     </Collapsible>
   );
 };
 
-const CoursesIT = () => {
+interface IStepper {
+  handleStepper: () => void;
+}
+
+const CoursesIT = ({ handleStepper }: IStepper) => {
   return (
     <Collapsible
       transitionTime={200}
       trigger={
-        <div className="flex items-center justify-between px-6 bg-blue text-white">
+        <div
+          className="flex items-center justify-between px-6 bg-blue text-white"
+          onClick={handleStepper}
+        >
           <p className="p-4 ml-2 text-gray-100">
             Công nghệ thông tin - Information Technology
           </p>
@@ -166,12 +173,15 @@ const CoursesIT = () => {
   );
 };
 
-const CoursesHealth = () => {
+const CoursesHealth = ({ handleStepper }: IStepper) => {
   return (
     <Collapsible
       transitionTime={200}
       trigger={
-        <div className="flex items-center justify-between px-6 bg-blue text-white">
+        <div
+          onClick={handleStepper}
+          className="flex items-center justify-between px-6 bg-blue text-white"
+        >
           <p className="p-4 ml-2 text-gray-100">Sức khỏe - Health</p>
           <div className="pr-4">
             <FaAngleRight fontSize={20} />
@@ -210,12 +220,15 @@ const CoursesHealth = () => {
   );
 };
 
-const CoursesManagement = () => {
+const CoursesManagement = ({ handleStepper }: IStepper) => {
   return (
     <Collapsible
       transitionTime={200}
       trigger={
-        <div className="flex items-center justify-between px-6 bg-blue text-white">
+        <div
+          onClick={handleStepper}
+          className="flex items-center justify-between px-6 bg-blue text-white"
+        >
           <p className="p-4 ml-2 text-gray-100">Quản lý - Management</p>
           <div className="pr-4">
             <FaAngleRight fontSize={20} />
@@ -256,12 +269,15 @@ const CoursesManagement = () => {
   );
 };
 
-const CoursesDesign = () => {
+const CoursesDesign = ({ handleStepper }: IStepper) => {
   return (
     <Collapsible
       transitionTime={200}
       trigger={
-        <div className="flex items-center justify-between px-6 bg-blue text-white">
+        <div
+          onClick={handleStepper}
+          className="flex items-center justify-between px-6 bg-blue text-white"
+        >
           <p className="p-4 ml-2 text-gray-100">Thiết kế - Design</p>
           <div className="pr-4">
             <FaAngleRight fontSize={20} />
@@ -302,12 +318,15 @@ const CoursesDesign = () => {
   );
 };
 
-const CoursesHospitality = () => {
+const CoursesHospitality = ({ handleStepper }: IStepper) => {
   return (
     <Collapsible
       transitionTime={200}
       trigger={
-        <div className="flex items-center justify-between px-6 bg-blue text-white">
+        <div
+          onClick={handleStepper}
+          className="flex items-center justify-between px-6 bg-blue text-white"
+        >
           <p className="p-4 ml-2 text-gray-100">
             Nhà hàng khách sạn – Hospitality
           </p>
@@ -341,12 +360,15 @@ const CoursesHospitality = () => {
   );
 };
 
-const CoursesTrades = () => {
+const CoursesTrades = ({ handleStepper }: IStepper) => {
   return (
     <Collapsible
       transitionTime={200}
       trigger={
-        <div className="flex items-center justify-between px-6 bg-blue text-white">
+        <div
+          onClick={handleStepper}
+          className="flex items-center justify-between px-6 bg-blue text-white"
+        >
           <p className="p-4 ml-2 text-gray-100">
             Thương mại & Thể thao – Trades & Sport
           </p>

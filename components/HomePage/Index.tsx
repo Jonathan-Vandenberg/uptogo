@@ -1,24 +1,38 @@
 import Image from "next/image";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import asianMale from "../../public/it/asianMale.jpg";
 import CollapseMenus, { Courses } from "../Global/Footer/CollapseMenus";
 import CourseStepper from "./CourseStepper";
 
 export default function App() {
   const [step, setStep] = useState(0);
+  const [subject, setSubject] = useState(false);
+  const [major, setMajor] = useState(false);
+
+  const handleStepper = () => {
+    setSubject(!subject);
+  };
+
+  useEffect(() => {
+    if (subject) {
+      setStep(1);
+    } else {
+      setStep(0);
+    }
+    if (major) {
+      setStep(2);
+    }
+  }, [subject, major]);
 
   return (
     <div className="bg-homeBody">
       <div className="flex flex-col items-center justify-center space-y-24 py-20">
         <CourseStepper step={step} />
         <div className="border-y-2 border-blue">
-          <Courses />
+          <Courses handleStepper={handleStepper} />
         </div>
       </div>
       <div className="px-10 container mx-auto ">
-        <div className="my-16 lg:hidden">
-          <CollapseMenus />
-        </div>
         <div className="relative">
           <Image
             src={asianMale}
