@@ -4,7 +4,7 @@ import { FaAngleRight } from "react-icons/fa";
 
 const App = () => {
   return (
-    <div className="divide-y-2 divide-blue border-b-2 border-blue md:hidden">
+    <div className="divide-y-2 divide-blue border-b-2 border-t-2 border-blue md:hidden">
       <Collapsible
         transitionTime={200}
         trigger={
