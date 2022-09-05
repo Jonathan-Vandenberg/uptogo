@@ -89,7 +89,6 @@ type BlogPost {
   reference5: String
 
   authorName: String
-  authorImage: String
   authorAbout: String
   authorLink: String
 
@@ -141,7 +140,6 @@ input BlogPostInput {
   reference5: String
 
   authorName: String
-  authorImage: String
   authorAbout: String
   authorLink: String
 

@@ -42,7 +42,6 @@ fragment BlogPost on BlogPost {
   reference5
 
   authorName
-  authorImage
   authorAbout
   authorLink
 
