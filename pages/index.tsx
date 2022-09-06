@@ -5,8 +5,7 @@ import Image from "next/image";
 export default function App() {
   return (
     <>
-      <HomeMain />
-      <div className="px-10 container mx-auto">
+      <div className="md:px-10 md:container mx-auto">
         <Image
           src={image}
           alt="image"
@@ -15,7 +14,7 @@ export default function App() {
           layout="responsive"
         />
       </div>
-      <div className="h-96 flex items-center justify-center">SPACER TIME</div>
+      <HomeMain />
     </>
   );
 }

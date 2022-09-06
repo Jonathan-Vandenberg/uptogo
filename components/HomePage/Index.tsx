@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import asianMale from "../../public/it/asianMale.jpg";
+import BlogPageHero from "../Blog/BlogPageHero";
 import {
   CoursesHealth,
   CoursesDesign,
@@ -9,6 +10,7 @@ import {
   CoursesManagement,
   CoursesTrades,
 } from "../Global/Footer/CollapseMenus";
+import BlogHeader from "../UI/BlogHeader";
 import CourseStepper from "./CourseStepper";
 
 export default function App() {
@@ -33,10 +35,15 @@ export default function App() {
 
   return (
     <div className="bg-homeBody">
-      <div className="flex flex-col items-center justify-center space-y-12 pt-12 pb-12 px-10 container mx-auto ">
-        <h2 className="logoFont text-4xl md:text-5xl text-gray-700 py-1 md:py-10">
-          Let&apos;s go step-by-step!
+      <div className="pt-5 text-center">
+        <h2 className="logoFont text-3xl md:text-5xl text-gray-700 py-1 md:py-10">
+          Ready to Explore?
         </h2>
+        <h2 className="logoFont text-xl md:text-5xl text-gray-700 py-1 md:py-10">
+          Let&apos;s go step-by-step
+        </h2>
+      </div>
+      <div className="flex flex-col items-center justify-center space-y-12 pt-12 pb-12 px-10 container mx-auto ">
         <CourseStepper step={step} />
         <div className="flex -tems-center-justify-center space-y-1 flex-col">
           <CoursesIT handleStepper={handleStepper} />
@@ -46,32 +53,25 @@ export default function App() {
           <CoursesHospitality handleStepper={handleStepper} />
           <CoursesTrades handleStepper={handleStepper} />
         </div>
-      </div>
-      <div className="bg-whote w-full h-60 flex items-center justify-center">
-        spacer
-      </div>
-      <div className="px-10 container mx-auto ">
-        <div className="relative">
-          <Image
-            src={asianMale}
-            alt="one"
-            width={604}
-            height={410}
-            className="rounded-tl-2xl"
-          />
-          <div className="bg-black/50 top-0 left-0 absolute w-full h-full"></div>
-        </div>
-        <h2 className="text-2xl font-semibold text-gray-800 md:text-4xl lg:text-5xl">
+        <h2 className="text-3xl logoFont text-gray-700 md:text-5xl lg:text-6xl">
           Lý Do Lựa Chọn Uptogo?
         </h2>
-        <p className="py-4 text-xl text-gray-600">
+        <p className="text-xl text-gray-600">
           Tư vấn hàng đầu Việt Nam, thành lập bởi chuyên gia có kinh nghiệm hơn
-          12 năm trong nghề. Không chỉ dừng lại ở kinh nghiệm tư vấn, đội ngũ tư
-          vấn viên là những người đã từng học tập, sinh sống và làm việc tại
-          nhiều nơi trên Thế Giới như: Úc, Canada, Thụy Sỹ,… cung cấp các dịch
-          vụ từ vấn nghề và du học (Canada, Úc, Mỹ, New Zealand Thụy Sĩ, Anh)
+          12 năm trong nghề.
+          <br></br>
+          <br></br>
+          Không chỉ dừng lại ở kinh nghiệm tư vấn, đội ngũ tư vấn viên là những
+          người đã từng học tập, sinh sống và làm việc tại nhiều nơi trên Thế
+          Giới như: Úc, Canada, Thụy Sỹ...
+          <br></br>
+          <br></br>
+          Cung cấp các dịch vụ từ vấn nghề và du học (Canada, Úc, Mỹ, New
+          Zealand Thụy Sĩ, Anh)
         </p>
       </div>
+
+      <BlogPageHero />
     </div>
   );
 }
