@@ -109,8 +109,8 @@ const SideNavModal: NextPage = () => {
       </div>
 
       <div className="flex flex-col items-center justify-evenly space-y-2 whitespace-nowrap">
-        <Link href="/compare">
-          <a className="cursor-pointer px-4">Compare Courses</a>
+        <Link href="/blogs">
+          <a className="cursor-pointer px-4">Blog</a>
         </Link>
 
         <Link href="/about">
