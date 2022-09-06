@@ -9,7 +9,7 @@ const App = ({ handleStepper }: IStepper) => {
         transitionTime={200}
         trigger={
           <div className="flex items-center justify-between bg-darkBlue text-gray-100">
-            <p className="p-4 text-blue">Application Process</p>
+            <p className="p-4 text-blue text-lg">Application Process</p>
             <div className="pr-4">
               <FaAngleRight color={"white"} fontSize={20} />
             </div>
@@ -17,16 +17,16 @@ const App = ({ handleStepper }: IStepper) => {
         }
       >
         <div className="divide-y-2 divide-gray-300">
-          <p className="cursor-pointer pl-6 p-4 hover:bg-lightBlue border-t-2 border-gray-200">
+          <p className="cursor-pointer pl-6 p-4 hover:bg-lightBlue border-t-2 border-gray-200 text-lg">
             Step 1: Choose Your Course
           </p>
-          <p className="cursor-pointer p-4 pl-6 hover:bg-lightBlue">
+          <p className="cursor-pointer p-4 pl-6 hover:bg-lightBlue text-lg">
             step 2: Speak with our Consultants
           </p>
-          <p className="cursor-pointer pl-6 p-4 hover:bg-lightBlue">
+          <p className="cursor-pointer pl-6 p-4 hover:bg-lightBlue text-lg">
             Step 3: Prepare for Visa Application
           </p>
-          <p className="cursor-pointer p-4 pl-6 hover:bg-lightBlue border-b-2 border-blue">
+          <p className="text-lg cursor-pointer p-4 pl-6 hover:bg-lightBlue border-b-2 border-blue">
             Step 4: Study Abroad!
           </p>
         </div>
@@ -38,7 +38,7 @@ const App = ({ handleStepper }: IStepper) => {
         transitionTime={200}
         trigger={
           <div className="flex items-center justify-between bg-darkBlue text-gray-100">
-            <p className="p-4 text-blue">Visa Application</p>
+            <p className="p-4 text-blue text-lg">Visa Application</p>
             <div className="pr-4">
               <FaAngleRight color={"white"} fontSize={20} />
             </div>
@@ -46,13 +46,13 @@ const App = ({ handleStepper }: IStepper) => {
         }
       >
         <div className="divide-y-2 divide-gray-300">
-          <p className="cursor-pointer p-4 pl-6 hover:bg-lightBlue">
+          <p className="cursor-pointer p-4 pl-6 hover:bg-lightBlue text-lg">
             Visa Requirements
           </p>
-          <p className="cursor-pointer p-4 pl-6 hover:bg-lightBlue ">
+          <p className="cursor-pointer p-4 pl-6 hover:bg-lightBlue text-lg">
             Something Else
           </p>
-          <p className="cursor-pointer p-4 pl-6 hover:bg-lightBlue border-b-2 border-blue">
+          <p className="cursor-pointer p-4 pl-6 hover:bg-lightBlue border-b-2 border-blue text-lg">
             Another thing
           </p>
         </div>
@@ -61,7 +61,7 @@ const App = ({ handleStepper }: IStepper) => {
         transitionTime={200}
         trigger={
           <div className="flex items-center justify-between bg-darkBlue text-gray-100">
-            <p className="p-4 text-blue">Things you should know</p>
+            <p className="p-4 text-blue text-lg">Things you should know</p>
             <div className="pr-4">
               <FaAngleRight color={"white"} fontSize={20} />
             </div>
@@ -69,14 +69,16 @@ const App = ({ handleStepper }: IStepper) => {
         }
       >
         <div className="divide-y-2 divide-gray-300">
-          <p className="cursor-pointer p-4 pl-6 hover:bg-lightBlue">
+          <p className="text-lg cursor-pointer p-4 pl-6 hover:bg-lightBlue">
             Promotions
           </p>
-          <p className="cursor-pointer p-4 pl-6 hover:bg-lightBlue">
+          <p className="cursor-pointer p-4 pl-6 hover:bg-lightBlue text-lg">
             Documents and Fees
           </p>
-          <p className="cursor-pointer p-4 pl-6 hover:bg-lightBlue">FAQs</p>
-          <p className="cursor-pointer p-4 pl-6 hover:bg-lightBlue">
+          <p className="cursor-pointer p-4 pl-6 hover:bg-lightBlue text-lg">
+            FAQs
+          </p>
+          <p className="text-lg cursor-pointer p-4 pl-6 hover:bg-lightBlue">
             Tools and Utilities
           </p>
         </div>
@@ -93,14 +95,14 @@ export const Courses = ({ handleStepper }: IStepper) => {
       transitionTime={200}
       trigger={
         <div className="flex  items-center justify-between bg-darkBlue text-gray-100">
-          <p className="p-4 text-blue">Ngành Học</p>
+          <p className="p-4 text-blue text-lg">Ngành Học</p>
           <div className="pr-4">
             <FaAngleRight fontSize={20} color={"white"} />
           </div>
         </div>
       }
     >
-      <div className="divide-y-2 divide-darkBlue">
+      <div className="divide-y-2 divide-white">
         <CoursesIT handleStepper={handleStepper} />
         <CoursesHealth handleStepper={handleStepper} />
         <CoursesManagement handleStepper={handleStepper} />
@@ -122,7 +124,7 @@ export const CoursesIT = ({ handleStepper }: IStepper) => {
       transitionTime={200}
       trigger={
         <div
-          className="flex items-center justify-between px-6 bg-lightBlue text-gray-700"
+          className="flex items-center justify-between px-6 bg-lightBlue  text-gray-700"
           onClick={handleStepper}
         >
           <p className="p-4 ml-2 text-gray-700 text-lg">Công nghệ thông tin</p>
@@ -132,7 +134,7 @@ export const CoursesIT = ({ handleStepper }: IStepper) => {
         </div>
       }
     >
-      <div className="divide-y-2 divide-gray-300">
+      <div className="divide-y divide-gray-300">
         <p className="pl-12 cursor-pointer p-4  hover:bg-lightBlue">
           Phát triển phần mền – Software Development
         </p>
