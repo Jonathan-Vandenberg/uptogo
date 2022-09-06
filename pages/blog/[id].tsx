@@ -1,9 +1,9 @@
-import { useBlogPostQuery } from "../types";
-import BlogPostMarkup from "../components/UI/BlogPostMarkup";
+import { useBlogPostQuery } from "../../types";
+import BlogPostMarkup from "../../components/UI/BlogPostMarkup";
 import React from "react";
-import TopDivider from "../components/UI/TopDivider";
-import InitDivider from "../components/UI/InitDivider";
-import BlogHeader from "../components/UI/BlogHeader";
+import TopDivider from "../../components/UI/TopDivider";
+import InitDivider from "../../components/UI/InitDivider";
+import BlogHeader from "../../components/UI/BlogHeader";
 
 export default function Blog() {
   const { data, loading, error } = useBlogPostQuery({

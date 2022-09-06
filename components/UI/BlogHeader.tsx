@@ -12,7 +12,7 @@ const BlogHeader = ({ data }: IProps) => {
     <div className="bg-gradient-to-b from-bgGradientStart to-white md:pt-4">
       <div className="max-w-[640px] px-5 md:max-w-[900px] mx-auto">
         {data?.blogPost?.title && (
-          <h1 className="logoFont text-3xl py-4 text-blue font-semibold md:text-5xl">
+          <h1 className="logoFont text-3xl py-4 text-gray-700 font-semibold md:text-5xl">
             {data?.blogPost?.title}
           </h1>
         )}

@@ -1,7 +1,14 @@
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import asianMale from "../../public/it/asianMale.jpg";
-import CollapseMenus, { Courses } from "../Global/Footer/CollapseMenus";
+import {
+  CoursesHealth,
+  CoursesDesign,
+  CoursesHospitality,
+  CoursesIT,
+  CoursesManagement,
+  CoursesTrades,
+} from "../Global/Footer/CollapseMenus";
 import CourseStepper from "./CourseStepper";
 
 export default function App() {
@@ -26,10 +33,18 @@ export default function App() {
 
   return (
     <div className="bg-homeBody">
-      <div className="flex flex-col items-center justify-center space-y-12 pt-12 pb-12">
+      <div className="flex flex-col items-center justify-center space-y-12 pt-12 pb-12 bg-sky-100 px-10 container mx-auto ">
+        <h2 className="logoFont text-4xl md:text-5xl text-gray-700 py-10">
+          Let&apos;s go step-by-step
+        </h2>
         <CourseStepper step={step} />
-        <div className="border-y-2 border-blue">
-          <Courses handleStepper={handleStepper} />
+        <div className="flex -tems-center-justify-center space-y-1 flex-col">
+          <CoursesIT handleStepper={handleStepper} />
+          <CoursesHealth handleStepper={handleStepper} />
+          <CoursesManagement handleStepper={handleStepper} />
+          <CoursesDesign handleStepper={handleStepper} />
+          <CoursesHospitality handleStepper={handleStepper} />
+          <CoursesTrades handleStepper={handleStepper} />
         </div>
       </div>
       <div className="bg-whote w-full h-60 flex items-center justify-center">

@@ -116,7 +116,7 @@ interface IStepper {
   handleStepper: () => void;
 }
 
-const CoursesIT = ({ handleStepper }: IStepper) => {
+export const CoursesIT = ({ handleStepper }: IStepper) => {
   return (
     <Collapsible
       transitionTime={200}
@@ -173,7 +173,7 @@ const CoursesIT = ({ handleStepper }: IStepper) => {
   );
 };
 
-const CoursesHealth = ({ handleStepper }: IStepper) => {
+export const CoursesHealth = ({ handleStepper }: IStepper) => {
   return (
     <Collapsible
       transitionTime={200}
@@ -220,7 +220,7 @@ const CoursesHealth = ({ handleStepper }: IStepper) => {
   );
 };
 
-const CoursesManagement = ({ handleStepper }: IStepper) => {
+export const CoursesManagement = ({ handleStepper }: IStepper) => {
   return (
     <Collapsible
       transitionTime={200}
@@ -269,7 +269,7 @@ const CoursesManagement = ({ handleStepper }: IStepper) => {
   );
 };
 
-const CoursesDesign = ({ handleStepper }: IStepper) => {
+export const CoursesDesign = ({ handleStepper }: IStepper) => {
   return (
     <Collapsible
       transitionTime={200}
@@ -318,7 +318,7 @@ const CoursesDesign = ({ handleStepper }: IStepper) => {
   );
 };
 
-const CoursesHospitality = ({ handleStepper }: IStepper) => {
+export const CoursesHospitality = ({ handleStepper }: IStepper) => {
   return (
     <Collapsible
       transitionTime={200}
@@ -360,7 +360,7 @@ const CoursesHospitality = ({ handleStepper }: IStepper) => {
   );
 };
 
-const CoursesTrades = ({ handleStepper }: IStepper) => {
+export const CoursesTrades = ({ handleStepper }: IStepper) => {
   return (
     <Collapsible
       transitionTime={200}
