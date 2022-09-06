@@ -7,7 +7,9 @@ const NavbarTop = ({ onMouseEnter }: any) => {
     <div className="bg-sky-200" onMouseEnter={onMouseEnter}>
       <div className="hidden lg:grid lg:grid-cols-3">
         <div className="flex items-center justify-evenly  whitespace-nowrap text-sm ">
-          <p className="cursor-pointer text-gray-800 ">About Us</p>
+          <Link href={"/blogs"} className="cursor-pointer text-gray-800 ">
+            Blog
+          </Link>
 
           <p className="text-gray-800 ">Lorem</p>
 

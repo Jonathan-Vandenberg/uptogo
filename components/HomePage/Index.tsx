@@ -33,8 +33,8 @@ export default function App() {
 
   return (
     <div className="bg-homeBody">
-      <div className="flex flex-col items-center justify-center space-y-12 pt-12 pb-12 bg-sky-100 px-10 container mx-auto ">
-        <h2 className="logoFont text-4xl md:text-5xl text-gray-700 py-10">
+      <div className="flex flex-col items-center justify-center space-y-12 pt-12 pb-12 px-10 container mx-auto ">
+        <h2 className="logoFont text-4xl md:text-5xl text-gray-700 py-1 md:py-10">
           Let&apos;s go step-by-step
         </h2>
         <CourseStepper step={step} />
