@@ -35,11 +35,14 @@ export default function App() {
 
   return (
     <div className="bg-homeBody">
+      <div className="bg-body py-20">
+        <WhyUptogo />
+      </div>
       <div className="pt-5 text-center">
-        <h2 className="logoFont text-3xl md:text-5xl text-gray-700 py-1 md:py-10">
+        <h2 className="logoFont text-3xl md:text-5xl text-gray-700 py-1 md:py-3">
           Ready to Explore?
         </h2>
-        <h2 className="logoFont text-xl md:text-5xl text-gray-700 py-1 md:py-10">
+        <h2 className="logoFont text-xl md:text-3xl text-gray-700 py-1">
           Let&apos;s go step-by-step
         </h2>
       </div>
@@ -53,25 +56,30 @@ export default function App() {
           <CoursesHospitality handleStepper={handleStepper} />
           <CoursesTrades handleStepper={handleStepper} />
         </div>
-        <h2 className="text-3xl logoFont text-gray-700 md:text-5xl lg:text-6xl">
-          Lý Do Lựa Chọn Uptogo?
-        </h2>
-        <p className="text-xl text-gray-600">
-          Tư vấn hàng đầu Việt Nam, thành lập bởi chuyên gia có kinh nghiệm hơn
-          12 năm trong nghề.
-          <br></br>
-          <br></br>
-          Không chỉ dừng lại ở kinh nghiệm tư vấn, đội ngũ tư vấn viên là những
-          người đã từng học tập, sinh sống và làm việc tại nhiều nơi trên Thế
-          Giới như: Úc, Canada, Thụy Sỹ...
-          <br></br>
-          <br></br>
-          Cung cấp các dịch vụ từ vấn nghề và du học (Canada, Úc, Mỹ, New
-          Zealand Thụy Sĩ, Anh)
-        </p>
       </div>
-
-      <BlogPageHero />
     </div>
   );
 }
+
+const WhyUptogo = () => {
+  return (
+    <div className="px-5 md:container mx-auto">
+      <h2 className="pb-12 text-3xl logoFont text-gray-700 md:text-5xl lg:text-6xl">
+        Lý Do Lựa Chọn Uptogo?
+      </h2>
+      <p className="text-xl text-gray-600">
+        Tư vấn hàng đầu Việt Nam, thành lập bởi chuyên gia có kinh nghiệm hơn 12
+        năm trong nghề.
+        <br></br>
+        <br></br>
+        Không chỉ dừng lại ở kinh nghiệm tư vấn, đội ngũ tư vấn viên là những
+        người đã từng học tập, sinh sống và làm việc tại nhiều nơi trên Thế Giới
+        như: Úc, Canada, Thụy Sỹ...
+        <br></br>
+        <br></br>
+        Cung cấp các dịch vụ từ vấn nghề và du học (Canada, Úc, Mỹ, New Zealand
+        Thụy Sĩ, Anh)
+      </p>
+    </div>
+  );
+};

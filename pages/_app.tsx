@@ -40,7 +40,7 @@ function MyApp({ Component, pageProps: { session, ...pageProps } }: AppProps) {
     }, 5000);
   };
 
-  const styles = splashComplete ? "" : "bg-blue h-screen w-screen";
+  const styles = splashComplete ? "" : "bg-darkBlue h-screen w-screen";
 
   return (
     <div className={styles}>
