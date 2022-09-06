@@ -61,11 +61,7 @@ const Footer = () => {
       <div className="bg-body">
         <div className="">
           <div className="md:hidden">
-            <CollapseMenus
-              handleStepper={function (): void {
-                throw new Error("Function not implemented.");
-              }}
-            />
+            <CollapseMenus handleStepper={function (): void {}} />
           </div>
           <UnCollapassedMenu />
         </div>

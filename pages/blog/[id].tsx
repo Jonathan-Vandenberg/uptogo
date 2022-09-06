@@ -1,14 +1,14 @@
 import { useBlogPostQuery } from "../../types";
-import BlogPostMarkup from "../../components/UI/BlogPostMarkup";
+import BlogPostMarkup from "../../components/Blog/BlogPostMarkup";
 import React from "react";
 import TopDivider from "../../components/UI/TopDivider";
 import InitDivider from "../../components/UI/InitDivider";
-import BlogHeader from "../../components/UI/BlogHeader";
+import BlogHeader from "../../components/Blog/BlogHeader";
 
 export default function Blog() {
   const { data, loading, error } = useBlogPostQuery({
     variables: {
-      id: "6315d649d375ad6ee10f6670",
+      id: "6317565ebff0eb25aeab14cf",
     },
   });
   return (

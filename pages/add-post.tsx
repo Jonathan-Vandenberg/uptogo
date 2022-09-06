@@ -1,5 +1,5 @@
 import Head from "next/head";
-import AddPostForm from "../components/UI/AddPostForm";
+import AddPostForm from "../components/Blog/AddPostForm";
 
 const NewSchool = () => {
   return (

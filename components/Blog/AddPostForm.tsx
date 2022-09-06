@@ -19,13 +19,11 @@ const AddClientForm = () => {
   const [p3, setP3] = useState("");
   const [p4, setP4] = useState("");
   const [p5, setP5] = useState("");
-
   const [l1, setL1] = useState("");
   const [l2, setL2] = useState("");
   const [l3, setL3] = useState("");
   const [l4, setL4] = useState("");
   const [l5, setL5] = useState("");
-
   const [p6, setP6] = useState("");
   const [p7, setP7] = useState("");
 

@@ -10,7 +10,7 @@ import {
   CoursesManagement,
   CoursesTrades,
 } from "../Global/Footer/CollapseMenus";
-import BlogHeader from "../UI/BlogHeader";
+import BlogHeader from "../Blog/BlogHeader";
 import CourseStepper from "./CourseStepper";
 
 export default function App() {
