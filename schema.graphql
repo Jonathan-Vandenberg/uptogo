@@ -1,6 +1,7 @@
 type Query {
   blogPosts: [BlogPost]
   blogPost(id: ID!): BlogPost
+  blogCard: [BlogPost]
 }
 
 type Mutation {

@@ -1,0 +1,7 @@
+# import BlogCard from "./BlogCardFragment.graphql"
+
+query BlogCard {
+  blogCard {
+    ...BlogCard
+  }
+}

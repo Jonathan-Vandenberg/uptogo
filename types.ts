@@ -121,6 +121,7 @@ export type MutationAddBlogPostArgs = {
 
 export type Query = {
   __typename?: 'Query';
+  blogCard?: Maybe<Array<Maybe<BlogPost>>>;
   blogPost?: Maybe<BlogPost>;
   blogPosts?: Maybe<Array<Maybe<BlogPost>>>;
 };
@@ -313,6 +314,7 @@ export type MutationResolvers<ContextType = GraphQLContext, ParentType extends R
 };
 
 export type QueryResolvers<ContextType = GraphQLContext, ParentType extends ResolversParentTypes['Query'] = ResolversParentTypes['Query']> = {
+  blogCard?: Resolver<Maybe<Array<Maybe<ResolversTypes['BlogPost']>>>, ParentType, ContextType>;
   blogPost?: Resolver<Maybe<ResolversTypes['BlogPost']>, ParentType, ContextType, RequireFields<QueryBlogPostArgs, 'id'>>;
   blogPosts?: Resolver<Maybe<Array<Maybe<ResolversTypes['BlogPost']>>>, ParentType, ContextType>;
 };
@@ -355,6 +357,13 @@ export type Resolvers<ContextType = GraphQLContext> = {
 };
 
 
+export const BlogCardFragmentDoc = gql`
+    fragment BlogCard on BlogPost {
+  id
+  title
+  subtitle1
+}
+    `;
 export const BlogPostFragmentDoc = gql`
     fragment BlogPost on BlogPost {
   id
@@ -425,6 +434,40 @@ export function useAddBlogPostMutation(baseOptions?: Apollo.MutationHookOptions<
 export type AddBlogPostMutationHookResult = ReturnType<typeof useAddBlogPostMutation>;
 export type AddBlogPostMutationResult = Apollo.MutationResult<AddBlogPostMutation>;
 export type AddBlogPostMutationOptions = Apollo.BaseMutationOptions<AddBlogPostMutation, AddBlogPostMutationVariables>;
+export const BlogCardDocument = gql`
+    query BlogCard {
+  blogCard {
+    ...BlogCard
+  }
+}
+    ${BlogCardFragmentDoc}`;
+
+/**
+ * __useBlogCardQuery__
+ *
+ * To run a query within a React component, call `useBlogCardQuery` and pass it any options that fit your needs.
+ * When your component renders, `useBlogCardQuery` returns an object from Apollo Client that contains loading, error, and data properties
+ * you can use to render your UI.
+ *
+ * @param baseOptions options that will be passed into the query, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options;
+ *
+ * @example
+ * const { data, loading, error } = useBlogCardQuery({
+ *   variables: {
+ *   },
+ * });
+ */
+export function useBlogCardQuery(baseOptions?: Apollo.QueryHookOptions<BlogCardQuery, BlogCardQueryVariables>) {
+        const options = {...defaultOptions, ...baseOptions}
+        return Apollo.useQuery<BlogCardQuery, BlogCardQueryVariables>(BlogCardDocument, options);
+      }
+export function useBlogCardLazyQuery(baseOptions?: Apollo.LazyQueryHookOptions<BlogCardQuery, BlogCardQueryVariables>) {
+          const options = {...defaultOptions, ...baseOptions}
+          return Apollo.useLazyQuery<BlogCardQuery, BlogCardQueryVariables>(BlogCardDocument, options);
+        }
+export type BlogCardQueryHookResult = ReturnType<typeof useBlogCardQuery>;
+export type BlogCardLazyQueryHookResult = ReturnType<typeof useBlogCardLazyQuery>;
+export type BlogCardQueryResult = Apollo.QueryResult<BlogCardQuery, BlogCardQueryVariables>;
 export const BlogPostDocument = gql`
     query BlogPost($id: ID!) {
   blogPost(id: $id) {
@@ -500,6 +543,13 @@ export type AddBlogPostMutationVariables = Exact<{
 
 
 export type AddBlogPostMutation = { __typename?: 'Mutation', addBlogPost?: { __typename?: 'BlogPost', id: string, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null } | null };
+
+export type BlogCardQueryVariables = Exact<{ [key: string]: never; }>;
+
+
+export type BlogCardQuery = { __typename?: 'Query', blogCard?: Array<{ __typename?: 'BlogPost', id: string, title?: string | null, subtitle1?: string | null } | null> | null };
+
+export type BlogCardFragment = { __typename?: 'BlogPost', id: string, title?: string | null, subtitle1?: string | null };
 
 export type BlogPostQueryVariables = Exact<{
   id: Scalars['ID'];

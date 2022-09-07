@@ -28,6 +28,9 @@ const resolvers: Resolvers = {
         }
       })
       return blogPost
+    },
+    blogCard: (_, __, {prisma}) => {
+      return prisma.blogPost.findMany()
     }
   },
   Mutation: {
