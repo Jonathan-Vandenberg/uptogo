@@ -1,25 +1,19 @@
-import { useBlogPostQuery } from "../../types";
-import BlogPostMarkup from "../../components/Blog/BlogPostMarkup";
-import React from "react";
-import TopDivider from "../../components/UI/TopDivider";
-import InitDivider from "../../components/UI/InitDivider";
-import BlogHeader from "../../components/Blog/BlogHeader";
+import BlogMain from "../../components/Blog/BlogMain";
+import { BlogPost, useBlogPostQuery } from "../../types";
+import { useRouter } from "next/router";
+
+interface IProps {
+  data: BlogPost | undefined | null;
+}
 
 export default function Blog() {
+  const { asPath } = useRouter();
+  const id = asPath.slice(6, 30);
   const { data, loading, error } = useBlogPostQuery({
     variables: {
-      id: "6317565ebff0eb25aeab14cf",
+      id: id,
     },
   });
-  return (
-    <>
-      <div className="md:hidden">
-        <InitDivider color="blue" />
-      </div>
-      <BlogHeader data={data} />
-      <div className="px-5 max-w-[678px] md:max-w-[900px] mx-auto">
-        <BlogPostMarkup data={data} />
-      </div>
-    </>
-  );
+  console.log(id);
+  return <BlogMain data={data} />;
 }

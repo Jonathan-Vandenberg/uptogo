@@ -109,9 +109,11 @@ const SideNavModal: NextPage = () => {
       </div>
 
       <div className="flex flex-col items-center justify-evenly space-y-2 whitespace-nowrap">
-        <Link href="/blogs">
-          <a className="cursor-pointer px-4">Blog</a>
-        </Link>
+        <div onClick={() => handleClose()}>
+          <Link href="/blogs">
+            <a className="cursor-pointer px-4">Blog</a>
+          </Link>
+        </div>
 
         <Link href="/about">
           <a className="cursor-pointer px-4">About Us</a>
@@ -126,7 +128,7 @@ const SideNavModal: NextPage = () => {
         </div>
       </div>
 
-      <div onClick={() => handleClose()}>
+      <div>
         <Link href={"/favorites"}>
           <div className="flex cursor-pointer items-center justify-start space-x-2 px-4 pt-1">
             <div className="text-xl text-red-400">
