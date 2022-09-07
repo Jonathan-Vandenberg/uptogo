@@ -7,7 +7,7 @@ import Hero from "../components/HomePage/Hero";
 export default function App() {
   return (
     <>
-      <div className="md:px-10 p-4 py-10 md:p-0 md:mb-6 bg-body">
+      <div className="md:px-10 p-4 md:py-10 md:p-0 md:mb-6 bg-body">
         <Hero />
       </div>
       <div className="container mx-auto">
