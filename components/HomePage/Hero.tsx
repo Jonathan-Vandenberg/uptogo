@@ -4,19 +4,19 @@ import image from "../../public/navDropdownImages/asianMale.jpg";
 
 export default function App() {
   return (
-    <div className=" md:px-10 p-4 md:p-0 md:my-12 md:flex-row flex-col-reverse flex items-center justify-center">
-      <div className="bg-white p-7 flex items-start flex-col justify-between w-full h-full md:w-2/5 pt-6">
-        <h1 className="text-orange logoFont text-6xl leading-12">Uptogo</h1>
-        <p className="pt-4 text-2xl text-gray-600">
-          Taking you abroad, easily.
+    <div className="bg-body md:flex-row flex-col-reverse flex items-center justify-center">
+      <div className="bg-body flex items-center flex-col justify-center md:items-start w-full h-full">
+        <h1 className="text-orange logoFont text-6xl py-6">Uptogo</h1>
+        <p className="text-2xl text-gray-600">
+          Study Abroad, <i>easily.</i>
         </p>
         <Link href={"/"}>
-          <p className="text-xl text-gray-700 text-thin md:pt-2 border-b-8 border-orange mt-12">
-            Find Your Major
+          <p className="text-xl text-gray-700 text-thin  pt-10 md:pt-12 border-b-8 border-orange">
+            Find Courses
           </p>
         </Link>
       </div>
-      <div className="w-full md:w-3/5 bg-red-100">
+      <div className="h-full w-full">
         <Image
           src={image}
           alt="blog Image"

@@ -4,8 +4,8 @@ import image from "../../public/navDropdownImages/asianMale.jpg";
 
 export default function App() {
   return (
-    <div className="md:px-10 p-4 md:p-0 md:my-12 md:flex-row flex-col-reverse flex items-center justify-center">
-      <div className="bg-white p-7 flex items-start flex-col justify-start w-full h-full md:w-2/5 pt-6 md:pt-16">
+    <div className="bg-body md:px-10 p-4 md:p-0 md:my-12 md:flex-row flex-col-reverse flex items-center justify-center">
+      <div className="bg-body p-7 flex items-start flex-col justify-start w-full h-full md:w-2/5 pt-6 md:pt-16">
         <p className="text-gray-400 -mb-4 md:-mb-6 md:text-lg">
           INFORMATION TECHNOLOGY
         </p>
