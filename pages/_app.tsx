@@ -10,6 +10,7 @@ import { motion, useAnimationControls } from "framer-motion";
 import Spline from "@splinetool/react-spline";
 import { useState } from "react";
 import NextNProgress from "nextjs-progressbar";
+import InitDivider from "../components/UI/InitDivider";
 
 function MyApp({ Component, pageProps: { session, ...pageProps } }: AppProps) {
   const [splashComplete, setSplashComplete] = useState(false);
@@ -88,6 +89,9 @@ function MyApp({ Component, pageProps: { session, ...pageProps } }: AppProps) {
             <SessionProvider session={session}>
               <ApolloProvider client={client}>
                 <Navbar />
+                <div className="md:hidden">
+                  <InitDivider color="blue" />
+                </div>
                 <SideNavModal />
                 <Component {...pageProps} />
                 <Footer />

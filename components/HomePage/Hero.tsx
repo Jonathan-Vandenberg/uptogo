@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import image from "../../public/navDropdownImages/asianMale.jpg";
+import image from "../../public/heroImages/girlAbroad.jpg";
 
 export default function App() {
   return (
@@ -21,7 +21,7 @@ export default function App() {
           src={image}
           alt="blog Image"
           width={600}
-          height={400}
+          height={339}
           layout="responsive"
         />
       </div>
