@@ -89,10 +89,10 @@ function MyApp({ Component, pageProps: { session, ...pageProps } }: AppProps) {
             <SessionProvider session={session}>
               <ApolloProvider client={client}>
                 <Navbar />
+                <SideNavModal />
                 <div className="md:hidden">
                   <InitDivider color="blue" />
                 </div>
-                <SideNavModal />
                 <Component {...pageProps} />
                 <Footer />
               </ApolloProvider>
