@@ -40,7 +40,7 @@ export default function PopupCard() {
             </li>
           </ul>
           <button className="px-4 py-2 rounded-full text-white bg-orange">
-            <div className="items-center justify-center flex space-x-2">
+            <div className="items-center justify-center flex space-x-">
               <p>Start Now</p>
               <BsArrowRight />
             </div>
