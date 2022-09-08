@@ -10,14 +10,13 @@ import logo from "../../public/uptogoFavicon.png";
 
 export default function PopupCard() {
   return (
-    <div className="bg-sky-100 min-w-[340px] max-w-[680px] flex items-center justify-center flex-col relative rounded-xl">
-      <div className="p-2 rounded-full bg-white absolute -top-[30px] shadow-md">
+    <div className="min-w-[340px] max-w-[680px] flex items-center justify-center flex-col relative rounded-xl">
+      <div className="p-2 rounded-full bg-white shadow-md">
         <Image src={logo} alt="logo" width={60} height={60} />
       </div>
-      <div className="px-6 md:px-12 pb-4 pt-16 flex items-center justify-center flex-col space-y-6">
-        <p className="lg:px-20 px-6 text-xl logoFont text-center">
-          Take the first step toward a successful career. Find a university in
-          the United States.​
+      <div className="px-6 md:px-12 pb-4 pt-16 flex items-center justify-center flex-col space-y-10">
+        <p className="lg:px-20 px-6 text-2xl logoFont text-center">
+          Take the first step toward a successful career.
         </p>
         <p className="text-lg text-center lg:px-20">
           Answer a few questions and we&apos;ll get you connected with a
@@ -77,7 +76,6 @@ export default function PopupCard() {
               height={48}
             />
           </div>
-
           <div>
             <Image
               src={vancouver}

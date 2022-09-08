@@ -1,7 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
 import image from "../../public/heroImages/girlAbroad.jpg";
-import { Skeleton } from "@mui/material";
 
 export default function App() {
   return (
