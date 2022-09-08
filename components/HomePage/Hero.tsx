@@ -21,14 +21,13 @@ export default function App() {
         </Link>
       </div>
       <div className="h-full w-full col-span-2">
-        <Skeleton width={600} height={339} variant="rectangular" />
-        {/* <Image
+        <Image
           src={image}
           alt="blog Image"
           width={600}
           height={339}
           layout="responsive"
-        /> */}
+        />
       </div>
     </div>
   );
