@@ -221,6 +221,7 @@ position: absolute;
   right: 20px;
   bottom: 20px;
   z-index: 1000;
+  border: none;
 }
 
 .overlay {
@@ -230,6 +231,7 @@ position: fixed;
   right: 0;
   bottom: 0;
   z-index: 1000;
+  border: none;
   background-color: rgba(52, 51, 51, 0.5)
 }
 
