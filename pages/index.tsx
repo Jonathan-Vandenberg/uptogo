@@ -3,6 +3,7 @@ import HomeMain from "../components/HomePage/HomeMain";
 import image from "../public/heroImages/Du-hoc-Sp-jain-01.jpeg";
 import Image from "next/image";
 import Hero from "../components/HomePage/Hero";
+import Popup from "../components/UI/Popup";
 
 export default function App() {
   return (
@@ -10,6 +11,7 @@ export default function App() {
       <div className="md:px-10 p-4 md:py-10 md:p-0 md:mb-6 bg-body">
         <Hero />
       </div>
+      <Popup />
       <div className="container mx-auto">
         <HomeMain />
         <Image

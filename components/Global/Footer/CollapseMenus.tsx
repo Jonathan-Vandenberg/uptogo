@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import Collapsible from "react-collapsible";
 import { FaAngleRight } from "react-icons/fa";
 
@@ -124,10 +124,10 @@ export const CoursesIT = ({ handleStepper }: IStepper) => {
       transitionTime={200}
       trigger={
         <div
-          className="flex items-center justify-between px-6 bg-lightBlue  text-gray-700"
+          className="flex items-center justify-between px-6 bg-orange  text-white"
           onClick={handleStepper}
         >
-          <p className="p-4 ml-2 text-gray-700 text-lg">Công nghệ thông tin</p>
+          <p className="p-4 ml-2 text-white  text-lg">Công nghệ thông tin</p>
           <div className="pr-4">
             <FaAngleRight fontSize={20} />
           </div>
@@ -180,9 +180,9 @@ export const CoursesHealth = ({ handleStepper }: IStepper) => {
       trigger={
         <div
           onClick={handleStepper}
-          className="flex items-center justify-between px-6 bg-lightBlue text-gray-700"
+          className="flex items-center justify-between px-6 bg-orange text-white"
         >
-          <p className="p-4 ml-2 text-gray-700 text-lg">Sức khỏe - Health</p>
+          <p className="p-4 ml-2 text-white text-lg">Sức khỏe - Health</p>
           <div className="pr-4">
             <FaAngleRight fontSize={20} />
           </div>
@@ -227,9 +227,9 @@ export const CoursesManagement = ({ handleStepper }: IStepper) => {
       trigger={
         <div
           onClick={handleStepper}
-          className="flex items-center justify-between px-6 bg-lightBlue text-gray-700"
+          className="flex items-center justify-between px-6 bg-orange text-gray-100"
         >
-          <p className="p-4 ml-2 text-gray-700 text-lg">Quản lý - Management</p>
+          <p className="p-4 ml-2 text-white text-lg">Quản lý - Management</p>
           <div className="pr-4">
             <FaAngleRight fontSize={20} />
           </div>
@@ -276,9 +276,9 @@ export const CoursesDesign = ({ handleStepper }: IStepper) => {
       trigger={
         <div
           onClick={handleStepper}
-          className="flex items-center justify-between px-6 bg-lightBlue text-gray-700"
+          className="flex items-center justify-between px-6 bg-orange text-white"
         >
-          <p className="p-4 ml-2 text-gray-700 text-lg">Thiết kế - Design</p>
+          <p className="p-4 ml-2 text-white text-lg">Thiết kế - Design</p>
           <div className="pr-4">
             <FaAngleRight fontSize={20} />
           </div>
@@ -325,9 +325,9 @@ export const CoursesHospitality = ({ handleStepper }: IStepper) => {
       trigger={
         <div
           onClick={handleStepper}
-          className="flex items-center justify-between px-6 bg-lightBlue text-gray-700"
+          className="flex items-center justify-between px-6 bg-orange text-white"
         >
-          <p className="p-4 ml-2 text-gray-700 text-lg">
+          <p className="p-4 ml-2 text-white text-lg">
             Nhà hàng khách sạn – Hospitality
           </p>
           <div className="pr-4">
@@ -367,11 +367,9 @@ export const CoursesTrades = ({ handleStepper }: IStepper) => {
       trigger={
         <div
           onClick={handleStepper}
-          className="flex items-center justify-between px-6 bg-lightBlue text-gray-700"
+          className="flex items-center justify-between px-6 bg-orange text-white"
         >
-          <p className="p-4 ml-2 text-gray-700 text-lg">
-            Thương mại & Thể thao
-          </p>
+          <p className="p-4 ml-2 text-white text-lg">Thương mại & Thể thao</p>
           <div className="pr-4">
             <FaAngleRight fontSize={20} />
           </div>

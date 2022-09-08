@@ -91,7 +91,7 @@ function MyApp({ Component, pageProps: { session, ...pageProps } }: AppProps) {
                 <Navbar />
                 <SideNavModal />
                 <div className="md:hidden">
-                  <InitDivider color="blue" />
+                  <InitDivider />
                 </div>
                 <Component {...pageProps} />
                 <Footer />
