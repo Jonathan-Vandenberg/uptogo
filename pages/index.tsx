@@ -11,9 +11,9 @@ export default function App() {
       <div className="md:px-10 p-4 md:py-10 md:p-0 md:mb-6 bg-body">
         <Hero />
       </div>
-      <Popup />
-      <div className="container mx-auto">
+      <div className="container mx-auto className=">
         <HomeMain />
+        <Popup />
         <Image
           src={image}
           alt="image"

@@ -3,8 +3,10 @@
 @tailwind components;
 /* purgecss end ignore */
 @tailwind utilities;
+
 @import "react-slideshow-image/dist/styles.css";
 @import "antd/dist/antd.css";
+
 html,
 body {
   padding: 0;

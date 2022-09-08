@@ -11,6 +11,7 @@ import Spline from "@splinetool/react-spline";
 import { useState } from "react";
 import NextNProgress from "nextjs-progressbar";
 import InitDivider from "../components/UI/InitDivider";
+import Popup from "../components/UI/Popup";
 
 function MyApp({ Component, pageProps: { session, ...pageProps } }: AppProps) {
   const [splashComplete, setSplashComplete] = useState(false);
