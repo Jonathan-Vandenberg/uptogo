@@ -124,10 +124,10 @@ export const CoursesIT = ({ handleStepper }: IStepper) => {
       transitionTime={200}
       trigger={
         <div
-          className="flex items-center justify-between px-6 bg-orange  text-white"
+          className="flex items-center justify-between px-6 bg-sky-100  text-white"
           onClick={handleStepper}
         >
-          <p className="p-4 ml-2 text-white  text-lg">Công nghệ thông tin</p>
+          <p className="p-4 ml-2 text-gray-700  text-lg">Công nghệ thông tin</p>
           <div className="pr-4">
             <FaAngleRight fontSize={20} />
           </div>
@@ -136,37 +136,37 @@ export const CoursesIT = ({ handleStepper }: IStepper) => {
     >
       <div className="divide-y divide-gray-300">
         <p className="pl-12 cursor-pointer p-4  hover:bg-lightBlue">
-          Phát triển phần mền – Software Development
+          Phát triển phần mền
         </p>
         <p className="cursor-pointer p-4 pl-12 hover:bg-lightBlue">
-          Mạng máy tính – Compute Networking
+          Mạng máy tính
         </p>
         <p className="cursor-pointer p-4 pl-12 hover:bg-lightBlue">
-          Điện toán đám mây – Cloud Computing
+          Điện toán đám mây
         </p>
         <p className="cursor-pointer p-4 pl-12 hover:bg-lightBlue">
-          Phân tích kinh doanh – Business Analysis
+          Phân tích kinh doanh
         </p>
         <p className="cursor-pointer p-4 pl-12 hover:bg-lightBlue">
-          Viễn thông – Telecommunication
+          Viễn thông
         </p>
         <p className="cursor-pointer p-4 pl-12 hover:bg-lightBlue">
-          Lập trình trò chơi - Game Programming
+          Lập trình trò chơi
         </p>
         <p className="cursor-pointer p-4 pl-12 hover:bg-lightBlue">
-          Phát triển Website – Website Development
+          Phát triển Website
         </p>
         <p className="cursor-pointer p-4 pl-12 hover:bg-lightBlue">
-          Phương tiện máy móc – Machine Learing
+          Phương tiện máy móc
         </p>
         <p className="cursor-pointer p-4 pl-12 hover:bg-lightBlue">
-          Quản lý dữ liệu – Data Management
+          Quản lý dữ liệu
         </p>
         <p className="cursor-pointer p-4 pl-12 hover:bg-lightBlue">
-          Công nghệ tiền ảo – Blockchain Technology
+          Công nghệ tiền ảo
         </p>
         <p className="cursor-pointer p-4 pl-12 hover:bg-lightBlue">
-          Trí tuệ nhân tạo - Artificial Intelligence (AI)
+          Trí tuệ nhân tạo
         </p>
       </div>
     </Collapsible>
@@ -180,9 +180,9 @@ export const CoursesHealth = ({ handleStepper }: IStepper) => {
       trigger={
         <div
           onClick={handleStepper}
-          className="flex items-center justify-between px-6 bg-orange text-white"
+          className="flex items-center justify-between px-6 bg-sky-100 text-white"
         >
-          <p className="p-4 ml-2 text-white text-lg">Sức khỏe - Health</p>
+          <p className="p-4 ml-2 text-gray-700 text-lg">Sức khỏe</p>
           <div className="pr-4">
             <FaAngleRight fontSize={20} />
           </div>
@@ -227,9 +227,9 @@ export const CoursesManagement = ({ handleStepper }: IStepper) => {
       trigger={
         <div
           onClick={handleStepper}
-          className="flex items-center justify-between px-6 bg-orange text-gray-100"
+          className="flex items-center justify-between px-6 bg-sky-100 text-gray-100"
         >
-          <p className="p-4 ml-2 text-white text-lg">Quản lý - Management</p>
+          <p className="p-4 ml-2 text-gray-700 text-lg">Quản lý</p>
           <div className="pr-4">
             <FaAngleRight fontSize={20} />
           </div>
@@ -276,9 +276,9 @@ export const CoursesDesign = ({ handleStepper }: IStepper) => {
       trigger={
         <div
           onClick={handleStepper}
-          className="flex items-center justify-between px-6 bg-orange text-white"
+          className="flex items-center justify-between px-6 bg-sky-100 text-white"
         >
-          <p className="p-4 ml-2 text-white text-lg">Thiết kế - Design</p>
+          <p className="p-4 ml-2 text-gray-700 text-lg">Thiết kế</p>
           <div className="pr-4">
             <FaAngleRight fontSize={20} />
           </div>
@@ -325,11 +325,9 @@ export const CoursesHospitality = ({ handleStepper }: IStepper) => {
       trigger={
         <div
           onClick={handleStepper}
-          className="flex items-center justify-between px-6 bg-orange text-white"
+          className="flex items-center justify-between px-6 bg-sky-100 text-white"
         >
-          <p className="p-4 ml-2 text-white text-lg">
-            Nhà hàng khách sạn – Hospitality
-          </p>
+          <p className="p-4 ml-2 text-gray-700 text-lg">Nhà hàng khách sạn</p>
           <div className="pr-4">
             <FaAngleRight fontSize={20} />
           </div>
@@ -367,9 +365,11 @@ export const CoursesTrades = ({ handleStepper }: IStepper) => {
       trigger={
         <div
           onClick={handleStepper}
-          className="flex items-center justify-between px-6 bg-orange text-white"
+          className="flex items-center justify-between px-6 bg-sky-100 text-white"
         >
-          <p className="p-4 ml-2 text-white text-lg">Thương mại & Thể thao</p>
+          <p className="p-4 ml-2 text-gray-700 text-lg">
+            Thương mại & Thể thao
+          </p>
           <div className="pr-4">
             <FaAngleRight fontSize={20} />
           </div>

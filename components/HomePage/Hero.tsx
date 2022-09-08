@@ -1,12 +1,16 @@
 import Link from "next/link";
 import Image from "next/image";
 import image from "../../public/heroImages/girlAbroad.jpg";
+import { Skeleton } from "@mui/material";
 
 export default function App() {
   return (
-    <div className="bg-body md:flex-row flex-col-reverse flex items-center justify-center">
-      <div className="bg-body flex items-center flex-col justify-center md:items-start w-full h-full">
-        <h1 className="text-orange logoFont text-6xl py-6">Uptogo</h1>
+    <div className="bg-body md:grid md:grid-cols-4 flex-col-reverse flex items-center justify-center">
+      <div className="col-span-1"></div>
+      <div className="bg-body flex items-center flex-col justify-center md:items-start w-full h-full md:col-span-1">
+        <h1 className="text-orange logoFont text-6xl pb-6 col-span-1">
+          Uptogo
+        </h1>
         <p className="text-2xl text-gray-600">
           Study Abroad, <i>easily.</i>
         </p>
@@ -16,14 +20,15 @@ export default function App() {
           </p>
         </Link>
       </div>
-      <div className="h-full w-full">
-        <Image
+      <div className="h-full w-full col-span-2">
+        <Skeleton width={600} height={339} variant="rectangular" />
+        {/* <Image
           src={image}
           alt="blog Image"
           width={600}
           height={339}
           layout="responsive"
-        />
+        /> */}
       </div>
     </div>
   );
