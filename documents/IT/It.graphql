@@ -1,0 +1,7 @@
+# import It from "./ItFragment.graphql"
+
+query It($id: ID!) {
+  it(id: $id) {
+    ...It
+  }
+}

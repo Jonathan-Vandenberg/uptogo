@@ -1,0 +1,4 @@
+fragment It on It {
+  id
+  softwareDevelopmentId
+}

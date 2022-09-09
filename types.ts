@@ -1,5 +1,5 @@
 import { GraphQLResolveInfo } from 'graphql';
-import { BlogPost as BlogPostModel, Account as AccountModel, Session as SessionModel, User as UserModel, VerificationToken as VerificationTokenModel } from '@prisma/client';
+import { SoftwareDevelopment as SoftwareDevelopmentModel, ComputerNetworking as ComputerNetworkingModel, CloudComputing as CloudComputingModel, BusinessAnalysis as BusinessAnalysisModel, Telecommunication as TelecommunicationModel, GameProgramming as GameProgrammingModel, WebDevelopment as WebDevelopmentModel, MachineLearing as MachineLearingModel, DataManagement as DataManagementModel, Blockchain as BlockchainModel, Ai as AiModel, BlogPost as BlogPostModel, Courses as CoursesModel, It as ItModel, Trades as TradesModel, Hospitality as HospitalityModel, Health as HealthModel, Design as DesignModel, Management as ManagementModel, Account as AccountModel, Session as SessionModel, User as UserModel, VerificationToken as VerificationTokenModel } from '@prisma/client';
 import { GraphQLContext } from './pages/api/index';
 import { gql } from '@apollo/client';
 import * as Apollo from '@apollo/client';
@@ -34,6 +34,152 @@ export type Account = {
   type: Scalars['String'];
   user: User;
   userId: Scalars['ID'];
+};
+
+export type Ai = {
+  __typename?: 'Ai';
+  authorAbout?: Maybe<Scalars['String']>;
+  authorLink?: Maybe<Scalars['String']>;
+  authorName?: Maybe<Scalars['String']>;
+  conclusion1?: Maybe<Scalars['String']>;
+  conclusion2?: Maybe<Scalars['String']>;
+  conclusion3?: Maybe<Scalars['String']>;
+  editedBy?: Maybe<Scalars['String']>;
+  id?: Maybe<Scalars['ID']>;
+  l1?: Maybe<Scalars['String']>;
+  l2?: Maybe<Scalars['String']>;
+  l3?: Maybe<Scalars['String']>;
+  l4?: Maybe<Scalars['String']>;
+  l5?: Maybe<Scalars['String']>;
+  mainImage?: Maybe<Scalars['String']>;
+  p1?: Maybe<Scalars['String']>;
+  p2?: Maybe<Scalars['String']>;
+  p3?: Maybe<Scalars['String']>;
+  p4?: Maybe<Scalars['String']>;
+  p5?: Maybe<Scalars['String']>;
+  p6?: Maybe<Scalars['String']>;
+  p7?: Maybe<Scalars['String']>;
+  photoCredit?: Maybe<Scalars['String']>;
+  publishedDate?: Maybe<Scalars['String']>;
+  reference1?: Maybe<Scalars['String']>;
+  reference2?: Maybe<Scalars['String']>;
+  subtitle1?: Maybe<Scalars['String']>;
+  subtitle2?: Maybe<Scalars['String']>;
+  subtitle3?: Maybe<Scalars['String']>;
+  tableContents1?: Maybe<Scalars['String']>;
+  tableContents2?: Maybe<Scalars['String']>;
+  tableContents3?: Maybe<Scalars['String']>;
+  tableContents4?: Maybe<Scalars['String']>;
+  title?: Maybe<Scalars['String']>;
+};
+
+export type AiInput = {
+  authorAbout?: InputMaybe<Scalars['String']>;
+  authorLink?: InputMaybe<Scalars['String']>;
+  authorName?: InputMaybe<Scalars['String']>;
+  conclusion1?: InputMaybe<Scalars['String']>;
+  conclusion2?: InputMaybe<Scalars['String']>;
+  conclusion3?: InputMaybe<Scalars['String']>;
+  editedBy?: InputMaybe<Scalars['String']>;
+  id?: InputMaybe<Scalars['ID']>;
+  l1?: InputMaybe<Scalars['String']>;
+  l2?: InputMaybe<Scalars['String']>;
+  l3?: InputMaybe<Scalars['String']>;
+  l4?: InputMaybe<Scalars['String']>;
+  l5?: InputMaybe<Scalars['String']>;
+  mainImage?: InputMaybe<Scalars['String']>;
+  p1?: InputMaybe<Scalars['String']>;
+  p2?: InputMaybe<Scalars['String']>;
+  p3?: InputMaybe<Scalars['String']>;
+  p4?: InputMaybe<Scalars['String']>;
+  p5?: InputMaybe<Scalars['String']>;
+  p6?: InputMaybe<Scalars['String']>;
+  p7?: InputMaybe<Scalars['String']>;
+  photoCredit?: InputMaybe<Scalars['String']>;
+  publishedDate?: InputMaybe<Scalars['String']>;
+  reference1?: InputMaybe<Scalars['String']>;
+  reference2?: InputMaybe<Scalars['String']>;
+  subtitle1?: InputMaybe<Scalars['String']>;
+  subtitle2?: InputMaybe<Scalars['String']>;
+  subtitle3?: InputMaybe<Scalars['String']>;
+  tableContents1?: InputMaybe<Scalars['String']>;
+  tableContents2?: InputMaybe<Scalars['String']>;
+  tableContents3?: InputMaybe<Scalars['String']>;
+  tableContents4?: InputMaybe<Scalars['String']>;
+  title?: InputMaybe<Scalars['String']>;
+};
+
+export type Blockchain = {
+  __typename?: 'Blockchain';
+  authorAbout?: Maybe<Scalars['String']>;
+  authorLink?: Maybe<Scalars['String']>;
+  authorName?: Maybe<Scalars['String']>;
+  conclusion1?: Maybe<Scalars['String']>;
+  conclusion2?: Maybe<Scalars['String']>;
+  conclusion3?: Maybe<Scalars['String']>;
+  editedBy?: Maybe<Scalars['String']>;
+  id?: Maybe<Scalars['ID']>;
+  l1?: Maybe<Scalars['String']>;
+  l2?: Maybe<Scalars['String']>;
+  l3?: Maybe<Scalars['String']>;
+  l4?: Maybe<Scalars['String']>;
+  l5?: Maybe<Scalars['String']>;
+  mainImage?: Maybe<Scalars['String']>;
+  p1?: Maybe<Scalars['String']>;
+  p2?: Maybe<Scalars['String']>;
+  p3?: Maybe<Scalars['String']>;
+  p4?: Maybe<Scalars['String']>;
+  p5?: Maybe<Scalars['String']>;
+  p6?: Maybe<Scalars['String']>;
+  p7?: Maybe<Scalars['String']>;
+  photoCredit?: Maybe<Scalars['String']>;
+  publishedDate?: Maybe<Scalars['String']>;
+  reference1?: Maybe<Scalars['String']>;
+  reference2?: Maybe<Scalars['String']>;
+  subtitle1?: Maybe<Scalars['String']>;
+  subtitle2?: Maybe<Scalars['String']>;
+  subtitle3?: Maybe<Scalars['String']>;
+  tableContents1?: Maybe<Scalars['String']>;
+  tableContents2?: Maybe<Scalars['String']>;
+  tableContents3?: Maybe<Scalars['String']>;
+  tableContents4?: Maybe<Scalars['String']>;
+  title?: Maybe<Scalars['String']>;
+};
+
+export type BlockchainInput = {
+  authorAbout?: InputMaybe<Scalars['String']>;
+  authorLink?: InputMaybe<Scalars['String']>;
+  authorName?: InputMaybe<Scalars['String']>;
+  conclusion1?: InputMaybe<Scalars['String']>;
+  conclusion2?: InputMaybe<Scalars['String']>;
+  conclusion3?: InputMaybe<Scalars['String']>;
+  editedBy?: InputMaybe<Scalars['String']>;
+  id?: InputMaybe<Scalars['ID']>;
+  l1?: InputMaybe<Scalars['String']>;
+  l2?: InputMaybe<Scalars['String']>;
+  l3?: InputMaybe<Scalars['String']>;
+  l4?: InputMaybe<Scalars['String']>;
+  l5?: InputMaybe<Scalars['String']>;
+  mainImage?: InputMaybe<Scalars['String']>;
+  p1?: InputMaybe<Scalars['String']>;
+  p2?: InputMaybe<Scalars['String']>;
+  p3?: InputMaybe<Scalars['String']>;
+  p4?: InputMaybe<Scalars['String']>;
+  p5?: InputMaybe<Scalars['String']>;
+  p6?: InputMaybe<Scalars['String']>;
+  p7?: InputMaybe<Scalars['String']>;
+  photoCredit?: InputMaybe<Scalars['String']>;
+  publishedDate?: InputMaybe<Scalars['String']>;
+  reference1?: InputMaybe<Scalars['String']>;
+  reference2?: InputMaybe<Scalars['String']>;
+  subtitle1?: InputMaybe<Scalars['String']>;
+  subtitle2?: InputMaybe<Scalars['String']>;
+  subtitle3?: InputMaybe<Scalars['String']>;
+  tableContents1?: InputMaybe<Scalars['String']>;
+  tableContents2?: InputMaybe<Scalars['String']>;
+  tableContents3?: InputMaybe<Scalars['String']>;
+  tableContents4?: InputMaybe<Scalars['String']>;
+  title?: InputMaybe<Scalars['String']>;
 };
 
 export type BlogPost = {
@@ -109,9 +255,543 @@ export type BlogPostInput = {
   title?: InputMaybe<Scalars['String']>;
 };
 
+export type BusinessAnalysis = {
+  __typename?: 'BusinessAnalysis';
+  authorAbout?: Maybe<Scalars['String']>;
+  authorLink?: Maybe<Scalars['String']>;
+  authorName?: Maybe<Scalars['String']>;
+  conclusion1?: Maybe<Scalars['String']>;
+  conclusion2?: Maybe<Scalars['String']>;
+  conclusion3?: Maybe<Scalars['String']>;
+  editedBy?: Maybe<Scalars['String']>;
+  id?: Maybe<Scalars['ID']>;
+  l1?: Maybe<Scalars['String']>;
+  l2?: Maybe<Scalars['String']>;
+  l3?: Maybe<Scalars['String']>;
+  l4?: Maybe<Scalars['String']>;
+  l5?: Maybe<Scalars['String']>;
+  mainImage?: Maybe<Scalars['String']>;
+  p1?: Maybe<Scalars['String']>;
+  p2?: Maybe<Scalars['String']>;
+  p3?: Maybe<Scalars['String']>;
+  p4?: Maybe<Scalars['String']>;
+  p5?: Maybe<Scalars['String']>;
+  p6?: Maybe<Scalars['String']>;
+  p7?: Maybe<Scalars['String']>;
+  photoCredit?: Maybe<Scalars['String']>;
+  publishedDate?: Maybe<Scalars['String']>;
+  reference1?: Maybe<Scalars['String']>;
+  reference2?: Maybe<Scalars['String']>;
+  subtitle1?: Maybe<Scalars['String']>;
+  subtitle2?: Maybe<Scalars['String']>;
+  subtitle3?: Maybe<Scalars['String']>;
+  tableContents1?: Maybe<Scalars['String']>;
+  tableContents2?: Maybe<Scalars['String']>;
+  tableContents3?: Maybe<Scalars['String']>;
+  tableContents4?: Maybe<Scalars['String']>;
+  title?: Maybe<Scalars['String']>;
+};
+
+export type BusinessAnalysisInput = {
+  authorAbout?: InputMaybe<Scalars['String']>;
+  authorLink?: InputMaybe<Scalars['String']>;
+  authorName?: InputMaybe<Scalars['String']>;
+  conclusion1?: InputMaybe<Scalars['String']>;
+  conclusion2?: InputMaybe<Scalars['String']>;
+  conclusion3?: InputMaybe<Scalars['String']>;
+  editedBy?: InputMaybe<Scalars['String']>;
+  id?: InputMaybe<Scalars['ID']>;
+  l1?: InputMaybe<Scalars['String']>;
+  l2?: InputMaybe<Scalars['String']>;
+  l3?: InputMaybe<Scalars['String']>;
+  l4?: InputMaybe<Scalars['String']>;
+  l5?: InputMaybe<Scalars['String']>;
+  mainImage?: InputMaybe<Scalars['String']>;
+  p1?: InputMaybe<Scalars['String']>;
+  p2?: InputMaybe<Scalars['String']>;
+  p3?: InputMaybe<Scalars['String']>;
+  p4?: InputMaybe<Scalars['String']>;
+  p5?: InputMaybe<Scalars['String']>;
+  p6?: InputMaybe<Scalars['String']>;
+  p7?: InputMaybe<Scalars['String']>;
+  photoCredit?: InputMaybe<Scalars['String']>;
+  publishedDate?: InputMaybe<Scalars['String']>;
+  reference1?: InputMaybe<Scalars['String']>;
+  reference2?: InputMaybe<Scalars['String']>;
+  subtitle1?: InputMaybe<Scalars['String']>;
+  subtitle2?: InputMaybe<Scalars['String']>;
+  subtitle3?: InputMaybe<Scalars['String']>;
+  tableContents1?: InputMaybe<Scalars['String']>;
+  tableContents2?: InputMaybe<Scalars['String']>;
+  tableContents3?: InputMaybe<Scalars['String']>;
+  tableContents4?: InputMaybe<Scalars['String']>;
+  title?: InputMaybe<Scalars['String']>;
+};
+
+export type CloudComputing = {
+  __typename?: 'CloudComputing';
+  authorAbout?: Maybe<Scalars['String']>;
+  authorLink?: Maybe<Scalars['String']>;
+  authorName?: Maybe<Scalars['String']>;
+  conclusion1?: Maybe<Scalars['String']>;
+  conclusion2?: Maybe<Scalars['String']>;
+  conclusion3?: Maybe<Scalars['String']>;
+  editedBy?: Maybe<Scalars['String']>;
+  id?: Maybe<Scalars['ID']>;
+  l1?: Maybe<Scalars['String']>;
+  l2?: Maybe<Scalars['String']>;
+  l3?: Maybe<Scalars['String']>;
+  l4?: Maybe<Scalars['String']>;
+  l5?: Maybe<Scalars['String']>;
+  mainImage?: Maybe<Scalars['String']>;
+  p1?: Maybe<Scalars['String']>;
+  p2?: Maybe<Scalars['String']>;
+  p3?: Maybe<Scalars['String']>;
+  p4?: Maybe<Scalars['String']>;
+  p5?: Maybe<Scalars['String']>;
+  p6?: Maybe<Scalars['String']>;
+  p7?: Maybe<Scalars['String']>;
+  photoCredit?: Maybe<Scalars['String']>;
+  publishedDate?: Maybe<Scalars['String']>;
+  reference1?: Maybe<Scalars['String']>;
+  reference2?: Maybe<Scalars['String']>;
+  subtitle1?: Maybe<Scalars['String']>;
+  subtitle2?: Maybe<Scalars['String']>;
+  subtitle3?: Maybe<Scalars['String']>;
+  tableContents1?: Maybe<Scalars['String']>;
+  tableContents2?: Maybe<Scalars['String']>;
+  tableContents3?: Maybe<Scalars['String']>;
+  tableContents4?: Maybe<Scalars['String']>;
+  title?: Maybe<Scalars['String']>;
+};
+
+export type CloudComputingInput = {
+  authorAbout?: InputMaybe<Scalars['String']>;
+  authorLink?: InputMaybe<Scalars['String']>;
+  authorName?: InputMaybe<Scalars['String']>;
+  conclusion1?: InputMaybe<Scalars['String']>;
+  conclusion2?: InputMaybe<Scalars['String']>;
+  conclusion3?: InputMaybe<Scalars['String']>;
+  editedBy?: InputMaybe<Scalars['String']>;
+  id?: InputMaybe<Scalars['ID']>;
+  l1?: InputMaybe<Scalars['String']>;
+  l2?: InputMaybe<Scalars['String']>;
+  l3?: InputMaybe<Scalars['String']>;
+  l4?: InputMaybe<Scalars['String']>;
+  l5?: InputMaybe<Scalars['String']>;
+  mainImage?: InputMaybe<Scalars['String']>;
+  p1?: InputMaybe<Scalars['String']>;
+  p2?: InputMaybe<Scalars['String']>;
+  p3?: InputMaybe<Scalars['String']>;
+  p4?: InputMaybe<Scalars['String']>;
+  p5?: InputMaybe<Scalars['String']>;
+  p6?: InputMaybe<Scalars['String']>;
+  p7?: InputMaybe<Scalars['String']>;
+  photoCredit?: InputMaybe<Scalars['String']>;
+  publishedDate?: InputMaybe<Scalars['String']>;
+  reference1?: InputMaybe<Scalars['String']>;
+  reference2?: InputMaybe<Scalars['String']>;
+  subtitle1?: InputMaybe<Scalars['String']>;
+  subtitle2?: InputMaybe<Scalars['String']>;
+  subtitle3?: InputMaybe<Scalars['String']>;
+  tableContents1?: InputMaybe<Scalars['String']>;
+  tableContents2?: InputMaybe<Scalars['String']>;
+  tableContents3?: InputMaybe<Scalars['String']>;
+  tableContents4?: InputMaybe<Scalars['String']>;
+  title?: InputMaybe<Scalars['String']>;
+};
+
+export type ComputerNetworking = {
+  __typename?: 'ComputerNetworking';
+  authorAbout?: Maybe<Scalars['String']>;
+  authorLink?: Maybe<Scalars['String']>;
+  authorName?: Maybe<Scalars['String']>;
+  conclusion1?: Maybe<Scalars['String']>;
+  conclusion2?: Maybe<Scalars['String']>;
+  conclusion3?: Maybe<Scalars['String']>;
+  editedBy?: Maybe<Scalars['String']>;
+  id?: Maybe<Scalars['ID']>;
+  l1?: Maybe<Scalars['String']>;
+  l2?: Maybe<Scalars['String']>;
+  l3?: Maybe<Scalars['String']>;
+  l4?: Maybe<Scalars['String']>;
+  l5?: Maybe<Scalars['String']>;
+  mainImage?: Maybe<Scalars['String']>;
+  p1?: Maybe<Scalars['String']>;
+  p2?: Maybe<Scalars['String']>;
+  p3?: Maybe<Scalars['String']>;
+  p4?: Maybe<Scalars['String']>;
+  p5?: Maybe<Scalars['String']>;
+  p6?: Maybe<Scalars['String']>;
+  p7?: Maybe<Scalars['String']>;
+  photoCredit?: Maybe<Scalars['String']>;
+  publishedDate?: Maybe<Scalars['String']>;
+  reference1?: Maybe<Scalars['String']>;
+  reference2?: Maybe<Scalars['String']>;
+  subtitle1?: Maybe<Scalars['String']>;
+  subtitle2?: Maybe<Scalars['String']>;
+  subtitle3?: Maybe<Scalars['String']>;
+  tableContents1?: Maybe<Scalars['String']>;
+  tableContents2?: Maybe<Scalars['String']>;
+  tableContents3?: Maybe<Scalars['String']>;
+  tableContents4?: Maybe<Scalars['String']>;
+  title?: Maybe<Scalars['String']>;
+};
+
+export type ComputerNetworkingInput = {
+  authorAbout?: InputMaybe<Scalars['String']>;
+  authorLink?: InputMaybe<Scalars['String']>;
+  authorName?: InputMaybe<Scalars['String']>;
+  conclusion1?: InputMaybe<Scalars['String']>;
+  conclusion2?: InputMaybe<Scalars['String']>;
+  conclusion3?: InputMaybe<Scalars['String']>;
+  editedBy?: InputMaybe<Scalars['String']>;
+  id?: InputMaybe<Scalars['ID']>;
+  l1?: InputMaybe<Scalars['String']>;
+  l2?: InputMaybe<Scalars['String']>;
+  l3?: InputMaybe<Scalars['String']>;
+  l4?: InputMaybe<Scalars['String']>;
+  l5?: InputMaybe<Scalars['String']>;
+  mainImage?: InputMaybe<Scalars['String']>;
+  p1?: InputMaybe<Scalars['String']>;
+  p2?: InputMaybe<Scalars['String']>;
+  p3?: InputMaybe<Scalars['String']>;
+  p4?: InputMaybe<Scalars['String']>;
+  p5?: InputMaybe<Scalars['String']>;
+  p6?: InputMaybe<Scalars['String']>;
+  p7?: InputMaybe<Scalars['String']>;
+  photoCredit?: InputMaybe<Scalars['String']>;
+  publishedDate?: InputMaybe<Scalars['String']>;
+  reference1?: InputMaybe<Scalars['String']>;
+  reference2?: InputMaybe<Scalars['String']>;
+  subtitle1?: InputMaybe<Scalars['String']>;
+  subtitle2?: InputMaybe<Scalars['String']>;
+  subtitle3?: InputMaybe<Scalars['String']>;
+  tableContents1?: InputMaybe<Scalars['String']>;
+  tableContents2?: InputMaybe<Scalars['String']>;
+  tableContents3?: InputMaybe<Scalars['String']>;
+  tableContents4?: InputMaybe<Scalars['String']>;
+  title?: InputMaybe<Scalars['String']>;
+};
+
+export type Courses = {
+  __typename?: 'Courses';
+  Design?: Maybe<Design>;
+  Health?: Maybe<Health>;
+  Hospitality?: Maybe<Hospitality>;
+  It?: Maybe<It>;
+  Management?: Maybe<Management>;
+  Trades?: Maybe<Trades>;
+};
+
+export type DataManagement = {
+  __typename?: 'DataManagement';
+  authorAbout?: Maybe<Scalars['String']>;
+  authorLink?: Maybe<Scalars['String']>;
+  authorName?: Maybe<Scalars['String']>;
+  conclusion1?: Maybe<Scalars['String']>;
+  conclusion2?: Maybe<Scalars['String']>;
+  conclusion3?: Maybe<Scalars['String']>;
+  editedBy?: Maybe<Scalars['String']>;
+  id?: Maybe<Scalars['ID']>;
+  l1?: Maybe<Scalars['String']>;
+  l2?: Maybe<Scalars['String']>;
+  l3?: Maybe<Scalars['String']>;
+  l4?: Maybe<Scalars['String']>;
+  l5?: Maybe<Scalars['String']>;
+  mainImage?: Maybe<Scalars['String']>;
+  p1?: Maybe<Scalars['String']>;
+  p2?: Maybe<Scalars['String']>;
+  p3?: Maybe<Scalars['String']>;
+  p4?: Maybe<Scalars['String']>;
+  p5?: Maybe<Scalars['String']>;
+  p6?: Maybe<Scalars['String']>;
+  p7?: Maybe<Scalars['String']>;
+  photoCredit?: Maybe<Scalars['String']>;
+  publishedDate?: Maybe<Scalars['String']>;
+  reference1?: Maybe<Scalars['String']>;
+  reference2?: Maybe<Scalars['String']>;
+  subtitle1?: Maybe<Scalars['String']>;
+  subtitle2?: Maybe<Scalars['String']>;
+  subtitle3?: Maybe<Scalars['String']>;
+  tableContents1?: Maybe<Scalars['String']>;
+  tableContents2?: Maybe<Scalars['String']>;
+  tableContents3?: Maybe<Scalars['String']>;
+  tableContents4?: Maybe<Scalars['String']>;
+  title?: Maybe<Scalars['String']>;
+};
+
+export type DataManagementInput = {
+  authorAbout?: InputMaybe<Scalars['String']>;
+  authorLink?: InputMaybe<Scalars['String']>;
+  authorName?: InputMaybe<Scalars['String']>;
+  conclusion1?: InputMaybe<Scalars['String']>;
+  conclusion2?: InputMaybe<Scalars['String']>;
+  conclusion3?: InputMaybe<Scalars['String']>;
+  editedBy?: InputMaybe<Scalars['String']>;
+  id?: InputMaybe<Scalars['ID']>;
+  l1?: InputMaybe<Scalars['String']>;
+  l2?: InputMaybe<Scalars['String']>;
+  l3?: InputMaybe<Scalars['String']>;
+  l4?: InputMaybe<Scalars['String']>;
+  l5?: InputMaybe<Scalars['String']>;
+  mainImage?: InputMaybe<Scalars['String']>;
+  p1?: InputMaybe<Scalars['String']>;
+  p2?: InputMaybe<Scalars['String']>;
+  p3?: InputMaybe<Scalars['String']>;
+  p4?: InputMaybe<Scalars['String']>;
+  p5?: InputMaybe<Scalars['String']>;
+  p6?: InputMaybe<Scalars['String']>;
+  p7?: InputMaybe<Scalars['String']>;
+  photoCredit?: InputMaybe<Scalars['String']>;
+  publishedDate?: InputMaybe<Scalars['String']>;
+  reference1?: InputMaybe<Scalars['String']>;
+  reference2?: InputMaybe<Scalars['String']>;
+  subtitle1?: InputMaybe<Scalars['String']>;
+  subtitle2?: InputMaybe<Scalars['String']>;
+  subtitle3?: InputMaybe<Scalars['String']>;
+  tableContents1?: InputMaybe<Scalars['String']>;
+  tableContents2?: InputMaybe<Scalars['String']>;
+  tableContents3?: InputMaybe<Scalars['String']>;
+  tableContents4?: InputMaybe<Scalars['String']>;
+  title?: InputMaybe<Scalars['String']>;
+};
+
+export type Design = {
+  __typename?: 'Design';
+  Acting?: Maybe<BlogPost>;
+  Animation?: Maybe<BlogPost>;
+  DigitalMedia?: Maybe<BlogPost>;
+  FashionDesign?: Maybe<BlogPost>;
+  Film?: Maybe<BlogPost>;
+  GraphicDesign?: Maybe<BlogPost>;
+  InteriorDesign?: Maybe<BlogPost>;
+  Landscape?: Maybe<BlogPost>;
+  Music?: Maybe<BlogPost>;
+};
+
+export type GameProgramming = {
+  __typename?: 'GameProgramming';
+  authorAbout?: Maybe<Scalars['String']>;
+  authorLink?: Maybe<Scalars['String']>;
+  authorName?: Maybe<Scalars['String']>;
+  conclusion1?: Maybe<Scalars['String']>;
+  conclusion2?: Maybe<Scalars['String']>;
+  conclusion3?: Maybe<Scalars['String']>;
+  editedBy?: Maybe<Scalars['String']>;
+  id?: Maybe<Scalars['ID']>;
+  l1?: Maybe<Scalars['String']>;
+  l2?: Maybe<Scalars['String']>;
+  l3?: Maybe<Scalars['String']>;
+  l4?: Maybe<Scalars['String']>;
+  l5?: Maybe<Scalars['String']>;
+  mainImage?: Maybe<Scalars['String']>;
+  p1?: Maybe<Scalars['String']>;
+  p2?: Maybe<Scalars['String']>;
+  p3?: Maybe<Scalars['String']>;
+  p4?: Maybe<Scalars['String']>;
+  p5?: Maybe<Scalars['String']>;
+  p6?: Maybe<Scalars['String']>;
+  p7?: Maybe<Scalars['String']>;
+  photoCredit?: Maybe<Scalars['String']>;
+  publishedDate?: Maybe<Scalars['String']>;
+  reference1?: Maybe<Scalars['String']>;
+  reference2?: Maybe<Scalars['String']>;
+  subtitle1?: Maybe<Scalars['String']>;
+  subtitle2?: Maybe<Scalars['String']>;
+  subtitle3?: Maybe<Scalars['String']>;
+  tableContents1?: Maybe<Scalars['String']>;
+  tableContents2?: Maybe<Scalars['String']>;
+  tableContents3?: Maybe<Scalars['String']>;
+  tableContents4?: Maybe<Scalars['String']>;
+  title?: Maybe<Scalars['String']>;
+};
+
+export type GameProgrammingInput = {
+  authorAbout?: InputMaybe<Scalars['String']>;
+  authorLink?: InputMaybe<Scalars['String']>;
+  authorName?: InputMaybe<Scalars['String']>;
+  conclusion1?: InputMaybe<Scalars['String']>;
+  conclusion2?: InputMaybe<Scalars['String']>;
+  conclusion3?: InputMaybe<Scalars['String']>;
+  editedBy?: InputMaybe<Scalars['String']>;
+  id?: InputMaybe<Scalars['ID']>;
+  l1?: InputMaybe<Scalars['String']>;
+  l2?: InputMaybe<Scalars['String']>;
+  l3?: InputMaybe<Scalars['String']>;
+  l4?: InputMaybe<Scalars['String']>;
+  l5?: InputMaybe<Scalars['String']>;
+  mainImage?: InputMaybe<Scalars['String']>;
+  p1?: InputMaybe<Scalars['String']>;
+  p2?: InputMaybe<Scalars['String']>;
+  p3?: InputMaybe<Scalars['String']>;
+  p4?: InputMaybe<Scalars['String']>;
+  p5?: InputMaybe<Scalars['String']>;
+  p6?: InputMaybe<Scalars['String']>;
+  p7?: InputMaybe<Scalars['String']>;
+  photoCredit?: InputMaybe<Scalars['String']>;
+  publishedDate?: InputMaybe<Scalars['String']>;
+  reference1?: InputMaybe<Scalars['String']>;
+  reference2?: InputMaybe<Scalars['String']>;
+  subtitle1?: InputMaybe<Scalars['String']>;
+  subtitle2?: InputMaybe<Scalars['String']>;
+  subtitle3?: InputMaybe<Scalars['String']>;
+  tableContents1?: InputMaybe<Scalars['String']>;
+  tableContents2?: InputMaybe<Scalars['String']>;
+  tableContents3?: InputMaybe<Scalars['String']>;
+  tableContents4?: InputMaybe<Scalars['String']>;
+  title?: InputMaybe<Scalars['String']>;
+};
+
+export type Health = {
+  __typename?: 'Health';
+  AgedCare?: Maybe<BlogPost>;
+  Dental?: Maybe<BlogPost>;
+  Massage?: Maybe<BlogPost>;
+  Medicine?: Maybe<BlogPost>;
+  MentalHealth?: Maybe<BlogPost>;
+  Nursing?: Maybe<BlogPost>;
+  Nutrition?: Maybe<BlogPost>;
+  PublicHealth?: Maybe<BlogPost>;
+  Veterinary?: Maybe<BlogPost>;
+};
+
+export type Hospitality = {
+  __typename?: 'Hospitality';
+  Baking?: Maybe<BlogPost>;
+  CommercialCooking?: Maybe<BlogPost>;
+  Events?: Maybe<BlogPost>;
+  HospitalityManagement?: Maybe<BlogPost>;
+  HotelManagement?: Maybe<BlogPost>;
+  TravelTourism?: Maybe<BlogPost>;
+};
+
+export type It = {
+  __typename?: 'It';
+  id: Scalars['String'];
+  softwareDevelopment?: Maybe<SoftwareDevelopment>;
+  softwareDevelopmentId?: Maybe<Scalars['String']>;
+};
+
+export type ItInput = {
+  id: Scalars['String'];
+};
+
+export type MachineLearing = {
+  __typename?: 'MachineLearing';
+  authorAbout?: Maybe<Scalars['String']>;
+  authorLink?: Maybe<Scalars['String']>;
+  authorName?: Maybe<Scalars['String']>;
+  conclusion1?: Maybe<Scalars['String']>;
+  conclusion2?: Maybe<Scalars['String']>;
+  conclusion3?: Maybe<Scalars['String']>;
+  editedBy?: Maybe<Scalars['String']>;
+  id?: Maybe<Scalars['ID']>;
+  l1?: Maybe<Scalars['String']>;
+  l2?: Maybe<Scalars['String']>;
+  l3?: Maybe<Scalars['String']>;
+  l4?: Maybe<Scalars['String']>;
+  l5?: Maybe<Scalars['String']>;
+  mainImage?: Maybe<Scalars['String']>;
+  p1?: Maybe<Scalars['String']>;
+  p2?: Maybe<Scalars['String']>;
+  p3?: Maybe<Scalars['String']>;
+  p4?: Maybe<Scalars['String']>;
+  p5?: Maybe<Scalars['String']>;
+  p6?: Maybe<Scalars['String']>;
+  p7?: Maybe<Scalars['String']>;
+  photoCredit?: Maybe<Scalars['String']>;
+  publishedDate?: Maybe<Scalars['String']>;
+  reference1?: Maybe<Scalars['String']>;
+  reference2?: Maybe<Scalars['String']>;
+  subtitle1?: Maybe<Scalars['String']>;
+  subtitle2?: Maybe<Scalars['String']>;
+  subtitle3?: Maybe<Scalars['String']>;
+  tableContents1?: Maybe<Scalars['String']>;
+  tableContents2?: Maybe<Scalars['String']>;
+  tableContents3?: Maybe<Scalars['String']>;
+  tableContents4?: Maybe<Scalars['String']>;
+  title?: Maybe<Scalars['String']>;
+};
+
+export type MachineLearingInput = {
+  authorAbout?: InputMaybe<Scalars['String']>;
+  authorLink?: InputMaybe<Scalars['String']>;
+  authorName?: InputMaybe<Scalars['String']>;
+  conclusion1?: InputMaybe<Scalars['String']>;
+  conclusion2?: InputMaybe<Scalars['String']>;
+  conclusion3?: InputMaybe<Scalars['String']>;
+  editedBy?: InputMaybe<Scalars['String']>;
+  id?: InputMaybe<Scalars['ID']>;
+  l1?: InputMaybe<Scalars['String']>;
+  l2?: InputMaybe<Scalars['String']>;
+  l3?: InputMaybe<Scalars['String']>;
+  l4?: InputMaybe<Scalars['String']>;
+  l5?: InputMaybe<Scalars['String']>;
+  mainImage?: InputMaybe<Scalars['String']>;
+  p1?: InputMaybe<Scalars['String']>;
+  p2?: InputMaybe<Scalars['String']>;
+  p3?: InputMaybe<Scalars['String']>;
+  p4?: InputMaybe<Scalars['String']>;
+  p5?: InputMaybe<Scalars['String']>;
+  p6?: InputMaybe<Scalars['String']>;
+  p7?: InputMaybe<Scalars['String']>;
+  photoCredit?: InputMaybe<Scalars['String']>;
+  publishedDate?: InputMaybe<Scalars['String']>;
+  reference1?: InputMaybe<Scalars['String']>;
+  reference2?: InputMaybe<Scalars['String']>;
+  subtitle1?: InputMaybe<Scalars['String']>;
+  subtitle2?: InputMaybe<Scalars['String']>;
+  subtitle3?: InputMaybe<Scalars['String']>;
+  tableContents1?: InputMaybe<Scalars['String']>;
+  tableContents2?: InputMaybe<Scalars['String']>;
+  tableContents3?: InputMaybe<Scalars['String']>;
+  tableContents4?: InputMaybe<Scalars['String']>;
+  title?: InputMaybe<Scalars['String']>;
+};
+
+export type Management = {
+  __typename?: 'Management';
+  AgriBusinessManagement?: Maybe<BlogPost>;
+  BankingManagement?: Maybe<BlogPost>;
+  BusinessManagement?: Maybe<BlogPost>;
+  HumanResources?: Maybe<BlogPost>;
+  InternationalBusiness?: Maybe<BlogPost>;
+  LeadershipManagement?: Maybe<BlogPost>;
+  ProjectManagement?: Maybe<BlogPost>;
+  SocialMediaMarketing?: Maybe<BlogPost>;
+  SupplyManagement?: Maybe<BlogPost>;
+};
+
 export type Mutation = {
   __typename?: 'Mutation';
+  addAi?: Maybe<Ai>;
+  addBlockchain?: Maybe<Blockchain>;
   addBlogPost?: Maybe<BlogPost>;
+  addBusinessAnalysis?: Maybe<BusinessAnalysis>;
+  addCloudComputing?: Maybe<CloudComputing>;
+  addComputerNetworking?: Maybe<ComputerNetworking>;
+  addDataManagement?: Maybe<DataManagement>;
+  addDesign?: Maybe<Design>;
+  addGameProgramming?: Maybe<GameProgramming>;
+  addHealth?: Maybe<Health>;
+  addHospitality?: Maybe<Hospitality>;
+  addIt?: Maybe<It>;
+  addMachineLearing?: Maybe<MachineLearing>;
+  addSoftwareDevelopment?: Maybe<SoftwareDevelopment>;
+  addTelecommunication?: Maybe<Telecommunication>;
+  addTrades?: Maybe<Trades>;
+  addWebDevelopment?: Maybe<WebDevelopment>;
+};
+
+
+export type MutationAddAiArgs = {
+  input?: InputMaybe<AiInput>;
+};
+
+
+export type MutationAddBlockchainArgs = {
+  input?: InputMaybe<BlockchainInput>;
 };
 
 
@@ -119,15 +799,157 @@ export type MutationAddBlogPostArgs = {
   input: BlogPostInput;
 };
 
+
+export type MutationAddBusinessAnalysisArgs = {
+  input?: InputMaybe<BusinessAnalysisInput>;
+};
+
+
+export type MutationAddCloudComputingArgs = {
+  input?: InputMaybe<CloudComputingInput>;
+};
+
+
+export type MutationAddComputerNetworkingArgs = {
+  input?: InputMaybe<ComputerNetworkingInput>;
+};
+
+
+export type MutationAddDataManagementArgs = {
+  input?: InputMaybe<DataManagementInput>;
+};
+
+
+export type MutationAddDesignArgs = {
+  input: BlogPostInput;
+};
+
+
+export type MutationAddGameProgrammingArgs = {
+  input?: InputMaybe<GameProgrammingInput>;
+};
+
+
+export type MutationAddHealthArgs = {
+  input: BlogPostInput;
+};
+
+
+export type MutationAddHospitalityArgs = {
+  input: BlogPostInput;
+};
+
+
+export type MutationAddItArgs = {
+  input: ItInput;
+};
+
+
+export type MutationAddMachineLearingArgs = {
+  input?: InputMaybe<MachineLearingInput>;
+};
+
+
+export type MutationAddSoftwareDevelopmentArgs = {
+  input?: InputMaybe<SoftwareDevelopmentInput>;
+};
+
+
+export type MutationAddTelecommunicationArgs = {
+  input?: InputMaybe<TelecommunicationInput>;
+};
+
+
+export type MutationAddTradesArgs = {
+  input: BlogPostInput;
+};
+
+
+export type MutationAddWebDevelopmentArgs = {
+  input?: InputMaybe<WebDevelopmentInput>;
+};
+
 export type Query = {
   __typename?: 'Query';
+  ai?: Maybe<Ai>;
+  blockchain?: Maybe<Blockchain>;
   blogCard?: Maybe<Array<Maybe<BlogPost>>>;
   blogPost?: Maybe<BlogPost>;
   blogPosts?: Maybe<Array<Maybe<BlogPost>>>;
+  businessAnalysis?: Maybe<BusinessAnalysis>;
+  cloudComputing?: Maybe<CloudComputing>;
+  computerNetworking?: Maybe<ComputerNetworking>;
+  dataManagement?: Maybe<DataManagement>;
+  gameProgramming?: Maybe<GameProgramming>;
+  it?: Maybe<It>;
+  machineLearing?: Maybe<MachineLearing>;
+  softwareDevelopment?: Maybe<SoftwareDevelopment>;
+  telecommunication?: Maybe<Telecommunication>;
+  webDevelopment?: Maybe<WebDevelopment>;
+};
+
+
+export type QueryAiArgs = {
+  id: Scalars['ID'];
+};
+
+
+export type QueryBlockchainArgs = {
+  id: Scalars['ID'];
 };
 
 
 export type QueryBlogPostArgs = {
+  id: Scalars['ID'];
+};
+
+
+export type QueryBusinessAnalysisArgs = {
+  id: Scalars['ID'];
+};
+
+
+export type QueryCloudComputingArgs = {
+  id: Scalars['ID'];
+};
+
+
+export type QueryComputerNetworkingArgs = {
+  id: Scalars['ID'];
+};
+
+
+export type QueryDataManagementArgs = {
+  id: Scalars['ID'];
+};
+
+
+export type QueryGameProgrammingArgs = {
+  id: Scalars['ID'];
+};
+
+
+export type QueryItArgs = {
+  id: Scalars['ID'];
+};
+
+
+export type QueryMachineLearingArgs = {
+  id: Scalars['ID'];
+};
+
+
+export type QuerySoftwareDevelopmentArgs = {
+  id: Scalars['ID'];
+};
+
+
+export type QueryTelecommunicationArgs = {
+  id: Scalars['ID'];
+};
+
+
+export type QueryWebDevelopmentArgs = {
   id: Scalars['ID'];
 };
 
@@ -138,6 +960,166 @@ export type Session = {
   sessionToken: Scalars['String'];
   user: User;
   userId: Scalars['String'];
+};
+
+export type SoftwareDevelopment = {
+  __typename?: 'SoftwareDevelopment';
+  authorAbout?: Maybe<Scalars['String']>;
+  authorLink?: Maybe<Scalars['String']>;
+  authorName?: Maybe<Scalars['String']>;
+  conclusion1?: Maybe<Scalars['String']>;
+  conclusion2?: Maybe<Scalars['String']>;
+  conclusion3?: Maybe<Scalars['String']>;
+  editedBy?: Maybe<Scalars['String']>;
+  id?: Maybe<Scalars['ID']>;
+  l1?: Maybe<Scalars['String']>;
+  l2?: Maybe<Scalars['String']>;
+  l3?: Maybe<Scalars['String']>;
+  l4?: Maybe<Scalars['String']>;
+  l5?: Maybe<Scalars['String']>;
+  mainImage?: Maybe<Scalars['String']>;
+  p1?: Maybe<Scalars['String']>;
+  p2?: Maybe<Scalars['String']>;
+  p3?: Maybe<Scalars['String']>;
+  p4?: Maybe<Scalars['String']>;
+  p5?: Maybe<Scalars['String']>;
+  p6?: Maybe<Scalars['String']>;
+  p7?: Maybe<Scalars['String']>;
+  photoCredit?: Maybe<Scalars['String']>;
+  publishedDate?: Maybe<Scalars['String']>;
+  reference1?: Maybe<Scalars['String']>;
+  reference2?: Maybe<Scalars['String']>;
+  subtitle1?: Maybe<Scalars['String']>;
+  subtitle2?: Maybe<Scalars['String']>;
+  subtitle3?: Maybe<Scalars['String']>;
+  tableContents1?: Maybe<Scalars['String']>;
+  tableContents2?: Maybe<Scalars['String']>;
+  tableContents3?: Maybe<Scalars['String']>;
+  tableContents4?: Maybe<Scalars['String']>;
+  title?: Maybe<Scalars['String']>;
+};
+
+export type SoftwareDevelopmentInput = {
+  authorAbout?: InputMaybe<Scalars['String']>;
+  authorLink?: InputMaybe<Scalars['String']>;
+  authorName?: InputMaybe<Scalars['String']>;
+  conclusion1?: InputMaybe<Scalars['String']>;
+  conclusion2?: InputMaybe<Scalars['String']>;
+  conclusion3?: InputMaybe<Scalars['String']>;
+  editedBy?: InputMaybe<Scalars['String']>;
+  id?: InputMaybe<Scalars['ID']>;
+  l1?: InputMaybe<Scalars['String']>;
+  l2?: InputMaybe<Scalars['String']>;
+  l3?: InputMaybe<Scalars['String']>;
+  l4?: InputMaybe<Scalars['String']>;
+  l5?: InputMaybe<Scalars['String']>;
+  mainImage?: InputMaybe<Scalars['String']>;
+  p1?: InputMaybe<Scalars['String']>;
+  p2?: InputMaybe<Scalars['String']>;
+  p3?: InputMaybe<Scalars['String']>;
+  p4?: InputMaybe<Scalars['String']>;
+  p5?: InputMaybe<Scalars['String']>;
+  p6?: InputMaybe<Scalars['String']>;
+  p7?: InputMaybe<Scalars['String']>;
+  photoCredit?: InputMaybe<Scalars['String']>;
+  publishedDate?: InputMaybe<Scalars['String']>;
+  reference1?: InputMaybe<Scalars['String']>;
+  reference2?: InputMaybe<Scalars['String']>;
+  subtitle1?: InputMaybe<Scalars['String']>;
+  subtitle2?: InputMaybe<Scalars['String']>;
+  subtitle3?: InputMaybe<Scalars['String']>;
+  tableContents1?: InputMaybe<Scalars['String']>;
+  tableContents2?: InputMaybe<Scalars['String']>;
+  tableContents3?: InputMaybe<Scalars['String']>;
+  tableContents4?: InputMaybe<Scalars['String']>;
+  title?: InputMaybe<Scalars['String']>;
+};
+
+export type Telecommunication = {
+  __typename?: 'Telecommunication';
+  authorAbout?: Maybe<Scalars['String']>;
+  authorLink?: Maybe<Scalars['String']>;
+  authorName?: Maybe<Scalars['String']>;
+  conclusion1?: Maybe<Scalars['String']>;
+  conclusion2?: Maybe<Scalars['String']>;
+  conclusion3?: Maybe<Scalars['String']>;
+  editedBy?: Maybe<Scalars['String']>;
+  id?: Maybe<Scalars['ID']>;
+  l1?: Maybe<Scalars['String']>;
+  l2?: Maybe<Scalars['String']>;
+  l3?: Maybe<Scalars['String']>;
+  l4?: Maybe<Scalars['String']>;
+  l5?: Maybe<Scalars['String']>;
+  mainImage?: Maybe<Scalars['String']>;
+  p1?: Maybe<Scalars['String']>;
+  p2?: Maybe<Scalars['String']>;
+  p3?: Maybe<Scalars['String']>;
+  p4?: Maybe<Scalars['String']>;
+  p5?: Maybe<Scalars['String']>;
+  p6?: Maybe<Scalars['String']>;
+  p7?: Maybe<Scalars['String']>;
+  photoCredit?: Maybe<Scalars['String']>;
+  publishedDate?: Maybe<Scalars['String']>;
+  reference1?: Maybe<Scalars['String']>;
+  reference2?: Maybe<Scalars['String']>;
+  subtitle1?: Maybe<Scalars['String']>;
+  subtitle2?: Maybe<Scalars['String']>;
+  subtitle3?: Maybe<Scalars['String']>;
+  tableContents1?: Maybe<Scalars['String']>;
+  tableContents2?: Maybe<Scalars['String']>;
+  tableContents3?: Maybe<Scalars['String']>;
+  tableContents4?: Maybe<Scalars['String']>;
+  title?: Maybe<Scalars['String']>;
+};
+
+export type TelecommunicationInput = {
+  authorAbout?: InputMaybe<Scalars['String']>;
+  authorLink?: InputMaybe<Scalars['String']>;
+  authorName?: InputMaybe<Scalars['String']>;
+  conclusion1?: InputMaybe<Scalars['String']>;
+  conclusion2?: InputMaybe<Scalars['String']>;
+  conclusion3?: InputMaybe<Scalars['String']>;
+  editedBy?: InputMaybe<Scalars['String']>;
+  id?: InputMaybe<Scalars['ID']>;
+  l1?: InputMaybe<Scalars['String']>;
+  l2?: InputMaybe<Scalars['String']>;
+  l3?: InputMaybe<Scalars['String']>;
+  l4?: InputMaybe<Scalars['String']>;
+  l5?: InputMaybe<Scalars['String']>;
+  mainImage?: InputMaybe<Scalars['String']>;
+  p1?: InputMaybe<Scalars['String']>;
+  p2?: InputMaybe<Scalars['String']>;
+  p3?: InputMaybe<Scalars['String']>;
+  p4?: InputMaybe<Scalars['String']>;
+  p5?: InputMaybe<Scalars['String']>;
+  p6?: InputMaybe<Scalars['String']>;
+  p7?: InputMaybe<Scalars['String']>;
+  photoCredit?: InputMaybe<Scalars['String']>;
+  publishedDate?: InputMaybe<Scalars['String']>;
+  reference1?: InputMaybe<Scalars['String']>;
+  reference2?: InputMaybe<Scalars['String']>;
+  subtitle1?: InputMaybe<Scalars['String']>;
+  subtitle2?: InputMaybe<Scalars['String']>;
+  subtitle3?: InputMaybe<Scalars['String']>;
+  tableContents1?: InputMaybe<Scalars['String']>;
+  tableContents2?: InputMaybe<Scalars['String']>;
+  tableContents3?: InputMaybe<Scalars['String']>;
+  tableContents4?: InputMaybe<Scalars['String']>;
+  title?: InputMaybe<Scalars['String']>;
+};
+
+export type Trades = {
+  __typename?: 'Trades';
+  Automotive?: Maybe<BlogPost>;
+  Beauty?: Maybe<BlogPost>;
+  Carpentry?: Maybe<BlogPost>;
+  Construction?: Maybe<BlogPost>;
+  Education?: Maybe<BlogPost>;
+  Fitness?: Maybe<BlogPost>;
+  Hairdressing?: Maybe<BlogPost>;
+  Horticulture?: Maybe<BlogPost>;
+  Sport?: Maybe<BlogPost>;
+  Yoga?: Maybe<BlogPost>;
 };
 
 export type User = {
@@ -156,6 +1138,79 @@ export type VerificationToken = {
   expires: Scalars['String'];
   identifier: Scalars['String'];
   token: Scalars['String'];
+};
+
+export type WebDevelopment = {
+  __typename?: 'WebDevelopment';
+  authorAbout?: Maybe<Scalars['String']>;
+  authorLink?: Maybe<Scalars['String']>;
+  authorName?: Maybe<Scalars['String']>;
+  conclusion1?: Maybe<Scalars['String']>;
+  conclusion2?: Maybe<Scalars['String']>;
+  conclusion3?: Maybe<Scalars['String']>;
+  editedBy?: Maybe<Scalars['String']>;
+  id?: Maybe<Scalars['ID']>;
+  l1?: Maybe<Scalars['String']>;
+  l2?: Maybe<Scalars['String']>;
+  l3?: Maybe<Scalars['String']>;
+  l4?: Maybe<Scalars['String']>;
+  l5?: Maybe<Scalars['String']>;
+  mainImage?: Maybe<Scalars['String']>;
+  p1?: Maybe<Scalars['String']>;
+  p2?: Maybe<Scalars['String']>;
+  p3?: Maybe<Scalars['String']>;
+  p4?: Maybe<Scalars['String']>;
+  p5?: Maybe<Scalars['String']>;
+  p6?: Maybe<Scalars['String']>;
+  p7?: Maybe<Scalars['String']>;
+  photoCredit?: Maybe<Scalars['String']>;
+  publishedDate?: Maybe<Scalars['String']>;
+  reference1?: Maybe<Scalars['String']>;
+  reference2?: Maybe<Scalars['String']>;
+  subtitle1?: Maybe<Scalars['String']>;
+  subtitle2?: Maybe<Scalars['String']>;
+  subtitle3?: Maybe<Scalars['String']>;
+  tableContents1?: Maybe<Scalars['String']>;
+  tableContents2?: Maybe<Scalars['String']>;
+  tableContents3?: Maybe<Scalars['String']>;
+  tableContents4?: Maybe<Scalars['String']>;
+  title?: Maybe<Scalars['String']>;
+};
+
+export type WebDevelopmentInput = {
+  authorAbout?: InputMaybe<Scalars['String']>;
+  authorLink?: InputMaybe<Scalars['String']>;
+  authorName?: InputMaybe<Scalars['String']>;
+  conclusion1?: InputMaybe<Scalars['String']>;
+  conclusion2?: InputMaybe<Scalars['String']>;
+  conclusion3?: InputMaybe<Scalars['String']>;
+  editedBy?: InputMaybe<Scalars['String']>;
+  id?: InputMaybe<Scalars['ID']>;
+  l1?: InputMaybe<Scalars['String']>;
+  l2?: InputMaybe<Scalars['String']>;
+  l3?: InputMaybe<Scalars['String']>;
+  l4?: InputMaybe<Scalars['String']>;
+  l5?: InputMaybe<Scalars['String']>;
+  mainImage?: InputMaybe<Scalars['String']>;
+  p1?: InputMaybe<Scalars['String']>;
+  p2?: InputMaybe<Scalars['String']>;
+  p3?: InputMaybe<Scalars['String']>;
+  p4?: InputMaybe<Scalars['String']>;
+  p5?: InputMaybe<Scalars['String']>;
+  p6?: InputMaybe<Scalars['String']>;
+  p7?: InputMaybe<Scalars['String']>;
+  photoCredit?: InputMaybe<Scalars['String']>;
+  publishedDate?: InputMaybe<Scalars['String']>;
+  reference1?: InputMaybe<Scalars['String']>;
+  reference2?: InputMaybe<Scalars['String']>;
+  subtitle1?: InputMaybe<Scalars['String']>;
+  subtitle2?: InputMaybe<Scalars['String']>;
+  subtitle3?: InputMaybe<Scalars['String']>;
+  tableContents1?: InputMaybe<Scalars['String']>;
+  tableContents2?: InputMaybe<Scalars['String']>;
+  tableContents3?: InputMaybe<Scalars['String']>;
+  tableContents4?: InputMaybe<Scalars['String']>;
+  title?: InputMaybe<Scalars['String']>;
 };
 
 
@@ -228,31 +1283,91 @@ export type DirectiveResolverFn<TResult = {}, TParent = {}, TContext = {}, TArgs
 /** Mapping between all available schema types and the resolvers types */
 export type ResolversTypes = {
   Account: ResolverTypeWrapper<AccountModel>;
+  Ai: ResolverTypeWrapper<AiModel>;
+  AiInput: AiInput;
+  Blockchain: ResolverTypeWrapper<BlockchainModel>;
+  BlockchainInput: BlockchainInput;
   BlogPost: ResolverTypeWrapper<BlogPostModel>;
   BlogPostInput: BlogPostInput;
   Boolean: ResolverTypeWrapper<Scalars['Boolean']>;
+  BusinessAnalysis: ResolverTypeWrapper<BusinessAnalysisModel>;
+  BusinessAnalysisInput: BusinessAnalysisInput;
+  CloudComputing: ResolverTypeWrapper<CloudComputingModel>;
+  CloudComputingInput: CloudComputingInput;
+  ComputerNetworking: ResolverTypeWrapper<ComputerNetworkingModel>;
+  ComputerNetworkingInput: ComputerNetworkingInput;
+  Courses: ResolverTypeWrapper<CoursesModel>;
+  DataManagement: ResolverTypeWrapper<DataManagementModel>;
+  DataManagementInput: DataManagementInput;
+  Design: ResolverTypeWrapper<DesignModel>;
+  GameProgramming: ResolverTypeWrapper<GameProgrammingModel>;
+  GameProgrammingInput: GameProgrammingInput;
+  Health: ResolverTypeWrapper<HealthModel>;
+  Hospitality: ResolverTypeWrapper<HospitalityModel>;
   ID: ResolverTypeWrapper<Scalars['ID']>;
+  It: ResolverTypeWrapper<ItModel>;
+  ItInput: ItInput;
+  MachineLearing: ResolverTypeWrapper<MachineLearingModel>;
+  MachineLearingInput: MachineLearingInput;
+  Management: ResolverTypeWrapper<ManagementModel>;
   Mutation: ResolverTypeWrapper<{}>;
   Query: ResolverTypeWrapper<{}>;
   Session: ResolverTypeWrapper<SessionModel>;
+  SoftwareDevelopment: ResolverTypeWrapper<SoftwareDevelopmentModel>;
+  SoftwareDevelopmentInput: SoftwareDevelopmentInput;
   String: ResolverTypeWrapper<Scalars['String']>;
+  Telecommunication: ResolverTypeWrapper<TelecommunicationModel>;
+  TelecommunicationInput: TelecommunicationInput;
+  Trades: ResolverTypeWrapper<TradesModel>;
   User: ResolverTypeWrapper<UserModel>;
   VerificationToken: ResolverTypeWrapper<VerificationTokenModel>;
+  WebDevelopment: ResolverTypeWrapper<WebDevelopmentModel>;
+  WebDevelopmentInput: WebDevelopmentInput;
 };
 
 /** Mapping between all available schema types and the resolvers parents */
 export type ResolversParentTypes = {
   Account: AccountModel;
+  Ai: AiModel;
+  AiInput: AiInput;
+  Blockchain: BlockchainModel;
+  BlockchainInput: BlockchainInput;
   BlogPost: BlogPostModel;
   BlogPostInput: BlogPostInput;
   Boolean: Scalars['Boolean'];
+  BusinessAnalysis: BusinessAnalysisModel;
+  BusinessAnalysisInput: BusinessAnalysisInput;
+  CloudComputing: CloudComputingModel;
+  CloudComputingInput: CloudComputingInput;
+  ComputerNetworking: ComputerNetworkingModel;
+  ComputerNetworkingInput: ComputerNetworkingInput;
+  Courses: CoursesModel;
+  DataManagement: DataManagementModel;
+  DataManagementInput: DataManagementInput;
+  Design: DesignModel;
+  GameProgramming: GameProgrammingModel;
+  GameProgrammingInput: GameProgrammingInput;
+  Health: HealthModel;
+  Hospitality: HospitalityModel;
   ID: Scalars['ID'];
+  It: ItModel;
+  ItInput: ItInput;
+  MachineLearing: MachineLearingModel;
+  MachineLearingInput: MachineLearingInput;
+  Management: ManagementModel;
   Mutation: {};
   Query: {};
   Session: SessionModel;
+  SoftwareDevelopment: SoftwareDevelopmentModel;
+  SoftwareDevelopmentInput: SoftwareDevelopmentInput;
   String: Scalars['String'];
+  Telecommunication: TelecommunicationModel;
+  TelecommunicationInput: TelecommunicationInput;
+  Trades: TradesModel;
   User: UserModel;
   VerificationToken: VerificationTokenModel;
+  WebDevelopment: WebDevelopmentModel;
+  WebDevelopmentInput: WebDevelopmentInput;
 };
 
 export type AccountResolvers<ContextType = GraphQLContext, ParentType extends ResolversParentTypes['Account'] = ResolversParentTypes['Account']> = {
@@ -269,6 +1384,80 @@ export type AccountResolvers<ContextType = GraphQLContext, ParentType extends Re
   type?: Resolver<ResolversTypes['String'], ParentType, ContextType>;
   user?: Resolver<ResolversTypes['User'], ParentType, ContextType>;
   userId?: Resolver<ResolversTypes['ID'], ParentType, ContextType>;
+  __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
+};
+
+export type AiResolvers<ContextType = GraphQLContext, ParentType extends ResolversParentTypes['Ai'] = ResolversParentTypes['Ai']> = {
+  authorAbout?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  authorLink?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  authorName?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  conclusion1?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  conclusion2?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  conclusion3?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  editedBy?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  id?: Resolver<Maybe<ResolversTypes['ID']>, ParentType, ContextType>;
+  l1?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  l2?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  l3?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  l4?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  l5?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  mainImage?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  p1?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  p2?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  p3?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  p4?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  p5?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  p6?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  p7?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  photoCredit?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  publishedDate?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  reference1?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  reference2?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  subtitle1?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  subtitle2?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  subtitle3?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  tableContents1?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  tableContents2?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  tableContents3?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  tableContents4?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  title?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
+};
+
+export type BlockchainResolvers<ContextType = GraphQLContext, ParentType extends ResolversParentTypes['Blockchain'] = ResolversParentTypes['Blockchain']> = {
+  authorAbout?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  authorLink?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  authorName?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  conclusion1?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  conclusion2?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  conclusion3?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  editedBy?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  id?: Resolver<Maybe<ResolversTypes['ID']>, ParentType, ContextType>;
+  l1?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  l2?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  l3?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  l4?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  l5?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  mainImage?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  p1?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  p2?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  p3?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  p4?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  p5?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  p6?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  p7?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  photoCredit?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  publishedDate?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  reference1?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  reference2?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  subtitle1?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  subtitle2?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  subtitle3?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  tableContents1?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  tableContents2?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  tableContents3?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  tableContents4?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  title?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 };
 
@@ -309,14 +1498,330 @@ export type BlogPostResolvers<ContextType = GraphQLContext, ParentType extends R
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 };
 
+export type BusinessAnalysisResolvers<ContextType = GraphQLContext, ParentType extends ResolversParentTypes['BusinessAnalysis'] = ResolversParentTypes['BusinessAnalysis']> = {
+  authorAbout?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  authorLink?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  authorName?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  conclusion1?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  conclusion2?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  conclusion3?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  editedBy?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  id?: Resolver<Maybe<ResolversTypes['ID']>, ParentType, ContextType>;
+  l1?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  l2?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  l3?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  l4?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  l5?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  mainImage?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  p1?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  p2?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  p3?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  p4?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  p5?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  p6?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  p7?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  photoCredit?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  publishedDate?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  reference1?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  reference2?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  subtitle1?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  subtitle2?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  subtitle3?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  tableContents1?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  tableContents2?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  tableContents3?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  tableContents4?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  title?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
+};
+
+export type CloudComputingResolvers<ContextType = GraphQLContext, ParentType extends ResolversParentTypes['CloudComputing'] = ResolversParentTypes['CloudComputing']> = {
+  authorAbout?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  authorLink?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  authorName?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  conclusion1?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  conclusion2?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  conclusion3?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  editedBy?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  id?: Resolver<Maybe<ResolversTypes['ID']>, ParentType, ContextType>;
+  l1?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  l2?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  l3?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  l4?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  l5?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  mainImage?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  p1?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  p2?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  p3?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  p4?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  p5?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  p6?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  p7?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  photoCredit?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  publishedDate?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  reference1?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  reference2?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  subtitle1?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  subtitle2?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  subtitle3?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  tableContents1?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  tableContents2?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  tableContents3?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  tableContents4?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  title?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
+};
+
+export type ComputerNetworkingResolvers<ContextType = GraphQLContext, ParentType extends ResolversParentTypes['ComputerNetworking'] = ResolversParentTypes['ComputerNetworking']> = {
+  authorAbout?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  authorLink?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  authorName?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  conclusion1?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  conclusion2?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  conclusion3?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  editedBy?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  id?: Resolver<Maybe<ResolversTypes['ID']>, ParentType, ContextType>;
+  l1?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  l2?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  l3?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  l4?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  l5?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  mainImage?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  p1?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  p2?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  p3?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  p4?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  p5?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  p6?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  p7?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  photoCredit?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  publishedDate?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  reference1?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  reference2?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  subtitle1?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  subtitle2?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  subtitle3?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  tableContents1?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  tableContents2?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  tableContents3?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  tableContents4?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  title?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
+};
+
+export type CoursesResolvers<ContextType = GraphQLContext, ParentType extends ResolversParentTypes['Courses'] = ResolversParentTypes['Courses']> = {
+  Design?: Resolver<Maybe<ResolversTypes['Design']>, ParentType, ContextType>;
+  Health?: Resolver<Maybe<ResolversTypes['Health']>, ParentType, ContextType>;
+  Hospitality?: Resolver<Maybe<ResolversTypes['Hospitality']>, ParentType, ContextType>;
+  It?: Resolver<Maybe<ResolversTypes['It']>, ParentType, ContextType>;
+  Management?: Resolver<Maybe<ResolversTypes['Management']>, ParentType, ContextType>;
+  Trades?: Resolver<Maybe<ResolversTypes['Trades']>, ParentType, ContextType>;
+  __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
+};
+
+export type DataManagementResolvers<ContextType = GraphQLContext, ParentType extends ResolversParentTypes['DataManagement'] = ResolversParentTypes['DataManagement']> = {
+  authorAbout?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  authorLink?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  authorName?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  conclusion1?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  conclusion2?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  conclusion3?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  editedBy?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  id?: Resolver<Maybe<ResolversTypes['ID']>, ParentType, ContextType>;
+  l1?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  l2?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  l3?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  l4?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  l5?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  mainImage?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  p1?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  p2?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  p3?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  p4?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  p5?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  p6?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  p7?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  photoCredit?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  publishedDate?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  reference1?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  reference2?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  subtitle1?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  subtitle2?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  subtitle3?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  tableContents1?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  tableContents2?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  tableContents3?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  tableContents4?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  title?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
+};
+
+export type DesignResolvers<ContextType = GraphQLContext, ParentType extends ResolversParentTypes['Design'] = ResolversParentTypes['Design']> = {
+  Acting?: Resolver<Maybe<ResolversTypes['BlogPost']>, ParentType, ContextType>;
+  Animation?: Resolver<Maybe<ResolversTypes['BlogPost']>, ParentType, ContextType>;
+  DigitalMedia?: Resolver<Maybe<ResolversTypes['BlogPost']>, ParentType, ContextType>;
+  FashionDesign?: Resolver<Maybe<ResolversTypes['BlogPost']>, ParentType, ContextType>;
+  Film?: Resolver<Maybe<ResolversTypes['BlogPost']>, ParentType, ContextType>;
+  GraphicDesign?: Resolver<Maybe<ResolversTypes['BlogPost']>, ParentType, ContextType>;
+  InteriorDesign?: Resolver<Maybe<ResolversTypes['BlogPost']>, ParentType, ContextType>;
+  Landscape?: Resolver<Maybe<ResolversTypes['BlogPost']>, ParentType, ContextType>;
+  Music?: Resolver<Maybe<ResolversTypes['BlogPost']>, ParentType, ContextType>;
+  __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
+};
+
+export type GameProgrammingResolvers<ContextType = GraphQLContext, ParentType extends ResolversParentTypes['GameProgramming'] = ResolversParentTypes['GameProgramming']> = {
+  authorAbout?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  authorLink?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  authorName?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  conclusion1?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  conclusion2?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  conclusion3?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  editedBy?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  id?: Resolver<Maybe<ResolversTypes['ID']>, ParentType, ContextType>;
+  l1?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  l2?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  l3?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  l4?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  l5?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  mainImage?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  p1?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  p2?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  p3?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  p4?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  p5?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  p6?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  p7?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  photoCredit?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  publishedDate?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  reference1?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  reference2?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  subtitle1?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  subtitle2?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  subtitle3?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  tableContents1?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  tableContents2?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  tableContents3?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  tableContents4?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  title?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
+};
+
+export type HealthResolvers<ContextType = GraphQLContext, ParentType extends ResolversParentTypes['Health'] = ResolversParentTypes['Health']> = {
+  AgedCare?: Resolver<Maybe<ResolversTypes['BlogPost']>, ParentType, ContextType>;
+  Dental?: Resolver<Maybe<ResolversTypes['BlogPost']>, ParentType, ContextType>;
+  Massage?: Resolver<Maybe<ResolversTypes['BlogPost']>, ParentType, ContextType>;
+  Medicine?: Resolver<Maybe<ResolversTypes['BlogPost']>, ParentType, ContextType>;
+  MentalHealth?: Resolver<Maybe<ResolversTypes['BlogPost']>, ParentType, ContextType>;
+  Nursing?: Resolver<Maybe<ResolversTypes['BlogPost']>, ParentType, ContextType>;
+  Nutrition?: Resolver<Maybe<ResolversTypes['BlogPost']>, ParentType, ContextType>;
+  PublicHealth?: Resolver<Maybe<ResolversTypes['BlogPost']>, ParentType, ContextType>;
+  Veterinary?: Resolver<Maybe<ResolversTypes['BlogPost']>, ParentType, ContextType>;
+  __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
+};
+
+export type HospitalityResolvers<ContextType = GraphQLContext, ParentType extends ResolversParentTypes['Hospitality'] = ResolversParentTypes['Hospitality']> = {
+  Baking?: Resolver<Maybe<ResolversTypes['BlogPost']>, ParentType, ContextType>;
+  CommercialCooking?: Resolver<Maybe<ResolversTypes['BlogPost']>, ParentType, ContextType>;
+  Events?: Resolver<Maybe<ResolversTypes['BlogPost']>, ParentType, ContextType>;
+  HospitalityManagement?: Resolver<Maybe<ResolversTypes['BlogPost']>, ParentType, ContextType>;
+  HotelManagement?: Resolver<Maybe<ResolversTypes['BlogPost']>, ParentType, ContextType>;
+  TravelTourism?: Resolver<Maybe<ResolversTypes['BlogPost']>, ParentType, ContextType>;
+  __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
+};
+
+export type ItResolvers<ContextType = GraphQLContext, ParentType extends ResolversParentTypes['It'] = ResolversParentTypes['It']> = {
+  id?: Resolver<ResolversTypes['String'], ParentType, ContextType>;
+  softwareDevelopment?: Resolver<Maybe<ResolversTypes['SoftwareDevelopment']>, ParentType, ContextType>;
+  softwareDevelopmentId?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
+};
+
+export type MachineLearingResolvers<ContextType = GraphQLContext, ParentType extends ResolversParentTypes['MachineLearing'] = ResolversParentTypes['MachineLearing']> = {
+  authorAbout?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  authorLink?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  authorName?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  conclusion1?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  conclusion2?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  conclusion3?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  editedBy?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  id?: Resolver<Maybe<ResolversTypes['ID']>, ParentType, ContextType>;
+  l1?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  l2?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  l3?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  l4?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  l5?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  mainImage?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  p1?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  p2?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  p3?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  p4?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  p5?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  p6?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  p7?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  photoCredit?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  publishedDate?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  reference1?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  reference2?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  subtitle1?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  subtitle2?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  subtitle3?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  tableContents1?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  tableContents2?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  tableContents3?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  tableContents4?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  title?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
+};
+
+export type ManagementResolvers<ContextType = GraphQLContext, ParentType extends ResolversParentTypes['Management'] = ResolversParentTypes['Management']> = {
+  AgriBusinessManagement?: Resolver<Maybe<ResolversTypes['BlogPost']>, ParentType, ContextType>;
+  BankingManagement?: Resolver<Maybe<ResolversTypes['BlogPost']>, ParentType, ContextType>;
+  BusinessManagement?: Resolver<Maybe<ResolversTypes['BlogPost']>, ParentType, ContextType>;
+  HumanResources?: Resolver<Maybe<ResolversTypes['BlogPost']>, ParentType, ContextType>;
+  InternationalBusiness?: Resolver<Maybe<ResolversTypes['BlogPost']>, ParentType, ContextType>;
+  LeadershipManagement?: Resolver<Maybe<ResolversTypes['BlogPost']>, ParentType, ContextType>;
+  ProjectManagement?: Resolver<Maybe<ResolversTypes['BlogPost']>, ParentType, ContextType>;
+  SocialMediaMarketing?: Resolver<Maybe<ResolversTypes['BlogPost']>, ParentType, ContextType>;
+  SupplyManagement?: Resolver<Maybe<ResolversTypes['BlogPost']>, ParentType, ContextType>;
+  __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
+};
+
 export type MutationResolvers<ContextType = GraphQLContext, ParentType extends ResolversParentTypes['Mutation'] = ResolversParentTypes['Mutation']> = {
+  addAi?: Resolver<Maybe<ResolversTypes['Ai']>, ParentType, ContextType, Partial<MutationAddAiArgs>>;
+  addBlockchain?: Resolver<Maybe<ResolversTypes['Blockchain']>, ParentType, ContextType, Partial<MutationAddBlockchainArgs>>;
   addBlogPost?: Resolver<Maybe<ResolversTypes['BlogPost']>, ParentType, ContextType, RequireFields<MutationAddBlogPostArgs, 'input'>>;
+  addBusinessAnalysis?: Resolver<Maybe<ResolversTypes['BusinessAnalysis']>, ParentType, ContextType, Partial<MutationAddBusinessAnalysisArgs>>;
+  addCloudComputing?: Resolver<Maybe<ResolversTypes['CloudComputing']>, ParentType, ContextType, Partial<MutationAddCloudComputingArgs>>;
+  addComputerNetworking?: Resolver<Maybe<ResolversTypes['ComputerNetworking']>, ParentType, ContextType, Partial<MutationAddComputerNetworkingArgs>>;
+  addDataManagement?: Resolver<Maybe<ResolversTypes['DataManagement']>, ParentType, ContextType, Partial<MutationAddDataManagementArgs>>;
+  addDesign?: Resolver<Maybe<ResolversTypes['Design']>, ParentType, ContextType, RequireFields<MutationAddDesignArgs, 'input'>>;
+  addGameProgramming?: Resolver<Maybe<ResolversTypes['GameProgramming']>, ParentType, ContextType, Partial<MutationAddGameProgrammingArgs>>;
+  addHealth?: Resolver<Maybe<ResolversTypes['Health']>, ParentType, ContextType, RequireFields<MutationAddHealthArgs, 'input'>>;
+  addHospitality?: Resolver<Maybe<ResolversTypes['Hospitality']>, ParentType, ContextType, RequireFields<MutationAddHospitalityArgs, 'input'>>;
+  addIt?: Resolver<Maybe<ResolversTypes['It']>, ParentType, ContextType, RequireFields<MutationAddItArgs, 'input'>>;
+  addMachineLearing?: Resolver<Maybe<ResolversTypes['MachineLearing']>, ParentType, ContextType, Partial<MutationAddMachineLearingArgs>>;
+  addSoftwareDevelopment?: Resolver<Maybe<ResolversTypes['SoftwareDevelopment']>, ParentType, ContextType, Partial<MutationAddSoftwareDevelopmentArgs>>;
+  addTelecommunication?: Resolver<Maybe<ResolversTypes['Telecommunication']>, ParentType, ContextType, Partial<MutationAddTelecommunicationArgs>>;
+  addTrades?: Resolver<Maybe<ResolversTypes['Trades']>, ParentType, ContextType, RequireFields<MutationAddTradesArgs, 'input'>>;
+  addWebDevelopment?: Resolver<Maybe<ResolversTypes['WebDevelopment']>, ParentType, ContextType, Partial<MutationAddWebDevelopmentArgs>>;
 };
 
 export type QueryResolvers<ContextType = GraphQLContext, ParentType extends ResolversParentTypes['Query'] = ResolversParentTypes['Query']> = {
+  ai?: Resolver<Maybe<ResolversTypes['Ai']>, ParentType, ContextType, RequireFields<QueryAiArgs, 'id'>>;
+  blockchain?: Resolver<Maybe<ResolversTypes['Blockchain']>, ParentType, ContextType, RequireFields<QueryBlockchainArgs, 'id'>>;
   blogCard?: Resolver<Maybe<Array<Maybe<ResolversTypes['BlogPost']>>>, ParentType, ContextType>;
   blogPost?: Resolver<Maybe<ResolversTypes['BlogPost']>, ParentType, ContextType, RequireFields<QueryBlogPostArgs, 'id'>>;
   blogPosts?: Resolver<Maybe<Array<Maybe<ResolversTypes['BlogPost']>>>, ParentType, ContextType>;
+  businessAnalysis?: Resolver<Maybe<ResolversTypes['BusinessAnalysis']>, ParentType, ContextType, RequireFields<QueryBusinessAnalysisArgs, 'id'>>;
+  cloudComputing?: Resolver<Maybe<ResolversTypes['CloudComputing']>, ParentType, ContextType, RequireFields<QueryCloudComputingArgs, 'id'>>;
+  computerNetworking?: Resolver<Maybe<ResolversTypes['ComputerNetworking']>, ParentType, ContextType, RequireFields<QueryComputerNetworkingArgs, 'id'>>;
+  dataManagement?: Resolver<Maybe<ResolversTypes['DataManagement']>, ParentType, ContextType, RequireFields<QueryDataManagementArgs, 'id'>>;
+  gameProgramming?: Resolver<Maybe<ResolversTypes['GameProgramming']>, ParentType, ContextType, RequireFields<QueryGameProgrammingArgs, 'id'>>;
+  it?: Resolver<Maybe<ResolversTypes['It']>, ParentType, ContextType, RequireFields<QueryItArgs, 'id'>>;
+  machineLearing?: Resolver<Maybe<ResolversTypes['MachineLearing']>, ParentType, ContextType, RequireFields<QueryMachineLearingArgs, 'id'>>;
+  softwareDevelopment?: Resolver<Maybe<ResolversTypes['SoftwareDevelopment']>, ParentType, ContextType, RequireFields<QuerySoftwareDevelopmentArgs, 'id'>>;
+  telecommunication?: Resolver<Maybe<ResolversTypes['Telecommunication']>, ParentType, ContextType, RequireFields<QueryTelecommunicationArgs, 'id'>>;
+  webDevelopment?: Resolver<Maybe<ResolversTypes['WebDevelopment']>, ParentType, ContextType, RequireFields<QueryWebDevelopmentArgs, 'id'>>;
 };
 
 export type SessionResolvers<ContextType = GraphQLContext, ParentType extends ResolversParentTypes['Session'] = ResolversParentTypes['Session']> = {
@@ -325,6 +1830,94 @@ export type SessionResolvers<ContextType = GraphQLContext, ParentType extends Re
   sessionToken?: Resolver<ResolversTypes['String'], ParentType, ContextType>;
   user?: Resolver<ResolversTypes['User'], ParentType, ContextType>;
   userId?: Resolver<ResolversTypes['String'], ParentType, ContextType>;
+  __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
+};
+
+export type SoftwareDevelopmentResolvers<ContextType = GraphQLContext, ParentType extends ResolversParentTypes['SoftwareDevelopment'] = ResolversParentTypes['SoftwareDevelopment']> = {
+  authorAbout?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  authorLink?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  authorName?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  conclusion1?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  conclusion2?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  conclusion3?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  editedBy?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  id?: Resolver<Maybe<ResolversTypes['ID']>, ParentType, ContextType>;
+  l1?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  l2?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  l3?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  l4?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  l5?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  mainImage?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  p1?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  p2?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  p3?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  p4?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  p5?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  p6?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  p7?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  photoCredit?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  publishedDate?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  reference1?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  reference2?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  subtitle1?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  subtitle2?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  subtitle3?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  tableContents1?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  tableContents2?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  tableContents3?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  tableContents4?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  title?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
+};
+
+export type TelecommunicationResolvers<ContextType = GraphQLContext, ParentType extends ResolversParentTypes['Telecommunication'] = ResolversParentTypes['Telecommunication']> = {
+  authorAbout?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  authorLink?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  authorName?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  conclusion1?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  conclusion2?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  conclusion3?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  editedBy?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  id?: Resolver<Maybe<ResolversTypes['ID']>, ParentType, ContextType>;
+  l1?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  l2?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  l3?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  l4?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  l5?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  mainImage?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  p1?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  p2?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  p3?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  p4?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  p5?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  p6?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  p7?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  photoCredit?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  publishedDate?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  reference1?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  reference2?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  subtitle1?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  subtitle2?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  subtitle3?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  tableContents1?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  tableContents2?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  tableContents3?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  tableContents4?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  title?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
+};
+
+export type TradesResolvers<ContextType = GraphQLContext, ParentType extends ResolversParentTypes['Trades'] = ResolversParentTypes['Trades']> = {
+  Automotive?: Resolver<Maybe<ResolversTypes['BlogPost']>, ParentType, ContextType>;
+  Beauty?: Resolver<Maybe<ResolversTypes['BlogPost']>, ParentType, ContextType>;
+  Carpentry?: Resolver<Maybe<ResolversTypes['BlogPost']>, ParentType, ContextType>;
+  Construction?: Resolver<Maybe<ResolversTypes['BlogPost']>, ParentType, ContextType>;
+  Education?: Resolver<Maybe<ResolversTypes['BlogPost']>, ParentType, ContextType>;
+  Fitness?: Resolver<Maybe<ResolversTypes['BlogPost']>, ParentType, ContextType>;
+  Hairdressing?: Resolver<Maybe<ResolversTypes['BlogPost']>, ParentType, ContextType>;
+  Horticulture?: Resolver<Maybe<ResolversTypes['BlogPost']>, ParentType, ContextType>;
+  Sport?: Resolver<Maybe<ResolversTypes['BlogPost']>, ParentType, ContextType>;
+  Yoga?: Resolver<Maybe<ResolversTypes['BlogPost']>, ParentType, ContextType>;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 };
 
@@ -346,14 +1939,69 @@ export type VerificationTokenResolvers<ContextType = GraphQLContext, ParentType 
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 };
 
+export type WebDevelopmentResolvers<ContextType = GraphQLContext, ParentType extends ResolversParentTypes['WebDevelopment'] = ResolversParentTypes['WebDevelopment']> = {
+  authorAbout?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  authorLink?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  authorName?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  conclusion1?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  conclusion2?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  conclusion3?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  editedBy?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  id?: Resolver<Maybe<ResolversTypes['ID']>, ParentType, ContextType>;
+  l1?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  l2?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  l3?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  l4?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  l5?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  mainImage?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  p1?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  p2?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  p3?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  p4?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  p5?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  p6?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  p7?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  photoCredit?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  publishedDate?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  reference1?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  reference2?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  subtitle1?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  subtitle2?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  subtitle3?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  tableContents1?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  tableContents2?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  tableContents3?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  tableContents4?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  title?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
+};
+
 export type Resolvers<ContextType = GraphQLContext> = {
   Account?: AccountResolvers<ContextType>;
+  Ai?: AiResolvers<ContextType>;
+  Blockchain?: BlockchainResolvers<ContextType>;
   BlogPost?: BlogPostResolvers<ContextType>;
+  BusinessAnalysis?: BusinessAnalysisResolvers<ContextType>;
+  CloudComputing?: CloudComputingResolvers<ContextType>;
+  ComputerNetworking?: ComputerNetworkingResolvers<ContextType>;
+  Courses?: CoursesResolvers<ContextType>;
+  DataManagement?: DataManagementResolvers<ContextType>;
+  Design?: DesignResolvers<ContextType>;
+  GameProgramming?: GameProgrammingResolvers<ContextType>;
+  Health?: HealthResolvers<ContextType>;
+  Hospitality?: HospitalityResolvers<ContextType>;
+  It?: ItResolvers<ContextType>;
+  MachineLearing?: MachineLearingResolvers<ContextType>;
+  Management?: ManagementResolvers<ContextType>;
   Mutation?: MutationResolvers<ContextType>;
   Query?: QueryResolvers<ContextType>;
   Session?: SessionResolvers<ContextType>;
+  SoftwareDevelopment?: SoftwareDevelopmentResolvers<ContextType>;
+  Telecommunication?: TelecommunicationResolvers<ContextType>;
+  Trades?: TradesResolvers<ContextType>;
   User?: UserResolvers<ContextType>;
   VerificationToken?: VerificationTokenResolvers<ContextType>;
+  WebDevelopment?: WebDevelopmentResolvers<ContextType>;
 };
 
 
@@ -366,6 +2014,86 @@ export const BlogCardFragmentDoc = gql`
     `;
 export const BlogPostFragmentDoc = gql`
     fragment BlogPost on BlogPost {
+  id
+  publishedDate
+  title
+  subtitle1
+  tableContents1
+  tableContents2
+  tableContents3
+  tableContents4
+  p1
+  p2
+  p3
+  subtitle2
+  p4
+  p5
+  l1
+  l2
+  l3
+  l4
+  l5
+  subtitle3
+  p6
+  p7
+  conclusion1
+  conclusion2
+  conclusion3
+  reference1
+  reference2
+  authorName
+  authorAbout
+  authorLink
+  photoCredit
+  editedBy
+  mainImage
+}
+    `;
+export const ItFragmentDoc = gql`
+    fragment It on It {
+  id
+  softwareDevelopmentId
+}
+    `;
+export const AiFragmentDoc = gql`
+    fragment Ai on Ai {
+  id
+  publishedDate
+  title
+  subtitle1
+  tableContents1
+  tableContents2
+  tableContents3
+  tableContents4
+  p1
+  p2
+  p3
+  subtitle2
+  p4
+  p5
+  l1
+  l2
+  l3
+  l4
+  l5
+  subtitle3
+  p6
+  p7
+  conclusion1
+  conclusion2
+  conclusion3
+  reference1
+  reference2
+  authorName
+  authorAbout
+  authorLink
+  photoCredit
+  editedBy
+  mainImage
+}
+    `;
+export const SoftwareDevelopmentFragmentDoc = gql`
+    fragment SoftwareDevelopment on SoftwareDevelopment {
   id
   publishedDate
   title
@@ -537,6 +2265,210 @@ export function useBlogPostsLazyQuery(baseOptions?: Apollo.LazyQueryHookOptions<
 export type BlogPostsQueryHookResult = ReturnType<typeof useBlogPostsQuery>;
 export type BlogPostsLazyQueryHookResult = ReturnType<typeof useBlogPostsLazyQuery>;
 export type BlogPostsQueryResult = Apollo.QueryResult<BlogPostsQuery, BlogPostsQueryVariables>;
+export const AddItDocument = gql`
+    mutation AddIt($input: ItInput!) {
+  addIt(input: $input) {
+    ...It
+  }
+}
+    ${ItFragmentDoc}`;
+export type AddItMutationFn = Apollo.MutationFunction<AddItMutation, AddItMutationVariables>;
+
+/**
+ * __useAddItMutation__
+ *
+ * To run a mutation, you first call `useAddItMutation` within a React component and pass it any options that fit your needs.
+ * When your component renders, `useAddItMutation` returns a tuple that includes:
+ * - A mutate function that you can call at any time to execute the mutation
+ * - An object with fields that represent the current status of the mutation's execution
+ *
+ * @param baseOptions options that will be passed into the mutation, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options-2;
+ *
+ * @example
+ * const [addItMutation, { data, loading, error }] = useAddItMutation({
+ *   variables: {
+ *      input: // value for 'input'
+ *   },
+ * });
+ */
+export function useAddItMutation(baseOptions?: Apollo.MutationHookOptions<AddItMutation, AddItMutationVariables>) {
+        const options = {...defaultOptions, ...baseOptions}
+        return Apollo.useMutation<AddItMutation, AddItMutationVariables>(AddItDocument, options);
+      }
+export type AddItMutationHookResult = ReturnType<typeof useAddItMutation>;
+export type AddItMutationResult = Apollo.MutationResult<AddItMutation>;
+export type AddItMutationOptions = Apollo.BaseMutationOptions<AddItMutation, AddItMutationVariables>;
+export const ItDocument = gql`
+    query It($id: ID!) {
+  it(id: $id) {
+    ...It
+  }
+}
+    ${ItFragmentDoc}`;
+
+/**
+ * __useItQuery__
+ *
+ * To run a query within a React component, call `useItQuery` and pass it any options that fit your needs.
+ * When your component renders, `useItQuery` returns an object from Apollo Client that contains loading, error, and data properties
+ * you can use to render your UI.
+ *
+ * @param baseOptions options that will be passed into the query, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options;
+ *
+ * @example
+ * const { data, loading, error } = useItQuery({
+ *   variables: {
+ *      id: // value for 'id'
+ *   },
+ * });
+ */
+export function useItQuery(baseOptions: Apollo.QueryHookOptions<ItQuery, ItQueryVariables>) {
+        const options = {...defaultOptions, ...baseOptions}
+        return Apollo.useQuery<ItQuery, ItQueryVariables>(ItDocument, options);
+      }
+export function useItLazyQuery(baseOptions?: Apollo.LazyQueryHookOptions<ItQuery, ItQueryVariables>) {
+          const options = {...defaultOptions, ...baseOptions}
+          return Apollo.useLazyQuery<ItQuery, ItQueryVariables>(ItDocument, options);
+        }
+export type ItQueryHookResult = ReturnType<typeof useItQuery>;
+export type ItLazyQueryHookResult = ReturnType<typeof useItLazyQuery>;
+export type ItQueryResult = Apollo.QueryResult<ItQuery, ItQueryVariables>;
+export const AddAiDocument = gql`
+    mutation AddAi($input: AiInput!) {
+  addAi(input: $input) {
+    ...Ai
+  }
+}
+    ${AiFragmentDoc}`;
+export type AddAiMutationFn = Apollo.MutationFunction<AddAiMutation, AddAiMutationVariables>;
+
+/**
+ * __useAddAiMutation__
+ *
+ * To run a mutation, you first call `useAddAiMutation` within a React component and pass it any options that fit your needs.
+ * When your component renders, `useAddAiMutation` returns a tuple that includes:
+ * - A mutate function that you can call at any time to execute the mutation
+ * - An object with fields that represent the current status of the mutation's execution
+ *
+ * @param baseOptions options that will be passed into the mutation, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options-2;
+ *
+ * @example
+ * const [addAiMutation, { data, loading, error }] = useAddAiMutation({
+ *   variables: {
+ *      input: // value for 'input'
+ *   },
+ * });
+ */
+export function useAddAiMutation(baseOptions?: Apollo.MutationHookOptions<AddAiMutation, AddAiMutationVariables>) {
+        const options = {...defaultOptions, ...baseOptions}
+        return Apollo.useMutation<AddAiMutation, AddAiMutationVariables>(AddAiDocument, options);
+      }
+export type AddAiMutationHookResult = ReturnType<typeof useAddAiMutation>;
+export type AddAiMutationResult = Apollo.MutationResult<AddAiMutation>;
+export type AddAiMutationOptions = Apollo.BaseMutationOptions<AddAiMutation, AddAiMutationVariables>;
+export const AiDocument = gql`
+    query Ai($id: ID!) {
+  ai(id: $id) {
+    ...Ai
+  }
+}
+    ${AiFragmentDoc}`;
+
+/**
+ * __useAiQuery__
+ *
+ * To run a query within a React component, call `useAiQuery` and pass it any options that fit your needs.
+ * When your component renders, `useAiQuery` returns an object from Apollo Client that contains loading, error, and data properties
+ * you can use to render your UI.
+ *
+ * @param baseOptions options that will be passed into the query, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options;
+ *
+ * @example
+ * const { data, loading, error } = useAiQuery({
+ *   variables: {
+ *      id: // value for 'id'
+ *   },
+ * });
+ */
+export function useAiQuery(baseOptions: Apollo.QueryHookOptions<AiQuery, AiQueryVariables>) {
+        const options = {...defaultOptions, ...baseOptions}
+        return Apollo.useQuery<AiQuery, AiQueryVariables>(AiDocument, options);
+      }
+export function useAiLazyQuery(baseOptions?: Apollo.LazyQueryHookOptions<AiQuery, AiQueryVariables>) {
+          const options = {...defaultOptions, ...baseOptions}
+          return Apollo.useLazyQuery<AiQuery, AiQueryVariables>(AiDocument, options);
+        }
+export type AiQueryHookResult = ReturnType<typeof useAiQuery>;
+export type AiLazyQueryHookResult = ReturnType<typeof useAiLazyQuery>;
+export type AiQueryResult = Apollo.QueryResult<AiQuery, AiQueryVariables>;
+export const AddSoftwareDevelopmentDocument = gql`
+    mutation AddSoftwareDevelopment($input: SoftwareDevelopmentInput!) {
+  addSoftwareDevelopment(input: $input) {
+    ...SoftwareDevelopment
+  }
+}
+    ${SoftwareDevelopmentFragmentDoc}`;
+export type AddSoftwareDevelopmentMutationFn = Apollo.MutationFunction<AddSoftwareDevelopmentMutation, AddSoftwareDevelopmentMutationVariables>;
+
+/**
+ * __useAddSoftwareDevelopmentMutation__
+ *
+ * To run a mutation, you first call `useAddSoftwareDevelopmentMutation` within a React component and pass it any options that fit your needs.
+ * When your component renders, `useAddSoftwareDevelopmentMutation` returns a tuple that includes:
+ * - A mutate function that you can call at any time to execute the mutation
+ * - An object with fields that represent the current status of the mutation's execution
+ *
+ * @param baseOptions options that will be passed into the mutation, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options-2;
+ *
+ * @example
+ * const [addSoftwareDevelopmentMutation, { data, loading, error }] = useAddSoftwareDevelopmentMutation({
+ *   variables: {
+ *      input: // value for 'input'
+ *   },
+ * });
+ */
+export function useAddSoftwareDevelopmentMutation(baseOptions?: Apollo.MutationHookOptions<AddSoftwareDevelopmentMutation, AddSoftwareDevelopmentMutationVariables>) {
+        const options = {...defaultOptions, ...baseOptions}
+        return Apollo.useMutation<AddSoftwareDevelopmentMutation, AddSoftwareDevelopmentMutationVariables>(AddSoftwareDevelopmentDocument, options);
+      }
+export type AddSoftwareDevelopmentMutationHookResult = ReturnType<typeof useAddSoftwareDevelopmentMutation>;
+export type AddSoftwareDevelopmentMutationResult = Apollo.MutationResult<AddSoftwareDevelopmentMutation>;
+export type AddSoftwareDevelopmentMutationOptions = Apollo.BaseMutationOptions<AddSoftwareDevelopmentMutation, AddSoftwareDevelopmentMutationVariables>;
+export const SoftwareDevelopmentDocument = gql`
+    query SoftwareDevelopment($id: ID!) {
+  softwareDevelopment(id: $id) {
+    ...SoftwareDevelopment
+  }
+}
+    ${SoftwareDevelopmentFragmentDoc}`;
+
+/**
+ * __useSoftwareDevelopmentQuery__
+ *
+ * To run a query within a React component, call `useSoftwareDevelopmentQuery` and pass it any options that fit your needs.
+ * When your component renders, `useSoftwareDevelopmentQuery` returns an object from Apollo Client that contains loading, error, and data properties
+ * you can use to render your UI.
+ *
+ * @param baseOptions options that will be passed into the query, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options;
+ *
+ * @example
+ * const { data, loading, error } = useSoftwareDevelopmentQuery({
+ *   variables: {
+ *      id: // value for 'id'
+ *   },
+ * });
+ */
+export function useSoftwareDevelopmentQuery(baseOptions: Apollo.QueryHookOptions<SoftwareDevelopmentQuery, SoftwareDevelopmentQueryVariables>) {
+        const options = {...defaultOptions, ...baseOptions}
+        return Apollo.useQuery<SoftwareDevelopmentQuery, SoftwareDevelopmentQueryVariables>(SoftwareDevelopmentDocument, options);
+      }
+export function useSoftwareDevelopmentLazyQuery(baseOptions?: Apollo.LazyQueryHookOptions<SoftwareDevelopmentQuery, SoftwareDevelopmentQueryVariables>) {
+          const options = {...defaultOptions, ...baseOptions}
+          return Apollo.useLazyQuery<SoftwareDevelopmentQuery, SoftwareDevelopmentQueryVariables>(SoftwareDevelopmentDocument, options);
+        }
+export type SoftwareDevelopmentQueryHookResult = ReturnType<typeof useSoftwareDevelopmentQuery>;
+export type SoftwareDevelopmentLazyQueryHookResult = ReturnType<typeof useSoftwareDevelopmentLazyQuery>;
+export type SoftwareDevelopmentQueryResult = Apollo.QueryResult<SoftwareDevelopmentQuery, SoftwareDevelopmentQueryVariables>;
 export type AddBlogPostMutationVariables = Exact<{
   input: BlogPostInput;
 }>;
@@ -564,3 +2496,51 @@ export type BlogPostsQueryVariables = Exact<{ [key: string]: never; }>;
 
 
 export type BlogPostsQuery = { __typename?: 'Query', blogPosts?: Array<{ __typename?: 'BlogPost', id: string, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null } | null> | null };
+
+export type AddItMutationVariables = Exact<{
+  input: ItInput;
+}>;
+
+
+export type AddItMutation = { __typename?: 'Mutation', addIt?: { __typename?: 'It', id: string, softwareDevelopmentId?: string | null } | null };
+
+export type ItQueryVariables = Exact<{
+  id: Scalars['ID'];
+}>;
+
+
+export type ItQuery = { __typename?: 'Query', it?: { __typename?: 'It', id: string, softwareDevelopmentId?: string | null } | null };
+
+export type ItFragment = { __typename?: 'It', id: string, softwareDevelopmentId?: string | null };
+
+export type AddAiMutationVariables = Exact<{
+  input: AiInput;
+}>;
+
+
+export type AddAiMutation = { __typename?: 'Mutation', addAi?: { __typename?: 'Ai', id?: string | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null } | null };
+
+export type AiQueryVariables = Exact<{
+  id: Scalars['ID'];
+}>;
+
+
+export type AiQuery = { __typename?: 'Query', ai?: { __typename?: 'Ai', id?: string | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null } | null };
+
+export type AiFragment = { __typename?: 'Ai', id?: string | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null };
+
+export type AddSoftwareDevelopmentMutationVariables = Exact<{
+  input: SoftwareDevelopmentInput;
+}>;
+
+
+export type AddSoftwareDevelopmentMutation = { __typename?: 'Mutation', addSoftwareDevelopment?: { __typename?: 'SoftwareDevelopment', id?: string | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null } | null };
+
+export type SoftwareDevelopmentQueryVariables = Exact<{
+  id: Scalars['ID'];
+}>;
+
+
+export type SoftwareDevelopmentQuery = { __typename?: 'Query', softwareDevelopment?: { __typename?: 'SoftwareDevelopment', id?: string | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null } | null };
+
+export type SoftwareDevelopmentFragment = { __typename?: 'SoftwareDevelopment', id?: string | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null };

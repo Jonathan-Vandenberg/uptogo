@@ -1,9 +1,9 @@
-import { BlogPostQuery } from "../../types";
+import { BlogPostQuery, ItQuery } from "../../types";
 import BlogHeader from "./BlogHeader";
 import BlogPostMarkup from "./BlogPostMarkup";
 
 interface IProps {
-  data: BlogPostQuery | undefined | null;
+  data: BlogPostQuery | ItQuery | undefined | null;
 }
 
 export default function BlogMain({ data }: IProps) {

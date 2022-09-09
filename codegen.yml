@@ -7,7 +7,26 @@ generates:
       enumValues: true
       mapperTypeSuffix: Model
       mappers:
+        SoftwareDevelopment: "@prisma/client#SoftwareDevelopment"
+        ComputerNetworking: "@prisma/client#ComputerNetworking"
+        CloudComputing: "@prisma/client#CloudComputing"
+        BusinessAnalysis: "@prisma/client#BusinessAnalysis"
+        Telecommunication: "@prisma/client#Telecommunication"
+        GameProgramming: "@prisma/client#GameProgramming"
+        WebDevelopment: "@prisma/client#WebDevelopment"
+        MachineLearing: "@prisma/client#MachineLearing"
+        DataManagement: "@prisma/client#DataManagement"
+        Blockchain: "@prisma/client#Blockchain"
+        Ai: "@prisma/client#Ai"
+
         BlogPost: "@prisma/client#BlogPost"
+        Courses: "@prisma/client#Courses"
+        It: "@prisma/client#It"
+        Trades: "@prisma/client#Trades"
+        Hospitality: "@prisma/client#Hospitality"
+        Health: "@prisma/client#Health"
+        Design: "@prisma/client#Design"
+        Management: "@prisma/client#Management"
         Account: "@prisma/client#Account"
         Session: "@prisma/client#Session"
         User: "@prisma/client#User"

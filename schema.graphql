@@ -2,10 +2,40 @@ type Query {
   blogPosts: [BlogPost]
   blogPost(id: ID!): BlogPost
   blogCard: [BlogPost]
+  softwareDevelopment(id: ID!): SoftwareDevelopment
+  computerNetworking(id: ID!): ComputerNetworking
+  cloudComputing(id: ID!): CloudComputing
+  businessAnalysis(id: ID!): BusinessAnalysis
+  telecommunication(id: ID!): Telecommunication
+  gameProgramming(id: ID!): GameProgramming
+  webDevelopment(id: ID!): WebDevelopment
+  machineLearing(id: ID!): MachineLearing
+  dataManagement(id: ID!): DataManagement
+  blockchain(id: ID!): Blockchain
+  ai(id: ID!): Ai
+
+  it(id: ID!): It
 }
 
 type Mutation {
   addBlogPost(input: BlogPostInput!): BlogPost
+  addTrades(input: BlogPostInput!): Trades
+  addHospitality(input: BlogPostInput!): Hospitality
+  addHealth(input: BlogPostInput!): Health
+  addDesign(input: BlogPostInput!): Design
+  addIt(input: ItInput!): It
+
+  addSoftwareDevelopment(input: SoftwareDevelopmentInput): SoftwareDevelopment
+  addComputerNetworking(input: ComputerNetworkingInput): ComputerNetworking
+  addCloudComputing(input: CloudComputingInput): CloudComputing
+  addBusinessAnalysis(input: BusinessAnalysisInput): BusinessAnalysis
+  addTelecommunication(input: TelecommunicationInput): Telecommunication
+  addGameProgramming(input: GameProgrammingInput): GameProgramming
+  addWebDevelopment(input: WebDevelopmentInput): WebDevelopment
+  addMachineLearing(input: MachineLearingInput): MachineLearing
+  addDataManagement(input: DataManagementInput): DataManagement
+  addBlockchain(input: BlockchainInput): Blockchain
+  addAi(input: AiInput): Ai
 }
 
 type Account {
@@ -40,6 +70,864 @@ type User {
   image: String
   accounts: [Account]
   sessions: [Session]
+}
+
+type It {
+  id: String!
+  softwareDevelopment: SoftwareDevelopment
+  softwareDevelopmentId: String
+}
+
+input ItInput {
+  id: String!
+}
+
+type SoftwareDevelopment {
+  id: ID
+  title: String
+  subtitle1: String
+  tableContents1: String
+  tableContents2: String
+  tableContents3: String
+  tableContents4: String
+  p1: String
+  p2: String
+  p3: String
+  subtitle2: String
+  p4: String
+  p5: String
+  l1: String
+  l2: String
+  l3: String
+  l4: String
+  l5: String
+  subtitle3: String
+  p6: String
+  p7: String
+  conclusion1: String
+  conclusion2: String
+  conclusion3: String
+  reference1: String
+  reference2: String
+  authorName: String
+  authorAbout: String
+  authorLink: String
+  editedBy: String
+  photoCredit: String
+  mainImage: String
+  publishedDate: String
+}
+input SoftwareDevelopmentInput {
+  id: ID
+  title: String
+  subtitle1: String
+  tableContents1: String
+  tableContents2: String
+  tableContents3: String
+  tableContents4: String
+  p1: String
+  p2: String
+  p3: String
+  subtitle2: String
+  p4: String
+  p5: String
+  l1: String
+  l2: String
+  l3: String
+  l4: String
+  l5: String
+  subtitle3: String
+  p6: String
+  p7: String
+  conclusion1: String
+  conclusion2: String
+  conclusion3: String
+  reference1: String
+  reference2: String
+  authorName: String
+  authorAbout: String
+  authorLink: String
+  editedBy: String
+  photoCredit: String
+  mainImage: String
+  publishedDate: String
+}
+
+type ComputerNetworking {
+  id: ID
+  title: String
+  subtitle1: String
+  tableContents1: String
+  tableContents2: String
+  tableContents3: String
+  tableContents4: String
+  p1: String
+  p2: String
+  p3: String
+  subtitle2: String
+  p4: String
+  p5: String
+  l1: String
+  l2: String
+  l3: String
+  l4: String
+  l5: String
+  subtitle3: String
+  p6: String
+  p7: String
+  conclusion1: String
+  conclusion2: String
+  conclusion3: String
+  reference1: String
+  reference2: String
+  authorName: String
+  authorAbout: String
+  authorLink: String
+  editedBy: String
+  photoCredit: String
+  mainImage: String
+  publishedDate: String
+}
+input ComputerNetworkingInput {
+  id: ID
+  title: String
+  subtitle1: String
+  tableContents1: String
+  tableContents2: String
+  tableContents3: String
+  tableContents4: String
+  p1: String
+  p2: String
+  p3: String
+  subtitle2: String
+  p4: String
+  p5: String
+  l1: String
+  l2: String
+  l3: String
+  l4: String
+  l5: String
+  subtitle3: String
+  p6: String
+  p7: String
+  conclusion1: String
+  conclusion2: String
+  conclusion3: String
+  reference1: String
+  reference2: String
+  authorName: String
+  authorAbout: String
+  authorLink: String
+  editedBy: String
+  photoCredit: String
+  mainImage: String
+  publishedDate: String
+}
+
+type CloudComputing {
+  id: ID
+  title: String
+  subtitle1: String
+  tableContents1: String
+  tableContents2: String
+  tableContents3: String
+  tableContents4: String
+  p1: String
+  p2: String
+  p3: String
+  subtitle2: String
+  p4: String
+  p5: String
+  l1: String
+  l2: String
+  l3: String
+  l4: String
+  l5: String
+  subtitle3: String
+  p6: String
+  p7: String
+  conclusion1: String
+  conclusion2: String
+  conclusion3: String
+  reference1: String
+  reference2: String
+  authorName: String
+  authorAbout: String
+  authorLink: String
+  editedBy: String
+  photoCredit: String
+  mainImage: String
+  publishedDate: String
+}
+input CloudComputingInput {
+  id: ID
+  title: String
+  subtitle1: String
+  tableContents1: String
+  tableContents2: String
+  tableContents3: String
+  tableContents4: String
+  p1: String
+  p2: String
+  p3: String
+  subtitle2: String
+  p4: String
+  p5: String
+  l1: String
+  l2: String
+  l3: String
+  l4: String
+  l5: String
+  subtitle3: String
+  p6: String
+  p7: String
+  conclusion1: String
+  conclusion2: String
+  conclusion3: String
+  reference1: String
+  reference2: String
+  authorName: String
+  authorAbout: String
+  authorLink: String
+  editedBy: String
+  photoCredit: String
+  mainImage: String
+  publishedDate: String
+}
+
+type BusinessAnalysis {
+  id: ID
+  title: String
+  subtitle1: String
+  tableContents1: String
+  tableContents2: String
+  tableContents3: String
+  tableContents4: String
+  p1: String
+  p2: String
+  p3: String
+  subtitle2: String
+  p4: String
+  p5: String
+  l1: String
+  l2: String
+  l3: String
+  l4: String
+  l5: String
+  subtitle3: String
+  p6: String
+  p7: String
+  conclusion1: String
+  conclusion2: String
+  conclusion3: String
+  reference1: String
+  reference2: String
+  authorName: String
+  authorAbout: String
+  authorLink: String
+  editedBy: String
+  photoCredit: String
+  mainImage: String
+  publishedDate: String
+}
+input BusinessAnalysisInput {
+  id: ID
+  title: String
+  subtitle1: String
+  tableContents1: String
+  tableContents2: String
+  tableContents3: String
+  tableContents4: String
+  p1: String
+  p2: String
+  p3: String
+  subtitle2: String
+  p4: String
+  p5: String
+  l1: String
+  l2: String
+  l3: String
+  l4: String
+  l5: String
+  subtitle3: String
+  p6: String
+  p7: String
+  conclusion1: String
+  conclusion2: String
+  conclusion3: String
+  reference1: String
+  reference2: String
+  authorName: String
+  authorAbout: String
+  authorLink: String
+  editedBy: String
+  photoCredit: String
+  mainImage: String
+  publishedDate: String
+}
+
+type Telecommunication {
+  id: ID
+  title: String
+  subtitle1: String
+  tableContents1: String
+  tableContents2: String
+  tableContents3: String
+  tableContents4: String
+  p1: String
+  p2: String
+  p3: String
+  subtitle2: String
+  p4: String
+  p5: String
+  l1: String
+  l2: String
+  l3: String
+  l4: String
+  l5: String
+  subtitle3: String
+  p6: String
+  p7: String
+  conclusion1: String
+  conclusion2: String
+  conclusion3: String
+  reference1: String
+  reference2: String
+  authorName: String
+  authorAbout: String
+  authorLink: String
+  editedBy: String
+  photoCredit: String
+  mainImage: String
+  publishedDate: String
+}
+input TelecommunicationInput {
+  id: ID
+  title: String
+  subtitle1: String
+  tableContents1: String
+  tableContents2: String
+  tableContents3: String
+  tableContents4: String
+  p1: String
+  p2: String
+  p3: String
+  subtitle2: String
+  p4: String
+  p5: String
+  l1: String
+  l2: String
+  l3: String
+  l4: String
+  l5: String
+  subtitle3: String
+  p6: String
+  p7: String
+  conclusion1: String
+  conclusion2: String
+  conclusion3: String
+  reference1: String
+  reference2: String
+  authorName: String
+  authorAbout: String
+  authorLink: String
+  editedBy: String
+  photoCredit: String
+  mainImage: String
+  publishedDate: String
+}
+
+type GameProgramming {
+  id: ID
+  title: String
+  subtitle1: String
+  tableContents1: String
+  tableContents2: String
+  tableContents3: String
+  tableContents4: String
+  p1: String
+  p2: String
+  p3: String
+  subtitle2: String
+  p4: String
+  p5: String
+  l1: String
+  l2: String
+  l3: String
+  l4: String
+  l5: String
+  subtitle3: String
+  p6: String
+  p7: String
+  conclusion1: String
+  conclusion2: String
+  conclusion3: String
+  reference1: String
+  reference2: String
+  authorName: String
+  authorAbout: String
+  authorLink: String
+  editedBy: String
+  photoCredit: String
+  mainImage: String
+  publishedDate: String
+}
+input GameProgrammingInput {
+  id: ID
+  title: String
+  subtitle1: String
+  tableContents1: String
+  tableContents2: String
+  tableContents3: String
+  tableContents4: String
+  p1: String
+  p2: String
+  p3: String
+  subtitle2: String
+  p4: String
+  p5: String
+  l1: String
+  l2: String
+  l3: String
+  l4: String
+  l5: String
+  subtitle3: String
+  p6: String
+  p7: String
+  conclusion1: String
+  conclusion2: String
+  conclusion3: String
+  reference1: String
+  reference2: String
+  authorName: String
+  authorAbout: String
+  authorLink: String
+  editedBy: String
+  photoCredit: String
+  mainImage: String
+  publishedDate: String
+}
+
+type WebDevelopment {
+  id: ID
+  title: String
+  subtitle1: String
+  tableContents1: String
+  tableContents2: String
+  tableContents3: String
+  tableContents4: String
+  p1: String
+  p2: String
+  p3: String
+  subtitle2: String
+  p4: String
+  p5: String
+  l1: String
+  l2: String
+  l3: String
+  l4: String
+  l5: String
+  subtitle3: String
+  p6: String
+  p7: String
+  conclusion1: String
+  conclusion2: String
+  conclusion3: String
+  reference1: String
+  reference2: String
+  authorName: String
+  authorAbout: String
+  authorLink: String
+  editedBy: String
+  photoCredit: String
+  mainImage: String
+  publishedDate: String
+}
+input WebDevelopmentInput {
+  id: ID
+  title: String
+  subtitle1: String
+  tableContents1: String
+  tableContents2: String
+  tableContents3: String
+  tableContents4: String
+  p1: String
+  p2: String
+  p3: String
+  subtitle2: String
+  p4: String
+  p5: String
+  l1: String
+  l2: String
+  l3: String
+  l4: String
+  l5: String
+  subtitle3: String
+  p6: String
+  p7: String
+  conclusion1: String
+  conclusion2: String
+  conclusion3: String
+  reference1: String
+  reference2: String
+  authorName: String
+  authorAbout: String
+  authorLink: String
+  editedBy: String
+  photoCredit: String
+  mainImage: String
+  publishedDate: String
+}
+
+type MachineLearing {
+  id: ID
+  title: String
+  subtitle1: String
+  tableContents1: String
+  tableContents2: String
+  tableContents3: String
+  tableContents4: String
+  p1: String
+  p2: String
+  p3: String
+  subtitle2: String
+  p4: String
+  p5: String
+  l1: String
+  l2: String
+  l3: String
+  l4: String
+  l5: String
+  subtitle3: String
+  p6: String
+  p7: String
+  conclusion1: String
+  conclusion2: String
+  conclusion3: String
+  reference1: String
+  reference2: String
+  authorName: String
+  authorAbout: String
+  authorLink: String
+  editedBy: String
+  photoCredit: String
+  mainImage: String
+  publishedDate: String
+}
+input MachineLearingInput {
+  id: ID
+  title: String
+  subtitle1: String
+  tableContents1: String
+  tableContents2: String
+  tableContents3: String
+  tableContents4: String
+  p1: String
+  p2: String
+  p3: String
+  subtitle2: String
+  p4: String
+  p5: String
+  l1: String
+  l2: String
+  l3: String
+  l4: String
+  l5: String
+  subtitle3: String
+  p6: String
+  p7: String
+  conclusion1: String
+  conclusion2: String
+  conclusion3: String
+  reference1: String
+  reference2: String
+  authorName: String
+  authorAbout: String
+  authorLink: String
+  editedBy: String
+  photoCredit: String
+  mainImage: String
+  publishedDate: String
+}
+
+type DataManagement {
+  id: ID
+  title: String
+  subtitle1: String
+  tableContents1: String
+  tableContents2: String
+  tableContents3: String
+  tableContents4: String
+  p1: String
+  p2: String
+  p3: String
+  subtitle2: String
+  p4: String
+  p5: String
+  l1: String
+  l2: String
+  l3: String
+  l4: String
+  l5: String
+  subtitle3: String
+  p6: String
+  p7: String
+  conclusion1: String
+  conclusion2: String
+  conclusion3: String
+  reference1: String
+  reference2: String
+  authorName: String
+  authorAbout: String
+  authorLink: String
+  editedBy: String
+  photoCredit: String
+  mainImage: String
+  publishedDate: String
+}
+input DataManagementInput {
+  id: ID
+  title: String
+  subtitle1: String
+  tableContents1: String
+  tableContents2: String
+  tableContents3: String
+  tableContents4: String
+  p1: String
+  p2: String
+  p3: String
+  subtitle2: String
+  p4: String
+  p5: String
+  l1: String
+  l2: String
+  l3: String
+  l4: String
+  l5: String
+  subtitle3: String
+  p6: String
+  p7: String
+  conclusion1: String
+  conclusion2: String
+  conclusion3: String
+  reference1: String
+  reference2: String
+  authorName: String
+  authorAbout: String
+  authorLink: String
+  editedBy: String
+  photoCredit: String
+  mainImage: String
+  publishedDate: String
+}
+
+type Blockchain {
+  id: ID
+  title: String
+  subtitle1: String
+  tableContents1: String
+  tableContents2: String
+  tableContents3: String
+  tableContents4: String
+  p1: String
+  p2: String
+  p3: String
+  subtitle2: String
+  p4: String
+  p5: String
+  l1: String
+  l2: String
+  l3: String
+  l4: String
+  l5: String
+  subtitle3: String
+  p6: String
+  p7: String
+  conclusion1: String
+  conclusion2: String
+  conclusion3: String
+  reference1: String
+  reference2: String
+  authorName: String
+  authorAbout: String
+  authorLink: String
+  editedBy: String
+  photoCredit: String
+  mainImage: String
+  publishedDate: String
+}
+input BlockchainInput {
+  id: ID
+  title: String
+  subtitle1: String
+  tableContents1: String
+  tableContents2: String
+  tableContents3: String
+  tableContents4: String
+  p1: String
+  p2: String
+  p3: String
+  subtitle2: String
+  p4: String
+  p5: String
+  l1: String
+  l2: String
+  l3: String
+  l4: String
+  l5: String
+  subtitle3: String
+  p6: String
+  p7: String
+  conclusion1: String
+  conclusion2: String
+  conclusion3: String
+  reference1: String
+  reference2: String
+  authorName: String
+  authorAbout: String
+  authorLink: String
+  editedBy: String
+  photoCredit: String
+  mainImage: String
+  publishedDate: String
+}
+
+type Ai {
+  id: ID
+  title: String
+  subtitle1: String
+  tableContents1: String
+  tableContents2: String
+  tableContents3: String
+  tableContents4: String
+  p1: String
+  p2: String
+  p3: String
+  subtitle2: String
+  p4: String
+  p5: String
+  l1: String
+  l2: String
+  l3: String
+  l4: String
+  l5: String
+  subtitle3: String
+  p6: String
+  p7: String
+  conclusion1: String
+  conclusion2: String
+  conclusion3: String
+  reference1: String
+  reference2: String
+  authorName: String
+  authorAbout: String
+  authorLink: String
+  editedBy: String
+  photoCredit: String
+  mainImage: String
+  publishedDate: String
+}
+input AiInput {
+  id: ID
+  title: String
+  subtitle1: String
+  tableContents1: String
+  tableContents2: String
+  tableContents3: String
+  tableContents4: String
+  p1: String
+  p2: String
+  p3: String
+  subtitle2: String
+  p4: String
+  p5: String
+  l1: String
+  l2: String
+  l3: String
+  l4: String
+  l5: String
+  subtitle3: String
+  p6: String
+  p7: String
+  conclusion1: String
+  conclusion2: String
+  conclusion3: String
+  reference1: String
+  reference2: String
+  authorName: String
+  authorAbout: String
+  authorLink: String
+  editedBy: String
+  photoCredit: String
+  mainImage: String
+  publishedDate: String
+}
+
+type Trades {
+  Automotive: BlogPost
+  Beauty: BlogPost
+  Construction: BlogPost
+  Carpentry: BlogPost
+  Education: BlogPost
+  Fitness: BlogPost
+  Hairdressing: BlogPost
+  Horticulture: BlogPost
+  Sport: BlogPost
+  Yoga: BlogPost
+}
+
+type Hospitality {
+  Baking: BlogPost
+  CommercialCooking: BlogPost
+  HospitalityManagement: BlogPost
+  HotelManagement: BlogPost
+  TravelTourism: BlogPost
+  Events: BlogPost
+}
+
+type Health {
+  AgedCare: BlogPost
+  Nutrition: BlogPost
+  Nursing: BlogPost
+  Veterinary: BlogPost
+  Medicine: BlogPost
+  PublicHealth: BlogPost
+  Dental: BlogPost
+  Massage: BlogPost
+  MentalHealth: BlogPost
+}
+
+type Design {
+  FashionDesign: BlogPost
+  Landscape: BlogPost
+  Music: BlogPost
+  Film: BlogPost
+  GraphicDesign: BlogPost
+  InteriorDesign: BlogPost
+  DigitalMedia: BlogPost
+  Acting: BlogPost
+  Animation: BlogPost
+}
+
+type Management {
+  ProjectManagement: BlogPost
+  BusinessManagement: BlogPost
+  HumanResources: BlogPost
+  BankingManagement: BlogPost
+  InternationalBusiness: BlogPost
+  SocialMediaMarketing: BlogPost
+  AgriBusinessManagement: BlogPost
+  SupplyManagement: BlogPost
+  LeadershipManagement: BlogPost
+}
+
+type Courses {
+  It: It
+  Management: Management
+  Design: Design
+  Health: Health
+  Hospitality: Hospitality
+  Trades: Trades
 }
 
 type VerificationToken {

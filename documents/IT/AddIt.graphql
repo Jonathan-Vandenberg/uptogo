@@ -1,0 +1,7 @@
+# import It from './ItFragment.graphql'
+
+mutation AddIt($input: ItInput!) {
+  addIt(input: $input) {
+    ...It
+  }
+}

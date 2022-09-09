@@ -77,31 +77,33 @@ const NavbarBottom: NextPage = () => {
                 Định Hướng
               </div>
             </div>
-            <div className="relative flex flex-col items-center justify-center">
-              <div
-                id="householdLink"
-                key="household"
-                className="cursor-pointer text-lg hover:text-iwanttoColor text-gray-800"
-                onMouseEnter={() => {
-                  setMajorsDropdown(true);
-                  setSMEDropdown(false);
-                  setCorporateDropdown(false);
-                }}
-                onClick={() => {
-                  setMajorsDropdown(!majorsDropdown);
-                  setSMEDropdown(false);
-                  setCorporateDropdown(false);
-                }}
-              >
-                Ngành Học
-              </div>
-              {majorsDropdown && (
+            <Link href={"/courses"}>
+              <div className="relative flex flex-col items-center justify-center">
                 <div
-                  id="diamond2"
-                  className="unhidden4 absolute z-20 h-3 w-3 translate-y-8 rotate-45 bg-gray-100 "
-                />
-              )}
-            </div>
+                  id="householdLink"
+                  key="household"
+                  className="cursor-pointer text-lg hover:text-iwanttoColor text-gray-800"
+                  onMouseEnter={() => {
+                    setMajorsDropdown(true);
+                    setSMEDropdown(false);
+                    setCorporateDropdown(false);
+                  }}
+                  onClick={() => {
+                    setMajorsDropdown(!majorsDropdown);
+                    setSMEDropdown(false);
+                    setCorporateDropdown(false);
+                  }}
+                >
+                  Ngành Học
+                </div>
+                {majorsDropdown && (
+                  <div
+                    id="diamond2"
+                    className="unhidden4 absolute z-20 h-3 w-3 translate-y-8 rotate-45 bg-gray-100 "
+                  />
+                )}
+              </div>
+            </Link>
             <div className="relative flex flex-col items-center justify-center">
               <div
                 id="smeLink"

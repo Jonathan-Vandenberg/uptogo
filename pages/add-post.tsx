@@ -1,5 +1,5 @@
 import Head from "next/head";
-import AddPostForm from "../components/Blog/AddPostForm";
+import AddPostForm from "../components/MainForm";
 
 const NewSchool = () => {
   return (
@@ -9,7 +9,7 @@ const NewSchool = () => {
         <meta name="description" content="" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className="mt-20">
+      <div className="mt-20 bg-red-100 w-2/3 mx-auto">
         <AddPostForm />
       </div>
     </>
