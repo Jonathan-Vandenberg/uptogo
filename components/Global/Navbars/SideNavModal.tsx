@@ -11,6 +11,7 @@ import { FaHeart, FaMobileAlt, FaRegQuestionCircle } from "react-icons/fa";
 import {
   MdOutlineArrowForwardIos,
   MdOutlineArrowBackIos,
+  MdAdminPanelSettings,
 } from "react-icons/md";
 import fullLogo from "../../../public/fullLogo.png";
 import faviconLogo from "../../../public/uptogoFavicon.png";
@@ -18,6 +19,7 @@ import Link from "next/link";
 import { HiOutlineLocationMarker } from "react-icons/hi";
 import { useState } from "react";
 import logoWords from "../../../public/logoWords.png";
+import { GrSettingsOption } from "react-icons/gr";
 
 const style = {
   position: "absolute" as "absolute",
@@ -142,15 +144,6 @@ const SideNavModal: NextPage = () => {
       <Link href={""}>
         <div className="flex cursor-pointer items-center justify-start space-x-2 px-4">
           <div className="text-xl">
-            <FaRegQuestionCircle />
-          </div>
-          <p>Support</p>
-        </div>
-      </Link>
-
-      <Link href={""}>
-        <div className="flex cursor-pointer items-center justify-start space-x-2 px-4">
-          <div className="text-xl">
             <HiOutlineLocationMarker />
           </div>
           <a
@@ -159,6 +152,24 @@ const SideNavModal: NextPage = () => {
             rel="noreferrer"
           >
             <p>Visit Uptogo</p>
+          </a>
+        </div>
+      </Link>
+
+      <Link href={"/add-post"}>
+        <div
+          className="flex cursor-pointer items-center justify-start space-x-2 px-4"
+          onClick={() => handleClose()}
+        >
+          <div className="text-xl">
+            <MdAdminPanelSettings />
+          </div>
+          <a
+            href="https://www.google.com/maps/dir/?api=1&destination=10.814211192365%2C106.7785692215"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <p>Admin</p>
           </a>
         </div>
       </Link>

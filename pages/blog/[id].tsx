@@ -2,10 +2,6 @@ import BlogMain from "../../components/Blog/BlogMain";
 import { BlogPost, useBlogPostQuery } from "../../types";
 import { useRouter } from "next/router";
 
-interface IProps {
-  data: BlogPost | undefined | null;
-}
-
 export default function Blog() {
   const { asPath } = useRouter();
   const id = asPath.slice(6, 30);
@@ -15,5 +11,5 @@ export default function Blog() {
     },
   });
   console.log(id);
-  return <BlogMain data={data} />;
+  return <BlogMain data={data?.blogPost} handleUpdate={() => {}} />;
 }

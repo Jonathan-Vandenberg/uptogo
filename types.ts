@@ -783,6 +783,7 @@ export type Mutation = {
   addTelecommunication?: Maybe<Telecommunication>;
   addTrades?: Maybe<Trades>;
   addWebDevelopment?: Maybe<WebDevelopment>;
+  updateSoftwareDevelopment?: Maybe<SoftwareDevelopment>;
 };
 
 
@@ -868,6 +869,11 @@ export type MutationAddTradesArgs = {
 
 export type MutationAddWebDevelopmentArgs = {
   input?: InputMaybe<WebDevelopmentInput>;
+};
+
+
+export type MutationUpdateSoftwareDevelopmentArgs = {
+  input: SoftwareDevelopmentInput;
 };
 
 export type Query = {
@@ -972,7 +978,7 @@ export type SoftwareDevelopment = {
   conclusion2?: Maybe<Scalars['String']>;
   conclusion3?: Maybe<Scalars['String']>;
   editedBy?: Maybe<Scalars['String']>;
-  id?: Maybe<Scalars['ID']>;
+  id: Scalars['ID'];
   l1?: Maybe<Scalars['String']>;
   l2?: Maybe<Scalars['String']>;
   l3?: Maybe<Scalars['String']>;
@@ -1805,6 +1811,7 @@ export type MutationResolvers<ContextType = GraphQLContext, ParentType extends R
   addTelecommunication?: Resolver<Maybe<ResolversTypes['Telecommunication']>, ParentType, ContextType, Partial<MutationAddTelecommunicationArgs>>;
   addTrades?: Resolver<Maybe<ResolversTypes['Trades']>, ParentType, ContextType, RequireFields<MutationAddTradesArgs, 'input'>>;
   addWebDevelopment?: Resolver<Maybe<ResolversTypes['WebDevelopment']>, ParentType, ContextType, Partial<MutationAddWebDevelopmentArgs>>;
+  updateSoftwareDevelopment?: Resolver<Maybe<ResolversTypes['SoftwareDevelopment']>, ParentType, ContextType, RequireFields<MutationUpdateSoftwareDevelopmentArgs, 'input'>>;
 };
 
 export type QueryResolvers<ContextType = GraphQLContext, ParentType extends ResolversParentTypes['Query'] = ResolversParentTypes['Query']> = {
@@ -1842,7 +1849,7 @@ export type SoftwareDevelopmentResolvers<ContextType = GraphQLContext, ParentTyp
   conclusion2?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   conclusion3?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   editedBy?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
-  id?: Resolver<Maybe<ResolversTypes['ID']>, ParentType, ContextType>;
+  id?: Resolver<ResolversTypes['ID'], ParentType, ContextType>;
   l1?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   l2?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   l3?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
@@ -2470,6 +2477,39 @@ export function useSoftwareDevelopmentLazyQuery(baseOptions?: Apollo.LazyQueryHo
 export type SoftwareDevelopmentQueryHookResult = ReturnType<typeof useSoftwareDevelopmentQuery>;
 export type SoftwareDevelopmentLazyQueryHookResult = ReturnType<typeof useSoftwareDevelopmentLazyQuery>;
 export type SoftwareDevelopmentQueryResult = Apollo.QueryResult<SoftwareDevelopmentQuery, SoftwareDevelopmentQueryVariables>;
+export const UpdateSoftwareDevelopmentDocument = gql`
+    mutation UpdateSoftwareDevelopment($input: SoftwareDevelopmentInput!) {
+  updateSoftwareDevelopment(input: $input) {
+    ...SoftwareDevelopment
+  }
+}
+    ${SoftwareDevelopmentFragmentDoc}`;
+export type UpdateSoftwareDevelopmentMutationFn = Apollo.MutationFunction<UpdateSoftwareDevelopmentMutation, UpdateSoftwareDevelopmentMutationVariables>;
+
+/**
+ * __useUpdateSoftwareDevelopmentMutation__
+ *
+ * To run a mutation, you first call `useUpdateSoftwareDevelopmentMutation` within a React component and pass it any options that fit your needs.
+ * When your component renders, `useUpdateSoftwareDevelopmentMutation` returns a tuple that includes:
+ * - A mutate function that you can call at any time to execute the mutation
+ * - An object with fields that represent the current status of the mutation's execution
+ *
+ * @param baseOptions options that will be passed into the mutation, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options-2;
+ *
+ * @example
+ * const [updateSoftwareDevelopmentMutation, { data, loading, error }] = useUpdateSoftwareDevelopmentMutation({
+ *   variables: {
+ *      input: // value for 'input'
+ *   },
+ * });
+ */
+export function useUpdateSoftwareDevelopmentMutation(baseOptions?: Apollo.MutationHookOptions<UpdateSoftwareDevelopmentMutation, UpdateSoftwareDevelopmentMutationVariables>) {
+        const options = {...defaultOptions, ...baseOptions}
+        return Apollo.useMutation<UpdateSoftwareDevelopmentMutation, UpdateSoftwareDevelopmentMutationVariables>(UpdateSoftwareDevelopmentDocument, options);
+      }
+export type UpdateSoftwareDevelopmentMutationHookResult = ReturnType<typeof useUpdateSoftwareDevelopmentMutation>;
+export type UpdateSoftwareDevelopmentMutationResult = Apollo.MutationResult<UpdateSoftwareDevelopmentMutation>;
+export type UpdateSoftwareDevelopmentMutationOptions = Apollo.BaseMutationOptions<UpdateSoftwareDevelopmentMutation, UpdateSoftwareDevelopmentMutationVariables>;
 export type AddBlogPostMutationVariables = Exact<{
   input: BlogPostInput;
 }>;
@@ -2535,13 +2575,20 @@ export type AddSoftwareDevelopmentMutationVariables = Exact<{
 }>;
 
 
-export type AddSoftwareDevelopmentMutation = { __typename?: 'Mutation', addSoftwareDevelopment?: { __typename?: 'SoftwareDevelopment', id?: string | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null } | null };
+export type AddSoftwareDevelopmentMutation = { __typename?: 'Mutation', addSoftwareDevelopment?: { __typename?: 'SoftwareDevelopment', id: string, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null } | null };
 
 export type SoftwareDevelopmentQueryVariables = Exact<{
   id: Scalars['ID'];
 }>;
 
 
-export type SoftwareDevelopmentQuery = { __typename?: 'Query', softwareDevelopment?: { __typename?: 'SoftwareDevelopment', id?: string | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null } | null };
+export type SoftwareDevelopmentQuery = { __typename?: 'Query', softwareDevelopment?: { __typename?: 'SoftwareDevelopment', id: string, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null } | null };
 
-export type SoftwareDevelopmentFragment = { __typename?: 'SoftwareDevelopment', id?: string | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null };
+export type SoftwareDevelopmentFragment = { __typename?: 'SoftwareDevelopment', id: string, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null };
+
+export type UpdateSoftwareDevelopmentMutationVariables = Exact<{
+  input: SoftwareDevelopmentInput;
+}>;
+
+
+export type UpdateSoftwareDevelopmentMutation = { __typename?: 'Mutation', updateSoftwareDevelopment?: { __typename?: 'SoftwareDevelopment', id: string, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null } | null };

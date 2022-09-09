@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 import Collapsible from "react-collapsible";
 import { FaAngleRight } from "react-icons/fa";
@@ -135,9 +136,11 @@ export const CoursesIT = ({ handleStepper }: IStepper) => {
       }
     >
       <div className="divide-y divide-gray-300">
-        <p className="pl-12 cursor-pointer p-4  hover:bg-lightBlue">
-          Phát triển phần mền
-        </p>
+        <Link href={"/courses/information-technology/software-development"}>
+          <p className="pl-12 cursor-pointer p-4  hover:bg-lightBlue">
+            Phát triển phần mền
+          </p>
+        </Link>
         <p className="cursor-pointer p-4 pl-12 hover:bg-lightBlue">
           Mạng máy tính
         </p>
@@ -172,6 +175,19 @@ export const CoursesIT = ({ handleStepper }: IStepper) => {
     </Collapsible>
   );
 };
+
+// Công nghệ thông tin – Information Technology
+// •	Phát triển phần mền – Software Development
+// •	Mạng máy tính – Compute Networking
+// •	Điện toán đám mây – Cloud Computing
+// •	Phân tích kinh doanh – Business Analysis
+// •	Viễn thông – Telecommunication
+// •	Lập trình trò chơi - Game Programming
+// •	Phát triển Website – Website Development
+// •	Phương tiện máy móc – Machine Learing
+// •	Quản lý dữ liệu – Data Management
+// •	Công nghệ tiền ảo – Blockchain Technology
+// •	Trí tuệ nhân tạo - Artificial Intelligence (AI)
 
 export const CoursesHealth = ({ handleStepper }: IStepper) => {
   return (

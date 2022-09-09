@@ -36,6 +36,10 @@ type Mutation {
   addDataManagement(input: DataManagementInput): DataManagement
   addBlockchain(input: BlockchainInput): Blockchain
   addAi(input: AiInput): Ai
+
+  updateSoftwareDevelopment(
+    input: SoftwareDevelopmentInput!
+  ): SoftwareDevelopment
 }
 
 type Account {
@@ -83,7 +87,7 @@ input ItInput {
 }
 
 type SoftwareDevelopment {
-  id: ID
+  id: ID!
   title: String
   subtitle1: String
   tableContents1: String

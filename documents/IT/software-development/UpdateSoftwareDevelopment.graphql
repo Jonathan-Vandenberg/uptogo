@@ -1,0 +1,7 @@
+# import SoftwareDevelopment from './SoftwareDevelopmentFragment.graphql'
+
+mutation UpdateSoftwareDevelopment($input: SoftwareDevelopmentInput!) {
+  updateSoftwareDevelopment(input: $input) {
+    ...SoftwareDevelopment
+  }
+}

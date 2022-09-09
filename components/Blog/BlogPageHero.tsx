@@ -1,10 +1,14 @@
 import Link from "next/link";
 import Image from "next/image";
 import image from "../../public/navDropdownImages/asianMale.jpg";
-import { BlogPost } from "../../types";
+import {
+  BlogPost,
+  SoftwareDevelopment,
+  SoftwareDevelopmentQuery,
+} from "../../types";
 
 interface IProps {
-  data: BlogPost | undefined | null;
+  data: BlogPost | SoftwareDevelopment | undefined | null;
 }
 
 export default function App({ data }: IProps) {

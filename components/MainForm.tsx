@@ -1,137 +1,222 @@
 import { useState } from "react";
-import { useAddBlogPostMutation } from "../types";
+import {
+  SoftwareDevelopment,
+  useAddBlogPostMutation,
+  useSoftwareDevelopmentQuery,
+  useUpdateSoftwareDevelopmentMutation,
+} from "../types";
 import { useAddSoftwareDevelopmentMutation } from "../types";
 import { useAddAiMutation } from "../types";
+import Select from "react-select";
 
-const AddClientForm = () => {
+const options = [
+  { value: "chocolate", label: "Chocolate" },
+  { value: "strawberry", label: "Strawberry" },
+  { value: "vanilla", label: "Vanilla" },
+];
+
+interface IProps {
+  details: SoftwareDevelopment | undefined | null;
+}
+
+const AddClientForm = ({ details }: IProps) => {
+  const Dtitle = details?.title;
+  const Dsubtitle1 = details?.subtitle1;
+  const Dsubtitle2 = details?.subtitle2;
+  const Dsubtitle3 = details?.subtitle3;
+  const DtableContents1 = details?.tableContents1;
+  const DtableContents2 = details?.tableContents2;
+  const DtableContents3 = details?.tableContents3;
+  const DtableContents4 = details?.tableContents4;
+  const Dp1 = details?.p1;
+  const Dp2 = details?.p2;
+  const Dp3 = details?.p3;
+  const Dp4 = details?.p4;
+  const Dp5 = details?.p5;
+  const Dl1 = details?.l1;
+  const Dl2 = details?.l2;
+  const Dl3 = details?.l3;
+  const Dl4 = details?.l4;
+  const Dl5 = details?.l5;
+  const Dp6 = details?.p6;
+  const Dp7 = details?.p7;
+  const Dconclusion1 = details?.conclusion1;
+  const Dconclusion2 = details?.conclusion2;
+  const Dconclusion3 = details?.conclusion3;
+  const Dreference1 = details?.reference1;
+  const Dreference2 = details?.reference2;
+  const DauthorName = details?.authorName;
+  const DauthorAbout = details?.authorAbout;
+  const DauthorLink = details?.authorLink;
+  const DeditedBy = details?.editedBy;
+  const DpublishedDate = details?.publishedDate;
+  const DmainImage = details?.mainImage;
+  const DphotoCredit = details?.photoCredit;
+
   const [major, setMajor] = useState("");
-  const [title, setTitle] = useState("");
-  const [subtitle1, setSubtitle1] = useState("");
-  const [subtitle2, setSubtitle2] = useState("");
-  const [subtitle3, setSubtitle3] = useState("");
+  const [title, setTitle] = useState(Dtitle);
+  const [subtitle1, setSubtitle1] = useState(Dsubtitle1);
+  const [subtitle2, setSubtitle2] = useState(Dsubtitle2);
+  const [subtitle3, setSubtitle3] = useState(Dsubtitle3);
+  const [tableContents1, setTableContents1] = useState(DtableContents1);
+  const [tableContents2, setTableContents2] = useState(DtableContents2);
+  const [tableContents3, setTableContents3] = useState(DtableContents3);
+  const [tableContents4, setTableContents4] = useState(DtableContents4);
+  const [p1, setP1] = useState(Dp1);
+  const [p2, setP2] = useState(Dp2);
+  const [p3, setP3] = useState(Dp3);
+  const [p4, setP4] = useState(Dp4);
+  const [p5, setP5] = useState(Dp5);
+  const [l1, setL1] = useState(Dl1);
+  const [l2, setL2] = useState(Dl2);
+  const [l3, setL3] = useState(Dl3);
+  const [l4, setL4] = useState(Dl4);
+  const [l5, setL5] = useState(Dl5);
+  const [p6, setP6] = useState(Dp6);
+  const [p7, setP7] = useState(Dp7);
+  const [conclusion1, setConclusion1] = useState(Dconclusion1);
+  const [conclusion2, setConclusion2] = useState(Dconclusion2);
+  const [conclusion3, setConclusion3] = useState(Dconclusion3);
+  const [reference1, setReference1] = useState(Dreference1);
+  const [reference2, setReference2] = useState(Dreference2);
+  const [authorName, setAuthorName] = useState(DauthorName);
+  const [authorAbout, setAuthorAbout] = useState(DauthorAbout);
+  const [authorLink, setAuthorLink] = useState(DauthorLink);
+  const [editedBy, setEditedBy] = useState(DeditedBy);
+  const [publishedDate, setPublishedDate] = useState(DpublishedDate);
+  const [mainImage, setMainImage] = useState(DmainImage);
+  const [photoCredit, setPhotoCredit] = useState(DphotoCredit);
 
-  const [tableContents1, setTableContents1] = useState("");
-  const [tableContents2, setTableContents2] = useState("");
-  const [tableContents3, setTableContents3] = useState("");
-  const [tableContents4, setTableContents4] = useState("");
-
-  const [p1, setP1] = useState("");
-  const [p2, setP2] = useState("");
-  const [p3, setP3] = useState("");
-  const [p4, setP4] = useState("");
-  const [p5, setP5] = useState("");
-  const [l1, setL1] = useState("");
-  const [l2, setL2] = useState("");
-  const [l3, setL3] = useState("");
-  const [l4, setL4] = useState("");
-  const [l5, setL5] = useState("");
-  const [p6, setP6] = useState("");
-  const [p7, setP7] = useState("");
-
-  const [conslusion1, setConclusion1] = useState("");
-  const [conslusion2, setConclusion2] = useState("");
-  const [conslusion3, setConclusion3] = useState("");
-
-  const [reference1, setReference1] = useState("");
-  const [reference2, setReference2] = useState("");
-
-  const [authorName, setAuthorName] = useState("");
-  const [authorAbout, setAuthorAbout] = useState("");
-  const [authorLink, setAuthorLink] = useState("");
-
-  const [editedBy, setEditedBy] = useState("");
-  const [publishedDate, setPublishedDate] = useState("");
-  const [mainImage, setMainImage] = useState("");
-  const [photoCredit, setPhotoCredit] = useState("");
-
-  const [addBlogPostMutation] = useAddBlogPostMutation();
-  const [addAiMutation] = useAddAiMutation();
-  const [addSoftwareDevelopmentMutation] = useAddSoftwareDevelopmentMutation();
+  // const [addBlogPostMutation] = useAddBlogPostMutation();
+  // const [addAiMutation] = useAddAiMutation();
+  // const [addSoftwareDevelopmentMutation] = useAddSoftwareDevelopmentMutation();
+  const [updateSoftwareDevelopment] = useUpdateSoftwareDevelopmentMutation();
 
   const onFinish = (e: { preventDefault: () => void }) => {
-    if (major === "ai") {
-      addAiMutation({
-        variables: {
-          input: {
-            editedBy: editedBy,
-            publishedDate: publishedDate,
-            mainImage: mainImage,
-            photoCredit: photoCredit,
-            title: title,
-            subtitle1: subtitle1,
-            tableContents1: tableContents1,
-            tableContents2: tableContents2,
-            tableContents3: tableContents3,
-            tableContents4: tableContents4,
-            p1: p1,
-            p2: p2,
-            p3: p3,
-            subtitle2: subtitle2,
-            p4: p4,
-            p5: p5,
-            l1: l1,
-            l2: l2,
-            l3: l3,
-            l4: l4,
-            l5: l5,
-            subtitle3: subtitle3,
-            p6: p6,
-            p7: p7,
-            conclusion1: conslusion1,
-            conclusion2: conslusion2,
-            conclusion3: conslusion3,
-            reference1: reference1,
-            reference2: reference2,
-            authorName: authorName,
-            authorAbout: authorAbout,
-            authorLink: authorLink,
-          },
+    updateSoftwareDevelopment({
+      variables: {
+        input: {
+          editedBy: editedBy,
+          publishedDate: publishedDate,
+          mainImage: mainImage,
+          photoCredit: photoCredit,
+          title: title,
+          subtitle1: subtitle1,
+          tableContents1: tableContents1,
+          tableContents2: tableContents2,
+          tableContents3: tableContents3,
+          tableContents4: tableContents4,
+          p1: p1,
+          p2: p2,
+          p3: p3,
+          subtitle2: subtitle2,
+          p4: p4,
+          p5: p5,
+          l1: l1,
+          l2: l2,
+          l3: l3,
+          l4: l4,
+          l5: l5,
+          subtitle3: subtitle3,
+          p6: p6,
+          p7: p7,
+          conclusion1: conclusion1,
+          conclusion2: conclusion2,
+          conclusion3: conclusion3,
+          reference1: reference1,
+          reference2: reference2,
+          authorName: authorName,
+          authorAbout: authorAbout,
+          authorLink: authorLink,
         },
-      });
-    } else if (major === "sd") {
-      addSoftwareDevelopmentMutation({
-        variables: {
-          input: {
-            editedBy: editedBy,
-            publishedDate: publishedDate,
-            mainImage: mainImage,
-            photoCredit: photoCredit,
-            title: title,
-            subtitle1: subtitle1,
-            tableContents1: tableContents1,
-            tableContents2: tableContents2,
-            tableContents3: tableContents3,
-            tableContents4: tableContents4,
-            p1: p1,
-            p2: p2,
-            p3: p3,
-            subtitle2: subtitle2,
-            p4: p4,
-            p5: p5,
-            l1: l1,
-            l2: l2,
-            l3: l3,
-            l4: l4,
-            l5: l5,
-            subtitle3: subtitle3,
-            p6: p6,
-            p7: p7,
-            conclusion1: conslusion1,
-            conclusion2: conslusion2,
-            conclusion3: conslusion3,
-            reference1: reference1,
-            reference2: reference2,
-            authorName: authorName,
-            authorAbout: authorAbout,
-            authorLink: authorLink,
-          },
-        },
-      });
-    }
+      },
+    });
+
+    // if (major === "ai") {
+    //   addAiMutation({
+    //     variables: {
+    //       input: {
+    //         editedBy: editedBy,
+    //         publishedDate: publishedDate,
+    //         mainImage: mainImage,
+    //         photoCredit: photoCredit,
+    //         title: title,
+    //         subtitle1: subtitle1,
+    //         tableContents1: tableContents1,
+    //         tableContents2: tableContents2,
+    //         tableContents3: tableContents3,
+    //         tableContents4: tableContents4,
+    //         p1: p1,
+    //         p2: p2,
+    //         p3: p3,
+    //         subtitle2: subtitle2,
+    //         p4: p4,
+    //         p5: p5,
+    //         l1: l1,
+    //         l2: l2,
+    //         l3: l3,
+    //         l4: l4,
+    //         l5: l5,
+    //         subtitle3: subtitle3,
+    //         p6: p6,
+    //         p7: p7,
+    //         conclusion1: conslusion1,
+    //         conclusion2: conslusion2,
+    //         conclusion3: conslusion3,
+    //         reference1: reference1,
+    //         reference2: reference2,
+    //         authorName: authorName,
+    //         authorAbout: authorAbout,
+    //         authorLink: authorLink,
+    //       },
+    //     },
+    //   });
+    // } else if (major === "sd") {
+    //   addSoftwareDevelopmentMutation({
+    //     variables: {
+    //       input: {
+    //         editedBy: editedBy,
+    //         publishedDate: publishedDate,
+    //         mainImage: mainImage,
+    //         photoCredit: photoCredit,
+    //         title: title,
+    //         subtitle1: subtitle1,
+    //         tableContents1: tableContents1,
+    //         tableContents2: tableContents2,
+    //         tableContents3: tableContents3,
+    //         tableContents4: tableContents4,
+    //         p1: p1,
+    //         p2: p2,
+    //         p3: p3,
+    //         subtitle2: subtitle2,
+    //         p4: p4,
+    //         p5: p5,
+    //         l1: l1,
+    //         l2: l2,
+    //         l3: l3,
+    //         l4: l4,
+    //         l5: l5,
+    //         subtitle3: subtitle3,
+    //         p6: p6,
+    //         p7: p7,
+    //         conclusion1: conslusion1,
+    //         conclusion2: conslusion2,
+    //         conclusion3: conslusion3,
+    //         reference1: reference1,
+    //         reference2: reference2,
+    //         authorName: authorName,
+    //         authorAbout: authorAbout,
+    //         authorLink: authorLink,
+    //       },
+    //     },
+    //   });
+    // }
   };
 
   return (
     <form onSubmit={onFinish} className="space-y-3 py-12">
+      <Select options={options} />
+
       <div className="px-8 flex items-start space-y-3 justify-center flex-col">
         <input
           id="major"
@@ -413,7 +498,7 @@ const AddClientForm = () => {
         <textarea
           rows={4}
           cols={50}
-          value={conslusion1}
+          value={conclusion1}
           placeholder="Conclusion #1"
           onChange={(e) => setConclusion1(e.target.value)}
           className="border-2 border-gray-200 p-3 rounded-xl w-full"
@@ -424,7 +509,7 @@ const AddClientForm = () => {
         <textarea
           rows={4}
           cols={50}
-          value={conslusion2}
+          value={conclusion2}
           placeholder="Conclusion #2"
           onChange={(e) => setConclusion2(e.target.value)}
           className="border-2 border-gray-200 p-3 rounded-xl w-full"
@@ -435,7 +520,7 @@ const AddClientForm = () => {
         <textarea
           rows={4}
           cols={50}
-          value={conslusion3}
+          value={conclusion3}
           placeholder="Conclusion #3"
           onChange={(e) => setConclusion3(e.target.value)}
           className="border-2 border-gray-200 p-3 rounded-xl w-full"
