@@ -20,7 +20,6 @@ generates:
         Ai: "@prisma/client#Ai"
 
         BlogPost: "@prisma/client#BlogPost"
-        Courses: "@prisma/client#Courses"
         It: "@prisma/client#It"
         Trades: "@prisma/client#Trades"
         Hospitality: "@prisma/client#Hospitality"

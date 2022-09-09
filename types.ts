@@ -1,5 +1,5 @@
 import { GraphQLResolveInfo } from 'graphql';
-import { SoftwareDevelopment as SoftwareDevelopmentModel, ComputerNetworking as ComputerNetworkingModel, CloudComputing as CloudComputingModel, BusinessAnalysis as BusinessAnalysisModel, Telecommunication as TelecommunicationModel, GameProgramming as GameProgrammingModel, WebDevelopment as WebDevelopmentModel, MachineLearing as MachineLearingModel, DataManagement as DataManagementModel, Blockchain as BlockchainModel, Ai as AiModel, BlogPost as BlogPostModel, Courses as CoursesModel, It as ItModel, Trades as TradesModel, Hospitality as HospitalityModel, Health as HealthModel, Design as DesignModel, Management as ManagementModel, Account as AccountModel, Session as SessionModel, User as UserModel, VerificationToken as VerificationTokenModel } from '@prisma/client';
+import { SoftwareDevelopment as SoftwareDevelopmentModel, ComputerNetworking as ComputerNetworkingModel, CloudComputing as CloudComputingModel, BusinessAnalysis as BusinessAnalysisModel, Telecommunication as TelecommunicationModel, GameProgramming as GameProgrammingModel, WebDevelopment as WebDevelopmentModel, MachineLearing as MachineLearingModel, DataManagement as DataManagementModel, Blockchain as BlockchainModel, Ai as AiModel, BlogPost as BlogPostModel, It as ItModel, Trades as TradesModel, Hospitality as HospitalityModel, Health as HealthModel, Design as DesignModel, Management as ManagementModel, Account as AccountModel, Session as SessionModel, User as UserModel, VerificationToken as VerificationTokenModel } from '@prisma/client';
 import { GraphQLContext } from './pages/api/index';
 import { gql } from '@apollo/client';
 import * as Apollo from '@apollo/client';
@@ -8,6 +8,7 @@ export type InputMaybe<T> = Maybe<T>;
 export type Exact<T extends { [key: string]: unknown }> = { [K in keyof T]: T[K] };
 export type MakeOptional<T, K extends keyof T> = Omit<T, K> & { [SubKey in K]?: Maybe<T[SubKey]> };
 export type MakeMaybe<T, K extends keyof T> = Omit<T, K> & { [SubKey in K]: Maybe<T[SubKey]> };
+export type Omit<T, K extends keyof T> = Pick<T, Exclude<keyof T, K>>;
 export type RequireFields<T, K extends keyof T> = Omit<T, K> & { [P in K]-?: NonNullable<T[P]> };
 const defaultOptions = {} as const;
 /** All built-in and custom scalars, mapped to their actual values */
@@ -1296,7 +1297,7 @@ export type ResolversTypes = {
   CloudComputingInput: CloudComputingInput;
   ComputerNetworking: ResolverTypeWrapper<ComputerNetworkingModel>;
   ComputerNetworkingInput: ComputerNetworkingInput;
-  Courses: ResolverTypeWrapper<CoursesModel>;
+  Courses: ResolverTypeWrapper<Omit<Courses, 'Design' | 'Health' | 'Hospitality' | 'It' | 'Management' | 'Trades'> & { Design?: Maybe<ResolversTypes['Design']>, Health?: Maybe<ResolversTypes['Health']>, Hospitality?: Maybe<ResolversTypes['Hospitality']>, It?: Maybe<ResolversTypes['It']>, Management?: Maybe<ResolversTypes['Management']>, Trades?: Maybe<ResolversTypes['Trades']> }>;
   DataManagement: ResolverTypeWrapper<DataManagementModel>;
   DataManagementInput: DataManagementInput;
   Design: ResolverTypeWrapper<DesignModel>;
@@ -1341,7 +1342,7 @@ export type ResolversParentTypes = {
   CloudComputingInput: CloudComputingInput;
   ComputerNetworking: ComputerNetworkingModel;
   ComputerNetworkingInput: ComputerNetworkingInput;
-  Courses: CoursesModel;
+  Courses: Omit<Courses, 'Design' | 'Health' | 'Hospitality' | 'It' | 'Management' | 'Trades'> & { Design?: Maybe<ResolversParentTypes['Design']>, Health?: Maybe<ResolversParentTypes['Health']>, Hospitality?: Maybe<ResolversParentTypes['Hospitality']>, It?: Maybe<ResolversParentTypes['It']>, Management?: Maybe<ResolversParentTypes['Management']>, Trades?: Maybe<ResolversParentTypes['Trades']> };
   DataManagement: DataManagementModel;
   DataManagementInput: DataManagementInput;
   Design: DesignModel;

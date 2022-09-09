@@ -208,7 +208,7 @@ const AddClientForm = () => {
           value={title}
           placeholder="Title"
           onChange={(e) => setTitle(e.target.value)}
-          className="border-2 border-gray-200 p-3 rounded-xl w-full w-[500px]"
+          className="border-2 border-gray-200 p-3 rounded-xl w-full"
         />
       </div>
 
@@ -462,9 +462,9 @@ const AddClientForm = () => {
         />
       </div>
 
-      <div className="w-full flex items-center justify-center">
+      <div className="w-full flex items-center justify-center pt-10">
         <button type="submit" className="px-10 h-10 rounded-full bg-white">
-          Add Blogpost
+          Add
         </button>
       </div>
     </form>
