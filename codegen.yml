@@ -21,12 +21,6 @@ generates:
 
         BlogPost: "@prisma/client#BlogPost"
         It: "@prisma/client#It"
-        Trades: "@prisma/client#Trades"
-        Hospitality: "@prisma/client#Hospitality"
-        Health: "@prisma/client#Health"
-        Design: "@prisma/client#Design"
-        Management: "@prisma/client#Management"
-        Account: "@prisma/client#Account"
         Session: "@prisma/client#Session"
         User: "@prisma/client#User"
         VerificationToken: "@prisma/client#VerificationToken"

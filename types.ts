@@ -1,5 +1,5 @@
 import { GraphQLResolveInfo } from 'graphql';
-import { SoftwareDevelopment as SoftwareDevelopmentModel, ComputerNetworking as ComputerNetworkingModel, CloudComputing as CloudComputingModel, BusinessAnalysis as BusinessAnalysisModel, Telecommunication as TelecommunicationModel, GameProgramming as GameProgrammingModel, WebDevelopment as WebDevelopmentModel, MachineLearing as MachineLearingModel, DataManagement as DataManagementModel, Blockchain as BlockchainModel, Ai as AiModel, BlogPost as BlogPostModel, It as ItModel, Trades as TradesModel, Hospitality as HospitalityModel, Health as HealthModel, Design as DesignModel, Management as ManagementModel, Account as AccountModel, Session as SessionModel, User as UserModel, VerificationToken as VerificationTokenModel } from '@prisma/client';
+import { SoftwareDevelopment as SoftwareDevelopmentModel, ComputerNetworking as ComputerNetworkingModel, CloudComputing as CloudComputingModel, BusinessAnalysis as BusinessAnalysisModel, Telecommunication as TelecommunicationModel, GameProgramming as GameProgrammingModel, WebDevelopment as WebDevelopmentModel, MachineLearing as MachineLearingModel, DataManagement as DataManagementModel, Blockchain as BlockchainModel, Ai as AiModel, BlogPost as BlogPostModel, It as ItModel, Session as SessionModel, User as UserModel, VerificationToken as VerificationTokenModel } from '@prisma/client';
 import { GraphQLContext } from './pages/api/index';
 import { gql } from '@apollo/client';
 import * as Apollo from '@apollo/client';
@@ -1283,7 +1283,7 @@ export type DirectiveResolverFn<TResult = {}, TParent = {}, TContext = {}, TArgs
 
 /** Mapping between all available schema types and the resolvers types */
 export type ResolversTypes = {
-  Account: ResolverTypeWrapper<AccountModel>;
+  Account: ResolverTypeWrapper<Omit<Account, 'user'> & { user: ResolversTypes['User'] }>;
   Ai: ResolverTypeWrapper<AiModel>;
   AiInput: AiInput;
   Blockchain: ResolverTypeWrapper<BlockchainModel>;
@@ -1300,17 +1300,17 @@ export type ResolversTypes = {
   Courses: ResolverTypeWrapper<Omit<Courses, 'Design' | 'Health' | 'Hospitality' | 'It' | 'Management' | 'Trades'> & { Design?: Maybe<ResolversTypes['Design']>, Health?: Maybe<ResolversTypes['Health']>, Hospitality?: Maybe<ResolversTypes['Hospitality']>, It?: Maybe<ResolversTypes['It']>, Management?: Maybe<ResolversTypes['Management']>, Trades?: Maybe<ResolversTypes['Trades']> }>;
   DataManagement: ResolverTypeWrapper<DataManagementModel>;
   DataManagementInput: DataManagementInput;
-  Design: ResolverTypeWrapper<DesignModel>;
+  Design: ResolverTypeWrapper<Omit<Design, 'Acting' | 'Animation' | 'DigitalMedia' | 'FashionDesign' | 'Film' | 'GraphicDesign' | 'InteriorDesign' | 'Landscape' | 'Music'> & { Acting?: Maybe<ResolversTypes['BlogPost']>, Animation?: Maybe<ResolversTypes['BlogPost']>, DigitalMedia?: Maybe<ResolversTypes['BlogPost']>, FashionDesign?: Maybe<ResolversTypes['BlogPost']>, Film?: Maybe<ResolversTypes['BlogPost']>, GraphicDesign?: Maybe<ResolversTypes['BlogPost']>, InteriorDesign?: Maybe<ResolversTypes['BlogPost']>, Landscape?: Maybe<ResolversTypes['BlogPost']>, Music?: Maybe<ResolversTypes['BlogPost']> }>;
   GameProgramming: ResolverTypeWrapper<GameProgrammingModel>;
   GameProgrammingInput: GameProgrammingInput;
-  Health: ResolverTypeWrapper<HealthModel>;
-  Hospitality: ResolverTypeWrapper<HospitalityModel>;
+  Health: ResolverTypeWrapper<Omit<Health, 'AgedCare' | 'Dental' | 'Massage' | 'Medicine' | 'MentalHealth' | 'Nursing' | 'Nutrition' | 'PublicHealth' | 'Veterinary'> & { AgedCare?: Maybe<ResolversTypes['BlogPost']>, Dental?: Maybe<ResolversTypes['BlogPost']>, Massage?: Maybe<ResolversTypes['BlogPost']>, Medicine?: Maybe<ResolversTypes['BlogPost']>, MentalHealth?: Maybe<ResolversTypes['BlogPost']>, Nursing?: Maybe<ResolversTypes['BlogPost']>, Nutrition?: Maybe<ResolversTypes['BlogPost']>, PublicHealth?: Maybe<ResolversTypes['BlogPost']>, Veterinary?: Maybe<ResolversTypes['BlogPost']> }>;
+  Hospitality: ResolverTypeWrapper<Omit<Hospitality, 'Baking' | 'CommercialCooking' | 'Events' | 'HospitalityManagement' | 'HotelManagement' | 'TravelTourism'> & { Baking?: Maybe<ResolversTypes['BlogPost']>, CommercialCooking?: Maybe<ResolversTypes['BlogPost']>, Events?: Maybe<ResolversTypes['BlogPost']>, HospitalityManagement?: Maybe<ResolversTypes['BlogPost']>, HotelManagement?: Maybe<ResolversTypes['BlogPost']>, TravelTourism?: Maybe<ResolversTypes['BlogPost']> }>;
   ID: ResolverTypeWrapper<Scalars['ID']>;
   It: ResolverTypeWrapper<ItModel>;
   ItInput: ItInput;
   MachineLearing: ResolverTypeWrapper<MachineLearingModel>;
   MachineLearingInput: MachineLearingInput;
-  Management: ResolverTypeWrapper<ManagementModel>;
+  Management: ResolverTypeWrapper<Omit<Management, 'AgriBusinessManagement' | 'BankingManagement' | 'BusinessManagement' | 'HumanResources' | 'InternationalBusiness' | 'LeadershipManagement' | 'ProjectManagement' | 'SocialMediaMarketing' | 'SupplyManagement'> & { AgriBusinessManagement?: Maybe<ResolversTypes['BlogPost']>, BankingManagement?: Maybe<ResolversTypes['BlogPost']>, BusinessManagement?: Maybe<ResolversTypes['BlogPost']>, HumanResources?: Maybe<ResolversTypes['BlogPost']>, InternationalBusiness?: Maybe<ResolversTypes['BlogPost']>, LeadershipManagement?: Maybe<ResolversTypes['BlogPost']>, ProjectManagement?: Maybe<ResolversTypes['BlogPost']>, SocialMediaMarketing?: Maybe<ResolversTypes['BlogPost']>, SupplyManagement?: Maybe<ResolversTypes['BlogPost']> }>;
   Mutation: ResolverTypeWrapper<{}>;
   Query: ResolverTypeWrapper<{}>;
   Session: ResolverTypeWrapper<SessionModel>;
@@ -1319,7 +1319,7 @@ export type ResolversTypes = {
   String: ResolverTypeWrapper<Scalars['String']>;
   Telecommunication: ResolverTypeWrapper<TelecommunicationModel>;
   TelecommunicationInput: TelecommunicationInput;
-  Trades: ResolverTypeWrapper<TradesModel>;
+  Trades: ResolverTypeWrapper<Omit<Trades, 'Automotive' | 'Beauty' | 'Carpentry' | 'Construction' | 'Education' | 'Fitness' | 'Hairdressing' | 'Horticulture' | 'Sport' | 'Yoga'> & { Automotive?: Maybe<ResolversTypes['BlogPost']>, Beauty?: Maybe<ResolversTypes['BlogPost']>, Carpentry?: Maybe<ResolversTypes['BlogPost']>, Construction?: Maybe<ResolversTypes['BlogPost']>, Education?: Maybe<ResolversTypes['BlogPost']>, Fitness?: Maybe<ResolversTypes['BlogPost']>, Hairdressing?: Maybe<ResolversTypes['BlogPost']>, Horticulture?: Maybe<ResolversTypes['BlogPost']>, Sport?: Maybe<ResolversTypes['BlogPost']>, Yoga?: Maybe<ResolversTypes['BlogPost']> }>;
   User: ResolverTypeWrapper<UserModel>;
   VerificationToken: ResolverTypeWrapper<VerificationTokenModel>;
   WebDevelopment: ResolverTypeWrapper<WebDevelopmentModel>;
@@ -1328,7 +1328,7 @@ export type ResolversTypes = {
 
 /** Mapping between all available schema types and the resolvers parents */
 export type ResolversParentTypes = {
-  Account: AccountModel;
+  Account: Omit<Account, 'user'> & { user: ResolversParentTypes['User'] };
   Ai: AiModel;
   AiInput: AiInput;
   Blockchain: BlockchainModel;
@@ -1345,17 +1345,17 @@ export type ResolversParentTypes = {
   Courses: Omit<Courses, 'Design' | 'Health' | 'Hospitality' | 'It' | 'Management' | 'Trades'> & { Design?: Maybe<ResolversParentTypes['Design']>, Health?: Maybe<ResolversParentTypes['Health']>, Hospitality?: Maybe<ResolversParentTypes['Hospitality']>, It?: Maybe<ResolversParentTypes['It']>, Management?: Maybe<ResolversParentTypes['Management']>, Trades?: Maybe<ResolversParentTypes['Trades']> };
   DataManagement: DataManagementModel;
   DataManagementInput: DataManagementInput;
-  Design: DesignModel;
+  Design: Omit<Design, 'Acting' | 'Animation' | 'DigitalMedia' | 'FashionDesign' | 'Film' | 'GraphicDesign' | 'InteriorDesign' | 'Landscape' | 'Music'> & { Acting?: Maybe<ResolversParentTypes['BlogPost']>, Animation?: Maybe<ResolversParentTypes['BlogPost']>, DigitalMedia?: Maybe<ResolversParentTypes['BlogPost']>, FashionDesign?: Maybe<ResolversParentTypes['BlogPost']>, Film?: Maybe<ResolversParentTypes['BlogPost']>, GraphicDesign?: Maybe<ResolversParentTypes['BlogPost']>, InteriorDesign?: Maybe<ResolversParentTypes['BlogPost']>, Landscape?: Maybe<ResolversParentTypes['BlogPost']>, Music?: Maybe<ResolversParentTypes['BlogPost']> };
   GameProgramming: GameProgrammingModel;
   GameProgrammingInput: GameProgrammingInput;
-  Health: HealthModel;
-  Hospitality: HospitalityModel;
+  Health: Omit<Health, 'AgedCare' | 'Dental' | 'Massage' | 'Medicine' | 'MentalHealth' | 'Nursing' | 'Nutrition' | 'PublicHealth' | 'Veterinary'> & { AgedCare?: Maybe<ResolversParentTypes['BlogPost']>, Dental?: Maybe<ResolversParentTypes['BlogPost']>, Massage?: Maybe<ResolversParentTypes['BlogPost']>, Medicine?: Maybe<ResolversParentTypes['BlogPost']>, MentalHealth?: Maybe<ResolversParentTypes['BlogPost']>, Nursing?: Maybe<ResolversParentTypes['BlogPost']>, Nutrition?: Maybe<ResolversParentTypes['BlogPost']>, PublicHealth?: Maybe<ResolversParentTypes['BlogPost']>, Veterinary?: Maybe<ResolversParentTypes['BlogPost']> };
+  Hospitality: Omit<Hospitality, 'Baking' | 'CommercialCooking' | 'Events' | 'HospitalityManagement' | 'HotelManagement' | 'TravelTourism'> & { Baking?: Maybe<ResolversParentTypes['BlogPost']>, CommercialCooking?: Maybe<ResolversParentTypes['BlogPost']>, Events?: Maybe<ResolversParentTypes['BlogPost']>, HospitalityManagement?: Maybe<ResolversParentTypes['BlogPost']>, HotelManagement?: Maybe<ResolversParentTypes['BlogPost']>, TravelTourism?: Maybe<ResolversParentTypes['BlogPost']> };
   ID: Scalars['ID'];
   It: ItModel;
   ItInput: ItInput;
   MachineLearing: MachineLearingModel;
   MachineLearingInput: MachineLearingInput;
-  Management: ManagementModel;
+  Management: Omit<Management, 'AgriBusinessManagement' | 'BankingManagement' | 'BusinessManagement' | 'HumanResources' | 'InternationalBusiness' | 'LeadershipManagement' | 'ProjectManagement' | 'SocialMediaMarketing' | 'SupplyManagement'> & { AgriBusinessManagement?: Maybe<ResolversParentTypes['BlogPost']>, BankingManagement?: Maybe<ResolversParentTypes['BlogPost']>, BusinessManagement?: Maybe<ResolversParentTypes['BlogPost']>, HumanResources?: Maybe<ResolversParentTypes['BlogPost']>, InternationalBusiness?: Maybe<ResolversParentTypes['BlogPost']>, LeadershipManagement?: Maybe<ResolversParentTypes['BlogPost']>, ProjectManagement?: Maybe<ResolversParentTypes['BlogPost']>, SocialMediaMarketing?: Maybe<ResolversParentTypes['BlogPost']>, SupplyManagement?: Maybe<ResolversParentTypes['BlogPost']> };
   Mutation: {};
   Query: {};
   Session: SessionModel;
@@ -1364,7 +1364,7 @@ export type ResolversParentTypes = {
   String: Scalars['String'];
   Telecommunication: TelecommunicationModel;
   TelecommunicationInput: TelecommunicationInput;
-  Trades: TradesModel;
+  Trades: Omit<Trades, 'Automotive' | 'Beauty' | 'Carpentry' | 'Construction' | 'Education' | 'Fitness' | 'Hairdressing' | 'Horticulture' | 'Sport' | 'Yoga'> & { Automotive?: Maybe<ResolversParentTypes['BlogPost']>, Beauty?: Maybe<ResolversParentTypes['BlogPost']>, Carpentry?: Maybe<ResolversParentTypes['BlogPost']>, Construction?: Maybe<ResolversParentTypes['BlogPost']>, Education?: Maybe<ResolversParentTypes['BlogPost']>, Fitness?: Maybe<ResolversParentTypes['BlogPost']>, Hairdressing?: Maybe<ResolversParentTypes['BlogPost']>, Horticulture?: Maybe<ResolversParentTypes['BlogPost']>, Sport?: Maybe<ResolversParentTypes['BlogPost']>, Yoga?: Maybe<ResolversParentTypes['BlogPost']> };
   User: UserModel;
   VerificationToken: VerificationTokenModel;
   WebDevelopment: WebDevelopmentModel;
