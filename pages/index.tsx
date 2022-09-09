@@ -34,6 +34,9 @@ export default function App() {
       id: "6315d649d375ad6ee10f6670",
     },
   });
+
+  const TypedBlogData = data?.blogPost;
+
   return (
     <>
       <div className="md:px-10 p-4 md:py-10 md:p-0 md:mb-6 bg-body">
@@ -41,7 +44,7 @@ export default function App() {
       </div>
       <div className="container mx-auto">
         <HomeMain />
-        <BlogHeader data={data} />
+        <BlogHeader data={TypedBlogData} />
         <div className="py-12 flex items-center justify-center">
           <Popup />
         </div>
