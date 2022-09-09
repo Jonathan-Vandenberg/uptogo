@@ -1,12 +1,8 @@
 import { useState } from "react";
 import {
   SoftwareDevelopment,
-  useAddBlogPostMutation,
-  useSoftwareDevelopmentQuery,
   useUpdateSoftwareDevelopmentMutation,
 } from "../types";
-import { useAddSoftwareDevelopmentMutation } from "../types";
-import { useAddAiMutation } from "../types";
 import Select from "react-select";
 
 const options = [
@@ -53,7 +49,6 @@ const AddClientForm = ({ details }: IProps) => {
   const DmainImage = details?.mainImage;
   const DphotoCredit = details?.photoCredit;
 
-  const [major, setMajor] = useState("");
   const [title, setTitle] = useState(Dtitle);
   const [subtitle1, setSubtitle1] = useState(Dsubtitle1);
   const [subtitle2, setSubtitle2] = useState(Dsubtitle2);
@@ -87,9 +82,6 @@ const AddClientForm = ({ details }: IProps) => {
   const [mainImage, setMainImage] = useState(DmainImage);
   const [photoCredit, setPhotoCredit] = useState(DphotoCredit);
 
-  // const [addBlogPostMutation] = useAddBlogPostMutation();
-  // const [addAiMutation] = useAddAiMutation();
-  // const [addSoftwareDevelopmentMutation] = useAddSoftwareDevelopmentMutation();
   const [updateSoftwareDevelopment] = useUpdateSoftwareDevelopmentMutation();
 
   const onFinish = (e: { preventDefault: () => void }) => {
@@ -131,101 +123,11 @@ const AddClientForm = ({ details }: IProps) => {
         },
       },
     });
-
-    // if (major === "ai") {
-    //   addAiMutation({
-    //     variables: {
-    //       input: {
-    //         editedBy: editedBy,
-    //         publishedDate: publishedDate,
-    //         mainImage: mainImage,
-    //         photoCredit: photoCredit,
-    //         title: title,
-    //         subtitle1: subtitle1,
-    //         tableContents1: tableContents1,
-    //         tableContents2: tableContents2,
-    //         tableContents3: tableContents3,
-    //         tableContents4: tableContents4,
-    //         p1: p1,
-    //         p2: p2,
-    //         p3: p3,
-    //         subtitle2: subtitle2,
-    //         p4: p4,
-    //         p5: p5,
-    //         l1: l1,
-    //         l2: l2,
-    //         l3: l3,
-    //         l4: l4,
-    //         l5: l5,
-    //         subtitle3: subtitle3,
-    //         p6: p6,
-    //         p7: p7,
-    //         conclusion1: conslusion1,
-    //         conclusion2: conslusion2,
-    //         conclusion3: conslusion3,
-    //         reference1: reference1,
-    //         reference2: reference2,
-    //         authorName: authorName,
-    //         authorAbout: authorAbout,
-    //         authorLink: authorLink,
-    //       },
-    //     },
-    //   });
-    // } else if (major === "sd") {
-    //   addSoftwareDevelopmentMutation({
-    //     variables: {
-    //       input: {
-    //         editedBy: editedBy,
-    //         publishedDate: publishedDate,
-    //         mainImage: mainImage,
-    //         photoCredit: photoCredit,
-    //         title: title,
-    //         subtitle1: subtitle1,
-    //         tableContents1: tableContents1,
-    //         tableContents2: tableContents2,
-    //         tableContents3: tableContents3,
-    //         tableContents4: tableContents4,
-    //         p1: p1,
-    //         p2: p2,
-    //         p3: p3,
-    //         subtitle2: subtitle2,
-    //         p4: p4,
-    //         p5: p5,
-    //         l1: l1,
-    //         l2: l2,
-    //         l3: l3,
-    //         l4: l4,
-    //         l5: l5,
-    //         subtitle3: subtitle3,
-    //         p6: p6,
-    //         p7: p7,
-    //         conclusion1: conslusion1,
-    //         conclusion2: conslusion2,
-    //         conclusion3: conslusion3,
-    //         reference1: reference1,
-    //         reference2: reference2,
-    //         authorName: authorName,
-    //         authorAbout: authorAbout,
-    //         authorLink: authorLink,
-    //       },
-    //     },
-    //   });
-    // }
   };
 
   return (
     <form onSubmit={onFinish} className="space-y-3 py-12">
       <Select options={options} />
-
-      <div className="px-8 flex items-start space-y-3 justify-center flex-col">
-        <input
-          id="major"
-          value={major}
-          placeholder="Select Major"
-          onChange={(e) => setMajor(e.target.value)}
-          className="border-2 border-gray-200 p-3 rounded-xl w-full"
-        />
-      </div>
 
       <div className="px-8 flex items-start space-y-3 justify-center flex-col pt-10">
         <input
