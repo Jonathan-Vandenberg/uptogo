@@ -10,7 +10,7 @@ const NewSchool = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className="mt-4 md:mt-20 bg-red-100 w-full md:w-2/3 mx-auto">
-        <AddPostForm />
+        <AddPostForm details={undefined} />
       </div>
     </>
   );
