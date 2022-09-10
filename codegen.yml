@@ -15,7 +15,7 @@ generates:
         Telecommunication: "@prisma/client#Telecommunication"
         GameProgramming: "@prisma/client#GameProgramming"
         WebDevelopment: "@prisma/client#WebDevelopment"
-        MachineLearning: "@prisma/client#MachineLearing"
+        MachineLearning: "@prisma/client#MachineLearning"
         DataManagement: "@prisma/client#DataManagement"
         Blockchain: "@prisma/client#Blockchain"
         Ai: "@prisma/client#Ai"

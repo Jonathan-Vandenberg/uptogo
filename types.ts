@@ -1,5 +1,5 @@
 import { GraphQLResolveInfo } from 'graphql';
-import { CategoriesEnum as CategoriesEnumModel, SoftwareDevelopment as SoftwareDevelopmentModel, ComputerNetworking as ComputerNetworkingModel, CloudComputing as CloudComputingModel, BusinessAnalysis as BusinessAnalysisModel, Telecommunication as TelecommunicationModel, GameProgramming as GameProgrammingModel, WebDevelopment as WebDevelopmentModel, MachineLearing as MachineLearingModel, DataManagement as DataManagementModel, Blockchain as BlockchainModel, Ai as AiModel, BlogPost as BlogPostModel, It as ItModel, Session as SessionModel, User as UserModel, VerificationToken as VerificationTokenModel } from '@prisma/client';
+import { CategoriesEnum as CategoriesEnumModel, SoftwareDevelopment as SoftwareDevelopmentModel, ComputerNetworking as ComputerNetworkingModel, CloudComputing as CloudComputingModel, BusinessAnalysis as BusinessAnalysisModel, Telecommunication as TelecommunicationModel, GameProgramming as GameProgrammingModel, WebDevelopment as WebDevelopmentModel, MachineLearning as MachineLearningModel, DataManagement as DataManagementModel, Blockchain as BlockchainModel, Ai as AiModel, BlogPost as BlogPostModel, It as ItModel, Session as SessionModel, User as UserModel, VerificationToken as VerificationTokenModel } from '@prisma/client';
 import { GraphQLContext } from './pages/api/index';
 import { gql } from '@apollo/client';
 import * as Apollo from '@apollo/client';
@@ -1297,7 +1297,7 @@ export type ResolversTypes = {
   ID: ResolverTypeWrapper<Scalars['ID']>;
   It: ResolverTypeWrapper<ItModel>;
   ItInput: ItInput;
-  MachineLearning: ResolverTypeWrapper<MachineLearingModel>;
+  MachineLearning: ResolverTypeWrapper<MachineLearningModel>;
   MachineLearningInput: MachineLearningInput;
   Mutation: ResolverTypeWrapper<{}>;
   Query: ResolverTypeWrapper<{}>;
@@ -1336,7 +1336,7 @@ export type ResolversParentTypes = {
   ID: Scalars['ID'];
   It: ItModel;
   ItInput: ItInput;
-  MachineLearning: MachineLearingModel;
+  MachineLearning: MachineLearningModel;
   MachineLearningInput: MachineLearningInput;
   Mutation: {};
   Query: {};
