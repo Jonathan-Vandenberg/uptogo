@@ -12,7 +12,7 @@ import CustomerReview from "../components/UI/CustomerReview";
 const customer = [
   {
     name: "jon",
-    review: "Uptogo has helped me achieve my dream of traveling and studying!",
+    review: "Uptogo has helped me achieve my dream of traveling and studying",
     image: "https://picsum.photos/32/32",
   },
   {
