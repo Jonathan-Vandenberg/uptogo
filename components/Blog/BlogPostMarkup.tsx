@@ -1,11 +1,10 @@
 import { AiOutlineCheck } from "react-icons/ai";
 import { BsCheckLg } from "react-icons/bs";
 import { GrAddCircle, GrCheckmark } from "react-icons/gr";
-import type { BlogPost } from "../../types";
+import type { BlogPost, SoftwareDevelopment } from "../../types";
 import CheckIcon from "@mui/icons-material/Check";
 import { MdAddCircleOutline, MdDeleteForever } from "react-icons/md";
 import { FaEdit } from "react-icons/fa";
-import { SoftwareDevelopment } from "@prisma/client";
 
 interface IProps {
   data: BlogPost | SoftwareDevelopment | null | undefined;

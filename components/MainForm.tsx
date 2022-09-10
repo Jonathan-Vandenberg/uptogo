@@ -1,7 +1,9 @@
 import { useEffect, useState } from "react";
-import { useUpdateSoftwareDevelopmentMutation } from "../types";
+import {
+  SoftwareDevelopment,
+  useUpdateSoftwareDevelopmentMutation,
+} from "../types";
 import Select from "react-select";
-import { SoftwareDevelopment } from "@prisma/client";
 
 const options = [
   { value: "BLOG", label: "BLOG" },

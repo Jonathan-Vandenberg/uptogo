@@ -1,5 +1,4 @@
-import { SoftwareDevelopment } from "@prisma/client";
-import { BlogPost, ItQuery } from "../../types";
+import { BlogPost, ItQuery, SoftwareDevelopment } from "../../types";
 import BlogHeader from "./BlogHeader";
 import BlogPostMarkup from "./BlogPostMarkup";
 
