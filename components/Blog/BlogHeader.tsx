@@ -1,7 +1,8 @@
 import Image from "next/image";
-import type { BlogPost, SoftwareDevelopment } from "../../types";
+import type { BlogPost } from "../../types";
 import { Avatar } from "@mui/material";
 import { GrCheckmark } from "react-icons/gr";
+import { SoftwareDevelopment } from "@prisma/client";
 
 interface IProps {
   data: BlogPost | SoftwareDevelopment | null | undefined;

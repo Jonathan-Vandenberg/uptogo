@@ -1,4 +1,4 @@
-fragment BlogPost on BlogPost {
+fragment ComputerNetworking on ComputerNetworking {
   id
   category
   publishedDate

@@ -4,7 +4,7 @@ import type { AppProps } from "next/app";
 import { ApolloProvider } from "@apollo/client";
 import { useClient } from "../lib/client";
 import Navbar from "../components/Global/Navbars/Navbar";
-import SideNavModal from "../components/Global/Navbars/SideNavModal";
+import SideNavModal from "../components/Global/Navbars/MobileNav";
 import Footer from "../components/Global/Footer/Footer";
 import { motion, useAnimationControls } from "framer-motion";
 import Spline from "@splinetool/react-spline";

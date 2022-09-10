@@ -53,6 +53,70 @@ model VerificationToken {
   @@unique([identifier, token])
 }
 
+enum CategoriesEnum {
+  BLOG
+
+  PROJECT_MANAGEMENT
+  BUSINESS_MANAGEMENT
+  HUMAN_RESOURCES
+  BANKING_MANAGEMENT
+  INTERNATIONAL_BUSINESS
+  SOCIALMEDIA_MARKETING
+  AGRIBUSINESS_MANAGEMENT
+  SUPPLYCHAIN_MANAGEMENT
+  LEADERSHIP_MANAGEMENT
+
+  FASHION_DESIGN
+  LANDSCAPE
+  MUSIC_AUDIO
+  FILM_MEDIA
+  GRAPHIC_DESIGN
+  INTERIOR_DESIGN
+  DIGITAL_MEDIA
+  ACTING
+  ANIMATION_3D
+
+  AGED_CARE
+  NUTRITION
+  NURSING
+  VETENARY
+  MEDICINE
+  PUBLIC_HEALTH
+  DENTAL
+  MASSAGE
+  MENTAL_HEALTH
+
+  BAKING
+  COMMERCIAL_COOKING
+  HOPITALITY_MANAGEMENT
+  INTL_HOTEL_MANAGEMENT
+  TRAVEL_TOURISM
+  EVENTS
+
+  AUTOMOTIVE
+  BEAUTY
+  CONSTRUCTION
+  CARPENTRY
+  EDUCATION
+  FITNESS
+  HARIDRESSING
+  HORTICULTURE
+  SPORT
+  YOGA
+
+  SOFTWARE_DEVELOPMENT
+  COMPUTER_NETWORKING
+  CLOUD_COMPUTING
+  BUSINESS_ANALYSIS
+  TELECOMMUNICATION
+  GAME_PROGRAMMING
+  WEB_DEVELOPMENT
+  MACHINE_LEARNING
+  DATA_MANAGEMENT
+  BLOCKCHAIN_TECH
+  AI
+}
+
 model It {
   id String @id @default(auto()) @map("_id") @db.ObjectId
 
@@ -70,8 +134,8 @@ model It {
   gameProgrammingId     String?             @db.ObjectId
   WebDevelopment        WebDevelopment?     @relation(fields: [webDevelopmentId], references: [id])
   webDevelopmentId      String?             @db.ObjectId
-  MachineLearing        MachineLearing?     @relation(fields: [machineLearingId], references: [id])
-  machineLearingId      String?             @db.ObjectId
+  MachineLearning       MachineLearning?    @relation(fields: [machineLearningId], references: [id])
+  machineLearningId     String?             @db.ObjectId
   DataManagement        DataManagement?     @relation(fields: [dataManagementId], references: [id])
   dataManagementId      String?             @db.ObjectId
   Blockchain            Blockchain?         @relation(fields: [blockchainId], references: [id])
@@ -81,7 +145,8 @@ model It {
 }
 
 model SoftwareDevelopment {
-  id             String  @id @default(auto()) @map("_id") @db.ObjectId
+  id             String          @id @default(auto()) @map("_id") @db.ObjectId
+  category       CategoriesEnum?
   title          String?
   subtitle1      String?
   tableContents1 String?
@@ -119,7 +184,8 @@ model SoftwareDevelopment {
 }
 
 model ComputerNetworking {
-  id             String  @id @default(auto()) @map("_id") @db.ObjectId
+  id             String          @id @default(auto()) @map("_id") @db.ObjectId
+  category       CategoriesEnum?
   title          String?
   subtitle1      String?
   tableContents1 String?
@@ -157,7 +223,8 @@ model ComputerNetworking {
 }
 
 model CloudComputing {
-  id             String  @id @default(auto()) @map("_id") @db.ObjectId
+  id             String          @id @default(auto()) @map("_id") @db.ObjectId
+  category       CategoriesEnum?
   title          String?
   subtitle1      String?
   tableContents1 String?
@@ -195,7 +262,8 @@ model CloudComputing {
 }
 
 model BusinessAnalysis {
-  id             String  @id @default(auto()) @map("_id") @db.ObjectId
+  id             String          @id @default(auto()) @map("_id") @db.ObjectId
+  category       CategoriesEnum?
   title          String?
   subtitle1      String?
   tableContents1 String?
@@ -233,7 +301,8 @@ model BusinessAnalysis {
 }
 
 model Telecommunication {
-  id             String  @id @default(auto()) @map("_id") @db.ObjectId
+  id             String          @id @default(auto()) @map("_id") @db.ObjectId
+  category       CategoriesEnum?
   title          String?
   subtitle1      String?
   tableContents1 String?
@@ -271,7 +340,8 @@ model Telecommunication {
 }
 
 model GameProgramming {
-  id             String  @id @default(auto()) @map("_id") @db.ObjectId
+  id             String          @id @default(auto()) @map("_id") @db.ObjectId
+  category       CategoriesEnum?
   title          String?
   subtitle1      String?
   tableContents1 String?
@@ -309,7 +379,8 @@ model GameProgramming {
 }
 
 model WebDevelopment {
-  id             String  @id @default(auto()) @map("_id") @db.ObjectId
+  id             String          @id @default(auto()) @map("_id") @db.ObjectId
+  category       CategoriesEnum?
   title          String?
   subtitle1      String?
   tableContents1 String?
@@ -346,8 +417,9 @@ model WebDevelopment {
   It             It[]
 }
 
-model MachineLearing {
-  id             String  @id @default(auto()) @map("_id") @db.ObjectId
+model MachineLearning {
+  id             String          @id @default(auto()) @map("_id") @db.ObjectId
+  category       CategoriesEnum?
   title          String?
   subtitle1      String?
   tableContents1 String?
@@ -385,7 +457,8 @@ model MachineLearing {
 }
 
 model DataManagement {
-  id             String  @id @default(auto()) @map("_id") @db.ObjectId
+  id             String          @id @default(auto()) @map("_id") @db.ObjectId
+  category       CategoriesEnum?
   title          String?
   subtitle1      String?
   tableContents1 String?
@@ -423,7 +496,8 @@ model DataManagement {
 }
 
 model Blockchain {
-  id             String  @id @default(auto()) @map("_id") @db.ObjectId
+  id             String          @id @default(auto()) @map("_id") @db.ObjectId
+  category       CategoriesEnum?
   title          String?
   subtitle1      String?
   tableContents1 String?
@@ -461,7 +535,8 @@ model Blockchain {
 }
 
 model Ai {
-  id             String  @id @default(auto()) @map("_id") @db.ObjectId
+  id             String          @id @default(auto()) @map("_id") @db.ObjectId
+  category       CategoriesEnum?
   title          String?
   subtitle1      String?
   tableContents1 String?
@@ -499,7 +574,8 @@ model Ai {
 }
 
 model BlogPost {
-  id             String  @id @default(auto()) @map("_id") @db.ObjectId
+  id             String          @id @default(auto()) @map("_id") @db.ObjectId
+  category       CategoriesEnum?
   title          String?
   subtitle1      String?
   tableContents1 String?

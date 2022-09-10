@@ -1,5 +1,6 @@
-fragment SoftwareDevelopment on SoftwareDevelopment {
+fragment Blockchain on Blockchain {
   id
+  category
   publishedDate
   title
   subtitle1

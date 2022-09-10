@@ -2,10 +2,10 @@ import Link from "next/link";
 
 export default function App() {
   return (
-    <div className="space-y-6 md:space-x-6 flex items-center justify-center flex-col md:flex-row p-6">
-      <div className="flex flex-col items-center justify-center space-x-3 border-2 border-orange rounded-lg hover:border-lightBlue p-5">
+    <div className="grid grid-cols-2 md:grid-cols-3 gap-4 p-6 xl:grid-cols-6">
+      <div className="flex flex-col items-center justify-center border-2 border-orange rounded-lg hover:border-lightBlue p-5">
         <p className="flex text-lg text-orange  items-center justify-center p-6">
-          Information-technology
+          IT
         </p>
         <Link href={"/courses/information-technology"} className="">
           <p className="text-xl text-gray-700 text-thin md:pt-2 border-b-8 border-orange">
@@ -13,7 +13,7 @@ export default function App() {
           </p>
         </Link>
       </div>
-      <div className="flex flex-col items-center justify-center space-x-3 border-2 border-orange rounded-lg hover:border-lightBlue p-5">
+      <div className="flex flex-col items-center justify-center border-2 border-orange rounded-lg hover:border-lightBlue p-5">
         <p className="flex text-lg text-orange  items-center justify-center p-6">
           Managament
         </p>
@@ -23,7 +23,7 @@ export default function App() {
           </p>
         </Link>
       </div>
-      <div className="flex flex-col items-center justify-center space-x-3 border-2 border-orange rounded-lg hover:border-lightBlue p-5">
+      <div className="flex flex-col items-center justify-center border-2 border-orange rounded-lg hover:border-lightBlue p-5">
         <p className="flex text-lg text-orange  items-center justify-center p-6">
           Design
         </p>
@@ -33,7 +33,7 @@ export default function App() {
           </p>
         </Link>
       </div>
-      <div className="flex flex-col items-center justify-center space-x-3 border-2 border-orange rounded-lg hover:border-lightBlue p-5">
+      <div className="flex flex-col items-center justify-center border-2 border-orange rounded-lg hover:border-lightBlue p-5">
         <p className="flex text-lg text-orange  items-center justify-center p-6">
           Health
         </p>
@@ -43,7 +43,7 @@ export default function App() {
           </p>
         </Link>
       </div>
-      <div className="flex flex-col items-center justify-center space-x-3 border-2 border-orange rounded-lg hover:border-lightBlue p-5">
+      <div className="flex flex-col items-center justify-center border-2 border-orange rounded-lg hover:border-lightBlue p-5">
         <p className="flex text-lg text-orange  items-center justify-center p-6">
           Hospitality
         </p>
@@ -53,7 +53,7 @@ export default function App() {
           </p>
         </Link>
       </div>
-      <div className="flex flex-col items-center justify-center space-x-3 border-2 border-orange rounded-lg hover:border-lightBlue p-5">
+      <div className="flex flex-col items-center justify-center border-2 border-orange rounded-lg hover:border-lightBlue p-5">
         <p className="flex text-lg text-orange  items-center justify-center p-6">
           Trades
         </p>

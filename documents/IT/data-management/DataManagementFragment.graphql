@@ -1,5 +1,6 @@
-fragment SoftwareDevelopment on SoftwareDevelopment {
+fragment DataManagement on DataManagement {
   id
+  category
   publishedDate
   title
   subtitle1

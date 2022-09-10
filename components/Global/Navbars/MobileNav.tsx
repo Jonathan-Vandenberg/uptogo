@@ -164,13 +164,7 @@ const SideNavModal: NextPage = () => {
           <div className="text-xl">
             <MdAdminPanelSettings />
           </div>
-          <a
-            href="https://www.google.com/maps/dir/?api=1&destination=10.814211192365%2C106.7785692215"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <p>Admin</p>
-          </a>
+          <p>Admin</p>
         </div>
       </Link>
     </div>

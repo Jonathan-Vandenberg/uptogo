@@ -1,5 +1,6 @@
-fragment SoftwareDevelopment on SoftwareDevelopment {
+fragment MachineLearning on MachineLearning {
   id
+  category
   publishedDate
   title
   subtitle1

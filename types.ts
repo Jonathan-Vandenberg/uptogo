@@ -1,5 +1,5 @@
 import { GraphQLResolveInfo } from 'graphql';
-import { SoftwareDevelopment as SoftwareDevelopmentModel, ComputerNetworking as ComputerNetworkingModel, CloudComputing as CloudComputingModel, BusinessAnalysis as BusinessAnalysisModel, Telecommunication as TelecommunicationModel, GameProgramming as GameProgrammingModel, WebDevelopment as WebDevelopmentModel, MachineLearing as MachineLearingModel, DataManagement as DataManagementModel, Blockchain as BlockchainModel, Ai as AiModel, BlogPost as BlogPostModel, It as ItModel, Session as SessionModel, User as UserModel, VerificationToken as VerificationTokenModel } from '@prisma/client';
+import { CategoriesEnum as CategoriesEnumModel, SoftwareDevelopment as SoftwareDevelopmentModel, ComputerNetworking as ComputerNetworkingModel, CloudComputing as CloudComputingModel, BusinessAnalysis as BusinessAnalysisModel, Telecommunication as TelecommunicationModel, GameProgramming as GameProgrammingModel, WebDevelopment as WebDevelopmentModel, MachineLearing as MachineLearingModel, DataManagement as DataManagementModel, Blockchain as BlockchainModel, Ai as AiModel, BlogPost as BlogPostModel, It as ItModel, Session as SessionModel, User as UserModel, VerificationToken as VerificationTokenModel } from '@prisma/client';
 import { GraphQLContext } from './pages/api/index';
 import { gql } from '@apollo/client';
 import * as Apollo from '@apollo/client';
@@ -9,6 +9,7 @@ export type Exact<T extends { [key: string]: unknown }> = { [K in keyof T]: T[K]
 export type MakeOptional<T, K extends keyof T> = Omit<T, K> & { [SubKey in K]?: Maybe<T[SubKey]> };
 export type MakeMaybe<T, K extends keyof T> = Omit<T, K> & { [SubKey in K]: Maybe<T[SubKey]> };
 export type Omit<T, K extends keyof T> = Pick<T, Exclude<keyof T, K>>;
+export type EnumResolverSignature<T, AllowedValues = any> = { [key in keyof T]?: AllowedValues };
 export type RequireFields<T, K extends keyof T> = Omit<T, K> & { [P in K]-?: NonNullable<T[P]> };
 const defaultOptions = {} as const;
 /** All built-in and custom scalars, mapped to their actual values */
@@ -42,6 +43,7 @@ export type Ai = {
   authorAbout?: Maybe<Scalars['String']>;
   authorLink?: Maybe<Scalars['String']>;
   authorName?: Maybe<Scalars['String']>;
+  category?: Maybe<CategoriesEnum>;
   conclusion1?: Maybe<Scalars['String']>;
   conclusion2?: Maybe<Scalars['String']>;
   conclusion3?: Maybe<Scalars['String']>;
@@ -78,6 +80,7 @@ export type AiInput = {
   authorAbout?: InputMaybe<Scalars['String']>;
   authorLink?: InputMaybe<Scalars['String']>;
   authorName?: InputMaybe<Scalars['String']>;
+  category?: InputMaybe<CategoriesEnum>;
   conclusion1?: InputMaybe<Scalars['String']>;
   conclusion2?: InputMaybe<Scalars['String']>;
   conclusion3?: InputMaybe<Scalars['String']>;
@@ -115,6 +118,7 @@ export type Blockchain = {
   authorAbout?: Maybe<Scalars['String']>;
   authorLink?: Maybe<Scalars['String']>;
   authorName?: Maybe<Scalars['String']>;
+  category?: Maybe<CategoriesEnum>;
   conclusion1?: Maybe<Scalars['String']>;
   conclusion2?: Maybe<Scalars['String']>;
   conclusion3?: Maybe<Scalars['String']>;
@@ -151,6 +155,7 @@ export type BlockchainInput = {
   authorAbout?: InputMaybe<Scalars['String']>;
   authorLink?: InputMaybe<Scalars['String']>;
   authorName?: InputMaybe<Scalars['String']>;
+  category?: InputMaybe<CategoriesEnum>;
   conclusion1?: InputMaybe<Scalars['String']>;
   conclusion2?: InputMaybe<Scalars['String']>;
   conclusion3?: InputMaybe<Scalars['String']>;
@@ -188,6 +193,7 @@ export type BlogPost = {
   authorAbout?: Maybe<Scalars['String']>;
   authorLink?: Maybe<Scalars['String']>;
   authorName?: Maybe<Scalars['String']>;
+  category?: Maybe<CategoriesEnum>;
   conclusion1?: Maybe<Scalars['String']>;
   conclusion2?: Maybe<Scalars['String']>;
   conclusion3?: Maybe<Scalars['String']>;
@@ -224,6 +230,7 @@ export type BlogPostInput = {
   authorAbout?: InputMaybe<Scalars['String']>;
   authorLink?: InputMaybe<Scalars['String']>;
   authorName?: InputMaybe<Scalars['String']>;
+  category?: InputMaybe<CategoriesEnum>;
   conclusion1?: InputMaybe<Scalars['String']>;
   conclusion2?: InputMaybe<Scalars['String']>;
   conclusion3?: InputMaybe<Scalars['String']>;
@@ -261,6 +268,7 @@ export type BusinessAnalysis = {
   authorAbout?: Maybe<Scalars['String']>;
   authorLink?: Maybe<Scalars['String']>;
   authorName?: Maybe<Scalars['String']>;
+  category?: Maybe<CategoriesEnum>;
   conclusion1?: Maybe<Scalars['String']>;
   conclusion2?: Maybe<Scalars['String']>;
   conclusion3?: Maybe<Scalars['String']>;
@@ -297,6 +305,7 @@ export type BusinessAnalysisInput = {
   authorAbout?: InputMaybe<Scalars['String']>;
   authorLink?: InputMaybe<Scalars['String']>;
   authorName?: InputMaybe<Scalars['String']>;
+  category?: InputMaybe<CategoriesEnum>;
   conclusion1?: InputMaybe<Scalars['String']>;
   conclusion2?: InputMaybe<Scalars['String']>;
   conclusion3?: InputMaybe<Scalars['String']>;
@@ -329,11 +338,70 @@ export type BusinessAnalysisInput = {
   title?: InputMaybe<Scalars['String']>;
 };
 
+export enum CategoriesEnum {
+  Acting = 'ACTING',
+  AgedCare = 'AGED_CARE',
+  AgribusinessManagement = 'AGRIBUSINESS_MANAGEMENT',
+  Ai = 'AI',
+  Animation_3D = 'ANIMATION_3D',
+  Automotive = 'AUTOMOTIVE',
+  Baking = 'BAKING',
+  BankingManagement = 'BANKING_MANAGEMENT',
+  Beauty = 'BEAUTY',
+  BlockchainTech = 'BLOCKCHAIN_TECH',
+  Blog = 'BLOG',
+  BusinessAnalysis = 'BUSINESS_ANALYSIS',
+  BusinessManagement = 'BUSINESS_MANAGEMENT',
+  Carpentry = 'CARPENTRY',
+  CloudComputing = 'CLOUD_COMPUTING',
+  CommercialCooking = 'COMMERCIAL_COOKING',
+  ComputerNetworking = 'COMPUTER_NETWORKING',
+  Construction = 'CONSTRUCTION',
+  DataManagement = 'DATA_MANAGEMENT',
+  Dental = 'DENTAL',
+  DigitalMedia = 'DIGITAL_MEDIA',
+  Education = 'EDUCATION',
+  Events = 'EVENTS',
+  FashionDesign = 'FASHION_DESIGN',
+  FilmMedia = 'FILM_MEDIA',
+  Fitness = 'FITNESS',
+  GameProgramming = 'GAME_PROGRAMMING',
+  GraphicDesign = 'GRAPHIC_DESIGN',
+  Haridressing = 'HARIDRESSING',
+  HopitalityManagement = 'HOPITALITY_MANAGEMENT',
+  Horticulture = 'HORTICULTURE',
+  HumanResources = 'HUMAN_RESOURCES',
+  InteriorDesign = 'INTERIOR_DESIGN',
+  InternationalBusiness = 'INTERNATIONAL_BUSINESS',
+  IntlHotelManagement = 'INTL_HOTEL_MANAGEMENT',
+  Landscape = 'LANDSCAPE',
+  LeadershipManagement = 'LEADERSHIP_MANAGEMENT',
+  MachineLearning = 'MACHINE_LEARNING',
+  Massage = 'MASSAGE',
+  Medicine = 'MEDICINE',
+  MentalHealth = 'MENTAL_HEALTH',
+  MusicAudio = 'MUSIC_AUDIO',
+  Nursing = 'NURSING',
+  Nutrition = 'NUTRITION',
+  ProjectManagement = 'PROJECT_MANAGEMENT',
+  PublicHealth = 'PUBLIC_HEALTH',
+  SocialmediaMarketing = 'SOCIALMEDIA_MARKETING',
+  SoftwareDevelopment = 'SOFTWARE_DEVELOPMENT',
+  Sport = 'SPORT',
+  SupplychainManagement = 'SUPPLYCHAIN_MANAGEMENT',
+  Telecommunication = 'TELECOMMUNICATION',
+  TravelTourism = 'TRAVEL_TOURISM',
+  Vetenary = 'VETENARY',
+  WebDevelopment = 'WEB_DEVELOPMENT',
+  Yoga = 'YOGA'
+}
+
 export type CloudComputing = {
   __typename?: 'CloudComputing';
   authorAbout?: Maybe<Scalars['String']>;
   authorLink?: Maybe<Scalars['String']>;
   authorName?: Maybe<Scalars['String']>;
+  category?: Maybe<CategoriesEnum>;
   conclusion1?: Maybe<Scalars['String']>;
   conclusion2?: Maybe<Scalars['String']>;
   conclusion3?: Maybe<Scalars['String']>;
@@ -370,6 +438,7 @@ export type CloudComputingInput = {
   authorAbout?: InputMaybe<Scalars['String']>;
   authorLink?: InputMaybe<Scalars['String']>;
   authorName?: InputMaybe<Scalars['String']>;
+  category?: InputMaybe<CategoriesEnum>;
   conclusion1?: InputMaybe<Scalars['String']>;
   conclusion2?: InputMaybe<Scalars['String']>;
   conclusion3?: InputMaybe<Scalars['String']>;
@@ -407,6 +476,7 @@ export type ComputerNetworking = {
   authorAbout?: Maybe<Scalars['String']>;
   authorLink?: Maybe<Scalars['String']>;
   authorName?: Maybe<Scalars['String']>;
+  category?: Maybe<CategoriesEnum>;
   conclusion1?: Maybe<Scalars['String']>;
   conclusion2?: Maybe<Scalars['String']>;
   conclusion3?: Maybe<Scalars['String']>;
@@ -443,6 +513,7 @@ export type ComputerNetworkingInput = {
   authorAbout?: InputMaybe<Scalars['String']>;
   authorLink?: InputMaybe<Scalars['String']>;
   authorName?: InputMaybe<Scalars['String']>;
+  category?: InputMaybe<CategoriesEnum>;
   conclusion1?: InputMaybe<Scalars['String']>;
   conclusion2?: InputMaybe<Scalars['String']>;
   conclusion3?: InputMaybe<Scalars['String']>;
@@ -475,21 +546,12 @@ export type ComputerNetworkingInput = {
   title?: InputMaybe<Scalars['String']>;
 };
 
-export type Courses = {
-  __typename?: 'Courses';
-  Design?: Maybe<Design>;
-  Health?: Maybe<Health>;
-  Hospitality?: Maybe<Hospitality>;
-  It?: Maybe<It>;
-  Management?: Maybe<Management>;
-  Trades?: Maybe<Trades>;
-};
-
 export type DataManagement = {
   __typename?: 'DataManagement';
   authorAbout?: Maybe<Scalars['String']>;
   authorLink?: Maybe<Scalars['String']>;
   authorName?: Maybe<Scalars['String']>;
+  category?: Maybe<CategoriesEnum>;
   conclusion1?: Maybe<Scalars['String']>;
   conclusion2?: Maybe<Scalars['String']>;
   conclusion3?: Maybe<Scalars['String']>;
@@ -526,6 +588,7 @@ export type DataManagementInput = {
   authorAbout?: InputMaybe<Scalars['String']>;
   authorLink?: InputMaybe<Scalars['String']>;
   authorName?: InputMaybe<Scalars['String']>;
+  category?: InputMaybe<CategoriesEnum>;
   conclusion1?: InputMaybe<Scalars['String']>;
   conclusion2?: InputMaybe<Scalars['String']>;
   conclusion3?: InputMaybe<Scalars['String']>;
@@ -558,24 +621,12 @@ export type DataManagementInput = {
   title?: InputMaybe<Scalars['String']>;
 };
 
-export type Design = {
-  __typename?: 'Design';
-  Acting?: Maybe<BlogPost>;
-  Animation?: Maybe<BlogPost>;
-  DigitalMedia?: Maybe<BlogPost>;
-  FashionDesign?: Maybe<BlogPost>;
-  Film?: Maybe<BlogPost>;
-  GraphicDesign?: Maybe<BlogPost>;
-  InteriorDesign?: Maybe<BlogPost>;
-  Landscape?: Maybe<BlogPost>;
-  Music?: Maybe<BlogPost>;
-};
-
 export type GameProgramming = {
   __typename?: 'GameProgramming';
   authorAbout?: Maybe<Scalars['String']>;
   authorLink?: Maybe<Scalars['String']>;
   authorName?: Maybe<Scalars['String']>;
+  category?: Maybe<CategoriesEnum>;
   conclusion1?: Maybe<Scalars['String']>;
   conclusion2?: Maybe<Scalars['String']>;
   conclusion3?: Maybe<Scalars['String']>;
@@ -612,6 +663,7 @@ export type GameProgrammingInput = {
   authorAbout?: InputMaybe<Scalars['String']>;
   authorLink?: InputMaybe<Scalars['String']>;
   authorName?: InputMaybe<Scalars['String']>;
+  category?: InputMaybe<CategoriesEnum>;
   conclusion1?: InputMaybe<Scalars['String']>;
   conclusion2?: InputMaybe<Scalars['String']>;
   conclusion3?: InputMaybe<Scalars['String']>;
@@ -644,29 +696,6 @@ export type GameProgrammingInput = {
   title?: InputMaybe<Scalars['String']>;
 };
 
-export type Health = {
-  __typename?: 'Health';
-  AgedCare?: Maybe<BlogPost>;
-  Dental?: Maybe<BlogPost>;
-  Massage?: Maybe<BlogPost>;
-  Medicine?: Maybe<BlogPost>;
-  MentalHealth?: Maybe<BlogPost>;
-  Nursing?: Maybe<BlogPost>;
-  Nutrition?: Maybe<BlogPost>;
-  PublicHealth?: Maybe<BlogPost>;
-  Veterinary?: Maybe<BlogPost>;
-};
-
-export type Hospitality = {
-  __typename?: 'Hospitality';
-  Baking?: Maybe<BlogPost>;
-  CommercialCooking?: Maybe<BlogPost>;
-  Events?: Maybe<BlogPost>;
-  HospitalityManagement?: Maybe<BlogPost>;
-  HotelManagement?: Maybe<BlogPost>;
-  TravelTourism?: Maybe<BlogPost>;
-};
-
 export type It = {
   __typename?: 'It';
   id: Scalars['String'];
@@ -678,11 +707,12 @@ export type ItInput = {
   id: Scalars['String'];
 };
 
-export type MachineLearing = {
-  __typename?: 'MachineLearing';
+export type MachineLearning = {
+  __typename?: 'MachineLearning';
   authorAbout?: Maybe<Scalars['String']>;
   authorLink?: Maybe<Scalars['String']>;
   authorName?: Maybe<Scalars['String']>;
+  category?: Maybe<CategoriesEnum>;
   conclusion1?: Maybe<Scalars['String']>;
   conclusion2?: Maybe<Scalars['String']>;
   conclusion3?: Maybe<Scalars['String']>;
@@ -715,10 +745,11 @@ export type MachineLearing = {
   title?: Maybe<Scalars['String']>;
 };
 
-export type MachineLearingInput = {
+export type MachineLearningInput = {
   authorAbout?: InputMaybe<Scalars['String']>;
   authorLink?: InputMaybe<Scalars['String']>;
   authorName?: InputMaybe<Scalars['String']>;
+  category?: InputMaybe<CategoriesEnum>;
   conclusion1?: InputMaybe<Scalars['String']>;
   conclusion2?: InputMaybe<Scalars['String']>;
   conclusion3?: InputMaybe<Scalars['String']>;
@@ -751,19 +782,6 @@ export type MachineLearingInput = {
   title?: InputMaybe<Scalars['String']>;
 };
 
-export type Management = {
-  __typename?: 'Management';
-  AgriBusinessManagement?: Maybe<BlogPost>;
-  BankingManagement?: Maybe<BlogPost>;
-  BusinessManagement?: Maybe<BlogPost>;
-  HumanResources?: Maybe<BlogPost>;
-  InternationalBusiness?: Maybe<BlogPost>;
-  LeadershipManagement?: Maybe<BlogPost>;
-  ProjectManagement?: Maybe<BlogPost>;
-  SocialMediaMarketing?: Maybe<BlogPost>;
-  SupplyManagement?: Maybe<BlogPost>;
-};
-
 export type Mutation = {
   __typename?: 'Mutation';
   addAi?: Maybe<Ai>;
@@ -773,15 +791,11 @@ export type Mutation = {
   addCloudComputing?: Maybe<CloudComputing>;
   addComputerNetworking?: Maybe<ComputerNetworking>;
   addDataManagement?: Maybe<DataManagement>;
-  addDesign?: Maybe<Design>;
   addGameProgramming?: Maybe<GameProgramming>;
-  addHealth?: Maybe<Health>;
-  addHospitality?: Maybe<Hospitality>;
   addIt?: Maybe<It>;
-  addMachineLearing?: Maybe<MachineLearing>;
+  addMachineLearning?: Maybe<MachineLearning>;
   addSoftwareDevelopment?: Maybe<SoftwareDevelopment>;
   addTelecommunication?: Maybe<Telecommunication>;
-  addTrades?: Maybe<Trades>;
   addWebDevelopment?: Maybe<WebDevelopment>;
   updateSoftwareDevelopment?: Maybe<SoftwareDevelopment>;
 };
@@ -822,23 +836,8 @@ export type MutationAddDataManagementArgs = {
 };
 
 
-export type MutationAddDesignArgs = {
-  input: BlogPostInput;
-};
-
-
 export type MutationAddGameProgrammingArgs = {
   input?: InputMaybe<GameProgrammingInput>;
-};
-
-
-export type MutationAddHealthArgs = {
-  input: BlogPostInput;
-};
-
-
-export type MutationAddHospitalityArgs = {
-  input: BlogPostInput;
 };
 
 
@@ -847,8 +846,8 @@ export type MutationAddItArgs = {
 };
 
 
-export type MutationAddMachineLearingArgs = {
-  input?: InputMaybe<MachineLearingInput>;
+export type MutationAddMachineLearningArgs = {
+  input?: InputMaybe<MachineLearningInput>;
 };
 
 
@@ -859,11 +858,6 @@ export type MutationAddSoftwareDevelopmentArgs = {
 
 export type MutationAddTelecommunicationArgs = {
   input?: InputMaybe<TelecommunicationInput>;
-};
-
-
-export type MutationAddTradesArgs = {
-  input: BlogPostInput;
 };
 
 
@@ -889,7 +883,7 @@ export type Query = {
   dataManagement?: Maybe<DataManagement>;
   gameProgramming?: Maybe<GameProgramming>;
   it?: Maybe<It>;
-  machineLearing?: Maybe<MachineLearing>;
+  machineLearning?: Maybe<MachineLearning>;
   softwareDevelopment?: Maybe<SoftwareDevelopment>;
   telecommunication?: Maybe<Telecommunication>;
   webDevelopment?: Maybe<WebDevelopment>;
@@ -941,7 +935,7 @@ export type QueryItArgs = {
 };
 
 
-export type QueryMachineLearingArgs = {
+export type QueryMachineLearningArgs = {
   id: Scalars['ID'];
 };
 
@@ -974,6 +968,7 @@ export type SoftwareDevelopment = {
   authorAbout?: Maybe<Scalars['String']>;
   authorLink?: Maybe<Scalars['String']>;
   authorName?: Maybe<Scalars['String']>;
+  category?: Maybe<CategoriesEnum>;
   conclusion1?: Maybe<Scalars['String']>;
   conclusion2?: Maybe<Scalars['String']>;
   conclusion3?: Maybe<Scalars['String']>;
@@ -1010,6 +1005,7 @@ export type SoftwareDevelopmentInput = {
   authorAbout?: InputMaybe<Scalars['String']>;
   authorLink?: InputMaybe<Scalars['String']>;
   authorName?: InputMaybe<Scalars['String']>;
+  category?: InputMaybe<CategoriesEnum>;
   conclusion1?: InputMaybe<Scalars['String']>;
   conclusion2?: InputMaybe<Scalars['String']>;
   conclusion3?: InputMaybe<Scalars['String']>;
@@ -1047,6 +1043,7 @@ export type Telecommunication = {
   authorAbout?: Maybe<Scalars['String']>;
   authorLink?: Maybe<Scalars['String']>;
   authorName?: Maybe<Scalars['String']>;
+  category?: Maybe<CategoriesEnum>;
   conclusion1?: Maybe<Scalars['String']>;
   conclusion2?: Maybe<Scalars['String']>;
   conclusion3?: Maybe<Scalars['String']>;
@@ -1083,6 +1080,7 @@ export type TelecommunicationInput = {
   authorAbout?: InputMaybe<Scalars['String']>;
   authorLink?: InputMaybe<Scalars['String']>;
   authorName?: InputMaybe<Scalars['String']>;
+  category?: InputMaybe<CategoriesEnum>;
   conclusion1?: InputMaybe<Scalars['String']>;
   conclusion2?: InputMaybe<Scalars['String']>;
   conclusion3?: InputMaybe<Scalars['String']>;
@@ -1115,20 +1113,6 @@ export type TelecommunicationInput = {
   title?: InputMaybe<Scalars['String']>;
 };
 
-export type Trades = {
-  __typename?: 'Trades';
-  Automotive?: Maybe<BlogPost>;
-  Beauty?: Maybe<BlogPost>;
-  Carpentry?: Maybe<BlogPost>;
-  Construction?: Maybe<BlogPost>;
-  Education?: Maybe<BlogPost>;
-  Fitness?: Maybe<BlogPost>;
-  Hairdressing?: Maybe<BlogPost>;
-  Horticulture?: Maybe<BlogPost>;
-  Sport?: Maybe<BlogPost>;
-  Yoga?: Maybe<BlogPost>;
-};
-
 export type User = {
   __typename?: 'User';
   accounts?: Maybe<Array<Maybe<Account>>>;
@@ -1152,6 +1136,7 @@ export type WebDevelopment = {
   authorAbout?: Maybe<Scalars['String']>;
   authorLink?: Maybe<Scalars['String']>;
   authorName?: Maybe<Scalars['String']>;
+  category?: Maybe<CategoriesEnum>;
   conclusion1?: Maybe<Scalars['String']>;
   conclusion2?: Maybe<Scalars['String']>;
   conclusion3?: Maybe<Scalars['String']>;
@@ -1188,6 +1173,7 @@ export type WebDevelopmentInput = {
   authorAbout?: InputMaybe<Scalars['String']>;
   authorLink?: InputMaybe<Scalars['String']>;
   authorName?: InputMaybe<Scalars['String']>;
+  category?: InputMaybe<CategoriesEnum>;
   conclusion1?: InputMaybe<Scalars['String']>;
   conclusion2?: InputMaybe<Scalars['String']>;
   conclusion3?: InputMaybe<Scalars['String']>;
@@ -1299,24 +1285,20 @@ export type ResolversTypes = {
   Boolean: ResolverTypeWrapper<Scalars['Boolean']>;
   BusinessAnalysis: ResolverTypeWrapper<BusinessAnalysisModel>;
   BusinessAnalysisInput: BusinessAnalysisInput;
+  CategoriesEnum: ResolverTypeWrapper<CategoriesEnumModel>;
   CloudComputing: ResolverTypeWrapper<CloudComputingModel>;
   CloudComputingInput: CloudComputingInput;
   ComputerNetworking: ResolverTypeWrapper<ComputerNetworkingModel>;
   ComputerNetworkingInput: ComputerNetworkingInput;
-  Courses: ResolverTypeWrapper<Omit<Courses, 'Design' | 'Health' | 'Hospitality' | 'It' | 'Management' | 'Trades'> & { Design?: Maybe<ResolversTypes['Design']>, Health?: Maybe<ResolversTypes['Health']>, Hospitality?: Maybe<ResolversTypes['Hospitality']>, It?: Maybe<ResolversTypes['It']>, Management?: Maybe<ResolversTypes['Management']>, Trades?: Maybe<ResolversTypes['Trades']> }>;
   DataManagement: ResolverTypeWrapper<DataManagementModel>;
   DataManagementInput: DataManagementInput;
-  Design: ResolverTypeWrapper<Omit<Design, 'Acting' | 'Animation' | 'DigitalMedia' | 'FashionDesign' | 'Film' | 'GraphicDesign' | 'InteriorDesign' | 'Landscape' | 'Music'> & { Acting?: Maybe<ResolversTypes['BlogPost']>, Animation?: Maybe<ResolversTypes['BlogPost']>, DigitalMedia?: Maybe<ResolversTypes['BlogPost']>, FashionDesign?: Maybe<ResolversTypes['BlogPost']>, Film?: Maybe<ResolversTypes['BlogPost']>, GraphicDesign?: Maybe<ResolversTypes['BlogPost']>, InteriorDesign?: Maybe<ResolversTypes['BlogPost']>, Landscape?: Maybe<ResolversTypes['BlogPost']>, Music?: Maybe<ResolversTypes['BlogPost']> }>;
   GameProgramming: ResolverTypeWrapper<GameProgrammingModel>;
   GameProgrammingInput: GameProgrammingInput;
-  Health: ResolverTypeWrapper<Omit<Health, 'AgedCare' | 'Dental' | 'Massage' | 'Medicine' | 'MentalHealth' | 'Nursing' | 'Nutrition' | 'PublicHealth' | 'Veterinary'> & { AgedCare?: Maybe<ResolversTypes['BlogPost']>, Dental?: Maybe<ResolversTypes['BlogPost']>, Massage?: Maybe<ResolversTypes['BlogPost']>, Medicine?: Maybe<ResolversTypes['BlogPost']>, MentalHealth?: Maybe<ResolversTypes['BlogPost']>, Nursing?: Maybe<ResolversTypes['BlogPost']>, Nutrition?: Maybe<ResolversTypes['BlogPost']>, PublicHealth?: Maybe<ResolversTypes['BlogPost']>, Veterinary?: Maybe<ResolversTypes['BlogPost']> }>;
-  Hospitality: ResolverTypeWrapper<Omit<Hospitality, 'Baking' | 'CommercialCooking' | 'Events' | 'HospitalityManagement' | 'HotelManagement' | 'TravelTourism'> & { Baking?: Maybe<ResolversTypes['BlogPost']>, CommercialCooking?: Maybe<ResolversTypes['BlogPost']>, Events?: Maybe<ResolversTypes['BlogPost']>, HospitalityManagement?: Maybe<ResolversTypes['BlogPost']>, HotelManagement?: Maybe<ResolversTypes['BlogPost']>, TravelTourism?: Maybe<ResolversTypes['BlogPost']> }>;
   ID: ResolverTypeWrapper<Scalars['ID']>;
   It: ResolverTypeWrapper<ItModel>;
   ItInput: ItInput;
-  MachineLearing: ResolverTypeWrapper<MachineLearingModel>;
-  MachineLearingInput: MachineLearingInput;
-  Management: ResolverTypeWrapper<Omit<Management, 'AgriBusinessManagement' | 'BankingManagement' | 'BusinessManagement' | 'HumanResources' | 'InternationalBusiness' | 'LeadershipManagement' | 'ProjectManagement' | 'SocialMediaMarketing' | 'SupplyManagement'> & { AgriBusinessManagement?: Maybe<ResolversTypes['BlogPost']>, BankingManagement?: Maybe<ResolversTypes['BlogPost']>, BusinessManagement?: Maybe<ResolversTypes['BlogPost']>, HumanResources?: Maybe<ResolversTypes['BlogPost']>, InternationalBusiness?: Maybe<ResolversTypes['BlogPost']>, LeadershipManagement?: Maybe<ResolversTypes['BlogPost']>, ProjectManagement?: Maybe<ResolversTypes['BlogPost']>, SocialMediaMarketing?: Maybe<ResolversTypes['BlogPost']>, SupplyManagement?: Maybe<ResolversTypes['BlogPost']> }>;
+  MachineLearning: ResolverTypeWrapper<MachineLearingModel>;
+  MachineLearningInput: MachineLearningInput;
   Mutation: ResolverTypeWrapper<{}>;
   Query: ResolverTypeWrapper<{}>;
   Session: ResolverTypeWrapper<SessionModel>;
@@ -1325,7 +1307,6 @@ export type ResolversTypes = {
   String: ResolverTypeWrapper<Scalars['String']>;
   Telecommunication: ResolverTypeWrapper<TelecommunicationModel>;
   TelecommunicationInput: TelecommunicationInput;
-  Trades: ResolverTypeWrapper<Omit<Trades, 'Automotive' | 'Beauty' | 'Carpentry' | 'Construction' | 'Education' | 'Fitness' | 'Hairdressing' | 'Horticulture' | 'Sport' | 'Yoga'> & { Automotive?: Maybe<ResolversTypes['BlogPost']>, Beauty?: Maybe<ResolversTypes['BlogPost']>, Carpentry?: Maybe<ResolversTypes['BlogPost']>, Construction?: Maybe<ResolversTypes['BlogPost']>, Education?: Maybe<ResolversTypes['BlogPost']>, Fitness?: Maybe<ResolversTypes['BlogPost']>, Hairdressing?: Maybe<ResolversTypes['BlogPost']>, Horticulture?: Maybe<ResolversTypes['BlogPost']>, Sport?: Maybe<ResolversTypes['BlogPost']>, Yoga?: Maybe<ResolversTypes['BlogPost']> }>;
   User: ResolverTypeWrapper<UserModel>;
   VerificationToken: ResolverTypeWrapper<VerificationTokenModel>;
   WebDevelopment: ResolverTypeWrapper<WebDevelopmentModel>;
@@ -1348,20 +1329,15 @@ export type ResolversParentTypes = {
   CloudComputingInput: CloudComputingInput;
   ComputerNetworking: ComputerNetworkingModel;
   ComputerNetworkingInput: ComputerNetworkingInput;
-  Courses: Omit<Courses, 'Design' | 'Health' | 'Hospitality' | 'It' | 'Management' | 'Trades'> & { Design?: Maybe<ResolversParentTypes['Design']>, Health?: Maybe<ResolversParentTypes['Health']>, Hospitality?: Maybe<ResolversParentTypes['Hospitality']>, It?: Maybe<ResolversParentTypes['It']>, Management?: Maybe<ResolversParentTypes['Management']>, Trades?: Maybe<ResolversParentTypes['Trades']> };
   DataManagement: DataManagementModel;
   DataManagementInput: DataManagementInput;
-  Design: Omit<Design, 'Acting' | 'Animation' | 'DigitalMedia' | 'FashionDesign' | 'Film' | 'GraphicDesign' | 'InteriorDesign' | 'Landscape' | 'Music'> & { Acting?: Maybe<ResolversParentTypes['BlogPost']>, Animation?: Maybe<ResolversParentTypes['BlogPost']>, DigitalMedia?: Maybe<ResolversParentTypes['BlogPost']>, FashionDesign?: Maybe<ResolversParentTypes['BlogPost']>, Film?: Maybe<ResolversParentTypes['BlogPost']>, GraphicDesign?: Maybe<ResolversParentTypes['BlogPost']>, InteriorDesign?: Maybe<ResolversParentTypes['BlogPost']>, Landscape?: Maybe<ResolversParentTypes['BlogPost']>, Music?: Maybe<ResolversParentTypes['BlogPost']> };
   GameProgramming: GameProgrammingModel;
   GameProgrammingInput: GameProgrammingInput;
-  Health: Omit<Health, 'AgedCare' | 'Dental' | 'Massage' | 'Medicine' | 'MentalHealth' | 'Nursing' | 'Nutrition' | 'PublicHealth' | 'Veterinary'> & { AgedCare?: Maybe<ResolversParentTypes['BlogPost']>, Dental?: Maybe<ResolversParentTypes['BlogPost']>, Massage?: Maybe<ResolversParentTypes['BlogPost']>, Medicine?: Maybe<ResolversParentTypes['BlogPost']>, MentalHealth?: Maybe<ResolversParentTypes['BlogPost']>, Nursing?: Maybe<ResolversParentTypes['BlogPost']>, Nutrition?: Maybe<ResolversParentTypes['BlogPost']>, PublicHealth?: Maybe<ResolversParentTypes['BlogPost']>, Veterinary?: Maybe<ResolversParentTypes['BlogPost']> };
-  Hospitality: Omit<Hospitality, 'Baking' | 'CommercialCooking' | 'Events' | 'HospitalityManagement' | 'HotelManagement' | 'TravelTourism'> & { Baking?: Maybe<ResolversParentTypes['BlogPost']>, CommercialCooking?: Maybe<ResolversParentTypes['BlogPost']>, Events?: Maybe<ResolversParentTypes['BlogPost']>, HospitalityManagement?: Maybe<ResolversParentTypes['BlogPost']>, HotelManagement?: Maybe<ResolversParentTypes['BlogPost']>, TravelTourism?: Maybe<ResolversParentTypes['BlogPost']> };
   ID: Scalars['ID'];
   It: ItModel;
   ItInput: ItInput;
-  MachineLearing: MachineLearingModel;
-  MachineLearingInput: MachineLearingInput;
-  Management: Omit<Management, 'AgriBusinessManagement' | 'BankingManagement' | 'BusinessManagement' | 'HumanResources' | 'InternationalBusiness' | 'LeadershipManagement' | 'ProjectManagement' | 'SocialMediaMarketing' | 'SupplyManagement'> & { AgriBusinessManagement?: Maybe<ResolversParentTypes['BlogPost']>, BankingManagement?: Maybe<ResolversParentTypes['BlogPost']>, BusinessManagement?: Maybe<ResolversParentTypes['BlogPost']>, HumanResources?: Maybe<ResolversParentTypes['BlogPost']>, InternationalBusiness?: Maybe<ResolversParentTypes['BlogPost']>, LeadershipManagement?: Maybe<ResolversParentTypes['BlogPost']>, ProjectManagement?: Maybe<ResolversParentTypes['BlogPost']>, SocialMediaMarketing?: Maybe<ResolversParentTypes['BlogPost']>, SupplyManagement?: Maybe<ResolversParentTypes['BlogPost']> };
+  MachineLearning: MachineLearingModel;
+  MachineLearningInput: MachineLearningInput;
   Mutation: {};
   Query: {};
   Session: SessionModel;
@@ -1370,7 +1346,6 @@ export type ResolversParentTypes = {
   String: Scalars['String'];
   Telecommunication: TelecommunicationModel;
   TelecommunicationInput: TelecommunicationInput;
-  Trades: Omit<Trades, 'Automotive' | 'Beauty' | 'Carpentry' | 'Construction' | 'Education' | 'Fitness' | 'Hairdressing' | 'Horticulture' | 'Sport' | 'Yoga'> & { Automotive?: Maybe<ResolversParentTypes['BlogPost']>, Beauty?: Maybe<ResolversParentTypes['BlogPost']>, Carpentry?: Maybe<ResolversParentTypes['BlogPost']>, Construction?: Maybe<ResolversParentTypes['BlogPost']>, Education?: Maybe<ResolversParentTypes['BlogPost']>, Fitness?: Maybe<ResolversParentTypes['BlogPost']>, Hairdressing?: Maybe<ResolversParentTypes['BlogPost']>, Horticulture?: Maybe<ResolversParentTypes['BlogPost']>, Sport?: Maybe<ResolversParentTypes['BlogPost']>, Yoga?: Maybe<ResolversParentTypes['BlogPost']> };
   User: UserModel;
   VerificationToken: VerificationTokenModel;
   WebDevelopment: WebDevelopmentModel;
@@ -1398,6 +1373,7 @@ export type AiResolvers<ContextType = GraphQLContext, ParentType extends Resolve
   authorAbout?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   authorLink?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   authorName?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  category?: Resolver<Maybe<ResolversTypes['CategoriesEnum']>, ParentType, ContextType>;
   conclusion1?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   conclusion2?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   conclusion3?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
@@ -1435,6 +1411,7 @@ export type BlockchainResolvers<ContextType = GraphQLContext, ParentType extends
   authorAbout?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   authorLink?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   authorName?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  category?: Resolver<Maybe<ResolversTypes['CategoriesEnum']>, ParentType, ContextType>;
   conclusion1?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   conclusion2?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   conclusion3?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
@@ -1472,6 +1449,7 @@ export type BlogPostResolvers<ContextType = GraphQLContext, ParentType extends R
   authorAbout?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   authorLink?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   authorName?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  category?: Resolver<Maybe<ResolversTypes['CategoriesEnum']>, ParentType, ContextType>;
   conclusion1?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   conclusion2?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   conclusion3?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
@@ -1509,6 +1487,7 @@ export type BusinessAnalysisResolvers<ContextType = GraphQLContext, ParentType e
   authorAbout?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   authorLink?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   authorName?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  category?: Resolver<Maybe<ResolversTypes['CategoriesEnum']>, ParentType, ContextType>;
   conclusion1?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   conclusion2?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   conclusion3?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
@@ -1542,10 +1521,13 @@ export type BusinessAnalysisResolvers<ContextType = GraphQLContext, ParentType e
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 };
 
+export type CategoriesEnumResolvers = EnumResolverSignature<{ ACTING?: any, AGED_CARE?: any, AGRIBUSINESS_MANAGEMENT?: any, AI?: any, ANIMATION_3D?: any, AUTOMOTIVE?: any, BAKING?: any, BANKING_MANAGEMENT?: any, BEAUTY?: any, BLOCKCHAIN_TECH?: any, BLOG?: any, BUSINESS_ANALYSIS?: any, BUSINESS_MANAGEMENT?: any, CARPENTRY?: any, CLOUD_COMPUTING?: any, COMMERCIAL_COOKING?: any, COMPUTER_NETWORKING?: any, CONSTRUCTION?: any, DATA_MANAGEMENT?: any, DENTAL?: any, DIGITAL_MEDIA?: any, EDUCATION?: any, EVENTS?: any, FASHION_DESIGN?: any, FILM_MEDIA?: any, FITNESS?: any, GAME_PROGRAMMING?: any, GRAPHIC_DESIGN?: any, HARIDRESSING?: any, HOPITALITY_MANAGEMENT?: any, HORTICULTURE?: any, HUMAN_RESOURCES?: any, INTERIOR_DESIGN?: any, INTERNATIONAL_BUSINESS?: any, INTL_HOTEL_MANAGEMENT?: any, LANDSCAPE?: any, LEADERSHIP_MANAGEMENT?: any, MACHINE_LEARNING?: any, MASSAGE?: any, MEDICINE?: any, MENTAL_HEALTH?: any, MUSIC_AUDIO?: any, NURSING?: any, NUTRITION?: any, PROJECT_MANAGEMENT?: any, PUBLIC_HEALTH?: any, SOCIALMEDIA_MARKETING?: any, SOFTWARE_DEVELOPMENT?: any, SPORT?: any, SUPPLYCHAIN_MANAGEMENT?: any, TELECOMMUNICATION?: any, TRAVEL_TOURISM?: any, VETENARY?: any, WEB_DEVELOPMENT?: any, YOGA?: any }, ResolversTypes['CategoriesEnum']>;
+
 export type CloudComputingResolvers<ContextType = GraphQLContext, ParentType extends ResolversParentTypes['CloudComputing'] = ResolversParentTypes['CloudComputing']> = {
   authorAbout?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   authorLink?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   authorName?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  category?: Resolver<Maybe<ResolversTypes['CategoriesEnum']>, ParentType, ContextType>;
   conclusion1?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   conclusion2?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   conclusion3?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
@@ -1583,6 +1565,7 @@ export type ComputerNetworkingResolvers<ContextType = GraphQLContext, ParentType
   authorAbout?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   authorLink?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   authorName?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  category?: Resolver<Maybe<ResolversTypes['CategoriesEnum']>, ParentType, ContextType>;
   conclusion1?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   conclusion2?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   conclusion3?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
@@ -1613,16 +1596,6 @@ export type ComputerNetworkingResolvers<ContextType = GraphQLContext, ParentType
   tableContents3?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   tableContents4?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   title?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
-  __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
-};
-
-export type CoursesResolvers<ContextType = GraphQLContext, ParentType extends ResolversParentTypes['Courses'] = ResolversParentTypes['Courses']> = {
-  Design?: Resolver<Maybe<ResolversTypes['Design']>, ParentType, ContextType>;
-  Health?: Resolver<Maybe<ResolversTypes['Health']>, ParentType, ContextType>;
-  Hospitality?: Resolver<Maybe<ResolversTypes['Hospitality']>, ParentType, ContextType>;
-  It?: Resolver<Maybe<ResolversTypes['It']>, ParentType, ContextType>;
-  Management?: Resolver<Maybe<ResolversTypes['Management']>, ParentType, ContextType>;
-  Trades?: Resolver<Maybe<ResolversTypes['Trades']>, ParentType, ContextType>;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 };
 
@@ -1630,6 +1603,7 @@ export type DataManagementResolvers<ContextType = GraphQLContext, ParentType ext
   authorAbout?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   authorLink?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   authorName?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  category?: Resolver<Maybe<ResolversTypes['CategoriesEnum']>, ParentType, ContextType>;
   conclusion1?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   conclusion2?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   conclusion3?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
@@ -1660,19 +1634,6 @@ export type DataManagementResolvers<ContextType = GraphQLContext, ParentType ext
   tableContents3?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   tableContents4?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   title?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
-  __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
-};
-
-export type DesignResolvers<ContextType = GraphQLContext, ParentType extends ResolversParentTypes['Design'] = ResolversParentTypes['Design']> = {
-  Acting?: Resolver<Maybe<ResolversTypes['BlogPost']>, ParentType, ContextType>;
-  Animation?: Resolver<Maybe<ResolversTypes['BlogPost']>, ParentType, ContextType>;
-  DigitalMedia?: Resolver<Maybe<ResolversTypes['BlogPost']>, ParentType, ContextType>;
-  FashionDesign?: Resolver<Maybe<ResolversTypes['BlogPost']>, ParentType, ContextType>;
-  Film?: Resolver<Maybe<ResolversTypes['BlogPost']>, ParentType, ContextType>;
-  GraphicDesign?: Resolver<Maybe<ResolversTypes['BlogPost']>, ParentType, ContextType>;
-  InteriorDesign?: Resolver<Maybe<ResolversTypes['BlogPost']>, ParentType, ContextType>;
-  Landscape?: Resolver<Maybe<ResolversTypes['BlogPost']>, ParentType, ContextType>;
-  Music?: Resolver<Maybe<ResolversTypes['BlogPost']>, ParentType, ContextType>;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 };
 
@@ -1680,6 +1641,7 @@ export type GameProgrammingResolvers<ContextType = GraphQLContext, ParentType ex
   authorAbout?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   authorLink?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   authorName?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  category?: Resolver<Maybe<ResolversTypes['CategoriesEnum']>, ParentType, ContextType>;
   conclusion1?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   conclusion2?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   conclusion3?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
@@ -1710,29 +1672,6 @@ export type GameProgrammingResolvers<ContextType = GraphQLContext, ParentType ex
   tableContents3?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   tableContents4?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   title?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
-  __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
-};
-
-export type HealthResolvers<ContextType = GraphQLContext, ParentType extends ResolversParentTypes['Health'] = ResolversParentTypes['Health']> = {
-  AgedCare?: Resolver<Maybe<ResolversTypes['BlogPost']>, ParentType, ContextType>;
-  Dental?: Resolver<Maybe<ResolversTypes['BlogPost']>, ParentType, ContextType>;
-  Massage?: Resolver<Maybe<ResolversTypes['BlogPost']>, ParentType, ContextType>;
-  Medicine?: Resolver<Maybe<ResolversTypes['BlogPost']>, ParentType, ContextType>;
-  MentalHealth?: Resolver<Maybe<ResolversTypes['BlogPost']>, ParentType, ContextType>;
-  Nursing?: Resolver<Maybe<ResolversTypes['BlogPost']>, ParentType, ContextType>;
-  Nutrition?: Resolver<Maybe<ResolversTypes['BlogPost']>, ParentType, ContextType>;
-  PublicHealth?: Resolver<Maybe<ResolversTypes['BlogPost']>, ParentType, ContextType>;
-  Veterinary?: Resolver<Maybe<ResolversTypes['BlogPost']>, ParentType, ContextType>;
-  __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
-};
-
-export type HospitalityResolvers<ContextType = GraphQLContext, ParentType extends ResolversParentTypes['Hospitality'] = ResolversParentTypes['Hospitality']> = {
-  Baking?: Resolver<Maybe<ResolversTypes['BlogPost']>, ParentType, ContextType>;
-  CommercialCooking?: Resolver<Maybe<ResolversTypes['BlogPost']>, ParentType, ContextType>;
-  Events?: Resolver<Maybe<ResolversTypes['BlogPost']>, ParentType, ContextType>;
-  HospitalityManagement?: Resolver<Maybe<ResolversTypes['BlogPost']>, ParentType, ContextType>;
-  HotelManagement?: Resolver<Maybe<ResolversTypes['BlogPost']>, ParentType, ContextType>;
-  TravelTourism?: Resolver<Maybe<ResolversTypes['BlogPost']>, ParentType, ContextType>;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 };
 
@@ -1743,10 +1682,11 @@ export type ItResolvers<ContextType = GraphQLContext, ParentType extends Resolve
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 };
 
-export type MachineLearingResolvers<ContextType = GraphQLContext, ParentType extends ResolversParentTypes['MachineLearing'] = ResolversParentTypes['MachineLearing']> = {
+export type MachineLearningResolvers<ContextType = GraphQLContext, ParentType extends ResolversParentTypes['MachineLearning'] = ResolversParentTypes['MachineLearning']> = {
   authorAbout?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   authorLink?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   authorName?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  category?: Resolver<Maybe<ResolversTypes['CategoriesEnum']>, ParentType, ContextType>;
   conclusion1?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   conclusion2?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   conclusion3?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
@@ -1777,19 +1717,6 @@ export type MachineLearingResolvers<ContextType = GraphQLContext, ParentType ext
   tableContents3?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   tableContents4?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   title?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
-  __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
-};
-
-export type ManagementResolvers<ContextType = GraphQLContext, ParentType extends ResolversParentTypes['Management'] = ResolversParentTypes['Management']> = {
-  AgriBusinessManagement?: Resolver<Maybe<ResolversTypes['BlogPost']>, ParentType, ContextType>;
-  BankingManagement?: Resolver<Maybe<ResolversTypes['BlogPost']>, ParentType, ContextType>;
-  BusinessManagement?: Resolver<Maybe<ResolversTypes['BlogPost']>, ParentType, ContextType>;
-  HumanResources?: Resolver<Maybe<ResolversTypes['BlogPost']>, ParentType, ContextType>;
-  InternationalBusiness?: Resolver<Maybe<ResolversTypes['BlogPost']>, ParentType, ContextType>;
-  LeadershipManagement?: Resolver<Maybe<ResolversTypes['BlogPost']>, ParentType, ContextType>;
-  ProjectManagement?: Resolver<Maybe<ResolversTypes['BlogPost']>, ParentType, ContextType>;
-  SocialMediaMarketing?: Resolver<Maybe<ResolversTypes['BlogPost']>, ParentType, ContextType>;
-  SupplyManagement?: Resolver<Maybe<ResolversTypes['BlogPost']>, ParentType, ContextType>;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 };
 
@@ -1801,15 +1728,11 @@ export type MutationResolvers<ContextType = GraphQLContext, ParentType extends R
   addCloudComputing?: Resolver<Maybe<ResolversTypes['CloudComputing']>, ParentType, ContextType, Partial<MutationAddCloudComputingArgs>>;
   addComputerNetworking?: Resolver<Maybe<ResolversTypes['ComputerNetworking']>, ParentType, ContextType, Partial<MutationAddComputerNetworkingArgs>>;
   addDataManagement?: Resolver<Maybe<ResolversTypes['DataManagement']>, ParentType, ContextType, Partial<MutationAddDataManagementArgs>>;
-  addDesign?: Resolver<Maybe<ResolversTypes['Design']>, ParentType, ContextType, RequireFields<MutationAddDesignArgs, 'input'>>;
   addGameProgramming?: Resolver<Maybe<ResolversTypes['GameProgramming']>, ParentType, ContextType, Partial<MutationAddGameProgrammingArgs>>;
-  addHealth?: Resolver<Maybe<ResolversTypes['Health']>, ParentType, ContextType, RequireFields<MutationAddHealthArgs, 'input'>>;
-  addHospitality?: Resolver<Maybe<ResolversTypes['Hospitality']>, ParentType, ContextType, RequireFields<MutationAddHospitalityArgs, 'input'>>;
   addIt?: Resolver<Maybe<ResolversTypes['It']>, ParentType, ContextType, RequireFields<MutationAddItArgs, 'input'>>;
-  addMachineLearing?: Resolver<Maybe<ResolversTypes['MachineLearing']>, ParentType, ContextType, Partial<MutationAddMachineLearingArgs>>;
+  addMachineLearning?: Resolver<Maybe<ResolversTypes['MachineLearning']>, ParentType, ContextType, Partial<MutationAddMachineLearningArgs>>;
   addSoftwareDevelopment?: Resolver<Maybe<ResolversTypes['SoftwareDevelopment']>, ParentType, ContextType, Partial<MutationAddSoftwareDevelopmentArgs>>;
   addTelecommunication?: Resolver<Maybe<ResolversTypes['Telecommunication']>, ParentType, ContextType, Partial<MutationAddTelecommunicationArgs>>;
-  addTrades?: Resolver<Maybe<ResolversTypes['Trades']>, ParentType, ContextType, RequireFields<MutationAddTradesArgs, 'input'>>;
   addWebDevelopment?: Resolver<Maybe<ResolversTypes['WebDevelopment']>, ParentType, ContextType, Partial<MutationAddWebDevelopmentArgs>>;
   updateSoftwareDevelopment?: Resolver<Maybe<ResolversTypes['SoftwareDevelopment']>, ParentType, ContextType, RequireFields<MutationUpdateSoftwareDevelopmentArgs, 'input'>>;
 };
@@ -1826,7 +1749,7 @@ export type QueryResolvers<ContextType = GraphQLContext, ParentType extends Reso
   dataManagement?: Resolver<Maybe<ResolversTypes['DataManagement']>, ParentType, ContextType, RequireFields<QueryDataManagementArgs, 'id'>>;
   gameProgramming?: Resolver<Maybe<ResolversTypes['GameProgramming']>, ParentType, ContextType, RequireFields<QueryGameProgrammingArgs, 'id'>>;
   it?: Resolver<Maybe<ResolversTypes['It']>, ParentType, ContextType, RequireFields<QueryItArgs, 'id'>>;
-  machineLearing?: Resolver<Maybe<ResolversTypes['MachineLearing']>, ParentType, ContextType, RequireFields<QueryMachineLearingArgs, 'id'>>;
+  machineLearning?: Resolver<Maybe<ResolversTypes['MachineLearning']>, ParentType, ContextType, RequireFields<QueryMachineLearningArgs, 'id'>>;
   softwareDevelopment?: Resolver<Maybe<ResolversTypes['SoftwareDevelopment']>, ParentType, ContextType, RequireFields<QuerySoftwareDevelopmentArgs, 'id'>>;
   telecommunication?: Resolver<Maybe<ResolversTypes['Telecommunication']>, ParentType, ContextType, RequireFields<QueryTelecommunicationArgs, 'id'>>;
   webDevelopment?: Resolver<Maybe<ResolversTypes['WebDevelopment']>, ParentType, ContextType, RequireFields<QueryWebDevelopmentArgs, 'id'>>;
@@ -1845,6 +1768,7 @@ export type SoftwareDevelopmentResolvers<ContextType = GraphQLContext, ParentTyp
   authorAbout?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   authorLink?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   authorName?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  category?: Resolver<Maybe<ResolversTypes['CategoriesEnum']>, ParentType, ContextType>;
   conclusion1?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   conclusion2?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   conclusion3?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
@@ -1882,6 +1806,7 @@ export type TelecommunicationResolvers<ContextType = GraphQLContext, ParentType 
   authorAbout?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   authorLink?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   authorName?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  category?: Resolver<Maybe<ResolversTypes['CategoriesEnum']>, ParentType, ContextType>;
   conclusion1?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   conclusion2?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   conclusion3?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
@@ -1915,20 +1840,6 @@ export type TelecommunicationResolvers<ContextType = GraphQLContext, ParentType 
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 };
 
-export type TradesResolvers<ContextType = GraphQLContext, ParentType extends ResolversParentTypes['Trades'] = ResolversParentTypes['Trades']> = {
-  Automotive?: Resolver<Maybe<ResolversTypes['BlogPost']>, ParentType, ContextType>;
-  Beauty?: Resolver<Maybe<ResolversTypes['BlogPost']>, ParentType, ContextType>;
-  Carpentry?: Resolver<Maybe<ResolversTypes['BlogPost']>, ParentType, ContextType>;
-  Construction?: Resolver<Maybe<ResolversTypes['BlogPost']>, ParentType, ContextType>;
-  Education?: Resolver<Maybe<ResolversTypes['BlogPost']>, ParentType, ContextType>;
-  Fitness?: Resolver<Maybe<ResolversTypes['BlogPost']>, ParentType, ContextType>;
-  Hairdressing?: Resolver<Maybe<ResolversTypes['BlogPost']>, ParentType, ContextType>;
-  Horticulture?: Resolver<Maybe<ResolversTypes['BlogPost']>, ParentType, ContextType>;
-  Sport?: Resolver<Maybe<ResolversTypes['BlogPost']>, ParentType, ContextType>;
-  Yoga?: Resolver<Maybe<ResolversTypes['BlogPost']>, ParentType, ContextType>;
-  __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
-};
-
 export type UserResolvers<ContextType = GraphQLContext, ParentType extends ResolversParentTypes['User'] = ResolversParentTypes['User']> = {
   accounts?: Resolver<Maybe<Array<Maybe<ResolversTypes['Account']>>>, ParentType, ContextType>;
   email?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
@@ -1951,6 +1862,7 @@ export type WebDevelopmentResolvers<ContextType = GraphQLContext, ParentType ext
   authorAbout?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   authorLink?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   authorName?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  category?: Resolver<Maybe<ResolversTypes['CategoriesEnum']>, ParentType, ContextType>;
   conclusion1?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   conclusion2?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   conclusion3?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
@@ -1990,23 +1902,18 @@ export type Resolvers<ContextType = GraphQLContext> = {
   Blockchain?: BlockchainResolvers<ContextType>;
   BlogPost?: BlogPostResolvers<ContextType>;
   BusinessAnalysis?: BusinessAnalysisResolvers<ContextType>;
+  CategoriesEnum?: CategoriesEnumResolvers;
   CloudComputing?: CloudComputingResolvers<ContextType>;
   ComputerNetworking?: ComputerNetworkingResolvers<ContextType>;
-  Courses?: CoursesResolvers<ContextType>;
   DataManagement?: DataManagementResolvers<ContextType>;
-  Design?: DesignResolvers<ContextType>;
   GameProgramming?: GameProgrammingResolvers<ContextType>;
-  Health?: HealthResolvers<ContextType>;
-  Hospitality?: HospitalityResolvers<ContextType>;
   It?: ItResolvers<ContextType>;
-  MachineLearing?: MachineLearingResolvers<ContextType>;
-  Management?: ManagementResolvers<ContextType>;
+  MachineLearning?: MachineLearningResolvers<ContextType>;
   Mutation?: MutationResolvers<ContextType>;
   Query?: QueryResolvers<ContextType>;
   Session?: SessionResolvers<ContextType>;
   SoftwareDevelopment?: SoftwareDevelopmentResolvers<ContextType>;
   Telecommunication?: TelecommunicationResolvers<ContextType>;
-  Trades?: TradesResolvers<ContextType>;
   User?: UserResolvers<ContextType>;
   VerificationToken?: VerificationTokenResolvers<ContextType>;
   WebDevelopment?: WebDevelopmentResolvers<ContextType>;
@@ -2015,6 +1922,7 @@ export type Resolvers<ContextType = GraphQLContext> = {
 
 export const BlogCardFragmentDoc = gql`
     fragment BlogCard on BlogPost {
+  category
   id
   title
   subtitle1
@@ -2023,6 +1931,7 @@ export const BlogCardFragmentDoc = gql`
 export const BlogPostFragmentDoc = gql`
     fragment BlogPost on BlogPost {
   id
+  category
   publishedDate
   title
   subtitle1
@@ -2100,9 +2009,352 @@ export const AiFragmentDoc = gql`
   mainImage
 }
     `;
+export const BlockchainFragmentDoc = gql`
+    fragment Blockchain on Blockchain {
+  id
+  category
+  publishedDate
+  title
+  subtitle1
+  tableContents1
+  tableContents2
+  tableContents3
+  tableContents4
+  p1
+  p2
+  p3
+  subtitle2
+  p4
+  p5
+  l1
+  l2
+  l3
+  l4
+  l5
+  subtitle3
+  p6
+  p7
+  conclusion1
+  conclusion2
+  conclusion3
+  reference1
+  reference2
+  authorName
+  authorAbout
+  authorLink
+  photoCredit
+  editedBy
+  mainImage
+}
+    `;
+export const BusinessAnalysisFragmentDoc = gql`
+    fragment BusinessAnalysis on BusinessAnalysis {
+  id
+  category
+  publishedDate
+  title
+  subtitle1
+  tableContents1
+  tableContents2
+  tableContents3
+  tableContents4
+  p1
+  p2
+  p3
+  subtitle2
+  p4
+  p5
+  l1
+  l2
+  l3
+  l4
+  l5
+  subtitle3
+  p6
+  p7
+  conclusion1
+  conclusion2
+  conclusion3
+  reference1
+  reference2
+  authorName
+  authorAbout
+  authorLink
+  photoCredit
+  editedBy
+  mainImage
+}
+    `;
+export const CloudComputingFragmentDoc = gql`
+    fragment CloudComputing on CloudComputing {
+  id
+  category
+  publishedDate
+  title
+  subtitle1
+  tableContents1
+  tableContents2
+  tableContents3
+  tableContents4
+  p1
+  p2
+  p3
+  subtitle2
+  p4
+  p5
+  l1
+  l2
+  l3
+  l4
+  l5
+  subtitle3
+  p6
+  p7
+  conclusion1
+  conclusion2
+  conclusion3
+  reference1
+  reference2
+  authorName
+  authorAbout
+  authorLink
+  photoCredit
+  editedBy
+  mainImage
+}
+    `;
+export const ComputerNetworkingFragmentDoc = gql`
+    fragment ComputerNetworking on ComputerNetworking {
+  id
+  category
+  publishedDate
+  title
+  subtitle1
+  tableContents1
+  tableContents2
+  tableContents3
+  tableContents4
+  p1
+  p2
+  p3
+  subtitle2
+  p4
+  p5
+  l1
+  l2
+  l3
+  l4
+  l5
+  subtitle3
+  p6
+  p7
+  conclusion1
+  conclusion2
+  conclusion3
+  reference1
+  reference2
+  authorName
+  authorAbout
+  authorLink
+  photoCredit
+  editedBy
+  mainImage
+}
+    `;
+export const DataManagementFragmentDoc = gql`
+    fragment DataManagement on DataManagement {
+  id
+  category
+  publishedDate
+  title
+  subtitle1
+  tableContents1
+  tableContents2
+  tableContents3
+  tableContents4
+  p1
+  p2
+  p3
+  subtitle2
+  p4
+  p5
+  l1
+  l2
+  l3
+  l4
+  l5
+  subtitle3
+  p6
+  p7
+  conclusion1
+  conclusion2
+  conclusion3
+  reference1
+  reference2
+  authorName
+  authorAbout
+  authorLink
+  photoCredit
+  editedBy
+  mainImage
+}
+    `;
+export const GameProgrammingFragmentDoc = gql`
+    fragment GameProgramming on GameProgramming {
+  id
+  category
+  publishedDate
+  title
+  subtitle1
+  tableContents1
+  tableContents2
+  tableContents3
+  tableContents4
+  p1
+  p2
+  p3
+  subtitle2
+  p4
+  p5
+  l1
+  l2
+  l3
+  l4
+  l5
+  subtitle3
+  p6
+  p7
+  conclusion1
+  conclusion2
+  conclusion3
+  reference1
+  reference2
+  authorName
+  authorAbout
+  authorLink
+  photoCredit
+  editedBy
+  mainImage
+}
+    `;
+export const MachineLearningFragmentDoc = gql`
+    fragment MachineLearning on MachineLearning {
+  id
+  category
+  publishedDate
+  title
+  subtitle1
+  tableContents1
+  tableContents2
+  tableContents3
+  tableContents4
+  p1
+  p2
+  p3
+  subtitle2
+  p4
+  p5
+  l1
+  l2
+  l3
+  l4
+  l5
+  subtitle3
+  p6
+  p7
+  conclusion1
+  conclusion2
+  conclusion3
+  reference1
+  reference2
+  authorName
+  authorAbout
+  authorLink
+  photoCredit
+  editedBy
+  mainImage
+}
+    `;
 export const SoftwareDevelopmentFragmentDoc = gql`
     fragment SoftwareDevelopment on SoftwareDevelopment {
   id
+  category
+  publishedDate
+  title
+  subtitle1
+  tableContents1
+  tableContents2
+  tableContents3
+  tableContents4
+  p1
+  p2
+  p3
+  subtitle2
+  p4
+  p5
+  l1
+  l2
+  l3
+  l4
+  l5
+  subtitle3
+  p6
+  p7
+  conclusion1
+  conclusion2
+  conclusion3
+  reference1
+  reference2
+  authorName
+  authorAbout
+  authorLink
+  photoCredit
+  editedBy
+  mainImage
+}
+    `;
+export const TelecommunicationFragmentDoc = gql`
+    fragment Telecommunication on Telecommunication {
+  id
+  category
+  publishedDate
+  title
+  subtitle1
+  tableContents1
+  tableContents2
+  tableContents3
+  tableContents4
+  p1
+  p2
+  p3
+  subtitle2
+  p4
+  p5
+  l1
+  l2
+  l3
+  l4
+  l5
+  subtitle3
+  p6
+  p7
+  conclusion1
+  conclusion2
+  conclusion3
+  reference1
+  reference2
+  authorName
+  authorAbout
+  authorLink
+  photoCredit
+  editedBy
+  mainImage
+}
+    `;
+export const WebDevelopmentFragmentDoc = gql`
+    fragment WebDevelopment on WebDevelopment {
+  id
+  category
   publishedDate
   title
   subtitle1
@@ -2409,6 +2661,482 @@ export function useAiLazyQuery(baseOptions?: Apollo.LazyQueryHookOptions<AiQuery
 export type AiQueryHookResult = ReturnType<typeof useAiQuery>;
 export type AiLazyQueryHookResult = ReturnType<typeof useAiLazyQuery>;
 export type AiQueryResult = Apollo.QueryResult<AiQuery, AiQueryVariables>;
+export const AddBlockchainDocument = gql`
+    mutation AddBlockchain($input: BlockchainInput!) {
+  addBlockchain(input: $input) {
+    ...Blockchain
+  }
+}
+    ${BlockchainFragmentDoc}`;
+export type AddBlockchainMutationFn = Apollo.MutationFunction<AddBlockchainMutation, AddBlockchainMutationVariables>;
+
+/**
+ * __useAddBlockchainMutation__
+ *
+ * To run a mutation, you first call `useAddBlockchainMutation` within a React component and pass it any options that fit your needs.
+ * When your component renders, `useAddBlockchainMutation` returns a tuple that includes:
+ * - A mutate function that you can call at any time to execute the mutation
+ * - An object with fields that represent the current status of the mutation's execution
+ *
+ * @param baseOptions options that will be passed into the mutation, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options-2;
+ *
+ * @example
+ * const [addBlockchainMutation, { data, loading, error }] = useAddBlockchainMutation({
+ *   variables: {
+ *      input: // value for 'input'
+ *   },
+ * });
+ */
+export function useAddBlockchainMutation(baseOptions?: Apollo.MutationHookOptions<AddBlockchainMutation, AddBlockchainMutationVariables>) {
+        const options = {...defaultOptions, ...baseOptions}
+        return Apollo.useMutation<AddBlockchainMutation, AddBlockchainMutationVariables>(AddBlockchainDocument, options);
+      }
+export type AddBlockchainMutationHookResult = ReturnType<typeof useAddBlockchainMutation>;
+export type AddBlockchainMutationResult = Apollo.MutationResult<AddBlockchainMutation>;
+export type AddBlockchainMutationOptions = Apollo.BaseMutationOptions<AddBlockchainMutation, AddBlockchainMutationVariables>;
+export const BlockchainDocument = gql`
+    query Blockchain($id: ID!) {
+  blockchain(id: $id) {
+    ...Blockchain
+  }
+}
+    ${BlockchainFragmentDoc}`;
+
+/**
+ * __useBlockchainQuery__
+ *
+ * To run a query within a React component, call `useBlockchainQuery` and pass it any options that fit your needs.
+ * When your component renders, `useBlockchainQuery` returns an object from Apollo Client that contains loading, error, and data properties
+ * you can use to render your UI.
+ *
+ * @param baseOptions options that will be passed into the query, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options;
+ *
+ * @example
+ * const { data, loading, error } = useBlockchainQuery({
+ *   variables: {
+ *      id: // value for 'id'
+ *   },
+ * });
+ */
+export function useBlockchainQuery(baseOptions: Apollo.QueryHookOptions<BlockchainQuery, BlockchainQueryVariables>) {
+        const options = {...defaultOptions, ...baseOptions}
+        return Apollo.useQuery<BlockchainQuery, BlockchainQueryVariables>(BlockchainDocument, options);
+      }
+export function useBlockchainLazyQuery(baseOptions?: Apollo.LazyQueryHookOptions<BlockchainQuery, BlockchainQueryVariables>) {
+          const options = {...defaultOptions, ...baseOptions}
+          return Apollo.useLazyQuery<BlockchainQuery, BlockchainQueryVariables>(BlockchainDocument, options);
+        }
+export type BlockchainQueryHookResult = ReturnType<typeof useBlockchainQuery>;
+export type BlockchainLazyQueryHookResult = ReturnType<typeof useBlockchainLazyQuery>;
+export type BlockchainQueryResult = Apollo.QueryResult<BlockchainQuery, BlockchainQueryVariables>;
+export const AddBusinessAnalysisDocument = gql`
+    mutation AddBusinessAnalysis($input: BusinessAnalysisInput!) {
+  addBusinessAnalysis(input: $input) {
+    ...BusinessAnalysis
+  }
+}
+    ${BusinessAnalysisFragmentDoc}`;
+export type AddBusinessAnalysisMutationFn = Apollo.MutationFunction<AddBusinessAnalysisMutation, AddBusinessAnalysisMutationVariables>;
+
+/**
+ * __useAddBusinessAnalysisMutation__
+ *
+ * To run a mutation, you first call `useAddBusinessAnalysisMutation` within a React component and pass it any options that fit your needs.
+ * When your component renders, `useAddBusinessAnalysisMutation` returns a tuple that includes:
+ * - A mutate function that you can call at any time to execute the mutation
+ * - An object with fields that represent the current status of the mutation's execution
+ *
+ * @param baseOptions options that will be passed into the mutation, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options-2;
+ *
+ * @example
+ * const [addBusinessAnalysisMutation, { data, loading, error }] = useAddBusinessAnalysisMutation({
+ *   variables: {
+ *      input: // value for 'input'
+ *   },
+ * });
+ */
+export function useAddBusinessAnalysisMutation(baseOptions?: Apollo.MutationHookOptions<AddBusinessAnalysisMutation, AddBusinessAnalysisMutationVariables>) {
+        const options = {...defaultOptions, ...baseOptions}
+        return Apollo.useMutation<AddBusinessAnalysisMutation, AddBusinessAnalysisMutationVariables>(AddBusinessAnalysisDocument, options);
+      }
+export type AddBusinessAnalysisMutationHookResult = ReturnType<typeof useAddBusinessAnalysisMutation>;
+export type AddBusinessAnalysisMutationResult = Apollo.MutationResult<AddBusinessAnalysisMutation>;
+export type AddBusinessAnalysisMutationOptions = Apollo.BaseMutationOptions<AddBusinessAnalysisMutation, AddBusinessAnalysisMutationVariables>;
+export const BusinessAnalysisDocument = gql`
+    query BusinessAnalysis($id: ID!) {
+  businessAnalysis(id: $id) {
+    ...BusinessAnalysis
+  }
+}
+    ${BusinessAnalysisFragmentDoc}`;
+
+/**
+ * __useBusinessAnalysisQuery__
+ *
+ * To run a query within a React component, call `useBusinessAnalysisQuery` and pass it any options that fit your needs.
+ * When your component renders, `useBusinessAnalysisQuery` returns an object from Apollo Client that contains loading, error, and data properties
+ * you can use to render your UI.
+ *
+ * @param baseOptions options that will be passed into the query, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options;
+ *
+ * @example
+ * const { data, loading, error } = useBusinessAnalysisQuery({
+ *   variables: {
+ *      id: // value for 'id'
+ *   },
+ * });
+ */
+export function useBusinessAnalysisQuery(baseOptions: Apollo.QueryHookOptions<BusinessAnalysisQuery, BusinessAnalysisQueryVariables>) {
+        const options = {...defaultOptions, ...baseOptions}
+        return Apollo.useQuery<BusinessAnalysisQuery, BusinessAnalysisQueryVariables>(BusinessAnalysisDocument, options);
+      }
+export function useBusinessAnalysisLazyQuery(baseOptions?: Apollo.LazyQueryHookOptions<BusinessAnalysisQuery, BusinessAnalysisQueryVariables>) {
+          const options = {...defaultOptions, ...baseOptions}
+          return Apollo.useLazyQuery<BusinessAnalysisQuery, BusinessAnalysisQueryVariables>(BusinessAnalysisDocument, options);
+        }
+export type BusinessAnalysisQueryHookResult = ReturnType<typeof useBusinessAnalysisQuery>;
+export type BusinessAnalysisLazyQueryHookResult = ReturnType<typeof useBusinessAnalysisLazyQuery>;
+export type BusinessAnalysisQueryResult = Apollo.QueryResult<BusinessAnalysisQuery, BusinessAnalysisQueryVariables>;
+export const AddCloudComputingDocument = gql`
+    mutation AddCloudComputing($input: CloudComputingInput!) {
+  addCloudComputing(input: $input) {
+    ...CloudComputing
+  }
+}
+    ${CloudComputingFragmentDoc}`;
+export type AddCloudComputingMutationFn = Apollo.MutationFunction<AddCloudComputingMutation, AddCloudComputingMutationVariables>;
+
+/**
+ * __useAddCloudComputingMutation__
+ *
+ * To run a mutation, you first call `useAddCloudComputingMutation` within a React component and pass it any options that fit your needs.
+ * When your component renders, `useAddCloudComputingMutation` returns a tuple that includes:
+ * - A mutate function that you can call at any time to execute the mutation
+ * - An object with fields that represent the current status of the mutation's execution
+ *
+ * @param baseOptions options that will be passed into the mutation, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options-2;
+ *
+ * @example
+ * const [addCloudComputingMutation, { data, loading, error }] = useAddCloudComputingMutation({
+ *   variables: {
+ *      input: // value for 'input'
+ *   },
+ * });
+ */
+export function useAddCloudComputingMutation(baseOptions?: Apollo.MutationHookOptions<AddCloudComputingMutation, AddCloudComputingMutationVariables>) {
+        const options = {...defaultOptions, ...baseOptions}
+        return Apollo.useMutation<AddCloudComputingMutation, AddCloudComputingMutationVariables>(AddCloudComputingDocument, options);
+      }
+export type AddCloudComputingMutationHookResult = ReturnType<typeof useAddCloudComputingMutation>;
+export type AddCloudComputingMutationResult = Apollo.MutationResult<AddCloudComputingMutation>;
+export type AddCloudComputingMutationOptions = Apollo.BaseMutationOptions<AddCloudComputingMutation, AddCloudComputingMutationVariables>;
+export const CloudComputingDocument = gql`
+    query CloudComputing($id: ID!) {
+  cloudComputing(id: $id) {
+    ...CloudComputing
+  }
+}
+    ${CloudComputingFragmentDoc}`;
+
+/**
+ * __useCloudComputingQuery__
+ *
+ * To run a query within a React component, call `useCloudComputingQuery` and pass it any options that fit your needs.
+ * When your component renders, `useCloudComputingQuery` returns an object from Apollo Client that contains loading, error, and data properties
+ * you can use to render your UI.
+ *
+ * @param baseOptions options that will be passed into the query, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options;
+ *
+ * @example
+ * const { data, loading, error } = useCloudComputingQuery({
+ *   variables: {
+ *      id: // value for 'id'
+ *   },
+ * });
+ */
+export function useCloudComputingQuery(baseOptions: Apollo.QueryHookOptions<CloudComputingQuery, CloudComputingQueryVariables>) {
+        const options = {...defaultOptions, ...baseOptions}
+        return Apollo.useQuery<CloudComputingQuery, CloudComputingQueryVariables>(CloudComputingDocument, options);
+      }
+export function useCloudComputingLazyQuery(baseOptions?: Apollo.LazyQueryHookOptions<CloudComputingQuery, CloudComputingQueryVariables>) {
+          const options = {...defaultOptions, ...baseOptions}
+          return Apollo.useLazyQuery<CloudComputingQuery, CloudComputingQueryVariables>(CloudComputingDocument, options);
+        }
+export type CloudComputingQueryHookResult = ReturnType<typeof useCloudComputingQuery>;
+export type CloudComputingLazyQueryHookResult = ReturnType<typeof useCloudComputingLazyQuery>;
+export type CloudComputingQueryResult = Apollo.QueryResult<CloudComputingQuery, CloudComputingQueryVariables>;
+export const AddComputerNetworkingDocument = gql`
+    mutation AddComputerNetworking($input: ComputerNetworkingInput!) {
+  addComputerNetworking(input: $input) {
+    ...ComputerNetworking
+  }
+}
+    ${ComputerNetworkingFragmentDoc}`;
+export type AddComputerNetworkingMutationFn = Apollo.MutationFunction<AddComputerNetworkingMutation, AddComputerNetworkingMutationVariables>;
+
+/**
+ * __useAddComputerNetworkingMutation__
+ *
+ * To run a mutation, you first call `useAddComputerNetworkingMutation` within a React component and pass it any options that fit your needs.
+ * When your component renders, `useAddComputerNetworkingMutation` returns a tuple that includes:
+ * - A mutate function that you can call at any time to execute the mutation
+ * - An object with fields that represent the current status of the mutation's execution
+ *
+ * @param baseOptions options that will be passed into the mutation, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options-2;
+ *
+ * @example
+ * const [addComputerNetworkingMutation, { data, loading, error }] = useAddComputerNetworkingMutation({
+ *   variables: {
+ *      input: // value for 'input'
+ *   },
+ * });
+ */
+export function useAddComputerNetworkingMutation(baseOptions?: Apollo.MutationHookOptions<AddComputerNetworkingMutation, AddComputerNetworkingMutationVariables>) {
+        const options = {...defaultOptions, ...baseOptions}
+        return Apollo.useMutation<AddComputerNetworkingMutation, AddComputerNetworkingMutationVariables>(AddComputerNetworkingDocument, options);
+      }
+export type AddComputerNetworkingMutationHookResult = ReturnType<typeof useAddComputerNetworkingMutation>;
+export type AddComputerNetworkingMutationResult = Apollo.MutationResult<AddComputerNetworkingMutation>;
+export type AddComputerNetworkingMutationOptions = Apollo.BaseMutationOptions<AddComputerNetworkingMutation, AddComputerNetworkingMutationVariables>;
+export const ComputerNetworkingDocument = gql`
+    query ComputerNetworking($id: ID!) {
+  computerNetworking(id: $id) {
+    ...ComputerNetworking
+  }
+}
+    ${ComputerNetworkingFragmentDoc}`;
+
+/**
+ * __useComputerNetworkingQuery__
+ *
+ * To run a query within a React component, call `useComputerNetworkingQuery` and pass it any options that fit your needs.
+ * When your component renders, `useComputerNetworkingQuery` returns an object from Apollo Client that contains loading, error, and data properties
+ * you can use to render your UI.
+ *
+ * @param baseOptions options that will be passed into the query, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options;
+ *
+ * @example
+ * const { data, loading, error } = useComputerNetworkingQuery({
+ *   variables: {
+ *      id: // value for 'id'
+ *   },
+ * });
+ */
+export function useComputerNetworkingQuery(baseOptions: Apollo.QueryHookOptions<ComputerNetworkingQuery, ComputerNetworkingQueryVariables>) {
+        const options = {...defaultOptions, ...baseOptions}
+        return Apollo.useQuery<ComputerNetworkingQuery, ComputerNetworkingQueryVariables>(ComputerNetworkingDocument, options);
+      }
+export function useComputerNetworkingLazyQuery(baseOptions?: Apollo.LazyQueryHookOptions<ComputerNetworkingQuery, ComputerNetworkingQueryVariables>) {
+          const options = {...defaultOptions, ...baseOptions}
+          return Apollo.useLazyQuery<ComputerNetworkingQuery, ComputerNetworkingQueryVariables>(ComputerNetworkingDocument, options);
+        }
+export type ComputerNetworkingQueryHookResult = ReturnType<typeof useComputerNetworkingQuery>;
+export type ComputerNetworkingLazyQueryHookResult = ReturnType<typeof useComputerNetworkingLazyQuery>;
+export type ComputerNetworkingQueryResult = Apollo.QueryResult<ComputerNetworkingQuery, ComputerNetworkingQueryVariables>;
+export const AddDataManagementDocument = gql`
+    mutation AddDataManagement($input: DataManagementInput!) {
+  addDataManagement(input: $input) {
+    ...DataManagement
+  }
+}
+    ${DataManagementFragmentDoc}`;
+export type AddDataManagementMutationFn = Apollo.MutationFunction<AddDataManagementMutation, AddDataManagementMutationVariables>;
+
+/**
+ * __useAddDataManagementMutation__
+ *
+ * To run a mutation, you first call `useAddDataManagementMutation` within a React component and pass it any options that fit your needs.
+ * When your component renders, `useAddDataManagementMutation` returns a tuple that includes:
+ * - A mutate function that you can call at any time to execute the mutation
+ * - An object with fields that represent the current status of the mutation's execution
+ *
+ * @param baseOptions options that will be passed into the mutation, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options-2;
+ *
+ * @example
+ * const [addDataManagementMutation, { data, loading, error }] = useAddDataManagementMutation({
+ *   variables: {
+ *      input: // value for 'input'
+ *   },
+ * });
+ */
+export function useAddDataManagementMutation(baseOptions?: Apollo.MutationHookOptions<AddDataManagementMutation, AddDataManagementMutationVariables>) {
+        const options = {...defaultOptions, ...baseOptions}
+        return Apollo.useMutation<AddDataManagementMutation, AddDataManagementMutationVariables>(AddDataManagementDocument, options);
+      }
+export type AddDataManagementMutationHookResult = ReturnType<typeof useAddDataManagementMutation>;
+export type AddDataManagementMutationResult = Apollo.MutationResult<AddDataManagementMutation>;
+export type AddDataManagementMutationOptions = Apollo.BaseMutationOptions<AddDataManagementMutation, AddDataManagementMutationVariables>;
+export const DataManagementDocument = gql`
+    query DataManagement($id: ID!) {
+  dataManagement(id: $id) {
+    ...DataManagement
+  }
+}
+    ${DataManagementFragmentDoc}`;
+
+/**
+ * __useDataManagementQuery__
+ *
+ * To run a query within a React component, call `useDataManagementQuery` and pass it any options that fit your needs.
+ * When your component renders, `useDataManagementQuery` returns an object from Apollo Client that contains loading, error, and data properties
+ * you can use to render your UI.
+ *
+ * @param baseOptions options that will be passed into the query, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options;
+ *
+ * @example
+ * const { data, loading, error } = useDataManagementQuery({
+ *   variables: {
+ *      id: // value for 'id'
+ *   },
+ * });
+ */
+export function useDataManagementQuery(baseOptions: Apollo.QueryHookOptions<DataManagementQuery, DataManagementQueryVariables>) {
+        const options = {...defaultOptions, ...baseOptions}
+        return Apollo.useQuery<DataManagementQuery, DataManagementQueryVariables>(DataManagementDocument, options);
+      }
+export function useDataManagementLazyQuery(baseOptions?: Apollo.LazyQueryHookOptions<DataManagementQuery, DataManagementQueryVariables>) {
+          const options = {...defaultOptions, ...baseOptions}
+          return Apollo.useLazyQuery<DataManagementQuery, DataManagementQueryVariables>(DataManagementDocument, options);
+        }
+export type DataManagementQueryHookResult = ReturnType<typeof useDataManagementQuery>;
+export type DataManagementLazyQueryHookResult = ReturnType<typeof useDataManagementLazyQuery>;
+export type DataManagementQueryResult = Apollo.QueryResult<DataManagementQuery, DataManagementQueryVariables>;
+export const AddGameProgrammingDocument = gql`
+    mutation AddGameProgramming($input: GameProgrammingInput!) {
+  addGameProgramming(input: $input) {
+    ...GameProgramming
+  }
+}
+    ${GameProgrammingFragmentDoc}`;
+export type AddGameProgrammingMutationFn = Apollo.MutationFunction<AddGameProgrammingMutation, AddGameProgrammingMutationVariables>;
+
+/**
+ * __useAddGameProgrammingMutation__
+ *
+ * To run a mutation, you first call `useAddGameProgrammingMutation` within a React component and pass it any options that fit your needs.
+ * When your component renders, `useAddGameProgrammingMutation` returns a tuple that includes:
+ * - A mutate function that you can call at any time to execute the mutation
+ * - An object with fields that represent the current status of the mutation's execution
+ *
+ * @param baseOptions options that will be passed into the mutation, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options-2;
+ *
+ * @example
+ * const [addGameProgrammingMutation, { data, loading, error }] = useAddGameProgrammingMutation({
+ *   variables: {
+ *      input: // value for 'input'
+ *   },
+ * });
+ */
+export function useAddGameProgrammingMutation(baseOptions?: Apollo.MutationHookOptions<AddGameProgrammingMutation, AddGameProgrammingMutationVariables>) {
+        const options = {...defaultOptions, ...baseOptions}
+        return Apollo.useMutation<AddGameProgrammingMutation, AddGameProgrammingMutationVariables>(AddGameProgrammingDocument, options);
+      }
+export type AddGameProgrammingMutationHookResult = ReturnType<typeof useAddGameProgrammingMutation>;
+export type AddGameProgrammingMutationResult = Apollo.MutationResult<AddGameProgrammingMutation>;
+export type AddGameProgrammingMutationOptions = Apollo.BaseMutationOptions<AddGameProgrammingMutation, AddGameProgrammingMutationVariables>;
+export const GameProgrammingDocument = gql`
+    query GameProgramming($id: ID!) {
+  gameProgramming(id: $id) {
+    ...GameProgramming
+  }
+}
+    ${GameProgrammingFragmentDoc}`;
+
+/**
+ * __useGameProgrammingQuery__
+ *
+ * To run a query within a React component, call `useGameProgrammingQuery` and pass it any options that fit your needs.
+ * When your component renders, `useGameProgrammingQuery` returns an object from Apollo Client that contains loading, error, and data properties
+ * you can use to render your UI.
+ *
+ * @param baseOptions options that will be passed into the query, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options;
+ *
+ * @example
+ * const { data, loading, error } = useGameProgrammingQuery({
+ *   variables: {
+ *      id: // value for 'id'
+ *   },
+ * });
+ */
+export function useGameProgrammingQuery(baseOptions: Apollo.QueryHookOptions<GameProgrammingQuery, GameProgrammingQueryVariables>) {
+        const options = {...defaultOptions, ...baseOptions}
+        return Apollo.useQuery<GameProgrammingQuery, GameProgrammingQueryVariables>(GameProgrammingDocument, options);
+      }
+export function useGameProgrammingLazyQuery(baseOptions?: Apollo.LazyQueryHookOptions<GameProgrammingQuery, GameProgrammingQueryVariables>) {
+          const options = {...defaultOptions, ...baseOptions}
+          return Apollo.useLazyQuery<GameProgrammingQuery, GameProgrammingQueryVariables>(GameProgrammingDocument, options);
+        }
+export type GameProgrammingQueryHookResult = ReturnType<typeof useGameProgrammingQuery>;
+export type GameProgrammingLazyQueryHookResult = ReturnType<typeof useGameProgrammingLazyQuery>;
+export type GameProgrammingQueryResult = Apollo.QueryResult<GameProgrammingQuery, GameProgrammingQueryVariables>;
+export const AddMachineLearningDocument = gql`
+    mutation AddMachineLearning($input: MachineLearningInput!) {
+  addMachineLearning(input: $input) {
+    ...MachineLearning
+  }
+}
+    ${MachineLearningFragmentDoc}`;
+export type AddMachineLearningMutationFn = Apollo.MutationFunction<AddMachineLearningMutation, AddMachineLearningMutationVariables>;
+
+/**
+ * __useAddMachineLearningMutation__
+ *
+ * To run a mutation, you first call `useAddMachineLearningMutation` within a React component and pass it any options that fit your needs.
+ * When your component renders, `useAddMachineLearningMutation` returns a tuple that includes:
+ * - A mutate function that you can call at any time to execute the mutation
+ * - An object with fields that represent the current status of the mutation's execution
+ *
+ * @param baseOptions options that will be passed into the mutation, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options-2;
+ *
+ * @example
+ * const [addMachineLearningMutation, { data, loading, error }] = useAddMachineLearningMutation({
+ *   variables: {
+ *      input: // value for 'input'
+ *   },
+ * });
+ */
+export function useAddMachineLearningMutation(baseOptions?: Apollo.MutationHookOptions<AddMachineLearningMutation, AddMachineLearningMutationVariables>) {
+        const options = {...defaultOptions, ...baseOptions}
+        return Apollo.useMutation<AddMachineLearningMutation, AddMachineLearningMutationVariables>(AddMachineLearningDocument, options);
+      }
+export type AddMachineLearningMutationHookResult = ReturnType<typeof useAddMachineLearningMutation>;
+export type AddMachineLearningMutationResult = Apollo.MutationResult<AddMachineLearningMutation>;
+export type AddMachineLearningMutationOptions = Apollo.BaseMutationOptions<AddMachineLearningMutation, AddMachineLearningMutationVariables>;
+export const MachineLearningDocument = gql`
+    query MachineLearning($id: ID!) {
+  machineLearning(id: $id) {
+    ...MachineLearning
+  }
+}
+    ${MachineLearningFragmentDoc}`;
+
+/**
+ * __useMachineLearningQuery__
+ *
+ * To run a query within a React component, call `useMachineLearningQuery` and pass it any options that fit your needs.
+ * When your component renders, `useMachineLearningQuery` returns an object from Apollo Client that contains loading, error, and data properties
+ * you can use to render your UI.
+ *
+ * @param baseOptions options that will be passed into the query, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options;
+ *
+ * @example
+ * const { data, loading, error } = useMachineLearningQuery({
+ *   variables: {
+ *      id: // value for 'id'
+ *   },
+ * });
+ */
+export function useMachineLearningQuery(baseOptions: Apollo.QueryHookOptions<MachineLearningQuery, MachineLearningQueryVariables>) {
+        const options = {...defaultOptions, ...baseOptions}
+        return Apollo.useQuery<MachineLearningQuery, MachineLearningQueryVariables>(MachineLearningDocument, options);
+      }
+export function useMachineLearningLazyQuery(baseOptions?: Apollo.LazyQueryHookOptions<MachineLearningQuery, MachineLearningQueryVariables>) {
+          const options = {...defaultOptions, ...baseOptions}
+          return Apollo.useLazyQuery<MachineLearningQuery, MachineLearningQueryVariables>(MachineLearningDocument, options);
+        }
+export type MachineLearningQueryHookResult = ReturnType<typeof useMachineLearningQuery>;
+export type MachineLearningLazyQueryHookResult = ReturnType<typeof useMachineLearningLazyQuery>;
+export type MachineLearningQueryResult = Apollo.QueryResult<MachineLearningQuery, MachineLearningQueryVariables>;
 export const AddSoftwareDevelopmentDocument = gql`
     mutation AddSoftwareDevelopment($input: SoftwareDevelopmentInput!) {
   addSoftwareDevelopment(input: $input) {
@@ -2510,33 +3238,169 @@ export function useUpdateSoftwareDevelopmentMutation(baseOptions?: Apollo.Mutati
 export type UpdateSoftwareDevelopmentMutationHookResult = ReturnType<typeof useUpdateSoftwareDevelopmentMutation>;
 export type UpdateSoftwareDevelopmentMutationResult = Apollo.MutationResult<UpdateSoftwareDevelopmentMutation>;
 export type UpdateSoftwareDevelopmentMutationOptions = Apollo.BaseMutationOptions<UpdateSoftwareDevelopmentMutation, UpdateSoftwareDevelopmentMutationVariables>;
+export const AddTelecommunicationDocument = gql`
+    mutation AddTelecommunication($input: TelecommunicationInput!) {
+  addTelecommunication(input: $input) {
+    ...Telecommunication
+  }
+}
+    ${TelecommunicationFragmentDoc}`;
+export type AddTelecommunicationMutationFn = Apollo.MutationFunction<AddTelecommunicationMutation, AddTelecommunicationMutationVariables>;
+
+/**
+ * __useAddTelecommunicationMutation__
+ *
+ * To run a mutation, you first call `useAddTelecommunicationMutation` within a React component and pass it any options that fit your needs.
+ * When your component renders, `useAddTelecommunicationMutation` returns a tuple that includes:
+ * - A mutate function that you can call at any time to execute the mutation
+ * - An object with fields that represent the current status of the mutation's execution
+ *
+ * @param baseOptions options that will be passed into the mutation, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options-2;
+ *
+ * @example
+ * const [addTelecommunicationMutation, { data, loading, error }] = useAddTelecommunicationMutation({
+ *   variables: {
+ *      input: // value for 'input'
+ *   },
+ * });
+ */
+export function useAddTelecommunicationMutation(baseOptions?: Apollo.MutationHookOptions<AddTelecommunicationMutation, AddTelecommunicationMutationVariables>) {
+        const options = {...defaultOptions, ...baseOptions}
+        return Apollo.useMutation<AddTelecommunicationMutation, AddTelecommunicationMutationVariables>(AddTelecommunicationDocument, options);
+      }
+export type AddTelecommunicationMutationHookResult = ReturnType<typeof useAddTelecommunicationMutation>;
+export type AddTelecommunicationMutationResult = Apollo.MutationResult<AddTelecommunicationMutation>;
+export type AddTelecommunicationMutationOptions = Apollo.BaseMutationOptions<AddTelecommunicationMutation, AddTelecommunicationMutationVariables>;
+export const TelecommunicationDocument = gql`
+    query Telecommunication($id: ID!) {
+  telecommunication(id: $id) {
+    ...Telecommunication
+  }
+}
+    ${TelecommunicationFragmentDoc}`;
+
+/**
+ * __useTelecommunicationQuery__
+ *
+ * To run a query within a React component, call `useTelecommunicationQuery` and pass it any options that fit your needs.
+ * When your component renders, `useTelecommunicationQuery` returns an object from Apollo Client that contains loading, error, and data properties
+ * you can use to render your UI.
+ *
+ * @param baseOptions options that will be passed into the query, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options;
+ *
+ * @example
+ * const { data, loading, error } = useTelecommunicationQuery({
+ *   variables: {
+ *      id: // value for 'id'
+ *   },
+ * });
+ */
+export function useTelecommunicationQuery(baseOptions: Apollo.QueryHookOptions<TelecommunicationQuery, TelecommunicationQueryVariables>) {
+        const options = {...defaultOptions, ...baseOptions}
+        return Apollo.useQuery<TelecommunicationQuery, TelecommunicationQueryVariables>(TelecommunicationDocument, options);
+      }
+export function useTelecommunicationLazyQuery(baseOptions?: Apollo.LazyQueryHookOptions<TelecommunicationQuery, TelecommunicationQueryVariables>) {
+          const options = {...defaultOptions, ...baseOptions}
+          return Apollo.useLazyQuery<TelecommunicationQuery, TelecommunicationQueryVariables>(TelecommunicationDocument, options);
+        }
+export type TelecommunicationQueryHookResult = ReturnType<typeof useTelecommunicationQuery>;
+export type TelecommunicationLazyQueryHookResult = ReturnType<typeof useTelecommunicationLazyQuery>;
+export type TelecommunicationQueryResult = Apollo.QueryResult<TelecommunicationQuery, TelecommunicationQueryVariables>;
+export const AddWebDevelopmentDocument = gql`
+    mutation AddWebDevelopment($input: WebDevelopmentInput!) {
+  addWebDevelopment(input: $input) {
+    ...WebDevelopment
+  }
+}
+    ${WebDevelopmentFragmentDoc}`;
+export type AddWebDevelopmentMutationFn = Apollo.MutationFunction<AddWebDevelopmentMutation, AddWebDevelopmentMutationVariables>;
+
+/**
+ * __useAddWebDevelopmentMutation__
+ *
+ * To run a mutation, you first call `useAddWebDevelopmentMutation` within a React component and pass it any options that fit your needs.
+ * When your component renders, `useAddWebDevelopmentMutation` returns a tuple that includes:
+ * - A mutate function that you can call at any time to execute the mutation
+ * - An object with fields that represent the current status of the mutation's execution
+ *
+ * @param baseOptions options that will be passed into the mutation, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options-2;
+ *
+ * @example
+ * const [addWebDevelopmentMutation, { data, loading, error }] = useAddWebDevelopmentMutation({
+ *   variables: {
+ *      input: // value for 'input'
+ *   },
+ * });
+ */
+export function useAddWebDevelopmentMutation(baseOptions?: Apollo.MutationHookOptions<AddWebDevelopmentMutation, AddWebDevelopmentMutationVariables>) {
+        const options = {...defaultOptions, ...baseOptions}
+        return Apollo.useMutation<AddWebDevelopmentMutation, AddWebDevelopmentMutationVariables>(AddWebDevelopmentDocument, options);
+      }
+export type AddWebDevelopmentMutationHookResult = ReturnType<typeof useAddWebDevelopmentMutation>;
+export type AddWebDevelopmentMutationResult = Apollo.MutationResult<AddWebDevelopmentMutation>;
+export type AddWebDevelopmentMutationOptions = Apollo.BaseMutationOptions<AddWebDevelopmentMutation, AddWebDevelopmentMutationVariables>;
+export const WebDevelopmentDocument = gql`
+    query WebDevelopment($id: ID!) {
+  webDevelopment(id: $id) {
+    ...WebDevelopment
+  }
+}
+    ${WebDevelopmentFragmentDoc}`;
+
+/**
+ * __useWebDevelopmentQuery__
+ *
+ * To run a query within a React component, call `useWebDevelopmentQuery` and pass it any options that fit your needs.
+ * When your component renders, `useWebDevelopmentQuery` returns an object from Apollo Client that contains loading, error, and data properties
+ * you can use to render your UI.
+ *
+ * @param baseOptions options that will be passed into the query, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options;
+ *
+ * @example
+ * const { data, loading, error } = useWebDevelopmentQuery({
+ *   variables: {
+ *      id: // value for 'id'
+ *   },
+ * });
+ */
+export function useWebDevelopmentQuery(baseOptions: Apollo.QueryHookOptions<WebDevelopmentQuery, WebDevelopmentQueryVariables>) {
+        const options = {...defaultOptions, ...baseOptions}
+        return Apollo.useQuery<WebDevelopmentQuery, WebDevelopmentQueryVariables>(WebDevelopmentDocument, options);
+      }
+export function useWebDevelopmentLazyQuery(baseOptions?: Apollo.LazyQueryHookOptions<WebDevelopmentQuery, WebDevelopmentQueryVariables>) {
+          const options = {...defaultOptions, ...baseOptions}
+          return Apollo.useLazyQuery<WebDevelopmentQuery, WebDevelopmentQueryVariables>(WebDevelopmentDocument, options);
+        }
+export type WebDevelopmentQueryHookResult = ReturnType<typeof useWebDevelopmentQuery>;
+export type WebDevelopmentLazyQueryHookResult = ReturnType<typeof useWebDevelopmentLazyQuery>;
+export type WebDevelopmentQueryResult = Apollo.QueryResult<WebDevelopmentQuery, WebDevelopmentQueryVariables>;
 export type AddBlogPostMutationVariables = Exact<{
   input: BlogPostInput;
 }>;
 
 
-export type AddBlogPostMutation = { __typename?: 'Mutation', addBlogPost?: { __typename?: 'BlogPost', id: string, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null } | null };
+export type AddBlogPostMutation = { __typename?: 'Mutation', addBlogPost?: { __typename?: 'BlogPost', id: string, category?: CategoriesEnum | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null } | null };
 
 export type BlogCardQueryVariables = Exact<{ [key: string]: never; }>;
 
 
-export type BlogCardQuery = { __typename?: 'Query', blogCard?: Array<{ __typename?: 'BlogPost', id: string, title?: string | null, subtitle1?: string | null } | null> | null };
+export type BlogCardQuery = { __typename?: 'Query', blogCard?: Array<{ __typename?: 'BlogPost', category?: CategoriesEnum | null, id: string, title?: string | null, subtitle1?: string | null } | null> | null };
 
-export type BlogCardFragment = { __typename?: 'BlogPost', id: string, title?: string | null, subtitle1?: string | null };
+export type BlogCardFragment = { __typename?: 'BlogPost', category?: CategoriesEnum | null, id: string, title?: string | null, subtitle1?: string | null };
 
 export type BlogPostQueryVariables = Exact<{
   id: Scalars['ID'];
 }>;
 
 
-export type BlogPostQuery = { __typename?: 'Query', blogPost?: { __typename?: 'BlogPost', id: string, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null } | null };
+export type BlogPostQuery = { __typename?: 'Query', blogPost?: { __typename?: 'BlogPost', id: string, category?: CategoriesEnum | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null } | null };
 
-export type BlogPostFragment = { __typename?: 'BlogPost', id: string, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null };
+export type BlogPostFragment = { __typename?: 'BlogPost', id: string, category?: CategoriesEnum | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null };
 
 export type BlogPostsQueryVariables = Exact<{ [key: string]: never; }>;
 
 
-export type BlogPostsQuery = { __typename?: 'Query', blogPosts?: Array<{ __typename?: 'BlogPost', id: string, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null } | null> | null };
+export type BlogPostsQuery = { __typename?: 'Query', blogPosts?: Array<{ __typename?: 'BlogPost', id: string, category?: CategoriesEnum | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null } | null> | null };
 
 export type AddItMutationVariables = Exact<{
   input: ItInput;
@@ -2570,25 +3434,169 @@ export type AiQuery = { __typename?: 'Query', ai?: { __typename?: 'Ai', id?: str
 
 export type AiFragment = { __typename?: 'Ai', id?: string | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null };
 
+export type AddBlockchainMutationVariables = Exact<{
+  input: BlockchainInput;
+}>;
+
+
+export type AddBlockchainMutation = { __typename?: 'Mutation', addBlockchain?: { __typename?: 'Blockchain', id?: string | null, category?: CategoriesEnum | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null } | null };
+
+export type BlockchainQueryVariables = Exact<{
+  id: Scalars['ID'];
+}>;
+
+
+export type BlockchainQuery = { __typename?: 'Query', blockchain?: { __typename?: 'Blockchain', id?: string | null, category?: CategoriesEnum | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null } | null };
+
+export type BlockchainFragment = { __typename?: 'Blockchain', id?: string | null, category?: CategoriesEnum | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null };
+
+export type AddBusinessAnalysisMutationVariables = Exact<{
+  input: BusinessAnalysisInput;
+}>;
+
+
+export type AddBusinessAnalysisMutation = { __typename?: 'Mutation', addBusinessAnalysis?: { __typename?: 'BusinessAnalysis', id?: string | null, category?: CategoriesEnum | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null } | null };
+
+export type BusinessAnalysisQueryVariables = Exact<{
+  id: Scalars['ID'];
+}>;
+
+
+export type BusinessAnalysisQuery = { __typename?: 'Query', businessAnalysis?: { __typename?: 'BusinessAnalysis', id?: string | null, category?: CategoriesEnum | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null } | null };
+
+export type BusinessAnalysisFragment = { __typename?: 'BusinessAnalysis', id?: string | null, category?: CategoriesEnum | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null };
+
+export type AddCloudComputingMutationVariables = Exact<{
+  input: CloudComputingInput;
+}>;
+
+
+export type AddCloudComputingMutation = { __typename?: 'Mutation', addCloudComputing?: { __typename?: 'CloudComputing', id?: string | null, category?: CategoriesEnum | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null } | null };
+
+export type CloudComputingQueryVariables = Exact<{
+  id: Scalars['ID'];
+}>;
+
+
+export type CloudComputingQuery = { __typename?: 'Query', cloudComputing?: { __typename?: 'CloudComputing', id?: string | null, category?: CategoriesEnum | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null } | null };
+
+export type CloudComputingFragment = { __typename?: 'CloudComputing', id?: string | null, category?: CategoriesEnum | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null };
+
+export type AddComputerNetworkingMutationVariables = Exact<{
+  input: ComputerNetworkingInput;
+}>;
+
+
+export type AddComputerNetworkingMutation = { __typename?: 'Mutation', addComputerNetworking?: { __typename?: 'ComputerNetworking', id?: string | null, category?: CategoriesEnum | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null } | null };
+
+export type ComputerNetworkingQueryVariables = Exact<{
+  id: Scalars['ID'];
+}>;
+
+
+export type ComputerNetworkingQuery = { __typename?: 'Query', computerNetworking?: { __typename?: 'ComputerNetworking', id?: string | null, category?: CategoriesEnum | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null } | null };
+
+export type ComputerNetworkingFragment = { __typename?: 'ComputerNetworking', id?: string | null, category?: CategoriesEnum | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null };
+
+export type AddDataManagementMutationVariables = Exact<{
+  input: DataManagementInput;
+}>;
+
+
+export type AddDataManagementMutation = { __typename?: 'Mutation', addDataManagement?: { __typename?: 'DataManagement', id?: string | null, category?: CategoriesEnum | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null } | null };
+
+export type DataManagementQueryVariables = Exact<{
+  id: Scalars['ID'];
+}>;
+
+
+export type DataManagementQuery = { __typename?: 'Query', dataManagement?: { __typename?: 'DataManagement', id?: string | null, category?: CategoriesEnum | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null } | null };
+
+export type DataManagementFragment = { __typename?: 'DataManagement', id?: string | null, category?: CategoriesEnum | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null };
+
+export type AddGameProgrammingMutationVariables = Exact<{
+  input: GameProgrammingInput;
+}>;
+
+
+export type AddGameProgrammingMutation = { __typename?: 'Mutation', addGameProgramming?: { __typename?: 'GameProgramming', id?: string | null, category?: CategoriesEnum | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null } | null };
+
+export type GameProgrammingQueryVariables = Exact<{
+  id: Scalars['ID'];
+}>;
+
+
+export type GameProgrammingQuery = { __typename?: 'Query', gameProgramming?: { __typename?: 'GameProgramming', id?: string | null, category?: CategoriesEnum | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null } | null };
+
+export type GameProgrammingFragment = { __typename?: 'GameProgramming', id?: string | null, category?: CategoriesEnum | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null };
+
+export type AddMachineLearningMutationVariables = Exact<{
+  input: MachineLearningInput;
+}>;
+
+
+export type AddMachineLearningMutation = { __typename?: 'Mutation', addMachineLearning?: { __typename?: 'MachineLearning', id?: string | null, category?: CategoriesEnum | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null } | null };
+
+export type MachineLearningQueryVariables = Exact<{
+  id: Scalars['ID'];
+}>;
+
+
+export type MachineLearningQuery = { __typename?: 'Query', machineLearning?: { __typename?: 'MachineLearning', id?: string | null, category?: CategoriesEnum | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null } | null };
+
+export type MachineLearningFragment = { __typename?: 'MachineLearning', id?: string | null, category?: CategoriesEnum | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null };
+
 export type AddSoftwareDevelopmentMutationVariables = Exact<{
   input: SoftwareDevelopmentInput;
 }>;
 
 
-export type AddSoftwareDevelopmentMutation = { __typename?: 'Mutation', addSoftwareDevelopment?: { __typename?: 'SoftwareDevelopment', id: string, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null } | null };
+export type AddSoftwareDevelopmentMutation = { __typename?: 'Mutation', addSoftwareDevelopment?: { __typename?: 'SoftwareDevelopment', id: string, category?: CategoriesEnum | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null } | null };
 
 export type SoftwareDevelopmentQueryVariables = Exact<{
   id: Scalars['ID'];
 }>;
 
 
-export type SoftwareDevelopmentQuery = { __typename?: 'Query', softwareDevelopment?: { __typename?: 'SoftwareDevelopment', id: string, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null } | null };
+export type SoftwareDevelopmentQuery = { __typename?: 'Query', softwareDevelopment?: { __typename?: 'SoftwareDevelopment', id: string, category?: CategoriesEnum | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null } | null };
 
-export type SoftwareDevelopmentFragment = { __typename?: 'SoftwareDevelopment', id: string, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null };
+export type SoftwareDevelopmentFragment = { __typename?: 'SoftwareDevelopment', id: string, category?: CategoriesEnum | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null };
 
 export type UpdateSoftwareDevelopmentMutationVariables = Exact<{
   input: SoftwareDevelopmentInput;
 }>;
 
 
-export type UpdateSoftwareDevelopmentMutation = { __typename?: 'Mutation', updateSoftwareDevelopment?: { __typename?: 'SoftwareDevelopment', id: string, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null } | null };
+export type UpdateSoftwareDevelopmentMutation = { __typename?: 'Mutation', updateSoftwareDevelopment?: { __typename?: 'SoftwareDevelopment', id: string, category?: CategoriesEnum | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null } | null };
+
+export type AddTelecommunicationMutationVariables = Exact<{
+  input: TelecommunicationInput;
+}>;
+
+
+export type AddTelecommunicationMutation = { __typename?: 'Mutation', addTelecommunication?: { __typename?: 'Telecommunication', id?: string | null, category?: CategoriesEnum | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null } | null };
+
+export type TelecommunicationQueryVariables = Exact<{
+  id: Scalars['ID'];
+}>;
+
+
+export type TelecommunicationQuery = { __typename?: 'Query', telecommunication?: { __typename?: 'Telecommunication', id?: string | null, category?: CategoriesEnum | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null } | null };
+
+export type TelecommunicationFragment = { __typename?: 'Telecommunication', id?: string | null, category?: CategoriesEnum | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null };
+
+export type AddWebDevelopmentMutationVariables = Exact<{
+  input: WebDevelopmentInput;
+}>;
+
+
+export type AddWebDevelopmentMutation = { __typename?: 'Mutation', addWebDevelopment?: { __typename?: 'WebDevelopment', id?: string | null, category?: CategoriesEnum | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null } | null };
+
+export type WebDevelopmentQueryVariables = Exact<{
+  id: Scalars['ID'];
+}>;
+
+
+export type WebDevelopmentQuery = { __typename?: 'Query', webDevelopment?: { __typename?: 'WebDevelopment', id?: string | null, category?: CategoriesEnum | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null } | null };
+
+export type WebDevelopmentFragment = { __typename?: 'WebDevelopment', id?: string | null, category?: CategoriesEnum | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null };

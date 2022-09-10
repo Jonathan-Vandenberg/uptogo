@@ -1,14 +1,64 @@
-import { useState } from "react";
-import {
-  SoftwareDevelopment,
-  useUpdateSoftwareDevelopmentMutation,
-} from "../types";
+import { useEffect, useState } from "react";
+import { useUpdateSoftwareDevelopmentMutation } from "../types";
 import Select from "react-select";
+import { SoftwareDevelopment } from "@prisma/client";
 
 const options = [
-  { value: "chocolate", label: "Chocolate" },
-  { value: "strawberry", label: "Strawberry" },
-  { value: "vanilla", label: "Vanilla" },
+  { value: "BLOG", label: "BLOG" },
+  { value: "PROJECT_MANAGEMENT", label: "PROJECT_MANAGEMENT" },
+  { value: "BUSINESS_MANAGEMENT", label: "BUSINESS_MANAGEMENT" },
+  { value: "HUMAN_RESOURCES", label: "HUMAN_RESOURCES" },
+  { value: "BANKING_MANAGEMENT", label: "BANKING_MANAGEMENT" },
+  { value: "INTERNATIONAL_BUSINESS", label: "INTERNATIONAL_BUSINESS" },
+  { value: "SOCIALMEDIA_MARKETING", label: "SOCIALMEDIA_MARKETING" },
+  { value: "AGRIBUSINESS_MANAGEMENT", label: "AGRIBUSINESS_MANAGEMENT" },
+  { value: "SUPPLYCHAIN_MANAGEMENT", label: "SUPPLYCHAIN_MANAGEMENT" },
+  { value: "LEADERSHIP_MANAGEMENT", label: "LEADERSHIP_MANAGEMENT" },
+  { value: "FASHION_DESIGN", label: "FASHION_DESIGN" },
+  { value: "LANDSCAPE", label: "LANDSCAPE" },
+  { value: "MUSIC_AUDIO", label: "MUSIC_AUDIO" },
+  { value: "FILM_MEDIA", label: "FILM_MEDIA" },
+  { value: "GRAPHIC_DESIGN", label: "GRAPHIC_DESIGN" },
+  { value: "INTERIOR_DESIGN", label: "INTERIOR_DESIGN" },
+  { value: "DIGITAL_MEDIA", label: "DIGITAL_MEDIA" },
+  { value: "ACTING", label: "ACTING" },
+  { value: "ANIMATION_3D", label: "ANIMATION_3D" },
+  { value: "AGED_CARE", label: "AGED_CARE" },
+  { value: "NUTRITION", label: "NUTRITION" },
+  { value: "NURSING", label: "NURSING" },
+  { value: "VETENARY", label: "VETENARY" },
+  { value: "MEDICINE", label: "MEDICINE" },
+  { value: "PUBLIC_HEALTH", label: "PUBLIC_HEALTH" },
+  { value: "DENTAL", label: "DENTAL" },
+  { value: "MASSAGE", label: "MASSAGE" },
+  { value: "MENTAL_HEALTH", label: "MENTAL_HEALTH" },
+  { value: "BAKING", label: "BAKING" },
+  { value: "COMMERCIAL_COOKING", label: "COMMERCIAL_COOKING" },
+  { value: "HOPITALITY_MANAGEMENT", label: "HOPITALITY_MANAGEMENT" },
+  { value: "INTL_HOTEL_MANAGEMENT", label: "INTL_HOTEL_MANAGEMENT" },
+  { value: "TRAVEL_TOURISM", label: "TRAVEL_TOURISM" },
+  { value: "EVENTS", label: "EVENTS" },
+  { value: "AUTOMOTIVE", label: "AUTOMOTIVE" },
+  { value: "BEAUTY", label: "BEAUTY" },
+  { value: "CONSTRUCTION", label: "CONSTRUCTION" },
+  { value: "CARPENTRY", label: "CARPENTRY" },
+  { value: "EDUCATION", label: "EDUCATION" },
+  { value: "FITNESS", label: "FITNESS" },
+  { value: "HARIDRESSING", label: "HARIDRESSING" },
+  { value: "HORTICULTURE", label: "HORTICULTURE" },
+  { value: "SPORT", label: "SPORT" },
+  { value: "YOGA", label: "YOGA" },
+  { value: "SOFTWARE_DEVELOPMENT", label: "SOFTWARE_DEVELOPMENT" },
+  { value: "COMPUTER_NETWORKING", label: "COMPUTER_NETWORKING" },
+  { value: "CLOUD_COMPUTING", label: "CLOUD_COMPUTING" },
+  { value: "BUSINESS_ANALYSIS", label: "BUSINESS_ANALYSIS" },
+  { value: "TELECOMMUNICATION", label: "TELECOMMUNICATION" },
+  { value: "GAME_PROGRAMMING", label: "GAME_PROGRAMMING" },
+  { value: "WEB_DEVELOPMENT", label: "WEB_DEVELOPMENT" },
+  { value: "MACHINE_LEARNING", label: "MACHINE_LEARNING" },
+  { value: "DATA_MANAGEMENT", label: "DATA_MANAGEMENT" },
+  { value: "BLOCKCHAIN_TECH", label: "BLOCKCHAIN_TECH" },
+  { value: "AI", label: "AI" },
 ];
 
 interface IProps {
@@ -17,6 +67,7 @@ interface IProps {
 
 const AddClientForm = ({ details }: IProps) => {
   const Dtitle = details?.title;
+  const Dcategory = details?.category;
   const Dsubtitle1 = details?.subtitle1;
   const Dsubtitle2 = details?.subtitle2;
   const Dsubtitle3 = details?.subtitle3;
@@ -49,6 +100,7 @@ const AddClientForm = ({ details }: IProps) => {
   const DmainImage = details?.mainImage;
   const DphotoCredit = details?.photoCredit;
 
+  const [category, setCategory] = useState(Dcategory);
   const [title, setTitle] = useState(Dtitle);
   const [subtitle1, setSubtitle1] = useState(Dsubtitle1);
   const [subtitle2, setSubtitle2] = useState(Dsubtitle2);
@@ -84,52 +136,60 @@ const AddClientForm = ({ details }: IProps) => {
 
   const [updateSoftwareDevelopment] = useUpdateSoftwareDevelopmentMutation();
 
-  const onFinish = (e: { preventDefault: () => void }) => {
-    updateSoftwareDevelopment({
-      variables: {
-        input: {
-          editedBy: editedBy,
-          publishedDate: publishedDate,
-          mainImage: mainImage,
-          photoCredit: photoCredit,
-          title: title,
-          subtitle1: subtitle1,
-          tableContents1: tableContents1,
-          tableContents2: tableContents2,
-          tableContents3: tableContents3,
-          tableContents4: tableContents4,
-          p1: p1,
-          p2: p2,
-          p3: p3,
-          subtitle2: subtitle2,
-          p4: p4,
-          p5: p5,
-          l1: l1,
-          l2: l2,
-          l3: l3,
-          l4: l4,
-          l5: l5,
-          subtitle3: subtitle3,
-          p6: p6,
-          p7: p7,
-          conclusion1: conclusion1,
-          conclusion2: conclusion2,
-          conclusion3: conclusion3,
-          reference1: reference1,
-          reference2: reference2,
-          authorName: authorName,
-          authorAbout: authorAbout,
-          authorLink: authorLink,
-        },
+  let form = {
+    variables: {
+      input: {
+        editedBy: editedBy,
+        publishedDate: publishedDate,
+        mainImage: mainImage,
+        photoCredit: photoCredit,
+        title: title,
+        subtitle1: subtitle1,
+        tableContents1: tableContents1,
+        tableContents2: tableContents2,
+        tableContents3: tableContents3,
+        tableContents4: tableContents4,
+        p1: p1,
+        p2: p2,
+        p3: p3,
+        subtitle2: subtitle2,
+        p4: p4,
+        p5: p5,
+        l1: l1,
+        l2: l2,
+        l3: l3,
+        l4: l4,
+        l5: l5,
+        subtitle3: subtitle3,
+        p6: p6,
+        p7: p7,
+        conclusion1: conclusion1,
+        conclusion2: conclusion2,
+        conclusion3: conclusion3,
+        reference1: reference1,
+        reference2: reference2,
+        authorName: authorName,
+        authorAbout: authorAbout,
+        authorLink: authorLink,
       },
-    });
+    },
+  };
+
+  useEffect(() => {
+    setCategory(details?.category);
+  }, [details?.category]);
+
+  const onFinish = (e: { preventDefault: () => void }) => {
+    if (category === "SOFTWARE_DEVELOPMENT") updateSoftwareDevelopment(form);
   };
 
   return (
     <form onSubmit={onFinish} className="space-y-3 py-12">
-      <Select options={options} />
+      <div className="px-8 ">
+        <Select options={options} />
+      </div>
 
-      <div className="px-8 flex items-start space-y-3 justify-center flex-col pt-10">
+      <div className="px-8 flex items-start space-y-3 justify-center flex-col pt-3">
         <input
           id="publishedDate"
           value={publishedDate as string}

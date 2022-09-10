@@ -1,5 +1,6 @@
-fragment SoftwareDevelopment on SoftwareDevelopment {
+fragment CloudComputing on CloudComputing {
   id
+  category
   publishedDate
   title
   subtitle1

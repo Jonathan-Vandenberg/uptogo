@@ -1,5 +1,6 @@
-fragment SoftwareDevelopment on SoftwareDevelopment {
+fragment GameProgramming on GameProgramming {
   id
+  category
   publishedDate
   title
   subtitle1

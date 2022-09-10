@@ -1,5 +1,6 @@
-fragment SoftwareDevelopment on SoftwareDevelopment {
+fragment Telecommunication on Telecommunication {
   id
+  category
   publishedDate
   title
   subtitle1

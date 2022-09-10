@@ -1,5 +1,6 @@
-fragment SoftwareDevelopment on SoftwareDevelopment {
+fragment BusinessAnalysis on BusinessAnalysis {
   id
+  category
   publishedDate
   title
   subtitle1

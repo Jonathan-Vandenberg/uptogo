@@ -81,8 +81,8 @@ const resolvers: Resolvers = {
         }
       })
     },
-    machineLearing: (_, {id},{prisma}) => {
-      return prisma.machineLearing.findUnique({
+    machineLearning: (_, {id},{prisma}) => {
+      return prisma.machineLearning.findUnique({
         where: {
           id
         }
@@ -118,6 +118,7 @@ const resolvers: Resolvers = {
         },
         data: {
         title: input?.title,
+        category: input?.category,
         subtitle1: input?.subtitle1,
         tableContents1: input?.tableContents1,
         tableContents2: input?.tableContents2,
@@ -158,6 +159,7 @@ const resolvers: Resolvers = {
     const blogPost = await prisma.blogPost.create({
       data: {
         title: input?.title,
+        category: input?.category,
         subtitle1: input?.subtitle1,
         tableContents1: input?.tableContents1,
         tableContents2: input?.tableContents2,
@@ -197,6 +199,7 @@ const resolvers: Resolvers = {
     const softwareDevelopment = await prisma.softwareDevelopment.create({
       data: {
         title: input?.title,
+        category: input?.category,
         subtitle1: input?.subtitle1,
         tableContents1: input?.tableContents1,
         tableContents2: input?.tableContents2,
@@ -466,8 +469,8 @@ const resolvers: Resolvers = {
     })
     return webDevelopment
   },
-  addMachineLearing: async (_, {input}, {prisma}) => {
-    const machineLearing = await prisma.machineLearing.create({
+  addMachineLearning: async (_, {input}, {prisma}) => {
+    const machineLearing = await prisma.machineLearning.create({
       data: {
         title: input?.title,
         subtitle1: input?.subtitle1,

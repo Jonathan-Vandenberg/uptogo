@@ -1,4 +1,5 @@
 fragment BlogCard on BlogPost {
+  category
   id
   title
   subtitle1

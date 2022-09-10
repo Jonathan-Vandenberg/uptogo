@@ -1,5 +1,6 @@
-fragment SoftwareDevelopment on SoftwareDevelopment {
+fragment WebDevelopment on WebDevelopment {
   id
+  category
   publishedDate
   title
   subtitle1

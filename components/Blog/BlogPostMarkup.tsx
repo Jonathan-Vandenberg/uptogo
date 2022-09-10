@@ -1,10 +1,11 @@
 import { AiOutlineCheck } from "react-icons/ai";
 import { BsCheckLg } from "react-icons/bs";
 import { GrAddCircle, GrCheckmark } from "react-icons/gr";
-import type { BlogPost, SoftwareDevelopment } from "../../types";
+import type { BlogPost } from "../../types";
 import CheckIcon from "@mui/icons-material/Check";
 import { MdAddCircleOutline, MdDeleteForever } from "react-icons/md";
 import { FaEdit } from "react-icons/fa";
+import { SoftwareDevelopment } from "@prisma/client";
 
 interface IProps {
   data: BlogPost | SoftwareDevelopment | null | undefined;
@@ -76,37 +77,19 @@ export default function BlogPostMarkup({ data, handleUpdate }: IProps) {
           <div className="text-xl">
             <FaEdit size={25} className="text-orange" />
           </div>
-          <a
-            href="https://www.google.com/maps/dir/?api=1&destination=10.814211192365%2C106.7785692215"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <p className="text-lg text-orange">Edit</p>
-          </a>
+          <p className="text-lg text-orange">Edit</p>
         </div>
         <div className="flex items-center space-x-1">
           <div className="text-xl text-green-600">
             <MdAddCircleOutline size={25} />
           </div>
-          <a
-            href="https://www.google.com/maps/dir/?api=1&destination=10.814211192365%2C106.7785692215"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <p className="text-lg text-green-600">Add</p>
-          </a>
+          <p className="text-lg text-green-600">Add</p>
         </div>
         <div className="flex items-center space-x-1">
           <div className="text-xl">
             <MdDeleteForever size={25} className="text-red-500" />
           </div>
-          <a
-            href="https://www.google.com/maps/dir/?api=1&destination=10.814211192365%2C106.7785692215"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <p className="text-lg text-red-500">Delete</p>
-          </a>
+          <p className="text-lg text-red-500">Delete</p>
         </div>
       </div>
     </div>
