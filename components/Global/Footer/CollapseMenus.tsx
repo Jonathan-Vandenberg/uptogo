@@ -141,36 +141,56 @@ export const CoursesIT = ({ handleStepper }: IStepper) => {
             Phát triển phần mền
           </p>
         </Link>
-        <p className="cursor-pointer p-4 pl-12 hover:bg-lightBlue">
-          Mạng máy tính
-        </p>
-        <p className="cursor-pointer p-4 pl-12 hover:bg-lightBlue">
-          Điện toán đám mây
-        </p>
-        <p className="cursor-pointer p-4 pl-12 hover:bg-lightBlue">
-          Phân tích kinh doanh
-        </p>
-        <p className="cursor-pointer p-4 pl-12 hover:bg-lightBlue">
-          Viễn thông
-        </p>
-        <p className="cursor-pointer p-4 pl-12 hover:bg-lightBlue">
-          Lập trình trò chơi
-        </p>
-        <p className="cursor-pointer p-4 pl-12 hover:bg-lightBlue">
-          Phát triển Website
-        </p>
-        <p className="cursor-pointer p-4 pl-12 hover:bg-lightBlue">
-          Phương tiện máy móc
-        </p>
-        <p className="cursor-pointer p-4 pl-12 hover:bg-lightBlue">
-          Quản lý dữ liệu
-        </p>
-        <p className="cursor-pointer p-4 pl-12 hover:bg-lightBlue">
-          Công nghệ tiền ảo
-        </p>
-        <p className="cursor-pointer p-4 pl-12 hover:bg-lightBlue">
-          Trí tuệ nhân tạo
-        </p>
+        <Link href={"/courses/information-technology/computer-networking"}>
+          <p className="cursor-pointer p-4 pl-12 hover:bg-lightBlue">
+            Mạng máy tính
+          </p>
+        </Link>
+        <Link href={"/courses/information-technology/cloud-computing"}>
+          <p className="cursor-pointer p-4 pl-12 hover:bg-lightBlue">
+            Điện toán đám mây
+          </p>
+        </Link>
+        <Link href={"/courses/information-technology/business-analysis"}>
+          <p className="cursor-pointer p-4 pl-12 hover:bg-lightBlue">
+            Phân tích kinh doanh
+          </p>
+        </Link>
+        <Link href={"/courses/information-technology/telecommunication"}>
+          <p className="cursor-pointer p-4 pl-12 hover:bg-lightBlue">
+            Viễn thông
+          </p>
+        </Link>
+        <Link href={"/courses/information-technology/game-programming"}>
+          <p className="cursor-pointer p-4 pl-12 hover:bg-lightBlue">
+            Lập trình trò chơi
+          </p>
+        </Link>
+        <Link href={"/courses/information-technology/web-development"}>
+          <p className="cursor-pointer p-4 pl-12 hover:bg-lightBlue">
+            Phát triển Website
+          </p>
+        </Link>
+        <Link href={"/courses/information-technology/machine-learing"}>
+          <p className="cursor-pointer p-4 pl-12 hover:bg-lightBlue">
+            Phương tiện máy móc
+          </p>
+        </Link>
+        <Link href={"/courses/information-technology/data-management"}>
+          <p className="cursor-pointer p-4 pl-12 hover:bg-lightBlue">
+            Quản lý dữ liệu
+          </p>
+        </Link>
+        <Link href={"/courses/information-technology/blockchain-technology"}>
+          <p className="cursor-pointer p-4 pl-12 hover:bg-lightBlue">
+            Công nghệ tiền ảo
+          </p>
+        </Link>
+        <Link href={"/courses/information-technology/artificial-intelligence"}>
+          <p className="cursor-pointer p-4 pl-12 hover:bg-lightBlue">
+            Trí tuệ nhân tạo
+          </p>
+        </Link>
       </div>
     </Collapsible>
   );
