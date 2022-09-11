@@ -1,0 +1,6 @@
+fragment TelecommunicationCard on Telecommunication {
+  category
+  id
+  title
+  subtitle1
+}

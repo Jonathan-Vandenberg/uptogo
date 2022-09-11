@@ -1,6 +1,6 @@
 import BlogMain from "../../../../../components/Blog/BlogMain";
 import { useRouter } from "next/router";
-import { useSoftwareDevelopmentQuery } from "../../../../../types";
+import { useBlockchainQuery } from "../../../../../types";
 import { useState } from "react";
 import MainForm from "../../../../../components/MainForm";
 
@@ -24,7 +24,7 @@ export default function Blog() {
     setEdit(true);
   };
 
-  const { data, loading, error } = useSoftwareDevelopmentQuery({
+  const { data, loading, error } = useBlockchainQuery({
     variables: {
       id: id,
     },
@@ -33,13 +33,13 @@ export default function Blog() {
   return (
     <>
       <BlogMain
-        data={data?.softwareDevelopment}
+        data={data?.blockchain}
         handleAdd={handleAdd}
         handleEdit={handleEdit}
       />
       {showForm && (
         <MainForm
-          details={data?.softwareDevelopment}
+          details={data?.blockchain}
           add={add}
           edit={edit}
           handleClose={() => setShowForm(false)}

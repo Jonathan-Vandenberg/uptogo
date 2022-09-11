@@ -3,17 +3,17 @@ import BlogMain from "../../../../components/Blog/BlogMain";
 import BlogPageHero from "../../../../components/Blog/BlogPageHero";
 import MainForm from "../../../../components/MainForm";
 import {
-  useSoftwareDevelopmentCardQuery,
-  useSoftwareDevelopmentQuery,
+  useTelecommunicationCardQuery,
+  useTelecommunicationQuery,
 } from "../../../../types";
 import { useRouter } from "next/router";
 
 function Posts() {
-  const { data, loading, error } = useSoftwareDevelopmentCardQuery();
+  const { data, loading, error } = useTelecommunicationCardQuery();
 
   return (
     <>
-      {data?.softwareDevelopmentCard
+      {data?.telecommunicationCard
         ?.slice(0)
         .reverse()
         .map((post) => (
@@ -48,24 +48,24 @@ export default function App() {
     setEdit(true);
   };
 
-  const { data } = useSoftwareDevelopmentQuery({
+  const { data } = useTelecommunicationQuery({
     variables: {
-      id: "631d68109f9c5ab336b3d04e",
+      id: "631db7e4628acdf2748fc17f",
     },
   });
 
-  console.log(data?.softwareDevelopment?.category);
+  console.log(data?.telecommunication?.category);
   return (
     <>
       <Crubs />
       <BlogMain
-        data={data?.softwareDevelopment}
+        data={data?.telecommunication}
         handleEdit={handleEdit}
         handleAdd={handleAdd}
       />
       {showForm && (
         <MainForm
-          details={data?.softwareDevelopment}
+          details={data?.telecommunication}
           add={add}
           edit={edit}
           handleClose={() => setShowForm(false)}

@@ -2,18 +2,15 @@ import { useState } from "react";
 import BlogMain from "../../../../components/Blog/BlogMain";
 import BlogPageHero from "../../../../components/Blog/BlogPageHero";
 import MainForm from "../../../../components/MainForm";
-import {
-  useMachineLearningCardQuery,
-  useMachineLearningQuery,
-} from "../../../../types";
+import { useAiCardQuery, useAiQuery } from "../../../../types";
 import { useRouter } from "next/router";
 
 function Posts() {
-  const { data, loading, error } = useMachineLearningCardQuery();
+  const { data, loading, error } = useAiCardQuery();
 
   return (
     <>
-      {data?.machineLearningCard
+      {data?.aiCard
         ?.slice(0)
         .reverse()
         .map((post) => (
@@ -48,24 +45,19 @@ export default function App() {
     setEdit(true);
   };
 
-  const { data } = useMachineLearningQuery({
+  const { data } = useAiQuery({
     variables: {
-      id: "631db7a3628acdf2748fc179",
+      id: "631b37b1ca7c40b764a17122",
     },
   });
 
-  console.log(data?.machineLearning?.category);
   return (
     <>
       <Crubs />
-      <BlogMain
-        data={data?.machineLearning}
-        handleEdit={handleEdit}
-        handleAdd={handleAdd}
-      />
+      <BlogMain data={data?.ai} handleEdit={handleEdit} handleAdd={handleAdd} />
       {showForm && (
         <MainForm
-          details={data?.machineLearning}
+          details={data?.ai}
           add={add}
           edit={edit}
           handleClose={() => setShowForm(false)}

@@ -1,10 +1,37 @@
 import Image from "next/image";
-import type { BlogPost, SoftwareDevelopment } from "../../types";
+import type {
+  Ai,
+  Blockchain,
+  BlogPost,
+  BusinessAnalysis,
+  CloudComputing,
+  ComputerNetworking,
+  DataManagement,
+  GameProgramming,
+  MachineLearning,
+  SoftwareDevelopment,
+  Telecommunication,
+  WebDevelopment,
+} from "../../types";
 import { Avatar } from "@mui/material";
 import { GrCheckmark } from "react-icons/gr";
 
 interface IProps {
-  data: BlogPost | SoftwareDevelopment | null | undefined;
+  data:
+    | BlogPost
+    | Telecommunication
+    | BusinessAnalysis
+    | CloudComputing
+    | ComputerNetworking
+    | SoftwareDevelopment
+    | GameProgramming
+    | WebDevelopment
+    | MachineLearning
+    | DataManagement
+    | Blockchain
+    | Ai
+    | undefined
+    | null;
 }
 
 const BlogHeader = ({ data }: IProps) => {

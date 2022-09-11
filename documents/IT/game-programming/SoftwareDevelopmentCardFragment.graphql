@@ -1,0 +1,6 @@
+fragment GameProgrammingCard on GameProgramming {
+  category
+  id
+  title
+  subtitle1
+}

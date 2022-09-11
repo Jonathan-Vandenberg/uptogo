@@ -1,0 +1,6 @@
+fragment DataManagementCard on DataManagement {
+  category
+  id
+  title
+  subtitle1
+}

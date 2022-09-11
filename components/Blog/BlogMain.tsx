@@ -1,9 +1,37 @@
-import { BlogPost, ItQuery, SoftwareDevelopment } from "../../types";
+import {
+  Ai,
+  Blockchain,
+  BlogPost,
+  BusinessAnalysis,
+  CloudComputing,
+  ComputerNetworking,
+  DataManagement,
+  GameProgramming,
+  ItQuery,
+  MachineLearning,
+  SoftwareDevelopment,
+  Telecommunication,
+  WebDevelopment,
+} from "../../types";
 import BlogHeader from "./BlogHeader";
 import BlogPostMarkup from "./BlogPostMarkup";
 
 interface IProps {
-  data: BlogPost | SoftwareDevelopment | undefined | null;
+  data:
+    | BlogPost
+    | Telecommunication
+    | BusinessAnalysis
+    | CloudComputing
+    | ComputerNetworking
+    | SoftwareDevelopment
+    | GameProgramming
+    | WebDevelopment
+    | MachineLearning
+    | DataManagement
+    | Blockchain
+    | Ai
+    | undefined
+    | null;
   handleAdd: () => void;
   handleEdit: () => void;
 }

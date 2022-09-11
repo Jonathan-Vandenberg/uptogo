@@ -2,14 +2,38 @@ import Link from "next/link";
 import Image from "next/image";
 import image from "../../public/navDropdownImages/asianMale.jpg";
 import {
+  Ai,
+  Blockchain,
   BlogPost,
+  BusinessAnalysis,
+  CloudComputing,
+  ComputerNetworking,
+  DataManagement,
+  GameProgramming,
+  MachineLearning,
   SoftwareDevelopment,
   SoftwareDevelopmentQuery,
+  Telecommunication,
+  WebDevelopment,
 } from "../../types";
 import { MouseEventHandler, useEffect, useState } from "react";
 
 interface IProps {
-  data: BlogPost | SoftwareDevelopment | undefined | null;
+  data:
+    | BlogPost
+    | Telecommunication
+    | BusinessAnalysis
+    | CloudComputing
+    | ComputerNetworking
+    | SoftwareDevelopment
+    | GameProgramming
+    | WebDevelopment
+    | MachineLearning
+    | DataManagement
+    | Blockchain
+    | Ai
+    | undefined
+    | null;
 }
 
 enum CategoriesEnum {

@@ -1,0 +1,7 @@
+# import CloudComputingCard from "./CloudComputingCardFragment.graphql"
+
+query CloudComputingCard {
+  cloudComputingCard {
+    ...CloudComputingCard
+  }
+}

@@ -1,10 +1,37 @@
 import CheckIcon from "@mui/icons-material/Check";
 import { FaEdit } from "react-icons/fa";
 import { MdAddCircleOutline, MdDeleteForever } from "react-icons/md";
-import type { BlogPost, SoftwareDevelopment } from "../../types";
+import type {
+  Ai,
+  Blockchain,
+  BlogPost,
+  BusinessAnalysis,
+  CloudComputing,
+  ComputerNetworking,
+  DataManagement,
+  GameProgramming,
+  MachineLearning,
+  SoftwareDevelopment,
+  Telecommunication,
+  WebDevelopment,
+} from "../../types";
 
 interface IProps {
-  data: BlogPost | SoftwareDevelopment | null | undefined;
+  data:
+    | BlogPost
+    | Telecommunication
+    | BusinessAnalysis
+    | CloudComputing
+    | ComputerNetworking
+    | SoftwareDevelopment
+    | GameProgramming
+    | WebDevelopment
+    | MachineLearning
+    | DataManagement
+    | Blockchain
+    | Ai
+    | undefined
+    | null;
   handleAdd: () => void;
   handleEdit: () => void;
 }

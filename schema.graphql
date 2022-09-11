@@ -2,6 +2,8 @@ type Query {
   blogPosts: [BlogPost]
   blogPost(id: ID!): BlogPost
   blogCard: [BlogPost]
+  it(id: ID!): It
+
   softwareDevelopment(id: ID!): SoftwareDevelopment
   computerNetworking(id: ID!): ComputerNetworking
   cloudComputing(id: ID!): CloudComputing
@@ -14,9 +16,17 @@ type Query {
   blockchain(id: ID!): Blockchain
   ai(id: ID!): Ai
 
-  it(id: ID!): It
-
   softwareDevelopmentCard: [SoftwareDevelopment]
+  computerNetworkingCard: [ComputerNetworking]
+  cloudComputingCard: [CloudComputing]
+  businessAnalysisCard: [BusinessAnalysis]
+  telecommunicationCard: [Telecommunication]
+  gameProgrammingCard: [GameProgramming]
+  webDevelopmentCard: [WebDevelopment]
+  machineLearningCard: [MachineLearning]
+  dataManagementCard: [DataManagement]
+  blockchainCard: [Blockchain]
+  aiCard: [Ai]
 }
 
 type Mutation {
@@ -38,6 +48,16 @@ type Mutation {
   updateSoftwareDevelopment(
     input: SoftwareDevelopmentInput!
   ): SoftwareDevelopment
+  updateComputerNetworking(input: ComputerNetworkingInput!): ComputerNetworking
+  updateCloudComputing(input: CloudComputingInput!): CloudComputing
+  updateBusinessAnalysis(input: BusinessAnalysisInput!): BusinessAnalysis
+  updateTelecommunication(input: TelecommunicationInput!): Telecommunication
+  updateGameProgramming(input: GameProgrammingInput!): GameProgramming
+  updateWebDevelopment(input: WebDevelopmentInput!): WebDevelopment
+  updateMachineLearning(input: MachineLearningInput!): MachineLearning
+  updateDataManagement(input: DataManagementInput!): DataManagement
+  updateBlockchain(input: BlockchainInput!): Blockchain
+  updateAi(input: AiInput!): Ai
 }
 
 type Account {
@@ -224,7 +244,7 @@ input SoftwareDevelopmentInput {
 
 type ComputerNetworking {
   category: String
-  id: ID
+  id: ID!
   title: String
   subtitle1: String
   tableContents1: String
@@ -260,7 +280,7 @@ type ComputerNetworking {
 }
 input ComputerNetworkingInput {
   category: String
-  id: ID
+  id: ID!
   title: String
   subtitle1: String
   tableContents1: String
@@ -297,7 +317,7 @@ input ComputerNetworkingInput {
 
 type CloudComputing {
   category: String
-  id: ID
+  id: ID!
   title: String
   subtitle1: String
   tableContents1: String
@@ -333,7 +353,7 @@ type CloudComputing {
 }
 input CloudComputingInput {
   category: String
-  id: ID
+  id: ID!
   title: String
   subtitle1: String
   tableContents1: String
@@ -370,7 +390,7 @@ input CloudComputingInput {
 
 type BusinessAnalysis {
   category: String
-  id: ID
+  id: ID!
   title: String
   subtitle1: String
   tableContents1: String
@@ -406,7 +426,7 @@ type BusinessAnalysis {
 }
 input BusinessAnalysisInput {
   category: String
-  id: ID
+  id: ID!
   title: String
   subtitle1: String
   tableContents1: String
@@ -443,7 +463,7 @@ input BusinessAnalysisInput {
 
 type Telecommunication {
   category: String
-  id: ID
+  id: ID!
   title: String
   subtitle1: String
   tableContents1: String
@@ -479,7 +499,7 @@ type Telecommunication {
 }
 input TelecommunicationInput {
   category: String
-  id: ID
+  id: ID!
   title: String
   subtitle1: String
   tableContents1: String
@@ -516,7 +536,7 @@ input TelecommunicationInput {
 
 type GameProgramming {
   category: String
-  id: ID
+  id: ID!
   title: String
   subtitle1: String
   tableContents1: String
@@ -552,7 +572,7 @@ type GameProgramming {
 }
 input GameProgrammingInput {
   category: String
-  id: ID
+  id: ID!
   title: String
   subtitle1: String
   tableContents1: String
@@ -589,7 +609,7 @@ input GameProgrammingInput {
 
 type WebDevelopment {
   category: String
-  id: ID
+  id: ID!
   title: String
   subtitle1: String
   tableContents1: String
@@ -625,7 +645,7 @@ type WebDevelopment {
 }
 input WebDevelopmentInput {
   category: String
-  id: ID
+  id: ID!
   title: String
   subtitle1: String
   tableContents1: String
@@ -662,7 +682,7 @@ input WebDevelopmentInput {
 
 type MachineLearning {
   category: String
-  id: ID
+  id: ID!
   title: String
   subtitle1: String
   tableContents1: String
@@ -698,7 +718,7 @@ type MachineLearning {
 }
 input MachineLearningInput {
   category: String
-  id: ID
+  id: ID!
   title: String
   subtitle1: String
   tableContents1: String
@@ -735,7 +755,7 @@ input MachineLearningInput {
 
 type DataManagement {
   category: String
-  id: ID
+  id: ID!
   title: String
   subtitle1: String
   tableContents1: String
@@ -771,7 +791,7 @@ type DataManagement {
 }
 input DataManagementInput {
   category: String
-  id: ID
+  id: ID!
   title: String
   subtitle1: String
   tableContents1: String
@@ -808,7 +828,7 @@ input DataManagementInput {
 
 type Blockchain {
   category: String
-  id: ID
+  id: ID!
   title: String
   subtitle1: String
   tableContents1: String
@@ -844,7 +864,7 @@ type Blockchain {
 }
 input BlockchainInput {
   category: String
-  id: ID
+  id: ID!
   title: String
   subtitle1: String
   tableContents1: String
@@ -881,7 +901,7 @@ input BlockchainInput {
 
 type Ai {
   category: String
-  id: ID
+  id: ID!
   title: String
   subtitle1: String
   tableContents1: String
@@ -917,7 +937,7 @@ type Ai {
 }
 input AiInput {
   category: String
-  id: ID
+  id: ID!
   title: String
   subtitle1: String
   tableContents1: String

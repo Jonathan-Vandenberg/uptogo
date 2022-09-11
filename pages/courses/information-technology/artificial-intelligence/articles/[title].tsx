@@ -1,6 +1,6 @@
 import BlogMain from "../../../../../components/Blog/BlogMain";
 import { useRouter } from "next/router";
-import { useTelecommunicationQuery } from "../../../../../types";
+import { useAiQuery } from "../../../../../types";
 import { useState } from "react";
 import MainForm from "../../../../../components/MainForm";
 
@@ -24,7 +24,7 @@ export default function Blog() {
     setEdit(true);
   };
 
-  const { data, loading, error } = useTelecommunicationQuery({
+  const { data, loading, error } = useAiQuery({
     variables: {
       id: id,
     },
@@ -32,14 +32,10 @@ export default function Blog() {
 
   return (
     <>
-      <BlogMain
-        data={data?.telecommunication}
-        handleAdd={handleAdd}
-        handleEdit={handleEdit}
-      />
+      <BlogMain data={data?.ai} handleAdd={handleAdd} handleEdit={handleEdit} />
       {showForm && (
         <MainForm
-          details={data?.telecommunication}
+          details={data?.ai}
           add={add}
           edit={edit}
           handleClose={() => setShowForm(false)}

@@ -47,7 +47,7 @@ export type Ai = {
   conclusion2?: Maybe<Scalars['String']>;
   conclusion3?: Maybe<Scalars['String']>;
   editedBy?: Maybe<Scalars['String']>;
-  id?: Maybe<Scalars['ID']>;
+  id: Scalars['ID'];
   l1?: Maybe<Scalars['String']>;
   l2?: Maybe<Scalars['String']>;
   l3?: Maybe<Scalars['String']>;
@@ -84,7 +84,7 @@ export type AiInput = {
   conclusion2?: InputMaybe<Scalars['String']>;
   conclusion3?: InputMaybe<Scalars['String']>;
   editedBy?: InputMaybe<Scalars['String']>;
-  id?: InputMaybe<Scalars['ID']>;
+  id: Scalars['ID'];
   l1?: InputMaybe<Scalars['String']>;
   l2?: InputMaybe<Scalars['String']>;
   l3?: InputMaybe<Scalars['String']>;
@@ -122,7 +122,7 @@ export type Blockchain = {
   conclusion2?: Maybe<Scalars['String']>;
   conclusion3?: Maybe<Scalars['String']>;
   editedBy?: Maybe<Scalars['String']>;
-  id?: Maybe<Scalars['ID']>;
+  id: Scalars['ID'];
   l1?: Maybe<Scalars['String']>;
   l2?: Maybe<Scalars['String']>;
   l3?: Maybe<Scalars['String']>;
@@ -159,7 +159,7 @@ export type BlockchainInput = {
   conclusion2?: InputMaybe<Scalars['String']>;
   conclusion3?: InputMaybe<Scalars['String']>;
   editedBy?: InputMaybe<Scalars['String']>;
-  id?: InputMaybe<Scalars['ID']>;
+  id: Scalars['ID'];
   l1?: InputMaybe<Scalars['String']>;
   l2?: InputMaybe<Scalars['String']>;
   l3?: InputMaybe<Scalars['String']>;
@@ -272,7 +272,7 @@ export type BusinessAnalysis = {
   conclusion2?: Maybe<Scalars['String']>;
   conclusion3?: Maybe<Scalars['String']>;
   editedBy?: Maybe<Scalars['String']>;
-  id?: Maybe<Scalars['ID']>;
+  id: Scalars['ID'];
   l1?: Maybe<Scalars['String']>;
   l2?: Maybe<Scalars['String']>;
   l3?: Maybe<Scalars['String']>;
@@ -309,7 +309,7 @@ export type BusinessAnalysisInput = {
   conclusion2?: InputMaybe<Scalars['String']>;
   conclusion3?: InputMaybe<Scalars['String']>;
   editedBy?: InputMaybe<Scalars['String']>;
-  id?: InputMaybe<Scalars['ID']>;
+  id: Scalars['ID'];
   l1?: InputMaybe<Scalars['String']>;
   l2?: InputMaybe<Scalars['String']>;
   l3?: InputMaybe<Scalars['String']>;
@@ -407,7 +407,7 @@ export type CloudComputing = {
   conclusion2?: Maybe<Scalars['String']>;
   conclusion3?: Maybe<Scalars['String']>;
   editedBy?: Maybe<Scalars['String']>;
-  id?: Maybe<Scalars['ID']>;
+  id: Scalars['ID'];
   l1?: Maybe<Scalars['String']>;
   l2?: Maybe<Scalars['String']>;
   l3?: Maybe<Scalars['String']>;
@@ -444,7 +444,7 @@ export type CloudComputingInput = {
   conclusion2?: InputMaybe<Scalars['String']>;
   conclusion3?: InputMaybe<Scalars['String']>;
   editedBy?: InputMaybe<Scalars['String']>;
-  id?: InputMaybe<Scalars['ID']>;
+  id: Scalars['ID'];
   l1?: InputMaybe<Scalars['String']>;
   l2?: InputMaybe<Scalars['String']>;
   l3?: InputMaybe<Scalars['String']>;
@@ -482,7 +482,7 @@ export type ComputerNetworking = {
   conclusion2?: Maybe<Scalars['String']>;
   conclusion3?: Maybe<Scalars['String']>;
   editedBy?: Maybe<Scalars['String']>;
-  id?: Maybe<Scalars['ID']>;
+  id: Scalars['ID'];
   l1?: Maybe<Scalars['String']>;
   l2?: Maybe<Scalars['String']>;
   l3?: Maybe<Scalars['String']>;
@@ -519,7 +519,7 @@ export type ComputerNetworkingInput = {
   conclusion2?: InputMaybe<Scalars['String']>;
   conclusion3?: InputMaybe<Scalars['String']>;
   editedBy?: InputMaybe<Scalars['String']>;
-  id?: InputMaybe<Scalars['ID']>;
+  id: Scalars['ID'];
   l1?: InputMaybe<Scalars['String']>;
   l2?: InputMaybe<Scalars['String']>;
   l3?: InputMaybe<Scalars['String']>;
@@ -557,7 +557,7 @@ export type DataManagement = {
   conclusion2?: Maybe<Scalars['String']>;
   conclusion3?: Maybe<Scalars['String']>;
   editedBy?: Maybe<Scalars['String']>;
-  id?: Maybe<Scalars['ID']>;
+  id: Scalars['ID'];
   l1?: Maybe<Scalars['String']>;
   l2?: Maybe<Scalars['String']>;
   l3?: Maybe<Scalars['String']>;
@@ -594,7 +594,7 @@ export type DataManagementInput = {
   conclusion2?: InputMaybe<Scalars['String']>;
   conclusion3?: InputMaybe<Scalars['String']>;
   editedBy?: InputMaybe<Scalars['String']>;
-  id?: InputMaybe<Scalars['ID']>;
+  id: Scalars['ID'];
   l1?: InputMaybe<Scalars['String']>;
   l2?: InputMaybe<Scalars['String']>;
   l3?: InputMaybe<Scalars['String']>;
@@ -632,7 +632,7 @@ export type GameProgramming = {
   conclusion2?: Maybe<Scalars['String']>;
   conclusion3?: Maybe<Scalars['String']>;
   editedBy?: Maybe<Scalars['String']>;
-  id?: Maybe<Scalars['ID']>;
+  id: Scalars['ID'];
   l1?: Maybe<Scalars['String']>;
   l2?: Maybe<Scalars['String']>;
   l3?: Maybe<Scalars['String']>;
@@ -669,7 +669,7 @@ export type GameProgrammingInput = {
   conclusion2?: InputMaybe<Scalars['String']>;
   conclusion3?: InputMaybe<Scalars['String']>;
   editedBy?: InputMaybe<Scalars['String']>;
-  id?: InputMaybe<Scalars['ID']>;
+  id: Scalars['ID'];
   l1?: InputMaybe<Scalars['String']>;
   l2?: InputMaybe<Scalars['String']>;
   l3?: InputMaybe<Scalars['String']>;
@@ -718,7 +718,7 @@ export type MachineLearning = {
   conclusion2?: Maybe<Scalars['String']>;
   conclusion3?: Maybe<Scalars['String']>;
   editedBy?: Maybe<Scalars['String']>;
-  id?: Maybe<Scalars['ID']>;
+  id: Scalars['ID'];
   l1?: Maybe<Scalars['String']>;
   l2?: Maybe<Scalars['String']>;
   l3?: Maybe<Scalars['String']>;
@@ -755,7 +755,7 @@ export type MachineLearningInput = {
   conclusion2?: InputMaybe<Scalars['String']>;
   conclusion3?: InputMaybe<Scalars['String']>;
   editedBy?: InputMaybe<Scalars['String']>;
-  id?: InputMaybe<Scalars['ID']>;
+  id: Scalars['ID'];
   l1?: InputMaybe<Scalars['String']>;
   l2?: InputMaybe<Scalars['String']>;
   l3?: InputMaybe<Scalars['String']>;
@@ -798,7 +798,17 @@ export type Mutation = {
   addSoftwareDevelopment?: Maybe<SoftwareDevelopment>;
   addTelecommunication?: Maybe<Telecommunication>;
   addWebDevelopment?: Maybe<WebDevelopment>;
+  updateAi?: Maybe<Ai>;
+  updateBlockchain?: Maybe<Blockchain>;
+  updateBusinessAnalysis?: Maybe<BusinessAnalysis>;
+  updateCloudComputing?: Maybe<CloudComputing>;
+  updateComputerNetworking?: Maybe<ComputerNetworking>;
+  updateDataManagement?: Maybe<DataManagement>;
+  updateGameProgramming?: Maybe<GameProgramming>;
+  updateMachineLearning?: Maybe<MachineLearning>;
   updateSoftwareDevelopment?: Maybe<SoftwareDevelopment>;
+  updateTelecommunication?: Maybe<Telecommunication>;
+  updateWebDevelopment?: Maybe<WebDevelopment>;
 };
 
 
@@ -867,28 +877,88 @@ export type MutationAddWebDevelopmentArgs = {
 };
 
 
+export type MutationUpdateAiArgs = {
+  input: AiInput;
+};
+
+
+export type MutationUpdateBlockchainArgs = {
+  input: BlockchainInput;
+};
+
+
+export type MutationUpdateBusinessAnalysisArgs = {
+  input: BusinessAnalysisInput;
+};
+
+
+export type MutationUpdateCloudComputingArgs = {
+  input: CloudComputingInput;
+};
+
+
+export type MutationUpdateComputerNetworkingArgs = {
+  input: ComputerNetworkingInput;
+};
+
+
+export type MutationUpdateDataManagementArgs = {
+  input: DataManagementInput;
+};
+
+
+export type MutationUpdateGameProgrammingArgs = {
+  input: GameProgrammingInput;
+};
+
+
+export type MutationUpdateMachineLearningArgs = {
+  input: MachineLearningInput;
+};
+
+
 export type MutationUpdateSoftwareDevelopmentArgs = {
   input: SoftwareDevelopmentInput;
+};
+
+
+export type MutationUpdateTelecommunicationArgs = {
+  input: TelecommunicationInput;
+};
+
+
+export type MutationUpdateWebDevelopmentArgs = {
+  input: WebDevelopmentInput;
 };
 
 export type Query = {
   __typename?: 'Query';
   ai?: Maybe<Ai>;
+  aiCard?: Maybe<Array<Maybe<Ai>>>;
   blockchain?: Maybe<Blockchain>;
+  blockchainCard?: Maybe<Array<Maybe<Blockchain>>>;
   blogCard?: Maybe<Array<Maybe<BlogPost>>>;
   blogPost?: Maybe<BlogPost>;
   blogPosts?: Maybe<Array<Maybe<BlogPost>>>;
   businessAnalysis?: Maybe<BusinessAnalysis>;
+  businessAnalysisCard?: Maybe<Array<Maybe<BusinessAnalysis>>>;
   cloudComputing?: Maybe<CloudComputing>;
+  cloudComputingCard?: Maybe<Array<Maybe<CloudComputing>>>;
   computerNetworking?: Maybe<ComputerNetworking>;
+  computerNetworkingCard?: Maybe<Array<Maybe<ComputerNetworking>>>;
   dataManagement?: Maybe<DataManagement>;
+  dataManagementCard?: Maybe<Array<Maybe<DataManagement>>>;
   gameProgramming?: Maybe<GameProgramming>;
+  gameProgrammingCard?: Maybe<Array<Maybe<GameProgramming>>>;
   it?: Maybe<It>;
   machineLearning?: Maybe<MachineLearning>;
+  machineLearningCard?: Maybe<Array<Maybe<MachineLearning>>>;
   softwareDevelopment?: Maybe<SoftwareDevelopment>;
   softwareDevelopmentCard?: Maybe<Array<Maybe<SoftwareDevelopment>>>;
   telecommunication?: Maybe<Telecommunication>;
+  telecommunicationCard?: Maybe<Array<Maybe<Telecommunication>>>;
   webDevelopment?: Maybe<WebDevelopment>;
+  webDevelopmentCard?: Maybe<Array<Maybe<WebDevelopment>>>;
 };
 
 
@@ -1050,7 +1120,7 @@ export type Telecommunication = {
   conclusion2?: Maybe<Scalars['String']>;
   conclusion3?: Maybe<Scalars['String']>;
   editedBy?: Maybe<Scalars['String']>;
-  id?: Maybe<Scalars['ID']>;
+  id: Scalars['ID'];
   l1?: Maybe<Scalars['String']>;
   l2?: Maybe<Scalars['String']>;
   l3?: Maybe<Scalars['String']>;
@@ -1087,7 +1157,7 @@ export type TelecommunicationInput = {
   conclusion2?: InputMaybe<Scalars['String']>;
   conclusion3?: InputMaybe<Scalars['String']>;
   editedBy?: InputMaybe<Scalars['String']>;
-  id?: InputMaybe<Scalars['ID']>;
+  id: Scalars['ID'];
   l1?: InputMaybe<Scalars['String']>;
   l2?: InputMaybe<Scalars['String']>;
   l3?: InputMaybe<Scalars['String']>;
@@ -1143,7 +1213,7 @@ export type WebDevelopment = {
   conclusion2?: Maybe<Scalars['String']>;
   conclusion3?: Maybe<Scalars['String']>;
   editedBy?: Maybe<Scalars['String']>;
-  id?: Maybe<Scalars['ID']>;
+  id: Scalars['ID'];
   l1?: Maybe<Scalars['String']>;
   l2?: Maybe<Scalars['String']>;
   l3?: Maybe<Scalars['String']>;
@@ -1180,7 +1250,7 @@ export type WebDevelopmentInput = {
   conclusion2?: InputMaybe<Scalars['String']>;
   conclusion3?: InputMaybe<Scalars['String']>;
   editedBy?: InputMaybe<Scalars['String']>;
-  id?: InputMaybe<Scalars['ID']>;
+  id: Scalars['ID'];
   l1?: InputMaybe<Scalars['String']>;
   l2?: InputMaybe<Scalars['String']>;
   l3?: InputMaybe<Scalars['String']>;
@@ -1381,7 +1451,7 @@ export type AiResolvers<ContextType = GraphQLContext, ParentType extends Resolve
   conclusion2?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   conclusion3?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   editedBy?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
-  id?: Resolver<Maybe<ResolversTypes['ID']>, ParentType, ContextType>;
+  id?: Resolver<ResolversTypes['ID'], ParentType, ContextType>;
   l1?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   l2?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   l3?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
@@ -1419,7 +1489,7 @@ export type BlockchainResolvers<ContextType = GraphQLContext, ParentType extends
   conclusion2?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   conclusion3?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   editedBy?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
-  id?: Resolver<Maybe<ResolversTypes['ID']>, ParentType, ContextType>;
+  id?: Resolver<ResolversTypes['ID'], ParentType, ContextType>;
   l1?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   l2?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   l3?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
@@ -1495,7 +1565,7 @@ export type BusinessAnalysisResolvers<ContextType = GraphQLContext, ParentType e
   conclusion2?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   conclusion3?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   editedBy?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
-  id?: Resolver<Maybe<ResolversTypes['ID']>, ParentType, ContextType>;
+  id?: Resolver<ResolversTypes['ID'], ParentType, ContextType>;
   l1?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   l2?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   l3?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
@@ -1593,7 +1663,7 @@ export type CloudComputingResolvers<ContextType = GraphQLContext, ParentType ext
   conclusion2?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   conclusion3?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   editedBy?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
-  id?: Resolver<Maybe<ResolversTypes['ID']>, ParentType, ContextType>;
+  id?: Resolver<ResolversTypes['ID'], ParentType, ContextType>;
   l1?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   l2?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   l3?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
@@ -1631,7 +1701,7 @@ export type ComputerNetworkingResolvers<ContextType = GraphQLContext, ParentType
   conclusion2?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   conclusion3?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   editedBy?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
-  id?: Resolver<Maybe<ResolversTypes['ID']>, ParentType, ContextType>;
+  id?: Resolver<ResolversTypes['ID'], ParentType, ContextType>;
   l1?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   l2?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   l3?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
@@ -1669,7 +1739,7 @@ export type DataManagementResolvers<ContextType = GraphQLContext, ParentType ext
   conclusion2?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   conclusion3?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   editedBy?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
-  id?: Resolver<Maybe<ResolversTypes['ID']>, ParentType, ContextType>;
+  id?: Resolver<ResolversTypes['ID'], ParentType, ContextType>;
   l1?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   l2?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   l3?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
@@ -1707,7 +1777,7 @@ export type GameProgrammingResolvers<ContextType = GraphQLContext, ParentType ex
   conclusion2?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   conclusion3?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   editedBy?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
-  id?: Resolver<Maybe<ResolversTypes['ID']>, ParentType, ContextType>;
+  id?: Resolver<ResolversTypes['ID'], ParentType, ContextType>;
   l1?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   l2?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   l3?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
@@ -1752,7 +1822,7 @@ export type MachineLearningResolvers<ContextType = GraphQLContext, ParentType ex
   conclusion2?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   conclusion3?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   editedBy?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
-  id?: Resolver<Maybe<ResolversTypes['ID']>, ParentType, ContextType>;
+  id?: Resolver<ResolversTypes['ID'], ParentType, ContextType>;
   l1?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   l2?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   l3?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
@@ -1795,26 +1865,46 @@ export type MutationResolvers<ContextType = GraphQLContext, ParentType extends R
   addSoftwareDevelopment?: Resolver<Maybe<ResolversTypes['SoftwareDevelopment']>, ParentType, ContextType, Partial<MutationAddSoftwareDevelopmentArgs>>;
   addTelecommunication?: Resolver<Maybe<ResolversTypes['Telecommunication']>, ParentType, ContextType, Partial<MutationAddTelecommunicationArgs>>;
   addWebDevelopment?: Resolver<Maybe<ResolversTypes['WebDevelopment']>, ParentType, ContextType, Partial<MutationAddWebDevelopmentArgs>>;
+  updateAi?: Resolver<Maybe<ResolversTypes['Ai']>, ParentType, ContextType, RequireFields<MutationUpdateAiArgs, 'input'>>;
+  updateBlockchain?: Resolver<Maybe<ResolversTypes['Blockchain']>, ParentType, ContextType, RequireFields<MutationUpdateBlockchainArgs, 'input'>>;
+  updateBusinessAnalysis?: Resolver<Maybe<ResolversTypes['BusinessAnalysis']>, ParentType, ContextType, RequireFields<MutationUpdateBusinessAnalysisArgs, 'input'>>;
+  updateCloudComputing?: Resolver<Maybe<ResolversTypes['CloudComputing']>, ParentType, ContextType, RequireFields<MutationUpdateCloudComputingArgs, 'input'>>;
+  updateComputerNetworking?: Resolver<Maybe<ResolversTypes['ComputerNetworking']>, ParentType, ContextType, RequireFields<MutationUpdateComputerNetworkingArgs, 'input'>>;
+  updateDataManagement?: Resolver<Maybe<ResolversTypes['DataManagement']>, ParentType, ContextType, RequireFields<MutationUpdateDataManagementArgs, 'input'>>;
+  updateGameProgramming?: Resolver<Maybe<ResolversTypes['GameProgramming']>, ParentType, ContextType, RequireFields<MutationUpdateGameProgrammingArgs, 'input'>>;
+  updateMachineLearning?: Resolver<Maybe<ResolversTypes['MachineLearning']>, ParentType, ContextType, RequireFields<MutationUpdateMachineLearningArgs, 'input'>>;
   updateSoftwareDevelopment?: Resolver<Maybe<ResolversTypes['SoftwareDevelopment']>, ParentType, ContextType, RequireFields<MutationUpdateSoftwareDevelopmentArgs, 'input'>>;
+  updateTelecommunication?: Resolver<Maybe<ResolversTypes['Telecommunication']>, ParentType, ContextType, RequireFields<MutationUpdateTelecommunicationArgs, 'input'>>;
+  updateWebDevelopment?: Resolver<Maybe<ResolversTypes['WebDevelopment']>, ParentType, ContextType, RequireFields<MutationUpdateWebDevelopmentArgs, 'input'>>;
 };
 
 export type QueryResolvers<ContextType = GraphQLContext, ParentType extends ResolversParentTypes['Query'] = ResolversParentTypes['Query']> = {
   ai?: Resolver<Maybe<ResolversTypes['Ai']>, ParentType, ContextType, RequireFields<QueryAiArgs, 'id'>>;
+  aiCard?: Resolver<Maybe<Array<Maybe<ResolversTypes['Ai']>>>, ParentType, ContextType>;
   blockchain?: Resolver<Maybe<ResolversTypes['Blockchain']>, ParentType, ContextType, RequireFields<QueryBlockchainArgs, 'id'>>;
+  blockchainCard?: Resolver<Maybe<Array<Maybe<ResolversTypes['Blockchain']>>>, ParentType, ContextType>;
   blogCard?: Resolver<Maybe<Array<Maybe<ResolversTypes['BlogPost']>>>, ParentType, ContextType>;
   blogPost?: Resolver<Maybe<ResolversTypes['BlogPost']>, ParentType, ContextType, RequireFields<QueryBlogPostArgs, 'id'>>;
   blogPosts?: Resolver<Maybe<Array<Maybe<ResolversTypes['BlogPost']>>>, ParentType, ContextType>;
   businessAnalysis?: Resolver<Maybe<ResolversTypes['BusinessAnalysis']>, ParentType, ContextType, RequireFields<QueryBusinessAnalysisArgs, 'id'>>;
+  businessAnalysisCard?: Resolver<Maybe<Array<Maybe<ResolversTypes['BusinessAnalysis']>>>, ParentType, ContextType>;
   cloudComputing?: Resolver<Maybe<ResolversTypes['CloudComputing']>, ParentType, ContextType, RequireFields<QueryCloudComputingArgs, 'id'>>;
+  cloudComputingCard?: Resolver<Maybe<Array<Maybe<ResolversTypes['CloudComputing']>>>, ParentType, ContextType>;
   computerNetworking?: Resolver<Maybe<ResolversTypes['ComputerNetworking']>, ParentType, ContextType, RequireFields<QueryComputerNetworkingArgs, 'id'>>;
+  computerNetworkingCard?: Resolver<Maybe<Array<Maybe<ResolversTypes['ComputerNetworking']>>>, ParentType, ContextType>;
   dataManagement?: Resolver<Maybe<ResolversTypes['DataManagement']>, ParentType, ContextType, RequireFields<QueryDataManagementArgs, 'id'>>;
+  dataManagementCard?: Resolver<Maybe<Array<Maybe<ResolversTypes['DataManagement']>>>, ParentType, ContextType>;
   gameProgramming?: Resolver<Maybe<ResolversTypes['GameProgramming']>, ParentType, ContextType, RequireFields<QueryGameProgrammingArgs, 'id'>>;
+  gameProgrammingCard?: Resolver<Maybe<Array<Maybe<ResolversTypes['GameProgramming']>>>, ParentType, ContextType>;
   it?: Resolver<Maybe<ResolversTypes['It']>, ParentType, ContextType, RequireFields<QueryItArgs, 'id'>>;
   machineLearning?: Resolver<Maybe<ResolversTypes['MachineLearning']>, ParentType, ContextType, RequireFields<QueryMachineLearningArgs, 'id'>>;
+  machineLearningCard?: Resolver<Maybe<Array<Maybe<ResolversTypes['MachineLearning']>>>, ParentType, ContextType>;
   softwareDevelopment?: Resolver<Maybe<ResolversTypes['SoftwareDevelopment']>, ParentType, ContextType, RequireFields<QuerySoftwareDevelopmentArgs, 'id'>>;
   softwareDevelopmentCard?: Resolver<Maybe<Array<Maybe<ResolversTypes['SoftwareDevelopment']>>>, ParentType, ContextType>;
   telecommunication?: Resolver<Maybe<ResolversTypes['Telecommunication']>, ParentType, ContextType, RequireFields<QueryTelecommunicationArgs, 'id'>>;
+  telecommunicationCard?: Resolver<Maybe<Array<Maybe<ResolversTypes['Telecommunication']>>>, ParentType, ContextType>;
   webDevelopment?: Resolver<Maybe<ResolversTypes['WebDevelopment']>, ParentType, ContextType, RequireFields<QueryWebDevelopmentArgs, 'id'>>;
+  webDevelopmentCard?: Resolver<Maybe<Array<Maybe<ResolversTypes['WebDevelopment']>>>, ParentType, ContextType>;
 };
 
 export type SessionResolvers<ContextType = GraphQLContext, ParentType extends ResolversParentTypes['Session'] = ResolversParentTypes['Session']> = {
@@ -1873,7 +1963,7 @@ export type TelecommunicationResolvers<ContextType = GraphQLContext, ParentType 
   conclusion2?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   conclusion3?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   editedBy?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
-  id?: Resolver<Maybe<ResolversTypes['ID']>, ParentType, ContextType>;
+  id?: Resolver<ResolversTypes['ID'], ParentType, ContextType>;
   l1?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   l2?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   l3?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
@@ -1929,7 +2019,7 @@ export type WebDevelopmentResolvers<ContextType = GraphQLContext, ParentType ext
   conclusion2?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   conclusion3?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   editedBy?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
-  id?: Resolver<Maybe<ResolversTypes['ID']>, ParentType, ContextType>;
+  id?: Resolver<ResolversTypes['ID'], ParentType, ContextType>;
   l1?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   l2?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   l3?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
@@ -2034,6 +2124,14 @@ export const ItFragmentDoc = gql`
   softwareDevelopmentId
 }
     `;
+export const AiCardFragmentDoc = gql`
+    fragment AiCard on Ai {
+  category
+  id
+  title
+  subtitle1
+}
+    `;
 export const AiFragmentDoc = gql`
     fragment Ai on Ai {
   id
@@ -2069,6 +2167,14 @@ export const AiFragmentDoc = gql`
   photoCredit
   editedBy
   mainImage
+}
+    `;
+export const BlockchainCardFragmentDoc = gql`
+    fragment BlockchainCard on Blockchain {
+  category
+  id
+  title
+  subtitle1
 }
     `;
 export const BlockchainFragmentDoc = gql`
@@ -2109,6 +2215,14 @@ export const BlockchainFragmentDoc = gql`
   mainImage
 }
     `;
+export const BusinessAnalysisCardFragmentDoc = gql`
+    fragment BusinessAnalysisCard on BusinessAnalysis {
+  category
+  id
+  title
+  subtitle1
+}
+    `;
 export const BusinessAnalysisFragmentDoc = gql`
     fragment BusinessAnalysis on BusinessAnalysis {
   id
@@ -2145,6 +2259,14 @@ export const BusinessAnalysisFragmentDoc = gql`
   photoCredit
   editedBy
   mainImage
+}
+    `;
+export const CloudComputingCardFragmentDoc = gql`
+    fragment CloudComputingCard on CloudComputing {
+  category
+  id
+  title
+  subtitle1
 }
     `;
 export const CloudComputingFragmentDoc = gql`
@@ -2185,6 +2307,14 @@ export const CloudComputingFragmentDoc = gql`
   mainImage
 }
     `;
+export const ComputerNetworkingCardFragmentDoc = gql`
+    fragment ComputerNetworkingCard on ComputerNetworking {
+  category
+  id
+  title
+  subtitle1
+}
+    `;
 export const ComputerNetworkingFragmentDoc = gql`
     fragment ComputerNetworking on ComputerNetworking {
   id
@@ -2221,6 +2351,14 @@ export const ComputerNetworkingFragmentDoc = gql`
   photoCredit
   editedBy
   mainImage
+}
+    `;
+export const DataManagementCardFragmentDoc = gql`
+    fragment DataManagementCard on DataManagement {
+  category
+  id
+  title
+  subtitle1
 }
     `;
 export const DataManagementFragmentDoc = gql`
@@ -2297,6 +2435,22 @@ export const GameProgrammingFragmentDoc = gql`
   photoCredit
   editedBy
   mainImage
+}
+    `;
+export const GameProgrammingCardFragmentDoc = gql`
+    fragment GameProgrammingCard on GameProgramming {
+  category
+  id
+  title
+  subtitle1
+}
+    `;
+export const MachineLearningCardFragmentDoc = gql`
+    fragment MachineLearningCard on MachineLearning {
+  category
+  id
+  title
+  subtitle1
 }
     `;
 export const MachineLearningFragmentDoc = gql`
@@ -2383,6 +2537,14 @@ export const SoftwareDevelopmentFragmentDoc = gql`
   mainImage
 }
     `;
+export const TelecommunicationCardFragmentDoc = gql`
+    fragment TelecommunicationCard on Telecommunication {
+  category
+  id
+  title
+  subtitle1
+}
+    `;
 export const TelecommunicationFragmentDoc = gql`
     fragment Telecommunication on Telecommunication {
   id
@@ -2419,6 +2581,14 @@ export const TelecommunicationFragmentDoc = gql`
   photoCredit
   editedBy
   mainImage
+}
+    `;
+export const WebDevelopmentCardFragmentDoc = gql`
+    fragment WebDevelopmentCard on WebDevelopment {
+  category
+  id
+  title
+  subtitle1
 }
     `;
 export const WebDevelopmentFragmentDoc = gql`
@@ -2731,6 +2901,73 @@ export function useAiLazyQuery(baseOptions?: Apollo.LazyQueryHookOptions<AiQuery
 export type AiQueryHookResult = ReturnType<typeof useAiQuery>;
 export type AiLazyQueryHookResult = ReturnType<typeof useAiLazyQuery>;
 export type AiQueryResult = Apollo.QueryResult<AiQuery, AiQueryVariables>;
+export const AiCardDocument = gql`
+    query AiCard {
+  aiCard {
+    ...AiCard
+  }
+}
+    ${AiCardFragmentDoc}`;
+
+/**
+ * __useAiCardQuery__
+ *
+ * To run a query within a React component, call `useAiCardQuery` and pass it any options that fit your needs.
+ * When your component renders, `useAiCardQuery` returns an object from Apollo Client that contains loading, error, and data properties
+ * you can use to render your UI.
+ *
+ * @param baseOptions options that will be passed into the query, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options;
+ *
+ * @example
+ * const { data, loading, error } = useAiCardQuery({
+ *   variables: {
+ *   },
+ * });
+ */
+export function useAiCardQuery(baseOptions?: Apollo.QueryHookOptions<AiCardQuery, AiCardQueryVariables>) {
+        const options = {...defaultOptions, ...baseOptions}
+        return Apollo.useQuery<AiCardQuery, AiCardQueryVariables>(AiCardDocument, options);
+      }
+export function useAiCardLazyQuery(baseOptions?: Apollo.LazyQueryHookOptions<AiCardQuery, AiCardQueryVariables>) {
+          const options = {...defaultOptions, ...baseOptions}
+          return Apollo.useLazyQuery<AiCardQuery, AiCardQueryVariables>(AiCardDocument, options);
+        }
+export type AiCardQueryHookResult = ReturnType<typeof useAiCardQuery>;
+export type AiCardLazyQueryHookResult = ReturnType<typeof useAiCardLazyQuery>;
+export type AiCardQueryResult = Apollo.QueryResult<AiCardQuery, AiCardQueryVariables>;
+export const UpdateAiDocument = gql`
+    mutation UpdateAi($input: AiInput!) {
+  updateAi(input: $input) {
+    ...Ai
+  }
+}
+    ${AiFragmentDoc}`;
+export type UpdateAiMutationFn = Apollo.MutationFunction<UpdateAiMutation, UpdateAiMutationVariables>;
+
+/**
+ * __useUpdateAiMutation__
+ *
+ * To run a mutation, you first call `useUpdateAiMutation` within a React component and pass it any options that fit your needs.
+ * When your component renders, `useUpdateAiMutation` returns a tuple that includes:
+ * - A mutate function that you can call at any time to execute the mutation
+ * - An object with fields that represent the current status of the mutation's execution
+ *
+ * @param baseOptions options that will be passed into the mutation, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options-2;
+ *
+ * @example
+ * const [updateAiMutation, { data, loading, error }] = useUpdateAiMutation({
+ *   variables: {
+ *      input: // value for 'input'
+ *   },
+ * });
+ */
+export function useUpdateAiMutation(baseOptions?: Apollo.MutationHookOptions<UpdateAiMutation, UpdateAiMutationVariables>) {
+        const options = {...defaultOptions, ...baseOptions}
+        return Apollo.useMutation<UpdateAiMutation, UpdateAiMutationVariables>(UpdateAiDocument, options);
+      }
+export type UpdateAiMutationHookResult = ReturnType<typeof useUpdateAiMutation>;
+export type UpdateAiMutationResult = Apollo.MutationResult<UpdateAiMutation>;
+export type UpdateAiMutationOptions = Apollo.BaseMutationOptions<UpdateAiMutation, UpdateAiMutationVariables>;
 export const AddBlockchainDocument = gql`
     mutation AddBlockchain($input: BlockchainInput!) {
   addBlockchain(input: $input) {
@@ -2799,6 +3036,73 @@ export function useBlockchainLazyQuery(baseOptions?: Apollo.LazyQueryHookOptions
 export type BlockchainQueryHookResult = ReturnType<typeof useBlockchainQuery>;
 export type BlockchainLazyQueryHookResult = ReturnType<typeof useBlockchainLazyQuery>;
 export type BlockchainQueryResult = Apollo.QueryResult<BlockchainQuery, BlockchainQueryVariables>;
+export const BlockchainCardDocument = gql`
+    query BlockchainCard {
+  blockchainCard {
+    ...BlockchainCard
+  }
+}
+    ${BlockchainCardFragmentDoc}`;
+
+/**
+ * __useBlockchainCardQuery__
+ *
+ * To run a query within a React component, call `useBlockchainCardQuery` and pass it any options that fit your needs.
+ * When your component renders, `useBlockchainCardQuery` returns an object from Apollo Client that contains loading, error, and data properties
+ * you can use to render your UI.
+ *
+ * @param baseOptions options that will be passed into the query, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options;
+ *
+ * @example
+ * const { data, loading, error } = useBlockchainCardQuery({
+ *   variables: {
+ *   },
+ * });
+ */
+export function useBlockchainCardQuery(baseOptions?: Apollo.QueryHookOptions<BlockchainCardQuery, BlockchainCardQueryVariables>) {
+        const options = {...defaultOptions, ...baseOptions}
+        return Apollo.useQuery<BlockchainCardQuery, BlockchainCardQueryVariables>(BlockchainCardDocument, options);
+      }
+export function useBlockchainCardLazyQuery(baseOptions?: Apollo.LazyQueryHookOptions<BlockchainCardQuery, BlockchainCardQueryVariables>) {
+          const options = {...defaultOptions, ...baseOptions}
+          return Apollo.useLazyQuery<BlockchainCardQuery, BlockchainCardQueryVariables>(BlockchainCardDocument, options);
+        }
+export type BlockchainCardQueryHookResult = ReturnType<typeof useBlockchainCardQuery>;
+export type BlockchainCardLazyQueryHookResult = ReturnType<typeof useBlockchainCardLazyQuery>;
+export type BlockchainCardQueryResult = Apollo.QueryResult<BlockchainCardQuery, BlockchainCardQueryVariables>;
+export const UpdateBlockchainDocument = gql`
+    mutation UpdateBlockchain($input: BlockchainInput!) {
+  updateBlockchain(input: $input) {
+    ...Blockchain
+  }
+}
+    ${BlockchainFragmentDoc}`;
+export type UpdateBlockchainMutationFn = Apollo.MutationFunction<UpdateBlockchainMutation, UpdateBlockchainMutationVariables>;
+
+/**
+ * __useUpdateBlockchainMutation__
+ *
+ * To run a mutation, you first call `useUpdateBlockchainMutation` within a React component and pass it any options that fit your needs.
+ * When your component renders, `useUpdateBlockchainMutation` returns a tuple that includes:
+ * - A mutate function that you can call at any time to execute the mutation
+ * - An object with fields that represent the current status of the mutation's execution
+ *
+ * @param baseOptions options that will be passed into the mutation, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options-2;
+ *
+ * @example
+ * const [updateBlockchainMutation, { data, loading, error }] = useUpdateBlockchainMutation({
+ *   variables: {
+ *      input: // value for 'input'
+ *   },
+ * });
+ */
+export function useUpdateBlockchainMutation(baseOptions?: Apollo.MutationHookOptions<UpdateBlockchainMutation, UpdateBlockchainMutationVariables>) {
+        const options = {...defaultOptions, ...baseOptions}
+        return Apollo.useMutation<UpdateBlockchainMutation, UpdateBlockchainMutationVariables>(UpdateBlockchainDocument, options);
+      }
+export type UpdateBlockchainMutationHookResult = ReturnType<typeof useUpdateBlockchainMutation>;
+export type UpdateBlockchainMutationResult = Apollo.MutationResult<UpdateBlockchainMutation>;
+export type UpdateBlockchainMutationOptions = Apollo.BaseMutationOptions<UpdateBlockchainMutation, UpdateBlockchainMutationVariables>;
 export const AddBusinessAnalysisDocument = gql`
     mutation AddBusinessAnalysis($input: BusinessAnalysisInput!) {
   addBusinessAnalysis(input: $input) {
@@ -2832,6 +3136,40 @@ export function useAddBusinessAnalysisMutation(baseOptions?: Apollo.MutationHook
 export type AddBusinessAnalysisMutationHookResult = ReturnType<typeof useAddBusinessAnalysisMutation>;
 export type AddBusinessAnalysisMutationResult = Apollo.MutationResult<AddBusinessAnalysisMutation>;
 export type AddBusinessAnalysisMutationOptions = Apollo.BaseMutationOptions<AddBusinessAnalysisMutation, AddBusinessAnalysisMutationVariables>;
+export const BusinessAnalysisCardDocument = gql`
+    query BusinessAnalysisCard {
+  businessAnalysisCard {
+    ...BusinessAnalysisCard
+  }
+}
+    ${BusinessAnalysisCardFragmentDoc}`;
+
+/**
+ * __useBusinessAnalysisCardQuery__
+ *
+ * To run a query within a React component, call `useBusinessAnalysisCardQuery` and pass it any options that fit your needs.
+ * When your component renders, `useBusinessAnalysisCardQuery` returns an object from Apollo Client that contains loading, error, and data properties
+ * you can use to render your UI.
+ *
+ * @param baseOptions options that will be passed into the query, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options;
+ *
+ * @example
+ * const { data, loading, error } = useBusinessAnalysisCardQuery({
+ *   variables: {
+ *   },
+ * });
+ */
+export function useBusinessAnalysisCardQuery(baseOptions?: Apollo.QueryHookOptions<BusinessAnalysisCardQuery, BusinessAnalysisCardQueryVariables>) {
+        const options = {...defaultOptions, ...baseOptions}
+        return Apollo.useQuery<BusinessAnalysisCardQuery, BusinessAnalysisCardQueryVariables>(BusinessAnalysisCardDocument, options);
+      }
+export function useBusinessAnalysisCardLazyQuery(baseOptions?: Apollo.LazyQueryHookOptions<BusinessAnalysisCardQuery, BusinessAnalysisCardQueryVariables>) {
+          const options = {...defaultOptions, ...baseOptions}
+          return Apollo.useLazyQuery<BusinessAnalysisCardQuery, BusinessAnalysisCardQueryVariables>(BusinessAnalysisCardDocument, options);
+        }
+export type BusinessAnalysisCardQueryHookResult = ReturnType<typeof useBusinessAnalysisCardQuery>;
+export type BusinessAnalysisCardLazyQueryHookResult = ReturnType<typeof useBusinessAnalysisCardLazyQuery>;
+export type BusinessAnalysisCardQueryResult = Apollo.QueryResult<BusinessAnalysisCardQuery, BusinessAnalysisCardQueryVariables>;
 export const BusinessAnalysisDocument = gql`
     query BusinessAnalysis($id: ID!) {
   businessAnalysis(id: $id) {
@@ -2867,6 +3205,39 @@ export function useBusinessAnalysisLazyQuery(baseOptions?: Apollo.LazyQueryHookO
 export type BusinessAnalysisQueryHookResult = ReturnType<typeof useBusinessAnalysisQuery>;
 export type BusinessAnalysisLazyQueryHookResult = ReturnType<typeof useBusinessAnalysisLazyQuery>;
 export type BusinessAnalysisQueryResult = Apollo.QueryResult<BusinessAnalysisQuery, BusinessAnalysisQueryVariables>;
+export const UpdateBusinessAnalysisDocument = gql`
+    mutation UpdateBusinessAnalysis($input: BusinessAnalysisInput!) {
+  updateBusinessAnalysis(input: $input) {
+    ...BusinessAnalysis
+  }
+}
+    ${BusinessAnalysisFragmentDoc}`;
+export type UpdateBusinessAnalysisMutationFn = Apollo.MutationFunction<UpdateBusinessAnalysisMutation, UpdateBusinessAnalysisMutationVariables>;
+
+/**
+ * __useUpdateBusinessAnalysisMutation__
+ *
+ * To run a mutation, you first call `useUpdateBusinessAnalysisMutation` within a React component and pass it any options that fit your needs.
+ * When your component renders, `useUpdateBusinessAnalysisMutation` returns a tuple that includes:
+ * - A mutate function that you can call at any time to execute the mutation
+ * - An object with fields that represent the current status of the mutation's execution
+ *
+ * @param baseOptions options that will be passed into the mutation, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options-2;
+ *
+ * @example
+ * const [updateBusinessAnalysisMutation, { data, loading, error }] = useUpdateBusinessAnalysisMutation({
+ *   variables: {
+ *      input: // value for 'input'
+ *   },
+ * });
+ */
+export function useUpdateBusinessAnalysisMutation(baseOptions?: Apollo.MutationHookOptions<UpdateBusinessAnalysisMutation, UpdateBusinessAnalysisMutationVariables>) {
+        const options = {...defaultOptions, ...baseOptions}
+        return Apollo.useMutation<UpdateBusinessAnalysisMutation, UpdateBusinessAnalysisMutationVariables>(UpdateBusinessAnalysisDocument, options);
+      }
+export type UpdateBusinessAnalysisMutationHookResult = ReturnType<typeof useUpdateBusinessAnalysisMutation>;
+export type UpdateBusinessAnalysisMutationResult = Apollo.MutationResult<UpdateBusinessAnalysisMutation>;
+export type UpdateBusinessAnalysisMutationOptions = Apollo.BaseMutationOptions<UpdateBusinessAnalysisMutation, UpdateBusinessAnalysisMutationVariables>;
 export const AddCloudComputingDocument = gql`
     mutation AddCloudComputing($input: CloudComputingInput!) {
   addCloudComputing(input: $input) {
@@ -2935,6 +3306,73 @@ export function useCloudComputingLazyQuery(baseOptions?: Apollo.LazyQueryHookOpt
 export type CloudComputingQueryHookResult = ReturnType<typeof useCloudComputingQuery>;
 export type CloudComputingLazyQueryHookResult = ReturnType<typeof useCloudComputingLazyQuery>;
 export type CloudComputingQueryResult = Apollo.QueryResult<CloudComputingQuery, CloudComputingQueryVariables>;
+export const CloudComputingCardDocument = gql`
+    query CloudComputingCard {
+  cloudComputingCard {
+    ...CloudComputingCard
+  }
+}
+    ${CloudComputingCardFragmentDoc}`;
+
+/**
+ * __useCloudComputingCardQuery__
+ *
+ * To run a query within a React component, call `useCloudComputingCardQuery` and pass it any options that fit your needs.
+ * When your component renders, `useCloudComputingCardQuery` returns an object from Apollo Client that contains loading, error, and data properties
+ * you can use to render your UI.
+ *
+ * @param baseOptions options that will be passed into the query, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options;
+ *
+ * @example
+ * const { data, loading, error } = useCloudComputingCardQuery({
+ *   variables: {
+ *   },
+ * });
+ */
+export function useCloudComputingCardQuery(baseOptions?: Apollo.QueryHookOptions<CloudComputingCardQuery, CloudComputingCardQueryVariables>) {
+        const options = {...defaultOptions, ...baseOptions}
+        return Apollo.useQuery<CloudComputingCardQuery, CloudComputingCardQueryVariables>(CloudComputingCardDocument, options);
+      }
+export function useCloudComputingCardLazyQuery(baseOptions?: Apollo.LazyQueryHookOptions<CloudComputingCardQuery, CloudComputingCardQueryVariables>) {
+          const options = {...defaultOptions, ...baseOptions}
+          return Apollo.useLazyQuery<CloudComputingCardQuery, CloudComputingCardQueryVariables>(CloudComputingCardDocument, options);
+        }
+export type CloudComputingCardQueryHookResult = ReturnType<typeof useCloudComputingCardQuery>;
+export type CloudComputingCardLazyQueryHookResult = ReturnType<typeof useCloudComputingCardLazyQuery>;
+export type CloudComputingCardQueryResult = Apollo.QueryResult<CloudComputingCardQuery, CloudComputingCardQueryVariables>;
+export const UpdateCloudComputingDocument = gql`
+    mutation UpdateCloudComputing($input: CloudComputingInput!) {
+  updateCloudComputing(input: $input) {
+    ...CloudComputing
+  }
+}
+    ${CloudComputingFragmentDoc}`;
+export type UpdateCloudComputingMutationFn = Apollo.MutationFunction<UpdateCloudComputingMutation, UpdateCloudComputingMutationVariables>;
+
+/**
+ * __useUpdateCloudComputingMutation__
+ *
+ * To run a mutation, you first call `useUpdateCloudComputingMutation` within a React component and pass it any options that fit your needs.
+ * When your component renders, `useUpdateCloudComputingMutation` returns a tuple that includes:
+ * - A mutate function that you can call at any time to execute the mutation
+ * - An object with fields that represent the current status of the mutation's execution
+ *
+ * @param baseOptions options that will be passed into the mutation, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options-2;
+ *
+ * @example
+ * const [updateCloudComputingMutation, { data, loading, error }] = useUpdateCloudComputingMutation({
+ *   variables: {
+ *      input: // value for 'input'
+ *   },
+ * });
+ */
+export function useUpdateCloudComputingMutation(baseOptions?: Apollo.MutationHookOptions<UpdateCloudComputingMutation, UpdateCloudComputingMutationVariables>) {
+        const options = {...defaultOptions, ...baseOptions}
+        return Apollo.useMutation<UpdateCloudComputingMutation, UpdateCloudComputingMutationVariables>(UpdateCloudComputingDocument, options);
+      }
+export type UpdateCloudComputingMutationHookResult = ReturnType<typeof useUpdateCloudComputingMutation>;
+export type UpdateCloudComputingMutationResult = Apollo.MutationResult<UpdateCloudComputingMutation>;
+export type UpdateCloudComputingMutationOptions = Apollo.BaseMutationOptions<UpdateCloudComputingMutation, UpdateCloudComputingMutationVariables>;
 export const AddComputerNetworkingDocument = gql`
     mutation AddComputerNetworking($input: ComputerNetworkingInput!) {
   addComputerNetworking(input: $input) {
@@ -3003,6 +3441,73 @@ export function useComputerNetworkingLazyQuery(baseOptions?: Apollo.LazyQueryHoo
 export type ComputerNetworkingQueryHookResult = ReturnType<typeof useComputerNetworkingQuery>;
 export type ComputerNetworkingLazyQueryHookResult = ReturnType<typeof useComputerNetworkingLazyQuery>;
 export type ComputerNetworkingQueryResult = Apollo.QueryResult<ComputerNetworkingQuery, ComputerNetworkingQueryVariables>;
+export const ComputerNetworkingCardDocument = gql`
+    query ComputerNetworkingCard {
+  computerNetworkingCard {
+    ...ComputerNetworkingCard
+  }
+}
+    ${ComputerNetworkingCardFragmentDoc}`;
+
+/**
+ * __useComputerNetworkingCardQuery__
+ *
+ * To run a query within a React component, call `useComputerNetworkingCardQuery` and pass it any options that fit your needs.
+ * When your component renders, `useComputerNetworkingCardQuery` returns an object from Apollo Client that contains loading, error, and data properties
+ * you can use to render your UI.
+ *
+ * @param baseOptions options that will be passed into the query, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options;
+ *
+ * @example
+ * const { data, loading, error } = useComputerNetworkingCardQuery({
+ *   variables: {
+ *   },
+ * });
+ */
+export function useComputerNetworkingCardQuery(baseOptions?: Apollo.QueryHookOptions<ComputerNetworkingCardQuery, ComputerNetworkingCardQueryVariables>) {
+        const options = {...defaultOptions, ...baseOptions}
+        return Apollo.useQuery<ComputerNetworkingCardQuery, ComputerNetworkingCardQueryVariables>(ComputerNetworkingCardDocument, options);
+      }
+export function useComputerNetworkingCardLazyQuery(baseOptions?: Apollo.LazyQueryHookOptions<ComputerNetworkingCardQuery, ComputerNetworkingCardQueryVariables>) {
+          const options = {...defaultOptions, ...baseOptions}
+          return Apollo.useLazyQuery<ComputerNetworkingCardQuery, ComputerNetworkingCardQueryVariables>(ComputerNetworkingCardDocument, options);
+        }
+export type ComputerNetworkingCardQueryHookResult = ReturnType<typeof useComputerNetworkingCardQuery>;
+export type ComputerNetworkingCardLazyQueryHookResult = ReturnType<typeof useComputerNetworkingCardLazyQuery>;
+export type ComputerNetworkingCardQueryResult = Apollo.QueryResult<ComputerNetworkingCardQuery, ComputerNetworkingCardQueryVariables>;
+export const UpdateComputerNetworkingDocument = gql`
+    mutation UpdateComputerNetworking($input: ComputerNetworkingInput!) {
+  updateComputerNetworking(input: $input) {
+    ...ComputerNetworking
+  }
+}
+    ${ComputerNetworkingFragmentDoc}`;
+export type UpdateComputerNetworkingMutationFn = Apollo.MutationFunction<UpdateComputerNetworkingMutation, UpdateComputerNetworkingMutationVariables>;
+
+/**
+ * __useUpdateComputerNetworkingMutation__
+ *
+ * To run a mutation, you first call `useUpdateComputerNetworkingMutation` within a React component and pass it any options that fit your needs.
+ * When your component renders, `useUpdateComputerNetworkingMutation` returns a tuple that includes:
+ * - A mutate function that you can call at any time to execute the mutation
+ * - An object with fields that represent the current status of the mutation's execution
+ *
+ * @param baseOptions options that will be passed into the mutation, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options-2;
+ *
+ * @example
+ * const [updateComputerNetworkingMutation, { data, loading, error }] = useUpdateComputerNetworkingMutation({
+ *   variables: {
+ *      input: // value for 'input'
+ *   },
+ * });
+ */
+export function useUpdateComputerNetworkingMutation(baseOptions?: Apollo.MutationHookOptions<UpdateComputerNetworkingMutation, UpdateComputerNetworkingMutationVariables>) {
+        const options = {...defaultOptions, ...baseOptions}
+        return Apollo.useMutation<UpdateComputerNetworkingMutation, UpdateComputerNetworkingMutationVariables>(UpdateComputerNetworkingDocument, options);
+      }
+export type UpdateComputerNetworkingMutationHookResult = ReturnType<typeof useUpdateComputerNetworkingMutation>;
+export type UpdateComputerNetworkingMutationResult = Apollo.MutationResult<UpdateComputerNetworkingMutation>;
+export type UpdateComputerNetworkingMutationOptions = Apollo.BaseMutationOptions<UpdateComputerNetworkingMutation, UpdateComputerNetworkingMutationVariables>;
 export const AddDataManagementDocument = gql`
     mutation AddDataManagement($input: DataManagementInput!) {
   addDataManagement(input: $input) {
@@ -3071,6 +3576,73 @@ export function useDataManagementLazyQuery(baseOptions?: Apollo.LazyQueryHookOpt
 export type DataManagementQueryHookResult = ReturnType<typeof useDataManagementQuery>;
 export type DataManagementLazyQueryHookResult = ReturnType<typeof useDataManagementLazyQuery>;
 export type DataManagementQueryResult = Apollo.QueryResult<DataManagementQuery, DataManagementQueryVariables>;
+export const DataManagementCardDocument = gql`
+    query DataManagementCard {
+  dataManagementCard {
+    ...DataManagementCard
+  }
+}
+    ${DataManagementCardFragmentDoc}`;
+
+/**
+ * __useDataManagementCardQuery__
+ *
+ * To run a query within a React component, call `useDataManagementCardQuery` and pass it any options that fit your needs.
+ * When your component renders, `useDataManagementCardQuery` returns an object from Apollo Client that contains loading, error, and data properties
+ * you can use to render your UI.
+ *
+ * @param baseOptions options that will be passed into the query, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options;
+ *
+ * @example
+ * const { data, loading, error } = useDataManagementCardQuery({
+ *   variables: {
+ *   },
+ * });
+ */
+export function useDataManagementCardQuery(baseOptions?: Apollo.QueryHookOptions<DataManagementCardQuery, DataManagementCardQueryVariables>) {
+        const options = {...defaultOptions, ...baseOptions}
+        return Apollo.useQuery<DataManagementCardQuery, DataManagementCardQueryVariables>(DataManagementCardDocument, options);
+      }
+export function useDataManagementCardLazyQuery(baseOptions?: Apollo.LazyQueryHookOptions<DataManagementCardQuery, DataManagementCardQueryVariables>) {
+          const options = {...defaultOptions, ...baseOptions}
+          return Apollo.useLazyQuery<DataManagementCardQuery, DataManagementCardQueryVariables>(DataManagementCardDocument, options);
+        }
+export type DataManagementCardQueryHookResult = ReturnType<typeof useDataManagementCardQuery>;
+export type DataManagementCardLazyQueryHookResult = ReturnType<typeof useDataManagementCardLazyQuery>;
+export type DataManagementCardQueryResult = Apollo.QueryResult<DataManagementCardQuery, DataManagementCardQueryVariables>;
+export const UpdateDataManagementDocument = gql`
+    mutation UpdateDataManagement($input: DataManagementInput!) {
+  updateDataManagement(input: $input) {
+    ...DataManagement
+  }
+}
+    ${DataManagementFragmentDoc}`;
+export type UpdateDataManagementMutationFn = Apollo.MutationFunction<UpdateDataManagementMutation, UpdateDataManagementMutationVariables>;
+
+/**
+ * __useUpdateDataManagementMutation__
+ *
+ * To run a mutation, you first call `useUpdateDataManagementMutation` within a React component and pass it any options that fit your needs.
+ * When your component renders, `useUpdateDataManagementMutation` returns a tuple that includes:
+ * - A mutate function that you can call at any time to execute the mutation
+ * - An object with fields that represent the current status of the mutation's execution
+ *
+ * @param baseOptions options that will be passed into the mutation, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options-2;
+ *
+ * @example
+ * const [updateDataManagementMutation, { data, loading, error }] = useUpdateDataManagementMutation({
+ *   variables: {
+ *      input: // value for 'input'
+ *   },
+ * });
+ */
+export function useUpdateDataManagementMutation(baseOptions?: Apollo.MutationHookOptions<UpdateDataManagementMutation, UpdateDataManagementMutationVariables>) {
+        const options = {...defaultOptions, ...baseOptions}
+        return Apollo.useMutation<UpdateDataManagementMutation, UpdateDataManagementMutationVariables>(UpdateDataManagementDocument, options);
+      }
+export type UpdateDataManagementMutationHookResult = ReturnType<typeof useUpdateDataManagementMutation>;
+export type UpdateDataManagementMutationResult = Apollo.MutationResult<UpdateDataManagementMutation>;
+export type UpdateDataManagementMutationOptions = Apollo.BaseMutationOptions<UpdateDataManagementMutation, UpdateDataManagementMutationVariables>;
 export const AddGameProgrammingDocument = gql`
     mutation AddGameProgramming($input: GameProgrammingInput!) {
   addGameProgramming(input: $input) {
@@ -3139,6 +3711,73 @@ export function useGameProgrammingLazyQuery(baseOptions?: Apollo.LazyQueryHookOp
 export type GameProgrammingQueryHookResult = ReturnType<typeof useGameProgrammingQuery>;
 export type GameProgrammingLazyQueryHookResult = ReturnType<typeof useGameProgrammingLazyQuery>;
 export type GameProgrammingQueryResult = Apollo.QueryResult<GameProgrammingQuery, GameProgrammingQueryVariables>;
+export const GameProgrammingCardDocument = gql`
+    query GameProgrammingCard {
+  gameProgrammingCard {
+    ...GameProgrammingCard
+  }
+}
+    ${GameProgrammingCardFragmentDoc}`;
+
+/**
+ * __useGameProgrammingCardQuery__
+ *
+ * To run a query within a React component, call `useGameProgrammingCardQuery` and pass it any options that fit your needs.
+ * When your component renders, `useGameProgrammingCardQuery` returns an object from Apollo Client that contains loading, error, and data properties
+ * you can use to render your UI.
+ *
+ * @param baseOptions options that will be passed into the query, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options;
+ *
+ * @example
+ * const { data, loading, error } = useGameProgrammingCardQuery({
+ *   variables: {
+ *   },
+ * });
+ */
+export function useGameProgrammingCardQuery(baseOptions?: Apollo.QueryHookOptions<GameProgrammingCardQuery, GameProgrammingCardQueryVariables>) {
+        const options = {...defaultOptions, ...baseOptions}
+        return Apollo.useQuery<GameProgrammingCardQuery, GameProgrammingCardQueryVariables>(GameProgrammingCardDocument, options);
+      }
+export function useGameProgrammingCardLazyQuery(baseOptions?: Apollo.LazyQueryHookOptions<GameProgrammingCardQuery, GameProgrammingCardQueryVariables>) {
+          const options = {...defaultOptions, ...baseOptions}
+          return Apollo.useLazyQuery<GameProgrammingCardQuery, GameProgrammingCardQueryVariables>(GameProgrammingCardDocument, options);
+        }
+export type GameProgrammingCardQueryHookResult = ReturnType<typeof useGameProgrammingCardQuery>;
+export type GameProgrammingCardLazyQueryHookResult = ReturnType<typeof useGameProgrammingCardLazyQuery>;
+export type GameProgrammingCardQueryResult = Apollo.QueryResult<GameProgrammingCardQuery, GameProgrammingCardQueryVariables>;
+export const UpdateGameProgrammingDocument = gql`
+    mutation UpdateGameProgramming($input: GameProgrammingInput!) {
+  updateGameProgramming(input: $input) {
+    ...GameProgramming
+  }
+}
+    ${GameProgrammingFragmentDoc}`;
+export type UpdateGameProgrammingMutationFn = Apollo.MutationFunction<UpdateGameProgrammingMutation, UpdateGameProgrammingMutationVariables>;
+
+/**
+ * __useUpdateGameProgrammingMutation__
+ *
+ * To run a mutation, you first call `useUpdateGameProgrammingMutation` within a React component and pass it any options that fit your needs.
+ * When your component renders, `useUpdateGameProgrammingMutation` returns a tuple that includes:
+ * - A mutate function that you can call at any time to execute the mutation
+ * - An object with fields that represent the current status of the mutation's execution
+ *
+ * @param baseOptions options that will be passed into the mutation, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options-2;
+ *
+ * @example
+ * const [updateGameProgrammingMutation, { data, loading, error }] = useUpdateGameProgrammingMutation({
+ *   variables: {
+ *      input: // value for 'input'
+ *   },
+ * });
+ */
+export function useUpdateGameProgrammingMutation(baseOptions?: Apollo.MutationHookOptions<UpdateGameProgrammingMutation, UpdateGameProgrammingMutationVariables>) {
+        const options = {...defaultOptions, ...baseOptions}
+        return Apollo.useMutation<UpdateGameProgrammingMutation, UpdateGameProgrammingMutationVariables>(UpdateGameProgrammingDocument, options);
+      }
+export type UpdateGameProgrammingMutationHookResult = ReturnType<typeof useUpdateGameProgrammingMutation>;
+export type UpdateGameProgrammingMutationResult = Apollo.MutationResult<UpdateGameProgrammingMutation>;
+export type UpdateGameProgrammingMutationOptions = Apollo.BaseMutationOptions<UpdateGameProgrammingMutation, UpdateGameProgrammingMutationVariables>;
 export const AddMachineLearningDocument = gql`
     mutation AddMachineLearning($input: MachineLearningInput!) {
   addMachineLearning(input: $input) {
@@ -3207,6 +3846,73 @@ export function useMachineLearningLazyQuery(baseOptions?: Apollo.LazyQueryHookOp
 export type MachineLearningQueryHookResult = ReturnType<typeof useMachineLearningQuery>;
 export type MachineLearningLazyQueryHookResult = ReturnType<typeof useMachineLearningLazyQuery>;
 export type MachineLearningQueryResult = Apollo.QueryResult<MachineLearningQuery, MachineLearningQueryVariables>;
+export const MachineLearningCardDocument = gql`
+    query MachineLearningCard {
+  machineLearningCard {
+    ...MachineLearningCard
+  }
+}
+    ${MachineLearningCardFragmentDoc}`;
+
+/**
+ * __useMachineLearningCardQuery__
+ *
+ * To run a query within a React component, call `useMachineLearningCardQuery` and pass it any options that fit your needs.
+ * When your component renders, `useMachineLearningCardQuery` returns an object from Apollo Client that contains loading, error, and data properties
+ * you can use to render your UI.
+ *
+ * @param baseOptions options that will be passed into the query, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options;
+ *
+ * @example
+ * const { data, loading, error } = useMachineLearningCardQuery({
+ *   variables: {
+ *   },
+ * });
+ */
+export function useMachineLearningCardQuery(baseOptions?: Apollo.QueryHookOptions<MachineLearningCardQuery, MachineLearningCardQueryVariables>) {
+        const options = {...defaultOptions, ...baseOptions}
+        return Apollo.useQuery<MachineLearningCardQuery, MachineLearningCardQueryVariables>(MachineLearningCardDocument, options);
+      }
+export function useMachineLearningCardLazyQuery(baseOptions?: Apollo.LazyQueryHookOptions<MachineLearningCardQuery, MachineLearningCardQueryVariables>) {
+          const options = {...defaultOptions, ...baseOptions}
+          return Apollo.useLazyQuery<MachineLearningCardQuery, MachineLearningCardQueryVariables>(MachineLearningCardDocument, options);
+        }
+export type MachineLearningCardQueryHookResult = ReturnType<typeof useMachineLearningCardQuery>;
+export type MachineLearningCardLazyQueryHookResult = ReturnType<typeof useMachineLearningCardLazyQuery>;
+export type MachineLearningCardQueryResult = Apollo.QueryResult<MachineLearningCardQuery, MachineLearningCardQueryVariables>;
+export const UpdateMachineLearningDocument = gql`
+    mutation UpdateMachineLearning($input: MachineLearningInput!) {
+  updateMachineLearning(input: $input) {
+    ...MachineLearning
+  }
+}
+    ${MachineLearningFragmentDoc}`;
+export type UpdateMachineLearningMutationFn = Apollo.MutationFunction<UpdateMachineLearningMutation, UpdateMachineLearningMutationVariables>;
+
+/**
+ * __useUpdateMachineLearningMutation__
+ *
+ * To run a mutation, you first call `useUpdateMachineLearningMutation` within a React component and pass it any options that fit your needs.
+ * When your component renders, `useUpdateMachineLearningMutation` returns a tuple that includes:
+ * - A mutate function that you can call at any time to execute the mutation
+ * - An object with fields that represent the current status of the mutation's execution
+ *
+ * @param baseOptions options that will be passed into the mutation, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options-2;
+ *
+ * @example
+ * const [updateMachineLearningMutation, { data, loading, error }] = useUpdateMachineLearningMutation({
+ *   variables: {
+ *      input: // value for 'input'
+ *   },
+ * });
+ */
+export function useUpdateMachineLearningMutation(baseOptions?: Apollo.MutationHookOptions<UpdateMachineLearningMutation, UpdateMachineLearningMutationVariables>) {
+        const options = {...defaultOptions, ...baseOptions}
+        return Apollo.useMutation<UpdateMachineLearningMutation, UpdateMachineLearningMutationVariables>(UpdateMachineLearningDocument, options);
+      }
+export type UpdateMachineLearningMutationHookResult = ReturnType<typeof useUpdateMachineLearningMutation>;
+export type UpdateMachineLearningMutationResult = Apollo.MutationResult<UpdateMachineLearningMutation>;
+export type UpdateMachineLearningMutationOptions = Apollo.BaseMutationOptions<UpdateMachineLearningMutation, UpdateMachineLearningMutationVariables>;
 export const AddSoftwareDevelopmentDocument = gql`
     mutation AddSoftwareDevelopment($input: SoftwareDevelopmentInput!) {
   addSoftwareDevelopment(input: $input) {
@@ -3410,6 +4116,73 @@ export function useTelecommunicationLazyQuery(baseOptions?: Apollo.LazyQueryHook
 export type TelecommunicationQueryHookResult = ReturnType<typeof useTelecommunicationQuery>;
 export type TelecommunicationLazyQueryHookResult = ReturnType<typeof useTelecommunicationLazyQuery>;
 export type TelecommunicationQueryResult = Apollo.QueryResult<TelecommunicationQuery, TelecommunicationQueryVariables>;
+export const TelecommunicationCardDocument = gql`
+    query TelecommunicationCard {
+  telecommunicationCard {
+    ...TelecommunicationCard
+  }
+}
+    ${TelecommunicationCardFragmentDoc}`;
+
+/**
+ * __useTelecommunicationCardQuery__
+ *
+ * To run a query within a React component, call `useTelecommunicationCardQuery` and pass it any options that fit your needs.
+ * When your component renders, `useTelecommunicationCardQuery` returns an object from Apollo Client that contains loading, error, and data properties
+ * you can use to render your UI.
+ *
+ * @param baseOptions options that will be passed into the query, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options;
+ *
+ * @example
+ * const { data, loading, error } = useTelecommunicationCardQuery({
+ *   variables: {
+ *   },
+ * });
+ */
+export function useTelecommunicationCardQuery(baseOptions?: Apollo.QueryHookOptions<TelecommunicationCardQuery, TelecommunicationCardQueryVariables>) {
+        const options = {...defaultOptions, ...baseOptions}
+        return Apollo.useQuery<TelecommunicationCardQuery, TelecommunicationCardQueryVariables>(TelecommunicationCardDocument, options);
+      }
+export function useTelecommunicationCardLazyQuery(baseOptions?: Apollo.LazyQueryHookOptions<TelecommunicationCardQuery, TelecommunicationCardQueryVariables>) {
+          const options = {...defaultOptions, ...baseOptions}
+          return Apollo.useLazyQuery<TelecommunicationCardQuery, TelecommunicationCardQueryVariables>(TelecommunicationCardDocument, options);
+        }
+export type TelecommunicationCardQueryHookResult = ReturnType<typeof useTelecommunicationCardQuery>;
+export type TelecommunicationCardLazyQueryHookResult = ReturnType<typeof useTelecommunicationCardLazyQuery>;
+export type TelecommunicationCardQueryResult = Apollo.QueryResult<TelecommunicationCardQuery, TelecommunicationCardQueryVariables>;
+export const UpdateTelecommunicationDocument = gql`
+    mutation UpdateTelecommunication($input: TelecommunicationInput!) {
+  updateTelecommunication(input: $input) {
+    ...Telecommunication
+  }
+}
+    ${TelecommunicationFragmentDoc}`;
+export type UpdateTelecommunicationMutationFn = Apollo.MutationFunction<UpdateTelecommunicationMutation, UpdateTelecommunicationMutationVariables>;
+
+/**
+ * __useUpdateTelecommunicationMutation__
+ *
+ * To run a mutation, you first call `useUpdateTelecommunicationMutation` within a React component and pass it any options that fit your needs.
+ * When your component renders, `useUpdateTelecommunicationMutation` returns a tuple that includes:
+ * - A mutate function that you can call at any time to execute the mutation
+ * - An object with fields that represent the current status of the mutation's execution
+ *
+ * @param baseOptions options that will be passed into the mutation, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options-2;
+ *
+ * @example
+ * const [updateTelecommunicationMutation, { data, loading, error }] = useUpdateTelecommunicationMutation({
+ *   variables: {
+ *      input: // value for 'input'
+ *   },
+ * });
+ */
+export function useUpdateTelecommunicationMutation(baseOptions?: Apollo.MutationHookOptions<UpdateTelecommunicationMutation, UpdateTelecommunicationMutationVariables>) {
+        const options = {...defaultOptions, ...baseOptions}
+        return Apollo.useMutation<UpdateTelecommunicationMutation, UpdateTelecommunicationMutationVariables>(UpdateTelecommunicationDocument, options);
+      }
+export type UpdateTelecommunicationMutationHookResult = ReturnType<typeof useUpdateTelecommunicationMutation>;
+export type UpdateTelecommunicationMutationResult = Apollo.MutationResult<UpdateTelecommunicationMutation>;
+export type UpdateTelecommunicationMutationOptions = Apollo.BaseMutationOptions<UpdateTelecommunicationMutation, UpdateTelecommunicationMutationVariables>;
 export const AddWebDevelopmentDocument = gql`
     mutation AddWebDevelopment($input: WebDevelopmentInput!) {
   addWebDevelopment(input: $input) {
@@ -3443,6 +4216,39 @@ export function useAddWebDevelopmentMutation(baseOptions?: Apollo.MutationHookOp
 export type AddWebDevelopmentMutationHookResult = ReturnType<typeof useAddWebDevelopmentMutation>;
 export type AddWebDevelopmentMutationResult = Apollo.MutationResult<AddWebDevelopmentMutation>;
 export type AddWebDevelopmentMutationOptions = Apollo.BaseMutationOptions<AddWebDevelopmentMutation, AddWebDevelopmentMutationVariables>;
+export const UpdateWebDevelopmentDocument = gql`
+    mutation UpdateWebDevelopment($input: WebDevelopmentInput!) {
+  updateWebDevelopment(input: $input) {
+    ...WebDevelopment
+  }
+}
+    ${WebDevelopmentFragmentDoc}`;
+export type UpdateWebDevelopmentMutationFn = Apollo.MutationFunction<UpdateWebDevelopmentMutation, UpdateWebDevelopmentMutationVariables>;
+
+/**
+ * __useUpdateWebDevelopmentMutation__
+ *
+ * To run a mutation, you first call `useUpdateWebDevelopmentMutation` within a React component and pass it any options that fit your needs.
+ * When your component renders, `useUpdateWebDevelopmentMutation` returns a tuple that includes:
+ * - A mutate function that you can call at any time to execute the mutation
+ * - An object with fields that represent the current status of the mutation's execution
+ *
+ * @param baseOptions options that will be passed into the mutation, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options-2;
+ *
+ * @example
+ * const [updateWebDevelopmentMutation, { data, loading, error }] = useUpdateWebDevelopmentMutation({
+ *   variables: {
+ *      input: // value for 'input'
+ *   },
+ * });
+ */
+export function useUpdateWebDevelopmentMutation(baseOptions?: Apollo.MutationHookOptions<UpdateWebDevelopmentMutation, UpdateWebDevelopmentMutationVariables>) {
+        const options = {...defaultOptions, ...baseOptions}
+        return Apollo.useMutation<UpdateWebDevelopmentMutation, UpdateWebDevelopmentMutationVariables>(UpdateWebDevelopmentDocument, options);
+      }
+export type UpdateWebDevelopmentMutationHookResult = ReturnType<typeof useUpdateWebDevelopmentMutation>;
+export type UpdateWebDevelopmentMutationResult = Apollo.MutationResult<UpdateWebDevelopmentMutation>;
+export type UpdateWebDevelopmentMutationOptions = Apollo.BaseMutationOptions<UpdateWebDevelopmentMutation, UpdateWebDevelopmentMutationVariables>;
 export const WebDevelopmentDocument = gql`
     query WebDevelopment($id: ID!) {
   webDevelopment(id: $id) {
@@ -3478,6 +4284,40 @@ export function useWebDevelopmentLazyQuery(baseOptions?: Apollo.LazyQueryHookOpt
 export type WebDevelopmentQueryHookResult = ReturnType<typeof useWebDevelopmentQuery>;
 export type WebDevelopmentLazyQueryHookResult = ReturnType<typeof useWebDevelopmentLazyQuery>;
 export type WebDevelopmentQueryResult = Apollo.QueryResult<WebDevelopmentQuery, WebDevelopmentQueryVariables>;
+export const WebDevelopmentCardDocument = gql`
+    query WebDevelopmentCard {
+  webDevelopmentCard {
+    ...WebDevelopmentCard
+  }
+}
+    ${WebDevelopmentCardFragmentDoc}`;
+
+/**
+ * __useWebDevelopmentCardQuery__
+ *
+ * To run a query within a React component, call `useWebDevelopmentCardQuery` and pass it any options that fit your needs.
+ * When your component renders, `useWebDevelopmentCardQuery` returns an object from Apollo Client that contains loading, error, and data properties
+ * you can use to render your UI.
+ *
+ * @param baseOptions options that will be passed into the query, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options;
+ *
+ * @example
+ * const { data, loading, error } = useWebDevelopmentCardQuery({
+ *   variables: {
+ *   },
+ * });
+ */
+export function useWebDevelopmentCardQuery(baseOptions?: Apollo.QueryHookOptions<WebDevelopmentCardQuery, WebDevelopmentCardQueryVariables>) {
+        const options = {...defaultOptions, ...baseOptions}
+        return Apollo.useQuery<WebDevelopmentCardQuery, WebDevelopmentCardQueryVariables>(WebDevelopmentCardDocument, options);
+      }
+export function useWebDevelopmentCardLazyQuery(baseOptions?: Apollo.LazyQueryHookOptions<WebDevelopmentCardQuery, WebDevelopmentCardQueryVariables>) {
+          const options = {...defaultOptions, ...baseOptions}
+          return Apollo.useLazyQuery<WebDevelopmentCardQuery, WebDevelopmentCardQueryVariables>(WebDevelopmentCardDocument, options);
+        }
+export type WebDevelopmentCardQueryHookResult = ReturnType<typeof useWebDevelopmentCardQuery>;
+export type WebDevelopmentCardLazyQueryHookResult = ReturnType<typeof useWebDevelopmentCardLazyQuery>;
+export type WebDevelopmentCardQueryResult = Apollo.QueryResult<WebDevelopmentCardQuery, WebDevelopmentCardQueryVariables>;
 export type AddBlogPostMutationVariables = Exact<{
   input: BlogPostInput;
 }>;
@@ -3527,128 +4367,240 @@ export type AddAiMutationVariables = Exact<{
 }>;
 
 
-export type AddAiMutation = { __typename?: 'Mutation', addAi?: { __typename?: 'Ai', id?: string | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null } | null };
+export type AddAiMutation = { __typename?: 'Mutation', addAi?: { __typename?: 'Ai', id: string, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null } | null };
 
 export type AiQueryVariables = Exact<{
   id: Scalars['ID'];
 }>;
 
 
-export type AiQuery = { __typename?: 'Query', ai?: { __typename?: 'Ai', id?: string | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null } | null };
+export type AiQuery = { __typename?: 'Query', ai?: { __typename?: 'Ai', id: string, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null } | null };
 
-export type AiFragment = { __typename?: 'Ai', id?: string | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null };
+export type AiCardQueryVariables = Exact<{ [key: string]: never; }>;
+
+
+export type AiCardQuery = { __typename?: 'Query', aiCard?: Array<{ __typename?: 'Ai', category?: string | null, id: string, title?: string | null, subtitle1?: string | null } | null> | null };
+
+export type AiCardFragment = { __typename?: 'Ai', category?: string | null, id: string, title?: string | null, subtitle1?: string | null };
+
+export type AiFragment = { __typename?: 'Ai', id: string, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null };
+
+export type UpdateAiMutationVariables = Exact<{
+  input: AiInput;
+}>;
+
+
+export type UpdateAiMutation = { __typename?: 'Mutation', updateAi?: { __typename?: 'Ai', id: string, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null } | null };
 
 export type AddBlockchainMutationVariables = Exact<{
   input: BlockchainInput;
 }>;
 
 
-export type AddBlockchainMutation = { __typename?: 'Mutation', addBlockchain?: { __typename?: 'Blockchain', id?: string | null, category?: string | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null } | null };
+export type AddBlockchainMutation = { __typename?: 'Mutation', addBlockchain?: { __typename?: 'Blockchain', id: string, category?: string | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null } | null };
 
 export type BlockchainQueryVariables = Exact<{
   id: Scalars['ID'];
 }>;
 
 
-export type BlockchainQuery = { __typename?: 'Query', blockchain?: { __typename?: 'Blockchain', id?: string | null, category?: string | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null } | null };
+export type BlockchainQuery = { __typename?: 'Query', blockchain?: { __typename?: 'Blockchain', id: string, category?: string | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null } | null };
 
-export type BlockchainFragment = { __typename?: 'Blockchain', id?: string | null, category?: string | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null };
+export type BlockchainCardQueryVariables = Exact<{ [key: string]: never; }>;
+
+
+export type BlockchainCardQuery = { __typename?: 'Query', blockchainCard?: Array<{ __typename?: 'Blockchain', category?: string | null, id: string, title?: string | null, subtitle1?: string | null } | null> | null };
+
+export type BlockchainCardFragment = { __typename?: 'Blockchain', category?: string | null, id: string, title?: string | null, subtitle1?: string | null };
+
+export type BlockchainFragment = { __typename?: 'Blockchain', id: string, category?: string | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null };
+
+export type UpdateBlockchainMutationVariables = Exact<{
+  input: BlockchainInput;
+}>;
+
+
+export type UpdateBlockchainMutation = { __typename?: 'Mutation', updateBlockchain?: { __typename?: 'Blockchain', id: string, category?: string | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null } | null };
 
 export type AddBusinessAnalysisMutationVariables = Exact<{
   input: BusinessAnalysisInput;
 }>;
 
 
-export type AddBusinessAnalysisMutation = { __typename?: 'Mutation', addBusinessAnalysis?: { __typename?: 'BusinessAnalysis', id?: string | null, category?: string | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null } | null };
+export type AddBusinessAnalysisMutation = { __typename?: 'Mutation', addBusinessAnalysis?: { __typename?: 'BusinessAnalysis', id: string, category?: string | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null } | null };
+
+export type BusinessAnalysisCardQueryVariables = Exact<{ [key: string]: never; }>;
+
+
+export type BusinessAnalysisCardQuery = { __typename?: 'Query', businessAnalysisCard?: Array<{ __typename?: 'BusinessAnalysis', category?: string | null, id: string, title?: string | null, subtitle1?: string | null } | null> | null };
+
+export type BusinessAnalysisCardFragment = { __typename?: 'BusinessAnalysis', category?: string | null, id: string, title?: string | null, subtitle1?: string | null };
 
 export type BusinessAnalysisQueryVariables = Exact<{
   id: Scalars['ID'];
 }>;
 
 
-export type BusinessAnalysisQuery = { __typename?: 'Query', businessAnalysis?: { __typename?: 'BusinessAnalysis', id?: string | null, category?: string | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null } | null };
+export type BusinessAnalysisQuery = { __typename?: 'Query', businessAnalysis?: { __typename?: 'BusinessAnalysis', id: string, category?: string | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null } | null };
 
-export type BusinessAnalysisFragment = { __typename?: 'BusinessAnalysis', id?: string | null, category?: string | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null };
+export type BusinessAnalysisFragment = { __typename?: 'BusinessAnalysis', id: string, category?: string | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null };
+
+export type UpdateBusinessAnalysisMutationVariables = Exact<{
+  input: BusinessAnalysisInput;
+}>;
+
+
+export type UpdateBusinessAnalysisMutation = { __typename?: 'Mutation', updateBusinessAnalysis?: { __typename?: 'BusinessAnalysis', id: string, category?: string | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null } | null };
 
 export type AddCloudComputingMutationVariables = Exact<{
   input: CloudComputingInput;
 }>;
 
 
-export type AddCloudComputingMutation = { __typename?: 'Mutation', addCloudComputing?: { __typename?: 'CloudComputing', id?: string | null, category?: string | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null } | null };
+export type AddCloudComputingMutation = { __typename?: 'Mutation', addCloudComputing?: { __typename?: 'CloudComputing', id: string, category?: string | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null } | null };
 
 export type CloudComputingQueryVariables = Exact<{
   id: Scalars['ID'];
 }>;
 
 
-export type CloudComputingQuery = { __typename?: 'Query', cloudComputing?: { __typename?: 'CloudComputing', id?: string | null, category?: string | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null } | null };
+export type CloudComputingQuery = { __typename?: 'Query', cloudComputing?: { __typename?: 'CloudComputing', id: string, category?: string | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null } | null };
 
-export type CloudComputingFragment = { __typename?: 'CloudComputing', id?: string | null, category?: string | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null };
+export type CloudComputingCardQueryVariables = Exact<{ [key: string]: never; }>;
+
+
+export type CloudComputingCardQuery = { __typename?: 'Query', cloudComputingCard?: Array<{ __typename?: 'CloudComputing', category?: string | null, id: string, title?: string | null, subtitle1?: string | null } | null> | null };
+
+export type CloudComputingCardFragment = { __typename?: 'CloudComputing', category?: string | null, id: string, title?: string | null, subtitle1?: string | null };
+
+export type CloudComputingFragment = { __typename?: 'CloudComputing', id: string, category?: string | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null };
+
+export type UpdateCloudComputingMutationVariables = Exact<{
+  input: CloudComputingInput;
+}>;
+
+
+export type UpdateCloudComputingMutation = { __typename?: 'Mutation', updateCloudComputing?: { __typename?: 'CloudComputing', id: string, category?: string | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null } | null };
 
 export type AddComputerNetworkingMutationVariables = Exact<{
   input: ComputerNetworkingInput;
 }>;
 
 
-export type AddComputerNetworkingMutation = { __typename?: 'Mutation', addComputerNetworking?: { __typename?: 'ComputerNetworking', id?: string | null, category?: string | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null } | null };
+export type AddComputerNetworkingMutation = { __typename?: 'Mutation', addComputerNetworking?: { __typename?: 'ComputerNetworking', id: string, category?: string | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null } | null };
 
 export type ComputerNetworkingQueryVariables = Exact<{
   id: Scalars['ID'];
 }>;
 
 
-export type ComputerNetworkingQuery = { __typename?: 'Query', computerNetworking?: { __typename?: 'ComputerNetworking', id?: string | null, category?: string | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null } | null };
+export type ComputerNetworkingQuery = { __typename?: 'Query', computerNetworking?: { __typename?: 'ComputerNetworking', id: string, category?: string | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null } | null };
 
-export type ComputerNetworkingFragment = { __typename?: 'ComputerNetworking', id?: string | null, category?: string | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null };
+export type ComputerNetworkingCardQueryVariables = Exact<{ [key: string]: never; }>;
+
+
+export type ComputerNetworkingCardQuery = { __typename?: 'Query', computerNetworkingCard?: Array<{ __typename?: 'ComputerNetworking', category?: string | null, id: string, title?: string | null, subtitle1?: string | null } | null> | null };
+
+export type ComputerNetworkingCardFragment = { __typename?: 'ComputerNetworking', category?: string | null, id: string, title?: string | null, subtitle1?: string | null };
+
+export type ComputerNetworkingFragment = { __typename?: 'ComputerNetworking', id: string, category?: string | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null };
+
+export type UpdateComputerNetworkingMutationVariables = Exact<{
+  input: ComputerNetworkingInput;
+}>;
+
+
+export type UpdateComputerNetworkingMutation = { __typename?: 'Mutation', updateComputerNetworking?: { __typename?: 'ComputerNetworking', id: string, category?: string | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null } | null };
 
 export type AddDataManagementMutationVariables = Exact<{
   input: DataManagementInput;
 }>;
 
 
-export type AddDataManagementMutation = { __typename?: 'Mutation', addDataManagement?: { __typename?: 'DataManagement', id?: string | null, category?: string | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null } | null };
+export type AddDataManagementMutation = { __typename?: 'Mutation', addDataManagement?: { __typename?: 'DataManagement', id: string, category?: string | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null } | null };
 
 export type DataManagementQueryVariables = Exact<{
   id: Scalars['ID'];
 }>;
 
 
-export type DataManagementQuery = { __typename?: 'Query', dataManagement?: { __typename?: 'DataManagement', id?: string | null, category?: string | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null } | null };
+export type DataManagementQuery = { __typename?: 'Query', dataManagement?: { __typename?: 'DataManagement', id: string, category?: string | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null } | null };
 
-export type DataManagementFragment = { __typename?: 'DataManagement', id?: string | null, category?: string | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null };
+export type DataManagementCardQueryVariables = Exact<{ [key: string]: never; }>;
+
+
+export type DataManagementCardQuery = { __typename?: 'Query', dataManagementCard?: Array<{ __typename?: 'DataManagement', category?: string | null, id: string, title?: string | null, subtitle1?: string | null } | null> | null };
+
+export type DataManagementCardFragment = { __typename?: 'DataManagement', category?: string | null, id: string, title?: string | null, subtitle1?: string | null };
+
+export type DataManagementFragment = { __typename?: 'DataManagement', id: string, category?: string | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null };
+
+export type UpdateDataManagementMutationVariables = Exact<{
+  input: DataManagementInput;
+}>;
+
+
+export type UpdateDataManagementMutation = { __typename?: 'Mutation', updateDataManagement?: { __typename?: 'DataManagement', id: string, category?: string | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null } | null };
 
 export type AddGameProgrammingMutationVariables = Exact<{
   input: GameProgrammingInput;
 }>;
 
 
-export type AddGameProgrammingMutation = { __typename?: 'Mutation', addGameProgramming?: { __typename?: 'GameProgramming', id?: string | null, category?: string | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null } | null };
+export type AddGameProgrammingMutation = { __typename?: 'Mutation', addGameProgramming?: { __typename?: 'GameProgramming', id: string, category?: string | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null } | null };
 
 export type GameProgrammingQueryVariables = Exact<{
   id: Scalars['ID'];
 }>;
 
 
-export type GameProgrammingQuery = { __typename?: 'Query', gameProgramming?: { __typename?: 'GameProgramming', id?: string | null, category?: string | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null } | null };
+export type GameProgrammingQuery = { __typename?: 'Query', gameProgramming?: { __typename?: 'GameProgramming', id: string, category?: string | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null } | null };
 
-export type GameProgrammingFragment = { __typename?: 'GameProgramming', id?: string | null, category?: string | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null };
+export type GameProgrammingCardQueryVariables = Exact<{ [key: string]: never; }>;
+
+
+export type GameProgrammingCardQuery = { __typename?: 'Query', gameProgrammingCard?: Array<{ __typename?: 'GameProgramming', category?: string | null, id: string, title?: string | null, subtitle1?: string | null } | null> | null };
+
+export type GameProgrammingFragment = { __typename?: 'GameProgramming', id: string, category?: string | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null };
+
+export type GameProgrammingCardFragment = { __typename?: 'GameProgramming', category?: string | null, id: string, title?: string | null, subtitle1?: string | null };
+
+export type UpdateGameProgrammingMutationVariables = Exact<{
+  input: GameProgrammingInput;
+}>;
+
+
+export type UpdateGameProgrammingMutation = { __typename?: 'Mutation', updateGameProgramming?: { __typename?: 'GameProgramming', id: string, category?: string | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null } | null };
 
 export type AddMachineLearningMutationVariables = Exact<{
   input: MachineLearningInput;
 }>;
 
 
-export type AddMachineLearningMutation = { __typename?: 'Mutation', addMachineLearning?: { __typename?: 'MachineLearning', id?: string | null, category?: string | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null } | null };
+export type AddMachineLearningMutation = { __typename?: 'Mutation', addMachineLearning?: { __typename?: 'MachineLearning', id: string, category?: string | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null } | null };
 
 export type MachineLearningQueryVariables = Exact<{
   id: Scalars['ID'];
 }>;
 
 
-export type MachineLearningQuery = { __typename?: 'Query', machineLearning?: { __typename?: 'MachineLearning', id?: string | null, category?: string | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null } | null };
+export type MachineLearningQuery = { __typename?: 'Query', machineLearning?: { __typename?: 'MachineLearning', id: string, category?: string | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null } | null };
 
-export type MachineLearningFragment = { __typename?: 'MachineLearning', id?: string | null, category?: string | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null };
+export type MachineLearningCardQueryVariables = Exact<{ [key: string]: never; }>;
+
+
+export type MachineLearningCardQuery = { __typename?: 'Query', machineLearningCard?: Array<{ __typename?: 'MachineLearning', category?: string | null, id: string, title?: string | null, subtitle1?: string | null } | null> | null };
+
+export type MachineLearningCardFragment = { __typename?: 'MachineLearning', category?: string | null, id: string, title?: string | null, subtitle1?: string | null };
+
+export type MachineLearningFragment = { __typename?: 'MachineLearning', id: string, category?: string | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null };
+
+export type UpdateMachineLearningMutationVariables = Exact<{
+  input: MachineLearningInput;
+}>;
+
+
+export type UpdateMachineLearningMutation = { __typename?: 'Mutation', updateMachineLearning?: { __typename?: 'MachineLearning', id: string, category?: string | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null } | null };
 
 export type AddSoftwareDevelopmentMutationVariables = Exact<{
   input: SoftwareDevelopmentInput;
@@ -3685,29 +4637,57 @@ export type AddTelecommunicationMutationVariables = Exact<{
 }>;
 
 
-export type AddTelecommunicationMutation = { __typename?: 'Mutation', addTelecommunication?: { __typename?: 'Telecommunication', id?: string | null, category?: string | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null } | null };
+export type AddTelecommunicationMutation = { __typename?: 'Mutation', addTelecommunication?: { __typename?: 'Telecommunication', id: string, category?: string | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null } | null };
 
 export type TelecommunicationQueryVariables = Exact<{
   id: Scalars['ID'];
 }>;
 
 
-export type TelecommunicationQuery = { __typename?: 'Query', telecommunication?: { __typename?: 'Telecommunication', id?: string | null, category?: string | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null } | null };
+export type TelecommunicationQuery = { __typename?: 'Query', telecommunication?: { __typename?: 'Telecommunication', id: string, category?: string | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null } | null };
 
-export type TelecommunicationFragment = { __typename?: 'Telecommunication', id?: string | null, category?: string | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null };
+export type TelecommunicationCardQueryVariables = Exact<{ [key: string]: never; }>;
+
+
+export type TelecommunicationCardQuery = { __typename?: 'Query', telecommunicationCard?: Array<{ __typename?: 'Telecommunication', category?: string | null, id: string, title?: string | null, subtitle1?: string | null } | null> | null };
+
+export type TelecommunicationCardFragment = { __typename?: 'Telecommunication', category?: string | null, id: string, title?: string | null, subtitle1?: string | null };
+
+export type TelecommunicationFragment = { __typename?: 'Telecommunication', id: string, category?: string | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null };
+
+export type UpdateTelecommunicationMutationVariables = Exact<{
+  input: TelecommunicationInput;
+}>;
+
+
+export type UpdateTelecommunicationMutation = { __typename?: 'Mutation', updateTelecommunication?: { __typename?: 'Telecommunication', id: string, category?: string | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null } | null };
 
 export type AddWebDevelopmentMutationVariables = Exact<{
   input: WebDevelopmentInput;
 }>;
 
 
-export type AddWebDevelopmentMutation = { __typename?: 'Mutation', addWebDevelopment?: { __typename?: 'WebDevelopment', id?: string | null, category?: string | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null } | null };
+export type AddWebDevelopmentMutation = { __typename?: 'Mutation', addWebDevelopment?: { __typename?: 'WebDevelopment', id: string, category?: string | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null } | null };
+
+export type UpdateWebDevelopmentMutationVariables = Exact<{
+  input: WebDevelopmentInput;
+}>;
+
+
+export type UpdateWebDevelopmentMutation = { __typename?: 'Mutation', updateWebDevelopment?: { __typename?: 'WebDevelopment', id: string, category?: string | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null } | null };
 
 export type WebDevelopmentQueryVariables = Exact<{
   id: Scalars['ID'];
 }>;
 
 
-export type WebDevelopmentQuery = { __typename?: 'Query', webDevelopment?: { __typename?: 'WebDevelopment', id?: string | null, category?: string | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null } | null };
+export type WebDevelopmentQuery = { __typename?: 'Query', webDevelopment?: { __typename?: 'WebDevelopment', id: string, category?: string | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null } | null };
 
-export type WebDevelopmentFragment = { __typename?: 'WebDevelopment', id?: string | null, category?: string | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null };
+export type WebDevelopmentCardQueryVariables = Exact<{ [key: string]: never; }>;
+
+
+export type WebDevelopmentCardQuery = { __typename?: 'Query', webDevelopmentCard?: Array<{ __typename?: 'WebDevelopment', category?: string | null, id: string, title?: string | null, subtitle1?: string | null } | null> | null };
+
+export type WebDevelopmentCardFragment = { __typename?: 'WebDevelopment', category?: string | null, id: string, title?: string | null, subtitle1?: string | null };
+
+export type WebDevelopmentFragment = { __typename?: 'WebDevelopment', id: string, category?: string | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null };

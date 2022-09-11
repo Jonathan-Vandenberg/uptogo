@@ -3,17 +3,17 @@ import BlogMain from "../../../../components/Blog/BlogMain";
 import BlogPageHero from "../../../../components/Blog/BlogPageHero";
 import MainForm from "../../../../components/MainForm";
 import {
-  useSoftwareDevelopmentCardQuery,
-  useSoftwareDevelopmentQuery,
+  useCloudComputingCardQuery,
+  useCloudComputingQuery,
 } from "../../../../types";
 import { useRouter } from "next/router";
 
 function Posts() {
-  const { data, loading, error } = useSoftwareDevelopmentCardQuery();
+  const { data, loading, error } = useCloudComputingCardQuery();
 
   return (
     <>
-      {data?.softwareDevelopmentCard
+      {data?.cloudComputingCard
         ?.slice(0)
         .reverse()
         .map((post) => (
@@ -48,24 +48,24 @@ export default function App() {
     setEdit(true);
   };
 
-  const { data } = useSoftwareDevelopmentQuery({
+  const { data } = useCloudComputingQuery({
     variables: {
-      id: "631d68109f9c5ab336b3d04e",
+      id: "631db6ab628acdf2748fc161",
     },
   });
 
-  console.log(data?.softwareDevelopment?.category);
+  console.log(data?.cloudComputing?.category);
   return (
     <>
       <Crubs />
       <BlogMain
-        data={data?.softwareDevelopment}
+        data={data?.cloudComputing}
         handleEdit={handleEdit}
         handleAdd={handleAdd}
       />
       {showForm && (
         <MainForm
-          details={data?.softwareDevelopment}
+          details={data?.cloudComputing}
           add={add}
           edit={edit}
           handleClose={() => setShowForm(false)}

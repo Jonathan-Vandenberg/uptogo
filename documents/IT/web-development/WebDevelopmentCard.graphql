@@ -1,0 +1,7 @@
+# import WebDevelopmentCard from "./WebDevelopmentCardFragment.graphql"
+
+query WebDevelopmentCard {
+  webDevelopmentCard {
+    ...WebDevelopmentCard
+  }
+}

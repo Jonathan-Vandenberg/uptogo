@@ -1,0 +1,7 @@
+# import DataManagementCard from "./DataManagementCardFragment.graphql"
+
+query DataManagementCard {
+  dataManagementCard {
+    ...DataManagementCard
+  }
+}

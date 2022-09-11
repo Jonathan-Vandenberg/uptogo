@@ -1,0 +1,7 @@
+# import BlockChainCard from "./BlockchainCardFragment.graphql"
+
+query BlockchainCard {
+  blockchainCard {
+    ...BlockchainCard
+  }
+}

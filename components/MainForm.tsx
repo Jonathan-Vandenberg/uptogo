@@ -1,13 +1,36 @@
 import { useEffect, useState } from "react";
 import {
+  ComputerNetworking,
   SoftwareDevelopment,
   useAddSoftwareDevelopmentMutation,
   useUpdateSoftwareDevelopmentMutation,
+  CloudComputing,
+  BusinessAnalysis,
+  Telecommunication,
+  GameProgramming,
+  WebDevelopment,
+  MachineLearning,
+  DataManagement,
+  Blockchain,
+  Ai,
 } from "../types";
 import { options } from "../lib/categories";
 
 interface IProps {
-  details: SoftwareDevelopment | undefined | null;
+  details:
+    | Telecommunication
+    | BusinessAnalysis
+    | CloudComputing
+    | ComputerNetworking
+    | SoftwareDevelopment
+    | GameProgramming
+    | WebDevelopment
+    | MachineLearning
+    | DataManagement
+    | Blockchain
+    | Ai
+    | undefined
+    | null;
   add: boolean;
   edit: boolean;
   handleClose: () => void;

@@ -62,6 +62,11 @@ export default function App() {
           Computer Networking
         </div>
       </Link>
+      <Link href={"/courses/information-technology/artificial-intelligence"}>
+        <div className="text-lg p-4 text-darkBlue hover:border-2 hover:border-orange hover:rounded-lg">
+          A.I.
+        </div>
+      </Link>
     </div>
   );
 }

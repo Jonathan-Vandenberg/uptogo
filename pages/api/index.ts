@@ -42,12 +42,18 @@ const resolvers: Resolvers = {
         }
       })
     },
+    computerNetworkingCard: (_, __,{prisma}) => {
+      return prisma.computerNetworking.findMany()
+    },
     computerNetworking: (_, {id},{prisma}) => {
       return prisma.computerNetworking.findUnique({
         where: {
           id
         }
       })
+    },
+    cloudComputingCard: (_, __,{prisma}) => {
+      return prisma.cloudComputing.findMany()
     },
     cloudComputing: (_, {id},{prisma}) => {
       return prisma.cloudComputing.findUnique({
@@ -56,12 +62,18 @@ const resolvers: Resolvers = {
         }
       })
     },
+    businessAnalysisCard: (_, __,{prisma}) => {
+      return prisma.businessAnalysis.findMany()
+    },
     businessAnalysis: (_, {id},{prisma}) => {
       return prisma.businessAnalysis.findUnique({
         where: {
           id
         }
       })
+    },
+    telecommunicationCard: (_, __,{prisma}) => {
+      return prisma.telecommunication.findMany()
     },
     telecommunication: (_, {id},{prisma}) => {
       return prisma.telecommunication.findUnique({
@@ -70,12 +82,18 @@ const resolvers: Resolvers = {
         }
       })
     },
+    gameProgrammingCard: (_, __,{prisma}) => {
+      return prisma.gameProgramming.findMany()
+    },
     gameProgramming: (_, {id},{prisma}) => {
       return prisma.gameProgramming.findUnique({
         where: {
           id
         }
       })
+    },
+    webDevelopmentCard: (_, __,{prisma}) => {
+      return prisma.webDevelopment.findMany()
     },
     webDevelopment: (_, {id},{prisma}) => {
       return prisma.webDevelopment.findUnique({
@@ -84,12 +102,18 @@ const resolvers: Resolvers = {
         }
       })
     },
+    machineLearningCard: (_, __,{prisma}) => {
+      return prisma.machineLearning.findMany()
+    },
     machineLearning: (_, {id},{prisma}) => {
       return prisma.machineLearning.findUnique({
         where: {
           id
         }
       })
+    },
+    dataManagementCard: (_, __,{prisma}) => {
+      return prisma.dataManagement.findMany()
     },
     dataManagement: (_, {id},{prisma}) => {
       return prisma.dataManagement.findUnique({
@@ -98,12 +122,18 @@ const resolvers: Resolvers = {
         }
       })
     },
+    blockchainCard: (_, __,{prisma}) => {
+      return prisma.blockchain.findMany()
+    },
     blockchain: (_, {id},{prisma}) => {
       return prisma.blockchain.findUnique({
         where: {
           id
         }
       })
+    },
+    aiCard: (_, __,{prisma}) => {
+      return prisma.ai.findMany()
     },
     ai: (_, {id},{prisma}) => {
       return prisma.ai.findUnique({
@@ -156,6 +186,436 @@ const resolvers: Resolvers = {
         }
       })
       return softwareDevelopment
+    },
+    updateComputerNetworking: async (_, {input}, {prisma}) => {
+      const computerNetworking = await prisma.computerNetworking.update({
+        where:{
+          id: input.id
+        },
+        data: {
+        title: input?.title,
+        category: input?.category,
+        subtitle1: input?.subtitle1,
+        tableContents1: input?.tableContents1,
+        tableContents2: input?.tableContents2,
+        tableContents3: input?.tableContents3,
+        tableContents4: input?.tableContents4,
+        p1: input?.p1,
+        p2: input?.p2,
+        p3: input?.p3,
+        subtitle2: input?.subtitle2,
+        p4: input?.p4,
+        p5: input?.p5,
+        l1: input?.l1,
+        l2: input?.l2,
+        l3: input?.l3,
+        l4: input?.l4,
+        l5: input?.l5,
+        subtitle3: input?.subtitle3,
+        p6: input?.p6,
+        p7: input?.p7,
+        conclusion1: input?.conclusion1,
+        conclusion2: input?.conclusion2,
+        conclusion3: input?.conclusion3,
+        reference1: input?.reference1,
+        reference2: input?.reference2,
+        authorName: input?.authorName,
+        authorAbout: input?.authorAbout,
+        authorLink: input?.authorLink,
+        photoCredit: input?.photoCredit,
+        editedBy: input?.editedBy,
+        mainImage: input?.mainImage,
+        publishedDate: input?.publishedDate
+        }
+      })
+      return computerNetworking
+    },
+    updateCloudComputing: async (_, {input}, {prisma}) => {
+      const cloudComputing = await prisma.cloudComputing.update({
+        where:{
+          id: input.id
+        },
+        data: {
+        title: input?.title,
+        category: input?.category,
+        subtitle1: input?.subtitle1,
+        tableContents1: input?.tableContents1,
+        tableContents2: input?.tableContents2,
+        tableContents3: input?.tableContents3,
+        tableContents4: input?.tableContents4,
+        p1: input?.p1,
+        p2: input?.p2,
+        p3: input?.p3,
+        subtitle2: input?.subtitle2,
+        p4: input?.p4,
+        p5: input?.p5,
+        l1: input?.l1,
+        l2: input?.l2,
+        l3: input?.l3,
+        l4: input?.l4,
+        l5: input?.l5,
+        subtitle3: input?.subtitle3,
+        p6: input?.p6,
+        p7: input?.p7,
+        conclusion1: input?.conclusion1,
+        conclusion2: input?.conclusion2,
+        conclusion3: input?.conclusion3,
+        reference1: input?.reference1,
+        reference2: input?.reference2,
+        authorName: input?.authorName,
+        authorAbout: input?.authorAbout,
+        authorLink: input?.authorLink,
+        photoCredit: input?.photoCredit,
+        editedBy: input?.editedBy,
+        mainImage: input?.mainImage,
+        publishedDate: input?.publishedDate
+        }
+      })
+      return cloudComputing
+    },
+    updateBusinessAnalysis: async (_, {input}, {prisma}) => {
+      const businessAnalysis = await prisma.businessAnalysis.update({
+        where:{
+          id: input.id
+        },
+        data: {
+        title: input?.title,
+        category: input?.category,
+        subtitle1: input?.subtitle1,
+        tableContents1: input?.tableContents1,
+        tableContents2: input?.tableContents2,
+        tableContents3: input?.tableContents3,
+        tableContents4: input?.tableContents4,
+        p1: input?.p1,
+        p2: input?.p2,
+        p3: input?.p3,
+        subtitle2: input?.subtitle2,
+        p4: input?.p4,
+        p5: input?.p5,
+        l1: input?.l1,
+        l2: input?.l2,
+        l3: input?.l3,
+        l4: input?.l4,
+        l5: input?.l5,
+        subtitle3: input?.subtitle3,
+        p6: input?.p6,
+        p7: input?.p7,
+        conclusion1: input?.conclusion1,
+        conclusion2: input?.conclusion2,
+        conclusion3: input?.conclusion3,
+        reference1: input?.reference1,
+        reference2: input?.reference2,
+        authorName: input?.authorName,
+        authorAbout: input?.authorAbout,
+        authorLink: input?.authorLink,
+        photoCredit: input?.photoCredit,
+        editedBy: input?.editedBy,
+        mainImage: input?.mainImage,
+        publishedDate: input?.publishedDate
+        }
+      })
+      return businessAnalysis
+    },
+    updateTelecommunication: async (_, {input}, {prisma}) => {
+      const telecommunication = await prisma.telecommunication.update({
+        where:{
+          id: input.id
+        },
+        data: {
+        title: input?.title,
+        category: input?.category,
+        subtitle1: input?.subtitle1,
+        tableContents1: input?.tableContents1,
+        tableContents2: input?.tableContents2,
+        tableContents3: input?.tableContents3,
+        tableContents4: input?.tableContents4,
+        p1: input?.p1,
+        p2: input?.p2,
+        p3: input?.p3,
+        subtitle2: input?.subtitle2,
+        p4: input?.p4,
+        p5: input?.p5,
+        l1: input?.l1,
+        l2: input?.l2,
+        l3: input?.l3,
+        l4: input?.l4,
+        l5: input?.l5,
+        subtitle3: input?.subtitle3,
+        p6: input?.p6,
+        p7: input?.p7,
+        conclusion1: input?.conclusion1,
+        conclusion2: input?.conclusion2,
+        conclusion3: input?.conclusion3,
+        reference1: input?.reference1,
+        reference2: input?.reference2,
+        authorName: input?.authorName,
+        authorAbout: input?.authorAbout,
+        authorLink: input?.authorLink,
+        photoCredit: input?.photoCredit,
+        editedBy: input?.editedBy,
+        mainImage: input?.mainImage,
+        publishedDate: input?.publishedDate
+        }
+      })
+      return telecommunication
+    },
+    updateGameProgramming: async (_, {input}, {prisma}) => {
+      const gameProgramming = await prisma.gameProgramming.update({
+        where:{
+          id: input.id
+        },
+        data: {
+        title: input?.title,
+        category: input?.category,
+        subtitle1: input?.subtitle1,
+        tableContents1: input?.tableContents1,
+        tableContents2: input?.tableContents2,
+        tableContents3: input?.tableContents3,
+        tableContents4: input?.tableContents4,
+        p1: input?.p1,
+        p2: input?.p2,
+        p3: input?.p3,
+        subtitle2: input?.subtitle2,
+        p4: input?.p4,
+        p5: input?.p5,
+        l1: input?.l1,
+        l2: input?.l2,
+        l3: input?.l3,
+        l4: input?.l4,
+        l5: input?.l5,
+        subtitle3: input?.subtitle3,
+        p6: input?.p6,
+        p7: input?.p7,
+        conclusion1: input?.conclusion1,
+        conclusion2: input?.conclusion2,
+        conclusion3: input?.conclusion3,
+        reference1: input?.reference1,
+        reference2: input?.reference2,
+        authorName: input?.authorName,
+        authorAbout: input?.authorAbout,
+        authorLink: input?.authorLink,
+        photoCredit: input?.photoCredit,
+        editedBy: input?.editedBy,
+        mainImage: input?.mainImage,
+        publishedDate: input?.publishedDate
+        }
+      })
+      return gameProgramming
+    },
+    updateWebDevelopment: async (_, {input}, {prisma}) => {
+      const webDevelopment = await prisma.webDevelopment.update({
+        where:{
+          id: input.id
+        },
+        data: {
+        title: input?.title,
+        category: input?.category,
+        subtitle1: input?.subtitle1,
+        tableContents1: input?.tableContents1,
+        tableContents2: input?.tableContents2,
+        tableContents3: input?.tableContents3,
+        tableContents4: input?.tableContents4,
+        p1: input?.p1,
+        p2: input?.p2,
+        p3: input?.p3,
+        subtitle2: input?.subtitle2,
+        p4: input?.p4,
+        p5: input?.p5,
+        l1: input?.l1,
+        l2: input?.l2,
+        l3: input?.l3,
+        l4: input?.l4,
+        l5: input?.l5,
+        subtitle3: input?.subtitle3,
+        p6: input?.p6,
+        p7: input?.p7,
+        conclusion1: input?.conclusion1,
+        conclusion2: input?.conclusion2,
+        conclusion3: input?.conclusion3,
+        reference1: input?.reference1,
+        reference2: input?.reference2,
+        authorName: input?.authorName,
+        authorAbout: input?.authorAbout,
+        authorLink: input?.authorLink,
+        photoCredit: input?.photoCredit,
+        editedBy: input?.editedBy,
+        mainImage: input?.mainImage,
+        publishedDate: input?.publishedDate
+        }
+      })
+      return webDevelopment
+    },
+    updateMachineLearning: async (_, {input}, {prisma}) => {
+      const machineLearning = await prisma.machineLearning.update({
+        where:{
+          id: input.id
+        },
+        data: {
+        title: input?.title,
+        category: input?.category,
+        subtitle1: input?.subtitle1,
+        tableContents1: input?.tableContents1,
+        tableContents2: input?.tableContents2,
+        tableContents3: input?.tableContents3,
+        tableContents4: input?.tableContents4,
+        p1: input?.p1,
+        p2: input?.p2,
+        p3: input?.p3,
+        subtitle2: input?.subtitle2,
+        p4: input?.p4,
+        p5: input?.p5,
+        l1: input?.l1,
+        l2: input?.l2,
+        l3: input?.l3,
+        l4: input?.l4,
+        l5: input?.l5,
+        subtitle3: input?.subtitle3,
+        p6: input?.p6,
+        p7: input?.p7,
+        conclusion1: input?.conclusion1,
+        conclusion2: input?.conclusion2,
+        conclusion3: input?.conclusion3,
+        reference1: input?.reference1,
+        reference2: input?.reference2,
+        authorName: input?.authorName,
+        authorAbout: input?.authorAbout,
+        authorLink: input?.authorLink,
+        photoCredit: input?.photoCredit,
+        editedBy: input?.editedBy,
+        mainImage: input?.mainImage,
+        publishedDate: input?.publishedDate
+        }
+      })
+      return machineLearning
+    },
+    updateDataManagement: async (_, {input}, {prisma}) => {
+      const dataManagement = await prisma.dataManagement.update({
+        where:{
+          id: input.id
+        },
+        data: {
+        title: input?.title,
+        category: input?.category,
+        subtitle1: input?.subtitle1,
+        tableContents1: input?.tableContents1,
+        tableContents2: input?.tableContents2,
+        tableContents3: input?.tableContents3,
+        tableContents4: input?.tableContents4,
+        p1: input?.p1,
+        p2: input?.p2,
+        p3: input?.p3,
+        subtitle2: input?.subtitle2,
+        p4: input?.p4,
+        p5: input?.p5,
+        l1: input?.l1,
+        l2: input?.l2,
+        l3: input?.l3,
+        l4: input?.l4,
+        l5: input?.l5,
+        subtitle3: input?.subtitle3,
+        p6: input?.p6,
+        p7: input?.p7,
+        conclusion1: input?.conclusion1,
+        conclusion2: input?.conclusion2,
+        conclusion3: input?.conclusion3,
+        reference1: input?.reference1,
+        reference2: input?.reference2,
+        authorName: input?.authorName,
+        authorAbout: input?.authorAbout,
+        authorLink: input?.authorLink,
+        photoCredit: input?.photoCredit,
+        editedBy: input?.editedBy,
+        mainImage: input?.mainImage,
+        publishedDate: input?.publishedDate
+        }
+      })
+      return dataManagement
+    },
+    updateBlockchain: async (_, {input}, {prisma}) => {
+      const blockchain = await prisma.blockchain.update({
+        where:{
+          id: input.id
+        },
+        data: {
+        title: input?.title,
+        category: input?.category,
+        subtitle1: input?.subtitle1,
+        tableContents1: input?.tableContents1,
+        tableContents2: input?.tableContents2,
+        tableContents3: input?.tableContents3,
+        tableContents4: input?.tableContents4,
+        p1: input?.p1,
+        p2: input?.p2,
+        p3: input?.p3,
+        subtitle2: input?.subtitle2,
+        p4: input?.p4,
+        p5: input?.p5,
+        l1: input?.l1,
+        l2: input?.l2,
+        l3: input?.l3,
+        l4: input?.l4,
+        l5: input?.l5,
+        subtitle3: input?.subtitle3,
+        p6: input?.p6,
+        p7: input?.p7,
+        conclusion1: input?.conclusion1,
+        conclusion2: input?.conclusion2,
+        conclusion3: input?.conclusion3,
+        reference1: input?.reference1,
+        reference2: input?.reference2,
+        authorName: input?.authorName,
+        authorAbout: input?.authorAbout,
+        authorLink: input?.authorLink,
+        photoCredit: input?.photoCredit,
+        editedBy: input?.editedBy,
+        mainImage: input?.mainImage,
+        publishedDate: input?.publishedDate
+        }
+      })
+      return blockchain
+    },
+    updateAi: async (_, {input}, {prisma}) => {
+      const ai = await prisma.ai.update({
+        where:{
+          id: input.id
+        },
+        data: {
+        title: input?.title,
+        category: input?.category,
+        subtitle1: input?.subtitle1,
+        tableContents1: input?.tableContents1,
+        tableContents2: input?.tableContents2,
+        tableContents3: input?.tableContents3,
+        tableContents4: input?.tableContents4,
+        p1: input?.p1,
+        p2: input?.p2,
+        p3: input?.p3,
+        subtitle2: input?.subtitle2,
+        p4: input?.p4,
+        p5: input?.p5,
+        l1: input?.l1,
+        l2: input?.l2,
+        l3: input?.l3,
+        l4: input?.l4,
+        l5: input?.l5,
+        subtitle3: input?.subtitle3,
+        p6: input?.p6,
+        p7: input?.p7,
+        conclusion1: input?.conclusion1,
+        conclusion2: input?.conclusion2,
+        conclusion3: input?.conclusion3,
+        reference1: input?.reference1,
+        reference2: input?.reference2,
+        authorName: input?.authorName,
+        authorAbout: input?.authorAbout,
+        authorLink: input?.authorLink,
+        photoCredit: input?.photoCredit,
+        editedBy: input?.editedBy,
+        mainImage: input?.mainImage,
+        publishedDate: input?.publishedDate
+        }
+      })
+      return ai
     }
     ,
   addBlogPost: async (_, {input}, {prisma}) => {
@@ -242,6 +702,7 @@ const resolvers: Resolvers = {
     const computerNetworking = await prisma.computerNetworking.create({
       data: {
         title: input?.title,
+        category: input?.category,
         subtitle1: input?.subtitle1,
         tableContents1: input?.tableContents1,
         tableContents2: input?.tableContents2,
@@ -281,6 +742,7 @@ const resolvers: Resolvers = {
     const cloudComputing = await prisma.cloudComputing.create({
       data: {
         title: input?.title,
+        category: input?.category,
         subtitle1: input?.subtitle1,
         tableContents1: input?.tableContents1,
         tableContents2: input?.tableContents2,
@@ -320,6 +782,7 @@ const resolvers: Resolvers = {
     const businessAnalysis = await prisma.businessAnalysis.create({
       data: {
         title: input?.title,
+        category: input?.category,
         subtitle1: input?.subtitle1,
         tableContents1: input?.tableContents1,
         tableContents2: input?.tableContents2,
@@ -359,6 +822,7 @@ const resolvers: Resolvers = {
     const telecommunication = await prisma.telecommunication.create({
       data: {
         title: input?.title,
+        category: input?.category,
         subtitle1: input?.subtitle1,
         tableContents1: input?.tableContents1,
         tableContents2: input?.tableContents2,
@@ -398,6 +862,7 @@ const resolvers: Resolvers = {
     const gameProgramming = await prisma.gameProgramming.create({
       data: {
         title: input?.title,
+        category: input?.category,
         subtitle1: input?.subtitle1,
         tableContents1: input?.tableContents1,
         tableContents2: input?.tableContents2,
@@ -437,6 +902,7 @@ const resolvers: Resolvers = {
     const webDevelopment = await prisma.webDevelopment.create({
       data: {
         title: input?.title,
+        category: input?.category,
         subtitle1: input?.subtitle1,
         tableContents1: input?.tableContents1,
         tableContents2: input?.tableContents2,
@@ -476,6 +942,7 @@ const resolvers: Resolvers = {
     const machineLearing = await prisma.machineLearning.create({
       data: {
         title: input?.title,
+        category: input?.category,
         subtitle1: input?.subtitle1,
         tableContents1: input?.tableContents1,
         tableContents2: input?.tableContents2,
@@ -515,6 +982,7 @@ const resolvers: Resolvers = {
     const dataManagement = await prisma.dataManagement.create({
       data: {
         title: input?.title,
+        category: input?.category,
         subtitle1: input?.subtitle1,
         tableContents1: input?.tableContents1,
         tableContents2: input?.tableContents2,
@@ -554,6 +1022,7 @@ const resolvers: Resolvers = {
     const blockchain = await prisma.blockchain.create({
       data: {
         title: input?.title,
+        category: input?.category,
         subtitle1: input?.subtitle1,
         tableContents1: input?.tableContents1,
         tableContents2: input?.tableContents2,
@@ -593,6 +1062,7 @@ const resolvers: Resolvers = {
     const ai = await prisma.ai.create({
       data: {
         title: input?.title,
+        category: input?.category,
         subtitle1: input?.subtitle1,
         tableContents1: input?.tableContents1,
         tableContents2: input?.tableContents2,

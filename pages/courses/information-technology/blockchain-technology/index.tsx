@@ -2,18 +2,15 @@ import { useState } from "react";
 import BlogMain from "../../../../components/Blog/BlogMain";
 import BlogPageHero from "../../../../components/Blog/BlogPageHero";
 import MainForm from "../../../../components/MainForm";
-import {
-  useSoftwareDevelopmentCardQuery,
-  useSoftwareDevelopmentQuery,
-} from "../../../../types";
+import { useBlockchainCardQuery, useBlockchainQuery } from "../../../../types";
 import { useRouter } from "next/router";
 
 function Posts() {
-  const { data, loading, error } = useSoftwareDevelopmentCardQuery();
+  const { data, loading, error } = useBlockchainCardQuery();
 
   return (
     <>
-      {data?.softwareDevelopmentCard
+      {data?.blockchainCard
         ?.slice(0)
         .reverse()
         .map((post) => (
@@ -48,24 +45,24 @@ export default function App() {
     setEdit(true);
   };
 
-  const { data } = useSoftwareDevelopmentQuery({
+  const { data } = useBlockchainQuery({
     variables: {
-      id: "631d68109f9c5ab336b3d04e",
+      id: "631db438628acdf2748fc150",
     },
   });
 
-  console.log(data?.softwareDevelopment?.category);
+  console.log(data?.blockchain?.category);
   return (
     <>
       <Crubs />
       <BlogMain
-        data={data?.softwareDevelopment}
+        data={data?.blockchain}
         handleEdit={handleEdit}
         handleAdd={handleAdd}
       />
       {showForm && (
         <MainForm
-          details={data?.softwareDevelopment}
+          details={data?.blockchain}
           add={add}
           edit={edit}
           handleClose={() => setShowForm(false)}

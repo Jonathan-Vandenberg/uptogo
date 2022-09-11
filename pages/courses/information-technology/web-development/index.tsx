@@ -3,17 +3,17 @@ import BlogMain from "../../../../components/Blog/BlogMain";
 import BlogPageHero from "../../../../components/Blog/BlogPageHero";
 import MainForm from "../../../../components/MainForm";
 import {
-  useSoftwareDevelopmentCardQuery,
-  useSoftwareDevelopmentQuery,
+  useWebDevelopmentCardQuery,
+  useWebDevelopmentQuery,
 } from "../../../../types";
 import { useRouter } from "next/router";
 
 function Posts() {
-  const { data, loading, error } = useSoftwareDevelopmentCardQuery();
+  const { data, loading, error } = useWebDevelopmentCardQuery();
 
   return (
     <>
-      {data?.softwareDevelopmentCard
+      {data?.webDevelopmentCard
         ?.slice(0)
         .reverse()
         .map((post) => (
@@ -48,24 +48,24 @@ export default function App() {
     setEdit(true);
   };
 
-  const { data } = useSoftwareDevelopmentQuery({
+  const { data } = useWebDevelopmentQuery({
     variables: {
-      id: "631d68109f9c5ab336b3d04e",
+      id: "631db80a628acdf2748fc185",
     },
   });
 
-  console.log(data?.softwareDevelopment?.category);
+  console.log(data?.webDevelopment?.category);
   return (
     <>
       <Crubs />
       <BlogMain
-        data={data?.softwareDevelopment}
+        data={data?.webDevelopment}
         handleEdit={handleEdit}
         handleAdd={handleAdd}
       />
       {showForm && (
         <MainForm
-          details={data?.softwareDevelopment}
+          details={data?.webDevelopment}
           add={add}
           edit={edit}
           handleClose={() => setShowForm(false)}
