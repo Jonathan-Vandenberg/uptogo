@@ -113,7 +113,7 @@ const Majors: NextPage<Props> = ({ leave }) => {
           <Image
             src={iT}
             width="600"
-            height="410"
+            height="411"
             layout="responsive"
             alt="dropdown-item"
           />
