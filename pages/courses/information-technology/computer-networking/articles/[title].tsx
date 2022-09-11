@@ -10,7 +10,7 @@ export default function Blog() {
   const [add, setAdd] = useState(false);
 
   const { asPath } = useRouter();
-  const id = asPath.slice(62, 86);
+  const id = asPath.slice(61, 85);
 
   const handleAdd = () => {
     setShowForm(!showForm);
@@ -23,6 +23,8 @@ export default function Blog() {
     setAdd(false);
     setEdit(true);
   };
+
+  console.log(id);
 
   const { data, loading, error } = useComputerNetworkingQuery({
     variables: {

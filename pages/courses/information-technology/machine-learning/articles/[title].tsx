@@ -1,6 +1,6 @@
 import BlogMain from "../../../../../components/Blog/BlogMain";
 import { useRouter } from "next/router";
-import { useSoftwareDevelopmentQuery } from "../../../../../types";
+import { useMachineLearningQuery } from "../../../../../types";
 import { useState } from "react";
 import MainForm from "../../../../../components/MainForm";
 
@@ -10,7 +10,7 @@ export default function Blog() {
   const [add, setAdd] = useState(false);
 
   const { asPath } = useRouter();
-  const id = asPath.slice(62, 86);
+  const id = asPath.slice(58, 82);
 
   const handleAdd = () => {
     setShowForm(!showForm);
@@ -18,13 +18,15 @@ export default function Blog() {
     setEdit(false);
   };
 
+  console.log(id);
+
   const handleEdit = () => {
     setShowForm(!showForm);
     setAdd(false);
     setEdit(true);
   };
 
-  const { data, loading, error } = useSoftwareDevelopmentQuery({
+  const { data, loading, error } = useMachineLearningQuery({
     variables: {
       id: id,
     },
@@ -33,13 +35,13 @@ export default function Blog() {
   return (
     <>
       <BlogMain
-        data={data?.softwareDevelopment}
+        data={data?.machineLearning}
         handleAdd={handleAdd}
         handleEdit={handleEdit}
       />
       {showForm && (
         <MainForm
-          details={data?.softwareDevelopment}
+          details={data?.machineLearning}
           add={add}
           edit={edit}
           handleClose={() => setShowForm(false)}

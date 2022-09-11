@@ -18,7 +18,7 @@ interface Props {
 const navLinks = [
   {
     subject: "Công nghệ thông tin (IT)",
-    link: "/information-technology",
+    link: "/courses/information-technology",
   },
   { subject: "Nhà hàng – Khách sạn (Hospitality)", link: "/hospitality" },
   { subject: "Quản Lý (Mangement)", link: "/management" },
@@ -36,7 +36,7 @@ const Majors: NextPage<Props> = ({ leave }) => {
   const [designImage, setDesignImage] = useState(false);
 
   const handleImages = (data: string) => {
-    if (data === "/information-technology") {
+    if (data === "/courses/information-technology") {
       setItImage(true);
       setHospitalityImage(false);
       setManagementImage(false);

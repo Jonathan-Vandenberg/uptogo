@@ -105,6 +105,66 @@ export default function App({ data }: IProps) {
           data?.id) as string
       );
     }
+    if (c === CategoriesEnum.Ai) {
+      setSlug(
+        ("/courses/information-technology/artificial-intelligence/articles/" +
+          data?.id) as string
+      );
+    }
+    if (c === CategoriesEnum.BlockchainTech) {
+      setSlug(
+        ("/courses/information-technology/blockchain-technology/articles/" +
+          data?.id) as string
+      );
+    }
+    if (c === CategoriesEnum.DataManagement) {
+      setSlug(
+        ("/courses/information-technology/data-management/articles/" +
+          data?.id) as string
+      );
+    }
+    if (c === CategoriesEnum.MachineLearning) {
+      setSlug(
+        ("/courses/information-technology/machine-learning/articles/" +
+          data?.id) as string
+      );
+    }
+    if (c === CategoriesEnum.WebDevelopment) {
+      setSlug(
+        ("/courses/information-technology/web-development/articles/" +
+          data?.id) as string
+      );
+    }
+    if (c === CategoriesEnum.GameProgramming) {
+      setSlug(
+        ("/courses/information-technology/game-programming/articles/" +
+          data?.id) as string
+      );
+    }
+    if (c === CategoriesEnum.Telecommunication) {
+      setSlug(
+        ("/courses/information-technology/telecommunication/articles/" +
+          data?.id) as string
+      );
+    }
+    if (c === CategoriesEnum.CloudComputing) {
+      setSlug(
+        ("/courses/information-technology/cloud-computing/articles/" +
+          data?.id) as string
+      );
+    }
+    if (c === CategoriesEnum.BusinessAnalysis) {
+      setSlug(
+        ("/courses/information-technology/business-analysis/articles/" +
+          data?.id) as string
+      );
+    }
+    if (c === CategoriesEnum.ComputerNetworking) {
+      setSlug(
+        ("/courses/information-technology/computer-networking/articles/" +
+          data?.id) as string
+      );
+    }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 

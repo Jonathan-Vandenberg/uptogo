@@ -156,7 +156,7 @@ const SideNavModal: NextPage = () => {
         </div>
       </Link>
 
-      <Link href={"/add-post"}>
+      <Link href={"/"}>
         <div
           className="flex cursor-pointer items-center justify-start space-x-2 px-4"
           onClick={() => handleClose()}
@@ -186,7 +186,7 @@ const SideNavModal: NextPage = () => {
           onClick={() => handleClose()}
           className="w-full cursor-pointer p-3 pl-6 pt-6 font-semibold"
         >
-          <Link href={"/information-technology"}>
+          <Link href={"/courses/information-technology"}>
             <p className="font-semibold">Công nghệ thông tin (IT)</p>
           </Link>
         </div>

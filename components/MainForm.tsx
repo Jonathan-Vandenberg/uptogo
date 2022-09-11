@@ -13,6 +13,26 @@ import {
   DataManagement,
   Blockchain,
   Ai,
+  useAddComputerNetworkingMutation,
+  useAddAiMutation,
+  useAddBlockchainMutation,
+  useAddBusinessAnalysisMutation,
+  useAddCloudComputingMutation,
+  useAddDataManagementMutation,
+  useAddGameProgrammingMutation,
+  useAddMachineLearningMutation,
+  useAddTelecommunicationMutation,
+  useAddWebDevelopmentMutation,
+  useUpdateAiMutation,
+  useUpdateBlockchainMutation,
+  useUpdateBusinessAnalysisMutation,
+  useUpdateCloudComputingMutation,
+  useUpdateComputerNetworkingMutation,
+  useUpdateDataManagementMutation,
+  useUpdateGameProgrammingMutation,
+  useUpdateMachineLearningMutation,
+  useUpdateTelecommunicationMutation,
+  useUpdateWebDevelopmentMutation,
 } from "../types";
 import { options } from "../lib/categories";
 
@@ -106,8 +126,30 @@ const AddClientForm = ({ details, add, edit, handleClose }: IProps) => {
   const [mainImage, setMainImage] = useState(DmainImage);
   const [photoCredit, setPhotoCredit] = useState(DphotoCredit);
 
-  const [updateSoftwareDevelopment] = useUpdateSoftwareDevelopmentMutation();
   const [addSoftwareDevelopment] = useAddSoftwareDevelopmentMutation();
+  addSoftwareDevelopment;
+  const [addComputerNetworking] = useAddComputerNetworkingMutation();
+  const [addCloudComputing] = useAddCloudComputingMutation();
+  const [addBusinessAnalysis] = useAddBusinessAnalysisMutation();
+  const [addTelecommunication] = useAddTelecommunicationMutation();
+  const [addGameProgramming] = useAddGameProgrammingMutation();
+  const [addWebDevelopment] = useAddWebDevelopmentMutation();
+  const [addMachineLearning] = useAddMachineLearningMutation();
+  const [addDataManagement] = useAddDataManagementMutation();
+  const [addBlockchain] = useAddBlockchainMutation();
+  const [addAi] = useAddAiMutation();
+
+  const [updateSoftwareDevelopment] = useUpdateSoftwareDevelopmentMutation();
+  const [updateComputerNetworking] = useUpdateComputerNetworkingMutation();
+  const [updateCloudComputing] = useUpdateCloudComputingMutation();
+  const [updateBusinessAnalysis] = useUpdateBusinessAnalysisMutation();
+  const [updateTelecommunication] = useUpdateTelecommunicationMutation();
+  const [updateGameProgramming] = useUpdateGameProgrammingMutation();
+  const [updateWebDevelopment] = useUpdateWebDevelopmentMutation();
+  const [updateMachineLearning] = useUpdateMachineLearningMutation();
+  const [updateDataManagement] = useUpdateDataManagementMutation();
+  const [updateBlockchain] = useUpdateBlockchainMutation();
+  const [updateAi] = useUpdateAiMutation();
 
   let form = {
     variables: {
@@ -152,15 +194,26 @@ const AddClientForm = ({ details, add, edit, handleClose }: IProps) => {
 
   useEffect(() => {
     if (edit) setCategory(details?.category);
-  }, [details?.category, edit]);
+  }, []);
 
   const onFinish = (e: { preventDefault: () => void }) => {
     e.preventDefault();
 
     function sendForm() {
+      console.log(category);
       if (edit) {
         if (category === "SOFTWARE_DEVELOPMENT")
           updateSoftwareDevelopment(form);
+        if (category === "COMPUTER_NETWORKING") updateComputerNetworking(form);
+        if (category === "CLOUD_COMPUTING") updateCloudComputing(form);
+        if (category === "BUSINESS_ANALYSIS") updateBusinessAnalysis(form);
+        if (category === "TELECOMMUNICATION") updateTelecommunication(form);
+        if (category === "GAME_PROGRAMMING") updateGameProgramming(form);
+        if (category === "WEB_DEVELOPMENT") updateWebDevelopment(form);
+        if (category === "MACHINE_LEARNING") updateMachineLearning(form);
+        if (category === "DATA_MANAGEMENT") updateDataManagement(form);
+        if (category === "BLOCKCHAIN_TECH") updateBlockchain(form);
+        if (category === "AI") updateAi(form);
       }
 
       if (add) {
@@ -541,10 +594,7 @@ const AddClientForm = ({ details, add, edit, handleClose }: IProps) => {
         />
       </div>
 
-      <div
-        className="w-full flex items-center justify-center pt-10"
-        onClick={handleClose}
-      >
+      <div className="w-full flex items-center justify-center pt-10">
         <button type="submit" className="px-10 h-10 rounded-full bg-white">
           Add
         </button>

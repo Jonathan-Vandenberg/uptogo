@@ -10,13 +10,15 @@ export default function Blog() {
   const [add, setAdd] = useState(false);
 
   const { asPath } = useRouter();
-  const id = asPath.slice(62, 86);
+  const id = asPath.slice(58, 82);
 
   const handleAdd = () => {
     setShowForm(!showForm);
     setAdd(true);
     setEdit(false);
   };
+
+  console.log(id);
 
   const handleEdit = () => {
     setShowForm(!showForm);
