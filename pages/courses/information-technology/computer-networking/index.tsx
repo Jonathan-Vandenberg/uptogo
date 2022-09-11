@@ -12,7 +12,7 @@ function Posts() {
   const { data, loading, error } = useComputerNetworkingCardQuery();
 
   return (
-    <>
+    <div className="space-y-3 md:space-y-0">
       {data?.computerNetworkingCard
         ?.slice(0)
         .reverse()
@@ -21,7 +21,7 @@ function Posts() {
             <BlogPageHero data={post} />
           </div>
         ))}
-    </>
+    </div>
   );
 }
 

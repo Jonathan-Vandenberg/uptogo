@@ -12,7 +12,7 @@ function Posts() {
   const { data, loading, error } = useSoftwareDevelopmentCardQuery();
 
   return (
-    <>
+    <div className="space-y-3 md:space-y-0">
       {data?.softwareDevelopmentCard
         ?.slice(0)
         .reverse()
@@ -21,7 +21,7 @@ function Posts() {
             <BlogPageHero data={post} />
           </div>
         ))}
-    </>
+    </div>
   );
 }
 

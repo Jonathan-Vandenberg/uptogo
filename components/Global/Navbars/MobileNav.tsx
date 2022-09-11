@@ -237,22 +237,22 @@ const SideNavModal: NextPage = () => {
           <MdOutlineArrowBackIos />
         </div>
         <div className=" p-2 text-xl font-semibold text-iwanttoColor">
-          Lorem Household
+          Lorem
         </div>
       </div>
 
       <div className="flex flex-col items-start justify-center">
         <div className="w-full cursor-pointer p-3 pl-6 pt-6 font-semibold">
-          Lorem Unsecured Loan
+          Lorem
         </div>
         <div className="w-full cursor-pointer p-3 pl-6 font-semibold">
-          Lorem Secured Loans
+          Lorem
         </div>
         <div className="w-full cursor-pointer p-3 pl-6 font-semibold">
-          Lorem Bank Assurance
+          Lorem
         </div>
         <div className="w-full cursor-pointer p-3 pl-6 font-semibold">
-          Lorem Card Services
+          Lorem
         </div>
       </div>
     </div>
@@ -265,40 +265,40 @@ const SideNavModal: NextPage = () => {
           <MdOutlineArrowBackIos />
         </div>
         <div className=" p-2 text-xl font-semibold text-iwanttoColor">
-          Lorem SME
+          Lorem
         </div>
       </div>
 
       <div className="flex flex-col items-start justify-center">
         <div className="w-full cursor-pointer p-3 pl-6 pt-6 font-semibold">
-          Lorem Account Service
+          Lorem
         </div>
         <div className="w-full cursor-pointer p-3 pl-6 font-semibold">
-          Lorem Business Loans
+          Lorem
         </div>
         <div className="w-full cursor-pointer p-3 pl-6 font-semibold">
-          Lorem VPBIZ Payment Card
+          Lorem
         </div>
         <div className="w-full cursor-pointer p-3 pl-6 font-semibold">
-          Lorem Card Payment Services
+          Lorem
         </div>
         <div className="w-full cursor-pointer p-3 pl-6 font-semibold">
-          Lorem Payment Service
+          Lorem
         </div>
         <div className="w-full cursor-pointer p-3 pl-6 font-semibold">
-          Lorem Trade Finance
+          Lorem
         </div>
         <div className="w-full cursor-pointer p-3 pl-6 font-semibold">
-          Lorem Deposit Products
+          Lorem
         </div>
         <div className="w-full cursor-pointer p-3 pl-6 font-semibold">
-          Lorem Online Chiropractic
+          Lorem
         </div>
         <div className="w-full cursor-pointer p-3 pl-6 font-semibold">
-          Lorem Online Disbursement
+          Lorem
         </div>
         <div className="w-full cursor-pointer p-3 pl-6 font-semibold">
-          Lorem Business Account Online
+          Lorem
         </div>
       </div>
     </div>
@@ -314,34 +314,34 @@ const SideNavModal: NextPage = () => {
           <MdOutlineArrowBackIos />
         </div>
         <div className=" p-2 text-xl font-semibold text-iwanttoColor">
-          Lorem Corporate
+          Lorem
         </div>
       </div>
 
       <div className="flex flex-col items-start justify-center">
         <div className="w-full cursor-pointer p-3 pl-6 pt-6 font-semibold">
-          Lorem Guarantee
+          Lorem
         </div>
         <div className="w-full cursor-pointer p-3 pl-6 font-semibold">
-          Lorem Loans
+          Lorem
         </div>
         <div className="w-full cursor-pointer p-3 pl-6 font-semibold">
-          Lorem Services and Trade Finance
+          Lorem
         </div>
         <div className="w-full cursor-pointer p-3 pl-6 font-semibold">
-          Lorem Account services
+          Lorem
         </div>
         <div className="w-full cursor-pointer p-3 pl-6 font-semibold">
-          Lorem Card Services
+          Lorem
         </div>
         <div className="w-full cursor-pointer p-3 pl-6 font-semibold">
-          Lorem Financial Market Products
+          Lorem
         </div>
         <div className="w-full cursor-pointer p-3 pl-6 font-semibold">
-          Lorem Internet Banking
+          Lorem
         </div>
         <div className="w-full cursor-pointer p-3 pl-6 font-semibold">
-          Lorem Email Transactions
+          Lorem
         </div>
       </div>
     </div>

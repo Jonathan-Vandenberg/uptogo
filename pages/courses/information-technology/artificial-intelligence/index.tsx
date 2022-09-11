@@ -9,7 +9,7 @@ function Posts() {
   const { data, loading, error } = useAiCardQuery();
 
   return (
-    <>
+    <div className="space-y-3 md:space-y-0">
       {data?.aiCard
         ?.slice(0)
         .reverse()
@@ -18,7 +18,7 @@ function Posts() {
             <BlogPageHero data={post} />
           </div>
         ))}
-    </>
+    </div>
   );
 }
 
