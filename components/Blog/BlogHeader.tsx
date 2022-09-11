@@ -51,7 +51,7 @@ const BlogHeader = ({ data }: IProps) => {
             <div className="flex items-center justify-start space-x-3 pb-3">
               <Avatar
                 sx={{ width: 32, height: 32 }}
-                src="https://picsum.photos/32/32"
+                src="https://picsum.photos/seed/picsum/32/32"
                 alt="Avatar name"
               />
               <div className="flex items-start flex-col justify-start">
