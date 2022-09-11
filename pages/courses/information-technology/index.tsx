@@ -1,5 +1,4 @@
 import Link from "next/link";
-import It from "../../../components/Courses/information-technology/ItMain";
 import ItMain from "../../../components/It/ItMain";
 import { useItQuery } from "../../../types";
 
@@ -18,15 +17,51 @@ export default function App() {
           Software Development
         </div>
       </Link>
-      <div className="text-lg p-4 text-darkBlue ">Compute Networking</div>
-      <div className="text-lg p-4 text-darkBlue ">Cloud Computing</div>
-      <div className="text-lg p-4 text-darkBlue ">Business Analysis</div>
-      <div className="text-lg p-4 text-darkBlue ">Telecommunication</div>
-      <div className="text-lg p-4 text-darkBlue ">Game Programming</div>
-      <div className="text-lg p-4 text-darkBlue ">Website Development</div>
-      <div className="text-lg p-4 text-darkBlue ">Machine Learing</div>
-      <div className="text-lg p-4 text-darkBlue ">Data Management</div>
-      <div className="text-lg p-4 text-darkBlue ">Blockchain Technology</div>
+      <Link href={"/courses/information-technology/blockchain-technology"}>
+        <div className="text-lg p-4 text-darkBlue hover:border-2 hover:border-orange hover:rounded-lg">
+          Blockchain Technology
+        </div>
+      </Link>
+      <Link href={"/courses/information-technology/data-management"}>
+        <div className="text-lg p-4 text-darkBlue hover:border-2 hover:border-orange hover:rounded-lg">
+          Data Management
+        </div>
+      </Link>
+      <Link href={"/courses/information-technology/machine-learning"}>
+        <div className="text-lg p-4 text-darkBlue hover:border-2 hover:border-orange hover:rounded-lg">
+          Machine Learning
+        </div>
+      </Link>
+      <Link href={"/courses/information-technology/web-development"}>
+        <div className="text-lg p-4 text-darkBlue hover:border-2 hover:border-orange hover:rounded-lg">
+          Website Development
+        </div>
+      </Link>
+      <Link href={"/courses/information-technology/game-programming"}>
+        <div className="text-lg p-4 text-darkBlue hover:border-2 hover:border-orange hover:rounded-lg">
+          Game Programming
+        </div>
+      </Link>
+      <Link href={"/courses/information-technology/telecommunication"}>
+        <div className="text-lg p-4 text-darkBlue hover:border-2 hover:border-orange hover:rounded-lg">
+          Telecommunication
+        </div>
+      </Link>
+      <Link href={"/courses/information-technology/business-analysis"}>
+        <div className="text-lg p-4 text-darkBlue hover:border-2 hover:border-orange hover:rounded-lg">
+          Business Analysis
+        </div>
+      </Link>
+      <Link href={"/courses/information-technology/cloud-computing"}>
+        <div className="text-lg p-4 text-darkBlue hover:border-2 hover:border-orange hover:rounded-lg">
+          Cloud Computing
+        </div>
+      </Link>
+      <Link href={"/courses/information-technology/computer-networking"}>
+        <div className="text-lg p-4 text-darkBlue hover:border-2 hover:border-orange hover:rounded-lg">
+          Computer Networking
+        </div>
+      </Link>
     </div>
   );
 }
