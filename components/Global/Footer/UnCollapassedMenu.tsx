@@ -3,92 +3,92 @@ const App = () => {
     <div className="hidden border-b-2 py-8 px-28 md:container md:mx-auto md:grid md:grid-cols-3 md:px-0 lg:flex lg:items-start lg:justify-evenly">
       <div>
         <div className="flex items-center justify-between">
-          <p className="text-md py-3 font-semibold">Credit Card</p>
+          <p className="text-md py-3 font-semibold">Lorem</p>
         </div>
         <p className="cursor-pointer py-1 text-sm text-gray-600 hover:text-iwanttoColor">
-          VPBank MC2
+          Lorem
         </p>
         <p className="cursor-pointer py-1 text-sm  text-gray-600 hover:text-iwanttoColor ">
-          VPBank Step Up
+          Lorem
         </p>
         <p className="cursor-pointer py-1 text-sm  text-gray-600 hover:text-iwanttoColor ">
-          VPBank Lady
+          Lorem
         </p>
         <p className="cursor-pointer py-1 text-sm  text-gray-600 hover:text-iwanttoColor ">
-          VPBank Platinum
+          Lorem
         </p>
         <p className="cursor-pointer py-1 text-sm  text-gray-600 hover:text-iwanttoColor ">
-          VPBank World
+          Lorem
         </p>
       </div>
       <div>
         <div className="flex items-center justify-between">
-          <p className="text-md py-3 font-semibold">Personal Loans</p>
+          <p className="text-md py-3 font-semibold">Lorem</p>
         </div>
         <p className="cursor-pointer py-1 text-sm text-gray-600 hover:text-iwanttoColor">
-          Overview
+          Lorem
         </p>
         <p className="cursor-pointer py-1 text-sm  text-gray-600 hover:text-iwanttoColor ">
-          Conditions and Fees
+          Lorem
         </p>
       </div>
       <div>
         <div className="flex items-center justify-between">
-          <p className="text-md py-3 font-semibold">Secured Loans</p>
+          <p className="text-md py-3 font-semibold">Lorem</p>
         </div>
         <p className="cursor-pointer py-1 text-sm text-gray-600 hover:text-iwanttoColor">
-          Car Loan
+          Lorem
         </p>
         <p className="cursor-pointer py-1 text-sm  text-gray-600 hover:text-iwanttoColor ">
-          Home Loan
+          Lorem
         </p>
         <p className="cursor-pointer py-1 text-sm  text-gray-600 hover:text-iwanttoColor ">
-          Partners with VPBank
+          Lorem
         </p>
       </div>
       <div>
         <div className="flex items-center justify-between">
-          <p className="text-md py-3 font-semibold">Savings Account</p>
+          <p className="text-md py-3 font-semibold">Lorem</p>
         </div>
         <p className="cursor-pointer py-1 text-sm text-gray-600 hover:text-iwanttoColor">
-          Regular Savings
+          Lorem
         </p>
         <p className="cursor-pointer py-1 text-sm  text-gray-600 hover:text-iwanttoColor ">
-          Easy Savings
+          Lorem
         </p>
       </div>
       <div>
         <div className="flex items-center justify-between">
-          <p className="text-md py-3 font-semibold">Other Products</p>
+          <p className="text-md py-3 font-semibold">Lorem</p>
         </div>
         <p className="cursor-pointer py-1 text-sm text-gray-600 hover:text-iwanttoColor">
-          Saving
+          Lorem
         </p>
         <p className="cursor-pointer py-1 text-sm  text-gray-600 hover:text-iwanttoColor ">
-          Current Account
+          Lorem
         </p>
         <p className="cursor-pointer py-1 text-sm  text-gray-600 hover:text-iwanttoColor ">
-          Internet Banking
+          Lorem
         </p>
         <p className="cursor-pointer py-1 text-sm  text-gray-600 hover:text-iwanttoColor ">
-          AIA Insurance
+          Lorem
         </p>
       </div>
       <div>
         <div className="flex items-center justify-between">
-          <p className="text-md py-3 font-semibold">Things you should know</p>
+          <p className="text-md py-3 font-semibold">Lorem</p>
         </div>
         <p className="cursor-pointer py-1 text-sm text-gray-600 hover:text-iwanttoColor">
-          Promotions
+          Lorem
         </p>
         <p className="cursor-pointer py-1 text-sm  text-gray-600 hover:text-iwanttoColor ">
-          Documents and Fees
+          Lorem
         </p>
         <p className="cursor-pointer py-1 text-sm  text-gray-600 hover:text-iwanttoColor ">
           FAQs
         </p>
         <p className="cursor-pointer py-1 text-sm  text-gray-600 hover:text-iwanttoColor ">
-          Tools and Utilities
+          Lorem
         </p>
       </div>
     </div>
