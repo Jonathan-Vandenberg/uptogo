@@ -57,7 +57,7 @@ export default function App() {
   console.log(data?.telecommunication?.category);
   return (
     <>
-      <Crubs />
+      {/* <Crubs /> */}
       <BlogMain
         data={data?.telecommunication}
         handleEdit={handleEdit}

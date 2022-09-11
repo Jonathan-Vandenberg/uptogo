@@ -57,7 +57,7 @@ export default function App() {
   console.log(data?.dataManagement?.category);
   return (
     <>
-      <Crubs />
+      {/* <Crubs /> */}
       <BlogMain
         data={data?.dataManagement}
         handleEdit={handleEdit}

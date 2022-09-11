@@ -57,7 +57,7 @@ export default function App() {
   console.log(data?.gameProgramming?.category);
   return (
     <>
-      <Crubs />
+      {/* <Crubs /> */}
       <BlogMain
         data={data?.gameProgramming}
         handleEdit={handleEdit}

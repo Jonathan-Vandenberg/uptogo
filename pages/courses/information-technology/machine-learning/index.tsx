@@ -57,7 +57,7 @@ export default function App() {
   console.log(data?.machineLearning?.category);
   return (
     <>
-      <Crubs />
+      {/* <Crubs /> */}
       <BlogMain
         data={data?.machineLearning}
         handleEdit={handleEdit}

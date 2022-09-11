@@ -57,7 +57,7 @@ export default function App() {
   console.log(data?.cloudComputing?.category);
   return (
     <>
-      <Crubs />
+      {/* <Crubs /> */}
       <BlogMain
         data={data?.cloudComputing}
         handleEdit={handleEdit}

@@ -54,7 +54,7 @@ export default function App() {
   console.log(data?.blockchain?.category);
   return (
     <>
-      <Crubs />
+      {/* <Crubs /> */}
       <BlogMain
         data={data?.blockchain}
         handleEdit={handleEdit}

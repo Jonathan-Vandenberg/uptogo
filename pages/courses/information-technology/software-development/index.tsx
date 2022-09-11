@@ -57,7 +57,7 @@ export default function App() {
   console.log(data?.softwareDevelopment?.category);
   return (
     <>
-      <Crubs />
+      {/* <Crubs /> */}
       <BlogMain
         data={data?.softwareDevelopment}
         handleEdit={handleEdit}

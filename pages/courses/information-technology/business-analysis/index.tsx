@@ -57,7 +57,7 @@ export default function App() {
   console.log(data?.businessAnalysis?.category);
   return (
     <>
-      <Crubs />
+      {/* <Crubs /> */}
       <BlogMain
         data={data?.businessAnalysis}
         handleEdit={handleEdit}
