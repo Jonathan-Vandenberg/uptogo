@@ -48,6 +48,7 @@ const AddClientForm = ({ details, add, edit, handleClose }: IProps) => {
   const DmainImage = add ? "" : details?.mainImage;
   const DphotoCredit = add ? "" : details?.photoCredit;
 
+  const id = details!.id;
   const [category, setCategory] = useState(Dcategory);
   const [title, setTitle] = useState(Dtitle);
   const [subtitle1, setSubtitle1] = useState(Dsubtitle1);
@@ -88,7 +89,7 @@ const AddClientForm = ({ details, add, edit, handleClose }: IProps) => {
   let form = {
     variables: {
       input: {
-        id: details!.id,
+        id: id,
         category: category,
         editedBy: editedBy,
         publishedDate: publishedDate,
