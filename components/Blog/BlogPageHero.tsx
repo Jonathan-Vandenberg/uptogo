@@ -81,6 +81,7 @@ export default function App({ data }: IProps) {
           data?.id) as string
       );
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   // setSlug("/blog/" + data?.id);
