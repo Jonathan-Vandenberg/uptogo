@@ -1,106 +1,52 @@
 import { useEffect, useState } from "react";
 import {
   SoftwareDevelopment,
+  useAddSoftwareDevelopmentMutation,
   useUpdateSoftwareDevelopmentMutation,
 } from "../types";
-import Select from "react-select";
-
-const options = [
-  { value: "BLOG", label: "BLOG" },
-  { value: "PROJECT_MANAGEMENT", label: "PROJECT_MANAGEMENT" },
-  { value: "BUSINESS_MANAGEMENT", label: "BUSINESS_MANAGEMENT" },
-  { value: "HUMAN_RESOURCES", label: "HUMAN_RESOURCES" },
-  { value: "BANKING_MANAGEMENT", label: "BANKING_MANAGEMENT" },
-  { value: "INTERNATIONAL_BUSINESS", label: "INTERNATIONAL_BUSINESS" },
-  { value: "SOCIALMEDIA_MARKETING", label: "SOCIALMEDIA_MARKETING" },
-  { value: "AGRIBUSINESS_MANAGEMENT", label: "AGRIBUSINESS_MANAGEMENT" },
-  { value: "SUPPLYCHAIN_MANAGEMENT", label: "SUPPLYCHAIN_MANAGEMENT" },
-  { value: "LEADERSHIP_MANAGEMENT", label: "LEADERSHIP_MANAGEMENT" },
-  { value: "FASHION_DESIGN", label: "FASHION_DESIGN" },
-  { value: "LANDSCAPE", label: "LANDSCAPE" },
-  { value: "MUSIC_AUDIO", label: "MUSIC_AUDIO" },
-  { value: "FILM_MEDIA", label: "FILM_MEDIA" },
-  { value: "GRAPHIC_DESIGN", label: "GRAPHIC_DESIGN" },
-  { value: "INTERIOR_DESIGN", label: "INTERIOR_DESIGN" },
-  { value: "DIGITAL_MEDIA", label: "DIGITAL_MEDIA" },
-  { value: "ACTING", label: "ACTING" },
-  { value: "ANIMATION_3D", label: "ANIMATION_3D" },
-  { value: "AGED_CARE", label: "AGED_CARE" },
-  { value: "NUTRITION", label: "NUTRITION" },
-  { value: "NURSING", label: "NURSING" },
-  { value: "VETENARY", label: "VETENARY" },
-  { value: "MEDICINE", label: "MEDICINE" },
-  { value: "PUBLIC_HEALTH", label: "PUBLIC_HEALTH" },
-  { value: "DENTAL", label: "DENTAL" },
-  { value: "MASSAGE", label: "MASSAGE" },
-  { value: "MENTAL_HEALTH", label: "MENTAL_HEALTH" },
-  { value: "BAKING", label: "BAKING" },
-  { value: "COMMERCIAL_COOKING", label: "COMMERCIAL_COOKING" },
-  { value: "HOPITALITY_MANAGEMENT", label: "HOPITALITY_MANAGEMENT" },
-  { value: "INTL_HOTEL_MANAGEMENT", label: "INTL_HOTEL_MANAGEMENT" },
-  { value: "TRAVEL_TOURISM", label: "TRAVEL_TOURISM" },
-  { value: "EVENTS", label: "EVENTS" },
-  { value: "AUTOMOTIVE", label: "AUTOMOTIVE" },
-  { value: "BEAUTY", label: "BEAUTY" },
-  { value: "CONSTRUCTION", label: "CONSTRUCTION" },
-  { value: "CARPENTRY", label: "CARPENTRY" },
-  { value: "EDUCATION", label: "EDUCATION" },
-  { value: "FITNESS", label: "FITNESS" },
-  { value: "HARIDRESSING", label: "HARIDRESSING" },
-  { value: "HORTICULTURE", label: "HORTICULTURE" },
-  { value: "SPORT", label: "SPORT" },
-  { value: "YOGA", label: "YOGA" },
-  { value: "SOFTWARE_DEVELOPMENT", label: "SOFTWARE_DEVELOPMENT" },
-  { value: "COMPUTER_NETWORKING", label: "COMPUTER_NETWORKING" },
-  { value: "CLOUD_COMPUTING", label: "CLOUD_COMPUTING" },
-  { value: "BUSINESS_ANALYSIS", label: "BUSINESS_ANALYSIS" },
-  { value: "TELECOMMUNICATION", label: "TELECOMMUNICATION" },
-  { value: "GAME_PROGRAMMING", label: "GAME_PROGRAMMING" },
-  { value: "WEB_DEVELOPMENT", label: "WEB_DEVELOPMENT" },
-  { value: "MACHINE_LEARNING", label: "MACHINE_LEARNING" },
-  { value: "DATA_MANAGEMENT", label: "DATA_MANAGEMENT" },
-  { value: "BLOCKCHAIN_TECH", label: "BLOCKCHAIN_TECH" },
-  { value: "AI", label: "AI" },
-];
+import { options } from "../lib/categories";
 
 interface IProps {
   details: SoftwareDevelopment | undefined | null;
+  add: boolean;
+  edit: boolean;
+  handleClose: () => void;
 }
 
-const AddClientForm = ({ details }: IProps) => {
-  const Dtitle = details?.title;
-  const Dcategory = details?.category;
-  const Dsubtitle1 = details?.subtitle1;
-  const Dsubtitle2 = details?.subtitle2;
-  const Dsubtitle3 = details?.subtitle3;
-  const DtableContents1 = details?.tableContents1;
-  const DtableContents2 = details?.tableContents2;
-  const DtableContents3 = details?.tableContents3;
-  const DtableContents4 = details?.tableContents4;
-  const Dp1 = details?.p1;
-  const Dp2 = details?.p2;
-  const Dp3 = details?.p3;
-  const Dp4 = details?.p4;
-  const Dp5 = details?.p5;
-  const Dl1 = details?.l1;
-  const Dl2 = details?.l2;
-  const Dl3 = details?.l3;
-  const Dl4 = details?.l4;
-  const Dl5 = details?.l5;
-  const Dp6 = details?.p6;
-  const Dp7 = details?.p7;
-  const Dconclusion1 = details?.conclusion1;
-  const Dconclusion2 = details?.conclusion2;
-  const Dconclusion3 = details?.conclusion3;
-  const Dreference1 = details?.reference1;
-  const Dreference2 = details?.reference2;
-  const DauthorName = details?.authorName;
-  const DauthorAbout = details?.authorAbout;
-  const DauthorLink = details?.authorLink;
-  const DeditedBy = details?.editedBy;
-  const DpublishedDate = details?.publishedDate;
-  const DmainImage = details?.mainImage;
-  const DphotoCredit = details?.photoCredit;
+const AddClientForm = ({ details, add, edit, handleClose }: IProps) => {
+  const Dtitle = add ? "" : details?.title;
+  const Dcategory = add ? "" : details?.category;
+  const Dsubtitle1 = add ? "" : details?.subtitle1;
+  const Dsubtitle2 = add ? "" : details?.subtitle2;
+  const Dsubtitle3 = add ? "" : details?.subtitle3;
+  const DtableContents1 = add ? "" : details?.tableContents1;
+  const DtableContents2 = add ? "" : details?.tableContents2;
+  const DtableContents3 = add ? "" : details?.tableContents3;
+  const DtableContents4 = add ? "" : details?.tableContents4;
+  const Dp1 = add ? "" : details?.p1;
+  const Dp2 = add ? "" : details?.p2;
+  const Dp3 = add ? "" : details?.p3;
+  const Dp4 = add ? "" : details?.p4;
+  const Dp5 = add ? "" : details?.p5;
+  const Dl1 = add ? "" : details?.l1;
+  const Dl2 = add ? "" : details?.l2;
+  const Dl3 = add ? "" : details?.l3;
+  const Dl4 = add ? "" : details?.l4;
+  const Dl5 = add ? "" : details?.l5;
+  const Dp6 = add ? "" : details?.p6;
+  const Dp7 = add ? "" : details?.p7;
+  const Dconclusion1 = add ? "" : details?.conclusion1;
+  const Dconclusion2 = add ? "" : details?.conclusion2;
+  const Dconclusion3 = add ? "" : details?.conclusion3;
+  const Dreference1 = add ? "" : details?.reference1;
+  const Dreference2 = add ? "" : details?.reference2;
+  const DauthorName = add ? "" : details?.authorName;
+  const DauthorAbout = add ? "" : details?.authorAbout;
+  const DauthorLink = add ? "" : details?.authorLink;
+  const DeditedBy = add ? "" : details?.editedBy;
+  const DpublishedDate = add ? "" : details?.publishedDate;
+  const DmainImage = add ? "" : details?.mainImage;
+  const DphotoCredit = add ? "" : details?.photoCredit;
 
   const [category, setCategory] = useState(Dcategory);
   const [title, setTitle] = useState(Dtitle);
@@ -137,10 +83,13 @@ const AddClientForm = ({ details }: IProps) => {
   const [photoCredit, setPhotoCredit] = useState(DphotoCredit);
 
   const [updateSoftwareDevelopment] = useUpdateSoftwareDevelopmentMutation();
+  const [addSoftwareDevelopment] = useAddSoftwareDevelopmentMutation();
 
   let form = {
     variables: {
       input: {
+        id: details!.id,
+        category: category,
         editedBy: editedBy,
         publishedDate: publishedDate,
         mainImage: mainImage,
@@ -178,17 +127,74 @@ const AddClientForm = ({ details }: IProps) => {
   };
 
   useEffect(() => {
-    setCategory(details?.category);
-  }, [details?.category]);
+    if (edit) setCategory(details?.category);
+  }, [details?.category, edit]);
 
   const onFinish = (e: { preventDefault: () => void }) => {
-    if (category === "SOFTWARE_DEVELOPMENT") updateSoftwareDevelopment(form);
+    e.preventDefault();
+
+    function sendForm() {
+      if (edit) {
+        if (category === "SOFTWARE_DEVELOPMENT")
+          updateSoftwareDevelopment(form);
+      }
+
+      if (add) {
+        addSoftwareDevelopment(form);
+      }
+    }
+
+    sendForm();
+
+    setCategory("");
+    setTitle("");
+    setSubtitle1("");
+    setSubtitle2("");
+    setSubtitle3("");
+    setTableContents1("");
+    setTableContents2("");
+    setTableContents3("");
+    setTableContents4("");
+    setP1("");
+    setP2("");
+    setP3("");
+    setP4("");
+    setP5("");
+    setL1("");
+    setL2("");
+    setL3("");
+    setL4("");
+    setL5("");
+    setP6("");
+    setP7("");
+    setConclusion1("");
+    setConclusion2("");
+    setConclusion3("");
+    setReference1("");
+    setReference2("");
+    setAuthorName("");
+    setAuthorAbout("");
+    setAuthorLink("");
+    setEditedBy("");
+    setPublishedDate("");
+    setMainImage("");
+    setPhotoCredit("");
   };
 
   return (
     <form onSubmit={onFinish} className="space-y-3 py-12">
       <div className="px-8 ">
-        <Select options={options} />
+        <select
+          value={category as string}
+          onChange={(e) => setCategory(e.target.value)}
+          required
+        >
+          {options.map((o, i) => (
+            <option key={i} value={o.value}>
+              {o.label}
+            </option>
+          ))}
+        </select>
       </div>
 
       <div className="px-8 flex items-start space-y-3 justify-center flex-col pt-3">
@@ -511,7 +517,10 @@ const AddClientForm = ({ details }: IProps) => {
         />
       </div>
 
-      <div className="w-full flex items-center justify-center pt-10">
+      <div
+        className="w-full flex items-center justify-center pt-10"
+        onClick={handleClose}
+      >
         <button type="submit" className="px-10 h-10 rounded-full bg-white">
           Add
         </button>

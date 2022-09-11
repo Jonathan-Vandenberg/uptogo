@@ -15,6 +15,8 @@ type Query {
   ai(id: ID!): Ai
 
   it(id: ID!): It
+
+  softwareDevelopmentCard: [SoftwareDevelopment]
 }
 
 type Mutation {
@@ -78,68 +80,63 @@ type User {
   sessions: [Session]
 }
 
-enum CategoriesEnum {
-  BLOG
-
-  PROJECT_MANAGEMENT
-  BUSINESS_MANAGEMENT
-  HUMAN_RESOURCES
-  BANKING_MANAGEMENT
-  INTERNATIONAL_BUSINESS
-  SOCIALMEDIA_MARKETING
-  AGRIBUSINESS_MANAGEMENT
-  SUPPLYCHAIN_MANAGEMENT
-  LEADERSHIP_MANAGEMENT
-
-  FASHION_DESIGN
-  LANDSCAPE
-  MUSIC_AUDIO
-  FILM_MEDIA
-  GRAPHIC_DESIGN
-  INTERIOR_DESIGN
-  DIGITAL_MEDIA
-  ACTING
-  ANIMATION_3D
-
-  AGED_CARE
-  NUTRITION
-  NURSING
-  VETENARY
-  MEDICINE
-  PUBLIC_HEALTH
-  DENTAL
-  MASSAGE
-  MENTAL_HEALTH
-
-  BAKING
-  COMMERCIAL_COOKING
-  HOPITALITY_MANAGEMENT
-  INTL_HOTEL_MANAGEMENT
-  TRAVEL_TOURISM
-  EVENTS
-
-  AUTOMOTIVE
-  BEAUTY
-  CONSTRUCTION
-  CARPENTRY
-  EDUCATION
-  FITNESS
-  HARIDRESSING
-  HORTICULTURE
-  SPORT
-  YOGA
-
-  SOFTWARE_DEVELOPMENT
-  COMPUTER_NETWORKING
-  CLOUD_COMPUTING
-  BUSINESS_ANALYSIS
-  TELECOMMUNICATION
-  GAME_PROGRAMMING
-  WEB_DEVELOPMENT
-  MACHINE_LEARNING
-  DATA_MANAGEMENT
-  BLOCKCHAIN_TECH
-  AI
+type Categories {
+  Acting: String
+  AgedCare: String
+  Agribusiness_Management: String
+  Ai: String
+  Animation_3D: String
+  Automotive: String
+  Baking: String
+  Banking_Management: String
+  Beauty: String
+  Blockchain_Tech: String
+  Blog: String
+  Business_Analysis: String
+  Business_Management: String
+  Carpentry: String
+  Cloud_Computing: String
+  Commercial_Cooking: String
+  Computer_Networking: String
+  Construction: String
+  Data_Management: String
+  Dental: String
+  Digital_Media: String
+  Education: String
+  Events: String
+  Fashion_Design: String
+  Film_Media: String
+  Fitness: String
+  Game_Programming: String
+  Graphic_Design: String
+  Haridressing: String
+  Hopitality_Management: String
+  Horticulture: String
+  Human_Resources: String
+  Interior_Design: String
+  International_Business: String
+  Intl_Hotel_Management: String
+  Landscape: String
+  Leadership_Management: String
+  Machine_Learning: String
+  Massage: String
+  Medicine: String
+  Mental_Health: String
+  Music_Audio: String
+  Nursing: String
+  Nutrition: String
+  Project_Management: String
+  Public_Health: String
+  Socialmedia_Marketing: String
+  Software_Development: String
+  Sport: String
+  Supplychain_Management: String
+  Telecommunication: String
+  TravelTourism: String
+  Vetenary: String
+  Web_Development: String
+  Yoga: String
+  map: String
 }
 
 type It {
@@ -153,7 +150,7 @@ input ItInput {
 }
 
 type SoftwareDevelopment {
-  category: CategoriesEnum
+  category: String
   id: ID!
   title: String
   subtitle1: String
@@ -189,8 +186,8 @@ type SoftwareDevelopment {
   publishedDate: String
 }
 input SoftwareDevelopmentInput {
-  category: CategoriesEnum
-  id: ID
+  category: String
+  id: ID!
   title: String
   subtitle1: String
   tableContents1: String
@@ -226,7 +223,7 @@ input SoftwareDevelopmentInput {
 }
 
 type ComputerNetworking {
-  category: CategoriesEnum
+  category: String
   id: ID
   title: String
   subtitle1: String
@@ -262,7 +259,7 @@ type ComputerNetworking {
   publishedDate: String
 }
 input ComputerNetworkingInput {
-  category: CategoriesEnum
+  category: String
   id: ID
   title: String
   subtitle1: String
@@ -299,7 +296,7 @@ input ComputerNetworkingInput {
 }
 
 type CloudComputing {
-  category: CategoriesEnum
+  category: String
   id: ID
   title: String
   subtitle1: String
@@ -335,7 +332,7 @@ type CloudComputing {
   publishedDate: String
 }
 input CloudComputingInput {
-  category: CategoriesEnum
+  category: String
   id: ID
   title: String
   subtitle1: String
@@ -372,7 +369,7 @@ input CloudComputingInput {
 }
 
 type BusinessAnalysis {
-  category: CategoriesEnum
+  category: String
   id: ID
   title: String
   subtitle1: String
@@ -408,7 +405,7 @@ type BusinessAnalysis {
   publishedDate: String
 }
 input BusinessAnalysisInput {
-  category: CategoriesEnum
+  category: String
   id: ID
   title: String
   subtitle1: String
@@ -445,7 +442,7 @@ input BusinessAnalysisInput {
 }
 
 type Telecommunication {
-  category: CategoriesEnum
+  category: String
   id: ID
   title: String
   subtitle1: String
@@ -481,7 +478,7 @@ type Telecommunication {
   publishedDate: String
 }
 input TelecommunicationInput {
-  category: CategoriesEnum
+  category: String
   id: ID
   title: String
   subtitle1: String
@@ -518,7 +515,7 @@ input TelecommunicationInput {
 }
 
 type GameProgramming {
-  category: CategoriesEnum
+  category: String
   id: ID
   title: String
   subtitle1: String
@@ -554,7 +551,7 @@ type GameProgramming {
   publishedDate: String
 }
 input GameProgrammingInput {
-  category: CategoriesEnum
+  category: String
   id: ID
   title: String
   subtitle1: String
@@ -591,7 +588,7 @@ input GameProgrammingInput {
 }
 
 type WebDevelopment {
-  category: CategoriesEnum
+  category: String
   id: ID
   title: String
   subtitle1: String
@@ -627,7 +624,7 @@ type WebDevelopment {
   publishedDate: String
 }
 input WebDevelopmentInput {
-  category: CategoriesEnum
+  category: String
   id: ID
   title: String
   subtitle1: String
@@ -664,7 +661,7 @@ input WebDevelopmentInput {
 }
 
 type MachineLearning {
-  category: CategoriesEnum
+  category: String
   id: ID
   title: String
   subtitle1: String
@@ -700,7 +697,7 @@ type MachineLearning {
   publishedDate: String
 }
 input MachineLearningInput {
-  category: CategoriesEnum
+  category: String
   id: ID
   title: String
   subtitle1: String
@@ -737,7 +734,7 @@ input MachineLearningInput {
 }
 
 type DataManagement {
-  category: CategoriesEnum
+  category: String
   id: ID
   title: String
   subtitle1: String
@@ -773,7 +770,7 @@ type DataManagement {
   publishedDate: String
 }
 input DataManagementInput {
-  category: CategoriesEnum
+  category: String
   id: ID
   title: String
   subtitle1: String
@@ -810,7 +807,7 @@ input DataManagementInput {
 }
 
 type Blockchain {
-  category: CategoriesEnum
+  category: String
   id: ID
   title: String
   subtitle1: String
@@ -846,7 +843,7 @@ type Blockchain {
   publishedDate: String
 }
 input BlockchainInput {
-  category: CategoriesEnum
+  category: String
   id: ID
   title: String
   subtitle1: String
@@ -883,7 +880,7 @@ input BlockchainInput {
 }
 
 type Ai {
-  category: CategoriesEnum
+  category: String
   id: ID
   title: String
   subtitle1: String
@@ -919,7 +916,7 @@ type Ai {
   publishedDate: String
 }
 input AiInput {
-  category: CategoriesEnum
+  category: String
   id: ID
   title: String
   subtitle1: String
@@ -957,7 +954,7 @@ input AiInput {
 
 type BlogPost {
   id: ID!
-  category: CategoriesEnum
+  category: String
   title: String
   subtitle1: String
   tableContents1: String
@@ -994,7 +991,7 @@ type BlogPost {
 
 input BlogPostInput {
   id: ID
-  category: CategoriesEnum
+  category: String
   title: String
   subtitle1: String
   tableContents1: String

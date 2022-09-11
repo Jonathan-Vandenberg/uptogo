@@ -1,5 +1,5 @@
 import { GraphQLResolveInfo } from 'graphql';
-import { CategoriesEnum as CategoriesEnumModel, SoftwareDevelopment as SoftwareDevelopmentModel, ComputerNetworking as ComputerNetworkingModel, CloudComputing as CloudComputingModel, BusinessAnalysis as BusinessAnalysisModel, Telecommunication as TelecommunicationModel, GameProgramming as GameProgrammingModel, WebDevelopment as WebDevelopmentModel, MachineLearning as MachineLearningModel, DataManagement as DataManagementModel, Blockchain as BlockchainModel, Ai as AiModel, BlogPost as BlogPostModel, It as ItModel, Session as SessionModel, User as UserModel, VerificationToken as VerificationTokenModel } from '@prisma/client';
+import { Categories as CategoriesModel, SoftwareDevelopment as SoftwareDevelopmentModel, ComputerNetworking as ComputerNetworkingModel, CloudComputing as CloudComputingModel, BusinessAnalysis as BusinessAnalysisModel, Telecommunication as TelecommunicationModel, GameProgramming as GameProgrammingModel, WebDevelopment as WebDevelopmentModel, MachineLearning as MachineLearningModel, DataManagement as DataManagementModel, Blockchain as BlockchainModel, Ai as AiModel, BlogPost as BlogPostModel, It as ItModel, Session as SessionModel, User as UserModel, VerificationToken as VerificationTokenModel } from '@prisma/client';
 import { GraphQLContext } from './pages/api/index';
 import { gql } from '@apollo/client';
 import * as Apollo from '@apollo/client';
@@ -9,7 +9,6 @@ export type Exact<T extends { [key: string]: unknown }> = { [K in keyof T]: T[K]
 export type MakeOptional<T, K extends keyof T> = Omit<T, K> & { [SubKey in K]?: Maybe<T[SubKey]> };
 export type MakeMaybe<T, K extends keyof T> = Omit<T, K> & { [SubKey in K]: Maybe<T[SubKey]> };
 export type Omit<T, K extends keyof T> = Pick<T, Exclude<keyof T, K>>;
-export type EnumResolverSignature<T, AllowedValues = any> = { [key in keyof T]?: AllowedValues };
 export type RequireFields<T, K extends keyof T> = Omit<T, K> & { [P in K]-?: NonNullable<T[P]> };
 const defaultOptions = {} as const;
 /** All built-in and custom scalars, mapped to their actual values */
@@ -43,7 +42,7 @@ export type Ai = {
   authorAbout?: Maybe<Scalars['String']>;
   authorLink?: Maybe<Scalars['String']>;
   authorName?: Maybe<Scalars['String']>;
-  category?: Maybe<CategoriesEnum>;
+  category?: Maybe<Scalars['String']>;
   conclusion1?: Maybe<Scalars['String']>;
   conclusion2?: Maybe<Scalars['String']>;
   conclusion3?: Maybe<Scalars['String']>;
@@ -80,7 +79,7 @@ export type AiInput = {
   authorAbout?: InputMaybe<Scalars['String']>;
   authorLink?: InputMaybe<Scalars['String']>;
   authorName?: InputMaybe<Scalars['String']>;
-  category?: InputMaybe<CategoriesEnum>;
+  category?: InputMaybe<Scalars['String']>;
   conclusion1?: InputMaybe<Scalars['String']>;
   conclusion2?: InputMaybe<Scalars['String']>;
   conclusion3?: InputMaybe<Scalars['String']>;
@@ -118,7 +117,7 @@ export type Blockchain = {
   authorAbout?: Maybe<Scalars['String']>;
   authorLink?: Maybe<Scalars['String']>;
   authorName?: Maybe<Scalars['String']>;
-  category?: Maybe<CategoriesEnum>;
+  category?: Maybe<Scalars['String']>;
   conclusion1?: Maybe<Scalars['String']>;
   conclusion2?: Maybe<Scalars['String']>;
   conclusion3?: Maybe<Scalars['String']>;
@@ -155,7 +154,7 @@ export type BlockchainInput = {
   authorAbout?: InputMaybe<Scalars['String']>;
   authorLink?: InputMaybe<Scalars['String']>;
   authorName?: InputMaybe<Scalars['String']>;
-  category?: InputMaybe<CategoriesEnum>;
+  category?: InputMaybe<Scalars['String']>;
   conclusion1?: InputMaybe<Scalars['String']>;
   conclusion2?: InputMaybe<Scalars['String']>;
   conclusion3?: InputMaybe<Scalars['String']>;
@@ -193,7 +192,7 @@ export type BlogPost = {
   authorAbout?: Maybe<Scalars['String']>;
   authorLink?: Maybe<Scalars['String']>;
   authorName?: Maybe<Scalars['String']>;
-  category?: Maybe<CategoriesEnum>;
+  category?: Maybe<Scalars['String']>;
   conclusion1?: Maybe<Scalars['String']>;
   conclusion2?: Maybe<Scalars['String']>;
   conclusion3?: Maybe<Scalars['String']>;
@@ -230,7 +229,7 @@ export type BlogPostInput = {
   authorAbout?: InputMaybe<Scalars['String']>;
   authorLink?: InputMaybe<Scalars['String']>;
   authorName?: InputMaybe<Scalars['String']>;
-  category?: InputMaybe<CategoriesEnum>;
+  category?: InputMaybe<Scalars['String']>;
   conclusion1?: InputMaybe<Scalars['String']>;
   conclusion2?: InputMaybe<Scalars['String']>;
   conclusion3?: InputMaybe<Scalars['String']>;
@@ -268,7 +267,7 @@ export type BusinessAnalysis = {
   authorAbout?: Maybe<Scalars['String']>;
   authorLink?: Maybe<Scalars['String']>;
   authorName?: Maybe<Scalars['String']>;
-  category?: Maybe<CategoriesEnum>;
+  category?: Maybe<Scalars['String']>;
   conclusion1?: Maybe<Scalars['String']>;
   conclusion2?: Maybe<Scalars['String']>;
   conclusion3?: Maybe<Scalars['String']>;
@@ -305,7 +304,7 @@ export type BusinessAnalysisInput = {
   authorAbout?: InputMaybe<Scalars['String']>;
   authorLink?: InputMaybe<Scalars['String']>;
   authorName?: InputMaybe<Scalars['String']>;
-  category?: InputMaybe<CategoriesEnum>;
+  category?: InputMaybe<Scalars['String']>;
   conclusion1?: InputMaybe<Scalars['String']>;
   conclusion2?: InputMaybe<Scalars['String']>;
   conclusion3?: InputMaybe<Scalars['String']>;
@@ -338,70 +337,72 @@ export type BusinessAnalysisInput = {
   title?: InputMaybe<Scalars['String']>;
 };
 
-export enum CategoriesEnum {
-  Acting = 'ACTING',
-  AgedCare = 'AGED_CARE',
-  AgribusinessManagement = 'AGRIBUSINESS_MANAGEMENT',
-  Ai = 'AI',
-  Animation_3D = 'ANIMATION_3D',
-  Automotive = 'AUTOMOTIVE',
-  Baking = 'BAKING',
-  BankingManagement = 'BANKING_MANAGEMENT',
-  Beauty = 'BEAUTY',
-  BlockchainTech = 'BLOCKCHAIN_TECH',
-  Blog = 'BLOG',
-  BusinessAnalysis = 'BUSINESS_ANALYSIS',
-  BusinessManagement = 'BUSINESS_MANAGEMENT',
-  Carpentry = 'CARPENTRY',
-  CloudComputing = 'CLOUD_COMPUTING',
-  CommercialCooking = 'COMMERCIAL_COOKING',
-  ComputerNetworking = 'COMPUTER_NETWORKING',
-  Construction = 'CONSTRUCTION',
-  DataManagement = 'DATA_MANAGEMENT',
-  Dental = 'DENTAL',
-  DigitalMedia = 'DIGITAL_MEDIA',
-  Education = 'EDUCATION',
-  Events = 'EVENTS',
-  FashionDesign = 'FASHION_DESIGN',
-  FilmMedia = 'FILM_MEDIA',
-  Fitness = 'FITNESS',
-  GameProgramming = 'GAME_PROGRAMMING',
-  GraphicDesign = 'GRAPHIC_DESIGN',
-  Haridressing = 'HARIDRESSING',
-  HopitalityManagement = 'HOPITALITY_MANAGEMENT',
-  Horticulture = 'HORTICULTURE',
-  HumanResources = 'HUMAN_RESOURCES',
-  InteriorDesign = 'INTERIOR_DESIGN',
-  InternationalBusiness = 'INTERNATIONAL_BUSINESS',
-  IntlHotelManagement = 'INTL_HOTEL_MANAGEMENT',
-  Landscape = 'LANDSCAPE',
-  LeadershipManagement = 'LEADERSHIP_MANAGEMENT',
-  MachineLearning = 'MACHINE_LEARNING',
-  Massage = 'MASSAGE',
-  Medicine = 'MEDICINE',
-  MentalHealth = 'MENTAL_HEALTH',
-  MusicAudio = 'MUSIC_AUDIO',
-  Nursing = 'NURSING',
-  Nutrition = 'NUTRITION',
-  ProjectManagement = 'PROJECT_MANAGEMENT',
-  PublicHealth = 'PUBLIC_HEALTH',
-  SocialmediaMarketing = 'SOCIALMEDIA_MARKETING',
-  SoftwareDevelopment = 'SOFTWARE_DEVELOPMENT',
-  Sport = 'SPORT',
-  SupplychainManagement = 'SUPPLYCHAIN_MANAGEMENT',
-  Telecommunication = 'TELECOMMUNICATION',
-  TravelTourism = 'TRAVEL_TOURISM',
-  Vetenary = 'VETENARY',
-  WebDevelopment = 'WEB_DEVELOPMENT',
-  Yoga = 'YOGA'
-}
+export type Categories = {
+  __typename?: 'Categories';
+  Acting?: Maybe<Scalars['String']>;
+  AgedCare?: Maybe<Scalars['String']>;
+  Agribusiness_Management?: Maybe<Scalars['String']>;
+  Ai?: Maybe<Scalars['String']>;
+  Animation_3D?: Maybe<Scalars['String']>;
+  Automotive?: Maybe<Scalars['String']>;
+  Baking?: Maybe<Scalars['String']>;
+  Banking_Management?: Maybe<Scalars['String']>;
+  Beauty?: Maybe<Scalars['String']>;
+  Blockchain_Tech?: Maybe<Scalars['String']>;
+  Blog?: Maybe<Scalars['String']>;
+  Business_Analysis?: Maybe<Scalars['String']>;
+  Business_Management?: Maybe<Scalars['String']>;
+  Carpentry?: Maybe<Scalars['String']>;
+  Cloud_Computing?: Maybe<Scalars['String']>;
+  Commercial_Cooking?: Maybe<Scalars['String']>;
+  Computer_Networking?: Maybe<Scalars['String']>;
+  Construction?: Maybe<Scalars['String']>;
+  Data_Management?: Maybe<Scalars['String']>;
+  Dental?: Maybe<Scalars['String']>;
+  Digital_Media?: Maybe<Scalars['String']>;
+  Education?: Maybe<Scalars['String']>;
+  Events?: Maybe<Scalars['String']>;
+  Fashion_Design?: Maybe<Scalars['String']>;
+  Film_Media?: Maybe<Scalars['String']>;
+  Fitness?: Maybe<Scalars['String']>;
+  Game_Programming?: Maybe<Scalars['String']>;
+  Graphic_Design?: Maybe<Scalars['String']>;
+  Haridressing?: Maybe<Scalars['String']>;
+  Hopitality_Management?: Maybe<Scalars['String']>;
+  Horticulture?: Maybe<Scalars['String']>;
+  Human_Resources?: Maybe<Scalars['String']>;
+  Interior_Design?: Maybe<Scalars['String']>;
+  International_Business?: Maybe<Scalars['String']>;
+  Intl_Hotel_Management?: Maybe<Scalars['String']>;
+  Landscape?: Maybe<Scalars['String']>;
+  Leadership_Management?: Maybe<Scalars['String']>;
+  Machine_Learning?: Maybe<Scalars['String']>;
+  Massage?: Maybe<Scalars['String']>;
+  Medicine?: Maybe<Scalars['String']>;
+  Mental_Health?: Maybe<Scalars['String']>;
+  Music_Audio?: Maybe<Scalars['String']>;
+  Nursing?: Maybe<Scalars['String']>;
+  Nutrition?: Maybe<Scalars['String']>;
+  Project_Management?: Maybe<Scalars['String']>;
+  Public_Health?: Maybe<Scalars['String']>;
+  Socialmedia_Marketing?: Maybe<Scalars['String']>;
+  Software_Development?: Maybe<Scalars['String']>;
+  Sport?: Maybe<Scalars['String']>;
+  Supplychain_Management?: Maybe<Scalars['String']>;
+  Telecommunication?: Maybe<Scalars['String']>;
+  TravelTourism?: Maybe<Scalars['String']>;
+  Vetenary?: Maybe<Scalars['String']>;
+  Web_Development?: Maybe<Scalars['String']>;
+  Yoga?: Maybe<Scalars['String']>;
+  map?: Maybe<Scalars['String']>;
+};
 
 export type CloudComputing = {
   __typename?: 'CloudComputing';
   authorAbout?: Maybe<Scalars['String']>;
   authorLink?: Maybe<Scalars['String']>;
   authorName?: Maybe<Scalars['String']>;
-  category?: Maybe<CategoriesEnum>;
+  category?: Maybe<Scalars['String']>;
   conclusion1?: Maybe<Scalars['String']>;
   conclusion2?: Maybe<Scalars['String']>;
   conclusion3?: Maybe<Scalars['String']>;
@@ -438,7 +439,7 @@ export type CloudComputingInput = {
   authorAbout?: InputMaybe<Scalars['String']>;
   authorLink?: InputMaybe<Scalars['String']>;
   authorName?: InputMaybe<Scalars['String']>;
-  category?: InputMaybe<CategoriesEnum>;
+  category?: InputMaybe<Scalars['String']>;
   conclusion1?: InputMaybe<Scalars['String']>;
   conclusion2?: InputMaybe<Scalars['String']>;
   conclusion3?: InputMaybe<Scalars['String']>;
@@ -476,7 +477,7 @@ export type ComputerNetworking = {
   authorAbout?: Maybe<Scalars['String']>;
   authorLink?: Maybe<Scalars['String']>;
   authorName?: Maybe<Scalars['String']>;
-  category?: Maybe<CategoriesEnum>;
+  category?: Maybe<Scalars['String']>;
   conclusion1?: Maybe<Scalars['String']>;
   conclusion2?: Maybe<Scalars['String']>;
   conclusion3?: Maybe<Scalars['String']>;
@@ -513,7 +514,7 @@ export type ComputerNetworkingInput = {
   authorAbout?: InputMaybe<Scalars['String']>;
   authorLink?: InputMaybe<Scalars['String']>;
   authorName?: InputMaybe<Scalars['String']>;
-  category?: InputMaybe<CategoriesEnum>;
+  category?: InputMaybe<Scalars['String']>;
   conclusion1?: InputMaybe<Scalars['String']>;
   conclusion2?: InputMaybe<Scalars['String']>;
   conclusion3?: InputMaybe<Scalars['String']>;
@@ -551,7 +552,7 @@ export type DataManagement = {
   authorAbout?: Maybe<Scalars['String']>;
   authorLink?: Maybe<Scalars['String']>;
   authorName?: Maybe<Scalars['String']>;
-  category?: Maybe<CategoriesEnum>;
+  category?: Maybe<Scalars['String']>;
   conclusion1?: Maybe<Scalars['String']>;
   conclusion2?: Maybe<Scalars['String']>;
   conclusion3?: Maybe<Scalars['String']>;
@@ -588,7 +589,7 @@ export type DataManagementInput = {
   authorAbout?: InputMaybe<Scalars['String']>;
   authorLink?: InputMaybe<Scalars['String']>;
   authorName?: InputMaybe<Scalars['String']>;
-  category?: InputMaybe<CategoriesEnum>;
+  category?: InputMaybe<Scalars['String']>;
   conclusion1?: InputMaybe<Scalars['String']>;
   conclusion2?: InputMaybe<Scalars['String']>;
   conclusion3?: InputMaybe<Scalars['String']>;
@@ -626,7 +627,7 @@ export type GameProgramming = {
   authorAbout?: Maybe<Scalars['String']>;
   authorLink?: Maybe<Scalars['String']>;
   authorName?: Maybe<Scalars['String']>;
-  category?: Maybe<CategoriesEnum>;
+  category?: Maybe<Scalars['String']>;
   conclusion1?: Maybe<Scalars['String']>;
   conclusion2?: Maybe<Scalars['String']>;
   conclusion3?: Maybe<Scalars['String']>;
@@ -663,7 +664,7 @@ export type GameProgrammingInput = {
   authorAbout?: InputMaybe<Scalars['String']>;
   authorLink?: InputMaybe<Scalars['String']>;
   authorName?: InputMaybe<Scalars['String']>;
-  category?: InputMaybe<CategoriesEnum>;
+  category?: InputMaybe<Scalars['String']>;
   conclusion1?: InputMaybe<Scalars['String']>;
   conclusion2?: InputMaybe<Scalars['String']>;
   conclusion3?: InputMaybe<Scalars['String']>;
@@ -712,7 +713,7 @@ export type MachineLearning = {
   authorAbout?: Maybe<Scalars['String']>;
   authorLink?: Maybe<Scalars['String']>;
   authorName?: Maybe<Scalars['String']>;
-  category?: Maybe<CategoriesEnum>;
+  category?: Maybe<Scalars['String']>;
   conclusion1?: Maybe<Scalars['String']>;
   conclusion2?: Maybe<Scalars['String']>;
   conclusion3?: Maybe<Scalars['String']>;
@@ -749,7 +750,7 @@ export type MachineLearningInput = {
   authorAbout?: InputMaybe<Scalars['String']>;
   authorLink?: InputMaybe<Scalars['String']>;
   authorName?: InputMaybe<Scalars['String']>;
-  category?: InputMaybe<CategoriesEnum>;
+  category?: InputMaybe<Scalars['String']>;
   conclusion1?: InputMaybe<Scalars['String']>;
   conclusion2?: InputMaybe<Scalars['String']>;
   conclusion3?: InputMaybe<Scalars['String']>;
@@ -885,6 +886,7 @@ export type Query = {
   it?: Maybe<It>;
   machineLearning?: Maybe<MachineLearning>;
   softwareDevelopment?: Maybe<SoftwareDevelopment>;
+  softwareDevelopmentCard?: Maybe<Array<Maybe<SoftwareDevelopment>>>;
   telecommunication?: Maybe<Telecommunication>;
   webDevelopment?: Maybe<WebDevelopment>;
 };
@@ -968,7 +970,7 @@ export type SoftwareDevelopment = {
   authorAbout?: Maybe<Scalars['String']>;
   authorLink?: Maybe<Scalars['String']>;
   authorName?: Maybe<Scalars['String']>;
-  category?: Maybe<CategoriesEnum>;
+  category?: Maybe<Scalars['String']>;
   conclusion1?: Maybe<Scalars['String']>;
   conclusion2?: Maybe<Scalars['String']>;
   conclusion3?: Maybe<Scalars['String']>;
@@ -1005,12 +1007,12 @@ export type SoftwareDevelopmentInput = {
   authorAbout?: InputMaybe<Scalars['String']>;
   authorLink?: InputMaybe<Scalars['String']>;
   authorName?: InputMaybe<Scalars['String']>;
-  category?: InputMaybe<CategoriesEnum>;
+  category?: InputMaybe<Scalars['String']>;
   conclusion1?: InputMaybe<Scalars['String']>;
   conclusion2?: InputMaybe<Scalars['String']>;
   conclusion3?: InputMaybe<Scalars['String']>;
   editedBy?: InputMaybe<Scalars['String']>;
-  id?: InputMaybe<Scalars['ID']>;
+  id: Scalars['ID'];
   l1?: InputMaybe<Scalars['String']>;
   l2?: InputMaybe<Scalars['String']>;
   l3?: InputMaybe<Scalars['String']>;
@@ -1043,7 +1045,7 @@ export type Telecommunication = {
   authorAbout?: Maybe<Scalars['String']>;
   authorLink?: Maybe<Scalars['String']>;
   authorName?: Maybe<Scalars['String']>;
-  category?: Maybe<CategoriesEnum>;
+  category?: Maybe<Scalars['String']>;
   conclusion1?: Maybe<Scalars['String']>;
   conclusion2?: Maybe<Scalars['String']>;
   conclusion3?: Maybe<Scalars['String']>;
@@ -1080,7 +1082,7 @@ export type TelecommunicationInput = {
   authorAbout?: InputMaybe<Scalars['String']>;
   authorLink?: InputMaybe<Scalars['String']>;
   authorName?: InputMaybe<Scalars['String']>;
-  category?: InputMaybe<CategoriesEnum>;
+  category?: InputMaybe<Scalars['String']>;
   conclusion1?: InputMaybe<Scalars['String']>;
   conclusion2?: InputMaybe<Scalars['String']>;
   conclusion3?: InputMaybe<Scalars['String']>;
@@ -1136,7 +1138,7 @@ export type WebDevelopment = {
   authorAbout?: Maybe<Scalars['String']>;
   authorLink?: Maybe<Scalars['String']>;
   authorName?: Maybe<Scalars['String']>;
-  category?: Maybe<CategoriesEnum>;
+  category?: Maybe<Scalars['String']>;
   conclusion1?: Maybe<Scalars['String']>;
   conclusion2?: Maybe<Scalars['String']>;
   conclusion3?: Maybe<Scalars['String']>;
@@ -1173,7 +1175,7 @@ export type WebDevelopmentInput = {
   authorAbout?: InputMaybe<Scalars['String']>;
   authorLink?: InputMaybe<Scalars['String']>;
   authorName?: InputMaybe<Scalars['String']>;
-  category?: InputMaybe<CategoriesEnum>;
+  category?: InputMaybe<Scalars['String']>;
   conclusion1?: InputMaybe<Scalars['String']>;
   conclusion2?: InputMaybe<Scalars['String']>;
   conclusion3?: InputMaybe<Scalars['String']>;
@@ -1285,7 +1287,7 @@ export type ResolversTypes = {
   Boolean: ResolverTypeWrapper<Scalars['Boolean']>;
   BusinessAnalysis: ResolverTypeWrapper<BusinessAnalysisModel>;
   BusinessAnalysisInput: BusinessAnalysisInput;
-  CategoriesEnum: ResolverTypeWrapper<CategoriesEnumModel>;
+  Categories: ResolverTypeWrapper<CategoriesModel>;
   CloudComputing: ResolverTypeWrapper<CloudComputingModel>;
   CloudComputingInput: CloudComputingInput;
   ComputerNetworking: ResolverTypeWrapper<ComputerNetworkingModel>;
@@ -1325,6 +1327,7 @@ export type ResolversParentTypes = {
   Boolean: Scalars['Boolean'];
   BusinessAnalysis: BusinessAnalysisModel;
   BusinessAnalysisInput: BusinessAnalysisInput;
+  Categories: CategoriesModel;
   CloudComputing: CloudComputingModel;
   CloudComputingInput: CloudComputingInput;
   ComputerNetworking: ComputerNetworkingModel;
@@ -1373,7 +1376,7 @@ export type AiResolvers<ContextType = GraphQLContext, ParentType extends Resolve
   authorAbout?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   authorLink?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   authorName?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
-  category?: Resolver<Maybe<ResolversTypes['CategoriesEnum']>, ParentType, ContextType>;
+  category?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   conclusion1?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   conclusion2?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   conclusion3?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
@@ -1411,7 +1414,7 @@ export type BlockchainResolvers<ContextType = GraphQLContext, ParentType extends
   authorAbout?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   authorLink?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   authorName?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
-  category?: Resolver<Maybe<ResolversTypes['CategoriesEnum']>, ParentType, ContextType>;
+  category?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   conclusion1?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   conclusion2?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   conclusion3?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
@@ -1449,7 +1452,7 @@ export type BlogPostResolvers<ContextType = GraphQLContext, ParentType extends R
   authorAbout?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   authorLink?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   authorName?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
-  category?: Resolver<Maybe<ResolversTypes['CategoriesEnum']>, ParentType, ContextType>;
+  category?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   conclusion1?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   conclusion2?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   conclusion3?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
@@ -1487,7 +1490,7 @@ export type BusinessAnalysisResolvers<ContextType = GraphQLContext, ParentType e
   authorAbout?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   authorLink?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   authorName?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
-  category?: Resolver<Maybe<ResolversTypes['CategoriesEnum']>, ParentType, ContextType>;
+  category?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   conclusion1?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   conclusion2?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   conclusion3?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
@@ -1521,13 +1524,71 @@ export type BusinessAnalysisResolvers<ContextType = GraphQLContext, ParentType e
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 };
 
-export type CategoriesEnumResolvers = EnumResolverSignature<{ ACTING?: any, AGED_CARE?: any, AGRIBUSINESS_MANAGEMENT?: any, AI?: any, ANIMATION_3D?: any, AUTOMOTIVE?: any, BAKING?: any, BANKING_MANAGEMENT?: any, BEAUTY?: any, BLOCKCHAIN_TECH?: any, BLOG?: any, BUSINESS_ANALYSIS?: any, BUSINESS_MANAGEMENT?: any, CARPENTRY?: any, CLOUD_COMPUTING?: any, COMMERCIAL_COOKING?: any, COMPUTER_NETWORKING?: any, CONSTRUCTION?: any, DATA_MANAGEMENT?: any, DENTAL?: any, DIGITAL_MEDIA?: any, EDUCATION?: any, EVENTS?: any, FASHION_DESIGN?: any, FILM_MEDIA?: any, FITNESS?: any, GAME_PROGRAMMING?: any, GRAPHIC_DESIGN?: any, HARIDRESSING?: any, HOPITALITY_MANAGEMENT?: any, HORTICULTURE?: any, HUMAN_RESOURCES?: any, INTERIOR_DESIGN?: any, INTERNATIONAL_BUSINESS?: any, INTL_HOTEL_MANAGEMENT?: any, LANDSCAPE?: any, LEADERSHIP_MANAGEMENT?: any, MACHINE_LEARNING?: any, MASSAGE?: any, MEDICINE?: any, MENTAL_HEALTH?: any, MUSIC_AUDIO?: any, NURSING?: any, NUTRITION?: any, PROJECT_MANAGEMENT?: any, PUBLIC_HEALTH?: any, SOCIALMEDIA_MARKETING?: any, SOFTWARE_DEVELOPMENT?: any, SPORT?: any, SUPPLYCHAIN_MANAGEMENT?: any, TELECOMMUNICATION?: any, TRAVEL_TOURISM?: any, VETENARY?: any, WEB_DEVELOPMENT?: any, YOGA?: any }, ResolversTypes['CategoriesEnum']>;
+export type CategoriesResolvers<ContextType = GraphQLContext, ParentType extends ResolversParentTypes['Categories'] = ResolversParentTypes['Categories']> = {
+  Acting?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  AgedCare?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  Agribusiness_Management?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  Ai?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  Animation_3D?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  Automotive?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  Baking?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  Banking_Management?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  Beauty?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  Blockchain_Tech?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  Blog?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  Business_Analysis?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  Business_Management?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  Carpentry?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  Cloud_Computing?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  Commercial_Cooking?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  Computer_Networking?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  Construction?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  Data_Management?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  Dental?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  Digital_Media?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  Education?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  Events?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  Fashion_Design?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  Film_Media?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  Fitness?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  Game_Programming?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  Graphic_Design?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  Haridressing?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  Hopitality_Management?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  Horticulture?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  Human_Resources?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  Interior_Design?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  International_Business?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  Intl_Hotel_Management?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  Landscape?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  Leadership_Management?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  Machine_Learning?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  Massage?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  Medicine?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  Mental_Health?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  Music_Audio?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  Nursing?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  Nutrition?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  Project_Management?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  Public_Health?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  Socialmedia_Marketing?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  Software_Development?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  Sport?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  Supplychain_Management?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  Telecommunication?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  TravelTourism?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  Vetenary?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  Web_Development?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  Yoga?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  map?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
+};
 
 export type CloudComputingResolvers<ContextType = GraphQLContext, ParentType extends ResolversParentTypes['CloudComputing'] = ResolversParentTypes['CloudComputing']> = {
   authorAbout?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   authorLink?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   authorName?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
-  category?: Resolver<Maybe<ResolversTypes['CategoriesEnum']>, ParentType, ContextType>;
+  category?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   conclusion1?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   conclusion2?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   conclusion3?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
@@ -1565,7 +1626,7 @@ export type ComputerNetworkingResolvers<ContextType = GraphQLContext, ParentType
   authorAbout?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   authorLink?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   authorName?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
-  category?: Resolver<Maybe<ResolversTypes['CategoriesEnum']>, ParentType, ContextType>;
+  category?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   conclusion1?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   conclusion2?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   conclusion3?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
@@ -1603,7 +1664,7 @@ export type DataManagementResolvers<ContextType = GraphQLContext, ParentType ext
   authorAbout?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   authorLink?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   authorName?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
-  category?: Resolver<Maybe<ResolversTypes['CategoriesEnum']>, ParentType, ContextType>;
+  category?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   conclusion1?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   conclusion2?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   conclusion3?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
@@ -1641,7 +1702,7 @@ export type GameProgrammingResolvers<ContextType = GraphQLContext, ParentType ex
   authorAbout?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   authorLink?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   authorName?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
-  category?: Resolver<Maybe<ResolversTypes['CategoriesEnum']>, ParentType, ContextType>;
+  category?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   conclusion1?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   conclusion2?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   conclusion3?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
@@ -1686,7 +1747,7 @@ export type MachineLearningResolvers<ContextType = GraphQLContext, ParentType ex
   authorAbout?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   authorLink?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   authorName?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
-  category?: Resolver<Maybe<ResolversTypes['CategoriesEnum']>, ParentType, ContextType>;
+  category?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   conclusion1?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   conclusion2?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   conclusion3?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
@@ -1751,6 +1812,7 @@ export type QueryResolvers<ContextType = GraphQLContext, ParentType extends Reso
   it?: Resolver<Maybe<ResolversTypes['It']>, ParentType, ContextType, RequireFields<QueryItArgs, 'id'>>;
   machineLearning?: Resolver<Maybe<ResolversTypes['MachineLearning']>, ParentType, ContextType, RequireFields<QueryMachineLearningArgs, 'id'>>;
   softwareDevelopment?: Resolver<Maybe<ResolversTypes['SoftwareDevelopment']>, ParentType, ContextType, RequireFields<QuerySoftwareDevelopmentArgs, 'id'>>;
+  softwareDevelopmentCard?: Resolver<Maybe<Array<Maybe<ResolversTypes['SoftwareDevelopment']>>>, ParentType, ContextType>;
   telecommunication?: Resolver<Maybe<ResolversTypes['Telecommunication']>, ParentType, ContextType, RequireFields<QueryTelecommunicationArgs, 'id'>>;
   webDevelopment?: Resolver<Maybe<ResolversTypes['WebDevelopment']>, ParentType, ContextType, RequireFields<QueryWebDevelopmentArgs, 'id'>>;
 };
@@ -1768,7 +1830,7 @@ export type SoftwareDevelopmentResolvers<ContextType = GraphQLContext, ParentTyp
   authorAbout?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   authorLink?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   authorName?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
-  category?: Resolver<Maybe<ResolversTypes['CategoriesEnum']>, ParentType, ContextType>;
+  category?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   conclusion1?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   conclusion2?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   conclusion3?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
@@ -1806,7 +1868,7 @@ export type TelecommunicationResolvers<ContextType = GraphQLContext, ParentType 
   authorAbout?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   authorLink?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   authorName?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
-  category?: Resolver<Maybe<ResolversTypes['CategoriesEnum']>, ParentType, ContextType>;
+  category?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   conclusion1?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   conclusion2?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   conclusion3?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
@@ -1862,7 +1924,7 @@ export type WebDevelopmentResolvers<ContextType = GraphQLContext, ParentType ext
   authorAbout?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   authorLink?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   authorName?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
-  category?: Resolver<Maybe<ResolversTypes['CategoriesEnum']>, ParentType, ContextType>;
+  category?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   conclusion1?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   conclusion2?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   conclusion3?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
@@ -1902,7 +1964,7 @@ export type Resolvers<ContextType = GraphQLContext> = {
   Blockchain?: BlockchainResolvers<ContextType>;
   BlogPost?: BlogPostResolvers<ContextType>;
   BusinessAnalysis?: BusinessAnalysisResolvers<ContextType>;
-  CategoriesEnum?: CategoriesEnumResolvers;
+  Categories?: CategoriesResolvers<ContextType>;
   CloudComputing?: CloudComputingResolvers<ContextType>;
   ComputerNetworking?: ComputerNetworkingResolvers<ContextType>;
   DataManagement?: DataManagementResolvers<ContextType>;
@@ -2273,6 +2335,14 @@ export const MachineLearningFragmentDoc = gql`
   photoCredit
   editedBy
   mainImage
+}
+    `;
+export const SoftwareDevelopmentCardFragmentDoc = gql`
+    fragment SoftwareDevelopmentCard on SoftwareDevelopment {
+  category
+  id
+  title
+  subtitle1
 }
     `;
 export const SoftwareDevelopmentFragmentDoc = gql`
@@ -3205,6 +3275,40 @@ export function useSoftwareDevelopmentLazyQuery(baseOptions?: Apollo.LazyQueryHo
 export type SoftwareDevelopmentQueryHookResult = ReturnType<typeof useSoftwareDevelopmentQuery>;
 export type SoftwareDevelopmentLazyQueryHookResult = ReturnType<typeof useSoftwareDevelopmentLazyQuery>;
 export type SoftwareDevelopmentQueryResult = Apollo.QueryResult<SoftwareDevelopmentQuery, SoftwareDevelopmentQueryVariables>;
+export const SoftwareDevelopmentCardDocument = gql`
+    query SoftwareDevelopmentCard {
+  softwareDevelopmentCard {
+    ...SoftwareDevelopmentCard
+  }
+}
+    ${SoftwareDevelopmentCardFragmentDoc}`;
+
+/**
+ * __useSoftwareDevelopmentCardQuery__
+ *
+ * To run a query within a React component, call `useSoftwareDevelopmentCardQuery` and pass it any options that fit your needs.
+ * When your component renders, `useSoftwareDevelopmentCardQuery` returns an object from Apollo Client that contains loading, error, and data properties
+ * you can use to render your UI.
+ *
+ * @param baseOptions options that will be passed into the query, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options;
+ *
+ * @example
+ * const { data, loading, error } = useSoftwareDevelopmentCardQuery({
+ *   variables: {
+ *   },
+ * });
+ */
+export function useSoftwareDevelopmentCardQuery(baseOptions?: Apollo.QueryHookOptions<SoftwareDevelopmentCardQuery, SoftwareDevelopmentCardQueryVariables>) {
+        const options = {...defaultOptions, ...baseOptions}
+        return Apollo.useQuery<SoftwareDevelopmentCardQuery, SoftwareDevelopmentCardQueryVariables>(SoftwareDevelopmentCardDocument, options);
+      }
+export function useSoftwareDevelopmentCardLazyQuery(baseOptions?: Apollo.LazyQueryHookOptions<SoftwareDevelopmentCardQuery, SoftwareDevelopmentCardQueryVariables>) {
+          const options = {...defaultOptions, ...baseOptions}
+          return Apollo.useLazyQuery<SoftwareDevelopmentCardQuery, SoftwareDevelopmentCardQueryVariables>(SoftwareDevelopmentCardDocument, options);
+        }
+export type SoftwareDevelopmentCardQueryHookResult = ReturnType<typeof useSoftwareDevelopmentCardQuery>;
+export type SoftwareDevelopmentCardLazyQueryHookResult = ReturnType<typeof useSoftwareDevelopmentCardLazyQuery>;
+export type SoftwareDevelopmentCardQueryResult = Apollo.QueryResult<SoftwareDevelopmentCardQuery, SoftwareDevelopmentCardQueryVariables>;
 export const UpdateSoftwareDevelopmentDocument = gql`
     mutation UpdateSoftwareDevelopment($input: SoftwareDevelopmentInput!) {
   updateSoftwareDevelopment(input: $input) {
@@ -3379,28 +3483,28 @@ export type AddBlogPostMutationVariables = Exact<{
 }>;
 
 
-export type AddBlogPostMutation = { __typename?: 'Mutation', addBlogPost?: { __typename?: 'BlogPost', id: string, category?: CategoriesEnum | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null } | null };
+export type AddBlogPostMutation = { __typename?: 'Mutation', addBlogPost?: { __typename?: 'BlogPost', id: string, category?: string | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null } | null };
 
 export type BlogCardQueryVariables = Exact<{ [key: string]: never; }>;
 
 
-export type BlogCardQuery = { __typename?: 'Query', blogCard?: Array<{ __typename?: 'BlogPost', category?: CategoriesEnum | null, id: string, title?: string | null, subtitle1?: string | null } | null> | null };
+export type BlogCardQuery = { __typename?: 'Query', blogCard?: Array<{ __typename?: 'BlogPost', category?: string | null, id: string, title?: string | null, subtitle1?: string | null } | null> | null };
 
-export type BlogCardFragment = { __typename?: 'BlogPost', category?: CategoriesEnum | null, id: string, title?: string | null, subtitle1?: string | null };
+export type BlogCardFragment = { __typename?: 'BlogPost', category?: string | null, id: string, title?: string | null, subtitle1?: string | null };
 
 export type BlogPostQueryVariables = Exact<{
   id: Scalars['ID'];
 }>;
 
 
-export type BlogPostQuery = { __typename?: 'Query', blogPost?: { __typename?: 'BlogPost', id: string, category?: CategoriesEnum | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null } | null };
+export type BlogPostQuery = { __typename?: 'Query', blogPost?: { __typename?: 'BlogPost', id: string, category?: string | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null } | null };
 
-export type BlogPostFragment = { __typename?: 'BlogPost', id: string, category?: CategoriesEnum | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null };
+export type BlogPostFragment = { __typename?: 'BlogPost', id: string, category?: string | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null };
 
 export type BlogPostsQueryVariables = Exact<{ [key: string]: never; }>;
 
 
-export type BlogPostsQuery = { __typename?: 'Query', blogPosts?: Array<{ __typename?: 'BlogPost', id: string, category?: CategoriesEnum | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null } | null> | null };
+export type BlogPostsQuery = { __typename?: 'Query', blogPosts?: Array<{ __typename?: 'BlogPost', id: string, category?: string | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null } | null> | null };
 
 export type AddItMutationVariables = Exact<{
   input: ItInput;
@@ -3439,164 +3543,171 @@ export type AddBlockchainMutationVariables = Exact<{
 }>;
 
 
-export type AddBlockchainMutation = { __typename?: 'Mutation', addBlockchain?: { __typename?: 'Blockchain', id?: string | null, category?: CategoriesEnum | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null } | null };
+export type AddBlockchainMutation = { __typename?: 'Mutation', addBlockchain?: { __typename?: 'Blockchain', id?: string | null, category?: string | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null } | null };
 
 export type BlockchainQueryVariables = Exact<{
   id: Scalars['ID'];
 }>;
 
 
-export type BlockchainQuery = { __typename?: 'Query', blockchain?: { __typename?: 'Blockchain', id?: string | null, category?: CategoriesEnum | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null } | null };
+export type BlockchainQuery = { __typename?: 'Query', blockchain?: { __typename?: 'Blockchain', id?: string | null, category?: string | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null } | null };
 
-export type BlockchainFragment = { __typename?: 'Blockchain', id?: string | null, category?: CategoriesEnum | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null };
+export type BlockchainFragment = { __typename?: 'Blockchain', id?: string | null, category?: string | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null };
 
 export type AddBusinessAnalysisMutationVariables = Exact<{
   input: BusinessAnalysisInput;
 }>;
 
 
-export type AddBusinessAnalysisMutation = { __typename?: 'Mutation', addBusinessAnalysis?: { __typename?: 'BusinessAnalysis', id?: string | null, category?: CategoriesEnum | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null } | null };
+export type AddBusinessAnalysisMutation = { __typename?: 'Mutation', addBusinessAnalysis?: { __typename?: 'BusinessAnalysis', id?: string | null, category?: string | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null } | null };
 
 export type BusinessAnalysisQueryVariables = Exact<{
   id: Scalars['ID'];
 }>;
 
 
-export type BusinessAnalysisQuery = { __typename?: 'Query', businessAnalysis?: { __typename?: 'BusinessAnalysis', id?: string | null, category?: CategoriesEnum | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null } | null };
+export type BusinessAnalysisQuery = { __typename?: 'Query', businessAnalysis?: { __typename?: 'BusinessAnalysis', id?: string | null, category?: string | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null } | null };
 
-export type BusinessAnalysisFragment = { __typename?: 'BusinessAnalysis', id?: string | null, category?: CategoriesEnum | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null };
+export type BusinessAnalysisFragment = { __typename?: 'BusinessAnalysis', id?: string | null, category?: string | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null };
 
 export type AddCloudComputingMutationVariables = Exact<{
   input: CloudComputingInput;
 }>;
 
 
-export type AddCloudComputingMutation = { __typename?: 'Mutation', addCloudComputing?: { __typename?: 'CloudComputing', id?: string | null, category?: CategoriesEnum | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null } | null };
+export type AddCloudComputingMutation = { __typename?: 'Mutation', addCloudComputing?: { __typename?: 'CloudComputing', id?: string | null, category?: string | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null } | null };
 
 export type CloudComputingQueryVariables = Exact<{
   id: Scalars['ID'];
 }>;
 
 
-export type CloudComputingQuery = { __typename?: 'Query', cloudComputing?: { __typename?: 'CloudComputing', id?: string | null, category?: CategoriesEnum | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null } | null };
+export type CloudComputingQuery = { __typename?: 'Query', cloudComputing?: { __typename?: 'CloudComputing', id?: string | null, category?: string | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null } | null };
 
-export type CloudComputingFragment = { __typename?: 'CloudComputing', id?: string | null, category?: CategoriesEnum | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null };
+export type CloudComputingFragment = { __typename?: 'CloudComputing', id?: string | null, category?: string | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null };
 
 export type AddComputerNetworkingMutationVariables = Exact<{
   input: ComputerNetworkingInput;
 }>;
 
 
-export type AddComputerNetworkingMutation = { __typename?: 'Mutation', addComputerNetworking?: { __typename?: 'ComputerNetworking', id?: string | null, category?: CategoriesEnum | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null } | null };
+export type AddComputerNetworkingMutation = { __typename?: 'Mutation', addComputerNetworking?: { __typename?: 'ComputerNetworking', id?: string | null, category?: string | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null } | null };
 
 export type ComputerNetworkingQueryVariables = Exact<{
   id: Scalars['ID'];
 }>;
 
 
-export type ComputerNetworkingQuery = { __typename?: 'Query', computerNetworking?: { __typename?: 'ComputerNetworking', id?: string | null, category?: CategoriesEnum | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null } | null };
+export type ComputerNetworkingQuery = { __typename?: 'Query', computerNetworking?: { __typename?: 'ComputerNetworking', id?: string | null, category?: string | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null } | null };
 
-export type ComputerNetworkingFragment = { __typename?: 'ComputerNetworking', id?: string | null, category?: CategoriesEnum | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null };
+export type ComputerNetworkingFragment = { __typename?: 'ComputerNetworking', id?: string | null, category?: string | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null };
 
 export type AddDataManagementMutationVariables = Exact<{
   input: DataManagementInput;
 }>;
 
 
-export type AddDataManagementMutation = { __typename?: 'Mutation', addDataManagement?: { __typename?: 'DataManagement', id?: string | null, category?: CategoriesEnum | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null } | null };
+export type AddDataManagementMutation = { __typename?: 'Mutation', addDataManagement?: { __typename?: 'DataManagement', id?: string | null, category?: string | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null } | null };
 
 export type DataManagementQueryVariables = Exact<{
   id: Scalars['ID'];
 }>;
 
 
-export type DataManagementQuery = { __typename?: 'Query', dataManagement?: { __typename?: 'DataManagement', id?: string | null, category?: CategoriesEnum | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null } | null };
+export type DataManagementQuery = { __typename?: 'Query', dataManagement?: { __typename?: 'DataManagement', id?: string | null, category?: string | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null } | null };
 
-export type DataManagementFragment = { __typename?: 'DataManagement', id?: string | null, category?: CategoriesEnum | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null };
+export type DataManagementFragment = { __typename?: 'DataManagement', id?: string | null, category?: string | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null };
 
 export type AddGameProgrammingMutationVariables = Exact<{
   input: GameProgrammingInput;
 }>;
 
 
-export type AddGameProgrammingMutation = { __typename?: 'Mutation', addGameProgramming?: { __typename?: 'GameProgramming', id?: string | null, category?: CategoriesEnum | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null } | null };
+export type AddGameProgrammingMutation = { __typename?: 'Mutation', addGameProgramming?: { __typename?: 'GameProgramming', id?: string | null, category?: string | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null } | null };
 
 export type GameProgrammingQueryVariables = Exact<{
   id: Scalars['ID'];
 }>;
 
 
-export type GameProgrammingQuery = { __typename?: 'Query', gameProgramming?: { __typename?: 'GameProgramming', id?: string | null, category?: CategoriesEnum | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null } | null };
+export type GameProgrammingQuery = { __typename?: 'Query', gameProgramming?: { __typename?: 'GameProgramming', id?: string | null, category?: string | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null } | null };
 
-export type GameProgrammingFragment = { __typename?: 'GameProgramming', id?: string | null, category?: CategoriesEnum | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null };
+export type GameProgrammingFragment = { __typename?: 'GameProgramming', id?: string | null, category?: string | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null };
 
 export type AddMachineLearningMutationVariables = Exact<{
   input: MachineLearningInput;
 }>;
 
 
-export type AddMachineLearningMutation = { __typename?: 'Mutation', addMachineLearning?: { __typename?: 'MachineLearning', id?: string | null, category?: CategoriesEnum | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null } | null };
+export type AddMachineLearningMutation = { __typename?: 'Mutation', addMachineLearning?: { __typename?: 'MachineLearning', id?: string | null, category?: string | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null } | null };
 
 export type MachineLearningQueryVariables = Exact<{
   id: Scalars['ID'];
 }>;
 
 
-export type MachineLearningQuery = { __typename?: 'Query', machineLearning?: { __typename?: 'MachineLearning', id?: string | null, category?: CategoriesEnum | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null } | null };
+export type MachineLearningQuery = { __typename?: 'Query', machineLearning?: { __typename?: 'MachineLearning', id?: string | null, category?: string | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null } | null };
 
-export type MachineLearningFragment = { __typename?: 'MachineLearning', id?: string | null, category?: CategoriesEnum | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null };
+export type MachineLearningFragment = { __typename?: 'MachineLearning', id?: string | null, category?: string | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null };
 
 export type AddSoftwareDevelopmentMutationVariables = Exact<{
   input: SoftwareDevelopmentInput;
 }>;
 
 
-export type AddSoftwareDevelopmentMutation = { __typename?: 'Mutation', addSoftwareDevelopment?: { __typename?: 'SoftwareDevelopment', id: string, category?: CategoriesEnum | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null } | null };
+export type AddSoftwareDevelopmentMutation = { __typename?: 'Mutation', addSoftwareDevelopment?: { __typename?: 'SoftwareDevelopment', id: string, category?: string | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null } | null };
 
 export type SoftwareDevelopmentQueryVariables = Exact<{
   id: Scalars['ID'];
 }>;
 
 
-export type SoftwareDevelopmentQuery = { __typename?: 'Query', softwareDevelopment?: { __typename?: 'SoftwareDevelopment', id: string, category?: CategoriesEnum | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null } | null };
+export type SoftwareDevelopmentQuery = { __typename?: 'Query', softwareDevelopment?: { __typename?: 'SoftwareDevelopment', id: string, category?: string | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null } | null };
 
-export type SoftwareDevelopmentFragment = { __typename?: 'SoftwareDevelopment', id: string, category?: CategoriesEnum | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null };
+export type SoftwareDevelopmentCardQueryVariables = Exact<{ [key: string]: never; }>;
+
+
+export type SoftwareDevelopmentCardQuery = { __typename?: 'Query', softwareDevelopmentCard?: Array<{ __typename?: 'SoftwareDevelopment', category?: string | null, id: string, title?: string | null, subtitle1?: string | null } | null> | null };
+
+export type SoftwareDevelopmentCardFragment = { __typename?: 'SoftwareDevelopment', category?: string | null, id: string, title?: string | null, subtitle1?: string | null };
+
+export type SoftwareDevelopmentFragment = { __typename?: 'SoftwareDevelopment', id: string, category?: string | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null };
 
 export type UpdateSoftwareDevelopmentMutationVariables = Exact<{
   input: SoftwareDevelopmentInput;
 }>;
 
 
-export type UpdateSoftwareDevelopmentMutation = { __typename?: 'Mutation', updateSoftwareDevelopment?: { __typename?: 'SoftwareDevelopment', id: string, category?: CategoriesEnum | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null } | null };
+export type UpdateSoftwareDevelopmentMutation = { __typename?: 'Mutation', updateSoftwareDevelopment?: { __typename?: 'SoftwareDevelopment', id: string, category?: string | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null } | null };
 
 export type AddTelecommunicationMutationVariables = Exact<{
   input: TelecommunicationInput;
 }>;
 
 
-export type AddTelecommunicationMutation = { __typename?: 'Mutation', addTelecommunication?: { __typename?: 'Telecommunication', id?: string | null, category?: CategoriesEnum | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null } | null };
+export type AddTelecommunicationMutation = { __typename?: 'Mutation', addTelecommunication?: { __typename?: 'Telecommunication', id?: string | null, category?: string | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null } | null };
 
 export type TelecommunicationQueryVariables = Exact<{
   id: Scalars['ID'];
 }>;
 
 
-export type TelecommunicationQuery = { __typename?: 'Query', telecommunication?: { __typename?: 'Telecommunication', id?: string | null, category?: CategoriesEnum | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null } | null };
+export type TelecommunicationQuery = { __typename?: 'Query', telecommunication?: { __typename?: 'Telecommunication', id?: string | null, category?: string | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null } | null };
 
-export type TelecommunicationFragment = { __typename?: 'Telecommunication', id?: string | null, category?: CategoriesEnum | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null };
+export type TelecommunicationFragment = { __typename?: 'Telecommunication', id?: string | null, category?: string | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null };
 
 export type AddWebDevelopmentMutationVariables = Exact<{
   input: WebDevelopmentInput;
 }>;
 
 
-export type AddWebDevelopmentMutation = { __typename?: 'Mutation', addWebDevelopment?: { __typename?: 'WebDevelopment', id?: string | null, category?: CategoriesEnum | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null } | null };
+export type AddWebDevelopmentMutation = { __typename?: 'Mutation', addWebDevelopment?: { __typename?: 'WebDevelopment', id?: string | null, category?: string | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null } | null };
 
 export type WebDevelopmentQueryVariables = Exact<{
   id: Scalars['ID'];
 }>;
 
 
-export type WebDevelopmentQuery = { __typename?: 'Query', webDevelopment?: { __typename?: 'WebDevelopment', id?: string | null, category?: CategoriesEnum | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null } | null };
+export type WebDevelopmentQuery = { __typename?: 'Query', webDevelopment?: { __typename?: 'WebDevelopment', id?: string | null, category?: string | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null } | null };
 
-export type WebDevelopmentFragment = { __typename?: 'WebDevelopment', id?: string | null, category?: CategoriesEnum | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null };
+export type WebDevelopmentFragment = { __typename?: 'WebDevelopment', id?: string | null, category?: string | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null };

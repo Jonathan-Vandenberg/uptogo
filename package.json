@@ -26,6 +26,7 @@
     "@splinetool/r3f-spline": "^1.0.1",
     "@splinetool/react-spline": "^2.2.1",
     "@splinetool/runtime": "^0.9.103",
+    "@types/react-select": "^5.0.1",
     "antd": "^4.22.8",
     "axios": "^0.27.2",
     "dotenv": "^16.0.1",

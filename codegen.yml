@@ -7,7 +7,7 @@ generates:
       enumValues: true
       mapperTypeSuffix: Model
       mappers:
-        CategoriesEnum: "@prisma/client#CategoriesEnum"
+        Categories: "@prisma/client#Categories"
         SoftwareDevelopment: "@prisma/client#SoftwareDevelopment"
         ComputerNetworking: "@prisma/client#ComputerNetworking"
         CloudComputing: "@prisma/client#CloudComputing"

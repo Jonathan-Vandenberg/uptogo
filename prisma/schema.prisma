@@ -53,68 +53,64 @@ model VerificationToken {
   @@unique([identifier, token])
 }
 
-enum CategoriesEnum {
-  BLOG
+model Categories {
+  id String @id @default(auto()) @map("_id") @db.ObjectId
 
-  PROJECT_MANAGEMENT
-  BUSINESS_MANAGEMENT
-  HUMAN_RESOURCES
-  BANKING_MANAGEMENT
-  INTERNATIONAL_BUSINESS
-  SOCIALMEDIA_MARKETING
-  AGRIBUSINESS_MANAGEMENT
-  SUPPLYCHAIN_MANAGEMENT
-  LEADERSHIP_MANAGEMENT
-
-  FASHION_DESIGN
-  LANDSCAPE
-  MUSIC_AUDIO
-  FILM_MEDIA
-  GRAPHIC_DESIGN
-  INTERIOR_DESIGN
-  DIGITAL_MEDIA
-  ACTING
-  ANIMATION_3D
-
-  AGED_CARE
-  NUTRITION
-  NURSING
-  VETENARY
-  MEDICINE
-  PUBLIC_HEALTH
-  DENTAL
-  MASSAGE
-  MENTAL_HEALTH
-
-  BAKING
-  COMMERCIAL_COOKING
-  HOPITALITY_MANAGEMENT
-  INTL_HOTEL_MANAGEMENT
-  TRAVEL_TOURISM
-  EVENTS
-
-  AUTOMOTIVE
-  BEAUTY
-  CONSTRUCTION
-  CARPENTRY
-  EDUCATION
-  FITNESS
-  HARIDRESSING
-  HORTICULTURE
-  SPORT
-  YOGA
-
-  SOFTWARE_DEVELOPMENT
-  COMPUTER_NETWORKING
-  CLOUD_COMPUTING
-  BUSINESS_ANALYSIS
-  TELECOMMUNICATION
-  GAME_PROGRAMMING
-  WEB_DEVELOPMENT
-  MACHINE_LEARNING
-  DATA_MANAGEMENT
-  BLOCKCHAIN_TECH
-  AI
+  Acting                  String?
+  AgedCare                String?
+  Agribusiness_Management String?
+  Ai                      String?
+  Animation_3D            String?
+  Automotive              String?
+  Baking                  String?
+  Banking_Management      String?
+  Beauty                  String?
+  Blockchain_Tech         String?
+  Blog                    String?
+  Business_Analysis       String?
+  Business_Management     String?
+  Carpentry               String?
+  Cloud_Computing         String?
+  Commercial_Cooking      String?
+  Computer_Networking     String?
+  Construction            String?
+  Data_Management         String?
+  Dental                  String?
+  Digital_Media           String?
+  Education               String?
+  Events                  String?
+  Fashion_Design          String?
+  Film_Media              String?
+  Fitness                 String?
+  Game_Programming        String?
+  Graphic_Design          String?
+  Haridressing            String?
+  Hopitality_Management   String?
+  Horticulture            String?
+  Human_Resources         String?
+  Interior_Design         String?
+  International_Business  String?
+  Intl_Hotel_Management   String?
+  Landscape               String?
+  Leadership_Management   String?
+  Machine_Learning        String?
+  Massage                 String?
+  Medicine                String?
+  Mental_Health           String?
+  Music_Audio             String?
+  Nursing                 String?
+  Nutrition               String?
+  Project_Management      String?
+  Public_Health           String?
+  Socialmedia_Marketing   String?
+  Software_Development    String?
+  Sport                   String?
+  Supplychain_Management  String?
+  Telecommunication       String?
+  TravelTourism           String?
+  Vetenary                String?
+  Web_Development         String?
+  Yoga                    String?
 }
 
 model It {
@@ -145,8 +141,8 @@ model It {
 }
 
 model SoftwareDevelopment {
-  id             String          @id @default(auto()) @map("_id") @db.ObjectId
-  category       CategoriesEnum?
+  id             String  @id @default(auto()) @map("_id") @db.ObjectId
+  category       String?
   title          String?
   subtitle1      String?
   tableContents1 String?
@@ -181,11 +177,12 @@ model SoftwareDevelopment {
   mainImage      String?
   publishedDate  String?
   It             It[]
+  categoriesId   String? @db.ObjectId
 }
 
 model ComputerNetworking {
-  id             String          @id @default(auto()) @map("_id") @db.ObjectId
-  category       CategoriesEnum?
+  id             String  @id @default(auto()) @map("_id") @db.ObjectId
+  category       String?
   title          String?
   subtitle1      String?
   tableContents1 String?
@@ -220,11 +217,12 @@ model ComputerNetworking {
   mainImage      String?
   publishedDate  String?
   It             It[]
+  categoriesId   String? @db.ObjectId
 }
 
 model CloudComputing {
-  id             String          @id @default(auto()) @map("_id") @db.ObjectId
-  category       CategoriesEnum?
+  id             String  @id @default(auto()) @map("_id") @db.ObjectId
+  category       String?
   title          String?
   subtitle1      String?
   tableContents1 String?
@@ -259,11 +257,12 @@ model CloudComputing {
   mainImage      String?
   publishedDate  String?
   It             It[]
+  categoriesId   String? @db.ObjectId
 }
 
 model BusinessAnalysis {
-  id             String          @id @default(auto()) @map("_id") @db.ObjectId
-  category       CategoriesEnum?
+  id             String  @id @default(auto()) @map("_id") @db.ObjectId
+  category       String?
   title          String?
   subtitle1      String?
   tableContents1 String?
@@ -298,11 +297,12 @@ model BusinessAnalysis {
   mainImage      String?
   publishedDate  String?
   It             It[]
+  categoriesId   String? @db.ObjectId
 }
 
 model Telecommunication {
-  id             String          @id @default(auto()) @map("_id") @db.ObjectId
-  category       CategoriesEnum?
+  id             String  @id @default(auto()) @map("_id") @db.ObjectId
+  category       String?
   title          String?
   subtitle1      String?
   tableContents1 String?
@@ -337,11 +337,12 @@ model Telecommunication {
   mainImage      String?
   publishedDate  String?
   It             It[]
+  categoriesId   String? @db.ObjectId
 }
 
 model GameProgramming {
-  id             String          @id @default(auto()) @map("_id") @db.ObjectId
-  category       CategoriesEnum?
+  id             String  @id @default(auto()) @map("_id") @db.ObjectId
+  category       String?
   title          String?
   subtitle1      String?
   tableContents1 String?
@@ -376,11 +377,12 @@ model GameProgramming {
   mainImage      String?
   publishedDate  String?
   It             It[]
+  categoriesId   String? @db.ObjectId
 }
 
 model WebDevelopment {
-  id             String          @id @default(auto()) @map("_id") @db.ObjectId
-  category       CategoriesEnum?
+  id             String  @id @default(auto()) @map("_id") @db.ObjectId
+  category       String?
   title          String?
   subtitle1      String?
   tableContents1 String?
@@ -415,11 +417,12 @@ model WebDevelopment {
   mainImage      String?
   publishedDate  String?
   It             It[]
+  categoriesId   String? @db.ObjectId
 }
 
 model MachineLearning {
-  id             String          @id @default(auto()) @map("_id") @db.ObjectId
-  category       CategoriesEnum?
+  id             String  @id @default(auto()) @map("_id") @db.ObjectId
+  category       String?
   title          String?
   subtitle1      String?
   tableContents1 String?
@@ -454,11 +457,12 @@ model MachineLearning {
   mainImage      String?
   publishedDate  String?
   It             It[]
+  categoriesId   String? @db.ObjectId
 }
 
 model DataManagement {
-  id             String          @id @default(auto()) @map("_id") @db.ObjectId
-  category       CategoriesEnum?
+  id             String  @id @default(auto()) @map("_id") @db.ObjectId
+  category       String?
   title          String?
   subtitle1      String?
   tableContents1 String?
@@ -493,11 +497,12 @@ model DataManagement {
   mainImage      String?
   publishedDate  String?
   It             It[]
+  categoriesId   String? @db.ObjectId
 }
 
 model Blockchain {
-  id             String          @id @default(auto()) @map("_id") @db.ObjectId
-  category       CategoriesEnum?
+  id             String  @id @default(auto()) @map("_id") @db.ObjectId
+  category       String?
   title          String?
   subtitle1      String?
   tableContents1 String?
@@ -532,11 +537,12 @@ model Blockchain {
   mainImage      String?
   publishedDate  String?
   It             It[]
+  categoriesId   String? @db.ObjectId
 }
 
 model Ai {
-  id             String          @id @default(auto()) @map("_id") @db.ObjectId
-  category       CategoriesEnum?
+  id             String  @id @default(auto()) @map("_id") @db.ObjectId
+  category       String?
   title          String?
   subtitle1      String?
   tableContents1 String?
@@ -571,11 +577,12 @@ model Ai {
   mainImage      String?
   publishedDate  String?
   It             It[]
+  categoriesId   String? @db.ObjectId
 }
 
 model BlogPost {
-  id             String          @id @default(auto()) @map("_id") @db.ObjectId
-  category       CategoriesEnum?
+  id             String  @id @default(auto()) @map("_id") @db.ObjectId
+  category       String?
   title          String?
   subtitle1      String?
   tableContents1 String?
@@ -609,4 +616,5 @@ model BlogPost {
   photoCredit    String?
   mainImage      String?
   publishedDate  String?
+  categoriesId   String? @db.ObjectId
 }

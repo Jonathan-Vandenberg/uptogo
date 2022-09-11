@@ -32,6 +32,9 @@ const resolvers: Resolvers = {
     blogCard: (_, __, {prisma}) => {
       return prisma.blogPost.findMany()
     },
+    softwareDevelopmentCard: (_, __,{prisma}) => {
+      return prisma.softwareDevelopment.findMany()
+    },
     softwareDevelopment: (_, {id},{prisma}) => {
       return prisma.softwareDevelopment.findUnique({
         where: {
@@ -114,7 +117,7 @@ const resolvers: Resolvers = {
     updateSoftwareDevelopment: async (_, {input}, {prisma}) => {
       const softwareDevelopment = await prisma.softwareDevelopment.update({
         where:{
-          id: "631ac80b8172747ab931f279"
+          id: input.id
         },
         data: {
         title: input?.title,

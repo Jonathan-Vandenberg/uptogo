@@ -1,0 +1,7 @@
+# import SoftwareDevelopmentCard from "./SoftwareDevelopmentCardFragment.graphql"
+
+query SoftwareDevelopmentCard {
+  softwareDevelopmentCard {
+    ...SoftwareDevelopmentCard
+  }
+}

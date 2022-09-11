@@ -10,6 +10,15 @@ export default function Blog() {
       id: id,
     },
   });
-  console.log(id);
-  return <BlogMain data={data?.blogPost} handleUpdate={() => {}} />;
+
+  const handleEdit = () => {};
+  const handleAdd = () => {};
+
+  return (
+    <BlogMain
+      data={data?.blogPost}
+      handleEdit={handleEdit}
+      handleAdd={handleAdd}
+    />
+  );
 }
