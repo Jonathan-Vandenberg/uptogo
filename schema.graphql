@@ -45,6 +45,8 @@ type Mutation {
   addBlockchain(input: BlockchainInput): Blockchain
   addAi(input: AiInput): Ai
 
+  updateBlogPost(input: BlogPostInput!): BlogPost
+
   updateSoftwareDevelopment(
     input: SoftwareDevelopmentInput!
   ): SoftwareDevelopment
@@ -1010,7 +1012,7 @@ type BlogPost {
 }
 
 input BlogPostInput {
-  id: ID
+  id: ID!
   category: String
   title: String
   subtitle1: String

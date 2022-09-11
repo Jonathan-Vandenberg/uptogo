@@ -7,7 +7,6 @@ import {
   ComputerNetworking,
   DataManagement,
   GameProgramming,
-  ItQuery,
   MachineLearning,
   SoftwareDevelopment,
   Telecommunication,

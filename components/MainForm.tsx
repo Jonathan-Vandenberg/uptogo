@@ -33,11 +33,14 @@ import {
   useUpdateMachineLearningMutation,
   useUpdateTelecommunicationMutation,
   useUpdateWebDevelopmentMutation,
+  BlogPost,
+  useUpdateBlogPostMutation,
 } from "../types";
 import { options } from "../lib/categories";
 
 interface IProps {
   details:
+    | BlogPost
     | Telecommunication
     | BusinessAnalysis
     | CloudComputing
@@ -150,6 +153,7 @@ const AddClientForm = ({ details, add, edit, handleClose }: IProps) => {
   const [updateDataManagement] = useUpdateDataManagementMutation();
   const [updateBlockchain] = useUpdateBlockchainMutation();
   const [updateAi] = useUpdateAiMutation();
+  const [updateBlogPost] = useUpdateBlogPostMutation();
 
   let form = {
     variables: {
@@ -214,6 +218,7 @@ const AddClientForm = ({ details, add, edit, handleClose }: IProps) => {
         if (category === "DATA_MANAGEMENT") updateDataManagement(form);
         if (category === "BLOCKCHAIN_TECH") updateBlockchain(form);
         if (category === "AI") updateAi(form);
+        if (category === "BLOG") updateBlogPost(form);
       }
 
       if (add) {

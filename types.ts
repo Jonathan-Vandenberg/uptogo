@@ -234,7 +234,7 @@ export type BlogPostInput = {
   conclusion2?: InputMaybe<Scalars['String']>;
   conclusion3?: InputMaybe<Scalars['String']>;
   editedBy?: InputMaybe<Scalars['String']>;
-  id?: InputMaybe<Scalars['ID']>;
+  id: Scalars['ID'];
   l1?: InputMaybe<Scalars['String']>;
   l2?: InputMaybe<Scalars['String']>;
   l3?: InputMaybe<Scalars['String']>;
@@ -800,6 +800,7 @@ export type Mutation = {
   addWebDevelopment?: Maybe<WebDevelopment>;
   updateAi?: Maybe<Ai>;
   updateBlockchain?: Maybe<Blockchain>;
+  updateBlogPost?: Maybe<BlogPost>;
   updateBusinessAnalysis?: Maybe<BusinessAnalysis>;
   updateCloudComputing?: Maybe<CloudComputing>;
   updateComputerNetworking?: Maybe<ComputerNetworking>;
@@ -884,6 +885,11 @@ export type MutationUpdateAiArgs = {
 
 export type MutationUpdateBlockchainArgs = {
   input: BlockchainInput;
+};
+
+
+export type MutationUpdateBlogPostArgs = {
+  input: BlogPostInput;
 };
 
 
@@ -1867,6 +1873,7 @@ export type MutationResolvers<ContextType = GraphQLContext, ParentType extends R
   addWebDevelopment?: Resolver<Maybe<ResolversTypes['WebDevelopment']>, ParentType, ContextType, Partial<MutationAddWebDevelopmentArgs>>;
   updateAi?: Resolver<Maybe<ResolversTypes['Ai']>, ParentType, ContextType, RequireFields<MutationUpdateAiArgs, 'input'>>;
   updateBlockchain?: Resolver<Maybe<ResolversTypes['Blockchain']>, ParentType, ContextType, RequireFields<MutationUpdateBlockchainArgs, 'input'>>;
+  updateBlogPost?: Resolver<Maybe<ResolversTypes['BlogPost']>, ParentType, ContextType, RequireFields<MutationUpdateBlogPostArgs, 'input'>>;
   updateBusinessAnalysis?: Resolver<Maybe<ResolversTypes['BusinessAnalysis']>, ParentType, ContextType, RequireFields<MutationUpdateBusinessAnalysisArgs, 'input'>>;
   updateCloudComputing?: Resolver<Maybe<ResolversTypes['CloudComputing']>, ParentType, ContextType, RequireFields<MutationUpdateCloudComputingArgs, 'input'>>;
   updateComputerNetworking?: Resolver<Maybe<ResolversTypes['ComputerNetworking']>, ParentType, ContextType, RequireFields<MutationUpdateComputerNetworkingArgs, 'input'>>;
@@ -4318,6 +4325,39 @@ export function useWebDevelopmentCardLazyQuery(baseOptions?: Apollo.LazyQueryHoo
 export type WebDevelopmentCardQueryHookResult = ReturnType<typeof useWebDevelopmentCardQuery>;
 export type WebDevelopmentCardLazyQueryHookResult = ReturnType<typeof useWebDevelopmentCardLazyQuery>;
 export type WebDevelopmentCardQueryResult = Apollo.QueryResult<WebDevelopmentCardQuery, WebDevelopmentCardQueryVariables>;
+export const UpdateBlogPostDocument = gql`
+    mutation UpdateBlogPost($input: BlogPostInput!) {
+  updateBlogPost(input: $input) {
+    ...BlogPost
+  }
+}
+    ${BlogPostFragmentDoc}`;
+export type UpdateBlogPostMutationFn = Apollo.MutationFunction<UpdateBlogPostMutation, UpdateBlogPostMutationVariables>;
+
+/**
+ * __useUpdateBlogPostMutation__
+ *
+ * To run a mutation, you first call `useUpdateBlogPostMutation` within a React component and pass it any options that fit your needs.
+ * When your component renders, `useUpdateBlogPostMutation` returns a tuple that includes:
+ * - A mutate function that you can call at any time to execute the mutation
+ * - An object with fields that represent the current status of the mutation's execution
+ *
+ * @param baseOptions options that will be passed into the mutation, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options-2;
+ *
+ * @example
+ * const [updateBlogPostMutation, { data, loading, error }] = useUpdateBlogPostMutation({
+ *   variables: {
+ *      input: // value for 'input'
+ *   },
+ * });
+ */
+export function useUpdateBlogPostMutation(baseOptions?: Apollo.MutationHookOptions<UpdateBlogPostMutation, UpdateBlogPostMutationVariables>) {
+        const options = {...defaultOptions, ...baseOptions}
+        return Apollo.useMutation<UpdateBlogPostMutation, UpdateBlogPostMutationVariables>(UpdateBlogPostDocument, options);
+      }
+export type UpdateBlogPostMutationHookResult = ReturnType<typeof useUpdateBlogPostMutation>;
+export type UpdateBlogPostMutationResult = Apollo.MutationResult<UpdateBlogPostMutation>;
+export type UpdateBlogPostMutationOptions = Apollo.BaseMutationOptions<UpdateBlogPostMutation, UpdateBlogPostMutationVariables>;
 export type AddBlogPostMutationVariables = Exact<{
   input: BlogPostInput;
 }>;
@@ -4691,3 +4731,10 @@ export type WebDevelopmentCardQuery = { __typename?: 'Query', webDevelopmentCard
 export type WebDevelopmentCardFragment = { __typename?: 'WebDevelopment', category?: string | null, id: string, title?: string | null, subtitle1?: string | null };
 
 export type WebDevelopmentFragment = { __typename?: 'WebDevelopment', id: string, category?: string | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null };
+
+export type UpdateBlogPostMutationVariables = Exact<{
+  input: BlogPostInput;
+}>;
+
+
+export type UpdateBlogPostMutation = { __typename?: 'Mutation', updateBlogPost?: { __typename?: 'BlogPost', id: string, category?: string | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null } | null };
