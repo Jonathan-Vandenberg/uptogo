@@ -13,13 +13,13 @@ export default function App() {
         <p className="text-2xl text-gray-600">
           <i>easily.</i>
         </p>
-        <Link href={"/"}>
+        <Link href={"/courses"}>
           <p className="text-xl text-gray-700 text-thin  pt-10 md:pt-12 border-b-8 border-orange">
             Find Courses
           </p>
         </Link>
       </div>
-      <div className="h-full w-full col-span-2">
+      <div className="h-full w-full col-span-2 p-20">
         <Image
           src={logo}
           alt="blog Image"
