@@ -108,17 +108,17 @@ const Majors: NextPage<Props> = ({ leave }) => {
         ))}
       </div>
       <div className="col-span-1 flex flex-col">
-        {iTImage && (
-          <div>
-            <Image
-              src={iT}
-              width="600"
-              height="410"
-              layout="responsive"
-              alt="dropdown-item"
-            />
-          </div>
-        )}
+        {/* {iTImage && ( */}
+        <div>
+          <Image
+            src={iT}
+            width="600"
+            height="410"
+            layout="responsive"
+            alt="dropdown-item"
+          />
+        </div>
+        {/* )} */}
         {/* {iTImage && (
           <div>
             <Image
