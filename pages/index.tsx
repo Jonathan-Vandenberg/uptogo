@@ -42,6 +42,9 @@ export default function App() {
       <div className="md:px-10 p-4 md:py-10 md:p-0 md:mb-6 bg-body">
         <Hero />
       </div>
+      <h2 className="text-red-600 text-3xl text-center bg-red-100 py-5 logoFont">
+        web đang xây dựng
+      </h2>
       <div className="container mx-auto">
         <HomeMain />
         <BlogHeader data={TypedBlogData} />

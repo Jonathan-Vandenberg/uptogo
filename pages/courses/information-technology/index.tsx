@@ -2,9 +2,13 @@ import Link from "next/link";
 import { BsChevronBarRight } from "react-icons/bs";
 import CoursesNarrowCards from "../../../components/Courses/CoursesNarrowCards";
 import ItMain from "../../../components/It/ItMain";
-import { useItQuery } from "../../../types";
 import Image from "next/image";
 import image from "../../../public/courseMain/Data_Management.jpeg";
+import BlogPostMarkup from "../../../components/Blog/BlogPostMarkup";
+import { useRouter } from "next/router";
+import { useState } from "react";
+import MainForm from "../../../components/MainForm";
+import { It, useItQuery } from "../../../types";
 
 const cardData = [
   {
@@ -56,9 +60,32 @@ const cardData = [
 export default function App() {
   const { data } = useItQuery({
     variables: {
-      id: "631acd8b8172747ab931f29e",
+      id: "631f0640cb1d9c50bf6dd5a7",
     },
   });
+
+  const [showForm, setShowForm] = useState(false);
+  const [edit, setEdit] = useState(false);
+  const [add, setAdd] = useState(false);
+
+  const { asPath } = useRouter();
+
+  function Crubs() {
+    return <p>home{asPath}</p>;
+  }
+
+  const handleAdd = () => {
+    setShowForm(!showForm);
+    setAdd(true);
+    setEdit(false);
+  };
+
+  const handleEdit = () => {
+    setShowForm(!showForm);
+    setAdd(false);
+    setEdit(true);
+  };
+
   return (
     <div className="max-w-[678px] md:max-w-[900px] mx-auto">
       <div className="">
@@ -70,9 +97,30 @@ export default function App() {
           layout="responsive"
         />
       </div>
+      <div>
+        <h1 className="text-3xl logoFont text-gray-700 py-6 px-4 md:px-0">
+          {data?.it?.title}
+        </h1>
+        <h2 className="text-2xl text-gray-700 pb-6 px-4 md:px-0">
+          {data?.it?.subtitle1}
+        </h2>
+      </div>
+      <BlogPostMarkup
+        handleAdd={handleAdd}
+        handleEdit={handleEdit}
+        data={data?.it}
+      />
       <h1 className="bg-body p-6 text-2xl logoFont text-darkBlue pb-8">
         Information-Technology.
       </h1>
+      {showForm && (
+        <MainForm
+          details={data?.it}
+          add={add}
+          edit={edit}
+          handleClose={() => setShowForm(false)}
+        />
+      )}
       <CoursesNarrowCards cardData={cardData} />
     </div>
   );

@@ -10,14 +10,18 @@ import type {
   ComputerNetworking,
   DataManagement,
   GameProgramming,
+  It,
   MachineLearning,
   SoftwareDevelopment,
   Telecommunication,
   WebDevelopment,
 } from "../../types";
+import { useSession } from "next-auth/react";
+import { useState } from "react";
 
 interface IProps {
   data:
+    | It
     | BlogPost
     | Telecommunication
     | BusinessAnalysis
@@ -41,6 +45,10 @@ export default function BlogPostMarkup({
   handleAdd,
   handleEdit,
 }: IProps) {
+  const [showAdmin, setShowAdmin] = useState(true);
+  const { data: session, status } = useSession();
+
+  session?.user?.email === "jonvdberg8@gmail.com" ? setShowAdmin(true) : null;
   return (
     <div>
       <ul className="border-b-2 border-gray-200 py-6 flex flex-col items-start justify-start space-y-2">
@@ -100,26 +108,28 @@ export default function BlogPostMarkup({
       <p className="text-gray-600 py-4 text-xl">{data?.conclusion1}</p>
       <p className="text-gray-600 py-4 text-xl">{data?.conclusion2}</p>
       <p className="text-gray-600 py-4 text-xl">{data?.conclusion3}</p>
-      <div className="flex space-x-5 justify-center items-center">
-        <div className="flex items-center space-x-1" onClick={handleEdit}>
-          <div className="text-xl">
-            <FaEdit size={25} className="text-orange" />
+      {showAdmin && (
+        <div className="flex space-x-5 justify-center items-center">
+          <div className="flex items-center space-x-1" onClick={handleEdit}>
+            <div className="text-xl">
+              <FaEdit size={25} className="text-orange" />
+            </div>
+            <p className="text-lg text-orange">Edit</p>
           </div>
-          <p className="text-lg text-orange">Edit</p>
-        </div>
-        <div className="flex items-center space-x-1" onClick={handleAdd}>
-          <div className="text-xl text-green-600">
-            <MdAddCircleOutline size={25} />
+          <div className="flex items-center space-x-1" onClick={handleAdd}>
+            <div className="text-xl text-green-600">
+              <MdAddCircleOutline size={25} />
+            </div>
+            <p className="text-lg text-green-600">Add</p>
           </div>
-          <p className="text-lg text-green-600">Add</p>
-        </div>
-        <div className="flex items-center space-x-1">
-          <div className="text-xl">
-            <MdDeleteForever size={25} className="text-red-500" />
+          <div className="flex items-center space-x-1">
+            <div className="text-xl">
+              <MdDeleteForever size={25} className="text-red-500" />
+            </div>
+            <p className="text-lg text-red-500">Delete</p>
           </div>
-          <p className="text-lg text-red-500">Delete</p>
         </div>
-      </div>
+      )}
     </div>
   );
 }

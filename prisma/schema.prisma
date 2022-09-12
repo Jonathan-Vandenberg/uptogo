@@ -114,30 +114,42 @@ model Categories {
 }
 
 model It {
-  id String @id @default(auto()) @map("_id") @db.ObjectId
-
-  softwareDevelopment   SoftwareDevelopment @relation(fields: [softwareDevelopmentId], references: [id])
-  softwareDevelopmentId String              @db.ObjectId
-  ComputerNetworking    ComputerNetworking? @relation(fields: [computerNetworkingId], references: [id])
-  computerNetworkingId  String?             @db.ObjectId
-  CloudComputing        CloudComputing?     @relation(fields: [cloudComputingId], references: [id])
-  cloudComputingId      String?             @db.ObjectId
-  BusinessAnalysis      BusinessAnalysis?   @relation(fields: [businessAnalysisId], references: [id])
-  businessAnalysisId    String?             @db.ObjectId
-  Telecommunication     Telecommunication?  @relation(fields: [telecommunicationId], references: [id])
-  telecommunicationId   String?             @db.ObjectId
-  GameProgramming       GameProgramming?    @relation(fields: [gameProgrammingId], references: [id])
-  gameProgrammingId     String?             @db.ObjectId
-  WebDevelopment        WebDevelopment?     @relation(fields: [webDevelopmentId], references: [id])
-  webDevelopmentId      String?             @db.ObjectId
-  MachineLearning       MachineLearning?    @relation(fields: [machineLearningId], references: [id])
-  machineLearningId     String?             @db.ObjectId
-  DataManagement        DataManagement?     @relation(fields: [dataManagementId], references: [id])
-  dataManagementId      String?             @db.ObjectId
-  Blockchain            Blockchain?         @relation(fields: [blockchainId], references: [id])
-  blockchainId          String?             @db.ObjectId
-  Ai                    Ai?                 @relation(fields: [aiId], references: [id])
-  aiId                  String?             @db.ObjectId
+  id             String  @id @default(auto()) @map("_id") @db.ObjectId
+  category       String?
+  title          String?
+  subtitle1      String?
+  tableContents1 String?
+  tableContents2 String?
+  tableContents3 String?
+  tableContents4 String?
+  p1             String?
+  p2             String?
+  p3             String?
+  subtitle2      String?
+  p4             String?
+  p5             String?
+  l1             String?
+  l2             String?
+  l3             String?
+  l4             String?
+  l5             String?
+  subtitle3      String?
+  p6             String?
+  p7             String?
+  conclusion1    String?
+  conclusion2    String?
+  conclusion3    String?
+  reference1     String?
+  reference2     String?
+  authorName     String?
+  authorImage    String?
+  authorAbout    String?
+  authorLink     String?
+  editedBy       String?
+  photoCredit    String?
+  mainImage      String?
+  publishedDate  String?
+  categoriesId   String? @db.ObjectId
 }
 
 model SoftwareDevelopment {
@@ -176,7 +188,6 @@ model SoftwareDevelopment {
   photoCredit    String?
   mainImage      String?
   publishedDate  String?
-  It             It[]
   categoriesId   String? @db.ObjectId
 }
 
@@ -216,7 +227,6 @@ model ComputerNetworking {
   photoCredit    String?
   mainImage      String?
   publishedDate  String?
-  It             It[]
   categoriesId   String? @db.ObjectId
 }
 
@@ -256,7 +266,6 @@ model CloudComputing {
   photoCredit    String?
   mainImage      String?
   publishedDate  String?
-  It             It[]
   categoriesId   String? @db.ObjectId
 }
 
@@ -296,7 +305,6 @@ model BusinessAnalysis {
   photoCredit    String?
   mainImage      String?
   publishedDate  String?
-  It             It[]
   categoriesId   String? @db.ObjectId
 }
 
@@ -336,7 +344,6 @@ model Telecommunication {
   photoCredit    String?
   mainImage      String?
   publishedDate  String?
-  It             It[]
   categoriesId   String? @db.ObjectId
 }
 
@@ -376,7 +383,6 @@ model GameProgramming {
   photoCredit    String?
   mainImage      String?
   publishedDate  String?
-  It             It[]
   categoriesId   String? @db.ObjectId
 }
 
@@ -416,7 +422,6 @@ model WebDevelopment {
   photoCredit    String?
   mainImage      String?
   publishedDate  String?
-  It             It[]
   categoriesId   String? @db.ObjectId
 }
 
@@ -456,7 +461,6 @@ model MachineLearning {
   photoCredit    String?
   mainImage      String?
   publishedDate  String?
-  It             It[]
   categoriesId   String? @db.ObjectId
 }
 
@@ -496,7 +500,6 @@ model DataManagement {
   photoCredit    String?
   mainImage      String?
   publishedDate  String?
-  It             It[]
   categoriesId   String? @db.ObjectId
 }
 
@@ -536,7 +539,6 @@ model Blockchain {
   photoCredit    String?
   mainImage      String?
   publishedDate  String?
-  It             It[]
   categoriesId   String? @db.ObjectId
 }
 
@@ -576,7 +578,6 @@ model Ai {
   photoCredit    String?
   mainImage      String?
   publishedDate  String?
-  It             It[]
   categoriesId   String? @db.ObjectId
 }
 

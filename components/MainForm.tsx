@@ -35,11 +35,14 @@ import {
   useUpdateWebDevelopmentMutation,
   BlogPost,
   useUpdateBlogPostMutation,
+  useUpdateItMutation,
+  It,
 } from "../types";
 import { options } from "../lib/categories";
 
 interface IProps {
   details:
+    | It
     | BlogPost
     | Telecommunication
     | BusinessAnalysis
@@ -154,6 +157,7 @@ const AddClientForm = ({ details, add, edit, handleClose }: IProps) => {
   const [updateBlockchain] = useUpdateBlockchainMutation();
   const [updateAi] = useUpdateAiMutation();
   const [updateBlogPost] = useUpdateBlogPostMutation();
+  const [updateIt] = useUpdateItMutation();
 
   let form = {
     variables: {
@@ -198,6 +202,7 @@ const AddClientForm = ({ details, add, edit, handleClose }: IProps) => {
 
   useEffect(() => {
     if (edit) setCategory(details?.category);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const onFinish = (e: { preventDefault: () => void }) => {
@@ -219,6 +224,7 @@ const AddClientForm = ({ details, add, edit, handleClose }: IProps) => {
         if (category === "BLOCKCHAIN_TECH") updateBlockchain(form);
         if (category === "AI") updateAi(form);
         if (category === "BLOG") updateBlogPost(form);
+        if (category === "IT") updateIt(form);
       }
 
       if (add) {

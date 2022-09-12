@@ -699,13 +699,77 @@ export type GameProgrammingInput = {
 
 export type It = {
   __typename?: 'It';
-  id: Scalars['String'];
-  softwareDevelopment?: Maybe<SoftwareDevelopment>;
-  softwareDevelopmentId?: Maybe<Scalars['String']>;
+  authorAbout?: Maybe<Scalars['String']>;
+  authorLink?: Maybe<Scalars['String']>;
+  authorName?: Maybe<Scalars['String']>;
+  category?: Maybe<Scalars['String']>;
+  conclusion1?: Maybe<Scalars['String']>;
+  conclusion2?: Maybe<Scalars['String']>;
+  conclusion3?: Maybe<Scalars['String']>;
+  editedBy?: Maybe<Scalars['String']>;
+  id: Scalars['ID'];
+  l1?: Maybe<Scalars['String']>;
+  l2?: Maybe<Scalars['String']>;
+  l3?: Maybe<Scalars['String']>;
+  l4?: Maybe<Scalars['String']>;
+  l5?: Maybe<Scalars['String']>;
+  mainImage?: Maybe<Scalars['String']>;
+  p1?: Maybe<Scalars['String']>;
+  p2?: Maybe<Scalars['String']>;
+  p3?: Maybe<Scalars['String']>;
+  p4?: Maybe<Scalars['String']>;
+  p5?: Maybe<Scalars['String']>;
+  p6?: Maybe<Scalars['String']>;
+  p7?: Maybe<Scalars['String']>;
+  photoCredit?: Maybe<Scalars['String']>;
+  publishedDate?: Maybe<Scalars['String']>;
+  reference1?: Maybe<Scalars['String']>;
+  reference2?: Maybe<Scalars['String']>;
+  subtitle1?: Maybe<Scalars['String']>;
+  subtitle2?: Maybe<Scalars['String']>;
+  subtitle3?: Maybe<Scalars['String']>;
+  tableContents1?: Maybe<Scalars['String']>;
+  tableContents2?: Maybe<Scalars['String']>;
+  tableContents3?: Maybe<Scalars['String']>;
+  tableContents4?: Maybe<Scalars['String']>;
+  title?: Maybe<Scalars['String']>;
 };
 
 export type ItInput = {
-  id: Scalars['String'];
+  authorAbout?: InputMaybe<Scalars['String']>;
+  authorLink?: InputMaybe<Scalars['String']>;
+  authorName?: InputMaybe<Scalars['String']>;
+  category?: InputMaybe<Scalars['String']>;
+  conclusion1?: InputMaybe<Scalars['String']>;
+  conclusion2?: InputMaybe<Scalars['String']>;
+  conclusion3?: InputMaybe<Scalars['String']>;
+  editedBy?: InputMaybe<Scalars['String']>;
+  id: Scalars['ID'];
+  l1?: InputMaybe<Scalars['String']>;
+  l2?: InputMaybe<Scalars['String']>;
+  l3?: InputMaybe<Scalars['String']>;
+  l4?: InputMaybe<Scalars['String']>;
+  l5?: InputMaybe<Scalars['String']>;
+  mainImage?: InputMaybe<Scalars['String']>;
+  p1?: InputMaybe<Scalars['String']>;
+  p2?: InputMaybe<Scalars['String']>;
+  p3?: InputMaybe<Scalars['String']>;
+  p4?: InputMaybe<Scalars['String']>;
+  p5?: InputMaybe<Scalars['String']>;
+  p6?: InputMaybe<Scalars['String']>;
+  p7?: InputMaybe<Scalars['String']>;
+  photoCredit?: InputMaybe<Scalars['String']>;
+  publishedDate?: InputMaybe<Scalars['String']>;
+  reference1?: InputMaybe<Scalars['String']>;
+  reference2?: InputMaybe<Scalars['String']>;
+  subtitle1?: InputMaybe<Scalars['String']>;
+  subtitle2?: InputMaybe<Scalars['String']>;
+  subtitle3?: InputMaybe<Scalars['String']>;
+  tableContents1?: InputMaybe<Scalars['String']>;
+  tableContents2?: InputMaybe<Scalars['String']>;
+  tableContents3?: InputMaybe<Scalars['String']>;
+  tableContents4?: InputMaybe<Scalars['String']>;
+  title?: InputMaybe<Scalars['String']>;
 };
 
 export type MachineLearning = {
@@ -806,6 +870,7 @@ export type Mutation = {
   updateComputerNetworking?: Maybe<ComputerNetworking>;
   updateDataManagement?: Maybe<DataManagement>;
   updateGameProgramming?: Maybe<GameProgramming>;
+  updateIt?: Maybe<It>;
   updateMachineLearning?: Maybe<MachineLearning>;
   updateSoftwareDevelopment?: Maybe<SoftwareDevelopment>;
   updateTelecommunication?: Maybe<Telecommunication>;
@@ -915,6 +980,11 @@ export type MutationUpdateDataManagementArgs = {
 
 export type MutationUpdateGameProgrammingArgs = {
   input: GameProgrammingInput;
+};
+
+
+export type MutationUpdateItArgs = {
+  input: ItInput;
 };
 
 
@@ -1813,9 +1883,40 @@ export type GameProgrammingResolvers<ContextType = GraphQLContext, ParentType ex
 };
 
 export type ItResolvers<ContextType = GraphQLContext, ParentType extends ResolversParentTypes['It'] = ResolversParentTypes['It']> = {
-  id?: Resolver<ResolversTypes['String'], ParentType, ContextType>;
-  softwareDevelopment?: Resolver<Maybe<ResolversTypes['SoftwareDevelopment']>, ParentType, ContextType>;
-  softwareDevelopmentId?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  authorAbout?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  authorLink?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  authorName?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  category?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  conclusion1?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  conclusion2?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  conclusion3?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  editedBy?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  id?: Resolver<ResolversTypes['ID'], ParentType, ContextType>;
+  l1?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  l2?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  l3?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  l4?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  l5?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  mainImage?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  p1?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  p2?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  p3?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  p4?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  p5?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  p6?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  p7?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  photoCredit?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  publishedDate?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  reference1?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  reference2?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  subtitle1?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  subtitle2?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  subtitle3?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  tableContents1?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  tableContents2?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  tableContents3?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  tableContents4?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  title?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 };
 
@@ -1879,6 +1980,7 @@ export type MutationResolvers<ContextType = GraphQLContext, ParentType extends R
   updateComputerNetworking?: Resolver<Maybe<ResolversTypes['ComputerNetworking']>, ParentType, ContextType, RequireFields<MutationUpdateComputerNetworkingArgs, 'input'>>;
   updateDataManagement?: Resolver<Maybe<ResolversTypes['DataManagement']>, ParentType, ContextType, RequireFields<MutationUpdateDataManagementArgs, 'input'>>;
   updateGameProgramming?: Resolver<Maybe<ResolversTypes['GameProgramming']>, ParentType, ContextType, RequireFields<MutationUpdateGameProgrammingArgs, 'input'>>;
+  updateIt?: Resolver<Maybe<ResolversTypes['It']>, ParentType, ContextType, RequireFields<MutationUpdateItArgs, 'input'>>;
   updateMachineLearning?: Resolver<Maybe<ResolversTypes['MachineLearning']>, ParentType, ContextType, RequireFields<MutationUpdateMachineLearningArgs, 'input'>>;
   updateSoftwareDevelopment?: Resolver<Maybe<ResolversTypes['SoftwareDevelopment']>, ParentType, ContextType, RequireFields<MutationUpdateSoftwareDevelopmentArgs, 'input'>>;
   updateTelecommunication?: Resolver<Maybe<ResolversTypes['Telecommunication']>, ParentType, ContextType, RequireFields<MutationUpdateTelecommunicationArgs, 'input'>>;
@@ -2123,12 +2225,6 @@ export const BlogPostFragmentDoc = gql`
   photoCredit
   editedBy
   mainImage
-}
-    `;
-export const ItFragmentDoc = gql`
-    fragment It on It {
-  id
-  softwareDevelopmentId
 }
     `;
 export const AiCardFragmentDoc = gql`
@@ -2452,6 +2548,44 @@ export const GameProgrammingCardFragmentDoc = gql`
   subtitle1
 }
     `;
+export const ItFragmentDoc = gql`
+    fragment It on It {
+  id
+  category
+  publishedDate
+  title
+  subtitle1
+  tableContents1
+  tableContents2
+  tableContents3
+  tableContents4
+  p1
+  p2
+  p3
+  subtitle2
+  p4
+  p5
+  l1
+  l2
+  l3
+  l4
+  l5
+  subtitle3
+  p6
+  p7
+  conclusion1
+  conclusion2
+  conclusion3
+  reference1
+  reference2
+  authorName
+  authorAbout
+  authorLink
+  photoCredit
+  editedBy
+  mainImage
+}
+    `;
 export const MachineLearningCardFragmentDoc = gql`
     fragment MachineLearningCard on MachineLearning {
   category
@@ -2772,74 +2906,6 @@ export function useBlogPostsLazyQuery(baseOptions?: Apollo.LazyQueryHookOptions<
 export type BlogPostsQueryHookResult = ReturnType<typeof useBlogPostsQuery>;
 export type BlogPostsLazyQueryHookResult = ReturnType<typeof useBlogPostsLazyQuery>;
 export type BlogPostsQueryResult = Apollo.QueryResult<BlogPostsQuery, BlogPostsQueryVariables>;
-export const AddItDocument = gql`
-    mutation AddIt($input: ItInput!) {
-  addIt(input: $input) {
-    ...It
-  }
-}
-    ${ItFragmentDoc}`;
-export type AddItMutationFn = Apollo.MutationFunction<AddItMutation, AddItMutationVariables>;
-
-/**
- * __useAddItMutation__
- *
- * To run a mutation, you first call `useAddItMutation` within a React component and pass it any options that fit your needs.
- * When your component renders, `useAddItMutation` returns a tuple that includes:
- * - A mutate function that you can call at any time to execute the mutation
- * - An object with fields that represent the current status of the mutation's execution
- *
- * @param baseOptions options that will be passed into the mutation, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options-2;
- *
- * @example
- * const [addItMutation, { data, loading, error }] = useAddItMutation({
- *   variables: {
- *      input: // value for 'input'
- *   },
- * });
- */
-export function useAddItMutation(baseOptions?: Apollo.MutationHookOptions<AddItMutation, AddItMutationVariables>) {
-        const options = {...defaultOptions, ...baseOptions}
-        return Apollo.useMutation<AddItMutation, AddItMutationVariables>(AddItDocument, options);
-      }
-export type AddItMutationHookResult = ReturnType<typeof useAddItMutation>;
-export type AddItMutationResult = Apollo.MutationResult<AddItMutation>;
-export type AddItMutationOptions = Apollo.BaseMutationOptions<AddItMutation, AddItMutationVariables>;
-export const ItDocument = gql`
-    query It($id: ID!) {
-  it(id: $id) {
-    ...It
-  }
-}
-    ${ItFragmentDoc}`;
-
-/**
- * __useItQuery__
- *
- * To run a query within a React component, call `useItQuery` and pass it any options that fit your needs.
- * When your component renders, `useItQuery` returns an object from Apollo Client that contains loading, error, and data properties
- * you can use to render your UI.
- *
- * @param baseOptions options that will be passed into the query, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options;
- *
- * @example
- * const { data, loading, error } = useItQuery({
- *   variables: {
- *      id: // value for 'id'
- *   },
- * });
- */
-export function useItQuery(baseOptions: Apollo.QueryHookOptions<ItQuery, ItQueryVariables>) {
-        const options = {...defaultOptions, ...baseOptions}
-        return Apollo.useQuery<ItQuery, ItQueryVariables>(ItDocument, options);
-      }
-export function useItLazyQuery(baseOptions?: Apollo.LazyQueryHookOptions<ItQuery, ItQueryVariables>) {
-          const options = {...defaultOptions, ...baseOptions}
-          return Apollo.useLazyQuery<ItQuery, ItQueryVariables>(ItDocument, options);
-        }
-export type ItQueryHookResult = ReturnType<typeof useItQuery>;
-export type ItLazyQueryHookResult = ReturnType<typeof useItLazyQuery>;
-export type ItQueryResult = Apollo.QueryResult<ItQuery, ItQueryVariables>;
 export const AddAiDocument = gql`
     mutation AddAi($input: AiInput!) {
   addAi(input: $input) {
@@ -3785,6 +3851,107 @@ export function useUpdateGameProgrammingMutation(baseOptions?: Apollo.MutationHo
 export type UpdateGameProgrammingMutationHookResult = ReturnType<typeof useUpdateGameProgrammingMutation>;
 export type UpdateGameProgrammingMutationResult = Apollo.MutationResult<UpdateGameProgrammingMutation>;
 export type UpdateGameProgrammingMutationOptions = Apollo.BaseMutationOptions<UpdateGameProgrammingMutation, UpdateGameProgrammingMutationVariables>;
+export const AddItDocument = gql`
+    mutation AddIt($input: ItInput!) {
+  addIt(input: $input) {
+    ...It
+  }
+}
+    ${ItFragmentDoc}`;
+export type AddItMutationFn = Apollo.MutationFunction<AddItMutation, AddItMutationVariables>;
+
+/**
+ * __useAddItMutation__
+ *
+ * To run a mutation, you first call `useAddItMutation` within a React component and pass it any options that fit your needs.
+ * When your component renders, `useAddItMutation` returns a tuple that includes:
+ * - A mutate function that you can call at any time to execute the mutation
+ * - An object with fields that represent the current status of the mutation's execution
+ *
+ * @param baseOptions options that will be passed into the mutation, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options-2;
+ *
+ * @example
+ * const [addItMutation, { data, loading, error }] = useAddItMutation({
+ *   variables: {
+ *      input: // value for 'input'
+ *   },
+ * });
+ */
+export function useAddItMutation(baseOptions?: Apollo.MutationHookOptions<AddItMutation, AddItMutationVariables>) {
+        const options = {...defaultOptions, ...baseOptions}
+        return Apollo.useMutation<AddItMutation, AddItMutationVariables>(AddItDocument, options);
+      }
+export type AddItMutationHookResult = ReturnType<typeof useAddItMutation>;
+export type AddItMutationResult = Apollo.MutationResult<AddItMutation>;
+export type AddItMutationOptions = Apollo.BaseMutationOptions<AddItMutation, AddItMutationVariables>;
+export const ItDocument = gql`
+    query It($id: ID!) {
+  it(id: $id) {
+    ...It
+  }
+}
+    ${ItFragmentDoc}`;
+
+/**
+ * __useItQuery__
+ *
+ * To run a query within a React component, call `useItQuery` and pass it any options that fit your needs.
+ * When your component renders, `useItQuery` returns an object from Apollo Client that contains loading, error, and data properties
+ * you can use to render your UI.
+ *
+ * @param baseOptions options that will be passed into the query, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options;
+ *
+ * @example
+ * const { data, loading, error } = useItQuery({
+ *   variables: {
+ *      id: // value for 'id'
+ *   },
+ * });
+ */
+export function useItQuery(baseOptions: Apollo.QueryHookOptions<ItQuery, ItQueryVariables>) {
+        const options = {...defaultOptions, ...baseOptions}
+        return Apollo.useQuery<ItQuery, ItQueryVariables>(ItDocument, options);
+      }
+export function useItLazyQuery(baseOptions?: Apollo.LazyQueryHookOptions<ItQuery, ItQueryVariables>) {
+          const options = {...defaultOptions, ...baseOptions}
+          return Apollo.useLazyQuery<ItQuery, ItQueryVariables>(ItDocument, options);
+        }
+export type ItQueryHookResult = ReturnType<typeof useItQuery>;
+export type ItLazyQueryHookResult = ReturnType<typeof useItLazyQuery>;
+export type ItQueryResult = Apollo.QueryResult<ItQuery, ItQueryVariables>;
+export const UpdateItDocument = gql`
+    mutation UpdateIt($input: ItInput!) {
+  updateIt(input: $input) {
+    ...It
+  }
+}
+    ${ItFragmentDoc}`;
+export type UpdateItMutationFn = Apollo.MutationFunction<UpdateItMutation, UpdateItMutationVariables>;
+
+/**
+ * __useUpdateItMutation__
+ *
+ * To run a mutation, you first call `useUpdateItMutation` within a React component and pass it any options that fit your needs.
+ * When your component renders, `useUpdateItMutation` returns a tuple that includes:
+ * - A mutate function that you can call at any time to execute the mutation
+ * - An object with fields that represent the current status of the mutation's execution
+ *
+ * @param baseOptions options that will be passed into the mutation, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options-2;
+ *
+ * @example
+ * const [updateItMutation, { data, loading, error }] = useUpdateItMutation({
+ *   variables: {
+ *      input: // value for 'input'
+ *   },
+ * });
+ */
+export function useUpdateItMutation(baseOptions?: Apollo.MutationHookOptions<UpdateItMutation, UpdateItMutationVariables>) {
+        const options = {...defaultOptions, ...baseOptions}
+        return Apollo.useMutation<UpdateItMutation, UpdateItMutationVariables>(UpdateItDocument, options);
+      }
+export type UpdateItMutationHookResult = ReturnType<typeof useUpdateItMutation>;
+export type UpdateItMutationResult = Apollo.MutationResult<UpdateItMutation>;
+export type UpdateItMutationOptions = Apollo.BaseMutationOptions<UpdateItMutation, UpdateItMutationVariables>;
 export const AddMachineLearningDocument = gql`
     mutation AddMachineLearning($input: MachineLearningInput!) {
   addMachineLearning(input: $input) {
@@ -4386,22 +4553,6 @@ export type BlogPostsQueryVariables = Exact<{ [key: string]: never; }>;
 
 export type BlogPostsQuery = { __typename?: 'Query', blogPosts?: Array<{ __typename?: 'BlogPost', id: string, category?: string | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null } | null> | null };
 
-export type AddItMutationVariables = Exact<{
-  input: ItInput;
-}>;
-
-
-export type AddItMutation = { __typename?: 'Mutation', addIt?: { __typename?: 'It', id: string, softwareDevelopmentId?: string | null } | null };
-
-export type ItQueryVariables = Exact<{
-  id: Scalars['ID'];
-}>;
-
-
-export type ItQuery = { __typename?: 'Query', it?: { __typename?: 'It', id: string, softwareDevelopmentId?: string | null } | null };
-
-export type ItFragment = { __typename?: 'It', id: string, softwareDevelopmentId?: string | null };
-
 export type AddAiMutationVariables = Exact<{
   input: AiInput;
 }>;
@@ -4611,6 +4762,29 @@ export type UpdateGameProgrammingMutationVariables = Exact<{
 
 
 export type UpdateGameProgrammingMutation = { __typename?: 'Mutation', updateGameProgramming?: { __typename?: 'GameProgramming', id: string, category?: string | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null } | null };
+
+export type AddItMutationVariables = Exact<{
+  input: ItInput;
+}>;
+
+
+export type AddItMutation = { __typename?: 'Mutation', addIt?: { __typename?: 'It', id: string, category?: string | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null } | null };
+
+export type ItQueryVariables = Exact<{
+  id: Scalars['ID'];
+}>;
+
+
+export type ItQuery = { __typename?: 'Query', it?: { __typename?: 'It', id: string, category?: string | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null } | null };
+
+export type ItFragment = { __typename?: 'It', id: string, category?: string | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null };
+
+export type UpdateItMutationVariables = Exact<{
+  input: ItInput;
+}>;
+
+
+export type UpdateItMutation = { __typename?: 'Mutation', updateIt?: { __typename?: 'It', id: string, category?: string | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null } | null };
 
 export type AddMachineLearningMutationVariables = Exact<{
   input: MachineLearningInput;
