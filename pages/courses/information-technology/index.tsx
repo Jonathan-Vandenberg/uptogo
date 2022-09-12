@@ -4,6 +4,53 @@ import CoursesNarrowCards from "../../../components/Courses/CoursesNarrowCards";
 import ItMain from "../../../components/It/ItMain";
 import { useItQuery } from "../../../types";
 
+const cardData = [
+  {
+    course: "Software Development",
+    link: "/courses/information-technology/software-development",
+  },
+  {
+    course: "Blockchain Technology",
+    link: "/courses/information-technology/blockchain-technology",
+  },
+  {
+    course: "Data Management",
+    link: "/courses/information-technology/data-management",
+  },
+  {
+    course: "Machine Learning",
+    link: "/courses/information-technology/machine-learning",
+  },
+  {
+    course: "Website Development",
+    link: "/courses/information-technology/web-development",
+  },
+  {
+    course: "Game Programming",
+    link: "/courses/information-technology/game-programming",
+  },
+  {
+    course: "Telecommunication",
+    link: "/courses/information-technology/telecommunication",
+  },
+  {
+    course: "Business Analysis",
+    link: "/courses/information-technology/business-analysis",
+  },
+  {
+    course: "Cloud Computing",
+    link: "/courses/information-technology/cloud-computing",
+  },
+  {
+    course: "Computer Networking",
+    link: "/courses/information-technology/computer-networking",
+  },
+  {
+    course: "A.I.",
+    link: "/courses/information-technology/artificial-intelligence",
+  },
+];
+
 export default function App() {
   const { data } = useItQuery({
     variables: {
@@ -15,7 +62,7 @@ export default function App() {
       <h1 className="bg-body p-6 text-2xl logoFont text-darkBlue pb-8">
         Information-Technology
       </h1>
-      <CoursesNarrowCards />
+      <CoursesNarrowCards cardData={cardData} />
     </div>
   );
 }
