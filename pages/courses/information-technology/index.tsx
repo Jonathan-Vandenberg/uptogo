@@ -8,7 +8,7 @@ import BlogPostMarkup from "../../../components/Blog/BlogPostMarkup";
 import { useRouter } from "next/router";
 import { useState } from "react";
 import MainForm from "../../../components/MainForm";
-import { It, useItQuery } from "../../../types";
+import { It, ItQuery, useItQuery } from "../../../types";
 
 const cardData = [
   {
@@ -57,13 +57,22 @@ const cardData = [
   },
 ];
 
-export default function App() {
-  const { data } = useItQuery({
-    variables: {
+interface IProps {
+  data: It;
+}
+
+export async function getStaticProps() {
+  const data = await prisma?.it.findUnique({
+    where: {
       id: "631f0640cb1d9c50bf6dd5a7",
     },
   });
+  return {
+    props: { data },
+  };
+}
 
+export default function App({ data }: IProps) {
   const [showForm, setShowForm] = useState(false);
   const [edit, setEdit] = useState(false);
   const [add, setAdd] = useState(false);
@@ -99,23 +108,23 @@ export default function App() {
       </div>
       <div>
         <h1 className="text-3xl logoFont text-gray-700 py-6 px-4 md:px-0">
-          {data?.it?.title}
+          {data?.title}
         </h1>
         <h2 className="text-2xl text-gray-700 pb-6 px-4 md:px-0">
-          {data?.it?.subtitle1}
+          {data?.subtitle1}
         </h2>
       </div>
       <BlogPostMarkup
         handleAdd={handleAdd}
         handleEdit={handleEdit}
-        data={data?.it}
+        data={data}
       />
       <h1 className="bg-body p-6 text-2xl logoFont text-darkBlue pb-8">
         Information-Technology
       </h1>
       {showForm && (
         <MainForm
-          details={data?.it}
+          details={data}
           add={add}
           edit={edit}
           handleClose={() => setShowForm(false)}
