@@ -111,7 +111,7 @@ export default function App() {
         data={data?.it}
       />
       <h1 className="bg-body p-6 text-2xl logoFont text-darkBlue pb-8">
-        Information-Technology.
+        Information-Technology
       </h1>
       {showForm && (
         <MainForm
