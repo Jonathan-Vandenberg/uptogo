@@ -1,4 +1,6 @@
 import Link from "next/link";
+import { BsChevronBarRight } from "react-icons/bs";
+import CoursesNarrowCards from "../../../components/Courses/CoursesNarrowCards";
 import ItMain from "../../../components/It/ItMain";
 import { useItQuery } from "../../../types";
 
@@ -8,65 +10,12 @@ export default function App() {
       id: "631acd8b8172747ab931f29e",
     },
   });
-  console.log(data?.it?.id);
   return (
-    <div className="divide divide-gray-400">
-      <ItMain data={data} />
-      <Link href={"/courses/information-technology/software-development"}>
-        <div className="text-lg p-4 text-darkBlue hover:border-2 hover:border-orange hover:rounded-lg">
-          Software Development
-        </div>
-      </Link>
-      <Link href={"/courses/information-technology/blockchain-technology"}>
-        <div className="text-lg p-4 text-darkBlue hover:border-2 hover:border-orange hover:rounded-lg">
-          Blockchain Technology
-        </div>
-      </Link>
-      <Link href={"/courses/information-technology/data-management"}>
-        <div className="text-lg p-4 text-darkBlue hover:border-2 hover:border-orange hover:rounded-lg">
-          Data Management
-        </div>
-      </Link>
-      <Link href={"/courses/information-technology/machine-learning"}>
-        <div className="text-lg p-4 text-darkBlue hover:border-2 hover:border-orange hover:rounded-lg">
-          Machine Learning
-        </div>
-      </Link>
-      <Link href={"/courses/information-technology/web-development"}>
-        <div className="text-lg p-4 text-darkBlue hover:border-2 hover:border-orange hover:rounded-lg">
-          Website Development
-        </div>
-      </Link>
-      <Link href={"/courses/information-technology/game-programming"}>
-        <div className="text-lg p-4 text-darkBlue hover:border-2 hover:border-orange hover:rounded-lg">
-          Game Programming
-        </div>
-      </Link>
-      <Link href={"/courses/information-technology/telecommunication"}>
-        <div className="text-lg p-4 text-darkBlue hover:border-2 hover:border-orange hover:rounded-lg">
-          Telecommunication
-        </div>
-      </Link>
-      <Link href={"/courses/information-technology/business-analysis"}>
-        <div className="text-lg p-4 text-darkBlue hover:border-2 hover:border-orange hover:rounded-lg">
-          Business Analysis
-        </div>
-      </Link>
-      <Link href={"/courses/information-technology/cloud-computing"}>
-        <div className="text-lg p-4 text-darkBlue hover:border-2 hover:border-orange hover:rounded-lg">
-          Cloud Computing
-        </div>
-      </Link>
-      <Link href={"/courses/information-technology/computer-networking"}>
-        <div className="text-lg p-4 text-darkBlue hover:border-2 hover:border-orange hover:rounded-lg">
-          Computer Networking
-        </div>
-      </Link>
-      <Link href={"/courses/information-technology/artificial-intelligence"}>
-        <div className="text-lg p-4 text-darkBlue hover:border-2 hover:border-orange hover:rounded-lg">
-          A.I.
-        </div>
-      </Link>
+    <div className="max-w-[678px] md:max-w-[900px] mx-auto">
+      <h1 className="bg-body p-6 text-2xl logoFont text-darkBlue pb-8">
+        Information-Technology
+      </h1>
+      <CoursesNarrowCards />
     </div>
   );
 }

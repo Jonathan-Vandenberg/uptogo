@@ -7,6 +7,7 @@ import {
   useSoftwareDevelopmentQuery,
 } from "../../../../types";
 import { useRouter } from "next/router";
+import CoursesMainPage from "../../../../components/Courses/CoursesMainPage";
 
 function Posts() {
   const { data, loading, error } = useSoftwareDevelopmentCardQuery();
@@ -58,7 +59,7 @@ export default function App() {
   return (
     <>
       {/* <Crubs /> */}
-      <BlogMain
+      <CoursesMainPage
         data={data?.softwareDevelopment}
         handleEdit={handleEdit}
         handleAdd={handleAdd}
