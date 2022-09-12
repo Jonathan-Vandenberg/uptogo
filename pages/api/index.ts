@@ -200,7 +200,6 @@ const resolvers: Resolvers = {
           id: input.id
         },
         data: {
-        title: input?.title,
         category: input?.category,
         subtitle1: input?.subtitle1,
         tableContents1: input?.tableContents1,
