@@ -3,6 +3,8 @@ import { BsChevronBarRight } from "react-icons/bs";
 import CoursesNarrowCards from "../../../components/Courses/CoursesNarrowCards";
 import ItMain from "../../../components/It/ItMain";
 import { useItQuery } from "../../../types";
+import Image from "next/image";
+import image from "../../../public/courseMain/Data_Management.jpeg";
 
 const cardData = [
   {
@@ -59,6 +61,15 @@ export default function App() {
   });
   return (
     <div className="max-w-[678px] md:max-w-[900px] mx-auto">
+      <div className="">
+        <Image
+          src={image}
+          width={300}
+          height={150}
+          alt="IT image"
+          layout="responsive"
+        />
+      </div>
       <h1 className="bg-body p-6 text-2xl logoFont text-darkBlue pb-8">
         Information-Technology
       </h1>
