@@ -29,7 +29,7 @@ const FavoriteServicesCards = () => {
       />
       <div className="md:px-12 lg:container lg:mx-auto lg:px-0">
         {localStorageKeys.length > 0 ? (
-          <div className="px-4 space-y-8">
+          <div className="px-4 space-y-8 ">
             {data?.blogPosts?.map((card) =>
               localStorageKeys.includes(`${card!.category} - ${card!.id}`) ? (
                 <BlogPageHero data={card} />
