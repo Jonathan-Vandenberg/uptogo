@@ -238,3 +238,11 @@ position: fixed;
   background-color: rgba(52, 51, 51, 0.5)
 }
 
+/* grid-favorites */
+
+.grid-favorites {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-gap: 2.5rem;
+  margin-top: 1rem;
+}

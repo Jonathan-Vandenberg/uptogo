@@ -15,6 +15,10 @@ import type {
 } from "../../types";
 import { Avatar } from "@mui/material";
 import { GrCheckmark } from "react-icons/gr";
+import { useRouter } from "next/router";
+import { useState, useEffect } from "react";
+import { getFromStorage, setToStorage } from "../../lib/localStorageHelper";
+import { FaHeart } from "react-icons/fa";
 
 interface IProps {
   data:
@@ -35,6 +39,30 @@ interface IProps {
 }
 
 const BlogHeader = ({ data }: IProps) => {
+  const [localStorageChange, setLocalStorageChange] = useState(false);
+  const [localStorageKeys, setLocalStorageKeys] = useState([""]);
+
+  const router = useRouter();
+
+  useEffect(() => {
+    const allKeys = Object.keys(localStorage);
+    let favoriteBlogs: string[] = [];
+    allKeys.map((key) => {
+      if (key.includes("BLOG")) {
+        favoriteBlogs.push(key);
+      }
+    });
+    setLocalStorageKeys(favoriteBlogs);
+  }, [localStorageChange]);
+
+  const handleLocalStorage = (storage: string) => {
+    const favorited = getFromStorage(storage);
+    if (favorited) {
+      localStorage.removeItem(storage);
+    } else setToStorage(storage, storage);
+
+    setLocalStorageChange(!localStorageChange);
+  };
   return (
     <div className="bg-gradient-to-b from-bgGradientStart to-white md:pt-4">
       <div className="max-w-[640px] px-5 md:max-w-[900px] mx-auto">
@@ -76,7 +104,7 @@ const BlogHeader = ({ data }: IProps) => {
             </div>
           )}
         </div>
-        <div className="border-b-2 border-gray-200 pb-12">
+        <div className="border-b-2 border-gray-200 pb-2">
           <Image
             src={"https://picsum.photos/600/250"}
             width={600}
@@ -90,6 +118,23 @@ const BlogHeader = ({ data }: IProps) => {
               Image Credit: {data?.photoCredit}
             </p>
           )}
+          <div className="flex items-center justify-end">
+            <div
+              onClick={() => {
+                handleLocalStorage(`${data?.category} - ${data?.id}`);
+              }}
+              className="cursor-pointer rounded-full bg-body p-2 hover:scale-105 hover:drop-shadow"
+            >
+              <FaHeart
+                size={20}
+                color={
+                  localStorageKeys?.includes(`${data?.category} - ${data?.id}`)
+                    ? "red"
+                    : "orange"
+                }
+              />
+            </div>
+          </div>
         </div>
       </div>
     </div>
