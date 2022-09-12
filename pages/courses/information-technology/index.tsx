@@ -8,7 +8,7 @@ import BlogPostMarkup from "../../../components/Blog/BlogPostMarkup";
 import { useRouter } from "next/router";
 import { useState } from "react";
 import MainForm from "../../../components/MainForm";
-import { It, ItQuery, useItQuery } from "../../../types";
+import { It } from "../../../types";
 import { PrismaClient } from "@prisma/client";
 
 const cardData = [
@@ -71,6 +71,7 @@ export async function getStaticProps() {
   });
   return {
     props: { data },
+    revalidate: 10,
   };
 }
 
