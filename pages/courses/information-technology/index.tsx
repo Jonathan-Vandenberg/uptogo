@@ -9,6 +9,7 @@ import { useRouter } from "next/router";
 import { useState } from "react";
 import MainForm from "../../../components/MainForm";
 import { It, ItQuery, useItQuery } from "../../../types";
+import { PrismaClient } from "@prisma/client";
 
 const cardData = [
   {
@@ -62,6 +63,7 @@ interface IProps {
 }
 
 export async function getStaticProps() {
+  const prisma = new PrismaClient();
   const data = await prisma?.it.findUnique({
     where: {
       id: "631f0640cb1d9c50bf6dd5a7",
