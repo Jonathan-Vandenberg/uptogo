@@ -43,14 +43,12 @@ const CourseSlider = () => {
         whileTap={{ scale: 0.97 }}
         className="flex cursor-pointer flex-col items-center justify-center p-4"
       >
-        <Link href={el.link}>
-          <div className="flex items-center justify-center rounded-2xl hover:drop-shadow-md">
-            <Image src={el.image} width={60} height={60} alt="Courses" />
-          </div>
-          <p className="pt-2 text-center  text-slate-600 xl:text-lg">
-            {el.title}
-          </p>
-        </Link>
+        <div className="flex items-center justify-center rounded-2xl hover:drop-shadow-md">
+          <Image src={el.image} width={60} height={60} alt="Courses" />
+        </div>
+        <p className="pt-2 text-center  text-slate-600 xl:text-lg">
+          {el.title}
+        </p>
       </motion.div>
     ));
 
