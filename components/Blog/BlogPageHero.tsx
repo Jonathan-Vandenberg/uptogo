@@ -188,7 +188,7 @@ export default function App({ data }: IProps) {
         </div>
         <div className="w-full md:w-3/5 bg-red-100">
           <Image
-            src="https://picsum.photos/600/400/?grayscale"
+            src="https://picsum.photos/id/192/600/400"
             alt="blog Image"
             width={600}
             height={400}
