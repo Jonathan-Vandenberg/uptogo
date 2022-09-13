@@ -191,7 +191,9 @@ const NavbarBottom: NextPage = () => {
         {majorsDropdown && (
           <div className="flex w-full items-start justify-center z-50 h-auto">
             <div className="absolute z-50 w-full bg-white">
-              <UnCollapassedCourses />
+              <UnCollapassedCourses
+                handleCloseDropdowns={handleCloseDropdowns}
+              />
             </div>
           </div>
         )}
