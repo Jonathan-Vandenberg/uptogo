@@ -1,12 +1,11 @@
-import { useState } from "react";
-import BlogMain from "../../../../components/Blog/BlogMain";
-import BlogPageHero from "../../../../components/Blog/BlogPageHero";
-import MainForm from "../../../../components/MainForm";
-import {
-  useWebDevelopmentCardQuery,
-  useWebDevelopmentQuery,
-} from "../../../../types";
+import { PrismaClient } from "@prisma/client";
+import { GetStaticProps } from "next";
 import { useRouter } from "next/router";
+import { useState } from "react";
+import BlogPageHero from "../../../../components/Blog/BlogPageHero";
+import CoursesMainPage from "../../../../components/Courses/CoursesMainPage";
+import MainForm from "../../../../components/MainForm";
+import { useWebDevelopmentCardQuery, WebDevelopment } from "../../../../types";
 
 function Posts() {
   const { data, loading, error } = useWebDevelopmentCardQuery();
@@ -25,7 +24,24 @@ function Posts() {
   );
 }
 
-export default function App() {
+interface IProps {
+  data: WebDevelopment;
+}
+
+export const getStaticProps: GetStaticProps = async () => {
+  const prisma = new PrismaClient();
+  const data = await prisma?.webDevelopment.findUnique({
+    where: {
+      id: "631db80a628acdf2748fc185",
+    },
+  });
+  return {
+    props: { data },
+    revalidate: 10,
+  };
+};
+
+export default function App({ data }: IProps) {
   const [showForm, setShowForm] = useState(false);
   const [edit, setEdit] = useState(false);
   const [add, setAdd] = useState(false);
@@ -48,24 +64,18 @@ export default function App() {
     setEdit(true);
   };
 
-  const { data } = useWebDevelopmentQuery({
-    variables: {
-      id: "631db80a628acdf2748fc185",
-    },
-  });
-
-  console.log(data?.webDevelopment?.category);
+  console.log(data.category);
   return (
     <>
       {/* <Crubs /> */}
-      <BlogMain
-        data={data?.webDevelopment}
+      <CoursesMainPage
+        data={data}
         handleEdit={handleEdit}
         handleAdd={handleAdd}
       />
       {showForm && (
         <MainForm
-          details={data?.webDevelopment}
+          details={data}
           add={add}
           edit={edit}
           handleClose={() => setShowForm(false)}

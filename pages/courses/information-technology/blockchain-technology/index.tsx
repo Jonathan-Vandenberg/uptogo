@@ -2,8 +2,14 @@ import { useState } from "react";
 import BlogMain from "../../../../components/Blog/BlogMain";
 import BlogPageHero from "../../../../components/Blog/BlogPageHero";
 import MainForm from "../../../../components/MainForm";
-import { useBlockchainCardQuery, useBlockchainQuery } from "../../../../types";
+import {
+  Blockchain,
+  useBlockchainCardQuery,
+  useBlockchainQuery,
+} from "../../../../types";
 import { useRouter } from "next/router";
+import { PrismaClient } from "@prisma/client";
+import { GetStaticProps } from "next";
 
 function Posts() {
   const { data, loading, error } = useBlockchainCardQuery();
@@ -22,7 +28,24 @@ function Posts() {
   );
 }
 
-export default function App() {
+interface IProps {
+  data: Blockchain;
+}
+
+export const getStaticProps: GetStaticProps = async () => {
+  const prisma = new PrismaClient();
+  const data = await prisma?.blockchain.findUnique({
+    where: {
+      id: "631db438628acdf2748fc150",
+    },
+  });
+  return {
+    props: { data },
+    revalidate: 3600,
+  };
+};
+
+export default function App({ data }: IProps) {
   const [showForm, setShowForm] = useState(false);
   const [edit, setEdit] = useState(false);
   const [add, setAdd] = useState(false);
@@ -45,24 +68,14 @@ export default function App() {
     setEdit(true);
   };
 
-  const { data } = useBlockchainQuery({
-    variables: {
-      id: "631db438628acdf2748fc150",
-    },
-  });
-
-  console.log(data?.blockchain?.category);
+  console.log(data?.category);
   return (
     <>
       {/* <Crubs /> */}
-      <BlogMain
-        data={data?.blockchain}
-        handleEdit={handleEdit}
-        handleAdd={handleAdd}
-      />
+      <BlogMain data={data} handleEdit={handleEdit} handleAdd={handleAdd} />
       {showForm && (
         <MainForm
-          details={data?.blockchain}
+          details={data}
           add={add}
           edit={edit}
           handleClose={() => setShowForm(false)}

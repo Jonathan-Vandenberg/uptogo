@@ -3,10 +3,13 @@ import BlogMain from "../../../../components/Blog/BlogMain";
 import BlogPageHero from "../../../../components/Blog/BlogPageHero";
 import MainForm from "../../../../components/MainForm";
 import {
+  GameProgramming,
   useGameProgrammingCardQuery,
   useGameProgrammingQuery,
 } from "../../../../types";
 import { useRouter } from "next/router";
+import { PrismaClient } from "@prisma/client";
+import { GetStaticProps } from "next";
 
 function Posts() {
   const { data, loading, error } = useGameProgrammingCardQuery();
@@ -25,7 +28,24 @@ function Posts() {
   );
 }
 
-export default function App() {
+interface IProps {
+  data: GameProgramming;
+}
+
+export const getStaticProps: GetStaticProps = async () => {
+  const prisma = new PrismaClient();
+  const data = await prisma?.gameProgramming.findUnique({
+    where: {
+      id: "631db77b628acdf2748fc173",
+    },
+  });
+  return {
+    props: { data },
+    revalidate: 3600,
+  };
+};
+
+export default function App({ data }: IProps) {
   const [showForm, setShowForm] = useState(false);
   const [edit, setEdit] = useState(false);
   const [add, setAdd] = useState(false);
@@ -48,24 +68,14 @@ export default function App() {
     setEdit(true);
   };
 
-  const { data } = useGameProgrammingQuery({
-    variables: {
-      id: "631db77b628acdf2748fc173",
-    },
-  });
-
-  console.log(data?.gameProgramming?.category);
+  console.log(data?.category);
   return (
     <>
       {/* <Crubs /> */}
-      <BlogMain
-        data={data?.gameProgramming}
-        handleEdit={handleEdit}
-        handleAdd={handleAdd}
-      />
+      <BlogMain data={data} handleEdit={handleEdit} handleAdd={handleAdd} />
       {showForm && (
         <MainForm
-          details={data?.gameProgramming}
+          details={data}
           add={add}
           edit={edit}
           handleClose={() => setShowForm(false)}

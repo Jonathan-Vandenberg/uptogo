@@ -1,12 +1,14 @@
+import { PrismaClient } from "@prisma/client";
+import { GetStaticProps } from "next";
+import { useRouter } from "next/router";
 import { useState } from "react";
 import BlogMain from "../../../../components/Blog/BlogMain";
 import BlogPageHero from "../../../../components/Blog/BlogPageHero";
 import MainForm from "../../../../components/MainForm";
 import {
+  Telecommunication,
   useTelecommunicationCardQuery,
-  useTelecommunicationQuery,
 } from "../../../../types";
-import { useRouter } from "next/router";
 
 function Posts() {
   const { data, loading, error } = useTelecommunicationCardQuery();
@@ -25,7 +27,24 @@ function Posts() {
   );
 }
 
-export default function App() {
+interface IProps {
+  data: Telecommunication;
+}
+
+export const getStaticProps: GetStaticProps = async () => {
+  const prisma = new PrismaClient();
+  const data = await prisma?.telecommunication.findUnique({
+    where: {
+      id: "631db7e4628acdf2748fc17f",
+    },
+  });
+  return {
+    props: { data },
+    revalidate: 10,
+  };
+};
+
+export default function App({ data }: IProps) {
   const [showForm, setShowForm] = useState(false);
   const [edit, setEdit] = useState(false);
   const [add, setAdd] = useState(false);
@@ -48,24 +67,14 @@ export default function App() {
     setEdit(true);
   };
 
-  const { data } = useTelecommunicationQuery({
-    variables: {
-      id: "631db7e4628acdf2748fc17f",
-    },
-  });
-
-  console.log(data?.telecommunication?.category);
+  console.log(data?.category);
   return (
     <>
       {/* <Crubs /> */}
-      <BlogMain
-        data={data?.telecommunication}
-        handleEdit={handleEdit}
-        handleAdd={handleAdd}
-      />
+      <BlogMain data={data} handleEdit={handleEdit} handleAdd={handleAdd} />
       {showForm && (
         <MainForm
-          details={data?.telecommunication}
+          details={data}
           add={add}
           edit={edit}
           handleClose={() => setShowForm(false)}
