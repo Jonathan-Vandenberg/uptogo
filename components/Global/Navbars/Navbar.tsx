@@ -3,9 +3,6 @@ import { useRouter } from "next/router";
 import { NextPage } from "next/types";
 import { useEffect, useState } from "react";
 import uptogoFavicon from "../../../public/uptogoFavicon.png";
-import CompareDropdown from "./Dropdowns/CompareDropdown";
-import HouseholdDropdown from "./Dropdowns/Majors";
-import SMEDropdown from "./Dropdowns/SMEDropdown";
 
 import { motion } from "framer-motion";
 import Link from "next/link";
@@ -13,11 +10,13 @@ import { FaHeart, FaMobileAlt, FaRegQuestionCircle } from "react-icons/fa";
 import { HiOutlineLocationMarker } from "react-icons/hi";
 import NavbarTop from "./NavbarTop";
 import AuthBtn from "../../UI/AuthBtn";
+import UnCollapassedMenu from "../Footer/UnCollapassedMenu";
+import UnCollapassedCourses from "../Footer/UnCollapassedCourses";
 
 const NavbarBottom: NextPage = () => {
   const [majorsDropdown, setMajorsDropdown] = useState(false);
-  const [sMEDropdown, setSMEDropdown] = useState(false);
-  const [corporateDropdown, setCorporateDropdown] = useState(false);
+  const [englishDropdown, setEnglishDropdown] = useState(false);
+  const [newsDropdown, setNewsDropdown] = useState(false);
 
   const [height, setHeight] = useState(0);
   const [fullBottomNav, setFullBottomNav] = useState(true);
@@ -39,15 +38,15 @@ const NavbarBottom: NextPage = () => {
 
   const handleCloseDropdowns = () => {
     setMajorsDropdown(false);
-    setSMEDropdown(false);
-    setCorporateDropdown(false);
+    setEnglishDropdown(false);
+    setNewsDropdown(false);
   };
 
   return (
     <>
       <NavbarTop onMouseEnter={handleCloseDropdowns} />
       <div
-        id="bottom-nav"
+        id=""
         className="sticky top-0 z-50 hidden bg-white border-b-4 border-orange lg:block"
         onMouseLeave={handleCloseDropdowns}
       >
@@ -56,21 +55,21 @@ const NavbarBottom: NextPage = () => {
             href={"/"}
             className="cursor-pointer flex items-center justify-start p-1 space-x-2"
           >
-            <>
+            <div className="cursor-pointer flex items-center justify-center space-x-3">
               <Image src={uptogoFavicon} width="42" height="42" alt="logo" />
               <p className="logoFont text-orange text-2xl">Uptogo</p>
-            </>
+            </div>
           </Link>
           <div className="flex items-center justify-evenly space-x-14">
             <div className="relative flex flex-col items-center justify-center">
               <div
-                id="retailLink"
-                key="retail"
+                id=""
+                key=""
                 className="cursor-pointer text-lg hover:text-iwanttoColor text-gray-800"
                 onMouseEnter={() => {
                   setMajorsDropdown(false);
-                  setSMEDropdown(false);
-                  setCorporateDropdown(false);
+                  setEnglishDropdown(false);
+                  setNewsDropdown(false);
                 }}
               >
                 Định Hướng
@@ -79,97 +78,70 @@ const NavbarBottom: NextPage = () => {
             <Link href={"/courses"}>
               <div className="relative flex flex-col items-center justify-center">
                 <div
-                  id="householdLink"
-                  key="household"
+                  id=""
+                  key=""
                   className="cursor-pointer text-lg hover:text-iwanttoColor text-gray-800"
                   onMouseEnter={() => {
                     setMajorsDropdown(true);
-                    setSMEDropdown(false);
-                    setCorporateDropdown(false);
+                    setEnglishDropdown(false);
+                    setNewsDropdown(false);
                   }}
                   onClick={() => {
                     setMajorsDropdown(!majorsDropdown);
-                    setSMEDropdown(false);
-                    setCorporateDropdown(false);
+                    setEnglishDropdown(false);
+                    setNewsDropdown(false);
                   }}
                 >
                   Ngành Học
                 </div>
-                {majorsDropdown && (
-                  <div
-                    id="diamond2"
-                    className="unhidden4 absolute z-20 h-3 w-3 translate-y-8 rotate-45 bg-gray-100 "
-                  />
-                )}
               </div>
             </Link>
             <div className="relative flex flex-col items-center justify-center">
               <div
-                id="smeLink"
-                key="sme"
+                id=""
+                key=""
                 className="cursor-pointer text-lg hover:text-iwanttoColor text-gray-800"
                 onMouseEnter={() => {
-                  setSMEDropdown(true);
+                  setEnglishDropdown(true);
                   setMajorsDropdown(false);
-                  setCorporateDropdown(false);
+                  setNewsDropdown(false);
                 }}
                 onClick={() => {
                   setMajorsDropdown(false);
-                  setSMEDropdown(!sMEDropdown);
-                  setCorporateDropdown(false);
+                  setEnglishDropdown(!englishDropdown);
+                  setNewsDropdown(false);
                 }}
               >
                 Tiếng Anh
               </div>
-              {sMEDropdown && (
-                <div
-                  id="diamond3"
-                  className="unhidden4 absolute z-20 h-3 w-3 translate-y-8 rotate-45 bg-gray-100 "
-                />
-              )}
-              {majorsDropdown && (
-                <HouseholdDropdown leave={() => setMajorsDropdown(false)} />
-              )}
-              {sMEDropdown && (
-                <SMEDropdown leave={() => setSMEDropdown(false)} />
-              )}
-              {corporateDropdown && (
-                <CompareDropdown leave={() => setCorporateDropdown(false)} />
-              )}
             </div>
             <div className="relative flex flex-col items-center justify-center">
               <div
-                id="corporateLink"
-                key="corporate"
+                id=""
+                key=""
                 className="cursor-pointer text-lg hover:text-iwanttoColor text-gray-800"
                 onMouseEnter={() => {
-                  setCorporateDropdown(true);
+                  setNewsDropdown(true);
                   setMajorsDropdown(false);
-                  setSMEDropdown(false);
+                  setEnglishDropdown(false);
                 }}
                 onClick={() => {
                   setMajorsDropdown(false);
-                  setSMEDropdown(false);
-                  setCorporateDropdown(!corporateDropdown);
+                  setEnglishDropdown(false);
+                  setNewsDropdown(!newsDropdown);
                   router.push("/blogs");
                 }}
               >
                 Tin Tức
               </div>
-              {corporateDropdown && (
-                <div
-                  id="diamond4"
-                  className="unhidden4 absolute z-20 h-3 w-3 translate-y-8 rotate-45 bg-gray-100"
-                />
-              )}
             </div>
-            <Link key="vp_bank" href={"/compare"}>
+            <Link key="" href={"/compare"}>
               <p
                 className="cursor-pointer text-lg hover:text-iwanttoColor text-gray-800"
                 onMouseEnter={() => {
-                  setCorporateDropdown(false);
+                  setNewsDropdown(false);
                   setMajorsDropdown(false);
-                  setSMEDropdown(false);
+                  setEnglishDropdown(false);
                 }}
               >
                 Sự Kiện
@@ -209,6 +181,20 @@ const NavbarBottom: NextPage = () => {
           )}
         </div>
         <div className="w-1/4"></div>
+        {englishDropdown && (
+          <div className="flex w-full items-start justify-center z-50 h-auto">
+            <div className="absolute z-50 w-full bg-white">
+              <UnCollapassedMenu />
+            </div>
+          </div>
+        )}
+        {majorsDropdown && (
+          <div className="flex w-full items-start justify-center z-50 h-auto">
+            <div className="absolute z-50 w-full bg-white">
+              <UnCollapassedCourses />
+            </div>
+          </div>
+        )}
       </div>
     </>
   );
