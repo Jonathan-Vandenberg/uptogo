@@ -5,9 +5,11 @@ import Image from "next/image";
 import Hero from "../components/HomePage/Hero";
 import Popup from "../components/UI/Popup";
 import BlogMain from "../components/Blog/BlogMain";
-import { useBlogPostQuery } from "../types";
+import { BlogPost, It, useBlogPostQuery } from "../types";
 import BlogHeader from "../components/Blog/BlogHeader";
 import CustomerReview from "../components/UI/CustomerReview";
+import { PrismaClient } from "@prisma/client";
+import { GetStaticProps } from "next";
 
 const customer = [
   {
@@ -28,15 +30,24 @@ const customer = [
   },
 ];
 
-export default function App() {
-  const { data } = useBlogPostQuery({
-    variables: {
+interface IProps {
+  data: BlogPost;
+}
+
+export const getStaticProps: GetStaticProps = async () => {
+  const prisma = new PrismaClient();
+  const data = await prisma?.blogPost.findUnique({
+    where: {
       id: "6315d649d375ad6ee10f6670",
     },
   });
+  return {
+    props: { data },
+    revalidate: 10,
+  };
+};
 
-  const TypedBlogData = data?.blogPost;
-
+export default function App({ data }: IProps) {
   return (
     <>
       <div className="md:px-10 p-4 md:py-10 md:p-0 md:mb-6 bg-body">
@@ -47,7 +58,7 @@ export default function App() {
       </h2>
       <div className="container mx-auto">
         <HomeMain />
-        <BlogHeader data={TypedBlogData} />
+        <BlogHeader data={data} />
         <div className="py-12 flex items-center justify-center">
           <Popup />
         </div>
