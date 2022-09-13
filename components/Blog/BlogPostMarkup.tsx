@@ -1,6 +1,10 @@
 import CheckIcon from "@mui/icons-material/Check";
-import { FaEdit } from "react-icons/fa";
-import { MdAddCircleOutline, MdDeleteForever } from "react-icons/md";
+import { FaEdit, FaLiraSign } from "react-icons/fa";
+import {
+  MdAddCircleOutline,
+  MdDeleteForever,
+  MdFormatListBulleted,
+} from "react-icons/md";
 import type {
   Ai,
   Blockchain,
@@ -18,6 +22,8 @@ import type {
 } from "../../types";
 import { useSession } from "next-auth/react";
 import { useState } from "react";
+import { BsBullseye, BsList, BsListStars } from "react-icons/bs";
+import { AiTwotoneCheckCircle } from "react-icons/ai";
 
 interface IProps {
   data:
@@ -51,11 +57,31 @@ export default function BlogPostMarkup({
   session?.user?.email === "jonvdberg8@gmail.com" ? setShowAdmin(true) : null;
   return (
     <div>
-      <ul className="border-b-2 border-gray-200 py-6 flex flex-col items-start justify-start space-y-2">
-        <li className="text-xl text-gray-700">{data?.tableContents1}</li>
-        <li className="text-gray-700 text-xl">{data?.tableContents2}</li>
-        <li className="text-xl text-gray-700">{data?.tableContents3}</li>
-        <li className="text-gray-700 text-xl">{data?.tableContents4}</li>
+      <ul className="border-y-2 border-gray-200 py-6 flex flex-col items-start justify-start space-y-2">
+        <li className="text-lg text-gray-700 flex items-center justify-between space-x-2">
+          <div>
+            <AiTwotoneCheckCircle size={10} color="orange" />
+          </div>
+          <p>{data?.tableContents1}</p>
+        </li>
+        <li className="text-lg text-gray-700 flex items-center justify-between space-x-2">
+          <div>
+            <AiTwotoneCheckCircle size={10} color="orange" />
+          </div>
+          <p>{data?.tableContents2}</p>
+        </li>
+        <li className="text-lg text-gray-700 flex items-center justify-between space-x-2">
+          <div>
+            <AiTwotoneCheckCircle size={10} color="orange" />
+          </div>
+          <p>{data?.tableContents3}</p>
+        </li>
+        <li className="text-lg text-gray-700 flex items-center justify-between space-x-2">
+          <div>
+            <AiTwotoneCheckCircle size={10} color="orange" />
+          </div>
+          <p>{data?.tableContents4}</p>
+        </li>
       </ul>
 
       <div className="flex-col space-y-8 py-6">
@@ -108,8 +134,14 @@ export default function BlogPostMarkup({
       <p className="text-gray-600 py-4 text-xl">{data?.conclusion1}</p>
       <p className="text-gray-600 py-4 text-xl">{data?.conclusion2}</p>
       <p className="text-gray-600 py-4 text-xl">{data?.conclusion3}</p>
+      {data?.reference1 && (
+        <p className="text-gray-500 py-4 text">Reference: {data?.reference1}</p>
+      )}
+      {data?.reference2 && (
+        <p className="text-gray-500 py-4 text">Reference: {data?.reference2}</p>
+      )}
       {showAdmin && (
-        <div className="flex space-x-5 justify-center items-center">
+        <div className="flex space-x-5 justify-center items-center py-6">
           <div className="flex items-center space-x-1" onClick={handleEdit}>
             <div className="text-xl">
               <FaEdit size={25} className="text-orange" />

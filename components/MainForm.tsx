@@ -39,6 +39,8 @@ import {
   It,
 } from "../types";
 import { options } from "../lib/categories";
+import { BsPlus } from "react-icons/bs";
+import { motion } from "framer-motion";
 
 interface IProps {
   details:
@@ -596,7 +598,7 @@ const AddClientForm = ({ details, add, edit, handleClose }: IProps) => {
           />
         </div>
 
-        <div className="px-8 flex items-start space-y-3 justify-center flex-col">
+        <div className="px-8 flex items-start space-y-3 justify-center flex-col pb-10">
           <input
             id="reference2"
             value={reference2 as string}
@@ -606,11 +608,22 @@ const AddClientForm = ({ details, add, edit, handleClose }: IProps) => {
           />
         </div>
 
-        <div className="w-full flex items-center justify-center pt-10">
-          <button type="submit" className="px-10 h-10 rounded-full bg-white">
-            Add
+        <motion.div
+          whileHover={{
+            scale: 1.03,
+            transition: { duration: 0.2 },
+          }}
+          whileTap={{ scale: 0.98 }}
+          className="flex items-center justify-center border-green-600"
+        >
+          <button
+            type="submit"
+            className="flex items-center justify-between space-x-2 px-4 h-10 rounded-full text-green-500 bg-white border-[1px] border-green-500"
+          >
+            <BsPlus size={25} className="text-green-500 hover:text-white" />
+            Update
           </button>
-        </div>
+        </motion.div>
       </form>
     </div>
   );
