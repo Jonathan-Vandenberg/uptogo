@@ -11,6 +11,7 @@ import MainForm from "../../../components/MainForm";
 import { It } from "../../../types";
 import { PrismaClient } from "@prisma/client";
 import { GetStaticProps } from "next";
+import CoursesMainPage from "../../../components/Courses/CoursesMainPage";
 
 const cardData = [
   {
@@ -101,33 +102,11 @@ export default function App({ data }: IProps) {
 
   return (
     <div className="max-w-[678px] md:max-w-[900px] mx-auto container">
-      <div className="">
-        <Image
-          src={image}
-          width={300}
-          height={150}
-          alt="IT image"
-          layout="responsive"
-        />
-      </div>
-      <div>
-        <h1 className="text-3xl logoFont text-gray-700 py-6 px-4 md:px-0">
-          {data?.title}
-        </h1>
-        <h2 className="text-2xl text-gray-700 pb-6 px-4 md:px-0">
-          {data?.subtitle1}
-        </h2>
-      </div>
-      <div className="p-4 md:p-0">
-        <BlogPostMarkup
-          handleAdd={handleAdd}
-          handleEdit={handleEdit}
-          data={data}
-        />
-      </div>
-      <h1 className="bg-body p-6 text-2xl logoFont text-darkBlue pb-8">
-        Information-Technology
-      </h1>
+      <CoursesMainPage
+        data={data}
+        handleEdit={handleEdit}
+        handleAdd={handleAdd}
+      />
       {showForm && (
         <div>
           <MainForm
