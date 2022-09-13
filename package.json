@@ -5,10 +5,10 @@
   "scripts": {
     "studio": "prisma studio",
     "dev": "next dev",
-    "build": "next build",
+    "build": "next build tailwindcss -i ./src/input.css -o ./dist/output.css",
     "start": "next start",
     "lint": "next lint",
-    "watch": "next build tailwindcss -i ./input.css -o ./dist/output.css --watch",
+    "watch": "next build tailwindcss -i ./src/input.css -o ./dist/output.css --watch",
     "codegen": "graphql-codegen --config codegen.yml"
   },
   "dependencies": {

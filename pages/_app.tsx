@@ -1,4 +1,4 @@
-import "../styles/input.css";
+import "../src/input.css";
 import { SessionProvider } from "next-auth/react";
 import type { AppProps } from "next/app";
 import { ApolloProvider } from "@apollo/client";
