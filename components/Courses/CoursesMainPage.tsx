@@ -16,6 +16,7 @@ import {
 import BlogPostMarkup from "../Blog/BlogPostMarkup";
 import image from "../../public/courseMain/Data_Management.jpeg";
 import Image from "next/image";
+import logo from "../../public/uptogoFavicon.png";
 
 interface IProps {
   data:
@@ -65,11 +66,14 @@ export default function BlogMain({ data, handleEdit, handleAdd }: IProps) {
         handleAdd={handleAdd}
       />
 
-      <div className="flex items-center justify-center">
+      <div className="flex items-center justify-center py-6">
         <Link href={"/contact"}>
-          <button className="text-center p-3 border-orange border-2 rounded-full text-orange hover:bg-orange hover:text-white">
-            Contact Us
-          </button>
+          <>
+            <button className="text-center font-semibold p-3 px-4 flex items-center justify-center space-x-2 border-orange border-2 rounded-full text-orange hover:bg-orange hover:text-white">
+              <Image src={logo} alt="logo" width={30} height={30} />
+              <p>Contact Us</p>
+            </button>
+          </>
         </Link>
       </div>
     </div>
