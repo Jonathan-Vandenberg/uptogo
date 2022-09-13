@@ -8,6 +8,7 @@ import {
   ComputerNetworking,
   DataManagement,
   GameProgramming,
+  It,
   MachineLearning,
   SoftwareDevelopment,
   Telecommunication,
@@ -20,6 +21,7 @@ import logo from "../../public/uptogoFavicon.png";
 
 interface IProps {
   data:
+    | It
     | BlogPost
     | Telecommunication
     | BusinessAnalysis
