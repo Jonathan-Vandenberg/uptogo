@@ -45,7 +45,7 @@ export const getStaticProps: GetStaticProps = async () => {
   };
 };
 
-export default function App() {
+export default function App({ data }: IProps) {
   const [showForm, setShowForm] = useState(false);
   const [edit, setEdit] = useState(false);
   const [add, setAdd] = useState(false);
@@ -68,24 +68,14 @@ export default function App() {
     setEdit(true);
   };
 
-  const { data } = useDataManagementQuery({
-    variables: {
-      id: "631db748628acdf2748fc16d",
-    },
-  });
-
-  console.log(data?.dataManagement?.category);
+  console.log(data?.category);
   return (
     <>
       {/* <Crubs /> */}
-      <BlogMain
-        data={data?.dataManagement}
-        handleEdit={handleEdit}
-        handleAdd={handleAdd}
-      />
+      <BlogMain data={data} handleEdit={handleEdit} handleAdd={handleAdd} />
       {showForm && (
         <MainForm
-          details={data?.dataManagement}
+          details={data}
           add={add}
           edit={edit}
           handleClose={() => setShowForm(false)}
