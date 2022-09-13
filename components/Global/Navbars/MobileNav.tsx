@@ -18,8 +18,7 @@ import faviconLogo from "../../../public/uptogoFavicon.png";
 import Link from "next/link";
 import { HiOutlineLocationMarker } from "react-icons/hi";
 import { useState } from "react";
-import logoWords from "../../../public/logoWords.png";
-import { GrSettingsOption } from "react-icons/gr";
+import { useSession, signIn, signOut } from "next-auth/react";
 
 const style = {
   position: "absolute" as "absolute",
@@ -41,6 +40,12 @@ const SideNavModal: NextPage = () => {
 
   const btnRef = React.useRef<HTMLButtonElement>();
   const menuRef = React.useRef<HTMLDivElement>();
+
+  const { data: session, status } = useSession();
+
+  if (status === "loading") {
+    return <div className="auth-btn">loading...</div>;
+  }
 
   const openMenu = () => {
     setOpen(true);
@@ -156,17 +161,17 @@ const SideNavModal: NextPage = () => {
         </div>
       </Link>
 
-      <Link href={"/"}>
-        <div
-          className="flex cursor-pointer items-center justify-start space-x-2 px-4"
-          onClick={() => handleClose()}
-        >
-          <div className="text-xl">
-            <MdAdminPanelSettings />
-          </div>
-          <p>Admin</p>
+      <div
+        className="flex cursor-pointer items-center justify-start space-x-2 px-4"
+        onClick={() => {
+          handleClose(), signIn();
+        }}
+      >
+        <div className="text-xl">
+          <MdAdminPanelSettings />
         </div>
-      </Link>
+        <p>Admin Login</p>
+      </div>
     </div>
   );
 

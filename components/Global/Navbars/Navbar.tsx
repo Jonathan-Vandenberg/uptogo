@@ -52,16 +52,15 @@ const NavbarBottom: NextPage = () => {
         onMouseLeave={handleCloseDropdowns}
       >
         <div className="relative flex h-16 items-center justify-around">
-          <div className="cursor-pointer flex items-center justify-start p-1 space-x-2">
-            <Image
-              src={uptogoFavicon}
-              width="42"
-              height="42"
-              alt="logo"
-              onClick={() => router.push("/")}
-            />
-            <p className="logoFont text-orange text-2xl">Uptogo</p>
-          </div>
+          <Link
+            href={"/"}
+            className="cursor-pointer flex items-center justify-start p-1 space-x-2"
+          >
+            <>
+              <Image src={uptogoFavicon} width="42" height="42" alt="logo" />
+              <p className="logoFont text-orange text-2xl">Uptogo</p>
+            </>
+          </Link>
           <div className="flex items-center justify-evenly space-x-14">
             <div className="relative flex flex-col items-center justify-center">
               <div

@@ -19,7 +19,7 @@ export default function App() {
           </p>
         </Link>
       </div>
-      <div className="h-full w-full col-span-2 p-20">
+      <div className="h-full w-full col-span-2 px-36">
         <Image
           src={logo}
           alt="blog Image"

@@ -10,6 +10,7 @@ import { useState } from "react";
 import MainForm from "../../../components/MainForm";
 import { It } from "../../../types";
 import { PrismaClient } from "@prisma/client";
+import { GetStaticProps } from "next";
 
 const cardData = [
   {
@@ -62,7 +63,7 @@ interface IProps {
   data: It;
 }
 
-export async function getStaticProps() {
+export const getStaticProps: GetStaticProps = async () => {
   const prisma = new PrismaClient();
   const data = await prisma?.it.findUnique({
     where: {
@@ -73,7 +74,7 @@ export async function getStaticProps() {
     props: { data },
     revalidate: 10,
   };
-}
+};
 
 export default function App({ data }: IProps) {
   const [showForm, setShowForm] = useState(false);
@@ -99,7 +100,7 @@ export default function App({ data }: IProps) {
   };
 
   return (
-    <div className="max-w-[678px] md:max-w-[900px] mx-auto">
+    <div className="max-w-[678px] md:max-w-[900px] mx-auto container">
       <div className="">
         <Image
           src={image}
@@ -117,21 +118,25 @@ export default function App({ data }: IProps) {
           {data?.subtitle1}
         </h2>
       </div>
-      <BlogPostMarkup
-        handleAdd={handleAdd}
-        handleEdit={handleEdit}
-        data={data}
-      />
+      <div className="p-4 md:p-0">
+        <BlogPostMarkup
+          handleAdd={handleAdd}
+          handleEdit={handleEdit}
+          data={data}
+        />
+      </div>
       <h1 className="bg-body p-6 text-2xl logoFont text-darkBlue pb-8">
         Information-Technology
       </h1>
       {showForm && (
-        <MainForm
-          details={data}
-          add={add}
-          edit={edit}
-          handleClose={() => setShowForm(false)}
-        />
+        <div>
+          <MainForm
+            details={data}
+            add={add}
+            edit={edit}
+            handleClose={() => setShowForm(false)}
+          />
+        </div>
       )}
       <CoursesNarrowCards cardData={cardData} />
     </div>

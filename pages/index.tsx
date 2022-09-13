@@ -8,6 +8,7 @@ import BlogMain from "../components/Blog/BlogMain";
 import { useBlogPostQuery } from "../types";
 import BlogHeader from "../components/Blog/BlogHeader";
 import CustomerReview from "../components/UI/CustomerReview";
+import CourseSlider from "../components/UI/IconSlider";
 
 const customer = [
   {
@@ -45,6 +46,7 @@ export default function App() {
       <h2 className="text-red-600 text-3xl text-center bg-red-100 py-5 logoFont">
         web đang xây dựng
       </h2>
+      <CourseSlider />
       <div className="container mx-auto">
         <HomeMain />
         <BlogHeader data={TypedBlogData} />
