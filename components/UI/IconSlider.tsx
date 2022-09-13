@@ -33,24 +33,25 @@ const CourseSlider = () => {
 
   const renderSlides = () =>
     Courses.map((el, i) => (
-      <Link href={el.link} key={i}>
-        <motion.div
-          whileHover={{
-            scale: 1.03,
-            y: -10,
-            transition: { duration: 0.3 },
-          }}
-          whileTap={{ scale: 0.97 }}
-          className="flex cursor-pointer flex-col items-center justify-center p-4"
-        >
+      <motion.div
+        key={i}
+        whileHover={{
+          scale: 1.03,
+          y: -10,
+          transition: { duration: 0.3 },
+        }}
+        whileTap={{ scale: 0.97 }}
+        className="flex cursor-pointer flex-col items-center justify-center p-4"
+      >
+        <Link href={el.link}>
           <div className="flex items-center justify-center rounded-2xl hover:drop-shadow-md">
             <Image src={el.image} width={60} height={60} alt="Courses" />
           </div>
           <p className="pt-2 text-center  text-slate-600 xl:text-lg">
             {el.title}
           </p>
-        </motion.div>
-      </Link>
+        </Link>
+      </motion.div>
     ));
 
   return (
