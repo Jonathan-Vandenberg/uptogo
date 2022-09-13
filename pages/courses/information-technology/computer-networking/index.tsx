@@ -1,15 +1,14 @@
+import { PrismaClient } from "@prisma/client";
+import { GetStaticProps } from "next";
+import { useRouter } from "next/router";
 import { useState } from "react";
-import BlogMain from "../../../../components/Blog/BlogMain";
 import BlogPageHero from "../../../../components/Blog/BlogPageHero";
+import CoursesMainPage from "../../../../components/Courses/CoursesMainPage";
 import MainForm from "../../../../components/MainForm";
 import {
   ComputerNetworking,
   useComputerNetworkingCardQuery,
-  useComputerNetworkingQuery,
 } from "../../../../types";
-import { useRouter } from "next/router";
-import { PrismaClient } from "@prisma/client";
-import { GetStaticProps } from "next";
 
 function Posts() {
   const { data, loading, error } = useComputerNetworkingCardQuery();
@@ -72,7 +71,11 @@ export default function App({ data }: IProps) {
   return (
     <>
       {/* <Crubs /> */}
-      <BlogMain data={data} handleEdit={handleEdit} handleAdd={handleAdd} />
+      <CoursesMainPage
+        data={data}
+        handleEdit={handleEdit}
+        handleAdd={handleAdd}
+      />
       {showForm && (
         <MainForm
           details={data}
