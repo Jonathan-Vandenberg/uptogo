@@ -12,7 +12,6 @@ import Course3 from "../../public/courseIcons/management.png";
 import Course4 from "../../public/courseIcons/competence.png";
 import Course5 from "../../public/courseIcons/healthcare.png";
 import Course6 from "../../public/courseIcons/hospitality.png";
-import Link from "next/link";
 
 const Courses = [
   { image: Course1, title: "IT", link: "/courses/information-technology" },
