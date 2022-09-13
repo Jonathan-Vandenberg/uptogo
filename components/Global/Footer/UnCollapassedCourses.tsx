@@ -23,7 +23,7 @@ const it = [
   },
   {
     subject: "Game Programming",
-    link: "/courses/information-technology/game-programmimg",
+    link: "/courses/information-technology/game-programming",
   },
   {
     subject: "Website Developmen",
@@ -43,7 +43,7 @@ const it = [
   },
   {
     subject: "Artificial Intelligence",
-    link: "/courses/artificial-intelligence",
+    link: "/courses/information-technology/artificial-intelligence",
   },
 ];
 
