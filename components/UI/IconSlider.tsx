@@ -41,7 +41,7 @@ const CourseSlider = () => {
           transition: { duration: 0.3 },
         }}
         whileTap={{ scale: 0.97 }}
-        className="flex cursor-pointer flex-col items-center justify-center p-4"
+        className="flex cursor-pointer items-center justify-center p-4"
       >
         <div className="flex items-center justify-center rounded-2xl hover:drop-shadow-md">
           <Image src={el.image} width={60} height={60} alt="Courses" />
