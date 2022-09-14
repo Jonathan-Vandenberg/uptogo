@@ -86,7 +86,7 @@ export default function App({ data }: IProps) {
   const { asPath } = useRouter();
 
   function Crubs() {
-    return <p>home{asPath}</p>;
+    return <p>home!{asPath}</p>;
   }
 
   const handleAdd = () => {
