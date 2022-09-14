@@ -43,10 +43,6 @@ const SideNavModal: NextPage = () => {
 
   const { data: session, status } = useSession();
 
-  if (status === "loading") {
-    return <div className="auth-btn">loading...</div>;
-  }
-
   const openMenu = () => {
     setOpen(true);
     btnRef?.current?.classList.toggle("open");
