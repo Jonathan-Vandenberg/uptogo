@@ -47,6 +47,18 @@ const it = [
   },
 ];
 
+const design = [
+  { subject: "Fashion Design", link: "/" },
+  { subject: "Landscape", link: "/" },
+  { subject: "Music & Audio", link: "/" },
+  { subject: "Film & Media", link: "/" },
+  { subject: "Graphic Design", link: "/" },
+  { subject: "Interior Design", link: "/" },
+  { subject: "Digital Media", link: "/" },
+  { subject: "Acting", link: "/" },
+  { subject: "Animation 3D", link: "/" },
+];
+
 interface IProps {
   handleCloseDropdowns: () => void;
 }
@@ -81,36 +93,24 @@ const App = ({ handleCloseDropdowns }: IProps) => {
         <div className="flex items-center justify-between">
           <p className="text-md py-3 font-semibold">Design</p>
         </div>
-        <p className="cursor-pointer py-1 text-sm text-gray-600 hover:text-iwanttoColor">
-          Fashion Design
-        </p>
-        <p className="cursor-pointer py-1 text-sm  text-gray-600 hover:text-iwanttoColor ">
-          Landscape
-        </p>
-        <p className="cursor-pointer py-1 text-sm  text-gray-600 hover:text-iwanttoColor ">
-          Music & Audio
-        </p>
-        <p className="cursor-pointer py-1 text-sm  text-gray-600 hover:text-iwanttoColor ">
-          Film & Media
-        </p>
-        <p className="cursor-pointer py-1 text-sm  text-gray-600 hover:text-iwanttoColor ">
-          Graphic Design
-        </p>
-        <p className="cursor-pointer py-1 text-sm  text-gray-600 hover:text-iwanttoColor ">
-          Interior Design
-        </p>
-        <p className="cursor-pointer py-1 text-sm  text-gray-600 hover:text-iwanttoColor ">
-          Digital Media
-        </p>
-        <p className="cursor-pointer py-1 text-sm  text-gray-600 hover:text-iwanttoColor ">
-          Digital Media
-        </p>
-        <p className="cursor-pointer py-1 text-sm  text-gray-600 hover:text-iwanttoColor ">
-          Acting
-        </p>
-        <p className="cursor-pointer py-1 text-sm  text-gray-600 hover:text-iwanttoColor ">
-          Animation 3D
-        </p>
+        <div className="flex items-start justify-center flex-col">
+          {design.map((item, i) => (
+            <div
+              onClick={() => handleCloseDropdowns()}
+              key={i}
+              className="cursor-pointer hover:bg-sky-100 w-full h-full"
+            >
+              <Link
+                href={item.link}
+                className="cursor-pointer text-sm text-gray-600 hover:text-iwanttoColor"
+              >
+                <p className="text-gray-600 hover:text-black p-2">
+                  {item.subject}
+                </p>
+              </Link>
+            </div>
+          ))}
+        </div>
       </div>
       <div className="col-span-1">
         <div className="flex items-center justify-between">

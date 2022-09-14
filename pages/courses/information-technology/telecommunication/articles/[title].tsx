@@ -32,6 +32,14 @@ export default function Blog() {
     },
   });
 
+  if (loading) {
+    return console.log("loading");
+  }
+
+  if (error) {
+    return console.log(error.message);
+  }
+
   return (
     <>
       <BlogMain
