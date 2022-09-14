@@ -101,9 +101,11 @@ const SideNavModal: NextPage = () => {
         </div>
       </div>
 
-      <Link href={"/blogs"}>
-        <p className="cursor-pointer pl-4 pb-1 font-semibold">News</p>
-      </Link>
+      <div onClick={() => handleClose()}>
+        <Link href={"/blogs"}>
+          <p className="cursor-pointer pl-4 pb-1 font-semibold">News</p>
+        </Link>
+      </div>
 
       <Link href={"/"}>
         <div
@@ -142,7 +144,10 @@ const SideNavModal: NextPage = () => {
       </div>
 
       <Link href={""}>
-        <div className="flex cursor-pointer items-center justify-start space-x-2 px-4">
+        <div
+          className="flex cursor-pointer items-center justify-start space-x-2 px-4"
+          onClick={() => handleClose()}
+        >
           <div className="text-xl">
             <HiOutlineLocationMarker />
           </div>
