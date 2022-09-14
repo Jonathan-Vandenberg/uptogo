@@ -1234,11 +1234,28 @@ const resolvers: Resolvers = {
 }
 }
 
+export type CORSOptions =
+  | {
+      origin?: string[] | string
+      methods?: string[]
+      allowedHeaders?: string[]
+      exposedHeaders?: string[]
+      credentials?: boolean
+      maxAge?: number
+    }
+  | false
+
 const server = createServer<{req: NextApiRequest; res: NextApiResponse;}>({
   endpoint: "/api",
   schema: {
     typeDefs,
     resolvers
+  },
+  cors: {
+    origin: 'https://www.uptogo.org',
+    credentials: true,
+    allowedHeaders: ['X-Custom-Header'],
+    methods: ['POST'],
   },
   context: createContext()
 })
