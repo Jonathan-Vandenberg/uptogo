@@ -11,7 +11,7 @@ import logo from "../../public/uptogoFavicon.png";
 export default function PopupCard() {
   return (
     <div className="min-w-[340px] max-w-[680px] flex items-center justify-center flex-col relative rounded-xl">
-      <div className="p-2 rounded-full bg-white shadow-md">
+      <div className="p-2 rounded-full bg-white shadow-md flex items-center justify-center">
         <Image src={logo} alt="logo" width={60} height={60} />
       </div>
       <div className="px-6 md:px-12 pb-4 pt-16 flex items-center justify-center flex-col space-y-10">

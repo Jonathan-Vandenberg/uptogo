@@ -163,7 +163,10 @@ export default function App({ data }: IProps) {
         ("/courses/information-technology/computer-networking/articles/" +
           data?.id) as string
       );
-    } else setSlug("/blog/" + data?.id);
+    }
+    if (c === CategoriesEnum.Blog) {
+      setSlug("/blog/" + data?.id);
+    }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 

@@ -1,10 +1,9 @@
 import CheckIcon from "@mui/icons-material/Check";
-import { FaEdit, FaLiraSign } from "react-icons/fa";
-import {
-  MdAddCircleOutline,
-  MdDeleteForever,
-  MdFormatListBulleted,
-} from "react-icons/md";
+import { useSession } from "next-auth/react";
+import { useState } from "react";
+import { AiTwotoneCheckCircle } from "react-icons/ai";
+import { FaEdit } from "react-icons/fa";
+import { MdAddCircleOutline, MdDeleteForever } from "react-icons/md";
 import type {
   Ai,
   Blockchain,
@@ -20,10 +19,6 @@ import type {
   Telecommunication,
   WebDevelopment,
 } from "../../types";
-import { useSession } from "next-auth/react";
-import { useState } from "react";
-import { BsBullseye, BsList, BsListStars } from "react-icons/bs";
-import { AiTwotoneCheckCircle } from "react-icons/ai";
 import EmailButton from "../UI/EmailButton";
 
 interface IProps {
