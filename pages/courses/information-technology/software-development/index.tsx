@@ -1,17 +1,14 @@
-import { useState } from "react";
-import BlogMain from "../../../../components/Blog/BlogMain";
-import BlogPageHero from "../../../../components/Blog/BlogPageHero";
-import MainForm from "../../../../components/MainForm";
-import {
-  It,
-  SoftwareDevelopment,
-  useSoftwareDevelopmentCardQuery,
-  useSoftwareDevelopmentQuery,
-} from "../../../../types";
-import { useRouter } from "next/router";
-import CoursesMainPage from "../../../../components/Courses/CoursesMainPage";
 import { PrismaClient } from "@prisma/client";
 import { GetStaticProps } from "next";
+import { useRouter } from "next/router";
+import { useState } from "react";
+import BlogPageHero from "../../../../components/Blog/BlogPageHero";
+import CoursesMainPage from "../../../../components/Courses/CoursesMainPage";
+import MainForm from "../../../../components/MainForm";
+import {
+  SoftwareDevelopment,
+  useSoftwareDevelopmentCardQuery,
+} from "../../../../types";
 
 function Posts() {
   const { data, loading, error } = useSoftwareDevelopmentCardQuery();

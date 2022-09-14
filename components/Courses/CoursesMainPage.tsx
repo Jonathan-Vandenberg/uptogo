@@ -54,7 +54,7 @@ export default function BlogMain({ data, handleEdit, handleAdd }: IProps) {
       </div>
       <div className="pb-8">
         <Image
-          src={data?.mainImage as string}
+          src={data?.mainImage || "https://picsum.photos/id/120/600/338"}
           width={600}
           height={339}
           alt="image"
