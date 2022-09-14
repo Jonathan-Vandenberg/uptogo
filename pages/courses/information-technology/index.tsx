@@ -71,6 +71,7 @@ export const getStaticProps: GetStaticProps = async () => {
       id: "631f0640cb1d9c50bf6dd5a7",
     },
   });
+
   return {
     props: { data },
     revalidate: 3600,
@@ -102,22 +103,40 @@ export default function App({ data }: IProps) {
 
   return (
     <div className="max-w-[678px] md:max-w-[900px] mx-auto container">
-      <CoursesMainPage
-        data={data}
-        handleEdit={handleEdit}
-        handleAdd={handleAdd}
-      />
-      {showForm && (
+      {data ? (
+        <CoursesMainPage
+          data={data}
+          handleEdit={handleEdit}
+          handleAdd={handleAdd}
+        />
+      ) : (
         <div>
-          <MainForm
-            details={data}
-            add={add}
-            edit={edit}
-            handleClose={() => setShowForm(false)}
-          />
+          <p>Loading...</p>
         </div>
       )}
-      <CoursesNarrowCards cardData={cardData} />
+      {showForm && (
+        <div>
+          {data ? (
+            <MainForm
+              details={data}
+              add={add}
+              edit={edit}
+              handleClose={() => setShowForm(false)}
+            />
+          ) : (
+            <div>
+              <p>Loading...</p>
+            </div>
+          )}
+        </div>
+      )}
+      {data ? (
+        <CoursesNarrowCards cardData={cardData} />
+      ) : (
+        <div>
+          <p>Loading...</p>
+        </div>
+      )}
     </div>
   );
 }

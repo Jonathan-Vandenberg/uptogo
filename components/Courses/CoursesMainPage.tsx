@@ -42,7 +42,7 @@ interface IProps {
 
 export default function BlogMain({ data, handleEdit, handleAdd }: IProps) {
   return (
-    <div className="px-5 container max-w-[678px] md:max-w-[900px] mx-auto pt-6 md:pt-12">
+    <div className="container max-w-[678px] md:max-w-[900px] mx-auto pt-6 md:pt-12">
       <div className="pb-6 md:pb-10">
         <div>
           <div className="logoFont text-darkBlue text-2xl pb-3 md:text-3xl lg:text-4xl">
@@ -57,26 +57,28 @@ export default function BlogMain({ data, handleEdit, handleAdd }: IProps) {
         <Image
           src={image}
           width={600}
-          height={250}
+          height={290}
           alt="image"
           layout="responsive"
         />
       </div>
-      <BlogPostMarkup
-        data={data}
-        handleEdit={handleEdit}
-        handleAdd={handleAdd}
-      />
+      <div className="px-5 md:px-0">
+        <BlogPostMarkup
+          data={data}
+          handleEdit={handleEdit}
+          handleAdd={handleAdd}
+        />
 
-      <div className="flex items-center justify-center py-6">
-        <Link href={"/contact"}>
-          <>
-            <button className="text-center font-semibold p-3 px-4 flex items-center justify-center space-x-2 border-orange border-2 rounded-full text-orange hover:bg-orange hover:text-white">
-              <Image src={logo} alt="logo" width={30} height={30} />
-              <p>Contact Us</p>
-            </button>
-          </>
-        </Link>
+        <div className="flex items-center justify-center py-6">
+          <Link href={"/contact"}>
+            <>
+              <button className="text-center font-semibold p-3 px-4 flex items-center justify-center space-x-2 border-orange border-2 rounded-full text-orange hover:bg-orange hover:text-white">
+                <Image src={logo} alt="logo" width={30} height={30} />
+                <p>Contact Us</p>
+              </button>
+            </>
+          </Link>
+        </div>
       </div>
     </div>
   );
