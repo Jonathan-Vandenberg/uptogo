@@ -131,7 +131,7 @@ const SideNavModal: NextPage = () => {
         </div>
       </div>
 
-      <div>
+      <div onClick={handleClose}>
         <Link href={"/favorites"}>
           <div className="flex cursor-pointer items-center justify-start space-x-2 px-4 pt-1">
             <div className="text-xl text-red-400">

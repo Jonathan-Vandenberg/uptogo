@@ -17,7 +17,7 @@ const Footer = () => {
   return (
     <>
       <motion.div
-        className="hidden pt-12 md:block"
+        className="hidden pt-6 md:block"
         initial={{ opacity: 0 }}
         whileInView={{
           opacity: 1,
@@ -59,12 +59,10 @@ const Footer = () => {
       </motion.div>
       <MobileFooterHeader />
       <div className="bg-body">
-        <div className="">
-          <div className="md:hidden">
-            <CollapseMenus handleStepper={function (): void {}} />
-          </div>
-          <UnCollapassedMenu />
+        <div className="md:hidden">
+          <CollapseMenus handleStepper={function (): void {}} />
         </div>
+        <UnCollapassedMenu />
         <div className="flex flex-col items-center justify-center space-y-6 py-8 px-28 lg:flex lg:flex-row lg:items-center lg:justify-evenly lg:space-y-0 lg:space-x-6">
           <div className="hover:cursor-pointer">
             <Image
@@ -134,11 +132,11 @@ const Footer = () => {
 export default Footer;
 
 const MobileFooterHeader = () => (
-  <div className="pt-12 md:hidden">
+  <div className="pt-0 md:hidden">
     <div className="h-[2px] bg-gradient-to-r from-startColor to-endColor"></div>
     <div className="drop-shadow lg:flex lg:items-center lg:justify-evenly">
       <div className="flex items-center justify-center p-6">
-        <div className="p-3 text-2xl">
+        <div className="p-3 text-2xl text-green-500">
           <BsFillTelephoneOutboundFill />
         </div>
         <p className="p-3 text-xl font-bold text-iwanttoColor">1900545415</p>

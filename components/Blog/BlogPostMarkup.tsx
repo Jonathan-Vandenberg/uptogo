@@ -24,6 +24,7 @@ import { useSession } from "next-auth/react";
 import { useState } from "react";
 import { BsBullseye, BsList, BsListStars } from "react-icons/bs";
 import { AiTwotoneCheckCircle } from "react-icons/ai";
+import EmailButton from "../UI/EmailButton";
 
 interface IProps {
   data:
@@ -89,7 +90,8 @@ export default function BlogPostMarkup({
         <p className="text-gray-600 text-xl">{data?.p2}</p>
         <p className="text-gray-600 text-xl">{data?.p3}</p>
       </div>
-      <h2 className="logoFont text-gray-600 text-2xl pb-3 pt-12 ">
+      <EmailButton />
+      <h2 className="logoFont text-gray-600 text-2xl pb-3 pt-6 ">
         {data?.subtitle2}
       </h2>
       <p className="text-gray-600 py-4 text-xl">{data?.p4}</p>

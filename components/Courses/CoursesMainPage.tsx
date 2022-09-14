@@ -16,7 +16,7 @@ import {
 } from "../../types";
 import BlogPostMarkup from "../Blog/BlogPostMarkup";
 import Image from "next/image";
-import logo from "../../public/uptogoFavicon.png";
+import EmailButton from "../UI/EmailButton";
 
 interface IProps {
   data:
@@ -41,7 +41,7 @@ interface IProps {
 
 export default function BlogMain({ data, handleEdit, handleAdd }: IProps) {
   return (
-    <div className="container max-w-[678px] md:max-w-[900px] mx-auto md:pt-12">
+    <div className="container max-w-[678px] md:max-w-[900px] mx-auto md:pt-12 pb-8">
       <div className="pb-6 px-6 md:px-0 md:pb-10">
         <div>
           <div className="logoFont text-darkBlue text-2xl md:text-3xl lg:text-4xl pb-6">
@@ -68,16 +68,7 @@ export default function BlogMain({ data, handleEdit, handleAdd }: IProps) {
           handleAdd={handleAdd}
         />
 
-        <div className="flex items-center justify-center py-6">
-          <Link href={"/contact"}>
-            <>
-              <button className="text-center font-semibold p-3 px-4 flex items-center justify-center space-x-2 border-orange border-2 rounded-full text-orange hover:bg-orange hover:text-white">
-                <Image src={logo} alt="logo" width={30} height={30} />
-                <p>Contact Us</p>
-              </button>
-            </>
-          </Link>
-        </div>
+        <EmailButton />
       </div>
     </div>
   );

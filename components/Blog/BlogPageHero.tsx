@@ -168,7 +168,7 @@ export default function App({ data }: IProps) {
   }, []);
 
   return (
-    <div className="px-5 max-w-[678px] md:max-w-[900px] mx-auto">
+    <div className="px-5 max-w-[678px] md:max-w-[900px] mx-auto w-full h-full">
       <div className="bg-body md:px-10 pb-6 md:p-0 md:my-6 md:flex-row flex-col-reverse flex items-center justify-center">
         <div className="bg-body px-4 flex items-start flex-col justify-start w-full h-full md:w-2/5 pt-6 md:pt-16">
           <p className="text-gray-400 -mb-4 md:-mb-6 md:text-lg">
