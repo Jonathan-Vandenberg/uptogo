@@ -136,13 +136,13 @@ export default function App({ data }: IProps) {
           )}
         </div>
       )}
-      {/* {data ? (
+      {data ? (
         <CoursesNarrowCards cardData={cardData} />
       ) : (
         <div>
           <p>Loading...</p>
         </div>
-      )} */}
+      )}
     </div>
   );
 }
