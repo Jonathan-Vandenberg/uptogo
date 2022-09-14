@@ -63,8 +63,6 @@ const NavbarBottom: NextPage = () => {
           <div className="flex items-center justify-evenly space-x-14">
             <div className="relative flex flex-col items-center justify-center">
               <div
-                id=""
-                key=""
                 className="cursor-pointer text-lg hover:text-iwanttoColor text-gray-800"
                 onMouseEnter={() => {
                   setMajorsDropdown(false);
@@ -78,8 +76,6 @@ const NavbarBottom: NextPage = () => {
             <Link href={"/courses"}>
               <div className="relative flex flex-col items-center justify-center">
                 <div
-                  id=""
-                  key=""
                   className="cursor-pointer text-lg hover:text-iwanttoColor text-gray-800"
                   onMouseEnter={() => {
                     setMajorsDropdown(true);
@@ -98,8 +94,6 @@ const NavbarBottom: NextPage = () => {
             </Link>
             <div className="relative flex flex-col items-center justify-center">
               <div
-                id=""
-                key=""
                 className="cursor-pointer text-lg hover:text-iwanttoColor text-gray-800"
                 onMouseEnter={() => {
                   setEnglishDropdown(true);
@@ -117,8 +111,6 @@ const NavbarBottom: NextPage = () => {
             </div>
             <div className="relative flex flex-col items-center justify-center">
               <div
-                id=""
-                key=""
                 className="cursor-pointer text-lg hover:text-iwanttoColor text-gray-800"
                 onMouseEnter={() => {
                   setNewsDropdown(true);
@@ -135,7 +127,7 @@ const NavbarBottom: NextPage = () => {
                 Tin Tức
               </div>
             </div>
-            <Link key="" href={"/compare"}>
+            <Link href={"/events"}>
               <p
                 className="cursor-pointer text-lg hover:text-iwanttoColor text-gray-800"
                 onMouseEnter={() => {

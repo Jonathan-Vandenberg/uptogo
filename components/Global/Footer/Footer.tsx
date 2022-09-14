@@ -10,6 +10,7 @@ import UnCollapassedMenu from "./UnCollapassedMenu";
 import facebookLogo from "../../../public/social-media/facebook.svg";
 import zaloLogo from "../../../public/social-media/zalo.svg";
 import youtubeLogo from "../../../public/social-media/youtube.svg";
+import Link from "next/link";
 
 const Footer = () => {
   const router = useRouter();
@@ -64,7 +65,7 @@ const Footer = () => {
         </div>
         <UnCollapassedMenu />
         <div className="flex flex-col items-center justify-center space-y-6 py-8 px-28 lg:flex lg:flex-row lg:items-center lg:justify-evenly lg:space-y-0 lg:space-x-6">
-          <div className="hover:cursor-pointer">
+          <Link href={"/"} className="hover:cursor-pointer">
             <Image
               src={fullLogo}
               width="120"
@@ -72,7 +73,7 @@ const Footer = () => {
               alt="logo"
               onClick={() => router.push("/")}
             />
-          </div>
+          </Link>
           <div className="space-y-1">
             <p className="whitespace-nowrap text-center text-sm font-semibold">
               Uptogo Joint-Stock Company (Uptogo)
@@ -94,14 +95,6 @@ const Footer = () => {
                 alt="facebook logo"
               />
             </a>
-            <div>
-              <Image
-                src={youtubeLogo}
-                width={35}
-                height={35}
-                alt="youtube logo"
-              />
-            </div>
             <div>
               <Image src={zaloLogo} width={35} height={35} alt="zalo logo" />
             </div>

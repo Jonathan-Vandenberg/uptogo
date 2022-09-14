@@ -5,7 +5,7 @@ import { FaAngleRight } from "react-icons/fa";
 
 const App = ({ handleStepper }: IStepper) => {
   return (
-    <div className="divide-y-2 divide-blue border-b-2 border-t-2 border-blue">
+    <div className="divide-y-2 divide-sky-900 border-b-2 border-t-2 border-blue">
       <Collapsible
         transitionTime={200}
         trigger={

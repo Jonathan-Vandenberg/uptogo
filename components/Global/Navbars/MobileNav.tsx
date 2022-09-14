@@ -65,7 +65,7 @@ const SideNavModal: NextPage = () => {
         }}
         className="flex items-center justify-between pt-2"
       >
-        <div className="cursor-pointer pl-4 font-semibold">Ngành Học</div>
+        <p className="cursor-pointer pl-4 font-semibold">Ngành Học</p>
         <div className="px-4">
           <MdOutlineArrowForwardIos />
         </div>
@@ -75,9 +75,7 @@ const SideNavModal: NextPage = () => {
         onClick={() => setShowHouseholdMenu(!showHouseholdMenu)}
         className="flex items-center justify-between"
       >
-        <div className="cursor-pointer pl-4 font-semibold">
-          Lorem HouseHold Business
-        </div>
+        <p className="cursor-pointer pl-4 font-semibold">Events</p>
         <div className="px-4">
           <MdOutlineArrowForwardIos />
         </div>
@@ -87,7 +85,7 @@ const SideNavModal: NextPage = () => {
         onClick={() => setShowSMEMenu(!showSMEMenu)}
         className="flex items-center justify-between"
       >
-        <div className="cursor-pointer pl-4 font-semibold">Lorem SMEs</div>
+        <p className="cursor-pointer pl-4 font-semibold">Visa</p>
         <div className="px-4">
           <MdOutlineArrowForwardIos />
         </div>
@@ -97,34 +95,35 @@ const SideNavModal: NextPage = () => {
         onClick={() => setShowCorporate(!showCorporate)}
         className="flex items-center justify-between"
       >
-        <div className="cursor-pointer pl-4 font-semibold">Lorem Corporate</div>
+        <p className="cursor-pointer pl-4 font-semibold">English</p>
         <div className="px-4">
           <MdOutlineArrowForwardIos />
         </div>
       </div>
 
-      <div className="cursor-pointer pl-4 pb-1 font-semibold">
-        Lorem VPBank Diamond
-      </div>
+      <Link href={"/blogs"}>
+        <p className="cursor-pointer pl-4 pb-1 font-semibold">News</p>
+      </Link>
 
-      <div className="flex cursor-pointer items-center justify-center">
-        <Image src={fullLogo} width="100" height="100" alt="logo" />
-      </div>
+      <Link href={"/"}>
+        <div
+          className="flex cursor-pointer items-center justify-center"
+          onClick={handleClose}
+        >
+          <Image src={fullLogo} width="100" height="100" alt="logo" />
+        </div>
+      </Link>
 
       <div className="flex flex-col items-center justify-evenly space-y-2 whitespace-nowrap">
         <div onClick={() => handleClose()}>
           <Link href="/blogs">
-            <a className="cursor-pointer px-4">Blog</a>
+            <a className="cursor-pointer px-4">News</a>
           </Link>
         </div>
 
         <Link href="/about">
           <a className="cursor-pointer px-4">About Us</a>
         </Link>
-
-        <div>
-          <a className="cursor-pointer px-4">News</a>
-        </div>
 
         <div>
           <a className="cursor-pointer px-4">Recruit</a>
@@ -137,7 +136,7 @@ const SideNavModal: NextPage = () => {
             <div className="text-xl text-red-400">
               <FaHeart />
             </div>
-            <p>Favorites</p>
+            <p>My Favorites</p>
           </div>
         </Link>
       </div>
@@ -196,25 +195,27 @@ const SideNavModal: NextPage = () => {
           className="w-full cursor-pointer p-3 pl-6 font-semibold"
           onClick={() => handleClose()}
         >
-          <Link href={"/hospitality"}>Nhà hàng – Khách sạn (Hospitality)</Link>
+          <Link href={"/courses/hospitality"}>
+            Nhà hàng – Khách sạn (Hospitality)
+          </Link>
         </div>
         <div
           className="w-full cursor-pointer p-3 pl-6 font-semibold"
           onClick={() => handleClose()}
         >
-          <Link href={"/management"}>Quản Lý (Mangement)</Link>
+          <Link href={"/courses/management"}>Quản Lý (Mangement)</Link>
         </div>
         <div
           className="w-full cursor-pointer p-3 pl-6 font-semibold"
           onClick={() => handleClose()}
         >
-          <Link href={"/health"}>Sức khỏe (Health)</Link>
+          <Link href={"/courses/health"}>Sức khỏe (Health)</Link>
         </div>
         <div
           className="w-full cursor-pointer p-3 pl-6 font-semibold"
           onClick={() => handleClose()}
         >
-          <Link href={"/sports-trade"}>
+          <Link href={"/courses/sports-trade"}>
             Thương mại & Thể thao (Trade & Sports)
           </Link>
         </div>
@@ -222,7 +223,7 @@ const SideNavModal: NextPage = () => {
           className="w-full cursor-pointer p-3 pl-6 font-semibold"
           onClick={() => handleClose()}
         >
-          <Link href={"/design"}>Thiết kế (Design)</Link>
+          <Link href={"/courses/design"}>Thiết kế (Design)</Link>
         </div>
       </div>
     </div>
@@ -238,7 +239,7 @@ const SideNavModal: NextPage = () => {
           <MdOutlineArrowBackIos />
         </div>
         <div className=" p-2 text-xl font-semibold text-iwanttoColor">
-          Lorem
+          Events
         </div>
       </div>
 
@@ -265,9 +266,7 @@ const SideNavModal: NextPage = () => {
         <div className="p-3">
           <MdOutlineArrowBackIos />
         </div>
-        <div className=" p-2 text-xl font-semibold text-iwanttoColor">
-          Lorem
-        </div>
+        <div className=" p-2 text-xl font-semibold text-iwanttoColor">Visa</div>
       </div>
 
       <div className="flex flex-col items-start justify-center">
@@ -315,7 +314,7 @@ const SideNavModal: NextPage = () => {
           <MdOutlineArrowBackIos />
         </div>
         <div className=" p-2 text-xl font-semibold text-iwanttoColor">
-          Lorem
+          English
         </div>
       </div>
 
@@ -350,16 +349,12 @@ const SideNavModal: NextPage = () => {
 
   return (
     <div className="sticky bg-blue top-0 z-40 flex items-center justify-between p-2 sm:px-4 lg:hidden">
-      <div className="ml-5 cursor-pointer flex items-center gap-3 justify-center">
-        <Image
-          src={faviconLogo}
-          width="45"
-          height="45"
-          alt="logo"
-          onClick={() => router.push("/")}
-        />
-        <p className="logoFont text-orange text-2xl">Uptogo</p>
-      </div>
+      <Link href={"/"}>
+        <div className="ml-5 cursor-pointer flex items-center gap-3 justify-center">
+          <Image src={faviconLogo} width="45" height="45" alt="logo" />
+          <p className="logoFont text-orange text-2xl">Uptogo</p>
+        </div>
+      </Link>
       <div className="flex h-full items-center justify-end space-x-6 mr-5">
         <div className="px-6 text-2xl text-white">
           <FaMobileAlt />
