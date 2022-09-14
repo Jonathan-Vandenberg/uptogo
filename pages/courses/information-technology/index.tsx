@@ -6,7 +6,7 @@ import { useState } from "react";
 import CoursesMainPage from "../../../components/Courses/CoursesMainPage";
 import CoursesNarrowCards from "../../../components/Courses/CoursesNarrowCards";
 import MainForm from "../../../components/MainForm";
-import { It } from "../../../types";
+import { It, useItQuery } from "../../../types";
 
 const cardData = [
   {
@@ -59,29 +59,35 @@ interface IProps {
   data: It;
 }
 
-export const getStaticProps: GetStaticProps = async () => {
-  const prisma = new PrismaClient();
-  const data = await prisma?.it?.findUnique({
-    where: {
-      id: "631f0640cb1d9c50bf6dd5a7",
-    },
-  });
+// export const getStaticProps: GetStaticProps = async () => {
+//   const prisma = new PrismaClient();
+//   const data = await prisma?.it?.findUnique({
+//     where: {
+//       id: "631f0640cb1d9c50bf6dd5a7",
+//     },
+//   });
 
-  if (!data) {
-    throw new GraphQLYogaError(`It with data not found.`, {
-      code: "IT_NOT_FOUND",
-    });
-  }
+//   if (!data) {
+//     throw new GraphQLYogaError(`It with data not found.`, {
+//       code: "IT_NOT_FOUND",
+//     });
+//   }
 
-  return {
-    props: { data },
-  };
-};
+//   return {
+//     props: { data },
+//   };
+// };
 
-export default function App({ data }: IProps) {
+export default function App() {
   const [showForm, setShowForm] = useState(false);
   const [edit, setEdit] = useState(false);
   const [add, setAdd] = useState(false);
+
+  const { data } = useItQuery({
+    variables: {
+      id: "631f0640cb1d9c50bf6dd5a7",
+    },
+  });
 
   const { asPath } = useRouter();
 
@@ -105,7 +111,7 @@ export default function App({ data }: IProps) {
     <div className="max-w-[678px] md:max-w-[900px] mx-auto container">
       {data ? (
         <CoursesMainPage
-          data={data}
+          data={data?.it}
           handleEdit={handleEdit}
           handleAdd={handleAdd}
         />
@@ -118,7 +124,7 @@ export default function App({ data }: IProps) {
         <div>
           {data ? (
             <MainForm
-              details={data}
+              details={data?.it}
               add={add}
               edit={edit}
               handleClose={() => setShowForm(false)}
