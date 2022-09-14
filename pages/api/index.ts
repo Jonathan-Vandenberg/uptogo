@@ -150,9 +150,8 @@ const resolvers: Resolvers = {
       })
       if (!it) {
             throw new GraphQLYogaError(
-              `User with not found.`,
-              // error extensions
-              { code: 'USER_NOT_FOUND' },
+              `It with id: ${id} not found.`,
+              { code: 'IT_NOT_FOUND' },
             )
           }
           return it
