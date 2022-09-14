@@ -66,7 +66,7 @@ interface IProps {
 
 export const getStaticProps: GetStaticProps = async () => {
   const prisma = new PrismaClient();
-  const data = await prisma?.it.findUnique({
+  const data = await prisma?.it?.findUnique({
     where: {
       id: "631f0640cb1d9c50bf6dd5a7",
     },
