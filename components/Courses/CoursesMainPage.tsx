@@ -15,7 +15,6 @@ import {
   WebDevelopment,
 } from "../../types";
 import BlogPostMarkup from "../Blog/BlogPostMarkup";
-import image from "../../public/courseMain/Data_Management.jpeg";
 import Image from "next/image";
 import logo from "../../public/uptogoFavicon.png";
 
@@ -55,9 +54,9 @@ export default function BlogMain({ data, handleEdit, handleAdd }: IProps) {
       </div>
       <div className="pb-8">
         <Image
-          src={image}
+          src={data?.mainImage as string}
           width={600}
-          height={290}
+          height={339}
           alt="image"
           layout="responsive"
         />
