@@ -135,10 +135,10 @@ export default function BlogPostMarkup({
       <p className="text-gray-600 py-4 text-xl">{data?.conclusion2}</p>
       <p className="text-gray-600 py-4 text-xl">{data?.conclusion3}</p>
       {data?.reference1 && (
-        <p className="text-gray-500 py-4 text">Reference: {data?.reference1}</p>
+        <p className="text-gray-500 py-1 text">Reference: {data?.reference1}</p>
       )}
       {data?.reference2 && (
-        <p className="text-gray-500 py-4 text">Reference: {data?.reference2}</p>
+        <p className="text-gray-500 py-1 text">Reference: {data?.reference2}</p>
       )}
       {showAdmin && (
         <div className="flex space-x-5 justify-center items-center py-6">

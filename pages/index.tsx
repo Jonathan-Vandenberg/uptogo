@@ -50,7 +50,7 @@ export const getStaticProps: GetStaticProps = async () => {
 export default function App({ data }: IProps) {
   return (
     <>
-      <div className="md:px-10 p-4 md:py-10 md:p-0 md:mb-6 bg-body">
+      <div className="md:px-10 p-4 md:py-10 md:p-0 md:mb-6 bg-white">
         <Hero />
       </div>
       <h2 className="text-red-600 text-3xl text-center bg-red-100 py-5 logoFont">
