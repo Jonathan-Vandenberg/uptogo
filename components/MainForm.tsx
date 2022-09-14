@@ -203,7 +203,7 @@ const AddClientForm = ({ details, add, edit, handleClose }: IProps) => {
   };
 
   useEffect(() => {
-    if (edit) setCategory(details?.category);
+    setCategory(details?.category ? details?.category : "");
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 

@@ -1,6 +1,6 @@
-import { motion, MotionConfig } from "framer-motion";
+import { motion } from "framer-motion";
 import Link from "next/link";
-import { BsChevronBarRight, BsChevronRight } from "react-icons/bs";
+import { BsChevronRight } from "react-icons/bs";
 
 interface CardData {
   cardData: CourseLink[];
