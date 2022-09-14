@@ -1,17 +1,12 @@
-import Link from "next/link";
-import { BsChevronBarRight } from "react-icons/bs";
-import CoursesNarrowCards from "../../../components/Courses/CoursesNarrowCards";
-import ItMain from "../../../components/It/ItMain";
-import Image from "next/image";
-import image from "../../../public/courseMain/Data_Management.jpeg";
-import BlogPostMarkup from "../../../components/Blog/BlogPostMarkup";
-import { useRouter } from "next/router";
-import { useState } from "react";
-import MainForm from "../../../components/MainForm";
-import { It } from "../../../types";
+import { GraphQLYogaError } from "@graphql-yoga/node";
 import { PrismaClient } from "@prisma/client";
 import { GetStaticProps } from "next";
+import { useRouter } from "next/router";
+import { useState } from "react";
 import CoursesMainPage from "../../../components/Courses/CoursesMainPage";
+import CoursesNarrowCards from "../../../components/Courses/CoursesNarrowCards";
+import MainForm from "../../../components/MainForm";
+import { It } from "../../../types";
 
 const cardData = [
   {
@@ -73,12 +68,13 @@ export const getStaticProps: GetStaticProps = async () => {
   });
 
   if (!data) {
-    console.log("No Data");
+    throw new GraphQLYogaError(`It with data not found.`, {
+      code: "IT_NOT_FOUND",
+    });
   }
 
   return {
     props: { data },
-    revalidate: 3600,
   };
 };
 
