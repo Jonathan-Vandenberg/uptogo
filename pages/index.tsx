@@ -1,15 +1,9 @@
-import CollapseMenus from "../components/Global/Footer/CollapseMenus";
-import HomeMain from "../components/HomePage/HomeMain";
-import image from "../public/heroImages/Du-hoc-Sp-jain-01.jpeg";
 import Image from "next/image";
 import Hero from "../components/HomePage/Hero";
-import Popup from "../components/UI/Popup";
-import BlogMain from "../components/Blog/BlogMain";
-import { BlogPost, It, useBlogPostQuery } from "../types";
-import BlogHeader from "../components/Blog/BlogHeader";
+import HomeMain from "../components/HomePage/HomeMain";
 import CustomerReview from "../components/UI/CustomerReview";
-import { PrismaClient } from "@prisma/client";
-import { GetStaticProps } from "next";
+import Popup from "../components/UI/Popup";
+import image from "../public/heroImages/Du-hoc-Sp-jain-01.jpeg";
 
 const customer = [
   {
@@ -30,24 +24,7 @@ const customer = [
   },
 ];
 
-interface IProps {
-  data: BlogPost;
-}
-
-export const getStaticProps: GetStaticProps = async () => {
-  const prisma = new PrismaClient();
-  const data = await prisma?.blogPost.findUnique({
-    where: {
-      id: "6315d649d375ad6ee10f6670",
-    },
-  });
-  return {
-    props: { data },
-    revalidate: 3600,
-  };
-};
-
-export default function App({ data }: IProps) {
+export default function App() {
   return (
     <>
       <div className="md:px-10 p-4 md:py-10 md:p-0 md:mb-6 bg-white">
@@ -58,7 +35,6 @@ export default function App({ data }: IProps) {
       </h2>
       <div className="container mx-auto">
         <HomeMain />
-        <BlogHeader data={data} />
         <div className="py-12 flex items-center justify-center">
           <Popup />
         </div>
