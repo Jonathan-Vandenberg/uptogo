@@ -72,6 +72,10 @@ export const getStaticProps: GetStaticProps = async () => {
     },
   });
 
+  if (!data) {
+    console.log("No Data");
+  }
+
   return {
     props: { data },
     revalidate: 3600,
