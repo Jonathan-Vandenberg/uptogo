@@ -28,7 +28,7 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [require("@tailwindcss/line-clamp")],
 };
 
 // blue rgb(19, 37, 83)

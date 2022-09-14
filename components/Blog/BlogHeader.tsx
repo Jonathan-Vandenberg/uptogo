@@ -64,7 +64,7 @@ const BlogHeader = ({ data }: IProps) => {
     setLocalStorageChange(!localStorageChange);
   };
   return (
-    <div className="bg-gradient-to-b from-bgGradientStart to-white md:pt-4">
+    <div className="bg-white md:pt-4">
       <div className="max-w-[640px] px-5 md:max-w-[900px] mx-auto">
         {data?.title && (
           <h1 className="logoFont text-3xl py-4 text-gray-700 font-semibold md:text-5xl">

@@ -57,37 +57,37 @@ export default function BlogPostMarkup({
   session?.user?.email === "jonvdberg8@gmail.com" ? setShowAdmin(true) : null;
   return (
     <div>
-      <ul className="border-y-2 border-gray-200 py-6 flex flex-col items-start justify-start space-y-2">
-        <li className="text-lg text-gray-700 flex items-center justify-between space-x-2">
+      <ul className="border-y-2 border-gray-200 py-6 flex flex-col items-start justify-start space-y-5">
+        <li className="text-lg text-gray-700 flex items-center justify-between space-x-4">
           <div>
-            <AiTwotoneCheckCircle size={10} color="orange" />
+            <AiTwotoneCheckCircle size={15} color="orange" />
           </div>
           <p>{data?.tableContents1}</p>
         </li>
-        <li className="text-lg text-gray-700 flex items-center justify-between space-x-2">
+        <li className="text-lg text-gray-700 flex items-center justify-between space-x-4">
           <div>
-            <AiTwotoneCheckCircle size={10} color="orange" />
+            <AiTwotoneCheckCircle size={15} color="orange" />
           </div>
           <p>{data?.tableContents2}</p>
         </li>
-        <li className="text-lg text-gray-700 flex items-center justify-between space-x-2">
+        <li className="text-lg text-gray-700 flex items-center justify-between space-x-4">
           <div>
-            <AiTwotoneCheckCircle size={10} color="orange" />
+            <AiTwotoneCheckCircle size={15} color="orange" />
           </div>
           <p>{data?.tableContents3}</p>
         </li>
-        <li className="text-lg text-gray-700 flex items-center justify-between space-x-2">
+        <li className="text-lg text-gray-700 flex items-center justify-between space-x-4">
           <div>
-            <AiTwotoneCheckCircle size={10} color="orange" />
+            <AiTwotoneCheckCircle size={15} color="orange" />
           </div>
           <p>{data?.tableContents4}</p>
         </li>
       </ul>
 
       <div className="flex-col space-y-8 py-6">
-        <p className="text-gray-600 text-lg">{data?.p1}</p>
-        <p className="text-gray-600 text-lg">{data?.p2}</p>
-        <p className="text-gray-600 text-lg">{data?.p3}</p>
+        <p className="text-gray-600 text-xl">{data?.p1}</p>
+        <p className="text-gray-600 text-xl">{data?.p2}</p>
+        <p className="text-gray-600 text-xl">{data?.p3}</p>
       </div>
       <h2 className="logoFont text-gray-600 text-2xl pb-3 pt-12 ">
         {data?.subtitle2}
