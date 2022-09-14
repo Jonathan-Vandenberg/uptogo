@@ -1,4 +1,4 @@
-import { createServer } from "@graphql-yoga/node"
+import { createServer, GraphQLYogaError } from "@graphql-yoga/node"
 import { join } from "path"
 import { readFileSync } from "fs"
 import prisma from '../../lib/prisma'
@@ -143,11 +143,19 @@ const resolvers: Resolvers = {
       })
     },
     it: (_, {id}, {prisma}) => {
-      return prisma.it.findUnique({
+      const it = prisma.it.findUnique({
         where: {
           id
         }
       })
+      if (!it) {
+            throw new GraphQLYogaError(
+              `User with not found.`,
+              // error extensions
+              { code: 'USER_NOT_FOUND' },
+            )
+          }
+          return it
   }
   },
   Mutation: {
@@ -1234,28 +1242,11 @@ const resolvers: Resolvers = {
 }
 }
 
-export type CORSOptions =
-  | {
-      origin?: string[] | string
-      methods?: string[]
-      allowedHeaders?: string[]
-      exposedHeaders?: string[]
-      credentials?: boolean
-      maxAge?: number
-    }
-  | false
-
 const server = createServer<{req: NextApiRequest; res: NextApiResponse;}>({
   endpoint: "/api",
   schema: {
     typeDefs,
     resolvers
-  },
-  cors: {
-    origin: 'https://www.uptogo.org',
-    credentials: true,
-    allowedHeaders: ['X-Custom-Header'],
-    methods: ['POST'],
   },
   context: createContext()
 })

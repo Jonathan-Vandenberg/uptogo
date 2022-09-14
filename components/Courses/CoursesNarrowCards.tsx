@@ -13,7 +13,7 @@ type CourseLink = {
 
 export default function CoursesNarrowCards({ cardData }: CardData) {
   return (
-    <div className="px-5 max-w-[678px] md:max-w-[900px] mx-auto divide divide-orange bg-body space-y-4 pb-8">
+    <div className="px-5 max-w-[678px] md:max-w-[900px] mx-auto divide divide-orange bg-body space-y-4 py-8">
       {cardData.map((card, index) => (
         <motion.div
           key={index}
