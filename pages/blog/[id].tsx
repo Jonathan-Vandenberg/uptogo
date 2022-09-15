@@ -68,8 +68,6 @@ export const getStaticProps: GetStaticProps = (context) => {
     },
   });
 
-  data = JSON.parse(JSON.stringify(data));
-
   return {
     props: {
       data,
