@@ -57,16 +57,18 @@ interface IParams extends ParsedUrlQuery {
   id: string;
 }
 
-export const getStaticProps: GetStaticProps = (context) => {
+export const getStaticProps: GetStaticProps = async (context) => {
   const prisma = new PrismaClient();
 
   const params = context.params as IParams;
 
-  let data = prisma.blogPost.findUnique({
+  let data = await prisma.blogPost.findUnique({
     where: {
       id: params!.id,
     },
   });
+
+  data = JSON.parse(JSON.stringify(data));
 
   return {
     props: {
