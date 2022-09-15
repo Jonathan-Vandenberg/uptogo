@@ -1,21 +1,19 @@
-import BlogMain from "../../components/Blog/BlogMain";
-import { useBlogPostQuery } from "../../types";
-import { useRouter } from "next/router";
-import MainForm from "../../components/MainForm";
+import { Prisma, PrismaClient } from "@prisma/client";
+import { GetStaticPaths, GetStaticProps } from "next";
+import { ParsedUrlQuery } from "querystring";
 import { useState } from "react";
+import BlogMain from "../../components/Blog/BlogMain";
+import MainForm from "../../components/MainForm";
+import { BlogPost } from "../../types";
 
-export default function Blog() {
+interface IProps {
+  data: BlogPost;
+}
+
+export default function Blog({ data }: IProps) {
   const [showForm, setShowForm] = useState(false);
   const [edit, setEdit] = useState(false);
   const [add, setAdd] = useState(false);
-
-  const { asPath } = useRouter();
-  const id = asPath.slice(6, 30);
-  const { data, loading, error } = useBlogPostQuery({
-    variables: {
-      id: id,
-    },
-  });
 
   const handleAdd = () => {
     setShowForm(!showForm);
@@ -31,14 +29,10 @@ export default function Blog() {
 
   return (
     <>
-      <BlogMain
-        data={data?.blogPost}
-        handleEdit={handleEdit}
-        handleAdd={handleAdd}
-      />
+      <BlogMain data={data} handleEdit={handleEdit} handleAdd={handleAdd} />
       {showForm && (
         <MainForm
-          details={data?.blogPost}
+          details={data}
           add={add}
           edit={edit}
           handleClose={() => setShowForm(false)}
@@ -47,3 +41,38 @@ export default function Blog() {
     </>
   );
 }
+
+interface IParams extends ParsedUrlQuery {
+  id: string;
+}
+
+export const getStaticPaths: GetStaticPaths = async () => {
+  const prisma = new PrismaClient();
+  const data = await prisma.blogPost.findMany();
+  const paths = data?.map((item) => {
+    return {
+      params: { id: item.id.toString() },
+    };
+  });
+  return { paths, fallback: false };
+};
+
+export const getStaticProps: GetStaticProps = async (context) => {
+  const prisma = new PrismaClient();
+
+  const { id } = context.params as IParams;
+
+  let data = prisma.blogPost.findUnique({
+    where: {
+      id: id,
+    },
+  });
+
+  data = JSON.parse(JSON.stringify(data));
+
+  return {
+    props: {
+      data,
+    },
+  };
+};
