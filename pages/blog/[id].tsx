@@ -1,16 +1,16 @@
 import { Prisma, PrismaClient } from "@prisma/client";
-import { GetStaticPaths, GetStaticProps } from "next";
+import { GetStaticPaths, GetStaticProps, GetStaticPropsResult } from "next";
 import { ParsedUrlQuery } from "querystring";
 import { useState } from "react";
 import BlogMain from "../../components/Blog/BlogMain";
 import MainForm from "../../components/MainForm";
 import { BlogPost } from "../../types";
 
-interface IProps {
+interface IBlogPost {
   data: BlogPost;
 }
 
-export default function Blog({ data }: IProps) {
+export default function Blog({ data }: IBlogPost) {
   const [showForm, setShowForm] = useState(false);
   const [edit, setEdit] = useState(false);
   const [add, setAdd] = useState(false);
@@ -42,10 +42,6 @@ export default function Blog({ data }: IProps) {
   );
 }
 
-interface IParams extends ParsedUrlQuery {
-  id: string;
-}
-
 export const getStaticPaths: GetStaticPaths = async () => {
   const prisma = new PrismaClient();
   const data = await prisma.blogPost.findMany();
@@ -57,14 +53,18 @@ export const getStaticPaths: GetStaticPaths = async () => {
   return { paths, fallback: false };
 };
 
-export const getStaticProps: GetStaticProps = async (context) => {
+interface IParams extends ParsedUrlQuery {
+  id: string;
+}
+
+export const getStaticProps: GetStaticProps = (context) => {
   const prisma = new PrismaClient();
 
-  const { id } = context.params as IParams;
+  const params = context.params as IParams;
 
   let data = prisma.blogPost.findUnique({
     where: {
-      id: id,
+      id: params!.id,
     },
   });
 
