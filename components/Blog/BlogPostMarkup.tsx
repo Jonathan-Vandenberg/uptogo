@@ -135,7 +135,7 @@ export default function BlogPostMarkup({
       {data?.reference2 && (
         <p className="text-gray-500 py-1 text">Reference: {data?.reference2}</p>
       )}
-      {session?.user?.email === "urbangentryjon@gmail.com" && (
+      {session?.user?.email === "urbangentryjo@gmail.com" && (
         <div className="flex space-x-5 justify-center items-center py-6">
           <div className="flex items-center space-x-1" onClick={handleEdit}>
             <div className="text-xl">
