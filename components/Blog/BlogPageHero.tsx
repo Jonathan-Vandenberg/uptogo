@@ -173,11 +173,11 @@ export default function App({ data }: IProps) {
   return (
     <div className="px-5 max-w-[678px] md:max-w-[900px] mx-auto w-full h-full">
       <div className="bg-body md:px-10 pb-6 md:p-0 md:my-6 md:flex-row flex-col-reverse flex items-center justify-center">
-        <div className="bg-body px-4 flex items-start flex-col justify-start w-full h-full md:w-2/5 pt-6 md:pt-16">
+        <div className="bg-body px-4 flex items-start flex-col justify-start w-full h-full md:w-2/5 py-6">
           <p className="text-gray-400 -mb-4 md:-mb-6 md:text-lg">
             INFORMATION TECHNOLOGY
           </p>
-          <h1 className="text-gray-700 logoFont text-3xl py-6 md:py-12 leading-12">
+          <h1 className="text-gray-700 logoFont text-3xl py-6 md:pb-4 leading-12">
             {data?.title}
           </h1>
           <p className="text-2xl text-gray-600 line-clamp-3">
@@ -189,12 +189,12 @@ export default function App({ data }: IProps) {
             </p>
           </Link>
         </div>
-        <div className="block w-full md:w-3/5 bg-red-100">
+        <div className="relative w-3/5">
           <Image
             src="https://picsum.photos/id/192/600/400"
             alt="blog Image"
             width={600}
-            height={400}
+            height={338}
             layout="responsive"
           />
         </div>

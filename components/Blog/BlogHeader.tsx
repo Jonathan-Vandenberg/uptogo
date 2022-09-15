@@ -108,7 +108,7 @@ const BlogHeader = ({ data }: IProps) => {
           <Image
             src={"https://picsum.photos/600/250"}
             width={600}
-            height={250}
+            height={338}
             alt="IT image"
             className="rounded-lg"
             layout="responsive"

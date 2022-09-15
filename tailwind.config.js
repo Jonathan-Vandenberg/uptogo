@@ -23,9 +23,6 @@ module.exports = {
         orange: "#F69724",
         bgGradientStart: "#F1F5F9",
       },
-      backgroundImage: {
-        "hero-pattern": "url('/public/6057300.jpg')",
-      },
     },
   },
   plugins: [require("@tailwindcss/line-clamp")],
