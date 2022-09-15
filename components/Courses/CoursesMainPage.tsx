@@ -54,7 +54,6 @@ export default function BlogMain({ data, handleEdit, handleAdd }: IProps) {
           height={339}
           alt="image"
           layout="responsive"
-          priority
         />
       </div>
       <div className="pb-6 px-6 md:px-0 md:pb-10">
