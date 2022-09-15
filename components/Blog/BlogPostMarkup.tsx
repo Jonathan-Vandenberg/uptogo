@@ -1,6 +1,6 @@
 import CheckIcon from "@mui/icons-material/Check";
 import { useSession } from "next-auth/react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { AiTwotoneCheckCircle } from "react-icons/ai";
 import { FaEdit } from "react-icons/fa";
 import { MdAddCircleOutline, MdDeleteForever } from "react-icons/md";
@@ -50,9 +50,13 @@ export default function BlogPostMarkup({
   const [showAdmin, setShowAdmin] = useState(false);
   const { data: session, status } = useSession();
 
-  session?.user?.email === "urbangentryjon@gmail.com"
-    ? setShowAdmin(true)
-    : null;
+  useEffect(() => {
+    session?.user?.email === "urbangentryjon@gmail.com"
+      ? setShowAdmin(true)
+      : null;
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
   return (
     <div>
       <ul className="border-y-2 border-gray-200 py-6 flex flex-col items-start justify-start space-y-5">
