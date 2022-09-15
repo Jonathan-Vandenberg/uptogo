@@ -54,25 +54,25 @@ export default function BlogPostMarkup({
   return (
     <div>
       <ul className="border-y-2 border-gray-200 py-6 flex flex-col items-start justify-start space-y-5">
-        <li className="text-lg text-gray-700 flex items-center justify-between space-x-4">
+        <li className="text-xl text-gray-700 flex items-center justify-between space-x-4">
           <div>
             <AiTwotoneCheckCircle size={15} color="orange" />
           </div>
           <p>{data?.tableContents1}</p>
         </li>
-        <li className="text-lg text-gray-700 flex items-center justify-between space-x-4">
+        <li className="text-xl text-gray-700 flex items-center justify-between space-x-4">
           <div>
             <AiTwotoneCheckCircle size={15} color="orange" />
           </div>
           <p>{data?.tableContents2}</p>
         </li>
-        <li className="text-lg text-gray-700 flex items-center justify-between space-x-4">
+        <li className="text-xl text-gray-700 flex items-center justify-between space-x-4">
           <div>
             <AiTwotoneCheckCircle size={15} color="orange" />
           </div>
           <p>{data?.tableContents3}</p>
         </li>
-        <li className="text-lg text-gray-700 flex items-center justify-between space-x-4">
+        <li className="text-xl text-gray-700 flex items-center justify-between space-x-4">
           <div>
             <AiTwotoneCheckCircle size={15} color="orange" />
           </div>
