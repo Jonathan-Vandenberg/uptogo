@@ -11,7 +11,7 @@ function Posts() {
   const { data, loading, error } = useCloudComputingCardQuery();
 
   return (
-    <div className="space-y-3 md:space-y-0">
+    <div className="space-y-6 md:space-y-0">
       {data?.cloudComputingCard
         ?.slice(0)
         .reverse()

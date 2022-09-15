@@ -16,7 +16,7 @@ function Posts() {
   const { data, loading, error } = useMachineLearningCardQuery();
 
   return (
-    <div className="space-y-3 md:space-y-0">
+    <div className="space-y-6 md:space-y-0">
       {data?.machineLearningCard
         ?.slice(0)
         .reverse()

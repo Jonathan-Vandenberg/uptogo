@@ -15,7 +15,7 @@ function Posts() {
   const { data, loading, error } = useTelecommunicationCardQuery();
 
   return (
-    <div className="space-y-3 md:space-y-0">
+    <div className="space-y-6 md:space-y-0">
       {data?.telecommunicationCard
         ?.slice(0)
         .reverse()

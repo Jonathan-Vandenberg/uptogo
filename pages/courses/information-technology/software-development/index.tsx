@@ -14,7 +14,7 @@ function Posts() {
   const { data, loading, error } = useSoftwareDevelopmentCardQuery();
 
   return (
-    <div className="space-y-3 md:space-y-0">
+    <div className="space-y-6 md:space-y-0">
       {data?.softwareDevelopmentCard
         ?.slice(0)
         .reverse()

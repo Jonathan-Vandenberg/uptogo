@@ -19,7 +19,7 @@ export default function App() {
           </p>
         </Link>
       </div>
-      <div className="h-full w-full col-span-2 max-w-[300px]">
+      <div className="h-full w-full col-span-2 max-w-[300px] block">
         <Image
           src={logo}
           alt="blog Image"

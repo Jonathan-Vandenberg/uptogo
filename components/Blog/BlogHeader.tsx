@@ -104,7 +104,7 @@ const BlogHeader = ({ data }: IProps) => {
             </div>
           )}
         </div>
-        <div className="border-b-[1px] border-gray-200 pb-2">
+        <div className="border-b-[1px] border-gray-200 pb-2 block">
           <Image
             src={"https://picsum.photos/600/250"}
             width={600}

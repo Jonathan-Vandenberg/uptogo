@@ -14,7 +14,7 @@ function Posts() {
   const { data, loading, error } = useComputerNetworkingCardQuery();
 
   return (
-    <div className="space-y-3 md:space-y-0">
+    <div className="space-y-6 md:space-y-0">
       {data?.computerNetworkingCard
         ?.slice(0)
         .reverse()
