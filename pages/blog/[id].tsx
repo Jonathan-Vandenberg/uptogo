@@ -28,7 +28,7 @@ export default function Blog({ data }: IBlogPost) {
   };
 
   return (
-    <>
+    <div className="container">
       <BlogMain data={data} handleEdit={handleEdit} handleAdd={handleAdd} />
       {showForm && (
         <MainForm
@@ -38,7 +38,7 @@ export default function Blog({ data }: IBlogPost) {
           handleClose={() => setShowForm(false)}
         />
       )}
-    </>
+    </div>
   );
 }
 
