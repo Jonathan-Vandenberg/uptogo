@@ -47,15 +47,7 @@ export default function BlogPostMarkup({
   handleAdd,
   handleEdit,
 }: IProps) {
-  const [showAdmin, setShowAdmin] = useState(false);
   const { data: session, status } = useSession();
-
-  useEffect(() => {
-    session?.user?.email === "urbangentryjon@gmail.com"
-      ? setShowAdmin(true)
-      : null;
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
 
   return (
     <div>
@@ -143,7 +135,7 @@ export default function BlogPostMarkup({
       {data?.reference2 && (
         <p className="text-gray-500 py-1 text">Reference: {data?.reference2}</p>
       )}
-      {showAdmin && (
+      {session?.user?.email === "urbangentryjon@gmail.com" && (
         <div className="flex space-x-5 justify-center items-center py-6">
           <div className="flex items-center space-x-1" onClick={handleEdit}>
             <div className="text-xl">
