@@ -1,16 +1,28 @@
 import Link from "next/link";
+import Image from "next/image";
+import it from "../../public/courseMain/it/Data_Management.jpeg";
 
 export default function App() {
   return (
     <div className="grid grid-cols-2 md:grid-cols-3 gap-4 p-6 xl:grid-cols-6">
-      <div className="flex flex-col items-center justify-center border-2 border-orange rounded-lg hover:border-lightBlue p-5">
-        <p className="flex text-lg text-orange  items-center justify-center p-6">
-          IT
-        </p>
-        <Link href={"/courses/information-technology"} className="">
-          <p className="text-xl text-gray-700 text-thin md:pt-2 border-b-8 border-orange">
-            READ MORE
-          </p>
+      <div className="flex items-center justify-center flex-col cursor-pointer">
+        <Link href={"/courses/information-technology"}>
+          <>
+            <div className="w-full h-full relative">
+              <Image
+                src={it}
+                alt="IT image"
+                width={300}
+                height={165}
+                layout="fill" // required
+                objectFit="cover" // change to suit your needs
+                className="" // just an example
+              />
+            </div>
+            <div className="text-lg text-gray-700 bg-sky-100 w-full text-center py-2">
+              IT Majors
+            </div>
+          </>
         </Link>
       </div>
       <div className="flex flex-col items-center justify-center border-2 border-orange rounded-lg hover:border-lightBlue p-5">
