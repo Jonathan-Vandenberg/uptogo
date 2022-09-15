@@ -132,7 +132,9 @@ const MobileFooterHeader = () => (
         <div className="p-3 text-2xl text-green-500">
           <BsFillTelephoneOutboundFill />
         </div>
-        <p className="p-3 text-xl font-bold text-iwanttoColor">1900545415</p>
+        <p className="p-3 text-xl font-bold text-iwanttoColor">
+          <a href="tel:+84926561080">0926 561 080</a>
+        </p>
       </div>
       <div className="flex items-center justify-center bg-gradient-to-r from-startColor to-endColor p-6">
         <div className="rounded-full bg-white p-3 text-3xl">
