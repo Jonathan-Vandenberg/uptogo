@@ -37,7 +37,7 @@ interface IProps {
 
 export default function BlogMain({ data, handleEdit, handleAdd }: IProps) {
   return (
-    <>
+    <div className="container">
       <BlogHeader data={data} />
       <div className="px-5 max-w-[678px] md:max-w-[900px] mx-auto">
         <BlogPostMarkup
@@ -46,6 +46,6 @@ export default function BlogMain({ data, handleEdit, handleAdd }: IProps) {
           handleAdd={handleAdd}
         />
       </div>
-    </>
+    </div>
   );
 }
