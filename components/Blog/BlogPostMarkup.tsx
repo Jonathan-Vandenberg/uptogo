@@ -47,10 +47,12 @@ export default function BlogPostMarkup({
   handleAdd,
   handleEdit,
 }: IProps) {
-  const [showAdmin, setShowAdmin] = useState(true);
+  const [showAdmin, setShowAdmin] = useState(false);
   const { data: session, status } = useSession();
 
-  session?.user?.email === "jonvdberg8@gmail.com" ? setShowAdmin(true) : null;
+  session?.user?.email === "urbangentryjon@gmail.com"
+    ? setShowAdmin(true)
+    : null;
   return (
     <div>
       <ul className="border-y-2 border-gray-200 py-6 flex flex-col items-start justify-start space-y-5">

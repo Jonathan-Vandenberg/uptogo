@@ -17,6 +17,6 @@
     "sourceMap": true,
     "outDir": "dist"
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "pages/api/posts/[postId].js", "components/NavBar.jsx", "pages/_app.jsx", "pages/index.tsx", "components/UI/UniLogos.jsx", "pages/api/auth/[...nextauth].js", "pages/courses/design/interior-design", "pages/courses/design/graphic-design", "pages/courses/design/digital-media", "pages/courses/design/acting"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "pages/api/posts/[postId].js", "components/NavBar.jsx", "pages/_app.jsx", "pages/index.tsx", "components/UI/UniLogos.jsx", "pages/api/auth/[...nextauth].js", "pages/courses/design/interior-design", "pages/courses/design/graphic-design", "pages/courses/design/digital-media", "pages/courses/design/acting", "pages/api/auth/error.js", "pages/api/auth/new-user.js", "pages/api/auth/verify-request.js", "pages/api/auth/signout.js", "pages/api/auth/signin.js", "pages/api/auth/signin.js"],
   "exclude": ["node_modules"]
 }

@@ -1,5 +1,5 @@
 import "../src/input.css";
-import { SessionProvider } from "next-auth/react";
+import { SessionProvider, useSession } from "next-auth/react";
 import type { AppProps } from "next/app";
 import { ApolloProvider } from "@apollo/client";
 import { useClient } from "../lib/client";
@@ -8,7 +8,7 @@ import SideNavModal from "../components/Global/Navbars/MobileNav";
 import Footer from "../components/Global/Footer/Footer";
 import { motion, useAnimationControls } from "framer-motion";
 import Spline from "@splinetool/react-spline";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import NextNProgress from "nextjs-progressbar";
 import InitDivider from "../components/UI/InitDivider";
 
