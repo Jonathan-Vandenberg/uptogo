@@ -34,7 +34,7 @@ const Footer = () => {
               <BsFillTelephoneOutboundFill />
             </div>
             <p className="p-3 text-xl font-bold text-iwanttoColor">
-              0926 561 080
+              <a href="tel:+84926561080">0926 561 080</a>
             </p>
           </div>
           <div className="flex items-center justify-center bg-gradient-to-r from-startColor to-endColor p-6">
