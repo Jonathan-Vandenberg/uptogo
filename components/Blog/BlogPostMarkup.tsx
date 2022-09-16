@@ -53,80 +53,102 @@ export default function BlogPostMarkup({
   return (
     <div>
       <ul className="border-y-2 border-gray-200 py-6 flex flex-col items-start justify-start space-y-5">
-        <li className="text-xl text-gray-700 flex items-center justify-between space-x-4">
-          <div>
-            <AiTwotoneCheckCircle size={14} color="orange" />
-          </div>
-          <p>{data?.tableContents1}</p>
-        </li>
-        <li className="text-xl text-gray-700 flex items-center justify-between space-x-4">
-          <div>
-            <AiTwotoneCheckCircle size={14} color="orange" />
-          </div>
-          <p>{data?.tableContents2}</p>
-        </li>
-        <li className="text-xl text-gray-700 flex items-center justify-between space-x-4">
-          <div>
-            <AiTwotoneCheckCircle size={14} color="orange" />
-          </div>
-          <p>{data?.tableContents3}</p>
-        </li>
-        <li className="text-xl text-gray-700 flex items-center justify-between space-x-4">
-          <div>
-            <AiTwotoneCheckCircle size={14} color="orange" />
-          </div>
-          <p>{data?.tableContents4}</p>
-        </li>
+        {data?.tableContents1 && (
+          <li className="text-xl text-gray-700 flex items-center justify-between space-x-4">
+            <div>
+              <AiTwotoneCheckCircle size={14} color="orange" />
+            </div>
+            <p>{data?.tableContents1}</p>
+          </li>
+        )}
+        {data?.tableContents2 && (
+          <li className="text-xl text-gray-700 flex items-center justify-between space-x-4">
+            <div>
+              <AiTwotoneCheckCircle size={14} color="orange" />
+            </div>
+            <p>{data?.tableContents2}</p>
+          </li>
+        )}
+        {data?.tableContents3 && (
+          <li className="text-xl text-gray-700 flex items-center justify-between space-x-4">
+            <div>
+              <AiTwotoneCheckCircle size={14} color="orange" />
+            </div>
+            <p>{data?.tableContents3}</p>
+          </li>
+        )}
+        {data?.tableContents1 && (
+          <li className="text-xl text-gray-700 flex items-center justify-between space-x-4">
+            <div>
+              <AiTwotoneCheckCircle size={14} color="orange" />
+            </div>
+            <p>{data?.tableContents4}</p>
+          </li>
+        )}
       </ul>
 
       <div className="flex-col space-y-8 py-6">
-        <p className="text-gray-600 text-xl">{data?.p1}</p>
-        <p className="text-gray-600 text-xl">{data?.p2}</p>
-        <p className="text-gray-600 text-xl">{data?.p3}</p>
+        {data?.p1 && <p className="text-gray-600 text-xl">{data?.p1}</p>}
+        {data?.p2 && <p className="text-gray-600 text-xl">{data?.p2}</p>}
+        {data?.p3 && <p className="text-gray-600 text-xl">{data?.p3}</p>}
       </div>
       <EmailButton />
-      <h2 className="logoFont text-gray-600 text-2xl pb-3 pt-6 ">
-        {data?.subtitle2}
-      </h2>
-      <p className="text-gray-600 py-4 text-xl">{data?.p4}</p>
-      <p className="text-gray-600 py-4 text-xl">{data?.p5}</p>
+      {data?.subtitle2 && (
+        <h2 className="logoFont text-gray-600 text-2xl pb-3 pt-6 ">
+          {data?.subtitle2}
+        </h2>
+      )}
+      {data?.p4 && <p className="text-gray-600 py-4 text-xl">{data?.p4}</p>}
+      {data?.p5 && <p className="text-gray-600 py-4 text-xl">{data?.p5}</p>}
       <ul>
-        <li className="py-4 text-xl">
-          <div className="flex items-center justify-1tart space-x-5">
-            <CheckIcon className="text-green-500" fontSize="large" />
-            <p className="text-gray-600">{data?.l1}</p>
-          </div>
-        </li>
-        <li className="py-4 text-xl">
-          <div className="flex items-center justify-1tart space-x-5">
-            <CheckIcon className="text-green-500" fontSize="large" />
-            <p className="text-gray-600">{data?.l2}</p>
-          </div>
-        </li>
-        <li className="py-4 text-xl">
-          <div className="flex items-center justify-1tart space-x-5">
-            <CheckIcon className="text-green-500" fontSize="large" />
-            <p className="text-gray-600">{data?.l3}</p>
-          </div>
-        </li>
-        <li className="py-4 text-xl">
-          <div className="flex items-center justify-1tart space-x-5">
-            <CheckIcon className="text-green-500" fontSize="large" />
-            <p className="text-gray-600">{data?.l4}</p>
-          </div>
-        </li>
-        <li className="py-4 text-xl">
-          <div className="flex items-center justify-1tart space-x-5">
-            <CheckIcon className="text-green-500" fontSize="large" />
-            <p className="text-gray-600">{data?.l5}</p>
-          </div>
-        </li>
+        {data?.l1 && (
+          <li className="py-4 text-xl">
+            <div className="flex items-center justify-1tart space-x-5">
+              <CheckIcon className="text-green-500" fontSize="large" />
+              <p className="text-gray-600">{data?.l1}</p>
+            </div>
+          </li>
+        )}
+        {data?.l2 && (
+          <li className="py-4 text-xl">
+            <div className="flex items-center justify-1tart space-x-5">
+              <CheckIcon className="text-green-500" fontSize="large" />
+              <p className="text-gray-600">{data?.l2}</p>
+            </div>
+          </li>
+        )}
+        {data?.l3 && (
+          <li className="py-4 text-xl">
+            <div className="flex items-center justify-1tart space-x-5">
+              <CheckIcon className="text-green-500" fontSize="large" />
+              <p className="text-gray-600">{data?.l3}</p>
+            </div>
+          </li>
+        )}
+        {data?.l4 && (
+          <li className="py-4 text-xl">
+            <div className="flex items-center justify-1tart space-x-5">
+              <CheckIcon className="text-green-500" fontSize="large" />
+              <p className="text-gray-600">{data?.l4}</p>
+            </div>
+          </li>
+        )}
+        {data?.l5 && (
+          <li className="py-4 text-xl">
+            <div className="flex items-center justify-1tart space-x-5">
+              <CheckIcon className="text-green-500" fontSize="large" />
+              <p className="text-gray-600">{data?.l5}</p>
+            </div>
+          </li>
+        )}
       </ul>
-      <h2 className="text-2xl logoFont text-gray-600  pb-3 pt-12 ">
-        {data?.subtitle3}
-      </h2>
-      <p className="text-gray-600 py-4 text-xl">{data?.p6}</p>
-      <p className="text-gray-600 py-4 text-xl">{data?.p7}</p>
+      {data?.subtitle3 && (
+        <h2 className="text-2xl logoFont text-gray-600  pb-3 pt-12 ">
+          {data?.subtitle3}
+        </h2>
+      )}
+      {data?.p6 && <p className="text-gray-600 py-4 text-xl">{data?.p6}</p>}
+      {data?.p7 && <p className="text-gray-600 py-4 text-xl">{data?.p7}</p>}
       <ul>
         {data?.l6 && (
           <li className="py-4 text-xl">
@@ -255,8 +277,12 @@ export default function BlogPostMarkup({
           {data?.subtitle4}
         </p>
       )}
-      <p className="text-gray-600 py-4 text-xl">{data?.conclusion1}</p>
-      <p className="text-gray-600 py-4 text-xl">{data?.conclusion2}</p>
+      {data?.conclusion1 && (
+        <p className="text-gray-600 py-4 text-xl">{data?.conclusion1}</p>
+      )}
+      {data?.conclusion2 && (
+        <p className="text-gray-600 py-4 text-xl">{data?.conclusion2}</p>
+      )}
       <p className="text-gray-600 py-4 text-xl">{data?.conclusion3}</p>
       {data?.reference1 && (
         <p className="text-gray-500 py-1 text">Reference: {data?.reference1}</p>
