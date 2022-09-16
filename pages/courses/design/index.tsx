@@ -117,7 +117,7 @@ export default function App({ data }: IProps) {
             />
           ) : (
             <div>
-              <p>Loading...</p>
+              <p>Loading..</p>
             </div>
           )}
         </div>
