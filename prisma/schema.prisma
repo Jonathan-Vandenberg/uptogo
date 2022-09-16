@@ -136,6 +136,18 @@ model It {
   subtitle3      String?
   p6             String?
   p7             String?
+  l6             String?
+  l7             String?
+  l8             String?
+  l9             String?
+  l10            String?
+  l11            String?
+  l12            String?
+  l13            String?
+  l14            String?
+  l15            String?
+  p8             String?
+  subtitle4      String?
   conclusion1    String?
   conclusion2    String?
   conclusion3    String?
@@ -175,6 +187,18 @@ model SoftwareDevelopment {
   subtitle3      String?
   p6             String?
   p7             String?
+  l6             String?
+  l7             String?
+  l8             String?
+  l9             String?
+  l10            String?
+  l11            String?
+  l12            String?
+  l13            String?
+  l14            String?
+  l15            String?
+  p8             String?
+  subtitle4      String?
   conclusion1    String?
   conclusion2    String?
   conclusion3    String?
@@ -214,6 +238,18 @@ model ComputerNetworking {
   subtitle3      String?
   p6             String?
   p7             String?
+  l6             String?
+  l7             String?
+  l8             String?
+  l9             String?
+  l10            String?
+  l11            String?
+  l12            String?
+  l13            String?
+  l14            String?
+  l15            String?
+  p8             String?
+  subtitle4      String?
   conclusion1    String?
   conclusion2    String?
   conclusion3    String?
@@ -253,6 +289,18 @@ model CloudComputing {
   subtitle3      String?
   p6             String?
   p7             String?
+  l6             String?
+  l7             String?
+  l8             String?
+  l9             String?
+  l10            String?
+  l11            String?
+  l12            String?
+  l13            String?
+  l14            String?
+  l15            String?
+  p8             String?
+  subtitle4      String?
   conclusion1    String?
   conclusion2    String?
   conclusion3    String?
@@ -292,6 +340,18 @@ model BusinessAnalysis {
   subtitle3      String?
   p6             String?
   p7             String?
+  l6             String?
+  l7             String?
+  l8             String?
+  l9             String?
+  l10            String?
+  l11            String?
+  l12            String?
+  l13            String?
+  l14            String?
+  l15            String?
+  p8             String?
+  subtitle4      String?
   conclusion1    String?
   conclusion2    String?
   conclusion3    String?
@@ -331,6 +391,18 @@ model Telecommunication {
   subtitle3      String?
   p6             String?
   p7             String?
+  l6             String?
+  l7             String?
+  l8             String?
+  l9             String?
+  l10            String?
+  l11            String?
+  l12            String?
+  l13            String?
+  l14            String?
+  l15            String?
+  p8             String?
+  subtitle4      String?
   conclusion1    String?
   conclusion2    String?
   conclusion3    String?
@@ -370,6 +442,18 @@ model GameProgramming {
   subtitle3      String?
   p6             String?
   p7             String?
+  l6             String?
+  l7             String?
+  l8             String?
+  l9             String?
+  l10            String?
+  l11            String?
+  l12            String?
+  l13            String?
+  l14            String?
+  l15            String?
+  p8             String?
+  subtitle4      String?
   conclusion1    String?
   conclusion2    String?
   conclusion3    String?
@@ -409,6 +493,18 @@ model WebDevelopment {
   subtitle3      String?
   p6             String?
   p7             String?
+  l6             String?
+  l7             String?
+  l8             String?
+  l9             String?
+  l10            String?
+  l11            String?
+  l12            String?
+  l13            String?
+  l14            String?
+  l15            String?
+  p8             String?
+  subtitle4      String?
   conclusion1    String?
   conclusion2    String?
   conclusion3    String?
@@ -448,6 +544,18 @@ model MachineLearning {
   subtitle3      String?
   p6             String?
   p7             String?
+  l6             String?
+  l7             String?
+  l8             String?
+  l9             String?
+  l10            String?
+  l11            String?
+  l12            String?
+  l13            String?
+  l14            String?
+  l15            String?
+  p8             String?
+  subtitle4      String?
   conclusion1    String?
   conclusion2    String?
   conclusion3    String?
@@ -487,6 +595,18 @@ model DataManagement {
   subtitle3      String?
   p6             String?
   p7             String?
+  l6             String?
+  l7             String?
+  l8             String?
+  l9             String?
+  l10            String?
+  l11            String?
+  l12            String?
+  l13            String?
+  l14            String?
+  l15            String?
+  p8             String?
+  subtitle4      String?
   conclusion1    String?
   conclusion2    String?
   conclusion3    String?
@@ -526,6 +646,18 @@ model Blockchain {
   subtitle3      String?
   p6             String?
   p7             String?
+  l6             String?
+  l7             String?
+  l8             String?
+  l9             String?
+  l10            String?
+  l11            String?
+  l12            String?
+  l13            String?
+  l14            String?
+  l15            String?
+  p8             String?
+  subtitle4      String?
   conclusion1    String?
   conclusion2    String?
   conclusion3    String?
@@ -565,6 +697,18 @@ model Ai {
   subtitle3      String?
   p6             String?
   p7             String?
+  l6             String?
+  l7             String?
+  l8             String?
+  l9             String?
+  l10            String?
+  l11            String?
+  l12            String?
+  l13            String?
+  l14            String?
+  l15            String?
+  p8             String?
+  subtitle4      String?
   conclusion1    String?
   conclusion2    String?
   conclusion3    String?
@@ -604,6 +748,18 @@ model BlogPost {
   subtitle3      String?
   p6             String?
   p7             String?
+  l6             String?
+  l7             String?
+  l8             String?
+  l9             String?
+  l10            String?
+  l11            String?
+  l12            String?
+  l13            String?
+  l14            String?
+  l15            String?
+  p8             String?
+  subtitle4      String?
   conclusion1    String?
   conclusion2    String?
   conclusion3    String?

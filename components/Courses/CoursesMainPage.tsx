@@ -41,7 +41,7 @@ interface IProps {
 
 export default function BlogMain({ data, handleEdit, handleAdd }: IProps) {
   return (
-    <div className="container max-w-[678px] md:max-w-[900px] mx-auto md:pt-12 pb-8">
+    <div className="max-w-[678px] md:max-w-[900px] mx-auto md:pt-12 pb-8">
       <div className="pb-6 px-6 md:px-0 md:pb-10">
         <div className="logoFont text-darkBlue text-2xl md:text-3xl lg:text-4xl pb-6">
           {data?.title}

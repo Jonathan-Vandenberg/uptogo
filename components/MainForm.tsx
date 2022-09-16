@@ -70,6 +70,7 @@ const AddClientForm = ({ details, add, edit, handleClose }: IProps) => {
   const Dsubtitle1 = add ? "" : details?.subtitle1;
   const Dsubtitle2 = add ? "" : details?.subtitle2;
   const Dsubtitle3 = add ? "" : details?.subtitle3;
+  const Dsubtitle4 = add ? "" : details?.subtitle4;
   const DtableContents1 = add ? "" : details?.tableContents1;
   const DtableContents2 = add ? "" : details?.tableContents2;
   const DtableContents3 = add ? "" : details?.tableContents3;
@@ -79,13 +80,24 @@ const AddClientForm = ({ details, add, edit, handleClose }: IProps) => {
   const Dp3 = add ? "" : details?.p3;
   const Dp4 = add ? "" : details?.p4;
   const Dp5 = add ? "" : details?.p5;
+  const Dp6 = add ? "" : details?.p6;
+  const Dp7 = add ? "" : details?.p7;
+  const Dp8 = add ? "" : details?.p8;
   const Dl1 = add ? "" : details?.l1;
   const Dl2 = add ? "" : details?.l2;
   const Dl3 = add ? "" : details?.l3;
   const Dl4 = add ? "" : details?.l4;
   const Dl5 = add ? "" : details?.l5;
-  const Dp6 = add ? "" : details?.p6;
-  const Dp7 = add ? "" : details?.p7;
+  const Dl6 = add ? "" : details?.l6;
+  const Dl7 = add ? "" : details?.l7;
+  const Dl8 = add ? "" : details?.l8;
+  const Dl9 = add ? "" : details?.l9;
+  const Dl10 = add ? "" : details?.l10;
+  const Dl11 = add ? "" : details?.l11;
+  const Dl12 = add ? "" : details?.l12;
+  const Dl13 = add ? "" : details?.l13;
+  const Dl14 = add ? "" : details?.l14;
+  const Dl15 = add ? "" : details?.l15;
   const Dconclusion1 = add ? "" : details?.conclusion1;
   const Dconclusion2 = add ? "" : details?.conclusion2;
   const Dconclusion3 = add ? "" : details?.conclusion3;
@@ -105,6 +117,7 @@ const AddClientForm = ({ details, add, edit, handleClose }: IProps) => {
   const [subtitle1, setSubtitle1] = useState(Dsubtitle1);
   const [subtitle2, setSubtitle2] = useState(Dsubtitle2);
   const [subtitle3, setSubtitle3] = useState(Dsubtitle3);
+  const [subtitle4, setSubtitle4] = useState(Dsubtitle3);
   const [tableContents1, setTableContents1] = useState(DtableContents1);
   const [tableContents2, setTableContents2] = useState(DtableContents2);
   const [tableContents3, setTableContents3] = useState(DtableContents3);
@@ -114,13 +127,24 @@ const AddClientForm = ({ details, add, edit, handleClose }: IProps) => {
   const [p3, setP3] = useState(Dp3);
   const [p4, setP4] = useState(Dp4);
   const [p5, setP5] = useState(Dp5);
+  const [p6, setP6] = useState(Dp6);
+  const [p7, setP7] = useState(Dp7);
+  const [p8, setP8] = useState(Dp8);
   const [l1, setL1] = useState(Dl1);
   const [l2, setL2] = useState(Dl2);
   const [l3, setL3] = useState(Dl3);
   const [l4, setL4] = useState(Dl4);
   const [l5, setL5] = useState(Dl5);
-  const [p6, setP6] = useState(Dp6);
-  const [p7, setP7] = useState(Dp7);
+  const [l6, setL6] = useState(Dl6);
+  const [l7, setL7] = useState(Dl7);
+  const [l8, setL8] = useState(Dl8);
+  const [l9, setL9] = useState(Dl9);
+  const [l10, setL10] = useState(Dl10);
+  const [l11, setL11] = useState(Dl11);
+  const [l12, setL12] = useState(Dl12);
+  const [l13, setL13] = useState(Dl13);
+  const [l14, setL14] = useState(Dl14);
+  const [l15, setL15] = useState(Dl15);
   const [conclusion1, setConclusion1] = useState(Dconclusion1);
   const [conclusion2, setConclusion2] = useState(Dconclusion2);
   const [conclusion3, setConclusion3] = useState(Dconclusion3);
@@ -190,6 +214,18 @@ const AddClientForm = ({ details, add, edit, handleClose }: IProps) => {
         subtitle3: subtitle3,
         p6: p6,
         p7: p7,
+        l6: l6,
+        l7: l7,
+        l8: l8,
+        l9: l9,
+        l10: l10,
+        l11: l11,
+        l12: l12,
+        l13: l13,
+        l14: l14,
+        l15: l15,
+        p8: p8,
+        subtitle4: subtitle4,
         conclusion1: conclusion1,
         conclusion2: conclusion2,
         conclusion3: conclusion3,
@@ -241,6 +277,7 @@ const AddClientForm = ({ details, add, edit, handleClose }: IProps) => {
     setSubtitle1("");
     setSubtitle2("");
     setSubtitle3("");
+    setSubtitle4("");
     setTableContents1("");
     setTableContents2("");
     setTableContents3("");
@@ -255,8 +292,19 @@ const AddClientForm = ({ details, add, edit, handleClose }: IProps) => {
     setL3("");
     setL4("");
     setL5("");
+    setL6("");
+    setL7("");
+    setL8("");
+    setL9("");
+    setL10("");
+    setL11("");
+    setL12("");
+    setL13("");
+    setL14("");
+    setL15("");
     setP6("");
     setP7("");
+    setP8("");
     setConclusion1("");
     setConclusion2("");
     setConclusion3("");
@@ -551,6 +599,138 @@ const AddClientForm = ({ details, add, edit, handleClose }: IProps) => {
             value={p7 as string}
             placeholder="Paragraph #7"
             onChange={(e) => setP7(e.target.value)}
+            className="border-2 border-gray-200 p-3 rounded-xl w-full"
+          />
+        </div>
+
+        <div className="px-8 flex items-start space-y-3 justify-center flex-col">
+          <input
+            id="l6"
+            value={l6 as string}
+            placeholder="List Item"
+            onChange={(e) => setL6(e.target.value)}
+            className="border-2 border-gray-200 p-3 rounded-xl w-full"
+          />
+        </div>
+
+        <div className="px-8 flex items-start space-y-3 justify-center flex-col">
+          <input
+            id="l7"
+            value={l7 as string}
+            placeholder="List Item"
+            onChange={(e) => setL7(e.target.value)}
+            className="border-2 border-gray-200 p-3 rounded-xl w-full"
+          />
+        </div>
+
+        <div className="px-8 flex items-start space-y-3 justify-center flex-col">
+          <input
+            id="l8"
+            value={l8 as string}
+            placeholder="List Item"
+            onChange={(e) => setL8(e.target.value)}
+            className="border-2 border-gray-200 p-3 rounded-xl w-full"
+          />
+        </div>
+
+        <div className="px-8 flex items-start space-y-3 justify-center flex-col">
+          <input
+            id="l9"
+            value={l9 as string}
+            placeholder="List Item"
+            onChange={(e) => setL9(e.target.value)}
+            className="border-2 border-gray-200 p-3 rounded-xl w-full"
+          />
+        </div>
+
+        <div className="px-8 flex items-start space-y-3 justify-center flex-col">
+          <input
+            id="l10"
+            value={l10 as string}
+            placeholder="List Item"
+            onChange={(e) => setL10(e.target.value)}
+            className="border-2 border-gray-200 p-3 rounded-xl w-full"
+          />
+        </div>
+
+        <div className="px-8 flex items-start space-y-3 justify-center flex-col">
+          <input
+            id="l11"
+            value={l11 as string}
+            placeholder="List Item"
+            onChange={(e) => setL11(e.target.value)}
+            className="border-2 border-gray-200 p-3 rounded-xl w-full"
+          />
+        </div>
+
+        <div className="px-8 flex items-start space-y-3 justify-center flex-col">
+          <input
+            id="l12"
+            value={l12 as string}
+            placeholder="List Item"
+            onChange={(e) => setL12(e.target.value)}
+            className="border-2 border-gray-200 p-3 rounded-xl w-full"
+          />
+        </div>
+
+        <div className="px-8 flex items-start space-y-3 justify-center flex-col">
+          <input
+            id="l13"
+            value={l13 as string}
+            placeholder="List Item"
+            onChange={(e) => setL13(e.target.value)}
+            className="border-2 border-gray-200 p-3 rounded-xl w-full"
+          />
+        </div>
+
+        <div className="px-8 flex items-start space-y-3 justify-center flex-col">
+          <input
+            id="l14"
+            value={l14 as string}
+            placeholder="List Item"
+            onChange={(e) => setL14(e.target.value)}
+            className="border-2 border-gray-200 p-3 rounded-xl w-full"
+          />
+        </div>
+
+        <div className="px-8 flex items-start space-y-3 justify-center flex-col">
+          <input
+            id="l15"
+            value={l15 as string}
+            placeholder="List Item"
+            onChange={(e) => setL15(e.target.value)}
+            className="border-2 border-gray-200 p-3 rounded-xl w-full"
+          />
+        </div>
+
+        <div className="px-8 flex items-start space-y-3 justify-center flex-col pt-10">
+          <textarea
+            rows={4}
+            cols={50}
+            value={p8 as string}
+            placeholder="Paragraph #8"
+            onChange={(e) => setP8(e.target.value)}
+            className="border-2 border-gray-200 p-3 rounded-xl w-full"
+          />
+        </div>
+
+        <div className="px-8 flex items-start space-y-3 justify-center flex-col pt-10">
+          <input
+            id="subtitle4"
+            value={subtitle4 as string}
+            placeholder="Subtitle #4"
+            onChange={(e) => setSubtitle4(e.target.value)}
+            className="border-2 border-gray-200 p-3 rounded-xl w-full"
+          />
+        </div>
+
+        <div className="px-8 flex items-start space-y-3 justify-center flex-col pt-10">
+          <textarea
+            rows={4}
+            cols={50}
+            value={conclusion1 as string}
+            placeholder="Paragraph #8"
+            onChange={(e) => setConclusion1(e.target.value)}
             className="border-2 border-gray-200 p-3 rounded-xl w-full"
           />
         </div>

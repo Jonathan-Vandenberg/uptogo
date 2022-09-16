@@ -185,6 +185,18 @@ type It {
   subtitle3: String
   p6: String
   p7: String
+  l6: String
+  l7: String
+  l8: String
+  l9: String
+  l10: String
+  l11: String
+  l12: String
+  l13: String
+  l14: String
+  l15: String
+  p8: String
+  subtitle4: String
   conclusion1: String
   conclusion2: String
   conclusion3: String
@@ -222,6 +234,18 @@ input ItInput {
   subtitle3: String
   p6: String
   p7: String
+  l6: String
+  l7: String
+  l8: String
+  l9: String
+  l10: String
+  l11: String
+  l12: String
+  l13: String
+  l14: String
+  l15: String
+  p8: String
+  subtitle4: String
   conclusion1: String
   conclusion2: String
   conclusion3: String
@@ -259,6 +283,18 @@ type SoftwareDevelopment {
   subtitle3: String
   p6: String
   p7: String
+  l6: String
+  l7: String
+  l8: String
+  l9: String
+  l10: String
+  l11: String
+  l12: String
+  l13: String
+  l14: String
+  l15: String
+  p8: String
+  subtitle4: String
   conclusion1: String
   conclusion2: String
   conclusion3: String
@@ -295,6 +331,18 @@ input SoftwareDevelopmentInput {
   subtitle3: String
   p6: String
   p7: String
+  l6: String
+  l7: String
+  l8: String
+  l9: String
+  l10: String
+  l11: String
+  l12: String
+  l13: String
+  l14: String
+  l15: String
+  p8: String
+  subtitle4: String
   conclusion1: String
   conclusion2: String
   conclusion3: String
@@ -332,6 +380,18 @@ type ComputerNetworking {
   subtitle3: String
   p6: String
   p7: String
+  l6: String
+  l7: String
+  l8: String
+  l9: String
+  l10: String
+  l11: String
+  l12: String
+  l13: String
+  l14: String
+  l15: String
+  p8: String
+  subtitle4: String
   conclusion1: String
   conclusion2: String
   conclusion3: String
@@ -368,6 +428,18 @@ input ComputerNetworkingInput {
   subtitle3: String
   p6: String
   p7: String
+  l6: String
+  l7: String
+  l8: String
+  l9: String
+  l10: String
+  l11: String
+  l12: String
+  l13: String
+  l14: String
+  l15: String
+  p8: String
+  subtitle4: String
   conclusion1: String
   conclusion2: String
   conclusion3: String
@@ -405,6 +477,18 @@ type CloudComputing {
   subtitle3: String
   p6: String
   p7: String
+  l6: String
+  l7: String
+  l8: String
+  l9: String
+  l10: String
+  l11: String
+  l12: String
+  l13: String
+  l14: String
+  l15: String
+  p8: String
+  subtitle4: String
   conclusion1: String
   conclusion2: String
   conclusion3: String
@@ -441,6 +525,18 @@ input CloudComputingInput {
   subtitle3: String
   p6: String
   p7: String
+  l6: String
+  l7: String
+  l8: String
+  l9: String
+  l10: String
+  l11: String
+  l12: String
+  l13: String
+  l14: String
+  l15: String
+  p8: String
+  subtitle4: String
   conclusion1: String
   conclusion2: String
   conclusion3: String
@@ -478,6 +574,18 @@ type BusinessAnalysis {
   subtitle3: String
   p6: String
   p7: String
+  l6: String
+  l7: String
+  l8: String
+  l9: String
+  l10: String
+  l11: String
+  l12: String
+  l13: String
+  l14: String
+  l15: String
+  p8: String
+  subtitle4: String
   conclusion1: String
   conclusion2: String
   conclusion3: String
@@ -514,6 +622,18 @@ input BusinessAnalysisInput {
   subtitle3: String
   p6: String
   p7: String
+  l6: String
+  l7: String
+  l8: String
+  l9: String
+  l10: String
+  l11: String
+  l12: String
+  l13: String
+  l14: String
+  l15: String
+  p8: String
+  subtitle4: String
   conclusion1: String
   conclusion2: String
   conclusion3: String
@@ -551,6 +671,18 @@ type Telecommunication {
   subtitle3: String
   p6: String
   p7: String
+  l6: String
+  l7: String
+  l8: String
+  l9: String
+  l10: String
+  l11: String
+  l12: String
+  l13: String
+  l14: String
+  l15: String
+  p8: String
+  subtitle4: String
   conclusion1: String
   conclusion2: String
   conclusion3: String
@@ -587,6 +719,18 @@ input TelecommunicationInput {
   subtitle3: String
   p6: String
   p7: String
+  l6: String
+  l7: String
+  l8: String
+  l9: String
+  l10: String
+  l11: String
+  l12: String
+  l13: String
+  l14: String
+  l15: String
+  p8: String
+  subtitle4: String
   conclusion1: String
   conclusion2: String
   conclusion3: String
@@ -624,6 +768,18 @@ type GameProgramming {
   subtitle3: String
   p6: String
   p7: String
+  l6: String
+  l7: String
+  l8: String
+  l9: String
+  l10: String
+  l11: String
+  l12: String
+  l13: String
+  l14: String
+  l15: String
+  p8: String
+  subtitle4: String
   conclusion1: String
   conclusion2: String
   conclusion3: String
@@ -660,6 +816,18 @@ input GameProgrammingInput {
   subtitle3: String
   p6: String
   p7: String
+  l6: String
+  l7: String
+  l8: String
+  l9: String
+  l10: String
+  l11: String
+  l12: String
+  l13: String
+  l14: String
+  l15: String
+  p8: String
+  subtitle4: String
   conclusion1: String
   conclusion2: String
   conclusion3: String
@@ -697,6 +865,18 @@ type WebDevelopment {
   subtitle3: String
   p6: String
   p7: String
+  l6: String
+  l7: String
+  l8: String
+  l9: String
+  l10: String
+  l11: String
+  l12: String
+  l13: String
+  l14: String
+  l15: String
+  p8: String
+  subtitle4: String
   conclusion1: String
   conclusion2: String
   conclusion3: String
@@ -733,6 +913,18 @@ input WebDevelopmentInput {
   subtitle3: String
   p6: String
   p7: String
+  l6: String
+  l7: String
+  l8: String
+  l9: String
+  l10: String
+  l11: String
+  l12: String
+  l13: String
+  l14: String
+  l15: String
+  p8: String
+  subtitle4: String
   conclusion1: String
   conclusion2: String
   conclusion3: String
@@ -770,6 +962,18 @@ type MachineLearning {
   subtitle3: String
   p6: String
   p7: String
+  l6: String
+  l7: String
+  l8: String
+  l9: String
+  l10: String
+  l11: String
+  l12: String
+  l13: String
+  l14: String
+  l15: String
+  p8: String
+  subtitle4: String
   conclusion1: String
   conclusion2: String
   conclusion3: String
@@ -806,6 +1010,18 @@ input MachineLearningInput {
   subtitle3: String
   p6: String
   p7: String
+  l6: String
+  l7: String
+  l8: String
+  l9: String
+  l10: String
+  l11: String
+  l12: String
+  l13: String
+  l14: String
+  l15: String
+  p8: String
+  subtitle4: String
   conclusion1: String
   conclusion2: String
   conclusion3: String
@@ -843,6 +1059,18 @@ type DataManagement {
   subtitle3: String
   p6: String
   p7: String
+  l6: String
+  l7: String
+  l8: String
+  l9: String
+  l10: String
+  l11: String
+  l12: String
+  l13: String
+  l14: String
+  l15: String
+  p8: String
+  subtitle4: String
   conclusion1: String
   conclusion2: String
   conclusion3: String
@@ -879,6 +1107,18 @@ input DataManagementInput {
   subtitle3: String
   p6: String
   p7: String
+  l6: String
+  l7: String
+  l8: String
+  l9: String
+  l10: String
+  l11: String
+  l12: String
+  l13: String
+  l14: String
+  l15: String
+  p8: String
+  subtitle4: String
   conclusion1: String
   conclusion2: String
   conclusion3: String
@@ -916,6 +1156,18 @@ type Blockchain {
   subtitle3: String
   p6: String
   p7: String
+  l6: String
+  l7: String
+  l8: String
+  l9: String
+  l10: String
+  l11: String
+  l12: String
+  l13: String
+  l14: String
+  l15: String
+  p8: String
+  subtitle4: String
   conclusion1: String
   conclusion2: String
   conclusion3: String
@@ -952,6 +1204,18 @@ input BlockchainInput {
   subtitle3: String
   p6: String
   p7: String
+  l6: String
+  l7: String
+  l8: String
+  l9: String
+  l10: String
+  l11: String
+  l12: String
+  l13: String
+  l14: String
+  l15: String
+  p8: String
+  subtitle4: String
   conclusion1: String
   conclusion2: String
   conclusion3: String
@@ -989,6 +1253,18 @@ type Ai {
   subtitle3: String
   p6: String
   p7: String
+  l6: String
+  l7: String
+  l8: String
+  l9: String
+  l10: String
+  l11: String
+  l12: String
+  l13: String
+  l14: String
+  l15: String
+  p8: String
+  subtitle4: String
   conclusion1: String
   conclusion2: String
   conclusion3: String
@@ -1025,6 +1301,18 @@ input AiInput {
   subtitle3: String
   p6: String
   p7: String
+  l6: String
+  l7: String
+  l8: String
+  l9: String
+  l10: String
+  l11: String
+  l12: String
+  l13: String
+  l14: String
+  l15: String
+  p8: String
+  subtitle4: String
   conclusion1: String
   conclusion2: String
   conclusion3: String
@@ -1040,8 +1328,8 @@ input AiInput {
 }
 
 type BlogPost {
-  id: ID!
   category: String
+  id: ID!
   title: String
   subtitle1: String
   tableContents1: String
@@ -1062,6 +1350,18 @@ type BlogPost {
   subtitle3: String
   p6: String
   p7: String
+  l6: String
+  l7: String
+  l8: String
+  l9: String
+  l10: String
+  l11: String
+  l12: String
+  l13: String
+  l14: String
+  l15: String
+  p8: String
+  subtitle4: String
   conclusion1: String
   conclusion2: String
   conclusion3: String
@@ -1077,8 +1377,8 @@ type BlogPost {
 }
 
 input BlogPostInput {
-  id: ID!
   category: String
+  id: ID!
   title: String
   subtitle1: String
   tableContents1: String
@@ -1099,6 +1399,18 @@ input BlogPostInput {
   subtitle3: String
   p6: String
   p7: String
+  l6: String
+  l7: String
+  l8: String
+  l9: String
+  l10: String
+  l11: String
+  l12: String
+  l13: String
+  l14: String
+  l15: String
+  p8: String
+  subtitle4: String
   conclusion1: String
   conclusion2: String
   conclusion3: String

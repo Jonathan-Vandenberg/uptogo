@@ -2,6 +2,7 @@ import CheckIcon from "@mui/icons-material/Check";
 import { useSession } from "next-auth/react";
 import { useEffect, useState } from "react";
 import { AiTwotoneCheckCircle } from "react-icons/ai";
+import { BsCircleFill } from "react-icons/bs";
 import { FaEdit } from "react-icons/fa";
 import { MdAddCircleOutline, MdDeleteForever } from "react-icons/md";
 import type {
@@ -54,25 +55,25 @@ export default function BlogPostMarkup({
       <ul className="border-y-2 border-gray-200 py-6 flex flex-col items-start justify-start space-y-5">
         <li className="text-xl text-gray-700 flex items-center justify-between space-x-4">
           <div>
-            <AiTwotoneCheckCircle size={15} color="orange" />
+            <AiTwotoneCheckCircle size={14} color="orange" />
           </div>
           <p>{data?.tableContents1}</p>
         </li>
         <li className="text-xl text-gray-700 flex items-center justify-between space-x-4">
           <div>
-            <AiTwotoneCheckCircle size={15} color="orange" />
+            <AiTwotoneCheckCircle size={14} color="orange" />
           </div>
           <p>{data?.tableContents2}</p>
         </li>
         <li className="text-xl text-gray-700 flex items-center justify-between space-x-4">
           <div>
-            <AiTwotoneCheckCircle size={15} color="orange" />
+            <AiTwotoneCheckCircle size={14} color="orange" />
           </div>
           <p>{data?.tableContents3}</p>
         </li>
         <li className="text-xl text-gray-700 flex items-center justify-between space-x-4">
           <div>
-            <AiTwotoneCheckCircle size={15} color="orange" />
+            <AiTwotoneCheckCircle size={14} color="orange" />
           </div>
           <p>{data?.tableContents4}</p>
         </li>
@@ -126,6 +127,134 @@ export default function BlogPostMarkup({
       </h2>
       <p className="text-gray-600 py-4 text-xl">{data?.p6}</p>
       <p className="text-gray-600 py-4 text-xl">{data?.p7}</p>
+      <ul>
+        {data?.l6 && (
+          <li className="py-4 text-xl">
+            <div className="flex items-center justify-1tart space-x-5">
+              <BsCircleFill
+                size={14}
+                className="text-darkBlue"
+                fontSize="large"
+              />
+              <p className="text-gray-600">{data?.l6}</p>
+            </div>
+          </li>
+        )}
+        {data?.l7 && (
+          <li className="py-4 text-xl">
+            <div className="flex items-center justify-1tart space-x-5">
+              <BsCircleFill
+                size={14}
+                className="text-darkBlue"
+                fontSize="large"
+              />
+              <p className="text-gray-600">{data?.l7}</p>
+            </div>
+          </li>
+        )}
+        {data?.l8 && (
+          <li className="py-4 text-xl">
+            <div className="flex items-center justify-1tart space-x-5">
+              <BsCircleFill
+                size={14}
+                className="text-darkBlue"
+                fontSize="large"
+              />
+              <p className="text-gray-600">{data?.l8}</p>
+            </div>
+          </li>
+        )}
+        {data?.l9 && (
+          <li className="py-4 text-xl">
+            <div className="flex items-center justify-1tart space-x-5">
+              <BsCircleFill
+                size={14}
+                className="text-darkBlue"
+                fontSize="large"
+              />
+              <p className="text-gray-600">{data?.l9}</p>
+            </div>
+          </li>
+        )}
+        {data?.l10 && (
+          <li className="py-4 text-xl">
+            <div className="flex items-center justify-1tart space-x-5">
+              <BsCircleFill
+                size={14}
+                className="text-darkBlue"
+                fontSize="large"
+              />
+              <p className="text-gray-600">{data?.l10}</p>
+            </div>
+          </li>
+        )}
+        {data?.l11 && (
+          <li className="py-4 text-xl">
+            <div className="flex items-center justify-1tart space-x-5">
+              <BsCircleFill
+                size={14}
+                className="text-darkBlue"
+                fontSize="large"
+              />
+              <p className="text-gray-600">{data?.l11}</p>
+            </div>
+          </li>
+        )}
+        {data?.l12 && (
+          <li className="py-4 text-xl">
+            <div className="flex items-center justify-1tart space-x-5">
+              <BsCircleFill
+                size={14}
+                className="text-darkBlue"
+                fontSize="large"
+              />
+              <p className="text-gray-600">{data?.l12}</p>
+            </div>
+          </li>
+        )}
+        {data?.l13 && (
+          <li className="py-4 text-xl">
+            <div className="flex items-center justify-1tart space-x-5">
+              <BsCircleFill
+                size={14}
+                className="text-darkBlue"
+                fontSize="large"
+              />
+              <p className="text-gray-600">{data?.l13}</p>
+            </div>
+          </li>
+        )}
+        {data?.l14 && (
+          <li className="py-4 text-xl">
+            <div className="flex items-center justify-1tart space-x-5">
+              <BsCircleFill
+                size={14}
+                className="text-darkBlue"
+                fontSize="large"
+              />
+              <p className="text-gray-600">{data?.l14}</p>
+            </div>
+          </li>
+        )}
+        {data?.l15 && (
+          <li className="py-4 text-xl">
+            <div className="flex items-center justify-1tart space-x-5">
+              <BsCircleFill
+                size={14}
+                className="text-darkBlue"
+                fontSize="large"
+              />
+              <p className="text-gray-600">{data?.l15}</p>
+            </div>
+          </li>
+        )}
+      </ul>
+      {data?.p8 && <p className="text-gray-600 py-4 text-xl">{data?.p8}</p>}
+      {data?.subtitle4 && (
+        <p className="logoFont text-gray-600 text-2xl pb-3 pt-6 ">
+          {data?.subtitle4}
+        </p>
+      )}
       <p className="text-gray-600 py-4 text-xl">{data?.conclusion1}</p>
       <p className="text-gray-600 py-4 text-xl">{data?.conclusion2}</p>
       <p className="text-gray-600 py-4 text-xl">{data?.conclusion3}</p>
@@ -135,28 +264,26 @@ export default function BlogPostMarkup({
       {data?.reference2 && (
         <p className="text-gray-500 py-1 text">Reference: {data?.reference2}</p>
       )}
-      {session?.user?.email === "urbangentryjon@gmail.com" && (
-        <div className="flex space-x-5 justify-center items-center py-6">
-          <div className="flex items-center space-x-1" onClick={handleEdit}>
-            <div className="text-xl">
-              <FaEdit size={25} className="text-orange" />
-            </div>
-            <p className="text-lg text-orange">Edit</p>
+      <div className="flex space-x-5 justify-center items-center py-6">
+        <div className="flex items-center space-x-1" onClick={handleEdit}>
+          <div className="text-xl">
+            <FaEdit size={25} className="text-orange" />
           </div>
-          <div className="flex items-center space-x-1" onClick={handleAdd}>
-            <div className="text-xl text-green-600">
-              <MdAddCircleOutline size={25} />
-            </div>
-            <p className="text-lg text-green-600">Add</p>
-          </div>
-          <div className="flex items-center space-x-1">
-            <div className="text-xl">
-              <MdDeleteForever size={25} className="text-red-500" />
-            </div>
-            <p className="text-lg text-red-500">Delete</p>
-          </div>
+          <p className="text-lg text-orange">Edit</p>
         </div>
-      )}
+        <div className="flex items-center space-x-1" onClick={handleAdd}>
+          <div className="text-xl text-green-600">
+            <MdAddCircleOutline size={25} />
+          </div>
+          <p className="text-lg text-green-600">Add</p>
+        </div>
+        <div className="flex items-center space-x-1">
+          <div className="text-xl">
+            <MdDeleteForever size={25} className="text-red-500" />
+          </div>
+          <p className="text-lg text-red-500">Delete</p>
+        </div>
+      </div>
     </div>
   );
 }

@@ -7,7 +7,7 @@ export default function App() {
     <div className="bg-white md:grid md:grid-cols-4 flex-col-reverse flex items-center justify-center">
       <div className="col-span-1"></div>
       <div className="bg-white flex items-center flex-col justify-center md:items-start w-full h-full md:col-span-1">
-        <h1 className="text-gray-600 logoFont text-6xl pb-6 col-span-1">
+        <h1 className="text-gray-600 logoFont text-4xl pb-2 col-span-1">
           Study Abroad
         </h1>
         <p className="text-2xl text-gray-600">
@@ -19,7 +19,7 @@ export default function App() {
           </p>
         </Link>
       </div>
-      <div className="h-full w-full col-span-2 max-w-[300px] block">
+      <div className="h-full w-full col-span-2 max-w-[300px] block p-10">
         <Image
           src={logo}
           alt="blog Image"

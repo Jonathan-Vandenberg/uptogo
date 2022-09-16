@@ -102,7 +102,7 @@ export default function App({ data }: IProps) {
   };
 
   return (
-    <div className="max-w-[678px] md:max-w-[900px] mx-auto container">
+    <div className="mx-auto container">
       {data ? (
         <CoursesMainPage
           data={data}
