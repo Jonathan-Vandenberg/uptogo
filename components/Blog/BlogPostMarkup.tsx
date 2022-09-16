@@ -58,7 +58,12 @@ export default function BlogPostMarkup({
             <div>
               <AiTwotoneCheckCircle size={14} color="orange" />
             </div>
-            <p>{data?.tableContents1}</p>
+            <a
+              href="#subtitle1"
+              className="underline underline-offset-1 decoration-[2px] decoration-orange"
+            >
+              {data?.tableContents1}
+            </a>
           </li>
         )}
         {data?.tableContents2 && (
@@ -66,7 +71,12 @@ export default function BlogPostMarkup({
             <div>
               <AiTwotoneCheckCircle size={14} color="orange" />
             </div>
-            <p>{data?.tableContents2}</p>
+            <a
+              className="underline underline-offset-1 decoration-[2px] decoration-orange"
+              href="#subtitle2"
+            >
+              {data?.tableContents2}
+            </a>
           </li>
         )}
         {data?.tableContents3 && (
@@ -74,7 +84,12 @@ export default function BlogPostMarkup({
             <div>
               <AiTwotoneCheckCircle size={14} color="orange" />
             </div>
-            <p>{data?.tableContents3}</p>
+            <a
+              className="underline underline-offset-1 decoration-[2px] decoration-orange"
+              href="#subtitle3"
+            >
+              {data?.tableContents3}
+            </a>
           </li>
         )}
         {data?.tableContents4 && (
@@ -82,7 +97,12 @@ export default function BlogPostMarkup({
             <div>
               <AiTwotoneCheckCircle size={14} color="orange" />
             </div>
-            <p>{data?.tableContents4}</p>
+            <a
+              href="#subtitle4"
+              className="underline underline-offset-1 decoration-[2px] decoration-orange"
+            >
+              {data?.tableContents4}
+            </a>
           </li>
         )}
       </ul>
@@ -92,9 +112,16 @@ export default function BlogPostMarkup({
         {data?.p2 && <p className="text-gray-600 text-xl">{data?.p2}</p>}
         {data?.p3 && <p className="text-gray-600 text-xl">{data?.p3}</p>}
       </div>
-      <EmailButton />
+
+      <div className="py-6">
+        <EmailButton />
+      </div>
+
       {data?.subtitle2 && (
-        <h2 className="logoFont text-gray-600 text-2xl pb-3 pt-6 ">
+        <h2
+          id="subtitle2"
+          className="logoFont text-gray-600 text-2xl pb-3 pt-6 scroll-mt-20"
+        >
           {data?.subtitle2}
         </h2>
       )}
@@ -143,7 +170,10 @@ export default function BlogPostMarkup({
         )}
       </ul>
       {data?.subtitle3 && (
-        <h2 className="text-2xl logoFont text-gray-600  pb-3 pt-12 ">
+        <h2
+          id="subtitle3"
+          className="text-2xl logoFont text-gray-600  pb-3 pt-12 scroll-mt-20"
+        >
           {data?.subtitle3}
         </h2>
       )}
@@ -273,7 +303,10 @@ export default function BlogPostMarkup({
       </ul>
       {data?.p8 && <p className="text-gray-600 py-4 text-xl">{data?.p8}</p>}
       {data?.subtitle4 && (
-        <p className="logoFont text-gray-600 text-2xl pb-3 pt-6 ">
+        <p
+          id="subtitle4"
+          className="logoFont text-gray-600 text-2xl pb-3 pt-6 scroll-mt-20"
+        >
           {data?.subtitle4}
         </p>
       )}
