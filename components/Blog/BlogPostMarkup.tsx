@@ -77,7 +77,7 @@ export default function BlogPostMarkup({
             <p>{data?.tableContents3}</p>
           </li>
         )}
-        {data?.tableContents1 && (
+        {data?.tableContents4 && (
           <li className="text-xl text-gray-700 flex items-center justify-between space-x-4">
             <div>
               <AiTwotoneCheckCircle size={14} color="orange" />
