@@ -31,7 +31,7 @@ export default function App() {
         <Hero />
       </div>
       <h2 className="text-red-600 text-3xl text-center bg-red-100 py-5 logoFont">
-        web đang xây dựng
+        web đang xây dựng.
       </h2>
       <div className="container mx-auto">
         <HomeMain />
