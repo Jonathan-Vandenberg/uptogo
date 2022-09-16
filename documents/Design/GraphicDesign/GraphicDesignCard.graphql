@@ -1,0 +1,7 @@
+# import GraphicDesignCard from "./GraphicDesignCardFragment.graphql"
+
+query GraphicDesignCard {
+  graphicDesignCard {
+    ...GraphicDesignCard
+  }
+}

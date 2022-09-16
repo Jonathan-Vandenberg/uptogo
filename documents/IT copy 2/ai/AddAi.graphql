@@ -1,0 +1,7 @@
+# import Ai from './Ai.graphql'
+
+mutation AddAi($input: AiInput!) {
+  addAi(input: $input) {
+    ...Ai
+  }
+}

@@ -2,15 +2,24 @@ import Link from "next/link";
 import Image from "next/image";
 import image from "../../public/navDropdownImages/asianMale.jpg";
 import {
+  Acting,
   Ai,
+  Animation3D,
   Blockchain,
   BlogPost,
   BusinessAnalysis,
   CloudComputing,
   ComputerNetworking,
   DataManagement,
+  DigitalMedia,
+  FashionDesign,
+  Film,
   GameProgramming,
+  GraphicDesign,
+  InteriorDesign,
+  Landscape,
   MachineLearning,
+  Music,
   SoftwareDevelopment,
   Telecommunication,
   WebDevelopment,
@@ -31,6 +40,15 @@ interface IProps {
     | DataManagement
     | Blockchain
     | Ai
+    | Music
+    | Landscape
+    | FashionDesign
+    | Film
+    | GraphicDesign
+    | InteriorDesign
+    | DigitalMedia
+    | Acting
+    | Animation3D
     | undefined
     | null;
 }
@@ -56,6 +74,7 @@ enum CategoriesEnum {
   Construction = "CONSTRUCTION",
   DataManagement = "DATA_MANAGEMENT",
   Dental = "DENTAL",
+  Design = "DESIGN",
   DigitalMedia = "DIGITAL_MEDIA",
   Education = "EDUCATION",
   Events = "EVENTS",
@@ -65,12 +84,15 @@ enum CategoriesEnum {
   GameProgramming = "GAME_PROGRAMMING",
   GraphicDesign = "GRAPHIC_DESIGN",
   Haridressing = "HARIDRESSING",
+  Health = "HEALTH",
+  Hospitality = "HOSPITALITY",
   HopitalityManagement = "HOPITALITY_MANAGEMENT",
   Horticulture = "HORTICULTURE",
   HumanResources = "HUMAN_RESOURCES",
   InteriorDesign = "INTERIOR_DESIGN",
   InternationalBusiness = "INTERNATIONAL_BUSINESS",
   IntlHotelManagement = "INTL_HOTEL_MANAGEMENT",
+  It = "IT",
   Landscape = "LANDSCAPE",
   LeadershipManagement = "LEADERSHIP_MANAGEMENT",
   MachineLearning = "MACHINE_LEARNING",
@@ -88,6 +110,7 @@ enum CategoriesEnum {
   SupplychainManagement = "SUPPLYCHAIN_MANAGEMENT",
   Telecommunication = "TELECOMMUNICATION",
   TravelTourism = "TRAVEL_TOURISM",
+  Trades = "TRADES",
   Vetenary = "VETENARY",
   WebDevelopment = "WEB_DEVELOPMENT",
   Yoga = "YOGA",
@@ -98,6 +121,12 @@ export default function App({ data }: IProps) {
   const [slug, setSlug] = useState("");
 
   useEffect(() => {
+    if (c === CategoriesEnum.Blog) {
+      setSlug("/blog/" + data?.id);
+    }
+
+    //* -------- Information Technology -------- *//
+
     if (c === CategoriesEnum.SoftwareDevelopment) {
       setSlug(
         ("/courses/information-technology/software-development/articles/" +
@@ -164,9 +193,39 @@ export default function App({ data }: IProps) {
           data?.id) as string
       );
     }
-    if (c === CategoriesEnum.Blog) {
-      setSlug("/blog/" + data?.id);
+
+    //* -------- Design -------- *//
+
+    if (c === CategoriesEnum.MusicAudio) {
+      setSlug("/courses/design/music/articles/" + data?.id);
     }
+    if (c === CategoriesEnum.FashionDesign) {
+      setSlug("/courses/design/fashion-design/articles/" + data?.id);
+    }
+    if (c === CategoriesEnum.Landscape) {
+      setSlug("/courses/design/landscape/articles/" + data?.id);
+    }
+    if (c === CategoriesEnum.FilmMedia) {
+      setSlug("/courses/design/film/articles/" + data?.id);
+    }
+    if (c === CategoriesEnum.GraphicDesign) {
+      setSlug("/courses/design/graphic-design/articles/" + data?.id);
+    }
+    if (c === CategoriesEnum.InteriorDesign) {
+      setSlug("/courses/design/interior-design/articles/" + data?.id);
+    }
+    if (c === CategoriesEnum.DigitalMedia) {
+      setSlug("/courses/design/digital-media/articles/" + data?.id);
+    }
+    if (c === CategoriesEnum.Acting) {
+      setSlug("/courses/design/acting/articles/" + data?.id);
+    }
+    if (c === CategoriesEnum.Animation_3D) {
+      setSlug("/courses/design/animation3d/articles/" + data?.id);
+    }
+
+    //* -------- Health -------- *//
+
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
@@ -175,7 +234,7 @@ export default function App({ data }: IProps) {
       <div className="bg-body md:px-10 pb-6 md:p-0 md:my-6 md:flex-row flex-col-reverse flex items-center justify-center">
         <div className="bg-body px-4 flex items-start flex-col justify-start w-full h-full md:w-2/5 py-6">
           <p className="text-gray-400 -mb-4 md:-mb-6 md:text-lg">
-            INFORMATION TECHNOLOGY
+            {data?.category}
           </p>
           <h1 className="text-gray-700 logoFont text-3xl py-6 md:pb-4 leading-12">
             {data?.title}

@@ -1,64 +1,134 @@
-import Link from "next/link";
+import { GraphQLYogaError } from "@graphql-yoga/node";
+import { PrismaClient } from "@prisma/client";
+import { GetStaticProps } from "next";
+import { useRouter } from "next/router";
+import { useState } from "react";
+import CoursesMainPage from "../../../components/Courses/CoursesMainPage";
+import CoursesNarrowCards from "../../../components/Courses/CoursesNarrowCards";
+import MainForm from "../../../components/MainForm";
+import { Design } from "../../../types";
 
-export default function App() {
+const cardData = [
+  {
+    course: "Acting",
+    link: "/courses/design/acting",
+  },
+  {
+    course: "3d Animation",
+    link: "/courses/design/animation3d",
+  },
+  {
+    course: "Digital Media",
+    link: "/courses/design/digital-media",
+  },
+  {
+    course: "Fashion Design",
+    link: "/courses/design/fashion-design",
+  },
+  {
+    course: "Film",
+    link: "/courses/design/film",
+  },
+  {
+    course: "Graphic Design",
+    link: "/courses/design/graphic-design",
+  },
+  {
+    course: "Interior Design",
+    link: "/courses/design/interior-design",
+  },
+  {
+    course: "Landscaping",
+    link: "/courses/design/landscape",
+  },
+  {
+    course: "Music & Audio",
+    link: "/courses/design/music",
+  },
+];
+
+interface IProps {
+  data: Design;
+}
+
+export const getStaticProps: GetStaticProps = async () => {
+  const prisma = new PrismaClient();
+  const data = await prisma.design.findUnique({
+    where: {
+      id: "63245ef7ef7048971301fdd9",
+    },
+  });
+
+  if (!data) {
+    throw new GraphQLYogaError(`Design with data not found.`, {
+      code: "DESIGN_NOT_FOUND",
+    });
+  }
+
+  return {
+    props: { data },
+  };
+};
+
+export default function App({ data }: IProps) {
+  const [showForm, setShowForm] = useState(false);
+  const [edit, setEdit] = useState(false);
+  const [add, setAdd] = useState(false);
+
+  const { asPath } = useRouter();
+
+  function Crubs() {
+    return <p>home!{asPath}</p>;
+  }
+
+  const handleAdd = () => {
+    setShowForm(!showForm);
+    setAdd(true);
+    setEdit(false);
+  };
+
+  const handleEdit = () => {
+    setShowForm(!showForm);
+    setAdd(false);
+    setEdit(true);
+  };
+
   return (
-    <div className="divide divide-gray-400">
-      <Link href={"/courses/design/fashion-design"}>
-        <div className="text-lg p-4 text-darkBlue hover:border-2 hover:border-orange hover:rounded-lg">
-          Fashion Design
+    <div className="mx-auto container">
+      {data ? (
+        <CoursesMainPage
+          data={data}
+          handleEdit={handleEdit}
+          handleAdd={handleAdd}
+        />
+      ) : (
+        <div>
+          <p>Loading...</p>
         </div>
-      </Link>
-      <Link href={"/courses/design/landscape"}>
-        <div className="text-lg p-4 text-darkBlue hover:border-2 hover:border-orange hover:rounded-lg">
-          Landscape
+      )}
+      {showForm && (
+        <div>
+          {data ? (
+            <MainForm
+              details={data}
+              add={add}
+              edit={edit}
+              handleClose={() => setShowForm(false)}
+            />
+          ) : (
+            <div>
+              <p>Loading...</p>
+            </div>
+          )}
         </div>
-      </Link>
-      <Link href={"/courses/design/music-and-audio"}>
-        <div className="text-lg p-4 text-darkBlue hover:border-2 hover:border-orange hover:rounded-lg">
-          Music & Audio
+      )}
+      {data ? (
+        <CoursesNarrowCards cardData={cardData} />
+      ) : (
+        <div>
+          <p>Loading...</p>
         </div>
-      </Link>
-      <Link href={"/courses/design/film-and-media"}>
-        <div className="text-lg p-4 text-darkBlue hover:border-2 hover:border-orange hover:rounded-lg">
-          Film & Media
-        </div>
-      </Link>
-      <Link href={"/courses/design/graphic-design"}>
-        <div className="text-lg p-4 text-darkBlue hover:border-2 hover:border-orange hover:rounded-lg">
-          Graphic Design
-        </div>
-      </Link>
-      <Link href={"/courses/design/interior-design"}>
-        <div className="text-lg p-4 text-darkBlue hover:border-2 hover:border-orange hover:rounded-lg">
-          Interiod Design
-        </div>
-      </Link>
-      <Link href={"/courses/design/digital-media"}>
-        <div className="text-lg p-4 text-darkBlue hover:border-2 hover:border-orange hover:rounded-lg">
-          Digital Media
-        </div>
-      </Link>
-      <Link href={"/courses/design/acting"}>
-        <div className="text-lg p-4 text-darkBlue hover:border-2 hover:border-orange hover:rounded-lg">
-          Acting
-        </div>
-      </Link>
-      <Link href={"/courses/design/3d-animation"}>
-        <div className="text-lg p-4 text-darkBlue hover:border-2 hover:border-orange hover:rounded-lg">
-          3D Animation
-        </div>
-      </Link>
+      )}
     </div>
   );
 }
-
-// Thiết kế - Design
-// •	Thiết kế thời trang – Fashion Design
-// •	Kiến trúc môi trường – Landscape
-// •	Âm nhạc & Âm thanh – Music & Audio
-// •	Phim & Truyền thông – Film & Media
-// •	Thiết kế đồ họa – Graphic Design
-// •	Thiết kế nội thất – Interiod Design
-// •	Truyền thông kỹ thuật số - Digital Media
-// •	Diễn viên – Acting
-// •	Hoạt hình & 3D – Animation 3D

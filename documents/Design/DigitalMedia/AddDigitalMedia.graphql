@@ -1,0 +1,7 @@
+# import DigitalMedia from './DigitalMediaFragment.graphql'
+
+mutation AddDigitalMedia($input: DigitalMediaInput!) {
+  addDigitalMedia(input: $input) {
+    ...DigitalMedia
+  }
+}

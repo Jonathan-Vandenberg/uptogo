@@ -24,6 +24,7 @@ export const options: Category[] = [
   {value: "CONSTRUCTION" , label: "Construction"},
   {value: "DATA_MANAGEMENT" , label: "Data Management"},
   {value: "DENTAL" , label: "Dental"},
+  {value: "DESIGN", label: "Design"},
   {value: "DIGITAL_MEDIA" , label: "Digital Media"},
   {value: "EDUCATION" , label: "Education"},
   {value: "EVENTS" , label: "Events"},

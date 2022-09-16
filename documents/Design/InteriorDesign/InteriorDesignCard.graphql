@@ -1,0 +1,7 @@
+# import InteriorDesignCard from "./InteriorDesignCardFragment.graphql"
+
+query InteriorDesignCard {
+  interiorDesignCard {
+    ...InteriorDesignCard
+  }
+}

@@ -1,0 +1,6 @@
+fragment DigitalMediaCard on DigitalMedia {
+  category
+  id
+  title
+  subtitle1
+}

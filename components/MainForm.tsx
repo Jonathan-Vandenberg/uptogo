@@ -33,10 +33,22 @@ import {
   useUpdateMachineLearningMutation,
   useUpdateTelecommunicationMutation,
   useUpdateWebDevelopmentMutation,
+  useUpdateDesignMutation,
   BlogPost,
   useUpdateBlogPostMutation,
   useUpdateItMutation,
   It,
+  Design,
+  Music,
+  useUpdateMusicMutation,
+  Acting,
+  Animation3D,
+  DigitalMedia,
+  FashionDesign,
+  Film,
+  GraphicDesign,
+  InteriorDesign,
+  Landscape,
 } from "../types";
 import { options } from "../lib/categories";
 import { BsPlus } from "react-icons/bs";
@@ -57,6 +69,16 @@ interface IProps {
     | DataManagement
     | Blockchain
     | Ai
+    | Design
+    | Music
+    | Landscape
+    | FashionDesign
+    | Film
+    | GraphicDesign
+    | InteriorDesign
+    | DigitalMedia
+    | Acting
+    | Animation3D
     | undefined
     | null;
   add: boolean;
@@ -184,6 +206,8 @@ const AddClientForm = ({ details, add, edit, handleClose }: IProps) => {
   const [updateAi] = useUpdateAiMutation();
   const [updateBlogPost] = useUpdateBlogPostMutation();
   const [updateIt] = useUpdateItMutation();
+  const [updateDesign] = useUpdateDesignMutation();
+  const [updateMusic] = useUpdateMusicMutation();
 
   let form = {
     variables: {
@@ -263,6 +287,8 @@ const AddClientForm = ({ details, add, edit, handleClose }: IProps) => {
         if (category === "AI") updateAi(form);
         if (category === "BLOG") updateBlogPost(form);
         if (category === "IT") updateIt(form);
+        if (category === "DESIGN") updateDesign(form);
+        if (category === "MUSIC_AUDIO") updateMusic(form);
       }
 
       if (add) {

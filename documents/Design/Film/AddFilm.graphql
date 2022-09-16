@@ -1,0 +1,7 @@
+# import Film from './FilmFragment.graphql'
+
+mutation AddFilm($input: FilmInput!) {
+  addFilm(input: $input) {
+    ...Film
+  }
+}

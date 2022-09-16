@@ -1,0 +1,7 @@
+# import Acting from "./ActingFragment.graphql"
+
+query Acting($id: ID!) {
+  acting(id: $id) {
+    ...Acting
+  }
+}

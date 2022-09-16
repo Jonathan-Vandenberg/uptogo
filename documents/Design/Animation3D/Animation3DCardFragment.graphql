@@ -1,0 +1,6 @@
+fragment Animation3DCard on Animation3D {
+  category
+  id
+  title
+  subtitle1
+}

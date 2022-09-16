@@ -1,0 +1,6 @@
+fragment MusicCard on Music {
+  category
+  id
+  title
+  subtitle1
+}

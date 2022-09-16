@@ -1,0 +1,7 @@
+# import FashionDesignCard from "./FashionDesignCardFragment.graphql"
+
+query FashionDesignCard {
+  fashionDesignCard {
+    ...FashionDesignCard
+  }
+}

@@ -1,0 +1,6 @@
+fragment BlockchainCard on Blockchain {
+  category
+  id
+  title
+  subtitle1
+}

@@ -1,0 +1,7 @@
+# import DigitalMediaCard from "./DigitalMediaCardFragment.graphql"
+
+query DigitalMediaCard {
+  digitalMediaCard {
+    ...DigitalMediaCard
+  }
+}

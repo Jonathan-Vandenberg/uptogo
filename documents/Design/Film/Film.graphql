@@ -1,0 +1,7 @@
+# import Film from "./FilmFragment.graphql"
+
+query Film($id: ID!) {
+  film(id: $id) {
+    ...Film
+  }
+}

@@ -1,0 +1,6 @@
+fragment LandscapeCard on Landscape {
+  category
+  id
+  title
+  subtitle1
+}

@@ -1,6 +1,5 @@
 import CheckIcon from "@mui/icons-material/Check";
 import { useSession } from "next-auth/react";
-import { useEffect, useState } from "react";
 import { AiTwotoneCheckCircle } from "react-icons/ai";
 import { BsCircleFill } from "react-icons/bs";
 import { FaEdit } from "react-icons/fa";
@@ -13,12 +12,22 @@ import type {
   CloudComputing,
   ComputerNetworking,
   DataManagement,
+  Design,
   GameProgramming,
   It,
   MachineLearning,
   SoftwareDevelopment,
   Telecommunication,
   WebDevelopment,
+  Music,
+  Acting,
+  Animation3D,
+  DigitalMedia,
+  FashionDesign,
+  Film,
+  GraphicDesign,
+  InteriorDesign,
+  Landscape,
 } from "../../types";
 import EmailButton from "../UI/EmailButton";
 
@@ -37,6 +46,16 @@ interface IProps {
     | DataManagement
     | Blockchain
     | Ai
+    | Design
+    | Music
+    | Landscape
+    | FashionDesign
+    | Film
+    | GraphicDesign
+    | InteriorDesign
+    | DigitalMedia
+    | Acting
+    | Animation3D
     | undefined
     | null;
   handleAdd: () => void;
@@ -48,8 +67,6 @@ export default function BlogPostMarkup({
   handleAdd,
   handleEdit,
 }: IProps) {
-  const { data: session, status } = useSession();
-
   return (
     <div>
       <ul className="border-y-2 border-gray-200 py-6 flex flex-col items-start justify-start space-y-5">

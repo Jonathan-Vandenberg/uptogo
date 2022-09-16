@@ -1,14 +1,23 @@
 import Image from "next/image";
 import type {
+  Acting,
   Ai,
+  Animation3D,
   Blockchain,
   BlogPost,
   BusinessAnalysis,
   CloudComputing,
   ComputerNetworking,
   DataManagement,
+  DigitalMedia,
+  FashionDesign,
+  Film,
   GameProgramming,
+  GraphicDesign,
+  InteriorDesign,
+  Landscape,
   MachineLearning,
+  Music,
   SoftwareDevelopment,
   Telecommunication,
   WebDevelopment,
@@ -34,6 +43,15 @@ interface IProps {
     | DataManagement
     | Blockchain
     | Ai
+    | Music
+    | Landscape
+    | FashionDesign
+    | Film
+    | GraphicDesign
+    | InteriorDesign
+    | DigitalMedia
+    | Acting
+    | Animation3D
     | undefined
     | null;
 }

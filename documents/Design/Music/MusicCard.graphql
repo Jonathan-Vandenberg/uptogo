@@ -1,0 +1,7 @@
+# import MusicCard from "./MusicCardFragment.graphql"
+
+query MusicCard {
+  musicCard {
+    ...MusicCard
+  }
+}

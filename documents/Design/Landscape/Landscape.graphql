@@ -1,0 +1,7 @@
+# import Landscape from "./LandscapeFragment.graphql"
+
+query Landscape($id: ID!) {
+  landscape(id: $id) {
+    ...Landscape
+  }
+}

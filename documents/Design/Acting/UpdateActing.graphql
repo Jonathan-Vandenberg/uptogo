@@ -1,0 +1,7 @@
+# import Acting from './ActingFragment.graphql'
+
+mutation UpdateActing($input: ActingInput!) {
+  updateActing(input: $input) {
+    ...Acting
+  }
+}

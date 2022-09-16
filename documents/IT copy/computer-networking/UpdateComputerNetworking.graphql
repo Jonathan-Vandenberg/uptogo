@@ -1,0 +1,7 @@
+# import ComputerNetworking from './ComputerNetworkingFragment.graphql'
+
+mutation UpdateComputerNetworking($input: ComputerNetworkingInput!) {
+  updateComputerNetworking(input: $input) {
+    ...ComputerNetworking
+  }
+}

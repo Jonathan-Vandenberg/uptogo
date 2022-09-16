@@ -1,0 +1,6 @@
+fragment SoftwareDevelopmentCard on SoftwareDevelopment {
+  category
+  id
+  title
+  subtitle1
+}

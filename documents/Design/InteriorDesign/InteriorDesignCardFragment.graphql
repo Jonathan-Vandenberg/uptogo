@@ -1,0 +1,6 @@
+fragment InteriorDesignCard on InteriorDesign {
+  category
+  id
+  title
+  subtitle1
+}

@@ -148,13 +148,123 @@ const resolvers: Resolvers = {
           id
         }
       })
-      if (!it) {
-            throw new GraphQLYogaError(
-              `It with id: ${id} not found.`,
-              { code: 'IT_NOT_FOUND' },
-            )
-          }
-          return it
+      return it
+  },
+  musicCard: (_, __, {prisma}) => {
+      const music = prisma.music.findMany()
+      return music
+  },
+  music: (_, {id}, {prisma}) => {
+      const music = prisma.music.findUnique({
+        where: {
+          id
+        }
+      })
+      return music
+  },
+  
+  fashionDesignCard: (_, __, {prisma}) => {
+      const fashionDesign = prisma.fashionDesign.findMany()
+      return fashionDesign
+  },
+  fashionDesign: (_, {id}, {prisma}) => {
+      const fashionDesign = prisma.fashionDesign.findUnique({
+        where: {
+          id
+        }
+      })
+      return fashionDesign
+  }
+  ,
+  landscapeCard: (_, __, {prisma}) => {
+      const landscape = prisma.landscape.findMany()
+      return landscape
+  },
+  landscape: (_, {id}, {prisma}) => {
+      const landscape = prisma.landscape.findUnique({
+        where: {
+          id
+        }
+      })
+      return landscape
+  }
+  ,
+  filmCard: (_, __, {prisma}) => {
+      const film = prisma.film.findMany()
+      return film
+  },
+  film: (_, {id}, {prisma}) => {
+      const film = prisma.film.findUnique({
+        where: {
+          id
+        }
+      })
+      return film
+  }
+  ,
+  graphicDesignCard: (_, __, {prisma}) => {
+      const graphicDesign = prisma.graphicDesign.findMany()
+      return graphicDesign
+  },
+  graphicDesign: (_, {id}, {prisma}) => {
+      const graphicDesign = prisma.graphicDesign.findUnique({
+        where: {
+          id
+        }
+      })
+      return graphicDesign
+  }
+  ,
+  interiorDesignCard: (_, __, {prisma}) => {
+      const interiorDesign = prisma.interiorDesign.findMany()
+      return interiorDesign
+  },
+  interiorDesign: (_, {id}, {prisma}) => {
+      const interiorDesign = prisma.interiorDesign.findUnique({
+        where: {
+          id
+        }
+      })
+      return interiorDesign
+  },
+  
+  digitalMediaCard: (_, __, {prisma}) => {
+      const digitalMedia = prisma.digitalMedia.findMany()
+      return digitalMedia
+  },
+  digitalMedia: (_, {id}, {prisma}) => {
+      const digitalMedia = prisma.digitalMedia.findUnique({
+        where: {
+          id
+        }
+      })
+      return digitalMedia
+  },
+  
+  actingCard: (_, __, {prisma}) => {
+      const acting = prisma.acting.findMany()
+      return acting
+  },
+  acting: (_, {id}, {prisma}) => {
+      const acting = prisma.acting.findUnique({
+        where: {
+          id
+        }
+      })
+      return acting
+  },
+  
+  animation3DCard: (_, __, {prisma}) => {
+      const animation3D = prisma.animation3D.findMany()
+      return animation3D
+  },
+  animation3D: (_, {id}, {prisma}) => {
+      const animation3D = prisma.animation3D.findUnique({
+        where: {
+          id
+        }
+      })
+      return animation3D
   }
   },
   Mutation: {
@@ -872,8 +982,7 @@ const resolvers: Resolvers = {
         }
       })
       return ai
-    }
-    ,
+    },
   addIt: async (_, {input}, {prisma}) => {
     const it = await prisma.softwareDevelopment.create({
       data: {
@@ -1550,6 +1659,1076 @@ const resolvers: Resolvers = {
     })
     return ai
   },
+    addFashionDesign: async (_, {input}, {prisma}) => {
+      const fashionDesign = prisma.fashionDesign.create({
+      data: {
+        title: input?.title,
+        category: input?.category,
+        subtitle1: input?.subtitle1,
+        tableContents1: input?.tableContents1,
+        tableContents2: input?.tableContents2,
+        tableContents3: input?.tableContents3,
+        tableContents4: input?.tableContents4,
+        p1: input?.p1,
+        p2: input?.p2,
+        p3: input?.p3,
+        subtitle2: input?.subtitle2,
+        p4: input?.p4,
+        p5: input?.p5,
+        l1: input?.l1,
+        l2: input?.l2,
+        l3: input?.l3,
+        l4: input?.l4,
+        l5: input?.l5,
+        subtitle3: input?.subtitle3,
+        p6: input?.p6,
+        p7: input?.p7,
+        l6: input?.l6,
+        l7: input?.l7,
+        l8: input?.l8,
+        l9: input?.l9,
+        l10: input?.l10,
+        l11: input?.l11,
+        l12: input?.l12,
+        l13: input?.l13,
+        l14: input?.l14,
+        l15: input?.l15,
+        p8: input?.p8,
+        subtitle4: input?.subtitle4,
+        conclusion1: input?.conclusion1,
+        conclusion2: input?.conclusion2,
+        conclusion3: input?.conclusion3,
+        reference1: input?.reference1,
+        reference2: input?.reference2,
+        authorName: input?.authorName,
+        authorAbout: input?.authorAbout,
+        authorLink: input?.authorLink,
+        photoCredit: input?.photoCredit,
+        editedBy: input?.editedBy,
+        mainImage: input?.mainImage,
+        publishedDate: input?.publishedDate
+      }
+    })
+      return fashionDesign
+    },
+    addLandscape: async (_, {input}, {prisma}) => {
+  const landscape = prisma.landscape.create({
+      data: {
+        title: input?.title,
+        category: input?.category,
+        subtitle1: input?.subtitle1,
+        tableContents1: input?.tableContents1,
+        tableContents2: input?.tableContents2,
+        tableContents3: input?.tableContents3,
+        tableContents4: input?.tableContents4,
+        p1: input?.p1,
+        p2: input?.p2,
+        p3: input?.p3,
+        subtitle2: input?.subtitle2,
+        p4: input?.p4,
+        p5: input?.p5,
+        l1: input?.l1,
+        l2: input?.l2,
+        l3: input?.l3,
+        l4: input?.l4,
+        l5: input?.l5,
+        subtitle3: input?.subtitle3,
+        p6: input?.p6,
+        p7: input?.p7,
+        l6: input?.l6,
+        l7: input?.l7,
+        l8: input?.l8,
+        l9: input?.l9,
+        l10: input?.l10,
+        l11: input?.l11,
+        l12: input?.l12,
+        l13: input?.l13,
+        l14: input?.l14,
+        l15: input?.l15,
+        p8: input?.p8,
+        subtitle4: input?.subtitle4,
+        conclusion1: input?.conclusion1,
+        conclusion2: input?.conclusion2,
+        conclusion3: input?.conclusion3,
+        reference1: input?.reference1,
+        reference2: input?.reference2,
+        authorName: input?.authorName,
+        authorAbout: input?.authorAbout,
+        authorLink: input?.authorLink,
+        photoCredit: input?.photoCredit,
+        editedBy: input?.editedBy,
+        mainImage: input?.mainImage,
+        publishedDate: input?.publishedDate
+      }
+    })
+  return landscape
+    },
+    addMusic: async (_, {input}, {prisma}) => {
+  const music = prisma.music.create({
+      data: {
+        title: input?.title,
+        category: input?.category,
+        subtitle1: input?.subtitle1,
+        tableContents1: input?.tableContents1,
+        tableContents2: input?.tableContents2,
+        tableContents3: input?.tableContents3,
+        tableContents4: input?.tableContents4,
+        p1: input?.p1,
+        p2: input?.p2,
+        p3: input?.p3,
+        subtitle2: input?.subtitle2,
+        p4: input?.p4,
+        p5: input?.p5,
+        l1: input?.l1,
+        l2: input?.l2,
+        l3: input?.l3,
+        l4: input?.l4,
+        l5: input?.l5,
+        subtitle3: input?.subtitle3,
+        p6: input?.p6,
+        p7: input?.p7,
+        l6: input?.l6,
+        l7: input?.l7,
+        l8: input?.l8,
+        l9: input?.l9,
+        l10: input?.l10,
+        l11: input?.l11,
+        l12: input?.l12,
+        l13: input?.l13,
+        l14: input?.l14,
+        l15: input?.l15,
+        p8: input?.p8,
+        subtitle4: input?.subtitle4,
+        conclusion1: input?.conclusion1,
+        conclusion2: input?.conclusion2,
+        conclusion3: input?.conclusion3,
+        reference1: input?.reference1,
+        reference2: input?.reference2,
+        authorName: input?.authorName,
+        authorAbout: input?.authorAbout,
+        authorLink: input?.authorLink,
+        photoCredit: input?.photoCredit,
+        editedBy: input?.editedBy,
+        mainImage: input?.mainImage,
+        publishedDate: input?.publishedDate
+      }
+    })
+  return music
+    },
+    addFilm: async (_, {input}, {prisma}) => {
+  const film = prisma.film.create({
+      data: {
+        title: input?.title,
+        category: input?.category,
+        subtitle1: input?.subtitle1,
+        tableContents1: input?.tableContents1,
+        tableContents2: input?.tableContents2,
+        tableContents3: input?.tableContents3,
+        tableContents4: input?.tableContents4,
+        p1: input?.p1,
+        p2: input?.p2,
+        p3: input?.p3,
+        subtitle2: input?.subtitle2,
+        p4: input?.p4,
+        p5: input?.p5,
+        l1: input?.l1,
+        l2: input?.l2,
+        l3: input?.l3,
+        l4: input?.l4,
+        l5: input?.l5,
+        subtitle3: input?.subtitle3,
+        p6: input?.p6,
+        p7: input?.p7,
+        l6: input?.l6,
+        l7: input?.l7,
+        l8: input?.l8,
+        l9: input?.l9,
+        l10: input?.l10,
+        l11: input?.l11,
+        l12: input?.l12,
+        l13: input?.l13,
+        l14: input?.l14,
+        l15: input?.l15,
+        p8: input?.p8,
+        subtitle4: input?.subtitle4,
+        conclusion1: input?.conclusion1,
+        conclusion2: input?.conclusion2,
+        conclusion3: input?.conclusion3,
+        reference1: input?.reference1,
+        reference2: input?.reference2,
+        authorName: input?.authorName,
+        authorAbout: input?.authorAbout,
+        authorLink: input?.authorLink,
+        photoCredit: input?.photoCredit,
+        editedBy: input?.editedBy,
+        mainImage: input?.mainImage,
+        publishedDate: input?.publishedDate
+      }
+    }) 
+  return film
+    },
+    addGraphicDesign: async (_, {input}, {prisma}) => {
+  const graphicDesign = prisma.graphicDesign.create({
+      data: {
+        title: input?.title,
+        category: input?.category,
+        subtitle1: input?.subtitle1,
+        tableContents1: input?.tableContents1,
+        tableContents2: input?.tableContents2,
+        tableContents3: input?.tableContents3,
+        tableContents4: input?.tableContents4,
+        p1: input?.p1,
+        p2: input?.p2,
+        p3: input?.p3,
+        subtitle2: input?.subtitle2,
+        p4: input?.p4,
+        p5: input?.p5,
+        l1: input?.l1,
+        l2: input?.l2,
+        l3: input?.l3,
+        l4: input?.l4,
+        l5: input?.l5,
+        subtitle3: input?.subtitle3,
+        p6: input?.p6,
+        p7: input?.p7,
+        l6: input?.l6,
+        l7: input?.l7,
+        l8: input?.l8,
+        l9: input?.l9,
+        l10: input?.l10,
+        l11: input?.l11,
+        l12: input?.l12,
+        l13: input?.l13,
+        l14: input?.l14,
+        l15: input?.l15,
+        p8: input?.p8,
+        subtitle4: input?.subtitle4,
+        conclusion1: input?.conclusion1,
+        conclusion2: input?.conclusion2,
+        conclusion3: input?.conclusion3,
+        reference1: input?.reference1,
+        reference2: input?.reference2,
+        authorName: input?.authorName,
+        authorAbout: input?.authorAbout,
+        authorLink: input?.authorLink,
+        photoCredit: input?.photoCredit,
+        editedBy: input?.editedBy,
+        mainImage: input?.mainImage,
+        publishedDate: input?.publishedDate
+      }
+    })
+  return graphicDesign
+    },
+    addInteriorDesign: async (_, {input}, {prisma}) => {
+  const interiorDesign = prisma.interiorDesign.create({
+      data: {
+        title: input?.title,
+        category: input?.category,
+        subtitle1: input?.subtitle1,
+        tableContents1: input?.tableContents1,
+        tableContents2: input?.tableContents2,
+        tableContents3: input?.tableContents3,
+        tableContents4: input?.tableContents4,
+        p1: input?.p1,
+        p2: input?.p2,
+        p3: input?.p3,
+        subtitle2: input?.subtitle2,
+        p4: input?.p4,
+        p5: input?.p5,
+        l1: input?.l1,
+        l2: input?.l2,
+        l3: input?.l3,
+        l4: input?.l4,
+        l5: input?.l5,
+        subtitle3: input?.subtitle3,
+        p6: input?.p6,
+        p7: input?.p7,
+        l6: input?.l6,
+        l7: input?.l7,
+        l8: input?.l8,
+        l9: input?.l9,
+        l10: input?.l10,
+        l11: input?.l11,
+        l12: input?.l12,
+        l13: input?.l13,
+        l14: input?.l14,
+        l15: input?.l15,
+        p8: input?.p8,
+        subtitle4: input?.subtitle4,
+        conclusion1: input?.conclusion1,
+        conclusion2: input?.conclusion2,
+        conclusion3: input?.conclusion3,
+        reference1: input?.reference1,
+        reference2: input?.reference2,
+        authorName: input?.authorName,
+        authorAbout: input?.authorAbout,
+        authorLink: input?.authorLink,
+        photoCredit: input?.photoCredit,
+        editedBy: input?.editedBy,
+        mainImage: input?.mainImage,
+        publishedDate: input?.publishedDate
+      }
+    })
+  return interiorDesign
+    },
+    addDigitalMedia: async (_, {input}, {prisma}) => {
+  const digitalMedia = prisma.digitalMedia.create({
+      data: {
+        title: input?.title,
+        category: input?.category,
+        subtitle1: input?.subtitle1,
+        tableContents1: input?.tableContents1,
+        tableContents2: input?.tableContents2,
+        tableContents3: input?.tableContents3,
+        tableContents4: input?.tableContents4,
+        p1: input?.p1,
+        p2: input?.p2,
+        p3: input?.p3,
+        subtitle2: input?.subtitle2,
+        p4: input?.p4,
+        p5: input?.p5,
+        l1: input?.l1,
+        l2: input?.l2,
+        l3: input?.l3,
+        l4: input?.l4,
+        l5: input?.l5,
+        subtitle3: input?.subtitle3,
+        p6: input?.p6,
+        p7: input?.p7,
+        l6: input?.l6,
+        l7: input?.l7,
+        l8: input?.l8,
+        l9: input?.l9,
+        l10: input?.l10,
+        l11: input?.l11,
+        l12: input?.l12,
+        l13: input?.l13,
+        l14: input?.l14,
+        l15: input?.l15,
+        p8: input?.p8,
+        subtitle4: input?.subtitle4,
+        conclusion1: input?.conclusion1,
+        conclusion2: input?.conclusion2,
+        conclusion3: input?.conclusion3,
+        reference1: input?.reference1,
+        reference2: input?.reference2,
+        authorName: input?.authorName,
+        authorAbout: input?.authorAbout,
+        authorLink: input?.authorLink,
+        photoCredit: input?.photoCredit,
+        editedBy: input?.editedBy,
+        mainImage: input?.mainImage,
+        publishedDate: input?.publishedDate
+      }
+    })
+  return digitalMedia
+    },
+    addActing: async (_, {input}, {prisma}) => {
+  const acting = prisma.acting.create({
+      data: {
+        title: input?.title,
+        category: input?.category,
+        subtitle1: input?.subtitle1,
+        tableContents1: input?.tableContents1,
+        tableContents2: input?.tableContents2,
+        tableContents3: input?.tableContents3,
+        tableContents4: input?.tableContents4,
+        p1: input?.p1,
+        p2: input?.p2,
+        p3: input?.p3,
+        subtitle2: input?.subtitle2,
+        p4: input?.p4,
+        p5: input?.p5,
+        l1: input?.l1,
+        l2: input?.l2,
+        l3: input?.l3,
+        l4: input?.l4,
+        l5: input?.l5,
+        subtitle3: input?.subtitle3,
+        p6: input?.p6,
+        p7: input?.p7,
+        l6: input?.l6,
+        l7: input?.l7,
+        l8: input?.l8,
+        l9: input?.l9,
+        l10: input?.l10,
+        l11: input?.l11,
+        l12: input?.l12,
+        l13: input?.l13,
+        l14: input?.l14,
+        l15: input?.l15,
+        p8: input?.p8,
+        subtitle4: input?.subtitle4,
+        conclusion1: input?.conclusion1,
+        conclusion2: input?.conclusion2,
+        conclusion3: input?.conclusion3,
+        reference1: input?.reference1,
+        reference2: input?.reference2,
+        authorName: input?.authorName,
+        authorAbout: input?.authorAbout,
+        authorLink: input?.authorLink,
+        photoCredit: input?.photoCredit,
+        editedBy: input?.editedBy,
+        mainImage: input?.mainImage,
+        publishedDate: input?.publishedDate
+      }
+    })
+  return acting
+    },
+    addAnimation3D: async (_, {input}, {prisma}) => {
+  const animation3D = prisma.animation3D.create({
+      data: {
+        title: input?.title,
+        category: input?.category,
+        subtitle1: input?.subtitle1,
+        tableContents1: input?.tableContents1,
+        tableContents2: input?.tableContents2,
+        tableContents3: input?.tableContents3,
+        tableContents4: input?.tableContents4,
+        p1: input?.p1,
+        p2: input?.p2,
+        p3: input?.p3,
+        subtitle2: input?.subtitle2,
+        p4: input?.p4,
+        p5: input?.p5,
+        l1: input?.l1,
+        l2: input?.l2,
+        l3: input?.l3,
+        l4: input?.l4,
+        l5: input?.l5,
+        subtitle3: input?.subtitle3,
+        p6: input?.p6,
+        p7: input?.p7,
+        l6: input?.l6,
+        l7: input?.l7,
+        l8: input?.l8,
+        l9: input?.l9,
+        l10: input?.l10,
+        l11: input?.l11,
+        l12: input?.l12,
+        l13: input?.l13,
+        l14: input?.l14,
+        l15: input?.l15,
+        p8: input?.p8,
+        subtitle4: input?.subtitle4,
+        conclusion1: input?.conclusion1,
+        conclusion2: input?.conclusion2,
+        conclusion3: input?.conclusion3,
+        reference1: input?.reference1,
+        reference2: input?.reference2,
+        authorName: input?.authorName,
+        authorAbout: input?.authorAbout,
+        authorLink: input?.authorLink,
+        photoCredit: input?.photoCredit,
+        editedBy: input?.editedBy,
+        mainImage: input?.mainImage,
+        publishedDate: input?.publishedDate
+      }
+    })
+  return animation3D
+    },
+    addDesign: async (_, {input}, {prisma}) => {
+  const design = prisma.design.create({
+      data: {
+        title: input?.title,
+        category: input?.category,
+        subtitle1: input?.subtitle1,
+        tableContents1: input?.tableContents1,
+        tableContents2: input?.tableContents2,
+        tableContents3: input?.tableContents3,
+        tableContents4: input?.tableContents4,
+        p1: input?.p1,
+        p2: input?.p2,
+        p3: input?.p3,
+        subtitle2: input?.subtitle2,
+        p4: input?.p4,
+        p5: input?.p5,
+        l1: input?.l1,
+        l2: input?.l2,
+        l3: input?.l3,
+        l4: input?.l4,
+        l5: input?.l5,
+        subtitle3: input?.subtitle3,
+        p6: input?.p6,
+        p7: input?.p7,
+        l6: input?.l6,
+        l7: input?.l7,
+        l8: input?.l8,
+        l9: input?.l9,
+        l10: input?.l10,
+        l11: input?.l11,
+        l12: input?.l12,
+        l13: input?.l13,
+        l14: input?.l14,
+        l15: input?.l15,
+        p8: input?.p8,
+        subtitle4: input?.subtitle4,
+        conclusion1: input?.conclusion1,
+        conclusion2: input?.conclusion2,
+        conclusion3: input?.conclusion3,
+        reference1: input?.reference1,
+        reference2: input?.reference2,
+        authorName: input?.authorName,
+        authorAbout: input?.authorAbout,
+        authorLink: input?.authorLink,
+        photoCredit: input?.photoCredit,
+        editedBy: input?.editedBy,
+        mainImage: input?.mainImage,
+        publishedDate: input?.publishedDate
+      }
+    })
+  return design
+    },
+  updateFashionDesign: async (_, {input}, {prisma}) => {
+      const fashionDesign = prisma.fashionDesign.update({
+      where:{
+          id: input.id
+        },
+        data: {
+        title: input?.title,
+        category: input?.category,
+        subtitle1: input?.subtitle1,
+        tableContents1: input?.tableContents1,
+        tableContents2: input?.tableContents2,
+        tableContents3: input?.tableContents3,
+        tableContents4: input?.tableContents4,
+        p1: input?.p1,
+        p2: input?.p2,
+        p3: input?.p3,
+        subtitle2: input?.subtitle2,
+        p4: input?.p4,
+        p5: input?.p5,
+        l1: input?.l1,
+        l2: input?.l2,
+        l3: input?.l3,
+        l4: input?.l4,
+        l5: input?.l5,
+        subtitle3: input?.subtitle3,
+        p6: input?.p6,
+        p7: input?.p7,
+        l6: input?.l6,
+        l7: input?.l7,
+        l8: input?.l8,
+        l9: input?.l9,
+        l10: input?.l10,
+        l11: input?.l11,
+        l12: input?.l12,
+        l13: input?.l13,
+        l14: input?.l14,
+        l15: input?.l15,
+        p8: input?.p8,
+        subtitle4: input?.subtitle4,
+        conclusion1: input?.conclusion1,
+        conclusion2: input?.conclusion2,
+        conclusion3: input?.conclusion3,
+        reference1: input?.reference1,
+        reference2: input?.reference2,
+        authorName: input?.authorName,
+        authorAbout: input?.authorAbout,
+        authorLink: input?.authorLink,
+        photoCredit: input?.photoCredit,
+        editedBy: input?.editedBy,
+        mainImage: input?.mainImage,
+        publishedDate: input?.publishedDate
+      }
+    })
+      return fashionDesign
+    },
+  updateLandscape: async (_, {input}, {prisma}) => {
+  const landscape = prisma.landscape.update({
+    where:{
+          id: input.id
+        },
+      data: {
+        title: input?.title,
+        category: input?.category,
+        subtitle1: input?.subtitle1,
+        tableContents1: input?.tableContents1,
+        tableContents2: input?.tableContents2,
+        tableContents3: input?.tableContents3,
+        tableContents4: input?.tableContents4,
+        p1: input?.p1,
+        p2: input?.p2,
+        p3: input?.p3,
+        subtitle2: input?.subtitle2,
+        p4: input?.p4,
+        p5: input?.p5,
+        l1: input?.l1,
+        l2: input?.l2,
+        l3: input?.l3,
+        l4: input?.l4,
+        l5: input?.l5,
+        subtitle3: input?.subtitle3,
+        p6: input?.p6,
+        p7: input?.p7,
+        l6: input?.l6,
+        l7: input?.l7,
+        l8: input?.l8,
+        l9: input?.l9,
+        l10: input?.l10,
+        l11: input?.l11,
+        l12: input?.l12,
+        l13: input?.l13,
+        l14: input?.l14,
+        l15: input?.l15,
+        p8: input?.p8,
+        subtitle4: input?.subtitle4,
+        conclusion1: input?.conclusion1,
+        conclusion2: input?.conclusion2,
+        conclusion3: input?.conclusion3,
+        reference1: input?.reference1,
+        reference2: input?.reference2,
+        authorName: input?.authorName,
+        authorAbout: input?.authorAbout,
+        authorLink: input?.authorLink,
+        photoCredit: input?.photoCredit,
+        editedBy: input?.editedBy,
+        mainImage: input?.mainImage,
+        publishedDate: input?.publishedDate
+      }
+    })
+  return landscape
+    },
+  updateMusic: async (_, {input}, {prisma}) => {
+  const music = prisma.music.update({
+    where:{
+          id: input.id
+        },  
+    data: {
+        title: input?.title,
+        category: input?.category,
+        subtitle1: input?.subtitle1,
+        tableContents1: input?.tableContents1,
+        tableContents2: input?.tableContents2,
+        tableContents3: input?.tableContents3,
+        tableContents4: input?.tableContents4,
+        p1: input?.p1,
+        p2: input?.p2,
+        p3: input?.p3,
+        subtitle2: input?.subtitle2,
+        p4: input?.p4,
+        p5: input?.p5,
+        l1: input?.l1,
+        l2: input?.l2,
+        l3: input?.l3,
+        l4: input?.l4,
+        l5: input?.l5,
+        subtitle3: input?.subtitle3,
+        p6: input?.p6,
+        p7: input?.p7,
+        l6: input?.l6,
+        l7: input?.l7,
+        l8: input?.l8,
+        l9: input?.l9,
+        l10: input?.l10,
+        l11: input?.l11,
+        l12: input?.l12,
+        l13: input?.l13,
+        l14: input?.l14,
+        l15: input?.l15,
+        p8: input?.p8,
+        subtitle4: input?.subtitle4,
+        conclusion1: input?.conclusion1,
+        conclusion2: input?.conclusion2,
+        conclusion3: input?.conclusion3,
+        reference1: input?.reference1,
+        reference2: input?.reference2,
+        authorName: input?.authorName,
+        authorAbout: input?.authorAbout,
+        authorLink: input?.authorLink,
+        photoCredit: input?.photoCredit,
+        editedBy: input?.editedBy,
+        mainImage: input?.mainImage,
+        publishedDate: input?.publishedDate
+      }
+    })
+  return music
+    },
+  updateFilm: async (_, {input}, {prisma}) => {
+  const film = prisma.film.update({
+    where:{
+          id: input.id
+        },  
+    data: {
+        title: input?.title,
+        category: input?.category,
+        subtitle1: input?.subtitle1,
+        tableContents1: input?.tableContents1,
+        tableContents2: input?.tableContents2,
+        tableContents3: input?.tableContents3,
+        tableContents4: input?.tableContents4,
+        p1: input?.p1,
+        p2: input?.p2,
+        p3: input?.p3,
+        subtitle2: input?.subtitle2,
+        p4: input?.p4,
+        p5: input?.p5,
+        l1: input?.l1,
+        l2: input?.l2,
+        l3: input?.l3,
+        l4: input?.l4,
+        l5: input?.l5,
+        subtitle3: input?.subtitle3,
+        p6: input?.p6,
+        p7: input?.p7,
+        l6: input?.l6,
+        l7: input?.l7,
+        l8: input?.l8,
+        l9: input?.l9,
+        l10: input?.l10,
+        l11: input?.l11,
+        l12: input?.l12,
+        l13: input?.l13,
+        l14: input?.l14,
+        l15: input?.l15,
+        p8: input?.p8,
+        subtitle4: input?.subtitle4,
+        conclusion1: input?.conclusion1,
+        conclusion2: input?.conclusion2,
+        conclusion3: input?.conclusion3,
+        reference1: input?.reference1,
+        reference2: input?.reference2,
+        authorName: input?.authorName,
+        authorAbout: input?.authorAbout,
+        authorLink: input?.authorLink,
+        photoCredit: input?.photoCredit,
+        editedBy: input?.editedBy,
+        mainImage: input?.mainImage,
+        publishedDate: input?.publishedDate
+      }
+    }) 
+  return film
+    },
+  updateGraphicDesign: async (_, {input}, {prisma}) => {
+  const graphicDesign = prisma.graphicDesign.update({
+    where:{
+          id: input.id
+        },  
+    data: {
+        title: input?.title,
+        category: input?.category,
+        subtitle1: input?.subtitle1,
+        tableContents1: input?.tableContents1,
+        tableContents2: input?.tableContents2,
+        tableContents3: input?.tableContents3,
+        tableContents4: input?.tableContents4,
+        p1: input?.p1,
+        p2: input?.p2,
+        p3: input?.p3,
+        subtitle2: input?.subtitle2,
+        p4: input?.p4,
+        p5: input?.p5,
+        l1: input?.l1,
+        l2: input?.l2,
+        l3: input?.l3,
+        l4: input?.l4,
+        l5: input?.l5,
+        subtitle3: input?.subtitle3,
+        p6: input?.p6,
+        p7: input?.p7,
+        l6: input?.l6,
+        l7: input?.l7,
+        l8: input?.l8,
+        l9: input?.l9,
+        l10: input?.l10,
+        l11: input?.l11,
+        l12: input?.l12,
+        l13: input?.l13,
+        l14: input?.l14,
+        l15: input?.l15,
+        p8: input?.p8,
+        subtitle4: input?.subtitle4,
+        conclusion1: input?.conclusion1,
+        conclusion2: input?.conclusion2,
+        conclusion3: input?.conclusion3,
+        reference1: input?.reference1,
+        reference2: input?.reference2,
+        authorName: input?.authorName,
+        authorAbout: input?.authorAbout,
+        authorLink: input?.authorLink,
+        photoCredit: input?.photoCredit,
+        editedBy: input?.editedBy,
+        mainImage: input?.mainImage,
+        publishedDate: input?.publishedDate
+      }
+    })
+  return graphicDesign
+    },
+  updateInteriorDesign: async (_, {input}, {prisma}) => {
+  const interiorDesign = prisma.interiorDesign.update({
+    where:{
+          id: input.id
+        },  
+    data: {
+        title: input?.title,
+        category: input?.category,
+        subtitle1: input?.subtitle1,
+        tableContents1: input?.tableContents1,
+        tableContents2: input?.tableContents2,
+        tableContents3: input?.tableContents3,
+        tableContents4: input?.tableContents4,
+        p1: input?.p1,
+        p2: input?.p2,
+        p3: input?.p3,
+        subtitle2: input?.subtitle2,
+        p4: input?.p4,
+        p5: input?.p5,
+        l1: input?.l1,
+        l2: input?.l2,
+        l3: input?.l3,
+        l4: input?.l4,
+        l5: input?.l5,
+        subtitle3: input?.subtitle3,
+        p6: input?.p6,
+        p7: input?.p7,
+        l6: input?.l6,
+        l7: input?.l7,
+        l8: input?.l8,
+        l9: input?.l9,
+        l10: input?.l10,
+        l11: input?.l11,
+        l12: input?.l12,
+        l13: input?.l13,
+        l14: input?.l14,
+        l15: input?.l15,
+        p8: input?.p8,
+        subtitle4: input?.subtitle4,
+        conclusion1: input?.conclusion1,
+        conclusion2: input?.conclusion2,
+        conclusion3: input?.conclusion3,
+        reference1: input?.reference1,
+        reference2: input?.reference2,
+        authorName: input?.authorName,
+        authorAbout: input?.authorAbout,
+        authorLink: input?.authorLink,
+        photoCredit: input?.photoCredit,
+        editedBy: input?.editedBy,
+        mainImage: input?.mainImage,
+        publishedDate: input?.publishedDate
+      }
+    })
+  return interiorDesign
+    },
+  updateDigitalMedia: async (_, {input}, {prisma}) => {
+  const digitalMedia = prisma.digitalMedia.update({
+    where:{
+          id: input.id
+        },  
+    data: {
+        title: input?.title,
+        category: input?.category,
+        subtitle1: input?.subtitle1,
+        tableContents1: input?.tableContents1,
+        tableContents2: input?.tableContents2,
+        tableContents3: input?.tableContents3,
+        tableContents4: input?.tableContents4,
+        p1: input?.p1,
+        p2: input?.p2,
+        p3: input?.p3,
+        subtitle2: input?.subtitle2,
+        p4: input?.p4,
+        p5: input?.p5,
+        l1: input?.l1,
+        l2: input?.l2,
+        l3: input?.l3,
+        l4: input?.l4,
+        l5: input?.l5,
+        subtitle3: input?.subtitle3,
+        p6: input?.p6,
+        p7: input?.p7,
+        l6: input?.l6,
+        l7: input?.l7,
+        l8: input?.l8,
+        l9: input?.l9,
+        l10: input?.l10,
+        l11: input?.l11,
+        l12: input?.l12,
+        l13: input?.l13,
+        l14: input?.l14,
+        l15: input?.l15,
+        p8: input?.p8,
+        subtitle4: input?.subtitle4,
+        conclusion1: input?.conclusion1,
+        conclusion2: input?.conclusion2,
+        conclusion3: input?.conclusion3,
+        reference1: input?.reference1,
+        reference2: input?.reference2,
+        authorName: input?.authorName,
+        authorAbout: input?.authorAbout,
+        authorLink: input?.authorLink,
+        photoCredit: input?.photoCredit,
+        editedBy: input?.editedBy,
+        mainImage: input?.mainImage,
+        publishedDate: input?.publishedDate
+      }
+    })
+  return digitalMedia
+    },
+  updateActing: async (_, {input}, {prisma}) => {
+  const acting = prisma.acting.update({
+    where:{
+          id: input.id
+        },  
+    data: {
+        title: input?.title,
+        category: input?.category,
+        subtitle1: input?.subtitle1,
+        tableContents1: input?.tableContents1,
+        tableContents2: input?.tableContents2,
+        tableContents3: input?.tableContents3,
+        tableContents4: input?.tableContents4,
+        p1: input?.p1,
+        p2: input?.p2,
+        p3: input?.p3,
+        subtitle2: input?.subtitle2,
+        p4: input?.p4,
+        p5: input?.p5,
+        l1: input?.l1,
+        l2: input?.l2,
+        l3: input?.l3,
+        l4: input?.l4,
+        l5: input?.l5,
+        subtitle3: input?.subtitle3,
+        p6: input?.p6,
+        p7: input?.p7,
+        l6: input?.l6,
+        l7: input?.l7,
+        l8: input?.l8,
+        l9: input?.l9,
+        l10: input?.l10,
+        l11: input?.l11,
+        l12: input?.l12,
+        l13: input?.l13,
+        l14: input?.l14,
+        l15: input?.l15,
+        p8: input?.p8,
+        subtitle4: input?.subtitle4,
+        conclusion1: input?.conclusion1,
+        conclusion2: input?.conclusion2,
+        conclusion3: input?.conclusion3,
+        reference1: input?.reference1,
+        reference2: input?.reference2,
+        authorName: input?.authorName,
+        authorAbout: input?.authorAbout,
+        authorLink: input?.authorLink,
+        photoCredit: input?.photoCredit,
+        editedBy: input?.editedBy,
+        mainImage: input?.mainImage,
+        publishedDate: input?.publishedDate
+      }
+    })
+  return acting
+    },
+  updateAnimation3D: async (_, {input}, {prisma}) => {
+  const animation3D = prisma.animation3D.update({
+    where:{
+          id: input.id
+        },  
+    data: {
+        title: input?.title,
+        category: input?.category,
+        subtitle1: input?.subtitle1,
+        tableContents1: input?.tableContents1,
+        tableContents2: input?.tableContents2,
+        tableContents3: input?.tableContents3,
+        tableContents4: input?.tableContents4,
+        p1: input?.p1,
+        p2: input?.p2,
+        p3: input?.p3,
+        subtitle2: input?.subtitle2,
+        p4: input?.p4,
+        p5: input?.p5,
+        l1: input?.l1,
+        l2: input?.l2,
+        l3: input?.l3,
+        l4: input?.l4,
+        l5: input?.l5,
+        subtitle3: input?.subtitle3,
+        p6: input?.p6,
+        p7: input?.p7,
+        l6: input?.l6,
+        l7: input?.l7,
+        l8: input?.l8,
+        l9: input?.l9,
+        l10: input?.l10,
+        l11: input?.l11,
+        l12: input?.l12,
+        l13: input?.l13,
+        l14: input?.l14,
+        l15: input?.l15,
+        p8: input?.p8,
+        subtitle4: input?.subtitle4,
+        conclusion1: input?.conclusion1,
+        conclusion2: input?.conclusion2,
+        conclusion3: input?.conclusion3,
+        reference1: input?.reference1,
+        reference2: input?.reference2,
+        authorName: input?.authorName,
+        authorAbout: input?.authorAbout,
+        authorLink: input?.authorLink,
+        photoCredit: input?.photoCredit,
+        editedBy: input?.editedBy,
+        mainImage: input?.mainImage,
+        publishedDate: input?.publishedDate
+      }
+    })
+  return animation3D
+    },
+  updateDesign: async (_, {input}, {prisma}) => {
+  const design = prisma.design.update({
+    where:{
+          id: input.id
+        },  
+    data: {
+        title: input?.title,
+        category: input?.category,
+        subtitle1: input?.subtitle1,
+        tableContents1: input?.tableContents1,
+        tableContents2: input?.tableContents2,
+        tableContents3: input?.tableContents3,
+        tableContents4: input?.tableContents4,
+        p1: input?.p1,
+        p2: input?.p2,
+        p3: input?.p3,
+        subtitle2: input?.subtitle2,
+        p4: input?.p4,
+        p5: input?.p5,
+        l1: input?.l1,
+        l2: input?.l2,
+        l3: input?.l3,
+        l4: input?.l4,
+        l5: input?.l5,
+        subtitle3: input?.subtitle3,
+        p6: input?.p6,
+        p7: input?.p7,
+        l6: input?.l6,
+        l7: input?.l7,
+        l8: input?.l8,
+        l9: input?.l9,
+        l10: input?.l10,
+        l11: input?.l11,
+        l12: input?.l12,
+        l13: input?.l13,
+        l14: input?.l14,
+        l15: input?.l15,
+        p8: input?.p8,
+        subtitle4: input?.subtitle4,
+        conclusion1: input?.conclusion1,
+        conclusion2: input?.conclusion2,
+        conclusion3: input?.conclusion3,
+        reference1: input?.reference1,
+        reference2: input?.reference2,
+        authorName: input?.authorName,
+        authorAbout: input?.authorAbout,
+        authorLink: input?.authorLink,
+        photoCredit: input?.photoCredit,
+        editedBy: input?.editedBy,
+        mainImage: input?.mainImage,
+        publishedDate: input?.publishedDate
+      }
+    })
+  return design
+    },
 }
 }
 

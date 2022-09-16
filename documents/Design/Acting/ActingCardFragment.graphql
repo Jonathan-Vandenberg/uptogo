@@ -1,0 +1,6 @@
+fragment ActingCard on Acting {
+  category
+  id
+  title
+  subtitle1
+}

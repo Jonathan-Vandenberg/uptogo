@@ -1,0 +1,7 @@
+# import ActingCard from "./ActingCardFragment.graphql"
+
+query ActingCard {
+  actingCard {
+    ...ActingCard
+  }
+}

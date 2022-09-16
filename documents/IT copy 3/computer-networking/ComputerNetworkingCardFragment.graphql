@@ -1,0 +1,6 @@
+fragment ComputerNetworkingCard on ComputerNetworking {
+  category
+  id
+  title
+  subtitle1
+}

@@ -1,0 +1,7 @@
+# import InteriorDesign from './InteriorDesignFragment.graphql'
+
+mutation AddInteriorDesign($input: InteriorDesignInput!) {
+  addInteriorDesign(input: $input) {
+    ...InteriorDesign
+  }
+}

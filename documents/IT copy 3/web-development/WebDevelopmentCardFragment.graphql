@@ -1,0 +1,6 @@
+fragment WebDevelopmentCard on WebDevelopment {
+  category
+  id
+  title
+  subtitle1
+}

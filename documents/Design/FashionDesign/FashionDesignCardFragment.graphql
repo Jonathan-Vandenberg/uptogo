@@ -1,0 +1,6 @@
+fragment FashionDesignCard on FashionDesign {
+  category
+  id
+  title
+  subtitle1
+}

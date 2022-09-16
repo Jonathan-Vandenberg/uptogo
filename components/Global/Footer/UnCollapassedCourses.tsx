@@ -48,6 +48,54 @@ const it = [
 ];
 
 const design = [
+  { subject: "Fashion Design", link: "/courses/design/fashion-design" },
+  { subject: "Landscape", link: "/courses/design/landscape" },
+  { subject: "Music & Audio", link: "/courses/design/music" },
+  { subject: "Film & Media", link: "/courses/design/film" },
+  { subject: "Graphic Design", link: "/courses/design/graphic-design" },
+  { subject: "Interior Design", link: "/courses/design/interior-design" },
+  { subject: "Digital Media", link: "/courses/design/digital-media" },
+  { subject: "Acting", link: "/courses/design/acting" },
+  { subject: "Animation 3D", link: "/courses/design/animation3d" },
+];
+
+const health = [
+  { subject: "Fashion Design", link: "/" },
+  { subject: "Landscape", link: "/" },
+  { subject: "Music & Audio", link: "/" },
+  { subject: "Film & Media", link: "/" },
+  { subject: "Graphic Design", link: "/" },
+  { subject: "Interior Design", link: "/" },
+  { subject: "Digital Media", link: "/" },
+  { subject: "Acting", link: "/" },
+  { subject: "Animation 3D", link: "/" },
+];
+
+const trades = [
+  { subject: "Fashion Design", link: "/" },
+  { subject: "Landscape", link: "/" },
+  { subject: "Music & Audio", link: "/" },
+  { subject: "Film & Media", link: "/" },
+  { subject: "Graphic Design", link: "/" },
+  { subject: "Interior Design", link: "/" },
+  { subject: "Digital Media", link: "/" },
+  { subject: "Acting", link: "/" },
+  { subject: "Animation 3D", link: "/" },
+];
+
+const hospitality = [
+  { subject: "Fashion Design", link: "/" },
+  { subject: "Landscape", link: "/" },
+  { subject: "Music & Audio", link: "/" },
+  { subject: "Film & Media", link: "/" },
+  { subject: "Graphic Design", link: "/" },
+  { subject: "Interior Design", link: "/" },
+  { subject: "Digital Media", link: "/" },
+  { subject: "Acting", link: "/" },
+  { subject: "Animation 3D", link: "/" },
+];
+
+const management = [
   { subject: "Fashion Design", link: "/" },
   { subject: "Landscape", link: "/" },
   { subject: "Music & Audio", link: "/" },

@@ -1,0 +1,6 @@
+fragment FilmCard on Film {
+  category
+  id
+  title
+  subtitle1
+}

@@ -1,0 +1,7 @@
+# import Music from './MusicFragment.graphql'
+
+mutation UpdateMusic($input: MusicInput!) {
+  updateMusic(input: $input) {
+    ...Music
+  }
+}

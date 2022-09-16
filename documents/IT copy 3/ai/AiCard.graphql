@@ -1,0 +1,7 @@
+# import AiCard from "./AiCardFragment.graphql"
+
+query AiCard {
+  aiCard {
+    ...AiCard
+  }
+}

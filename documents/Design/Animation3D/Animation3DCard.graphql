@@ -1,0 +1,7 @@
+# import Animation3DCard from "./Animation3DCardFragment.graphql"
+
+query Animation3DCard {
+  animation3DCard {
+    ...Animation3DCard
+  }
+}

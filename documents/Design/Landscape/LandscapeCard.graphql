@@ -1,0 +1,7 @@
+# import LandscapeCard from "./LandscapeCardFragment.graphql"
+
+query LandscapeCard {
+  landscapeCard {
+    ...LandscapeCard
+  }
+}

@@ -1,0 +1,7 @@
+# import GraphicDesign from './GraphicDesignFragment.graphql'
+
+mutation AddGraphicDesign($input: GraphicDesignInput!) {
+  addGraphicDesign(input: $input) {
+    ...GraphicDesign
+  }
+}

@@ -1,0 +1,7 @@
+# import DigitalMedia from "./DigitalMediaFragment.graphql"
+
+query DigitalMedia($id: ID!) {
+  digitalMedia(id: $id) {
+    ...DigitalMedia
+  }
+}

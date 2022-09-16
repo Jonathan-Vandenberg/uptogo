@@ -1,0 +1,7 @@
+# import FilmCard from "./FilmCardFragment.graphql"
+
+query FilmCard {
+  filmCard {
+    ...FilmCard
+  }
+}

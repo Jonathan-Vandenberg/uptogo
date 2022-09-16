@@ -1,0 +1,7 @@
+# import Blockchain from "./BlockchainFragment.graphql"
+
+query Blockchain($id: ID!) {
+  blockchain(id: $id) {
+    ...Blockchain
+  }
+}

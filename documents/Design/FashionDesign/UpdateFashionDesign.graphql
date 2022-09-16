@@ -1,0 +1,7 @@
+# import FashionDesign from './FashionDesignFragment.graphql'
+
+mutation UpdateFashionDesign($input: FashionDesignInput!) {
+  updateFashionDesign(input: $input) {
+    ...FashionDesign
+  }
+}

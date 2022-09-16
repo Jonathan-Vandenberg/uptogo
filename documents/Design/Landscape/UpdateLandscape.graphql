@@ -1,0 +1,7 @@
+# import Landscape from './LandscapeFragment.graphql'
+
+mutation UpdateLandscape($input: LandscapeInput!) {
+  updateLandscape(input: $input) {
+    ...Landscape
+  }
+}

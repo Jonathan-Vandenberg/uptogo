@@ -1,0 +1,7 @@
+# import CloudComputing from "./CloudComputingFragment.graphql"
+
+query CloudComputing($id: ID!) {
+  cloudComputing(id: $id) {
+    ...CloudComputing
+  }
+}

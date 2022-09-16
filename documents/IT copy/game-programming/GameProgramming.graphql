@@ -1,0 +1,7 @@
+# import GameProgramming from "./GameProgrammingFragment.graphql"
+
+query GameProgramming($id: ID!) {
+  gameProgramming(id: $id) {
+    ...GameProgramming
+  }
+}
