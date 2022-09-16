@@ -71,7 +71,7 @@ export default function App({ data }: IProps) {
 
   console.log(data?.category);
   return (
-    <>
+    <div className="container max-w-[678px] md:max-w-[900px] mx-auto md:pt-12 pb-8">
       {/* <Crubs /> */}
       <CoursesMainPage
         data={data}
@@ -87,6 +87,6 @@ export default function App({ data }: IProps) {
         />
       )}
       <Posts />
-    </>
+    </div>
   );
 }
