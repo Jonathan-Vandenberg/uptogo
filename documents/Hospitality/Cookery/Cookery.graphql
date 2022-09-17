@@ -1,0 +1,7 @@
+# import Cookery from "./CookeryFragment.graphql"
+
+query Cookery($id: ID!) {
+  cookery(id: $id) {
+    ...Cookery
+  }
+}

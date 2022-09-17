@@ -1,7 +1,0 @@
-# import Telecommunication from "./TelecommunicationFragment.graphql"
-
-query Telecommunication($id: ID!) {
-  telecommunication(id: $id) {
-    ...Telecommunication
-  }
-}

@@ -1,7 +1,0 @@
-# import ComputerNetworkingCard from "./ComputerNetworkingCardFragment.graphql"
-
-query ComputerNetworkingCard {
-  computerNetworkingCard {
-    ...ComputerNetworkingCard
-  }
-}

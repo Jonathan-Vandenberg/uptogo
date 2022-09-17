@@ -1,0 +1,7 @@
+# import CookeryCard from "./CookeryCardFragment.graphql"
+
+query CookeryCard {
+  cookeryCard {
+    ...CookeryCard
+  }
+}

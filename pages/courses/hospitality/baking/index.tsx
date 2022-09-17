@@ -5,14 +5,14 @@ import BlogPageHero from "../../../../components/Blog/BlogPageHero";
 import CoursesMainPage from "../../../../components/Courses/CoursesMainPage";
 import MainForm from "../../../../components/MainForm";
 import prisma from "../../../../lib/prisma";
-import { MentalHealth, useMentalHealthCardQuery } from "../../../../types";
+import { Baking, useBakingCardQuery } from "../../../../types";
 
 function Posts() {
-  const { data, loading, error } = useMentalHealthCardQuery();
+  const { data, loading, error } = useBakingCardQuery();
 
   return (
     <div className="space-y-6 md:space-y-0">
-      {data?.mentalHealthCard
+      {data?.bakingCard
         ?.slice(0)
         .reverse()
         .map((post) => (
@@ -24,14 +24,10 @@ function Posts() {
   );
 }
 
-interface IProps {
-  data: MentalHealth;
-}
-
 export const getStaticProps: GetStaticProps = async () => {
-  const data = await prisma?.mentalHealth.findUnique({
+  const data = await prisma?.baking.findUnique({
     where: {
-      id: "632568751c5010b649ddea2d",
+      id: "632599daaa4a7bfef376d1ab",
     },
   });
   return {
@@ -39,6 +35,10 @@ export const getStaticProps: GetStaticProps = async () => {
     revalidate: 3600,
   };
 };
+
+interface IProps {
+  data: Baking;
+}
 
 export default function App({ data }: IProps) {
   const [showForm, setShowForm] = useState(false);
@@ -63,6 +63,7 @@ export default function App({ data }: IProps) {
     setEdit(true);
   };
 
+  console.log(data?.category);
   return (
     <div className="container max-w-[678px] md:max-w-[900px] mx-auto md:pt-12 pb-8">
       {/* <Crubs /> */}

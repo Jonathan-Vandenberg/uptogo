@@ -1,7 +1,0 @@
-# import MachineLearning from "./MachineLearningFragment.graphql"
-
-query MachineLearning($id: ID!) {
-  machineLearning(id: $id) {
-    ...MachineLearning
-  }
-}

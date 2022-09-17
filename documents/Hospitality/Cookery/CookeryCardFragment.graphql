@@ -1,0 +1,6 @@
+fragment CookeryCard on Cookery {
+  category
+  id
+  title
+  subtitle1
+}

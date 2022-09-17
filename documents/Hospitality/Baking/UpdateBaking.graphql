@@ -1,0 +1,7 @@
+# import Baking from './BakingFragment.graphql'
+
+mutation UpdateBaking($input: BakingInput!) {
+  updateBaking(input: $input) {
+    ...Baking
+  }
+}

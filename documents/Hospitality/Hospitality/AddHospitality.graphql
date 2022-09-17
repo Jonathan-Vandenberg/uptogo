@@ -1,0 +1,7 @@
+# import AgedCare from './AgedCare.graphql'
+
+mutation AddAgedCare($input: AgedCareInput!) {
+  addAgedCare(input: $input) {
+    ...AgedCare
+  }
+}

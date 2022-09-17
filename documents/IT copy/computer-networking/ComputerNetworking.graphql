@@ -1,7 +1,0 @@
-# import ComputerNetworking from "./ComputerNetworkingFragment.graphql"
-
-query ComputerNetworking($id: ID!) {
-  computerNetworking(id: $id) {
-    ...ComputerNetworking
-  }
-}

@@ -1,7 +1,0 @@
-# import SoftwareDevelopment from "./SoftwareDevelopmentFragment.graphql"
-
-query SoftwareDevelopment($id: ID!) {
-  softwareDevelopment(id: $id) {
-    ...SoftwareDevelopment
-  }
-}

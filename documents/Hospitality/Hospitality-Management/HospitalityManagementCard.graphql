@@ -1,0 +1,7 @@
+# import HospitalityManagementCard from "./HospitalityManagementFragment.graphql"
+
+query HospitalityManagementCard {
+  hospitalityManagementCard {
+    ...HospitalityManagementCard
+  }
+}

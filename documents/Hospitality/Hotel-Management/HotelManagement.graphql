@@ -1,0 +1,7 @@
+# import HotelManagement from "./HotelManagementFragment.graphql"
+
+query HotelManagement($id: ID!) {
+  hotelManagement(id: $id) {
+    ...HotelManagement
+  }
+}

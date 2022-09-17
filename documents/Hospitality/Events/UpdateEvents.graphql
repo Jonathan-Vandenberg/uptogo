@@ -1,0 +1,7 @@
+# import Events from './EventsFragment.graphql'
+
+mutation UpdateEvents($input: EventsInput!) {
+  updateEvents(input: $input) {
+    ...Events
+  }
+}

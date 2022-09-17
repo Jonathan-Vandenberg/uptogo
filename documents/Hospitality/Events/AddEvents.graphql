@@ -1,0 +1,7 @@
+# import Events from './EventsFragment.graphql'
+
+mutation AddEvents($input: EventsInput!) {
+  addEvents(input: $input) {
+    ...Events
+  }
+}

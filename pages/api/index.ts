@@ -381,7 +381,82 @@ const resolvers: Resolvers = {
         }
       })
       return health
-  }
+  },
+  bakingCard: (_, __, {prisma}) => {
+      const baking = prisma.baking.findMany()
+      return baking
+  },
+  baking: (_, {id}, {prisma}) => {
+      const baking = prisma.baking.findUnique({
+        where: {
+          id
+        }
+      })
+      return baking
+  },cookeryCard: (_, __, {prisma}) => {
+      const cookery = prisma.cookery.findMany()
+      return cookery
+  },
+  cookery: (_, {id}, {prisma}) => {
+      const cookery = prisma.cookery.findUnique({
+        where: {
+          id
+        }
+      })
+      return cookery
+  },hospitalityManagementCard: (_, __, {prisma}) => {
+      const hospitalityManagement = prisma.hospitalityManagement.findMany()
+      return hospitalityManagement
+  },
+  hospitalityManagement: (_, {id}, {prisma}) => {
+      const hospitalityManagement = prisma.hospitalityManagement.findUnique({
+        where: {
+          id
+        }
+      })
+      return hospitalityManagement
+  },hotelManagementCard: (_, __, {prisma}) => {
+      const hotelManagement = prisma.hotelManagement.findMany()
+      return hotelManagement
+  },
+  hotelManagement: (_, {id}, {prisma}) => {
+      const hotelManagement = prisma.hotelManagement.findUnique({
+        where: {
+          id
+        }
+      })
+      return hotelManagement
+  },travelTourismCard: (_, __, {prisma}) => {
+      const travelTourism = prisma.travelTourism.findMany()
+      return travelTourism
+  },
+  travelTourism: (_, {id}, {prisma}) => {
+      const travelTourism = prisma.travelTourism.findUnique({
+        where: {
+          id
+        }
+      })
+      return travelTourism
+  },
+  hospitality: (_, {id}, {prisma}) => {
+      const hospitality = prisma.hospitality.findUnique({
+        where: {
+          id
+        }
+      })
+      return hospitality
+  },eventsCard: (_, __, {prisma}) => {
+      const events = prisma.events.findMany()
+      return events
+  },
+  events: (_, {id}, {prisma}) => {
+      const events = prisma.events.findUnique({
+        where: {
+          id
+        }
+      })
+      return events
+  },
   },
   Mutation: {
     updateBlogPost: async (_, {input}, {prisma}) => {

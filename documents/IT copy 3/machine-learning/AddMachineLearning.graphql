@@ -1,7 +1,0 @@
-# import MachineLearning from './MachineLearningFragment.graphql'
-
-mutation AddMachineLearning($input: MachineLearningInput!) {
-  addMachineLearning(input: $input) {
-    ...MachineLearning
-  }
-}

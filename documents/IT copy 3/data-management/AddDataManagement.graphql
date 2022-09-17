@@ -1,7 +1,0 @@
-# import DataManagement from './DataManagementFragment.graphql'
-
-mutation AddDataManagement($input: DataManagementInput!) {
-  addDataManagement(input: $input) {
-    ...DataManagement
-  }
-}

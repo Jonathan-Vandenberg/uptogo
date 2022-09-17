@@ -1,7 +1,0 @@
-# import BusinessAnalysisCard from "./BusinessAnalysisCardFragment.graphql"
-
-query BusinessAnalysisCard {
-  businessAnalysisCard {
-    ...BusinessAnalysisCard
-  }
-}

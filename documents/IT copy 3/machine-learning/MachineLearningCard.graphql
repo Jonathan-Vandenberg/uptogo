@@ -1,7 +1,0 @@
-# import MachineLearningCard from "./MachineLearningCardFragment.graphql"
-
-query MachineLearningCard {
-  machineLearningCard {
-    ...MachineLearningCard
-  }
-}

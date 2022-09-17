@@ -5,14 +5,14 @@ import BlogPageHero from "../../../../components/Blog/BlogPageHero";
 import CoursesMainPage from "../../../../components/Courses/CoursesMainPage";
 import MainForm from "../../../../components/MainForm";
 import prisma from "../../../../lib/prisma";
-import { MentalHealth, useMentalHealthCardQuery } from "../../../../types";
+import { Events, useEventsCardQuery } from "../../../../types";
 
 function Posts() {
-  const { data, loading, error } = useMentalHealthCardQuery();
+  const { data, loading, error } = useEventsCardQuery();
 
   return (
     <div className="space-y-6 md:space-y-0">
-      {data?.mentalHealthCard
+      {data?.eventsCard
         ?.slice(0)
         .reverse()
         .map((post) => (
@@ -25,13 +25,13 @@ function Posts() {
 }
 
 interface IProps {
-  data: MentalHealth;
+  data: Events;
 }
 
 export const getStaticProps: GetStaticProps = async () => {
-  const data = await prisma?.mentalHealth.findUnique({
+  const data = await prisma?.events.findUnique({
     where: {
-      id: "632568751c5010b649ddea2d",
+      id: "63259a99aa4a7bfef376d1b7",
     },
   });
   return {
@@ -63,6 +63,7 @@ export default function App({ data }: IProps) {
     setEdit(true);
   };
 
+  console.log(data?.category);
   return (
     <div className="container max-w-[678px] md:max-w-[900px] mx-auto md:pt-12 pb-8">
       {/* <Crubs /> */}

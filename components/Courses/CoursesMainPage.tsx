@@ -33,6 +33,7 @@ import {
   Hairdressing,
   Health,
   Horticulture,
+  Hospitality,
   HospitalityManagement,
   HotelManagement,
   HumanResources,
@@ -125,6 +126,7 @@ interface IProps {
     | AgribusinessManagement
     | SupplyManagement
     | LeadershipManagement
+    | Hospitality
     | undefined
     | null;
   handleAdd: () => void;

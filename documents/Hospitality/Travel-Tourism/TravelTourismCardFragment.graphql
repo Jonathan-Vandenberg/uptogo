@@ -1,0 +1,6 @@
+fragment TravelTourismCard on TravelTourism {
+  category
+  id
+  title
+  subtitle1
+}

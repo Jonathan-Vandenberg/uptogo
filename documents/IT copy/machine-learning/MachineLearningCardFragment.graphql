@@ -1,6 +1,0 @@
-fragment MachineLearningCard on MachineLearning {
-  category
-  id
-  title
-  subtitle1
-}

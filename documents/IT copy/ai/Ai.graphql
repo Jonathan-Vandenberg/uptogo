@@ -1,7 +1,0 @@
-# import Ai from "./AiFragment.graphql"
-
-query Ai($id: ID!) {
-  ai(id: $id) {
-    ...Ai
-  }
-}

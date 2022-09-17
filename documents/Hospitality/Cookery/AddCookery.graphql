@@ -1,0 +1,7 @@
+# import Cookery from './CookeryFragment.graphql'
+
+mutation AddCookery($input: CookeryInput!) {
+  addCookery(input: $input) {
+    ...Cookery
+  }
+}

@@ -156,7 +156,7 @@ enum CategoriesEnum {
   Haridressing = "HARIDRESSING",
   Health = "HEALTH",
   Hospitality = "HOSPITALITY",
-  HopitalityManagement = "HOPITALITY_MANAGEMENT",
+  HospitalityManagement = "HOSPITALITY_MANAGEMENT",
   Horticulture = "HORTICULTURE",
   HumanResources = "HUMAN_RESOURCES",
   InteriorDesign = "INTERIOR_DESIGN",
@@ -322,6 +322,29 @@ export default function App({ data }: IProps) {
     }
     if (c === CategoriesEnum.Mental_Health) {
       setSlug("/courses/health/mental-health/articles/" + data?.id);
+    }
+
+    //* -------- Hospitality -------- *//
+
+    if (c === CategoriesEnum.Baking) {
+      setSlug("/courses/hospitality/baking/articles/" + data?.id);
+    }
+    if (c === CategoriesEnum.CommercialCooking) {
+      setSlug("/courses/hospitality/commercial-cooking/articles/" + data?.id);
+    }
+    if (c === CategoriesEnum.HospitalityManagement) {
+      setSlug(
+        "/courses/hospitality/hospitality-management/articles/" + data?.id
+      );
+    }
+    if (c === CategoriesEnum.IntlHotelManagement) {
+      setSlug("/courses/hospitality/hotel-management/articles/" + data?.id);
+    }
+    if (c === CategoriesEnum.TravelTourism) {
+      setSlug("/courses/hospitality/travel-tourism/articles/" + data?.id);
+    }
+    if (c === CategoriesEnum.Events) {
+      setSlug("/courses/hospitality/events/articles/" + data?.id);
     }
 
     // eslint-disable-next-line react-hooks/exhaustive-deps

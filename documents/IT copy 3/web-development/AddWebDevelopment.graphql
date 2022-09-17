@@ -1,7 +1,0 @@
-# import WebDevelopment from './WebDevelopmentFragment.graphql'
-
-mutation AddWebDevelopment($input: WebDevelopmentInput!) {
-  addWebDevelopment(input: $input) {
-    ...WebDevelopment
-  }
-}

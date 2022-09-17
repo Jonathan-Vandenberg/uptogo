@@ -1,0 +1,7 @@
+# import HotelManagement from './HotelManagementFragment.graphql'
+
+mutation UpdateHotelManagement($input: HotelManagementInput!) {
+  updateHotelManagement(input: $input) {
+    ...HotelManagement
+  }
+}

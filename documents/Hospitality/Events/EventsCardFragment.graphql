@@ -1,0 +1,6 @@
+fragment EventsCard on Events {
+  category
+  id
+  title
+  subtitle1
+}

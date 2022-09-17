@@ -1,7 +1,0 @@
-# import TelecommunicationCard from "./TelecommunicationCardFragment.graphql"
-
-query TelecommunicationCard {
-  telecommunicationCard {
-    ...TelecommunicationCard
-  }
-}

@@ -1,7 +1,0 @@
-# import Blockchain from './BlockchainFragment.graphql'
-
-mutation UpdateBlockchain($input: BlockchainInput!) {
-  updateBlockchain(input: $input) {
-    ...Blockchain
-  }
-}

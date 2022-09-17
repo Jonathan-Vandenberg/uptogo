@@ -1,7 +1,0 @@
-# import WebDevelopment from "./WebDevelopmentFragment.graphql"
-
-query WebDevelopment($id: ID!) {
-  webDevelopment(id: $id) {
-    ...WebDevelopment
-  }
-}

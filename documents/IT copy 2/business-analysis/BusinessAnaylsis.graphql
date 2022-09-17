@@ -1,7 +1,0 @@
-# import BusinessAnalysis from "./BusinessAnalysisFragment.graphql"
-
-query BusinessAnalysis($id: ID!) {
-  businessAnalysis(id: $id) {
-    ...BusinessAnalysis
-  }
-}

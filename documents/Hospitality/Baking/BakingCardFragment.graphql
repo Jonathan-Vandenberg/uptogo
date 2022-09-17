@@ -1,0 +1,6 @@
+fragment BakingCard on Baking {
+  category
+  id
+  title
+  subtitle1
+}

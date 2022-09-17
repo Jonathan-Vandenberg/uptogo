@@ -1,0 +1,7 @@
+# import Events from "./EventsFragment.graphql"
+
+query Events($id: ID!) {
+  events(id: $id) {
+    ...Events
+  }
+}

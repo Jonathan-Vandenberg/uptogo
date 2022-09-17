@@ -1,0 +1,7 @@
+# import TravelTourism from "./TravelTourismFragment.graphql"
+
+query TravelTourism($id: ID!) {
+  travelTourism(id: $id) {
+    ...TravelTourism
+  }
+}

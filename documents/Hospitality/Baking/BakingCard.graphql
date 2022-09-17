@@ -1,0 +1,7 @@
+# import BakingCard from "./BakingCardFragment.graphql"
+
+query BakingCard {
+  bakingCard {
+    ...BakingCard
+  }
+}

@@ -1,0 +1,7 @@
+# import TravelTourismCard from "./TravelTourismCardFragment.graphql"
+
+query TravelTourismCard {
+  travelTourismCard {
+    ...TravelTourismCard
+  }
+}

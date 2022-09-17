@@ -63,6 +63,7 @@ import type {
   TravelTourism,
   Veterinary,
   Yoga,
+  Hospitality,
 } from "../../types";
 import EmailButton from "../UI/EmailButton";
 
@@ -126,6 +127,7 @@ interface IProps {
     | AgribusinessManagement
     | SupplyManagement
     | LeadershipManagement
+    | Hospitality
     | undefined
     | null;
   handleAdd: () => void;

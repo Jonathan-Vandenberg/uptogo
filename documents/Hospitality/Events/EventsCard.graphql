@@ -1,0 +1,7 @@
+# import EventsCard from "./EventsCardFragment.graphql"
+
+query EventsCard {
+  eventsCard {
+    ...EventsCard
+  }
+}

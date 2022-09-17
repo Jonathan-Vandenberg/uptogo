@@ -1,0 +1,7 @@
+# import Baking from "./BakingFragment.graphql"
+
+query Baking($id: ID!) {
+  baking(id: $id) {
+    ...Baking
+  }
+}

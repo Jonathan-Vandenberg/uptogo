@@ -1,0 +1,6 @@
+fragment HospitalityManagementCard on HospitalityManagement {
+  category
+  id
+  title
+  subtitle1
+}

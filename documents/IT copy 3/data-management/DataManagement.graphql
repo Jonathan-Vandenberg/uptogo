@@ -1,7 +1,0 @@
-# import DataManagement from "./DataManagementFragment.graphql"
-
-query DataManagement($id: ID!) {
-  dataManagement(id: $id) {
-    ...DataManagement
-  }
-}

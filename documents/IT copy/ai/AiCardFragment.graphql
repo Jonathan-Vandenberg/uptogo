@@ -1,6 +1,0 @@
-fragment AiCard on Ai {
-  category
-  id
-  title
-  subtitle1
-}

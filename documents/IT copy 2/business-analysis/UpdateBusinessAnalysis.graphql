@@ -1,7 +1,0 @@
-# import BusinessAnalysis from './BusinessAnalysisFragment.graphql'
-
-mutation UpdateBusinessAnalysis($input: BusinessAnalysisInput!) {
-  updateBusinessAnalysis(input: $input) {
-    ...BusinessAnalysis
-  }
-}

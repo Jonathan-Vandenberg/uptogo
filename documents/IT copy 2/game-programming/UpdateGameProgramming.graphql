@@ -1,7 +1,0 @@
-# import GameProgramming from './GameProgrammingFragment.graphql'
-
-mutation UpdateGameProgramming($input: GameProgrammingInput!) {
-  updateGameProgramming(input: $input) {
-    ...GameProgramming
-  }
-}

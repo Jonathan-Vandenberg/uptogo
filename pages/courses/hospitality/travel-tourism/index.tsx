@@ -5,14 +5,14 @@ import BlogPageHero from "../../../../components/Blog/BlogPageHero";
 import CoursesMainPage from "../../../../components/Courses/CoursesMainPage";
 import MainForm from "../../../../components/MainForm";
 import prisma from "../../../../lib/prisma";
-import { MentalHealth, useMentalHealthCardQuery } from "../../../../types";
+import { TravelTourism, useTravelTourismCardQuery } from "../../../../types";
 
 function Posts() {
-  const { data, loading, error } = useMentalHealthCardQuery();
+  const { data, loading, error } = useTravelTourismCardQuery();
 
   return (
     <div className="space-y-6 md:space-y-0">
-      {data?.mentalHealthCard
+      {data?.travelTourismCard
         ?.slice(0)
         .reverse()
         .map((post) => (
@@ -25,13 +25,13 @@ function Posts() {
 }
 
 interface IProps {
-  data: MentalHealth;
+  data: TravelTourism;
 }
 
 export const getStaticProps: GetStaticProps = async () => {
-  const data = await prisma?.mentalHealth.findUnique({
+  const data = await prisma?.travelTourism.findUnique({
     where: {
-      id: "632568751c5010b649ddea2d",
+      id: "63259c2daa4a7bfef376d1ce",
     },
   });
   return {

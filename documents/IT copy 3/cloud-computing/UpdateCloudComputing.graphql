@@ -1,7 +1,0 @@
-# import CloudComputing from './CloudComputingFragment.graphql'
-
-mutation UpdateCloudComputing($input: CloudComputingInput!) {
-  updateCloudComputing(input: $input) {
-    ...CloudComputing
-  }
-}

@@ -1,0 +1,7 @@
+# import TravelTourism from './TravelTourismFragment.graphql'
+
+mutation UpdateTravelTourism($input: TravelTourismInput!) {
+  updateTravelTourism(input: $input) {
+    ...TravelTourism
+  }
+}

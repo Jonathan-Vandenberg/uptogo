@@ -1,7 +1,0 @@
-# import Ai from './AiFragment.graphql'
-
-mutation UpdateAi($input: AiInput!) {
-  updateAi(input: $input) {
-    ...Ai
-  }
-}

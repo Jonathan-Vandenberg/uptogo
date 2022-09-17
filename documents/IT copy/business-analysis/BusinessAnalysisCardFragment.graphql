@@ -1,6 +1,0 @@
-fragment BusinessAnalysisCard on BusinessAnalysis {
-  category
-  id
-  title
-  subtitle1
-}

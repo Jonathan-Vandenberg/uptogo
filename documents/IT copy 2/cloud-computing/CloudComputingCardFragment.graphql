@@ -1,6 +1,0 @@
-fragment CloudComputingCard on CloudComputing {
-  category
-  id
-  title
-  subtitle1
-}

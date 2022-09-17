@@ -1,7 +1,0 @@
-# import Telecommunication from './TelecommunicationFragment.graphql'
-
-mutation AddTelecommunication($input: TelecommunicationInput!) {
-  addTelecommunication(input: $input) {
-    ...Telecommunication
-  }
-}

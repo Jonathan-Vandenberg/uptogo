@@ -1,0 +1,6 @@
+fragment HotelManagementCard on HotelManagement {
+  category
+  id
+  title
+  subtitle1
+}

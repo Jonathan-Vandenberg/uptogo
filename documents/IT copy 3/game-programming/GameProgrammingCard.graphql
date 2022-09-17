@@ -1,7 +1,0 @@
-# import GameProgrammingCard from "./GameProgrammingCardFragment.graphql"
-
-query GameProgrammingCard {
-  gameProgrammingCard {
-    ...GameProgrammingCard
-  }
-}
