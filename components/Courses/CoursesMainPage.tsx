@@ -28,6 +28,7 @@ import {
 import BlogPostMarkup from "../Blog/BlogPostMarkup";
 import Image from "next/image";
 import EmailButton from "../UI/EmailButton";
+import logo from "../../public/fullLogo.png";
 
 interface IProps {
   data:
@@ -74,21 +75,23 @@ export default function BlogMain({ data, handleEdit, handleAdd }: IProps) {
           {data?.title}
         </div>
       </div>
-      {data?.id === "632477c6ef7048971301fe08" ? (
+      {/* {data?.id === "632477c6ef7048971301fe08" ? (
         <div className="flex items-center justify-center">
           <Animation />
         </div>
-      ) : (
-        <div className="pb-8 block">
+      ) : ( */}
+      <div className="w-60 translate-x-1/2 ml-20 pb-8 block">
+        {
           <Image
-            src={data?.mainImage || "https://picsum.photos/id/120/600/338"}
-            width={600}
-            height={339}
+            src={data?.mainImage || logo}
+            width={data?.mainImage ? 600 : 300}
+            height={data?.mainImage ? 339 : 300}
             alt="image"
             layout="responsive"
           />
-        </div>
-      )}
+        }
+      </div>
+      {/* )} */}
       <div className="pb-6 px-6 md:px-0 md:pb-10">
         <div
           id="subtitle1"
