@@ -1,0 +1,7 @@
+# import Massage from "./MassageFragment.graphql"
+
+query Massage($id: ID!) {
+  massage(id: $id) {
+    ...Massage
+  }
+}

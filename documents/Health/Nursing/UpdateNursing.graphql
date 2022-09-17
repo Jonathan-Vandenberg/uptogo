@@ -1,0 +1,7 @@
+# import Nursing from './NursingFragment.graphql'
+
+mutation UpdateNursing($input: NursingInput!) {
+  updateNursing(input: $input) {
+    ...Nursing
+  }
+}

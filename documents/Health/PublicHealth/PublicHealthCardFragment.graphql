@@ -1,0 +1,6 @@
+fragment PublicHealthCard on PublicHealth {
+  category
+  id
+  title
+  subtitle1
+}

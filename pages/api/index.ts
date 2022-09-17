@@ -265,6 +265,122 @@ const resolvers: Resolvers = {
         }
       })
       return animation3D
+  },
+  agedCareCard: (_, __, {prisma}) => {
+      const agedCare = prisma.agedCare.findMany()
+      return agedCare
+  },
+  agedCare: (_, {id}, {prisma}) => {
+      const agedCare = prisma.agedCare.findUnique({
+        where: {
+          id
+        }
+      })
+      return agedCare
+  },
+  nutritionCard: (_, __, {prisma}) => {
+      const nutrition = prisma.nutrition.findMany()
+      return nutrition
+  },
+  nutrition: (_, {id}, {prisma}) => {
+      const nutrition = prisma.nutrition.findUnique({
+        where: {
+          id
+        }
+      })
+      return nutrition
+  },
+  veterinaryCard: (_, __, {prisma}) => {
+      const veterinary = prisma.veterinary.findMany()
+      return veterinary
+  },
+  veterinary: (_, {id}, {prisma}) => {
+      const veterinary = prisma.veterinary.findUnique({
+        where: {
+          id
+        }
+      })
+      return veterinary
+  },
+  medicineCard: (_, __, {prisma}) => {
+      const medicine = prisma.medicine.findMany()
+      return medicine
+  },
+  medicine: (_, {id}, {prisma}) => {
+      const medicine = prisma.medicine.findUnique({
+        where: {
+          id
+        }
+      })
+      return medicine
+  },
+  publicHealthCard: (_, __, {prisma}) => {
+      const publicHealth = prisma.publicHealth.findMany()
+      return publicHealth
+  },
+  publicHealth: (_, {id}, {prisma}) => {
+      const publicHealth = prisma.publicHealth.findUnique({
+        where: {
+          id
+        }
+      })
+      return publicHealth
+  },
+  dentalCard: (_, __, {prisma}) => {
+      const dental = prisma.dental.findMany()
+      return dental
+  },
+  dental: (_, {id}, {prisma}) => {
+      const dental = prisma.dental.findUnique({
+        where: {
+          id
+        }
+      })
+      return dental
+  },
+  massageCard: (_, __, {prisma}) => {
+      const massage = prisma.massage.findMany()
+      return massage
+  },
+  massage: (_, {id}, {prisma}) => {
+      const massage = prisma.massage.findUnique({
+        where: {
+          id
+        }
+      })
+      return massage
+  },
+  mentalHealthCard: (_, __, {prisma}) => {
+      const mentalHealth = prisma.mentalHealth.findMany()
+      return mentalHealth
+  },
+  mentalHealth: (_, {id}, {prisma}) => {
+      const mentalHealth = prisma.mentalHealth.findUnique({
+        where: {
+          id
+        }
+      })
+      return mentalHealth
+  },
+  nursingCard: (_, __, {prisma}) => {
+      const nursing = prisma.nursing.findMany()
+      return nursing
+  },
+  nursing: (_, {id}, {prisma}) => {
+      const nursing = prisma.nursing.findUnique({
+        where: {
+          id
+        }
+      })
+      return nursing
+  },
+  health: (_, {id}, {prisma}) => {
+      const health = prisma.health.findUnique({
+        where: {
+          id
+        }
+      })
+      return health
   }
   },
   Mutation: {

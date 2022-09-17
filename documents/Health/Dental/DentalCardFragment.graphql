@@ -1,0 +1,6 @@
+fragment DentalCard on Dental {
+  category
+  id
+  title
+  subtitle1
+}

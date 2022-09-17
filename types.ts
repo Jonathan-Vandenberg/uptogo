@@ -1,5 +1,5 @@
 import { GraphQLResolveInfo } from 'graphql';
-import { Categories as CategoriesModel, SoftwareDevelopment as SoftwareDevelopmentModel, ComputerNetworking as ComputerNetworkingModel, CloudComputing as CloudComputingModel, BusinessAnalysis as BusinessAnalysisModel, Telecommunication as TelecommunicationModel, GameProgramming as GameProgrammingModel, WebDevelopment as WebDevelopmentModel, MachineLearning as MachineLearningModel, DataManagement as DataManagementModel, Blockchain as BlockchainModel, Ai as AiModel, FashionDesign as FashionDesignModel, Landscape as LandscapeModel, Music as MusicModel, Film as FilmModel, GraphicDesign as GraphicDesignModel, InteriorDesign as InteriorDesignModel, DigitalMedia as DigitalMediaModel, Acting as ActingModel, Animation3D as Animation3DModel, AgedCare as AgedCareModel, Nutrition as NutritionModel, Nursing as NursingModel, Veterinary as VeterinaryModel, Medicine as MedicineModel, Publichealth as PublichealthModel, Dental as DentalModel, Massage as MassageModel, MentalHealth as MentalHealthModel, Baking as BakingModel, Cookery as CookeryModel, HospitalityManagement as HospitalityManagementModel, HotelManagement as HotelManagementModel, TravelTourism as TravelTourismModel, Events as EventsModel, Automotive as AutomotiveModel, Beauty as BeautyModel, Construction as ConstructionModel, Carpentry as CarpentryModel, Education as EducationModel, Fitness as FitnessModel, Hairdressing as HairdressingModel, Horticulture as HorticultureModel, SportDevelopment as SportDevelopmentModel, Yoga as YogaModel, ProjectManagement as ProjectManagementModel, BusinessManagement as BusinessManagementModel, HumanResources as HumanResourcesModel, BankingManagement as BankingManagementModel, IntlBusiness as IntlBusinessModel, SocialMediaMarketing as SocialMediaMarketingModel, AgribusinessManagement as AgribusinessManagementModel, SupplyManagement as SupplyManagementModel, LeadershipManagement as LeadershipManagementModel, BlogPost as BlogPostModel, It as ItModel, Trades as TradesModel, Hospitality as HospitalityModel, Health as HealthModel, Management as ManagementModel, Design as DesignModel, Session as SessionModel, User as UserModel, VerificationToken as VerificationTokenModel } from '@prisma/client';
+import { Categories as CategoriesModel, SoftwareDevelopment as SoftwareDevelopmentModel, ComputerNetworking as ComputerNetworkingModel, CloudComputing as CloudComputingModel, BusinessAnalysis as BusinessAnalysisModel, Telecommunication as TelecommunicationModel, GameProgramming as GameProgrammingModel, WebDevelopment as WebDevelopmentModel, MachineLearning as MachineLearningModel, DataManagement as DataManagementModel, Blockchain as BlockchainModel, Ai as AiModel, FashionDesign as FashionDesignModel, Landscape as LandscapeModel, Music as MusicModel, Film as FilmModel, GraphicDesign as GraphicDesignModel, InteriorDesign as InteriorDesignModel, DigitalMedia as DigitalMediaModel, Acting as ActingModel, Animation3D as Animation3DModel, AgedCare as AgedCareModel, Nutrition as NutritionModel, Nursing as NursingModel, Veterinary as VeterinaryModel, Medicine as MedicineModel, PublicHealth as PublicHealthModel, Dental as DentalModel, Massage as MassageModel, MentalHealth as MentalHealthModel, Baking as BakingModel, Cookery as CookeryModel, HospitalityManagement as HospitalityManagementModel, HotelManagement as HotelManagementModel, TravelTourism as TravelTourismModel, Events as EventsModel, Automotive as AutomotiveModel, Beauty as BeautyModel, Construction as ConstructionModel, Carpentry as CarpentryModel, Education as EducationModel, Fitness as FitnessModel, Hairdressing as HairdressingModel, Horticulture as HorticultureModel, SportDevelopment as SportDevelopmentModel, Yoga as YogaModel, ProjectManagement as ProjectManagementModel, BusinessManagement as BusinessManagementModel, HumanResources as HumanResourcesModel, BankingManagement as BankingManagementModel, IntlBusiness as IntlBusinessModel, SocialMediaMarketing as SocialMediaMarketingModel, AgribusinessManagement as AgribusinessManagementModel, SupplyManagement as SupplyManagementModel, LeadershipManagement as LeadershipManagementModel, BlogPost as BlogPostModel, It as ItModel, Trades as TradesModel, Hospitality as HospitalityModel, Health as HealthModel, Management as ManagementModel, Design as DesignModel, Session as SessionModel, User as UserModel, VerificationToken as VerificationTokenModel } from '@prisma/client';
 import { GraphQLContext } from './pages/api/index';
 import { gql } from '@apollo/client';
 import * as Apollo from '@apollo/client';
@@ -4802,7 +4802,7 @@ export type Mutation = {
   addNursing?: Maybe<Nursing>;
   addNutrition?: Maybe<Nutrition>;
   addProjectManagement?: Maybe<ProjectManagement>;
-  addPublichealth?: Maybe<Publichealth>;
+  addPublicHealth?: Maybe<PublicHealth>;
   addSocialMediaMarketing?: Maybe<SocialMediaMarketing>;
   addSoftwareDevelopment?: Maybe<SoftwareDevelopment>;
   addSportDevelopment?: Maybe<SportDevelopment>;
@@ -4863,7 +4863,7 @@ export type Mutation = {
   updateNursing?: Maybe<Nursing>;
   updateNutrition?: Maybe<Nutrition>;
   updateProjectManagement?: Maybe<ProjectManagement>;
-  updatePublichealth?: Maybe<Publichealth>;
+  updatePublicHealth?: Maybe<PublicHealth>;
   updateSocialMediaMarketing?: Maybe<SocialMediaMarketing>;
   updateSoftwareDevelopment?: Maybe<SoftwareDevelopment>;
   updateSportDevelopment?: Maybe<SportDevelopment>;
@@ -5127,8 +5127,8 @@ export type MutationAddProjectManagementArgs = {
 };
 
 
-export type MutationAddPublichealthArgs = {
-  input: PublichealthInput;
+export type MutationAddPublicHealthArgs = {
+  input: PublicHealthInput;
 };
 
 
@@ -5432,8 +5432,8 @@ export type MutationUpdateProjectManagementArgs = {
 };
 
 
-export type MutationUpdatePublichealthArgs = {
-  input: PublichealthInput;
+export type MutationUpdatePublicHealthArgs = {
+  input: PublicHealthInput;
 };
 
 
@@ -5783,8 +5783,8 @@ export type ProjectManagementInput = {
   title?: InputMaybe<Scalars['String']>;
 };
 
-export type Publichealth = {
-  __typename?: 'Publichealth';
+export type PublicHealth = {
+  __typename?: 'PublicHealth';
   authorAbout?: Maybe<Scalars['String']>;
   authorLink?: Maybe<Scalars['String']>;
   authorName?: Maybe<Scalars['String']>;
@@ -5833,7 +5833,7 @@ export type Publichealth = {
   title?: Maybe<Scalars['String']>;
 };
 
-export type PublichealthInput = {
+export type PublicHealthInput = {
   authorAbout?: InputMaybe<Scalars['String']>;
   authorLink?: InputMaybe<Scalars['String']>;
   authorName?: InputMaybe<Scalars['String']>;
@@ -5979,8 +5979,8 @@ export type Query = {
   nutritionCard?: Maybe<Array<Maybe<Nutrition>>>;
   projectManagement?: Maybe<ProjectManagement>;
   projectManagementCard?: Maybe<Array<Maybe<ProjectManagement>>>;
-  publichealth?: Maybe<Publichealth>;
-  publichealthCard?: Maybe<Array<Maybe<Publichealth>>>;
+  publicHealth?: Maybe<PublicHealth>;
+  publicHealthCard?: Maybe<Array<Maybe<PublicHealth>>>;
   pusinessManagement?: Maybe<BusinessManagement>;
   socialMediaMarketing?: Maybe<SocialMediaMarketing>;
   socialMediaMarketingCard?: Maybe<Array<Maybe<SocialMediaMarketing>>>;
@@ -6249,7 +6249,7 @@ export type QueryProjectManagementArgs = {
 };
 
 
-export type QueryPublichealthArgs = {
+export type QueryPublicHealthArgs = {
   id: Scalars['ID'];
 };
 
@@ -7499,8 +7499,8 @@ export type ResolversTypes = {
   NutritionInput: NutritionInput;
   ProjectManagement: ResolverTypeWrapper<ProjectManagementModel>;
   ProjectManagementInput: ProjectManagementInput;
-  Publichealth: ResolverTypeWrapper<PublichealthModel>;
-  PublichealthInput: PublichealthInput;
+  PublicHealth: ResolverTypeWrapper<PublicHealthModel>;
+  PublicHealthInput: PublicHealthInput;
   Query: ResolverTypeWrapper<{}>;
   Session: ResolverTypeWrapper<SessionModel>;
   SocialMediaMarketing: ResolverTypeWrapper<SocialMediaMarketingModel>;
@@ -7635,8 +7635,8 @@ export type ResolversParentTypes = {
   NutritionInput: NutritionInput;
   ProjectManagement: ProjectManagementModel;
   ProjectManagementInput: ProjectManagementInput;
-  Publichealth: PublichealthModel;
-  PublichealthInput: PublichealthInput;
+  PublicHealth: PublicHealthModel;
+  PublicHealthInput: PublicHealthInput;
   Query: {};
   Session: SessionModel;
   SocialMediaMarketing: SocialMediaMarketingModel;
@@ -10142,7 +10142,7 @@ export type MutationResolvers<ContextType = GraphQLContext, ParentType extends R
   addNursing?: Resolver<Maybe<ResolversTypes['Nursing']>, ParentType, ContextType, RequireFields<MutationAddNursingArgs, 'input'>>;
   addNutrition?: Resolver<Maybe<ResolversTypes['Nutrition']>, ParentType, ContextType, RequireFields<MutationAddNutritionArgs, 'input'>>;
   addProjectManagement?: Resolver<Maybe<ResolversTypes['ProjectManagement']>, ParentType, ContextType, RequireFields<MutationAddProjectManagementArgs, 'input'>>;
-  addPublichealth?: Resolver<Maybe<ResolversTypes['Publichealth']>, ParentType, ContextType, RequireFields<MutationAddPublichealthArgs, 'input'>>;
+  addPublicHealth?: Resolver<Maybe<ResolversTypes['PublicHealth']>, ParentType, ContextType, RequireFields<MutationAddPublicHealthArgs, 'input'>>;
   addSocialMediaMarketing?: Resolver<Maybe<ResolversTypes['SocialMediaMarketing']>, ParentType, ContextType, RequireFields<MutationAddSocialMediaMarketingArgs, 'input'>>;
   addSoftwareDevelopment?: Resolver<Maybe<ResolversTypes['SoftwareDevelopment']>, ParentType, ContextType, Partial<MutationAddSoftwareDevelopmentArgs>>;
   addSportDevelopment?: Resolver<Maybe<ResolversTypes['SportDevelopment']>, ParentType, ContextType, RequireFields<MutationAddSportDevelopmentArgs, 'input'>>;
@@ -10203,7 +10203,7 @@ export type MutationResolvers<ContextType = GraphQLContext, ParentType extends R
   updateNursing?: Resolver<Maybe<ResolversTypes['Nursing']>, ParentType, ContextType, RequireFields<MutationUpdateNursingArgs, 'input'>>;
   updateNutrition?: Resolver<Maybe<ResolversTypes['Nutrition']>, ParentType, ContextType, RequireFields<MutationUpdateNutritionArgs, 'input'>>;
   updateProjectManagement?: Resolver<Maybe<ResolversTypes['ProjectManagement']>, ParentType, ContextType, RequireFields<MutationUpdateProjectManagementArgs, 'input'>>;
-  updatePublichealth?: Resolver<Maybe<ResolversTypes['Publichealth']>, ParentType, ContextType, RequireFields<MutationUpdatePublichealthArgs, 'input'>>;
+  updatePublicHealth?: Resolver<Maybe<ResolversTypes['PublicHealth']>, ParentType, ContextType, RequireFields<MutationUpdatePublicHealthArgs, 'input'>>;
   updateSocialMediaMarketing?: Resolver<Maybe<ResolversTypes['SocialMediaMarketing']>, ParentType, ContextType, RequireFields<MutationUpdateSocialMediaMarketingArgs, 'input'>>;
   updateSoftwareDevelopment?: Resolver<Maybe<ResolversTypes['SoftwareDevelopment']>, ParentType, ContextType, RequireFields<MutationUpdateSoftwareDevelopmentArgs, 'input'>>;
   updateSportDevelopment?: Resolver<Maybe<ResolversTypes['SportDevelopment']>, ParentType, ContextType, RequireFields<MutationUpdateSportDevelopmentArgs, 'input'>>;
@@ -10366,7 +10366,7 @@ export type ProjectManagementResolvers<ContextType = GraphQLContext, ParentType 
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 };
 
-export type PublichealthResolvers<ContextType = GraphQLContext, ParentType extends ResolversParentTypes['Publichealth'] = ResolversParentTypes['Publichealth']> = {
+export type PublicHealthResolvers<ContextType = GraphQLContext, ParentType extends ResolversParentTypes['PublicHealth'] = ResolversParentTypes['PublicHealth']> = {
   authorAbout?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   authorLink?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   authorName?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
@@ -10512,8 +10512,8 @@ export type QueryResolvers<ContextType = GraphQLContext, ParentType extends Reso
   nutritionCard?: Resolver<Maybe<Array<Maybe<ResolversTypes['Nutrition']>>>, ParentType, ContextType>;
   projectManagement?: Resolver<Maybe<ResolversTypes['ProjectManagement']>, ParentType, ContextType, RequireFields<QueryProjectManagementArgs, 'id'>>;
   projectManagementCard?: Resolver<Maybe<Array<Maybe<ResolversTypes['ProjectManagement']>>>, ParentType, ContextType>;
-  publichealth?: Resolver<Maybe<ResolversTypes['Publichealth']>, ParentType, ContextType, RequireFields<QueryPublichealthArgs, 'id'>>;
-  publichealthCard?: Resolver<Maybe<Array<Maybe<ResolversTypes['Publichealth']>>>, ParentType, ContextType>;
+  publicHealth?: Resolver<Maybe<ResolversTypes['PublicHealth']>, ParentType, ContextType, RequireFields<QueryPublicHealthArgs, 'id'>>;
+  publicHealthCard?: Resolver<Maybe<Array<Maybe<ResolversTypes['PublicHealth']>>>, ParentType, ContextType>;
   pusinessManagement?: Resolver<Maybe<ResolversTypes['BusinessManagement']>, ParentType, ContextType, RequireFields<QueryPusinessManagementArgs, 'id'>>;
   socialMediaMarketing?: Resolver<Maybe<ResolversTypes['SocialMediaMarketing']>, ParentType, ContextType, RequireFields<QuerySocialMediaMarketingArgs, 'id'>>;
   socialMediaMarketingCard?: Resolver<Maybe<Array<Maybe<ResolversTypes['SocialMediaMarketing']>>>, ParentType, ContextType>;
@@ -11117,7 +11117,7 @@ export type Resolvers<ContextType = GraphQLContext> = {
   Nursing?: NursingResolvers<ContextType>;
   Nutrition?: NutritionResolvers<ContextType>;
   ProjectManagement?: ProjectManagementResolvers<ContextType>;
-  Publichealth?: PublichealthResolvers<ContextType>;
+  PublicHealth?: PublicHealthResolvers<ContextType>;
   Query?: QueryResolvers<ContextType>;
   Session?: SessionResolvers<ContextType>;
   SocialMediaMarketing?: SocialMediaMarketingResolvers<ContextType>;
@@ -11717,6 +11717,578 @@ export const MusicCardFragmentDoc = gql`
     `;
 export const MusicFragmentDoc = gql`
     fragment Music on Music {
+  id
+  category
+  publishedDate
+  title
+  subtitle1
+  tableContents1
+  tableContents2
+  tableContents3
+  tableContents4
+  p1
+  p2
+  p3
+  subtitle2
+  p4
+  p5
+  l1
+  l2
+  l3
+  l4
+  l5
+  subtitle3
+  p6
+  p7
+  l6
+  l7
+  l8
+  l9
+  l10
+  l11
+  l12
+  l13
+  l14
+  l15
+  p8
+  subtitle4
+  conclusion1
+  conclusion2
+  conclusion3
+  reference1
+  reference2
+  authorName
+  authorAbout
+  authorLink
+  photoCredit
+  editedBy
+  mainImage
+}
+    `;
+export const AgedCareCardFragmentDoc = gql`
+    fragment AgedCareCard on AgedCare {
+  category
+  id
+  title
+  subtitle1
+}
+    `;
+export const AgedCareFragmentDoc = gql`
+    fragment AgedCare on AgedCare {
+  id
+  category
+  publishedDate
+  title
+  subtitle1
+  tableContents1
+  tableContents2
+  tableContents3
+  tableContents4
+  p1
+  p2
+  p3
+  subtitle2
+  p4
+  p5
+  l1
+  l2
+  l3
+  l4
+  l5
+  subtitle3
+  p6
+  p7
+  l6
+  l7
+  l8
+  l9
+  l10
+  l11
+  l12
+  l13
+  l14
+  l15
+  p8
+  subtitle4
+  conclusion1
+  conclusion2
+  conclusion3
+  reference1
+  reference2
+  authorName
+  authorAbout
+  authorLink
+  photoCredit
+  editedBy
+  mainImage
+}
+    `;
+export const DentalCardFragmentDoc = gql`
+    fragment DentalCard on Dental {
+  category
+  id
+  title
+  subtitle1
+}
+    `;
+export const DentalFragmentDoc = gql`
+    fragment Dental on Dental {
+  id
+  category
+  publishedDate
+  title
+  subtitle1
+  tableContents1
+  tableContents2
+  tableContents3
+  tableContents4
+  p1
+  p2
+  p3
+  subtitle2
+  p4
+  p5
+  l1
+  l2
+  l3
+  l4
+  l5
+  subtitle3
+  p6
+  p7
+  l6
+  l7
+  l8
+  l9
+  l10
+  l11
+  l12
+  l13
+  l14
+  l15
+  p8
+  subtitle4
+  conclusion1
+  conclusion2
+  conclusion3
+  reference1
+  reference2
+  authorName
+  authorAbout
+  authorLink
+  photoCredit
+  editedBy
+  mainImage
+}
+    `;
+export const HealthFragmentDoc = gql`
+    fragment Health on Health {
+  id
+  category
+  publishedDate
+  title
+  subtitle1
+  tableContents1
+  tableContents2
+  tableContents3
+  tableContents4
+  p1
+  p2
+  p3
+  subtitle2
+  p4
+  p5
+  l1
+  l2
+  l3
+  l4
+  l5
+  subtitle3
+  p6
+  p7
+  l6
+  l7
+  l8
+  l9
+  l10
+  l11
+  l12
+  l13
+  l14
+  l15
+  p8
+  subtitle4
+  conclusion1
+  conclusion2
+  conclusion3
+  reference1
+  reference2
+  authorName
+  authorAbout
+  authorLink
+  photoCredit
+  editedBy
+  mainImage
+}
+    `;
+export const MassageCardFragmentDoc = gql`
+    fragment MassageCard on Massage {
+  category
+  id
+  title
+  subtitle1
+}
+    `;
+export const MassageFragmentDoc = gql`
+    fragment Massage on Massage {
+  id
+  category
+  publishedDate
+  title
+  subtitle1
+  tableContents1
+  tableContents2
+  tableContents3
+  tableContents4
+  p1
+  p2
+  p3
+  subtitle2
+  p4
+  p5
+  l1
+  l2
+  l3
+  l4
+  l5
+  subtitle3
+  p6
+  p7
+  l6
+  l7
+  l8
+  l9
+  l10
+  l11
+  l12
+  l13
+  l14
+  l15
+  p8
+  subtitle4
+  conclusion1
+  conclusion2
+  conclusion3
+  reference1
+  reference2
+  authorName
+  authorAbout
+  authorLink
+  photoCredit
+  editedBy
+  mainImage
+}
+    `;
+export const MedicineCardFragmentDoc = gql`
+    fragment MedicineCard on Medicine {
+  category
+  id
+  title
+  subtitle1
+}
+    `;
+export const MedicineFragmentDoc = gql`
+    fragment Medicine on Medicine {
+  id
+  category
+  publishedDate
+  title
+  subtitle1
+  tableContents1
+  tableContents2
+  tableContents3
+  tableContents4
+  p1
+  p2
+  p3
+  subtitle2
+  p4
+  p5
+  l1
+  l2
+  l3
+  l4
+  l5
+  subtitle3
+  p6
+  p7
+  l6
+  l7
+  l8
+  l9
+  l10
+  l11
+  l12
+  l13
+  l14
+  l15
+  p8
+  subtitle4
+  conclusion1
+  conclusion2
+  conclusion3
+  reference1
+  reference2
+  authorName
+  authorAbout
+  authorLink
+  photoCredit
+  editedBy
+  mainImage
+}
+    `;
+export const MentalHealthCardFragmentDoc = gql`
+    fragment MentalHealthCard on MentalHealth {
+  category
+  id
+  title
+  subtitle1
+}
+    `;
+export const MentalHealthFragmentDoc = gql`
+    fragment MentalHealth on MentalHealth {
+  id
+  category
+  publishedDate
+  title
+  subtitle1
+  tableContents1
+  tableContents2
+  tableContents3
+  tableContents4
+  p1
+  p2
+  p3
+  subtitle2
+  p4
+  p5
+  l1
+  l2
+  l3
+  l4
+  l5
+  subtitle3
+  p6
+  p7
+  l6
+  l7
+  l8
+  l9
+  l10
+  l11
+  l12
+  l13
+  l14
+  l15
+  p8
+  subtitle4
+  conclusion1
+  conclusion2
+  conclusion3
+  reference1
+  reference2
+  authorName
+  authorAbout
+  authorLink
+  photoCredit
+  editedBy
+  mainImage
+}
+    `;
+export const NursingCardFragmentDoc = gql`
+    fragment NursingCard on Nursing {
+  category
+  id
+  title
+  subtitle1
+}
+    `;
+export const NursingFragmentDoc = gql`
+    fragment Nursing on Nursing {
+  id
+  category
+  publishedDate
+  title
+  subtitle1
+  tableContents1
+  tableContents2
+  tableContents3
+  tableContents4
+  p1
+  p2
+  p3
+  subtitle2
+  p4
+  p5
+  l1
+  l2
+  l3
+  l4
+  l5
+  subtitle3
+  p6
+  p7
+  l6
+  l7
+  l8
+  l9
+  l10
+  l11
+  l12
+  l13
+  l14
+  l15
+  p8
+  subtitle4
+  conclusion1
+  conclusion2
+  conclusion3
+  reference1
+  reference2
+  authorName
+  authorAbout
+  authorLink
+  photoCredit
+  editedBy
+  mainImage
+}
+    `;
+export const NutritionCardFragmentDoc = gql`
+    fragment NutritionCard on Nutrition {
+  category
+  id
+  title
+  subtitle1
+}
+    `;
+export const NutritionFragmentDoc = gql`
+    fragment Nutrition on Nutrition {
+  id
+  category
+  publishedDate
+  title
+  subtitle1
+  tableContents1
+  tableContents2
+  tableContents3
+  tableContents4
+  p1
+  p2
+  p3
+  subtitle2
+  p4
+  p5
+  l1
+  l2
+  l3
+  l4
+  l5
+  subtitle3
+  p6
+  p7
+  l6
+  l7
+  l8
+  l9
+  l10
+  l11
+  l12
+  l13
+  l14
+  l15
+  p8
+  subtitle4
+  conclusion1
+  conclusion2
+  conclusion3
+  reference1
+  reference2
+  authorName
+  authorAbout
+  authorLink
+  photoCredit
+  editedBy
+  mainImage
+}
+    `;
+export const PublicHealthCardFragmentDoc = gql`
+    fragment PublicHealthCard on PublicHealth {
+  category
+  id
+  title
+  subtitle1
+}
+    `;
+export const PublicHealthFragmentDoc = gql`
+    fragment PublicHealth on PublicHealth {
+  id
+  category
+  publishedDate
+  title
+  subtitle1
+  tableContents1
+  tableContents2
+  tableContents3
+  tableContents4
+  p1
+  p2
+  p3
+  subtitle2
+  p4
+  p5
+  l1
+  l2
+  l3
+  l4
+  l5
+  subtitle3
+  p6
+  p7
+  l6
+  l7
+  l8
+  l9
+  l10
+  l11
+  l12
+  l13
+  l14
+  l15
+  p8
+  subtitle4
+  conclusion1
+  conclusion2
+  conclusion3
+  reference1
+  reference2
+  authorName
+  authorAbout
+  authorLink
+  photoCredit
+  editedBy
+  mainImage
+}
+    `;
+export const VeterinaryCardFragmentDoc = gql`
+    fragment VeterinaryCard on Veterinary {
+  category
+  id
+  title
+  subtitle1
+}
+    `;
+export const VeterinaryFragmentDoc = gql`
+    fragment Veterinary on Veterinary {
   id
   category
   publishedDate
@@ -13905,6 +14477,1322 @@ export function useUpdateMusicMutation(baseOptions?: Apollo.MutationHookOptions<
 export type UpdateMusicMutationHookResult = ReturnType<typeof useUpdateMusicMutation>;
 export type UpdateMusicMutationResult = Apollo.MutationResult<UpdateMusicMutation>;
 export type UpdateMusicMutationOptions = Apollo.BaseMutationOptions<UpdateMusicMutation, UpdateMusicMutationVariables>;
+export const AddAgedCareDocument = gql`
+    mutation AddAgedCare($input: AgedCareInput!) {
+  addAgedCare(input: $input) {
+    ...AgedCare
+  }
+}
+    ${AgedCareFragmentDoc}`;
+export type AddAgedCareMutationFn = Apollo.MutationFunction<AddAgedCareMutation, AddAgedCareMutationVariables>;
+
+/**
+ * __useAddAgedCareMutation__
+ *
+ * To run a mutation, you first call `useAddAgedCareMutation` within a React component and pass it any options that fit your needs.
+ * When your component renders, `useAddAgedCareMutation` returns a tuple that includes:
+ * - A mutate function that you can call at any time to execute the mutation
+ * - An object with fields that represent the current status of the mutation's execution
+ *
+ * @param baseOptions options that will be passed into the mutation, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options-2;
+ *
+ * @example
+ * const [addAgedCareMutation, { data, loading, error }] = useAddAgedCareMutation({
+ *   variables: {
+ *      input: // value for 'input'
+ *   },
+ * });
+ */
+export function useAddAgedCareMutation(baseOptions?: Apollo.MutationHookOptions<AddAgedCareMutation, AddAgedCareMutationVariables>) {
+        const options = {...defaultOptions, ...baseOptions}
+        return Apollo.useMutation<AddAgedCareMutation, AddAgedCareMutationVariables>(AddAgedCareDocument, options);
+      }
+export type AddAgedCareMutationHookResult = ReturnType<typeof useAddAgedCareMutation>;
+export type AddAgedCareMutationResult = Apollo.MutationResult<AddAgedCareMutation>;
+export type AddAgedCareMutationOptions = Apollo.BaseMutationOptions<AddAgedCareMutation, AddAgedCareMutationVariables>;
+export const AgedCareDocument = gql`
+    query AgedCare($id: ID!) {
+  agedCare(id: $id) {
+    ...AgedCare
+  }
+}
+    ${AgedCareFragmentDoc}`;
+
+/**
+ * __useAgedCareQuery__
+ *
+ * To run a query within a React component, call `useAgedCareQuery` and pass it any options that fit your needs.
+ * When your component renders, `useAgedCareQuery` returns an object from Apollo Client that contains loading, error, and data properties
+ * you can use to render your UI.
+ *
+ * @param baseOptions options that will be passed into the query, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options;
+ *
+ * @example
+ * const { data, loading, error } = useAgedCareQuery({
+ *   variables: {
+ *      id: // value for 'id'
+ *   },
+ * });
+ */
+export function useAgedCareQuery(baseOptions: Apollo.QueryHookOptions<AgedCareQuery, AgedCareQueryVariables>) {
+        const options = {...defaultOptions, ...baseOptions}
+        return Apollo.useQuery<AgedCareQuery, AgedCareQueryVariables>(AgedCareDocument, options);
+      }
+export function useAgedCareLazyQuery(baseOptions?: Apollo.LazyQueryHookOptions<AgedCareQuery, AgedCareQueryVariables>) {
+          const options = {...defaultOptions, ...baseOptions}
+          return Apollo.useLazyQuery<AgedCareQuery, AgedCareQueryVariables>(AgedCareDocument, options);
+        }
+export type AgedCareQueryHookResult = ReturnType<typeof useAgedCareQuery>;
+export type AgedCareLazyQueryHookResult = ReturnType<typeof useAgedCareLazyQuery>;
+export type AgedCareQueryResult = Apollo.QueryResult<AgedCareQuery, AgedCareQueryVariables>;
+export const AgedCareCardDocument = gql`
+    query AgedCareCard {
+  agedCareCard {
+    ...AgedCareCard
+  }
+}
+    ${AgedCareCardFragmentDoc}`;
+
+/**
+ * __useAgedCareCardQuery__
+ *
+ * To run a query within a React component, call `useAgedCareCardQuery` and pass it any options that fit your needs.
+ * When your component renders, `useAgedCareCardQuery` returns an object from Apollo Client that contains loading, error, and data properties
+ * you can use to render your UI.
+ *
+ * @param baseOptions options that will be passed into the query, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options;
+ *
+ * @example
+ * const { data, loading, error } = useAgedCareCardQuery({
+ *   variables: {
+ *   },
+ * });
+ */
+export function useAgedCareCardQuery(baseOptions?: Apollo.QueryHookOptions<AgedCareCardQuery, AgedCareCardQueryVariables>) {
+        const options = {...defaultOptions, ...baseOptions}
+        return Apollo.useQuery<AgedCareCardQuery, AgedCareCardQueryVariables>(AgedCareCardDocument, options);
+      }
+export function useAgedCareCardLazyQuery(baseOptions?: Apollo.LazyQueryHookOptions<AgedCareCardQuery, AgedCareCardQueryVariables>) {
+          const options = {...defaultOptions, ...baseOptions}
+          return Apollo.useLazyQuery<AgedCareCardQuery, AgedCareCardQueryVariables>(AgedCareCardDocument, options);
+        }
+export type AgedCareCardQueryHookResult = ReturnType<typeof useAgedCareCardQuery>;
+export type AgedCareCardLazyQueryHookResult = ReturnType<typeof useAgedCareCardLazyQuery>;
+export type AgedCareCardQueryResult = Apollo.QueryResult<AgedCareCardQuery, AgedCareCardQueryVariables>;
+export const UpdateAgedCareDocument = gql`
+    mutation UpdateAgedCare($input: AgedCareInput!) {
+  updateAgedCare(input: $input) {
+    ...AgedCare
+  }
+}
+    ${AgedCareFragmentDoc}`;
+export type UpdateAgedCareMutationFn = Apollo.MutationFunction<UpdateAgedCareMutation, UpdateAgedCareMutationVariables>;
+
+/**
+ * __useUpdateAgedCareMutation__
+ *
+ * To run a mutation, you first call `useUpdateAgedCareMutation` within a React component and pass it any options that fit your needs.
+ * When your component renders, `useUpdateAgedCareMutation` returns a tuple that includes:
+ * - A mutate function that you can call at any time to execute the mutation
+ * - An object with fields that represent the current status of the mutation's execution
+ *
+ * @param baseOptions options that will be passed into the mutation, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options-2;
+ *
+ * @example
+ * const [updateAgedCareMutation, { data, loading, error }] = useUpdateAgedCareMutation({
+ *   variables: {
+ *      input: // value for 'input'
+ *   },
+ * });
+ */
+export function useUpdateAgedCareMutation(baseOptions?: Apollo.MutationHookOptions<UpdateAgedCareMutation, UpdateAgedCareMutationVariables>) {
+        const options = {...defaultOptions, ...baseOptions}
+        return Apollo.useMutation<UpdateAgedCareMutation, UpdateAgedCareMutationVariables>(UpdateAgedCareDocument, options);
+      }
+export type UpdateAgedCareMutationHookResult = ReturnType<typeof useUpdateAgedCareMutation>;
+export type UpdateAgedCareMutationResult = Apollo.MutationResult<UpdateAgedCareMutation>;
+export type UpdateAgedCareMutationOptions = Apollo.BaseMutationOptions<UpdateAgedCareMutation, UpdateAgedCareMutationVariables>;
+export const AddDentalDocument = gql`
+    mutation AddDental($input: DentalInput!) {
+  addDental(input: $input) {
+    ...Dental
+  }
+}
+    ${DentalFragmentDoc}`;
+export type AddDentalMutationFn = Apollo.MutationFunction<AddDentalMutation, AddDentalMutationVariables>;
+
+/**
+ * __useAddDentalMutation__
+ *
+ * To run a mutation, you first call `useAddDentalMutation` within a React component and pass it any options that fit your needs.
+ * When your component renders, `useAddDentalMutation` returns a tuple that includes:
+ * - A mutate function that you can call at any time to execute the mutation
+ * - An object with fields that represent the current status of the mutation's execution
+ *
+ * @param baseOptions options that will be passed into the mutation, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options-2;
+ *
+ * @example
+ * const [addDentalMutation, { data, loading, error }] = useAddDentalMutation({
+ *   variables: {
+ *      input: // value for 'input'
+ *   },
+ * });
+ */
+export function useAddDentalMutation(baseOptions?: Apollo.MutationHookOptions<AddDentalMutation, AddDentalMutationVariables>) {
+        const options = {...defaultOptions, ...baseOptions}
+        return Apollo.useMutation<AddDentalMutation, AddDentalMutationVariables>(AddDentalDocument, options);
+      }
+export type AddDentalMutationHookResult = ReturnType<typeof useAddDentalMutation>;
+export type AddDentalMutationResult = Apollo.MutationResult<AddDentalMutation>;
+export type AddDentalMutationOptions = Apollo.BaseMutationOptions<AddDentalMutation, AddDentalMutationVariables>;
+export const DentalDocument = gql`
+    query Dental($id: ID!) {
+  dental(id: $id) {
+    ...Dental
+  }
+}
+    ${DentalFragmentDoc}`;
+
+/**
+ * __useDentalQuery__
+ *
+ * To run a query within a React component, call `useDentalQuery` and pass it any options that fit your needs.
+ * When your component renders, `useDentalQuery` returns an object from Apollo Client that contains loading, error, and data properties
+ * you can use to render your UI.
+ *
+ * @param baseOptions options that will be passed into the query, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options;
+ *
+ * @example
+ * const { data, loading, error } = useDentalQuery({
+ *   variables: {
+ *      id: // value for 'id'
+ *   },
+ * });
+ */
+export function useDentalQuery(baseOptions: Apollo.QueryHookOptions<DentalQuery, DentalQueryVariables>) {
+        const options = {...defaultOptions, ...baseOptions}
+        return Apollo.useQuery<DentalQuery, DentalQueryVariables>(DentalDocument, options);
+      }
+export function useDentalLazyQuery(baseOptions?: Apollo.LazyQueryHookOptions<DentalQuery, DentalQueryVariables>) {
+          const options = {...defaultOptions, ...baseOptions}
+          return Apollo.useLazyQuery<DentalQuery, DentalQueryVariables>(DentalDocument, options);
+        }
+export type DentalQueryHookResult = ReturnType<typeof useDentalQuery>;
+export type DentalLazyQueryHookResult = ReturnType<typeof useDentalLazyQuery>;
+export type DentalQueryResult = Apollo.QueryResult<DentalQuery, DentalQueryVariables>;
+export const DentalCardDocument = gql`
+    query DentalCard {
+  dentalCard {
+    ...DentalCard
+  }
+}
+    ${DentalCardFragmentDoc}`;
+
+/**
+ * __useDentalCardQuery__
+ *
+ * To run a query within a React component, call `useDentalCardQuery` and pass it any options that fit your needs.
+ * When your component renders, `useDentalCardQuery` returns an object from Apollo Client that contains loading, error, and data properties
+ * you can use to render your UI.
+ *
+ * @param baseOptions options that will be passed into the query, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options;
+ *
+ * @example
+ * const { data, loading, error } = useDentalCardQuery({
+ *   variables: {
+ *   },
+ * });
+ */
+export function useDentalCardQuery(baseOptions?: Apollo.QueryHookOptions<DentalCardQuery, DentalCardQueryVariables>) {
+        const options = {...defaultOptions, ...baseOptions}
+        return Apollo.useQuery<DentalCardQuery, DentalCardQueryVariables>(DentalCardDocument, options);
+      }
+export function useDentalCardLazyQuery(baseOptions?: Apollo.LazyQueryHookOptions<DentalCardQuery, DentalCardQueryVariables>) {
+          const options = {...defaultOptions, ...baseOptions}
+          return Apollo.useLazyQuery<DentalCardQuery, DentalCardQueryVariables>(DentalCardDocument, options);
+        }
+export type DentalCardQueryHookResult = ReturnType<typeof useDentalCardQuery>;
+export type DentalCardLazyQueryHookResult = ReturnType<typeof useDentalCardLazyQuery>;
+export type DentalCardQueryResult = Apollo.QueryResult<DentalCardQuery, DentalCardQueryVariables>;
+export const UpdateDentalDocument = gql`
+    mutation UpdateDental($input: DentalInput!) {
+  updateDental(input: $input) {
+    ...Dental
+  }
+}
+    ${DentalFragmentDoc}`;
+export type UpdateDentalMutationFn = Apollo.MutationFunction<UpdateDentalMutation, UpdateDentalMutationVariables>;
+
+/**
+ * __useUpdateDentalMutation__
+ *
+ * To run a mutation, you first call `useUpdateDentalMutation` within a React component and pass it any options that fit your needs.
+ * When your component renders, `useUpdateDentalMutation` returns a tuple that includes:
+ * - A mutate function that you can call at any time to execute the mutation
+ * - An object with fields that represent the current status of the mutation's execution
+ *
+ * @param baseOptions options that will be passed into the mutation, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options-2;
+ *
+ * @example
+ * const [updateDentalMutation, { data, loading, error }] = useUpdateDentalMutation({
+ *   variables: {
+ *      input: // value for 'input'
+ *   },
+ * });
+ */
+export function useUpdateDentalMutation(baseOptions?: Apollo.MutationHookOptions<UpdateDentalMutation, UpdateDentalMutationVariables>) {
+        const options = {...defaultOptions, ...baseOptions}
+        return Apollo.useMutation<UpdateDentalMutation, UpdateDentalMutationVariables>(UpdateDentalDocument, options);
+      }
+export type UpdateDentalMutationHookResult = ReturnType<typeof useUpdateDentalMutation>;
+export type UpdateDentalMutationResult = Apollo.MutationResult<UpdateDentalMutation>;
+export type UpdateDentalMutationOptions = Apollo.BaseMutationOptions<UpdateDentalMutation, UpdateDentalMutationVariables>;
+export const AddHealthDocument = gql`
+    mutation AddHealth($input: HealthInput!) {
+  addHealth(input: $input) {
+    ...Health
+  }
+}
+    ${HealthFragmentDoc}`;
+export type AddHealthMutationFn = Apollo.MutationFunction<AddHealthMutation, AddHealthMutationVariables>;
+
+/**
+ * __useAddHealthMutation__
+ *
+ * To run a mutation, you first call `useAddHealthMutation` within a React component and pass it any options that fit your needs.
+ * When your component renders, `useAddHealthMutation` returns a tuple that includes:
+ * - A mutate function that you can call at any time to execute the mutation
+ * - An object with fields that represent the current status of the mutation's execution
+ *
+ * @param baseOptions options that will be passed into the mutation, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options-2;
+ *
+ * @example
+ * const [addHealthMutation, { data, loading, error }] = useAddHealthMutation({
+ *   variables: {
+ *      input: // value for 'input'
+ *   },
+ * });
+ */
+export function useAddHealthMutation(baseOptions?: Apollo.MutationHookOptions<AddHealthMutation, AddHealthMutationVariables>) {
+        const options = {...defaultOptions, ...baseOptions}
+        return Apollo.useMutation<AddHealthMutation, AddHealthMutationVariables>(AddHealthDocument, options);
+      }
+export type AddHealthMutationHookResult = ReturnType<typeof useAddHealthMutation>;
+export type AddHealthMutationResult = Apollo.MutationResult<AddHealthMutation>;
+export type AddHealthMutationOptions = Apollo.BaseMutationOptions<AddHealthMutation, AddHealthMutationVariables>;
+export const HealthDocument = gql`
+    query Health($id: ID!) {
+  health(id: $id) {
+    ...Health
+  }
+}
+    ${HealthFragmentDoc}`;
+
+/**
+ * __useHealthQuery__
+ *
+ * To run a query within a React component, call `useHealthQuery` and pass it any options that fit your needs.
+ * When your component renders, `useHealthQuery` returns an object from Apollo Client that contains loading, error, and data properties
+ * you can use to render your UI.
+ *
+ * @param baseOptions options that will be passed into the query, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options;
+ *
+ * @example
+ * const { data, loading, error } = useHealthQuery({
+ *   variables: {
+ *      id: // value for 'id'
+ *   },
+ * });
+ */
+export function useHealthQuery(baseOptions: Apollo.QueryHookOptions<HealthQuery, HealthQueryVariables>) {
+        const options = {...defaultOptions, ...baseOptions}
+        return Apollo.useQuery<HealthQuery, HealthQueryVariables>(HealthDocument, options);
+      }
+export function useHealthLazyQuery(baseOptions?: Apollo.LazyQueryHookOptions<HealthQuery, HealthQueryVariables>) {
+          const options = {...defaultOptions, ...baseOptions}
+          return Apollo.useLazyQuery<HealthQuery, HealthQueryVariables>(HealthDocument, options);
+        }
+export type HealthQueryHookResult = ReturnType<typeof useHealthQuery>;
+export type HealthLazyQueryHookResult = ReturnType<typeof useHealthLazyQuery>;
+export type HealthQueryResult = Apollo.QueryResult<HealthQuery, HealthQueryVariables>;
+export const UpdateHealthDocument = gql`
+    mutation UpdateHealth($input: HealthInput!) {
+  updateHealth(input: $input) {
+    ...Health
+  }
+}
+    ${HealthFragmentDoc}`;
+export type UpdateHealthMutationFn = Apollo.MutationFunction<UpdateHealthMutation, UpdateHealthMutationVariables>;
+
+/**
+ * __useUpdateHealthMutation__
+ *
+ * To run a mutation, you first call `useUpdateHealthMutation` within a React component and pass it any options that fit your needs.
+ * When your component renders, `useUpdateHealthMutation` returns a tuple that includes:
+ * - A mutate function that you can call at any time to execute the mutation
+ * - An object with fields that represent the current status of the mutation's execution
+ *
+ * @param baseOptions options that will be passed into the mutation, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options-2;
+ *
+ * @example
+ * const [updateHealthMutation, { data, loading, error }] = useUpdateHealthMutation({
+ *   variables: {
+ *      input: // value for 'input'
+ *   },
+ * });
+ */
+export function useUpdateHealthMutation(baseOptions?: Apollo.MutationHookOptions<UpdateHealthMutation, UpdateHealthMutationVariables>) {
+        const options = {...defaultOptions, ...baseOptions}
+        return Apollo.useMutation<UpdateHealthMutation, UpdateHealthMutationVariables>(UpdateHealthDocument, options);
+      }
+export type UpdateHealthMutationHookResult = ReturnType<typeof useUpdateHealthMutation>;
+export type UpdateHealthMutationResult = Apollo.MutationResult<UpdateHealthMutation>;
+export type UpdateHealthMutationOptions = Apollo.BaseMutationOptions<UpdateHealthMutation, UpdateHealthMutationVariables>;
+export const AddMassageDocument = gql`
+    mutation AddMassage($input: MassageInput!) {
+  addMassage(input: $input) {
+    ...Massage
+  }
+}
+    ${MassageFragmentDoc}`;
+export type AddMassageMutationFn = Apollo.MutationFunction<AddMassageMutation, AddMassageMutationVariables>;
+
+/**
+ * __useAddMassageMutation__
+ *
+ * To run a mutation, you first call `useAddMassageMutation` within a React component and pass it any options that fit your needs.
+ * When your component renders, `useAddMassageMutation` returns a tuple that includes:
+ * - A mutate function that you can call at any time to execute the mutation
+ * - An object with fields that represent the current status of the mutation's execution
+ *
+ * @param baseOptions options that will be passed into the mutation, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options-2;
+ *
+ * @example
+ * const [addMassageMutation, { data, loading, error }] = useAddMassageMutation({
+ *   variables: {
+ *      input: // value for 'input'
+ *   },
+ * });
+ */
+export function useAddMassageMutation(baseOptions?: Apollo.MutationHookOptions<AddMassageMutation, AddMassageMutationVariables>) {
+        const options = {...defaultOptions, ...baseOptions}
+        return Apollo.useMutation<AddMassageMutation, AddMassageMutationVariables>(AddMassageDocument, options);
+      }
+export type AddMassageMutationHookResult = ReturnType<typeof useAddMassageMutation>;
+export type AddMassageMutationResult = Apollo.MutationResult<AddMassageMutation>;
+export type AddMassageMutationOptions = Apollo.BaseMutationOptions<AddMassageMutation, AddMassageMutationVariables>;
+export const MassageDocument = gql`
+    query Massage($id: ID!) {
+  massage(id: $id) {
+    ...Massage
+  }
+}
+    ${MassageFragmentDoc}`;
+
+/**
+ * __useMassageQuery__
+ *
+ * To run a query within a React component, call `useMassageQuery` and pass it any options that fit your needs.
+ * When your component renders, `useMassageQuery` returns an object from Apollo Client that contains loading, error, and data properties
+ * you can use to render your UI.
+ *
+ * @param baseOptions options that will be passed into the query, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options;
+ *
+ * @example
+ * const { data, loading, error } = useMassageQuery({
+ *   variables: {
+ *      id: // value for 'id'
+ *   },
+ * });
+ */
+export function useMassageQuery(baseOptions: Apollo.QueryHookOptions<MassageQuery, MassageQueryVariables>) {
+        const options = {...defaultOptions, ...baseOptions}
+        return Apollo.useQuery<MassageQuery, MassageQueryVariables>(MassageDocument, options);
+      }
+export function useMassageLazyQuery(baseOptions?: Apollo.LazyQueryHookOptions<MassageQuery, MassageQueryVariables>) {
+          const options = {...defaultOptions, ...baseOptions}
+          return Apollo.useLazyQuery<MassageQuery, MassageQueryVariables>(MassageDocument, options);
+        }
+export type MassageQueryHookResult = ReturnType<typeof useMassageQuery>;
+export type MassageLazyQueryHookResult = ReturnType<typeof useMassageLazyQuery>;
+export type MassageQueryResult = Apollo.QueryResult<MassageQuery, MassageQueryVariables>;
+export const MassageCardDocument = gql`
+    query MassageCard {
+  massageCard {
+    ...MassageCard
+  }
+}
+    ${MassageCardFragmentDoc}`;
+
+/**
+ * __useMassageCardQuery__
+ *
+ * To run a query within a React component, call `useMassageCardQuery` and pass it any options that fit your needs.
+ * When your component renders, `useMassageCardQuery` returns an object from Apollo Client that contains loading, error, and data properties
+ * you can use to render your UI.
+ *
+ * @param baseOptions options that will be passed into the query, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options;
+ *
+ * @example
+ * const { data, loading, error } = useMassageCardQuery({
+ *   variables: {
+ *   },
+ * });
+ */
+export function useMassageCardQuery(baseOptions?: Apollo.QueryHookOptions<MassageCardQuery, MassageCardQueryVariables>) {
+        const options = {...defaultOptions, ...baseOptions}
+        return Apollo.useQuery<MassageCardQuery, MassageCardQueryVariables>(MassageCardDocument, options);
+      }
+export function useMassageCardLazyQuery(baseOptions?: Apollo.LazyQueryHookOptions<MassageCardQuery, MassageCardQueryVariables>) {
+          const options = {...defaultOptions, ...baseOptions}
+          return Apollo.useLazyQuery<MassageCardQuery, MassageCardQueryVariables>(MassageCardDocument, options);
+        }
+export type MassageCardQueryHookResult = ReturnType<typeof useMassageCardQuery>;
+export type MassageCardLazyQueryHookResult = ReturnType<typeof useMassageCardLazyQuery>;
+export type MassageCardQueryResult = Apollo.QueryResult<MassageCardQuery, MassageCardQueryVariables>;
+export const UpdateMassageDocument = gql`
+    mutation UpdateMassage($input: MassageInput!) {
+  updateMassage(input: $input) {
+    ...Massage
+  }
+}
+    ${MassageFragmentDoc}`;
+export type UpdateMassageMutationFn = Apollo.MutationFunction<UpdateMassageMutation, UpdateMassageMutationVariables>;
+
+/**
+ * __useUpdateMassageMutation__
+ *
+ * To run a mutation, you first call `useUpdateMassageMutation` within a React component and pass it any options that fit your needs.
+ * When your component renders, `useUpdateMassageMutation` returns a tuple that includes:
+ * - A mutate function that you can call at any time to execute the mutation
+ * - An object with fields that represent the current status of the mutation's execution
+ *
+ * @param baseOptions options that will be passed into the mutation, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options-2;
+ *
+ * @example
+ * const [updateMassageMutation, { data, loading, error }] = useUpdateMassageMutation({
+ *   variables: {
+ *      input: // value for 'input'
+ *   },
+ * });
+ */
+export function useUpdateMassageMutation(baseOptions?: Apollo.MutationHookOptions<UpdateMassageMutation, UpdateMassageMutationVariables>) {
+        const options = {...defaultOptions, ...baseOptions}
+        return Apollo.useMutation<UpdateMassageMutation, UpdateMassageMutationVariables>(UpdateMassageDocument, options);
+      }
+export type UpdateMassageMutationHookResult = ReturnType<typeof useUpdateMassageMutation>;
+export type UpdateMassageMutationResult = Apollo.MutationResult<UpdateMassageMutation>;
+export type UpdateMassageMutationOptions = Apollo.BaseMutationOptions<UpdateMassageMutation, UpdateMassageMutationVariables>;
+export const AddMedicineDocument = gql`
+    mutation AddMedicine($input: MedicineInput!) {
+  addMedicine(input: $input) {
+    ...Medicine
+  }
+}
+    ${MedicineFragmentDoc}`;
+export type AddMedicineMutationFn = Apollo.MutationFunction<AddMedicineMutation, AddMedicineMutationVariables>;
+
+/**
+ * __useAddMedicineMutation__
+ *
+ * To run a mutation, you first call `useAddMedicineMutation` within a React component and pass it any options that fit your needs.
+ * When your component renders, `useAddMedicineMutation` returns a tuple that includes:
+ * - A mutate function that you can call at any time to execute the mutation
+ * - An object with fields that represent the current status of the mutation's execution
+ *
+ * @param baseOptions options that will be passed into the mutation, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options-2;
+ *
+ * @example
+ * const [addMedicineMutation, { data, loading, error }] = useAddMedicineMutation({
+ *   variables: {
+ *      input: // value for 'input'
+ *   },
+ * });
+ */
+export function useAddMedicineMutation(baseOptions?: Apollo.MutationHookOptions<AddMedicineMutation, AddMedicineMutationVariables>) {
+        const options = {...defaultOptions, ...baseOptions}
+        return Apollo.useMutation<AddMedicineMutation, AddMedicineMutationVariables>(AddMedicineDocument, options);
+      }
+export type AddMedicineMutationHookResult = ReturnType<typeof useAddMedicineMutation>;
+export type AddMedicineMutationResult = Apollo.MutationResult<AddMedicineMutation>;
+export type AddMedicineMutationOptions = Apollo.BaseMutationOptions<AddMedicineMutation, AddMedicineMutationVariables>;
+export const MedicineDocument = gql`
+    query Medicine($id: ID!) {
+  medicine(id: $id) {
+    ...Medicine
+  }
+}
+    ${MedicineFragmentDoc}`;
+
+/**
+ * __useMedicineQuery__
+ *
+ * To run a query within a React component, call `useMedicineQuery` and pass it any options that fit your needs.
+ * When your component renders, `useMedicineQuery` returns an object from Apollo Client that contains loading, error, and data properties
+ * you can use to render your UI.
+ *
+ * @param baseOptions options that will be passed into the query, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options;
+ *
+ * @example
+ * const { data, loading, error } = useMedicineQuery({
+ *   variables: {
+ *      id: // value for 'id'
+ *   },
+ * });
+ */
+export function useMedicineQuery(baseOptions: Apollo.QueryHookOptions<MedicineQuery, MedicineQueryVariables>) {
+        const options = {...defaultOptions, ...baseOptions}
+        return Apollo.useQuery<MedicineQuery, MedicineQueryVariables>(MedicineDocument, options);
+      }
+export function useMedicineLazyQuery(baseOptions?: Apollo.LazyQueryHookOptions<MedicineQuery, MedicineQueryVariables>) {
+          const options = {...defaultOptions, ...baseOptions}
+          return Apollo.useLazyQuery<MedicineQuery, MedicineQueryVariables>(MedicineDocument, options);
+        }
+export type MedicineQueryHookResult = ReturnType<typeof useMedicineQuery>;
+export type MedicineLazyQueryHookResult = ReturnType<typeof useMedicineLazyQuery>;
+export type MedicineQueryResult = Apollo.QueryResult<MedicineQuery, MedicineQueryVariables>;
+export const MedicineCardDocument = gql`
+    query MedicineCard {
+  medicineCard {
+    ...MedicineCard
+  }
+}
+    ${MedicineCardFragmentDoc}`;
+
+/**
+ * __useMedicineCardQuery__
+ *
+ * To run a query within a React component, call `useMedicineCardQuery` and pass it any options that fit your needs.
+ * When your component renders, `useMedicineCardQuery` returns an object from Apollo Client that contains loading, error, and data properties
+ * you can use to render your UI.
+ *
+ * @param baseOptions options that will be passed into the query, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options;
+ *
+ * @example
+ * const { data, loading, error } = useMedicineCardQuery({
+ *   variables: {
+ *   },
+ * });
+ */
+export function useMedicineCardQuery(baseOptions?: Apollo.QueryHookOptions<MedicineCardQuery, MedicineCardQueryVariables>) {
+        const options = {...defaultOptions, ...baseOptions}
+        return Apollo.useQuery<MedicineCardQuery, MedicineCardQueryVariables>(MedicineCardDocument, options);
+      }
+export function useMedicineCardLazyQuery(baseOptions?: Apollo.LazyQueryHookOptions<MedicineCardQuery, MedicineCardQueryVariables>) {
+          const options = {...defaultOptions, ...baseOptions}
+          return Apollo.useLazyQuery<MedicineCardQuery, MedicineCardQueryVariables>(MedicineCardDocument, options);
+        }
+export type MedicineCardQueryHookResult = ReturnType<typeof useMedicineCardQuery>;
+export type MedicineCardLazyQueryHookResult = ReturnType<typeof useMedicineCardLazyQuery>;
+export type MedicineCardQueryResult = Apollo.QueryResult<MedicineCardQuery, MedicineCardQueryVariables>;
+export const UpdateMedicineDocument = gql`
+    mutation UpdateMedicine($input: MedicineInput!) {
+  updateMedicine(input: $input) {
+    ...Medicine
+  }
+}
+    ${MedicineFragmentDoc}`;
+export type UpdateMedicineMutationFn = Apollo.MutationFunction<UpdateMedicineMutation, UpdateMedicineMutationVariables>;
+
+/**
+ * __useUpdateMedicineMutation__
+ *
+ * To run a mutation, you first call `useUpdateMedicineMutation` within a React component and pass it any options that fit your needs.
+ * When your component renders, `useUpdateMedicineMutation` returns a tuple that includes:
+ * - A mutate function that you can call at any time to execute the mutation
+ * - An object with fields that represent the current status of the mutation's execution
+ *
+ * @param baseOptions options that will be passed into the mutation, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options-2;
+ *
+ * @example
+ * const [updateMedicineMutation, { data, loading, error }] = useUpdateMedicineMutation({
+ *   variables: {
+ *      input: // value for 'input'
+ *   },
+ * });
+ */
+export function useUpdateMedicineMutation(baseOptions?: Apollo.MutationHookOptions<UpdateMedicineMutation, UpdateMedicineMutationVariables>) {
+        const options = {...defaultOptions, ...baseOptions}
+        return Apollo.useMutation<UpdateMedicineMutation, UpdateMedicineMutationVariables>(UpdateMedicineDocument, options);
+      }
+export type UpdateMedicineMutationHookResult = ReturnType<typeof useUpdateMedicineMutation>;
+export type UpdateMedicineMutationResult = Apollo.MutationResult<UpdateMedicineMutation>;
+export type UpdateMedicineMutationOptions = Apollo.BaseMutationOptions<UpdateMedicineMutation, UpdateMedicineMutationVariables>;
+export const AddMentalHealthDocument = gql`
+    mutation AddMentalHealth($input: MentalHealthInput!) {
+  addMentalHealth(input: $input) {
+    ...MentalHealth
+  }
+}
+    ${MentalHealthFragmentDoc}`;
+export type AddMentalHealthMutationFn = Apollo.MutationFunction<AddMentalHealthMutation, AddMentalHealthMutationVariables>;
+
+/**
+ * __useAddMentalHealthMutation__
+ *
+ * To run a mutation, you first call `useAddMentalHealthMutation` within a React component and pass it any options that fit your needs.
+ * When your component renders, `useAddMentalHealthMutation` returns a tuple that includes:
+ * - A mutate function that you can call at any time to execute the mutation
+ * - An object with fields that represent the current status of the mutation's execution
+ *
+ * @param baseOptions options that will be passed into the mutation, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options-2;
+ *
+ * @example
+ * const [addMentalHealthMutation, { data, loading, error }] = useAddMentalHealthMutation({
+ *   variables: {
+ *      input: // value for 'input'
+ *   },
+ * });
+ */
+export function useAddMentalHealthMutation(baseOptions?: Apollo.MutationHookOptions<AddMentalHealthMutation, AddMentalHealthMutationVariables>) {
+        const options = {...defaultOptions, ...baseOptions}
+        return Apollo.useMutation<AddMentalHealthMutation, AddMentalHealthMutationVariables>(AddMentalHealthDocument, options);
+      }
+export type AddMentalHealthMutationHookResult = ReturnType<typeof useAddMentalHealthMutation>;
+export type AddMentalHealthMutationResult = Apollo.MutationResult<AddMentalHealthMutation>;
+export type AddMentalHealthMutationOptions = Apollo.BaseMutationOptions<AddMentalHealthMutation, AddMentalHealthMutationVariables>;
+export const MentalHealthDocument = gql`
+    query MentalHealth($id: ID!) {
+  mentalHealth(id: $id) {
+    ...MentalHealth
+  }
+}
+    ${MentalHealthFragmentDoc}`;
+
+/**
+ * __useMentalHealthQuery__
+ *
+ * To run a query within a React component, call `useMentalHealthQuery` and pass it any options that fit your needs.
+ * When your component renders, `useMentalHealthQuery` returns an object from Apollo Client that contains loading, error, and data properties
+ * you can use to render your UI.
+ *
+ * @param baseOptions options that will be passed into the query, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options;
+ *
+ * @example
+ * const { data, loading, error } = useMentalHealthQuery({
+ *   variables: {
+ *      id: // value for 'id'
+ *   },
+ * });
+ */
+export function useMentalHealthQuery(baseOptions: Apollo.QueryHookOptions<MentalHealthQuery, MentalHealthQueryVariables>) {
+        const options = {...defaultOptions, ...baseOptions}
+        return Apollo.useQuery<MentalHealthQuery, MentalHealthQueryVariables>(MentalHealthDocument, options);
+      }
+export function useMentalHealthLazyQuery(baseOptions?: Apollo.LazyQueryHookOptions<MentalHealthQuery, MentalHealthQueryVariables>) {
+          const options = {...defaultOptions, ...baseOptions}
+          return Apollo.useLazyQuery<MentalHealthQuery, MentalHealthQueryVariables>(MentalHealthDocument, options);
+        }
+export type MentalHealthQueryHookResult = ReturnType<typeof useMentalHealthQuery>;
+export type MentalHealthLazyQueryHookResult = ReturnType<typeof useMentalHealthLazyQuery>;
+export type MentalHealthQueryResult = Apollo.QueryResult<MentalHealthQuery, MentalHealthQueryVariables>;
+export const MentalHealthCardDocument = gql`
+    query MentalHealthCard {
+  mentalHealthCard {
+    ...MentalHealthCard
+  }
+}
+    ${MentalHealthCardFragmentDoc}`;
+
+/**
+ * __useMentalHealthCardQuery__
+ *
+ * To run a query within a React component, call `useMentalHealthCardQuery` and pass it any options that fit your needs.
+ * When your component renders, `useMentalHealthCardQuery` returns an object from Apollo Client that contains loading, error, and data properties
+ * you can use to render your UI.
+ *
+ * @param baseOptions options that will be passed into the query, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options;
+ *
+ * @example
+ * const { data, loading, error } = useMentalHealthCardQuery({
+ *   variables: {
+ *   },
+ * });
+ */
+export function useMentalHealthCardQuery(baseOptions?: Apollo.QueryHookOptions<MentalHealthCardQuery, MentalHealthCardQueryVariables>) {
+        const options = {...defaultOptions, ...baseOptions}
+        return Apollo.useQuery<MentalHealthCardQuery, MentalHealthCardQueryVariables>(MentalHealthCardDocument, options);
+      }
+export function useMentalHealthCardLazyQuery(baseOptions?: Apollo.LazyQueryHookOptions<MentalHealthCardQuery, MentalHealthCardQueryVariables>) {
+          const options = {...defaultOptions, ...baseOptions}
+          return Apollo.useLazyQuery<MentalHealthCardQuery, MentalHealthCardQueryVariables>(MentalHealthCardDocument, options);
+        }
+export type MentalHealthCardQueryHookResult = ReturnType<typeof useMentalHealthCardQuery>;
+export type MentalHealthCardLazyQueryHookResult = ReturnType<typeof useMentalHealthCardLazyQuery>;
+export type MentalHealthCardQueryResult = Apollo.QueryResult<MentalHealthCardQuery, MentalHealthCardQueryVariables>;
+export const UpdateMentalHealthDocument = gql`
+    mutation UpdateMentalHealth($input: MentalHealthInput!) {
+  updateMentalHealth(input: $input) {
+    ...MentalHealth
+  }
+}
+    ${MentalHealthFragmentDoc}`;
+export type UpdateMentalHealthMutationFn = Apollo.MutationFunction<UpdateMentalHealthMutation, UpdateMentalHealthMutationVariables>;
+
+/**
+ * __useUpdateMentalHealthMutation__
+ *
+ * To run a mutation, you first call `useUpdateMentalHealthMutation` within a React component and pass it any options that fit your needs.
+ * When your component renders, `useUpdateMentalHealthMutation` returns a tuple that includes:
+ * - A mutate function that you can call at any time to execute the mutation
+ * - An object with fields that represent the current status of the mutation's execution
+ *
+ * @param baseOptions options that will be passed into the mutation, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options-2;
+ *
+ * @example
+ * const [updateMentalHealthMutation, { data, loading, error }] = useUpdateMentalHealthMutation({
+ *   variables: {
+ *      input: // value for 'input'
+ *   },
+ * });
+ */
+export function useUpdateMentalHealthMutation(baseOptions?: Apollo.MutationHookOptions<UpdateMentalHealthMutation, UpdateMentalHealthMutationVariables>) {
+        const options = {...defaultOptions, ...baseOptions}
+        return Apollo.useMutation<UpdateMentalHealthMutation, UpdateMentalHealthMutationVariables>(UpdateMentalHealthDocument, options);
+      }
+export type UpdateMentalHealthMutationHookResult = ReturnType<typeof useUpdateMentalHealthMutation>;
+export type UpdateMentalHealthMutationResult = Apollo.MutationResult<UpdateMentalHealthMutation>;
+export type UpdateMentalHealthMutationOptions = Apollo.BaseMutationOptions<UpdateMentalHealthMutation, UpdateMentalHealthMutationVariables>;
+export const AddNursingDocument = gql`
+    mutation AddNursing($input: NursingInput!) {
+  addNursing(input: $input) {
+    ...Nursing
+  }
+}
+    ${NursingFragmentDoc}`;
+export type AddNursingMutationFn = Apollo.MutationFunction<AddNursingMutation, AddNursingMutationVariables>;
+
+/**
+ * __useAddNursingMutation__
+ *
+ * To run a mutation, you first call `useAddNursingMutation` within a React component and pass it any options that fit your needs.
+ * When your component renders, `useAddNursingMutation` returns a tuple that includes:
+ * - A mutate function that you can call at any time to execute the mutation
+ * - An object with fields that represent the current status of the mutation's execution
+ *
+ * @param baseOptions options that will be passed into the mutation, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options-2;
+ *
+ * @example
+ * const [addNursingMutation, { data, loading, error }] = useAddNursingMutation({
+ *   variables: {
+ *      input: // value for 'input'
+ *   },
+ * });
+ */
+export function useAddNursingMutation(baseOptions?: Apollo.MutationHookOptions<AddNursingMutation, AddNursingMutationVariables>) {
+        const options = {...defaultOptions, ...baseOptions}
+        return Apollo.useMutation<AddNursingMutation, AddNursingMutationVariables>(AddNursingDocument, options);
+      }
+export type AddNursingMutationHookResult = ReturnType<typeof useAddNursingMutation>;
+export type AddNursingMutationResult = Apollo.MutationResult<AddNursingMutation>;
+export type AddNursingMutationOptions = Apollo.BaseMutationOptions<AddNursingMutation, AddNursingMutationVariables>;
+export const NursingDocument = gql`
+    query Nursing($id: ID!) {
+  nursing(id: $id) {
+    ...Nursing
+  }
+}
+    ${NursingFragmentDoc}`;
+
+/**
+ * __useNursingQuery__
+ *
+ * To run a query within a React component, call `useNursingQuery` and pass it any options that fit your needs.
+ * When your component renders, `useNursingQuery` returns an object from Apollo Client that contains loading, error, and data properties
+ * you can use to render your UI.
+ *
+ * @param baseOptions options that will be passed into the query, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options;
+ *
+ * @example
+ * const { data, loading, error } = useNursingQuery({
+ *   variables: {
+ *      id: // value for 'id'
+ *   },
+ * });
+ */
+export function useNursingQuery(baseOptions: Apollo.QueryHookOptions<NursingQuery, NursingQueryVariables>) {
+        const options = {...defaultOptions, ...baseOptions}
+        return Apollo.useQuery<NursingQuery, NursingQueryVariables>(NursingDocument, options);
+      }
+export function useNursingLazyQuery(baseOptions?: Apollo.LazyQueryHookOptions<NursingQuery, NursingQueryVariables>) {
+          const options = {...defaultOptions, ...baseOptions}
+          return Apollo.useLazyQuery<NursingQuery, NursingQueryVariables>(NursingDocument, options);
+        }
+export type NursingQueryHookResult = ReturnType<typeof useNursingQuery>;
+export type NursingLazyQueryHookResult = ReturnType<typeof useNursingLazyQuery>;
+export type NursingQueryResult = Apollo.QueryResult<NursingQuery, NursingQueryVariables>;
+export const NursingCardDocument = gql`
+    query NursingCard {
+  nursingCard {
+    ...NursingCard
+  }
+}
+    ${NursingCardFragmentDoc}`;
+
+/**
+ * __useNursingCardQuery__
+ *
+ * To run a query within a React component, call `useNursingCardQuery` and pass it any options that fit your needs.
+ * When your component renders, `useNursingCardQuery` returns an object from Apollo Client that contains loading, error, and data properties
+ * you can use to render your UI.
+ *
+ * @param baseOptions options that will be passed into the query, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options;
+ *
+ * @example
+ * const { data, loading, error } = useNursingCardQuery({
+ *   variables: {
+ *   },
+ * });
+ */
+export function useNursingCardQuery(baseOptions?: Apollo.QueryHookOptions<NursingCardQuery, NursingCardQueryVariables>) {
+        const options = {...defaultOptions, ...baseOptions}
+        return Apollo.useQuery<NursingCardQuery, NursingCardQueryVariables>(NursingCardDocument, options);
+      }
+export function useNursingCardLazyQuery(baseOptions?: Apollo.LazyQueryHookOptions<NursingCardQuery, NursingCardQueryVariables>) {
+          const options = {...defaultOptions, ...baseOptions}
+          return Apollo.useLazyQuery<NursingCardQuery, NursingCardQueryVariables>(NursingCardDocument, options);
+        }
+export type NursingCardQueryHookResult = ReturnType<typeof useNursingCardQuery>;
+export type NursingCardLazyQueryHookResult = ReturnType<typeof useNursingCardLazyQuery>;
+export type NursingCardQueryResult = Apollo.QueryResult<NursingCardQuery, NursingCardQueryVariables>;
+export const UpdateNursingDocument = gql`
+    mutation UpdateNursing($input: NursingInput!) {
+  updateNursing(input: $input) {
+    ...Nursing
+  }
+}
+    ${NursingFragmentDoc}`;
+export type UpdateNursingMutationFn = Apollo.MutationFunction<UpdateNursingMutation, UpdateNursingMutationVariables>;
+
+/**
+ * __useUpdateNursingMutation__
+ *
+ * To run a mutation, you first call `useUpdateNursingMutation` within a React component and pass it any options that fit your needs.
+ * When your component renders, `useUpdateNursingMutation` returns a tuple that includes:
+ * - A mutate function that you can call at any time to execute the mutation
+ * - An object with fields that represent the current status of the mutation's execution
+ *
+ * @param baseOptions options that will be passed into the mutation, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options-2;
+ *
+ * @example
+ * const [updateNursingMutation, { data, loading, error }] = useUpdateNursingMutation({
+ *   variables: {
+ *      input: // value for 'input'
+ *   },
+ * });
+ */
+export function useUpdateNursingMutation(baseOptions?: Apollo.MutationHookOptions<UpdateNursingMutation, UpdateNursingMutationVariables>) {
+        const options = {...defaultOptions, ...baseOptions}
+        return Apollo.useMutation<UpdateNursingMutation, UpdateNursingMutationVariables>(UpdateNursingDocument, options);
+      }
+export type UpdateNursingMutationHookResult = ReturnType<typeof useUpdateNursingMutation>;
+export type UpdateNursingMutationResult = Apollo.MutationResult<UpdateNursingMutation>;
+export type UpdateNursingMutationOptions = Apollo.BaseMutationOptions<UpdateNursingMutation, UpdateNursingMutationVariables>;
+export const AddNutritionDocument = gql`
+    mutation AddNutrition($input: NutritionInput!) {
+  addNutrition(input: $input) {
+    ...Nutrition
+  }
+}
+    ${NutritionFragmentDoc}`;
+export type AddNutritionMutationFn = Apollo.MutationFunction<AddNutritionMutation, AddNutritionMutationVariables>;
+
+/**
+ * __useAddNutritionMutation__
+ *
+ * To run a mutation, you first call `useAddNutritionMutation` within a React component and pass it any options that fit your needs.
+ * When your component renders, `useAddNutritionMutation` returns a tuple that includes:
+ * - A mutate function that you can call at any time to execute the mutation
+ * - An object with fields that represent the current status of the mutation's execution
+ *
+ * @param baseOptions options that will be passed into the mutation, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options-2;
+ *
+ * @example
+ * const [addNutritionMutation, { data, loading, error }] = useAddNutritionMutation({
+ *   variables: {
+ *      input: // value for 'input'
+ *   },
+ * });
+ */
+export function useAddNutritionMutation(baseOptions?: Apollo.MutationHookOptions<AddNutritionMutation, AddNutritionMutationVariables>) {
+        const options = {...defaultOptions, ...baseOptions}
+        return Apollo.useMutation<AddNutritionMutation, AddNutritionMutationVariables>(AddNutritionDocument, options);
+      }
+export type AddNutritionMutationHookResult = ReturnType<typeof useAddNutritionMutation>;
+export type AddNutritionMutationResult = Apollo.MutationResult<AddNutritionMutation>;
+export type AddNutritionMutationOptions = Apollo.BaseMutationOptions<AddNutritionMutation, AddNutritionMutationVariables>;
+export const NutritionDocument = gql`
+    query Nutrition($id: ID!) {
+  nutrition(id: $id) {
+    ...Nutrition
+  }
+}
+    ${NutritionFragmentDoc}`;
+
+/**
+ * __useNutritionQuery__
+ *
+ * To run a query within a React component, call `useNutritionQuery` and pass it any options that fit your needs.
+ * When your component renders, `useNutritionQuery` returns an object from Apollo Client that contains loading, error, and data properties
+ * you can use to render your UI.
+ *
+ * @param baseOptions options that will be passed into the query, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options;
+ *
+ * @example
+ * const { data, loading, error } = useNutritionQuery({
+ *   variables: {
+ *      id: // value for 'id'
+ *   },
+ * });
+ */
+export function useNutritionQuery(baseOptions: Apollo.QueryHookOptions<NutritionQuery, NutritionQueryVariables>) {
+        const options = {...defaultOptions, ...baseOptions}
+        return Apollo.useQuery<NutritionQuery, NutritionQueryVariables>(NutritionDocument, options);
+      }
+export function useNutritionLazyQuery(baseOptions?: Apollo.LazyQueryHookOptions<NutritionQuery, NutritionQueryVariables>) {
+          const options = {...defaultOptions, ...baseOptions}
+          return Apollo.useLazyQuery<NutritionQuery, NutritionQueryVariables>(NutritionDocument, options);
+        }
+export type NutritionQueryHookResult = ReturnType<typeof useNutritionQuery>;
+export type NutritionLazyQueryHookResult = ReturnType<typeof useNutritionLazyQuery>;
+export type NutritionQueryResult = Apollo.QueryResult<NutritionQuery, NutritionQueryVariables>;
+export const NutritionCardDocument = gql`
+    query NutritionCard {
+  nutritionCard {
+    ...NutritionCard
+  }
+}
+    ${NutritionCardFragmentDoc}`;
+
+/**
+ * __useNutritionCardQuery__
+ *
+ * To run a query within a React component, call `useNutritionCardQuery` and pass it any options that fit your needs.
+ * When your component renders, `useNutritionCardQuery` returns an object from Apollo Client that contains loading, error, and data properties
+ * you can use to render your UI.
+ *
+ * @param baseOptions options that will be passed into the query, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options;
+ *
+ * @example
+ * const { data, loading, error } = useNutritionCardQuery({
+ *   variables: {
+ *   },
+ * });
+ */
+export function useNutritionCardQuery(baseOptions?: Apollo.QueryHookOptions<NutritionCardQuery, NutritionCardQueryVariables>) {
+        const options = {...defaultOptions, ...baseOptions}
+        return Apollo.useQuery<NutritionCardQuery, NutritionCardQueryVariables>(NutritionCardDocument, options);
+      }
+export function useNutritionCardLazyQuery(baseOptions?: Apollo.LazyQueryHookOptions<NutritionCardQuery, NutritionCardQueryVariables>) {
+          const options = {...defaultOptions, ...baseOptions}
+          return Apollo.useLazyQuery<NutritionCardQuery, NutritionCardQueryVariables>(NutritionCardDocument, options);
+        }
+export type NutritionCardQueryHookResult = ReturnType<typeof useNutritionCardQuery>;
+export type NutritionCardLazyQueryHookResult = ReturnType<typeof useNutritionCardLazyQuery>;
+export type NutritionCardQueryResult = Apollo.QueryResult<NutritionCardQuery, NutritionCardQueryVariables>;
+export const UpdateNutritionDocument = gql`
+    mutation UpdateNutrition($input: NutritionInput!) {
+  updateNutrition(input: $input) {
+    ...Nutrition
+  }
+}
+    ${NutritionFragmentDoc}`;
+export type UpdateNutritionMutationFn = Apollo.MutationFunction<UpdateNutritionMutation, UpdateNutritionMutationVariables>;
+
+/**
+ * __useUpdateNutritionMutation__
+ *
+ * To run a mutation, you first call `useUpdateNutritionMutation` within a React component and pass it any options that fit your needs.
+ * When your component renders, `useUpdateNutritionMutation` returns a tuple that includes:
+ * - A mutate function that you can call at any time to execute the mutation
+ * - An object with fields that represent the current status of the mutation's execution
+ *
+ * @param baseOptions options that will be passed into the mutation, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options-2;
+ *
+ * @example
+ * const [updateNutritionMutation, { data, loading, error }] = useUpdateNutritionMutation({
+ *   variables: {
+ *      input: // value for 'input'
+ *   },
+ * });
+ */
+export function useUpdateNutritionMutation(baseOptions?: Apollo.MutationHookOptions<UpdateNutritionMutation, UpdateNutritionMutationVariables>) {
+        const options = {...defaultOptions, ...baseOptions}
+        return Apollo.useMutation<UpdateNutritionMutation, UpdateNutritionMutationVariables>(UpdateNutritionDocument, options);
+      }
+export type UpdateNutritionMutationHookResult = ReturnType<typeof useUpdateNutritionMutation>;
+export type UpdateNutritionMutationResult = Apollo.MutationResult<UpdateNutritionMutation>;
+export type UpdateNutritionMutationOptions = Apollo.BaseMutationOptions<UpdateNutritionMutation, UpdateNutritionMutationVariables>;
+export const AddPublicHealthDocument = gql`
+    mutation AddPublicHealth($input: PublicHealthInput!) {
+  addPublicHealth(input: $input) {
+    ...PublicHealth
+  }
+}
+    ${PublicHealthFragmentDoc}`;
+export type AddPublicHealthMutationFn = Apollo.MutationFunction<AddPublicHealthMutation, AddPublicHealthMutationVariables>;
+
+/**
+ * __useAddPublicHealthMutation__
+ *
+ * To run a mutation, you first call `useAddPublicHealthMutation` within a React component and pass it any options that fit your needs.
+ * When your component renders, `useAddPublicHealthMutation` returns a tuple that includes:
+ * - A mutate function that you can call at any time to execute the mutation
+ * - An object with fields that represent the current status of the mutation's execution
+ *
+ * @param baseOptions options that will be passed into the mutation, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options-2;
+ *
+ * @example
+ * const [addPublicHealthMutation, { data, loading, error }] = useAddPublicHealthMutation({
+ *   variables: {
+ *      input: // value for 'input'
+ *   },
+ * });
+ */
+export function useAddPublicHealthMutation(baseOptions?: Apollo.MutationHookOptions<AddPublicHealthMutation, AddPublicHealthMutationVariables>) {
+        const options = {...defaultOptions, ...baseOptions}
+        return Apollo.useMutation<AddPublicHealthMutation, AddPublicHealthMutationVariables>(AddPublicHealthDocument, options);
+      }
+export type AddPublicHealthMutationHookResult = ReturnType<typeof useAddPublicHealthMutation>;
+export type AddPublicHealthMutationResult = Apollo.MutationResult<AddPublicHealthMutation>;
+export type AddPublicHealthMutationOptions = Apollo.BaseMutationOptions<AddPublicHealthMutation, AddPublicHealthMutationVariables>;
+export const PublicHealthDocument = gql`
+    query PublicHealth($id: ID!) {
+  publicHealth(id: $id) {
+    ...PublicHealth
+  }
+}
+    ${PublicHealthFragmentDoc}`;
+
+/**
+ * __usePublicHealthQuery__
+ *
+ * To run a query within a React component, call `usePublicHealthQuery` and pass it any options that fit your needs.
+ * When your component renders, `usePublicHealthQuery` returns an object from Apollo Client that contains loading, error, and data properties
+ * you can use to render your UI.
+ *
+ * @param baseOptions options that will be passed into the query, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options;
+ *
+ * @example
+ * const { data, loading, error } = usePublicHealthQuery({
+ *   variables: {
+ *      id: // value for 'id'
+ *   },
+ * });
+ */
+export function usePublicHealthQuery(baseOptions: Apollo.QueryHookOptions<PublicHealthQuery, PublicHealthQueryVariables>) {
+        const options = {...defaultOptions, ...baseOptions}
+        return Apollo.useQuery<PublicHealthQuery, PublicHealthQueryVariables>(PublicHealthDocument, options);
+      }
+export function usePublicHealthLazyQuery(baseOptions?: Apollo.LazyQueryHookOptions<PublicHealthQuery, PublicHealthQueryVariables>) {
+          const options = {...defaultOptions, ...baseOptions}
+          return Apollo.useLazyQuery<PublicHealthQuery, PublicHealthQueryVariables>(PublicHealthDocument, options);
+        }
+export type PublicHealthQueryHookResult = ReturnType<typeof usePublicHealthQuery>;
+export type PublicHealthLazyQueryHookResult = ReturnType<typeof usePublicHealthLazyQuery>;
+export type PublicHealthQueryResult = Apollo.QueryResult<PublicHealthQuery, PublicHealthQueryVariables>;
+export const PublicHealthCardDocument = gql`
+    query PublicHealthCard {
+  publicHealthCard {
+    ...PublicHealthCard
+  }
+}
+    ${PublicHealthCardFragmentDoc}`;
+
+/**
+ * __usePublicHealthCardQuery__
+ *
+ * To run a query within a React component, call `usePublicHealthCardQuery` and pass it any options that fit your needs.
+ * When your component renders, `usePublicHealthCardQuery` returns an object from Apollo Client that contains loading, error, and data properties
+ * you can use to render your UI.
+ *
+ * @param baseOptions options that will be passed into the query, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options;
+ *
+ * @example
+ * const { data, loading, error } = usePublicHealthCardQuery({
+ *   variables: {
+ *   },
+ * });
+ */
+export function usePublicHealthCardQuery(baseOptions?: Apollo.QueryHookOptions<PublicHealthCardQuery, PublicHealthCardQueryVariables>) {
+        const options = {...defaultOptions, ...baseOptions}
+        return Apollo.useQuery<PublicHealthCardQuery, PublicHealthCardQueryVariables>(PublicHealthCardDocument, options);
+      }
+export function usePublicHealthCardLazyQuery(baseOptions?: Apollo.LazyQueryHookOptions<PublicHealthCardQuery, PublicHealthCardQueryVariables>) {
+          const options = {...defaultOptions, ...baseOptions}
+          return Apollo.useLazyQuery<PublicHealthCardQuery, PublicHealthCardQueryVariables>(PublicHealthCardDocument, options);
+        }
+export type PublicHealthCardQueryHookResult = ReturnType<typeof usePublicHealthCardQuery>;
+export type PublicHealthCardLazyQueryHookResult = ReturnType<typeof usePublicHealthCardLazyQuery>;
+export type PublicHealthCardQueryResult = Apollo.QueryResult<PublicHealthCardQuery, PublicHealthCardQueryVariables>;
+export const UpdatePublicHealthDocument = gql`
+    mutation UpdatePublicHealth($input: PublicHealthInput!) {
+  updatePublicHealth(input: $input) {
+    ...PublicHealth
+  }
+}
+    ${PublicHealthFragmentDoc}`;
+export type UpdatePublicHealthMutationFn = Apollo.MutationFunction<UpdatePublicHealthMutation, UpdatePublicHealthMutationVariables>;
+
+/**
+ * __useUpdatePublicHealthMutation__
+ *
+ * To run a mutation, you first call `useUpdatePublicHealthMutation` within a React component and pass it any options that fit your needs.
+ * When your component renders, `useUpdatePublicHealthMutation` returns a tuple that includes:
+ * - A mutate function that you can call at any time to execute the mutation
+ * - An object with fields that represent the current status of the mutation's execution
+ *
+ * @param baseOptions options that will be passed into the mutation, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options-2;
+ *
+ * @example
+ * const [updatePublicHealthMutation, { data, loading, error }] = useUpdatePublicHealthMutation({
+ *   variables: {
+ *      input: // value for 'input'
+ *   },
+ * });
+ */
+export function useUpdatePublicHealthMutation(baseOptions?: Apollo.MutationHookOptions<UpdatePublicHealthMutation, UpdatePublicHealthMutationVariables>) {
+        const options = {...defaultOptions, ...baseOptions}
+        return Apollo.useMutation<UpdatePublicHealthMutation, UpdatePublicHealthMutationVariables>(UpdatePublicHealthDocument, options);
+      }
+export type UpdatePublicHealthMutationHookResult = ReturnType<typeof useUpdatePublicHealthMutation>;
+export type UpdatePublicHealthMutationResult = Apollo.MutationResult<UpdatePublicHealthMutation>;
+export type UpdatePublicHealthMutationOptions = Apollo.BaseMutationOptions<UpdatePublicHealthMutation, UpdatePublicHealthMutationVariables>;
+export const AddVeterinaryDocument = gql`
+    mutation AddVeterinary($input: VeterinaryInput!) {
+  addVeterinary(input: $input) {
+    ...Veterinary
+  }
+}
+    ${VeterinaryFragmentDoc}`;
+export type AddVeterinaryMutationFn = Apollo.MutationFunction<AddVeterinaryMutation, AddVeterinaryMutationVariables>;
+
+/**
+ * __useAddVeterinaryMutation__
+ *
+ * To run a mutation, you first call `useAddVeterinaryMutation` within a React component and pass it any options that fit your needs.
+ * When your component renders, `useAddVeterinaryMutation` returns a tuple that includes:
+ * - A mutate function that you can call at any time to execute the mutation
+ * - An object with fields that represent the current status of the mutation's execution
+ *
+ * @param baseOptions options that will be passed into the mutation, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options-2;
+ *
+ * @example
+ * const [addVeterinaryMutation, { data, loading, error }] = useAddVeterinaryMutation({
+ *   variables: {
+ *      input: // value for 'input'
+ *   },
+ * });
+ */
+export function useAddVeterinaryMutation(baseOptions?: Apollo.MutationHookOptions<AddVeterinaryMutation, AddVeterinaryMutationVariables>) {
+        const options = {...defaultOptions, ...baseOptions}
+        return Apollo.useMutation<AddVeterinaryMutation, AddVeterinaryMutationVariables>(AddVeterinaryDocument, options);
+      }
+export type AddVeterinaryMutationHookResult = ReturnType<typeof useAddVeterinaryMutation>;
+export type AddVeterinaryMutationResult = Apollo.MutationResult<AddVeterinaryMutation>;
+export type AddVeterinaryMutationOptions = Apollo.BaseMutationOptions<AddVeterinaryMutation, AddVeterinaryMutationVariables>;
+export const UpdateVeterinaryDocument = gql`
+    mutation UpdateVeterinary($input: VeterinaryInput!) {
+  updateVeterinary(input: $input) {
+    ...Veterinary
+  }
+}
+    ${VeterinaryFragmentDoc}`;
+export type UpdateVeterinaryMutationFn = Apollo.MutationFunction<UpdateVeterinaryMutation, UpdateVeterinaryMutationVariables>;
+
+/**
+ * __useUpdateVeterinaryMutation__
+ *
+ * To run a mutation, you first call `useUpdateVeterinaryMutation` within a React component and pass it any options that fit your needs.
+ * When your component renders, `useUpdateVeterinaryMutation` returns a tuple that includes:
+ * - A mutate function that you can call at any time to execute the mutation
+ * - An object with fields that represent the current status of the mutation's execution
+ *
+ * @param baseOptions options that will be passed into the mutation, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options-2;
+ *
+ * @example
+ * const [updateVeterinaryMutation, { data, loading, error }] = useUpdateVeterinaryMutation({
+ *   variables: {
+ *      input: // value for 'input'
+ *   },
+ * });
+ */
+export function useUpdateVeterinaryMutation(baseOptions?: Apollo.MutationHookOptions<UpdateVeterinaryMutation, UpdateVeterinaryMutationVariables>) {
+        const options = {...defaultOptions, ...baseOptions}
+        return Apollo.useMutation<UpdateVeterinaryMutation, UpdateVeterinaryMutationVariables>(UpdateVeterinaryDocument, options);
+      }
+export type UpdateVeterinaryMutationHookResult = ReturnType<typeof useUpdateVeterinaryMutation>;
+export type UpdateVeterinaryMutationResult = Apollo.MutationResult<UpdateVeterinaryMutation>;
+export type UpdateVeterinaryMutationOptions = Apollo.BaseMutationOptions<UpdateVeterinaryMutation, UpdateVeterinaryMutationVariables>;
+export const VeterinaryDocument = gql`
+    query Veterinary($id: ID!) {
+  veterinary(id: $id) {
+    ...Veterinary
+  }
+}
+    ${VeterinaryFragmentDoc}`;
+
+/**
+ * __useVeterinaryQuery__
+ *
+ * To run a query within a React component, call `useVeterinaryQuery` and pass it any options that fit your needs.
+ * When your component renders, `useVeterinaryQuery` returns an object from Apollo Client that contains loading, error, and data properties
+ * you can use to render your UI.
+ *
+ * @param baseOptions options that will be passed into the query, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options;
+ *
+ * @example
+ * const { data, loading, error } = useVeterinaryQuery({
+ *   variables: {
+ *      id: // value for 'id'
+ *   },
+ * });
+ */
+export function useVeterinaryQuery(baseOptions: Apollo.QueryHookOptions<VeterinaryQuery, VeterinaryQueryVariables>) {
+        const options = {...defaultOptions, ...baseOptions}
+        return Apollo.useQuery<VeterinaryQuery, VeterinaryQueryVariables>(VeterinaryDocument, options);
+      }
+export function useVeterinaryLazyQuery(baseOptions?: Apollo.LazyQueryHookOptions<VeterinaryQuery, VeterinaryQueryVariables>) {
+          const options = {...defaultOptions, ...baseOptions}
+          return Apollo.useLazyQuery<VeterinaryQuery, VeterinaryQueryVariables>(VeterinaryDocument, options);
+        }
+export type VeterinaryQueryHookResult = ReturnType<typeof useVeterinaryQuery>;
+export type VeterinaryLazyQueryHookResult = ReturnType<typeof useVeterinaryLazyQuery>;
+export type VeterinaryQueryResult = Apollo.QueryResult<VeterinaryQuery, VeterinaryQueryVariables>;
+export const VeterinaryCardDocument = gql`
+    query VeterinaryCard {
+  veterinaryCard {
+    ...VeterinaryCard
+  }
+}
+    ${VeterinaryCardFragmentDoc}`;
+
+/**
+ * __useVeterinaryCardQuery__
+ *
+ * To run a query within a React component, call `useVeterinaryCardQuery` and pass it any options that fit your needs.
+ * When your component renders, `useVeterinaryCardQuery` returns an object from Apollo Client that contains loading, error, and data properties
+ * you can use to render your UI.
+ *
+ * @param baseOptions options that will be passed into the query, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options;
+ *
+ * @example
+ * const { data, loading, error } = useVeterinaryCardQuery({
+ *   variables: {
+ *   },
+ * });
+ */
+export function useVeterinaryCardQuery(baseOptions?: Apollo.QueryHookOptions<VeterinaryCardQuery, VeterinaryCardQueryVariables>) {
+        const options = {...defaultOptions, ...baseOptions}
+        return Apollo.useQuery<VeterinaryCardQuery, VeterinaryCardQueryVariables>(VeterinaryCardDocument, options);
+      }
+export function useVeterinaryCardLazyQuery(baseOptions?: Apollo.LazyQueryHookOptions<VeterinaryCardQuery, VeterinaryCardQueryVariables>) {
+          const options = {...defaultOptions, ...baseOptions}
+          return Apollo.useLazyQuery<VeterinaryCardQuery, VeterinaryCardQueryVariables>(VeterinaryCardDocument, options);
+        }
+export type VeterinaryCardQueryHookResult = ReturnType<typeof useVeterinaryCardQuery>;
+export type VeterinaryCardLazyQueryHookResult = ReturnType<typeof useVeterinaryCardLazyQuery>;
+export type VeterinaryCardQueryResult = Apollo.QueryResult<VeterinaryCardQuery, VeterinaryCardQueryVariables>;
 export const AddAiDocument = gql`
     mutation AddAi($input: AiInput!) {
   addAi(input: $input) {
@@ -15844,6 +17732,299 @@ export type UpdateMusicMutationVariables = Exact<{
 
 
 export type UpdateMusicMutation = { __typename?: 'Mutation', updateMusic?: { __typename?: 'Music', id: string, category?: string | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, l6?: string | null, l7?: string | null, l8?: string | null, l9?: string | null, l10?: string | null, l11?: string | null, l12?: string | null, l13?: string | null, l14?: string | null, l15?: string | null, p8?: string | null, subtitle4?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null } | null };
+
+export type AddAgedCareMutationVariables = Exact<{
+  input: AgedCareInput;
+}>;
+
+
+export type AddAgedCareMutation = { __typename?: 'Mutation', addAgedCare?: { __typename?: 'AgedCare', id: string, category?: string | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, l6?: string | null, l7?: string | null, l8?: string | null, l9?: string | null, l10?: string | null, l11?: string | null, l12?: string | null, l13?: string | null, l14?: string | null, l15?: string | null, p8?: string | null, subtitle4?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null } | null };
+
+export type AgedCareQueryVariables = Exact<{
+  id: Scalars['ID'];
+}>;
+
+
+export type AgedCareQuery = { __typename?: 'Query', agedCare?: { __typename?: 'AgedCare', id: string, category?: string | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, l6?: string | null, l7?: string | null, l8?: string | null, l9?: string | null, l10?: string | null, l11?: string | null, l12?: string | null, l13?: string | null, l14?: string | null, l15?: string | null, p8?: string | null, subtitle4?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null } | null };
+
+export type AgedCareCardQueryVariables = Exact<{ [key: string]: never; }>;
+
+
+export type AgedCareCardQuery = { __typename?: 'Query', agedCareCard?: Array<{ __typename?: 'AgedCare', category?: string | null, id: string, title?: string | null, subtitle1?: string | null } | null> | null };
+
+export type AgedCareCardFragment = { __typename?: 'AgedCare', category?: string | null, id: string, title?: string | null, subtitle1?: string | null };
+
+export type AgedCareFragment = { __typename?: 'AgedCare', id: string, category?: string | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, l6?: string | null, l7?: string | null, l8?: string | null, l9?: string | null, l10?: string | null, l11?: string | null, l12?: string | null, l13?: string | null, l14?: string | null, l15?: string | null, p8?: string | null, subtitle4?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null };
+
+export type UpdateAgedCareMutationVariables = Exact<{
+  input: AgedCareInput;
+}>;
+
+
+export type UpdateAgedCareMutation = { __typename?: 'Mutation', updateAgedCare?: { __typename?: 'AgedCare', id: string, category?: string | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, l6?: string | null, l7?: string | null, l8?: string | null, l9?: string | null, l10?: string | null, l11?: string | null, l12?: string | null, l13?: string | null, l14?: string | null, l15?: string | null, p8?: string | null, subtitle4?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null } | null };
+
+export type AddDentalMutationVariables = Exact<{
+  input: DentalInput;
+}>;
+
+
+export type AddDentalMutation = { __typename?: 'Mutation', addDental?: { __typename?: 'Dental', id: string, category?: string | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, l6?: string | null, l7?: string | null, l8?: string | null, l9?: string | null, l10?: string | null, l11?: string | null, l12?: string | null, l13?: string | null, l14?: string | null, l15?: string | null, p8?: string | null, subtitle4?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null } | null };
+
+export type DentalQueryVariables = Exact<{
+  id: Scalars['ID'];
+}>;
+
+
+export type DentalQuery = { __typename?: 'Query', dental?: { __typename?: 'Dental', id: string, category?: string | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, l6?: string | null, l7?: string | null, l8?: string | null, l9?: string | null, l10?: string | null, l11?: string | null, l12?: string | null, l13?: string | null, l14?: string | null, l15?: string | null, p8?: string | null, subtitle4?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null } | null };
+
+export type DentalCardQueryVariables = Exact<{ [key: string]: never; }>;
+
+
+export type DentalCardQuery = { __typename?: 'Query', dentalCard?: Array<{ __typename?: 'Dental', category?: string | null, id: string, title?: string | null, subtitle1?: string | null } | null> | null };
+
+export type DentalCardFragment = { __typename?: 'Dental', category?: string | null, id: string, title?: string | null, subtitle1?: string | null };
+
+export type DentalFragment = { __typename?: 'Dental', id: string, category?: string | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, l6?: string | null, l7?: string | null, l8?: string | null, l9?: string | null, l10?: string | null, l11?: string | null, l12?: string | null, l13?: string | null, l14?: string | null, l15?: string | null, p8?: string | null, subtitle4?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null };
+
+export type UpdateDentalMutationVariables = Exact<{
+  input: DentalInput;
+}>;
+
+
+export type UpdateDentalMutation = { __typename?: 'Mutation', updateDental?: { __typename?: 'Dental', id: string, category?: string | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, l6?: string | null, l7?: string | null, l8?: string | null, l9?: string | null, l10?: string | null, l11?: string | null, l12?: string | null, l13?: string | null, l14?: string | null, l15?: string | null, p8?: string | null, subtitle4?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null } | null };
+
+export type AddHealthMutationVariables = Exact<{
+  input: HealthInput;
+}>;
+
+
+export type AddHealthMutation = { __typename?: 'Mutation', addHealth?: { __typename?: 'Health', id: string, category?: string | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, l6?: string | null, l7?: string | null, l8?: string | null, l9?: string | null, l10?: string | null, l11?: string | null, l12?: string | null, l13?: string | null, l14?: string | null, l15?: string | null, p8?: string | null, subtitle4?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null } | null };
+
+export type HealthQueryVariables = Exact<{
+  id: Scalars['ID'];
+}>;
+
+
+export type HealthQuery = { __typename?: 'Query', health?: { __typename?: 'Health', id: string, category?: string | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, l6?: string | null, l7?: string | null, l8?: string | null, l9?: string | null, l10?: string | null, l11?: string | null, l12?: string | null, l13?: string | null, l14?: string | null, l15?: string | null, p8?: string | null, subtitle4?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null } | null };
+
+export type HealthFragment = { __typename?: 'Health', id: string, category?: string | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, l6?: string | null, l7?: string | null, l8?: string | null, l9?: string | null, l10?: string | null, l11?: string | null, l12?: string | null, l13?: string | null, l14?: string | null, l15?: string | null, p8?: string | null, subtitle4?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null };
+
+export type UpdateHealthMutationVariables = Exact<{
+  input: HealthInput;
+}>;
+
+
+export type UpdateHealthMutation = { __typename?: 'Mutation', updateHealth?: { __typename?: 'Health', id: string, category?: string | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, l6?: string | null, l7?: string | null, l8?: string | null, l9?: string | null, l10?: string | null, l11?: string | null, l12?: string | null, l13?: string | null, l14?: string | null, l15?: string | null, p8?: string | null, subtitle4?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null } | null };
+
+export type AddMassageMutationVariables = Exact<{
+  input: MassageInput;
+}>;
+
+
+export type AddMassageMutation = { __typename?: 'Mutation', addMassage?: { __typename?: 'Massage', id: string, category?: string | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, l6?: string | null, l7?: string | null, l8?: string | null, l9?: string | null, l10?: string | null, l11?: string | null, l12?: string | null, l13?: string | null, l14?: string | null, l15?: string | null, p8?: string | null, subtitle4?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null } | null };
+
+export type MassageQueryVariables = Exact<{
+  id: Scalars['ID'];
+}>;
+
+
+export type MassageQuery = { __typename?: 'Query', massage?: { __typename?: 'Massage', id: string, category?: string | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, l6?: string | null, l7?: string | null, l8?: string | null, l9?: string | null, l10?: string | null, l11?: string | null, l12?: string | null, l13?: string | null, l14?: string | null, l15?: string | null, p8?: string | null, subtitle4?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null } | null };
+
+export type MassageCardQueryVariables = Exact<{ [key: string]: never; }>;
+
+
+export type MassageCardQuery = { __typename?: 'Query', massageCard?: Array<{ __typename?: 'Massage', category?: string | null, id: string, title?: string | null, subtitle1?: string | null } | null> | null };
+
+export type MassageCardFragment = { __typename?: 'Massage', category?: string | null, id: string, title?: string | null, subtitle1?: string | null };
+
+export type MassageFragment = { __typename?: 'Massage', id: string, category?: string | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, l6?: string | null, l7?: string | null, l8?: string | null, l9?: string | null, l10?: string | null, l11?: string | null, l12?: string | null, l13?: string | null, l14?: string | null, l15?: string | null, p8?: string | null, subtitle4?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null };
+
+export type UpdateMassageMutationVariables = Exact<{
+  input: MassageInput;
+}>;
+
+
+export type UpdateMassageMutation = { __typename?: 'Mutation', updateMassage?: { __typename?: 'Massage', id: string, category?: string | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, l6?: string | null, l7?: string | null, l8?: string | null, l9?: string | null, l10?: string | null, l11?: string | null, l12?: string | null, l13?: string | null, l14?: string | null, l15?: string | null, p8?: string | null, subtitle4?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null } | null };
+
+export type AddMedicineMutationVariables = Exact<{
+  input: MedicineInput;
+}>;
+
+
+export type AddMedicineMutation = { __typename?: 'Mutation', addMedicine?: { __typename?: 'Medicine', id: string, category?: string | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, l6?: string | null, l7?: string | null, l8?: string | null, l9?: string | null, l10?: string | null, l11?: string | null, l12?: string | null, l13?: string | null, l14?: string | null, l15?: string | null, p8?: string | null, subtitle4?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null } | null };
+
+export type MedicineQueryVariables = Exact<{
+  id: Scalars['ID'];
+}>;
+
+
+export type MedicineQuery = { __typename?: 'Query', medicine?: { __typename?: 'Medicine', id: string, category?: string | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, l6?: string | null, l7?: string | null, l8?: string | null, l9?: string | null, l10?: string | null, l11?: string | null, l12?: string | null, l13?: string | null, l14?: string | null, l15?: string | null, p8?: string | null, subtitle4?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null } | null };
+
+export type MedicineCardQueryVariables = Exact<{ [key: string]: never; }>;
+
+
+export type MedicineCardQuery = { __typename?: 'Query', medicineCard?: Array<{ __typename?: 'Medicine', category?: string | null, id: string, title?: string | null, subtitle1?: string | null } | null> | null };
+
+export type MedicineCardFragment = { __typename?: 'Medicine', category?: string | null, id: string, title?: string | null, subtitle1?: string | null };
+
+export type MedicineFragment = { __typename?: 'Medicine', id: string, category?: string | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, l6?: string | null, l7?: string | null, l8?: string | null, l9?: string | null, l10?: string | null, l11?: string | null, l12?: string | null, l13?: string | null, l14?: string | null, l15?: string | null, p8?: string | null, subtitle4?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null };
+
+export type UpdateMedicineMutationVariables = Exact<{
+  input: MedicineInput;
+}>;
+
+
+export type UpdateMedicineMutation = { __typename?: 'Mutation', updateMedicine?: { __typename?: 'Medicine', id: string, category?: string | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, l6?: string | null, l7?: string | null, l8?: string | null, l9?: string | null, l10?: string | null, l11?: string | null, l12?: string | null, l13?: string | null, l14?: string | null, l15?: string | null, p8?: string | null, subtitle4?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null } | null };
+
+export type AddMentalHealthMutationVariables = Exact<{
+  input: MentalHealthInput;
+}>;
+
+
+export type AddMentalHealthMutation = { __typename?: 'Mutation', addMentalHealth?: { __typename?: 'MentalHealth', id: string, category?: string | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, l6?: string | null, l7?: string | null, l8?: string | null, l9?: string | null, l10?: string | null, l11?: string | null, l12?: string | null, l13?: string | null, l14?: string | null, l15?: string | null, p8?: string | null, subtitle4?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null } | null };
+
+export type MentalHealthQueryVariables = Exact<{
+  id: Scalars['ID'];
+}>;
+
+
+export type MentalHealthQuery = { __typename?: 'Query', mentalHealth?: { __typename?: 'MentalHealth', id: string, category?: string | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, l6?: string | null, l7?: string | null, l8?: string | null, l9?: string | null, l10?: string | null, l11?: string | null, l12?: string | null, l13?: string | null, l14?: string | null, l15?: string | null, p8?: string | null, subtitle4?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null } | null };
+
+export type MentalHealthCardQueryVariables = Exact<{ [key: string]: never; }>;
+
+
+export type MentalHealthCardQuery = { __typename?: 'Query', mentalHealthCard?: Array<{ __typename?: 'MentalHealth', category?: string | null, id: string, title?: string | null, subtitle1?: string | null } | null> | null };
+
+export type MentalHealthCardFragment = { __typename?: 'MentalHealth', category?: string | null, id: string, title?: string | null, subtitle1?: string | null };
+
+export type MentalHealthFragment = { __typename?: 'MentalHealth', id: string, category?: string | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, l6?: string | null, l7?: string | null, l8?: string | null, l9?: string | null, l10?: string | null, l11?: string | null, l12?: string | null, l13?: string | null, l14?: string | null, l15?: string | null, p8?: string | null, subtitle4?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null };
+
+export type UpdateMentalHealthMutationVariables = Exact<{
+  input: MentalHealthInput;
+}>;
+
+
+export type UpdateMentalHealthMutation = { __typename?: 'Mutation', updateMentalHealth?: { __typename?: 'MentalHealth', id: string, category?: string | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, l6?: string | null, l7?: string | null, l8?: string | null, l9?: string | null, l10?: string | null, l11?: string | null, l12?: string | null, l13?: string | null, l14?: string | null, l15?: string | null, p8?: string | null, subtitle4?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null } | null };
+
+export type AddNursingMutationVariables = Exact<{
+  input: NursingInput;
+}>;
+
+
+export type AddNursingMutation = { __typename?: 'Mutation', addNursing?: { __typename?: 'Nursing', id: string, category?: string | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, l6?: string | null, l7?: string | null, l8?: string | null, l9?: string | null, l10?: string | null, l11?: string | null, l12?: string | null, l13?: string | null, l14?: string | null, l15?: string | null, p8?: string | null, subtitle4?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null } | null };
+
+export type NursingQueryVariables = Exact<{
+  id: Scalars['ID'];
+}>;
+
+
+export type NursingQuery = { __typename?: 'Query', nursing?: { __typename?: 'Nursing', id: string, category?: string | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, l6?: string | null, l7?: string | null, l8?: string | null, l9?: string | null, l10?: string | null, l11?: string | null, l12?: string | null, l13?: string | null, l14?: string | null, l15?: string | null, p8?: string | null, subtitle4?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null } | null };
+
+export type NursingCardQueryVariables = Exact<{ [key: string]: never; }>;
+
+
+export type NursingCardQuery = { __typename?: 'Query', nursingCard?: Array<{ __typename?: 'Nursing', category?: string | null, id: string, title?: string | null, subtitle1?: string | null } | null> | null };
+
+export type NursingCardFragment = { __typename?: 'Nursing', category?: string | null, id: string, title?: string | null, subtitle1?: string | null };
+
+export type NursingFragment = { __typename?: 'Nursing', id: string, category?: string | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, l6?: string | null, l7?: string | null, l8?: string | null, l9?: string | null, l10?: string | null, l11?: string | null, l12?: string | null, l13?: string | null, l14?: string | null, l15?: string | null, p8?: string | null, subtitle4?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null };
+
+export type UpdateNursingMutationVariables = Exact<{
+  input: NursingInput;
+}>;
+
+
+export type UpdateNursingMutation = { __typename?: 'Mutation', updateNursing?: { __typename?: 'Nursing', id: string, category?: string | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, l6?: string | null, l7?: string | null, l8?: string | null, l9?: string | null, l10?: string | null, l11?: string | null, l12?: string | null, l13?: string | null, l14?: string | null, l15?: string | null, p8?: string | null, subtitle4?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null } | null };
+
+export type AddNutritionMutationVariables = Exact<{
+  input: NutritionInput;
+}>;
+
+
+export type AddNutritionMutation = { __typename?: 'Mutation', addNutrition?: { __typename?: 'Nutrition', id: string, category?: string | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, l6?: string | null, l7?: string | null, l8?: string | null, l9?: string | null, l10?: string | null, l11?: string | null, l12?: string | null, l13?: string | null, l14?: string | null, l15?: string | null, p8?: string | null, subtitle4?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null } | null };
+
+export type NutritionQueryVariables = Exact<{
+  id: Scalars['ID'];
+}>;
+
+
+export type NutritionQuery = { __typename?: 'Query', nutrition?: { __typename?: 'Nutrition', id: string, category?: string | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, l6?: string | null, l7?: string | null, l8?: string | null, l9?: string | null, l10?: string | null, l11?: string | null, l12?: string | null, l13?: string | null, l14?: string | null, l15?: string | null, p8?: string | null, subtitle4?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null } | null };
+
+export type NutritionCardQueryVariables = Exact<{ [key: string]: never; }>;
+
+
+export type NutritionCardQuery = { __typename?: 'Query', nutritionCard?: Array<{ __typename?: 'Nutrition', category?: string | null, id: string, title?: string | null, subtitle1?: string | null } | null> | null };
+
+export type NutritionCardFragment = { __typename?: 'Nutrition', category?: string | null, id: string, title?: string | null, subtitle1?: string | null };
+
+export type NutritionFragment = { __typename?: 'Nutrition', id: string, category?: string | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, l6?: string | null, l7?: string | null, l8?: string | null, l9?: string | null, l10?: string | null, l11?: string | null, l12?: string | null, l13?: string | null, l14?: string | null, l15?: string | null, p8?: string | null, subtitle4?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null };
+
+export type UpdateNutritionMutationVariables = Exact<{
+  input: NutritionInput;
+}>;
+
+
+export type UpdateNutritionMutation = { __typename?: 'Mutation', updateNutrition?: { __typename?: 'Nutrition', id: string, category?: string | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, l6?: string | null, l7?: string | null, l8?: string | null, l9?: string | null, l10?: string | null, l11?: string | null, l12?: string | null, l13?: string | null, l14?: string | null, l15?: string | null, p8?: string | null, subtitle4?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null } | null };
+
+export type AddPublicHealthMutationVariables = Exact<{
+  input: PublicHealthInput;
+}>;
+
+
+export type AddPublicHealthMutation = { __typename?: 'Mutation', addPublicHealth?: { __typename?: 'PublicHealth', id: string, category?: string | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, l6?: string | null, l7?: string | null, l8?: string | null, l9?: string | null, l10?: string | null, l11?: string | null, l12?: string | null, l13?: string | null, l14?: string | null, l15?: string | null, p8?: string | null, subtitle4?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null } | null };
+
+export type PublicHealthQueryVariables = Exact<{
+  id: Scalars['ID'];
+}>;
+
+
+export type PublicHealthQuery = { __typename?: 'Query', publicHealth?: { __typename?: 'PublicHealth', id: string, category?: string | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, l6?: string | null, l7?: string | null, l8?: string | null, l9?: string | null, l10?: string | null, l11?: string | null, l12?: string | null, l13?: string | null, l14?: string | null, l15?: string | null, p8?: string | null, subtitle4?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null } | null };
+
+export type PublicHealthCardQueryVariables = Exact<{ [key: string]: never; }>;
+
+
+export type PublicHealthCardQuery = { __typename?: 'Query', publicHealthCard?: Array<{ __typename?: 'PublicHealth', category?: string | null, id: string, title?: string | null, subtitle1?: string | null } | null> | null };
+
+export type PublicHealthCardFragment = { __typename?: 'PublicHealth', category?: string | null, id: string, title?: string | null, subtitle1?: string | null };
+
+export type PublicHealthFragment = { __typename?: 'PublicHealth', id: string, category?: string | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, l6?: string | null, l7?: string | null, l8?: string | null, l9?: string | null, l10?: string | null, l11?: string | null, l12?: string | null, l13?: string | null, l14?: string | null, l15?: string | null, p8?: string | null, subtitle4?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null };
+
+export type UpdatePublicHealthMutationVariables = Exact<{
+  input: PublicHealthInput;
+}>;
+
+
+export type UpdatePublicHealthMutation = { __typename?: 'Mutation', updatePublicHealth?: { __typename?: 'PublicHealth', id: string, category?: string | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, l6?: string | null, l7?: string | null, l8?: string | null, l9?: string | null, l10?: string | null, l11?: string | null, l12?: string | null, l13?: string | null, l14?: string | null, l15?: string | null, p8?: string | null, subtitle4?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null } | null };
+
+export type AddVeterinaryMutationVariables = Exact<{
+  input: VeterinaryInput;
+}>;
+
+
+export type AddVeterinaryMutation = { __typename?: 'Mutation', addVeterinary?: { __typename?: 'Veterinary', id: string, category?: string | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, l6?: string | null, l7?: string | null, l8?: string | null, l9?: string | null, l10?: string | null, l11?: string | null, l12?: string | null, l13?: string | null, l14?: string | null, l15?: string | null, p8?: string | null, subtitle4?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null } | null };
+
+export type UpdateVeterinaryMutationVariables = Exact<{
+  input: VeterinaryInput;
+}>;
+
+
+export type UpdateVeterinaryMutation = { __typename?: 'Mutation', updateVeterinary?: { __typename?: 'Veterinary', id: string, category?: string | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, l6?: string | null, l7?: string | null, l8?: string | null, l9?: string | null, l10?: string | null, l11?: string | null, l12?: string | null, l13?: string | null, l14?: string | null, l15?: string | null, p8?: string | null, subtitle4?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null } | null };
+
+export type VeterinaryQueryVariables = Exact<{
+  id: Scalars['ID'];
+}>;
+
+
+export type VeterinaryQuery = { __typename?: 'Query', veterinary?: { __typename?: 'Veterinary', id: string, category?: string | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, l6?: string | null, l7?: string | null, l8?: string | null, l9?: string | null, l10?: string | null, l11?: string | null, l12?: string | null, l13?: string | null, l14?: string | null, l15?: string | null, p8?: string | null, subtitle4?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null } | null };
+
+export type VeterinaryCardQueryVariables = Exact<{ [key: string]: never; }>;
+
+
+export type VeterinaryCardQuery = { __typename?: 'Query', veterinaryCard?: Array<{ __typename?: 'Veterinary', category?: string | null, id: string, title?: string | null, subtitle1?: string | null } | null> | null };
+
+export type VeterinaryCardFragment = { __typename?: 'Veterinary', category?: string | null, id: string, title?: string | null, subtitle1?: string | null };
+
+export type VeterinaryFragment = { __typename?: 'Veterinary', id: string, category?: string | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, l6?: string | null, l7?: string | null, l8?: string | null, l9?: string | null, l10?: string | null, l11?: string | null, l12?: string | null, l13?: string | null, l14?: string | null, l15?: string | null, p8?: string | null, subtitle4?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null };
 
 export type AddAiMutationVariables = Exact<{
   input: AiInput;

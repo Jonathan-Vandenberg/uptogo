@@ -1,0 +1,7 @@
+# import PublicHealth from './PublicHealthFragment.graphql'
+
+mutation UpdatePublicHealth($input: PublicHealthInput!) {
+  updatePublicHealth(input: $input) {
+    ...PublicHealth
+  }
+}

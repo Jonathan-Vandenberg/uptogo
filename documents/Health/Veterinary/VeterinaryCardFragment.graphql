@@ -1,0 +1,6 @@
+fragment VeterinaryCard on Veterinary {
+  category
+  id
+  title
+  subtitle1
+}

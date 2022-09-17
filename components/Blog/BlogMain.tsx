@@ -1,25 +1,60 @@
 import {
   Acting,
+  AgedCare,
+  AgribusinessManagement,
   Ai,
   Animation3D,
+  Automotive,
+  Baking,
+  BankingManagement,
+  Beauty,
   Blockchain,
   BlogPost,
   BusinessAnalysis,
+  BusinessManagement,
+  Carpentry,
   CloudComputing,
   ComputerNetworking,
+  Construction,
+  Cookery,
   DataManagement,
+  Dental,
   DigitalMedia,
+  Education,
+  Events,
   FashionDesign,
   Film,
+  Fitness,
   GameProgramming,
   GraphicDesign,
+  Hairdressing,
+  Health,
+  Horticulture,
+  HospitalityManagement,
+  HotelManagement,
+  HumanResources,
   InteriorDesign,
+  IntlBusiness,
   Landscape,
+  LeadershipManagement,
   MachineLearning,
+  Massage,
+  Medicine,
+  MentalHealth,
   Music,
+  Nursing,
+  Nutrition,
+  ProjectManagement,
+  PublicHealth,
+  SocialMediaMarketing,
   SoftwareDevelopment,
+  SportDevelopment,
+  SupplyManagement,
   Telecommunication,
+  TravelTourism,
+  Veterinary,
   WebDevelopment,
+  Yoga,
 } from "../../types";
 import BlogHeader from "./BlogHeader";
 import BlogPostMarkup from "./BlogPostMarkup";
@@ -47,6 +82,41 @@ interface IProps {
     | DigitalMedia
     | Acting
     | Animation3D
+    | Health
+    | AgedCare
+    | Nutrition
+    | Nursing
+    | Veterinary
+    | Medicine
+    | PublicHealth
+    | Dental
+    | Massage
+    | MentalHealth
+    | Baking
+    | Cookery
+    | HospitalityManagement
+    | HotelManagement
+    | TravelTourism
+    | Events
+    | Automotive
+    | Beauty
+    | Construction
+    | Carpentry
+    | Education
+    | Fitness
+    | Hairdressing
+    | Horticulture
+    | SportDevelopment
+    | Yoga
+    | ProjectManagement
+    | BusinessManagement
+    | HumanResources
+    | BankingManagement
+    | IntlBusiness
+    | SocialMediaMarketing
+    | AgribusinessManagement
+    | SupplyManagement
+    | LeadershipManagement
     | undefined
     | null;
   handleAdd: () => void;

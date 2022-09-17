@@ -28,6 +28,41 @@ import type {
   GraphicDesign,
   InteriorDesign,
   Landscape,
+  AgedCare,
+  AgribusinessManagement,
+  Automotive,
+  Baking,
+  BankingManagement,
+  Beauty,
+  BusinessManagement,
+  Carpentry,
+  Construction,
+  Cookery,
+  Dental,
+  Education,
+  Events,
+  Fitness,
+  Hairdressing,
+  Health,
+  Horticulture,
+  HospitalityManagement,
+  HotelManagement,
+  HumanResources,
+  IntlBusiness,
+  LeadershipManagement,
+  Massage,
+  Medicine,
+  MentalHealth,
+  Nursing,
+  Nutrition,
+  ProjectManagement,
+  PublicHealth,
+  SocialMediaMarketing,
+  SportDevelopment,
+  SupplyManagement,
+  TravelTourism,
+  Veterinary,
+  Yoga,
 } from "../../types";
 import EmailButton from "../UI/EmailButton";
 
@@ -56,6 +91,41 @@ interface IProps {
     | DigitalMedia
     | Acting
     | Animation3D
+    | Health
+    | AgedCare
+    | Nutrition
+    | Nursing
+    | Veterinary
+    | Medicine
+    | PublicHealth
+    | Dental
+    | Massage
+    | MentalHealth
+    | Baking
+    | Cookery
+    | HospitalityManagement
+    | HotelManagement
+    | TravelTourism
+    | Events
+    | Automotive
+    | Beauty
+    | Construction
+    | Carpentry
+    | Education
+    | Fitness
+    | Hairdressing
+    | Horticulture
+    | SportDevelopment
+    | Yoga
+    | ProjectManagement
+    | BusinessManagement
+    | HumanResources
+    | BankingManagement
+    | IntlBusiness
+    | SocialMediaMarketing
+    | AgribusinessManagement
+    | SupplyManagement
+    | LeadershipManagement
     | undefined
     | null;
   handleAdd: () => void;
@@ -341,28 +411,29 @@ export default function BlogPostMarkup({
       {data?.reference2 && (
         <p className="text-gray-500 py-1 text">Reference: {data?.reference2}</p>
       )}
-      {session?.user?.email === "hue121999@gmail.com" && (
-        <div className="flex space-x-5 justify-center items-center py-6">
-          <div className="flex items-center space-x-1" onClick={handleEdit}>
-            <div className="text-xl">
-              <FaEdit size={25} className="text-orange" />
+      {session?.user?.email === process.env.ADMIN_EMAIL ||
+        ("urbangentryjon@gmail.com" && (
+          <div className="flex space-x-5 justify-center items-center py-6">
+            <div className="flex items-center space-x-1" onClick={handleEdit}>
+              <div className="text-xl">
+                <FaEdit size={25} className="text-orange" />
+              </div>
+              <p className="text-lg text-orange">Edit</p>
             </div>
-            <p className="text-lg text-orange">Edit</p>
-          </div>
-          <div className="flex items-center space-x-1" onClick={handleAdd}>
-            <div className="text-xl text-green-600">
-              <MdAddCircleOutline size={25} />
+            <div className="flex items-center space-x-1" onClick={handleAdd}>
+              <div className="text-xl text-green-600">
+                <MdAddCircleOutline size={25} />
+              </div>
+              <p className="text-lg text-green-600">Add</p>
             </div>
-            <p className="text-lg text-green-600">Add</p>
-          </div>
-          <div className="flex items-center space-x-1">
-            <div className="text-xl">
-              <MdDeleteForever size={25} className="text-red-500" />
+            <div className="flex items-center space-x-1">
+              <div className="text-xl">
+                <MdDeleteForever size={25} className="text-red-500" />
+              </div>
+              <p className="text-lg text-red-500">Delete</p>
             </div>
-            <p className="text-lg text-red-500">Delete</p>
           </div>
-        </div>
-      )}
+        ))}
     </div>
   );
 }

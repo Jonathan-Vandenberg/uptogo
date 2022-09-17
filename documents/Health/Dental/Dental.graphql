@@ -1,0 +1,7 @@
+# import Dental from "./DentalFragment.graphql"
+
+query Dental($id: ID!) {
+  dental(id: $id) {
+    ...Dental
+  }
+}

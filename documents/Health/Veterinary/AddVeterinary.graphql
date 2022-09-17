@@ -1,0 +1,7 @@
+# import Veterinary from './VeterinaryFragment.graphql'
+
+mutation AddVeterinary($input: VeterinaryInput!) {
+  addVeterinary(input: $input) {
+    ...Veterinary
+  }
+}

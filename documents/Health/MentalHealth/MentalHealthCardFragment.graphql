@@ -1,0 +1,6 @@
+fragment MentalHealthCard on MentalHealth {
+  category
+  id
+  title
+  subtitle1
+}

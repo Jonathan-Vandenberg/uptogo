@@ -1,0 +1,7 @@
+# import Dental from './DentalFragment.graphql'
+
+mutation AddDental($input: DentalInput!) {
+  addDental(input: $input) {
+    ...Dental
+  }
+}

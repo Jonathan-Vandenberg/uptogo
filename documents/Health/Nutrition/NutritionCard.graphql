@@ -1,0 +1,7 @@
+# import NutritionCard from "./NutritionCardFragment.graphql"
+
+query NutritionCard {
+  nutritionCard {
+    ...NutritionCard
+  }
+}

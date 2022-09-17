@@ -1,0 +1,7 @@
+# import Nursing from "./NursingFragment.graphql"
+
+query Nursing($id: ID!) {
+  nursing(id: $id) {
+    ...Nursing
+  }
+}

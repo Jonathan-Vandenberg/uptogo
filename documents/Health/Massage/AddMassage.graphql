@@ -1,0 +1,7 @@
+# import Massage from './MassageFragment.graphql'
+
+mutation AddMassage($input: MassageInput!) {
+  addMassage(input: $input) {
+    ...Massage
+  }
+}

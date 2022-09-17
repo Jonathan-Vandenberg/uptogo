@@ -1745,7 +1745,7 @@ model Medicine {
   categoriesId   String? @db.ObjectId
 }
 
-model Publichealth {
+model PublicHealth {
   id             String  @id @default(auto()) @map("_id") @db.ObjectId
   category       String?
   title          String?

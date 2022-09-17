@@ -1,0 +1,7 @@
+# import Nutrition from "./NutritionFragment.graphql"
+
+query Nutrition($id: ID!) {
+  nutrition(id: $id) {
+    ...Nutrition
+  }
+}

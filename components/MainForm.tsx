@@ -49,6 +49,41 @@ import {
   GraphicDesign,
   InteriorDesign,
   Landscape,
+  Events,
+  AgedCare,
+  AgribusinessManagement,
+  Automotive,
+  Baking,
+  BankingManagement,
+  Beauty,
+  BusinessManagement,
+  Carpentry,
+  Construction,
+  Cookery,
+  Dental,
+  Education,
+  Fitness,
+  Hairdressing,
+  Health,
+  Horticulture,
+  HospitalityManagement,
+  HotelManagement,
+  HumanResources,
+  IntlBusiness,
+  LeadershipManagement,
+  Massage,
+  Medicine,
+  MentalHealth,
+  Nursing,
+  Nutrition,
+  ProjectManagement,
+  PublicHealth,
+  SocialMediaMarketing,
+  SportDevelopment,
+  SupplyManagement,
+  TravelTourism,
+  Veterinary,
+  Yoga,
 } from "../types";
 import { options } from "../lib/categories";
 import { BsPlus } from "react-icons/bs";
@@ -79,6 +114,41 @@ interface IProps {
     | DigitalMedia
     | Acting
     | Animation3D
+    | Health
+    | AgedCare
+    | Nutrition
+    | Nursing
+    | Veterinary
+    | Medicine
+    | PublicHealth
+    | Dental
+    | Massage
+    | MentalHealth
+    | Baking
+    | Cookery
+    | HospitalityManagement
+    | HotelManagement
+    | TravelTourism
+    | Events
+    | Automotive
+    | Beauty
+    | Construction
+    | Carpentry
+    | Education
+    | Fitness
+    | Hairdressing
+    | Horticulture
+    | SportDevelopment
+    | Yoga
+    | ProjectManagement
+    | BusinessManagement
+    | HumanResources
+    | BankingManagement
+    | IntlBusiness
+    | SocialMediaMarketing
+    | AgribusinessManagement
+    | SupplyManagement
+    | LeadershipManagement
     | undefined
     | null;
   add: boolean;

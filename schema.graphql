@@ -37,7 +37,7 @@ type Query {
   nursing(id: ID!): Nursing
   veterinary(id: ID!): Veterinary
   medicine(id: ID!): Medicine
-  publichealth(id: ID!): Publichealth
+  publicHealth(id: ID!): PublicHealth
   dental(id: ID!): Dental
   massage(id: ID!): Massage
   mentalHealth(id: ID!): MentalHealth
@@ -97,7 +97,7 @@ type Query {
   nursingCard: [Nursing]
   veterinaryCard: [Veterinary]
   medicineCard: [Medicine]
-  publichealthCard: [Publichealth]
+  publicHealthCard: [PublicHealth]
   dentalCard: [Dental]
   massageCard: [Massage]
   mentalHealthCard: [MentalHealth]
@@ -204,7 +204,7 @@ type Mutation {
   addNursing(input: NursingInput!): Nursing
   addVeterinary(input: VeterinaryInput!): Veterinary
   addMedicine(input: MedicineInput!): Medicine
-  addPublichealth(input: PublichealthInput!): Publichealth
+  addPublicHealth(input: PublicHealthInput!): PublicHealth
   addDental(input: DentalInput!): Dental
   addMassage(input: MassageInput!): Massage
   addMentalHealth(input: MentalHealthInput!): MentalHealth
@@ -214,7 +214,7 @@ type Mutation {
   updateNursing(input: NursingInput!): Nursing
   updateVeterinary(input: VeterinaryInput!): Veterinary
   updateMedicine(input: MedicineInput!): Medicine
-  updatePublichealth(input: PublichealthInput!): Publichealth
+  updatePublicHealth(input: PublicHealthInput!): PublicHealth
   updateDental(input: DentalInput!): Dental
   updateMassage(input: MassageInput!): Massage
   updateMentalHealth(input: MentalHealthInput!): MentalHealth
@@ -3011,7 +3011,7 @@ input MedicineInput {
   publishedDate: String
 }
 
-type Publichealth {
+type PublicHealth {
   category: String
   id: ID!
   title: String
@@ -3059,7 +3059,7 @@ type Publichealth {
   mainImage: String
   publishedDate: String
 }
-input PublichealthInput {
+input PublicHealthInput {
   category: String
   id: ID!
   title: String

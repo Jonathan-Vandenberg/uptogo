@@ -35,7 +35,7 @@ generates:
         Nursing: "@prisma/client#Nursing"
         Veterinary: "@prisma/client#Veterinary"
         Medicine: "@prisma/client#Medicine"
-        Publichealth: "@prisma/client#Publichealth"
+        PublicHealth: "@prisma/client#PublicHealth"
         Dental: "@prisma/client#Dental"
         Massage: "@prisma/client#Massage"
         MentalHealth: "@prisma/client#MentalHealth"

@@ -5,7 +5,7 @@ import { useState } from "react";
 import BlogPageHero from "../../../../components/Blog/BlogPageHero";
 import CoursesMainPage from "../../../../components/Courses/CoursesMainPage";
 import MainForm from "../../../../components/MainForm";
-import { Blockchain, useLandscapeCardQuery } from "../../../../types";
+import { Landscape, useLandscapeCardQuery } from "../../../../types";
 
 function Posts() {
   const { data, loading, error } = useLandscapeCardQuery();
@@ -25,7 +25,7 @@ function Posts() {
 }
 
 interface IProps {
-  data: Blockchain;
+  data: Landscape;
 }
 
 export const getStaticProps: GetStaticProps = async () => {

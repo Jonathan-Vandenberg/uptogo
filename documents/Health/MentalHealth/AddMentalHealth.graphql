@@ -1,0 +1,7 @@
+# import MentalHealth from './MentalHealthFragment.graphql'
+
+mutation AddMentalHealth($input: MentalHealthInput!) {
+  addMentalHealth(input: $input) {
+    ...MentalHealth
+  }
+}

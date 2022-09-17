@@ -1,0 +1,6 @@
+fragment MedicineCard on Medicine {
+  category
+  id
+  title
+  subtitle1
+}

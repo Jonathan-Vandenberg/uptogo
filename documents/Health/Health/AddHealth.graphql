@@ -1,0 +1,7 @@
+# import Health from './HealthFragment.graphql'
+
+mutation AddHealth($input: HealthInput!) {
+  addHealth(input: $input) {
+    ...Health
+  }
+}

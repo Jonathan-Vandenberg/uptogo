@@ -1,0 +1,7 @@
+# import Nutrition from './NutritionFragment.graphql'
+
+mutation UpdateNutrition($input: NutritionInput!) {
+  updateNutrition(input: $input) {
+    ...Nutrition
+  }
+}

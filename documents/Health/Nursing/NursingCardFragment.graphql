@@ -1,0 +1,6 @@
+fragment NursingCard on Nursing {
+  category
+  id
+  title
+  subtitle1
+}

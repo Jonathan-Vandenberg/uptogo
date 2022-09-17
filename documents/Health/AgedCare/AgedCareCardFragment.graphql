@@ -1,0 +1,6 @@
+fragment AgedCareCard on AgedCare {
+  category
+  id
+  title
+  subtitle1
+}

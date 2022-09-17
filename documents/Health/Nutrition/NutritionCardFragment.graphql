@@ -1,0 +1,6 @@
+fragment NutritionCard on Nutrition {
+  category
+  id
+  title
+  subtitle1
+}

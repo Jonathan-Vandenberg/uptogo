@@ -1,0 +1,7 @@
+# import VeterinaryCard from "./VeterinaryCardFragment.graphql"
+
+query VeterinaryCard {
+  veterinaryCard {
+    ...VeterinaryCard
+  }
+}

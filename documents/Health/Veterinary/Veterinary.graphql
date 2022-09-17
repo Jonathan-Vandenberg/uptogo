@@ -1,0 +1,7 @@
+# import Veterinary from "./VeterinaryFragment.graphql"
+
+query Veterinary($id: ID!) {
+  veterinary(id: $id) {
+    ...Veterinary
+  }
+}

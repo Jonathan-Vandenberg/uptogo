@@ -1,0 +1,7 @@
+# import Medicine from "./MedicineFragment.graphql"
+
+query Medicine($id: ID!) {
+  medicine(id: $id) {
+    ...Medicine
+  }
+}

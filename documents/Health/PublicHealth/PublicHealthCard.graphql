@@ -1,0 +1,7 @@
+# import PublicHealthCard from "./PublicHealthCardFragment.graphql"
+
+query PublicHealthCard {
+  publicHealthCard {
+    ...PublicHealthCard
+  }
+}

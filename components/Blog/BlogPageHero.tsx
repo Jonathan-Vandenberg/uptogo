@@ -3,26 +3,61 @@ import Image from "next/image";
 import image from "../../public/navDropdownImages/asianMale.jpg";
 import {
   Acting,
+  AgedCare,
+  AgribusinessManagement,
   Ai,
   Animation3D,
+  Automotive,
+  Baking,
+  BankingManagement,
+  Beauty,
   Blockchain,
   BlogPost,
   BusinessAnalysis,
+  BusinessManagement,
+  Carpentry,
   CloudComputing,
   ComputerNetworking,
+  Construction,
+  Cookery,
   DataManagement,
+  Dental,
   DigitalMedia,
+  Education,
+  Events,
   FashionDesign,
   Film,
+  Fitness,
   GameProgramming,
   GraphicDesign,
+  Hairdressing,
+  Health,
+  Horticulture,
+  HospitalityManagement,
+  HotelManagement,
+  HumanResources,
   InteriorDesign,
+  IntlBusiness,
   Landscape,
+  LeadershipManagement,
   MachineLearning,
+  Massage,
+  Medicine,
+  MentalHealth,
   Music,
+  Nursing,
+  Nutrition,
+  ProjectManagement,
+  PublicHealth,
+  SocialMediaMarketing,
   SoftwareDevelopment,
+  SportDevelopment,
+  SupplyManagement,
   Telecommunication,
+  TravelTourism,
+  Veterinary,
   WebDevelopment,
+  Yoga,
 } from "../../types";
 import { useEffect, useState } from "react";
 
@@ -49,6 +84,41 @@ interface IProps {
     | DigitalMedia
     | Acting
     | Animation3D
+    | Health
+    | AgedCare
+    | Nutrition
+    | Nursing
+    | Veterinary
+    | Medicine
+    | PublicHealth
+    | Dental
+    | Massage
+    | MentalHealth
+    | Baking
+    | Cookery
+    | HospitalityManagement
+    | HotelManagement
+    | TravelTourism
+    | Events
+    | Automotive
+    | Beauty
+    | Construction
+    | Carpentry
+    | Education
+    | Fitness
+    | Hairdressing
+    | Horticulture
+    | SportDevelopment
+    | Yoga
+    | ProjectManagement
+    | BusinessManagement
+    | HumanResources
+    | BankingManagement
+    | IntlBusiness
+    | SocialMediaMarketing
+    | AgribusinessManagement
+    | SupplyManagement
+    | LeadershipManagement
     | undefined
     | null;
 }
@@ -98,12 +168,12 @@ enum CategoriesEnum {
   MachineLearning = "MACHINE_LEARNING",
   Massage = "MASSAGE",
   Medicine = "MEDICINE",
-  MentalHealth = "MENTAL_HEALTH",
+  Mental_Health = "MENTAL_HEALTH",
   MusicAudio = "MUSIC_AUDIO",
   Nursing = "NURSING",
   Nutrition = "NUTRITION",
   ProjectManagement = "PROJECT_MANAGEMENT",
-  PublicHealth = "PUBLIC_HEALTH",
+  Public_Health = "PUBLIC_HEALTH",
   SocialmediaMarketing = "SOCIALMEDIA_MARKETING",
   SoftwareDevelopment = "SOFTWARE_DEVELOPMENT",
   Sport = "SPORT",
@@ -111,7 +181,7 @@ enum CategoriesEnum {
   Telecommunication = "TELECOMMUNICATION",
   TravelTourism = "TRAVEL_TOURISM",
   Trades = "TRADES",
-  Vetenary = "VETENARY",
+  Veterinary = "VETERINARY",
   WebDevelopment = "WEB_DEVELOPMENT",
   Yoga = "YOGA",
 }
@@ -225,6 +295,34 @@ export default function App({ data }: IProps) {
     }
 
     //* -------- Health -------- *//
+
+    if (c === CategoriesEnum.AgedCare) {
+      setSlug("/courses/health/aged-care/articles/" + data?.id);
+    }
+    if (c === CategoriesEnum.Nutrition) {
+      setSlug("/courses/health/nutrition/articles/" + data?.id);
+    }
+    if (c === CategoriesEnum.Nursing) {
+      setSlug("/courses/health/nursing/articles/" + data?.id);
+    }
+    if (c === CategoriesEnum.Veterinary) {
+      setSlug("/courses/health/veterinary/articles/" + data?.id);
+    }
+    if (c === CategoriesEnum.Medicine) {
+      setSlug("/courses/health/medicine/articles/" + data?.id);
+    }
+    if (c === CategoriesEnum.Public_Health) {
+      setSlug("/courses/health/public-health/articles/" + data?.id);
+    }
+    if (c === CategoriesEnum.Dental) {
+      setSlug("/courses/health/dental/articles/" + data?.id);
+    }
+    if (c === CategoriesEnum.Massage) {
+      setSlug("/courses/health/massage/articles/" + data?.id);
+    }
+    if (c === CategoriesEnum.Mental_Health) {
+      setSlug("/courses/health/mental-health/articles/" + data?.id);
+    }
 
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);

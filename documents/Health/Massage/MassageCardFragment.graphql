@@ -1,0 +1,6 @@
+fragment MassageCard on Massage {
+  category
+  id
+  title
+  subtitle1
+}

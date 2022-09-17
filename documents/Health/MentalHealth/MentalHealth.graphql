@@ -1,0 +1,7 @@
+# import MentalHealth from "./MentalHealthFragment.graphql"
+
+query MentalHealth($id: ID!) {
+  mentalHealth(id: $id) {
+    ...MentalHealth
+  }
+}
