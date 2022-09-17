@@ -85,7 +85,7 @@ const WhyUptogo = () => {
             Zealand Thụy Sĩ, Anh)
           </p>
         </div>
-        <div className="md:pt-0 md:grid-cols-1 block">
+        <div className="relative w-full mt-14 md:mt-0">
           <Image
             src={graduationWeb}
             alt="graduation picture"
