@@ -1,6 +1,9 @@
 import { useSession, signIn, signOut } from "next-auth/react";
 import Image from "next/image";
+import { useRouter } from "next/router";
+
 const AuthBtn = () => {
+  const router = useRouter();
   const { data: session, status } = useSession();
   if (status === "loading") {
     return <div className="auth-btn">loading...</div>;
@@ -27,7 +30,12 @@ const AuthBtn = () => {
         className="rounded-full"
       />
       <div className="">
-        <button onClick={() => signOut()} className="text-lg text-gray-700">
+        <button
+          onClick={() => {
+            signOut(), router.push("/");
+          }}
+          className="text-lg text-gray-700"
+        >
           Logout
         </button>
       </div>

@@ -127,12 +127,6 @@ const SideNavModal: NextPage = () => {
       </Link>
 
       <div className="flex flex-col items-center justify-evenly space-y-2 whitespace-nowrap">
-        <div onClick={() => handleClose()}>
-          <Link href="/blogs">
-            <a className="cursor-pointer px-4">News</a>
-          </Link>
-        </div>
-
         <Link href="/about">
           <a className="cursor-pointer px-4">About Us</a>
         </Link>
