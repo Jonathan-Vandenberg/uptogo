@@ -45,6 +45,7 @@ export default function App() {
           width={950}
           height={280}
           layout="responsive"
+          priority
         />
       </div>
     </>
