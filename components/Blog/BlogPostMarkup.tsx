@@ -67,6 +67,7 @@ export default function BlogPostMarkup({
   handleAdd,
   handleEdit,
 }: IProps) {
+  const { data: session, status } = useSession();
   return (
     <div>
       <ul className="border-y-2 border-gray-200 py-6 flex flex-col items-start justify-start space-y-5">
@@ -340,26 +341,28 @@ export default function BlogPostMarkup({
       {data?.reference2 && (
         <p className="text-gray-500 py-1 text">Reference: {data?.reference2}</p>
       )}
-      <div className="flex space-x-5 justify-center items-center py-6">
-        <div className="flex items-center space-x-1" onClick={handleEdit}>
-          <div className="text-xl">
-            <FaEdit size={25} className="text-orange" />
+      {session?.user?.email === "hue121999@gmail.com" && (
+        <div className="flex space-x-5 justify-center items-center py-6">
+          <div className="flex items-center space-x-1" onClick={handleEdit}>
+            <div className="text-xl">
+              <FaEdit size={25} className="text-orange" />
+            </div>
+            <p className="text-lg text-orange">Edit</p>
           </div>
-          <p className="text-lg text-orange">Edit</p>
-        </div>
-        <div className="flex items-center space-x-1" onClick={handleAdd}>
-          <div className="text-xl text-green-600">
-            <MdAddCircleOutline size={25} />
+          <div className="flex items-center space-x-1" onClick={handleAdd}>
+            <div className="text-xl text-green-600">
+              <MdAddCircleOutline size={25} />
+            </div>
+            <p className="text-lg text-green-600">Add</p>
           </div>
-          <p className="text-lg text-green-600">Add</p>
-        </div>
-        <div className="flex items-center space-x-1">
-          <div className="text-xl">
-            <MdDeleteForever size={25} className="text-red-500" />
+          <div className="flex items-center space-x-1">
+            <div className="text-xl">
+              <MdDeleteForever size={25} className="text-red-500" />
+            </div>
+            <p className="text-lg text-red-500">Delete</p>
           </div>
-          <p className="text-lg text-red-500">Delete</p>
         </div>
-      </div>
+      )}
     </div>
   );
 }
