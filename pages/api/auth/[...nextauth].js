@@ -18,4 +18,12 @@ export default NextAuth({
       clientSecret: String(process.env.FACEBOOK_CLIENT_SECRET),
     }),
   ],
+  pages: {
+    signIn: "/login",
+  },
+  callbacks: {
+    session({ session, token, user }) {
+      return session; // The return type will match the one returned in `useSession()`
+    },
+  },
 });

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Spline from "@splinetool/react-spline";
 import {
   Acting,
   Ai,
@@ -59,6 +60,12 @@ interface IProps {
   handleEdit: () => void;
 }
 
+export function Animation() {
+  return (
+    <Spline scene="https://prod.spline.design/nwlheAZ7DwGmILvC/scene.splinecode" />
+  );
+}
+
 export default function BlogMain({ data, handleEdit, handleAdd }: IProps) {
   return (
     <div className="max-w-[678px] md:max-w-[900px] mx-auto md:pt-12 pb-8">
@@ -67,15 +74,19 @@ export default function BlogMain({ data, handleEdit, handleAdd }: IProps) {
           {data?.title}
         </div>
       </div>
-      <div className="pb-8 block">
-        <Image
-          src={data?.mainImage || "https://picsum.photos/id/120/600/338"}
-          width={600}
-          height={339}
-          alt="image"
-          layout="responsive"
-        />
-      </div>
+      {data?.id === "632477c6ef7048971301fe08" ? (
+        <Animation />
+      ) : (
+        <div className="pb-8 block">
+          <Image
+            src={data?.mainImage || "https://picsum.photos/id/120/600/338"}
+            width={600}
+            height={339}
+            alt="image"
+            layout="responsive"
+          />
+        </div>
+      )}
       <div className="pb-6 px-6 md:px-0 md:pb-10">
         <div
           id="subtitle1"
