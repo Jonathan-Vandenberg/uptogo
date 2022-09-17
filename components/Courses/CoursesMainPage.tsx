@@ -75,7 +75,9 @@ export default function BlogMain({ data, handleEdit, handleAdd }: IProps) {
         </div>
       </div>
       {data?.id === "632477c6ef7048971301fe08" ? (
-        <Animation />
+        <div className="flex items-center justify-center">
+          <Animation />
+        </div>
       ) : (
         <div className="pb-8 block">
           <Image
