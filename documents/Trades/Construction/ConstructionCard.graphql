@@ -1,0 +1,7 @@
+# import ConstructionCard from "./ConstructionCardFragment.graphql"
+
+query ConstructionCard {
+  constructionCard {
+    ...ConstructionCard
+  }
+}

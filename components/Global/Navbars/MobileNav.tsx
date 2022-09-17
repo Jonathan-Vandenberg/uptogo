@@ -224,7 +224,7 @@ const SideNavModal: NextPage = () => {
           className="w-full cursor-pointer p-3 pl-6 font-semibold"
           onClick={() => handleClose()}
         >
-          <Link href={"/courses/sports-trade"}>
+          <Link href={"/courses/trades"}>
             Thương mại & Thể thao (Trade & Sports)
           </Link>
         </div>

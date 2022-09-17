@@ -1,0 +1,7 @@
+# import Construction from "./ConstructionFragment.graphql"
+
+query Construction($id: ID!) {
+  construction(id: $id) {
+    ...Construction
+  }
+}

@@ -1,0 +1,6 @@
+fragment SocialMediaMarketingCard on SocialMediaMarketing {
+  category
+  id
+  title
+  subtitle1
+}

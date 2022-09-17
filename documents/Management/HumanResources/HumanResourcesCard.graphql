@@ -1,0 +1,7 @@
+# import HumanResourcesCard from "./HumanResourcesCardFragment.graphql"
+
+query HumanResourcesCard {
+  humanResourcesCard {
+    ...HumanResourcesCard
+  }
+}

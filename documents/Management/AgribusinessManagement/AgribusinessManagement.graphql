@@ -1,0 +1,7 @@
+# import AgribusinessManagement from "./AgribusinessManagementFragment.graphql"
+
+query AgribusinessManagement($id: ID!) {
+  agribusinessManagement(id: $id) {
+    ...AgribusinessManagement
+  }
+}

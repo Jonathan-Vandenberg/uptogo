@@ -1,0 +1,6 @@
+fragment SupplyManagementCard on SupplyManagement {
+  category
+  id
+  title
+  subtitle1
+}

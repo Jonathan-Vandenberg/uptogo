@@ -1,0 +1,7 @@
+# import Fitness from './FitnessFragment.graphql'
+
+mutation UpdateFitness($input: FitnessInput!) {
+  updateFitness(input: $input) {
+    ...Fitness
+  }
+}

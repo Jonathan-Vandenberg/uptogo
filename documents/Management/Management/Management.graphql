@@ -1,0 +1,7 @@
+# import Management from "./ManagementFragment.graphql"
+
+query Management($id: ID!) {
+  management(id: $id) {
+    ...Management
+  }
+}

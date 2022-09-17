@@ -1,0 +1,6 @@
+fragment HorticultureCard on Horticulture {
+  category
+  id
+  title
+  subtitle1
+}

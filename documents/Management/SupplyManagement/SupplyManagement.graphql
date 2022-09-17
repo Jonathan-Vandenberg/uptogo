@@ -1,0 +1,7 @@
+# import SupplyManagement from "./SupplyManagementFragment.graphql"
+
+query SupplyManagement($id: ID!) {
+  supplyManagement(id: $id) {
+    ...SupplyManagement
+  }
+}

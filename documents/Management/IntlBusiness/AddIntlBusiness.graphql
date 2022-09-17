@@ -1,0 +1,7 @@
+# import IntlBusiness from './IntlBusinessFragment.graphql'
+
+mutation AddIntlBusiness($input: IntlBusinessInput!) {
+  addIntlBusiness(input: $input) {
+    ...IntlBusiness
+  }
+}

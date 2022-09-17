@@ -1,0 +1,6 @@
+fragment HairdressingCard on Hairdressing {
+  category
+  id
+  title
+  subtitle1
+}

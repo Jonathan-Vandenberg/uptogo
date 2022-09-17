@@ -1,0 +1,7 @@
+# import SportDevelopment from './SportDevelopmentFragment.graphql'
+
+mutation UpdateSportDevelopment($input: SportDevelopmentInput!) {
+  updateSportDevelopment(input: $input) {
+    ...SportDevelopment
+  }
+}

@@ -1,0 +1,7 @@
+# import ProjectManagement from "./ProjectManagementFragment.graphql"
+
+query ProjectManagement($id: ID!) {
+  projectManagement(id: $id) {
+    ...ProjectManagement
+  }
+}

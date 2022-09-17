@@ -1,0 +1,6 @@
+fragment AgribusinessManagementCard on AgribusinessManagement {
+  category
+  id
+  title
+  subtitle1
+}

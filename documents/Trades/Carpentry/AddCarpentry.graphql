@@ -1,0 +1,7 @@
+# import Carpentry from './CarpentryFragment.graphql'
+
+mutation AddCarpentry($input: CarpentryInput!) {
+  addCarpentry(input: $input) {
+    ...Carpentry
+  }
+}

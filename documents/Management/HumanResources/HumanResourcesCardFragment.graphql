@@ -1,0 +1,6 @@
+fragment HumanResourcesCard on HumanResources {
+  category
+  id
+  title
+  subtitle1
+}

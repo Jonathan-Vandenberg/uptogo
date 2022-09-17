@@ -1,0 +1,7 @@
+# import IntlBusinessCard from "./IntlBusinessCardFragment.graphql"
+
+query IntlBusinessCard {
+  intlBusinessCard {
+    ...IntlBusinessCard
+  }
+}

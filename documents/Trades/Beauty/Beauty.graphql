@@ -1,0 +1,7 @@
+# import Beauty from "./BeautyFragment.graphql"
+
+query Beauty($id: ID!) {
+  beauty(id: $id) {
+    ...Beauty
+  }
+}

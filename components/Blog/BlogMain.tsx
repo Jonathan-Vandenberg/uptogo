@@ -38,6 +38,7 @@ import {
   Landscape,
   LeadershipManagement,
   MachineLearning,
+  Management,
   Massage,
   Medicine,
   MentalHealth,
@@ -51,6 +52,7 @@ import {
   SportDevelopment,
   SupplyManagement,
   Telecommunication,
+  Trades,
   TravelTourism,
   Veterinary,
   WebDevelopment,
@@ -117,6 +119,8 @@ interface IProps {
     | AgribusinessManagement
     | SupplyManagement
     | LeadershipManagement
+    | Management
+    | Trades
     | undefined
     | null;
   handleAdd: () => void;

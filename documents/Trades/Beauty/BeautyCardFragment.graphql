@@ -1,0 +1,6 @@
+fragment BeautyCard on Beauty {
+  category
+  id
+  title
+  subtitle1
+}

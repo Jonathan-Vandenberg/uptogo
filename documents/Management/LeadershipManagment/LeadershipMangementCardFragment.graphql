@@ -1,0 +1,6 @@
+fragment LeadershipManagementCard on LeadershipManagement {
+  category
+  id
+  title
+  subtitle1
+}

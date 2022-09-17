@@ -1,0 +1,7 @@
+# import SocialMediaMarketingCard from "./SocialMediaMarketingCardFragment.graphql"
+
+query SocialMediaMarketingCard {
+  socialMediaMarketingCard {
+    ...SocialMediaMarketingCard
+  }
+}

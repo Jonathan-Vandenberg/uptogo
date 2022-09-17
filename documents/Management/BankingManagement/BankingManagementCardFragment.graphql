@@ -1,0 +1,6 @@
+fragment BankingManagementCard on BankingManagement {
+  category
+  id
+  title
+  subtitle1
+}

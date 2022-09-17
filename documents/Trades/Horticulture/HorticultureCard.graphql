@@ -1,0 +1,7 @@
+# import HorticultureCard from "./HorticultureCardFragment.graphql"
+
+query HorticultureCard {
+  horticultureCard {
+    ...HorticultureCard
+  }
+}

@@ -1,0 +1,7 @@
+# import LeadershipManagement from './LeadershipManagementFragment.graphql'
+
+mutation UpdateLeadershipManagement($input: LeadershipManagementInput!) {
+  updateLeadershipManagement(input: $input) {
+    ...LeadershipManagement
+  }
+}

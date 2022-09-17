@@ -1,0 +1,6 @@
+fragment EducationCard on Education {
+  category
+  id
+  title
+  subtitle1
+}

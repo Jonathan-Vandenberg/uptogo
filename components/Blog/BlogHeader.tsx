@@ -39,6 +39,7 @@ import type {
   Landscape,
   LeadershipManagement,
   MachineLearning,
+  Management,
   Massage,
   Medicine,
   MentalHealth,
@@ -52,6 +53,7 @@ import type {
   SportDevelopment,
   SupplyManagement,
   Telecommunication,
+  Trades,
   TravelTourism,
   Veterinary,
   WebDevelopment,
@@ -122,6 +124,8 @@ interface IProps {
     | AgribusinessManagement
     | SupplyManagement
     | LeadershipManagement
+    | Management
+    | Trades
     | undefined
     | null;
 }

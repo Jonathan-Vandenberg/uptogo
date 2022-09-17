@@ -1,0 +1,7 @@
+# import ProjectManagement from './ProjectManagementFragment.graphql'
+
+mutation UpdateProjectManagement($input: ProjectManagementInput!) {
+  updateProjectManagement(input: $input) {
+    ...ProjectManagement
+  }
+}

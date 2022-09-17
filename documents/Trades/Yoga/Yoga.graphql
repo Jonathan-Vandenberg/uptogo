@@ -1,0 +1,7 @@
+# import Yoga from "./YogaFragment.graphql"
+
+query Yoga($id: ID!) {
+  yoga(id: $id) {
+    ...Yoga
+  }
+}

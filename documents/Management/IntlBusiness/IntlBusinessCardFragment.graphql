@@ -1,0 +1,6 @@
+fragment IntlBusinessCard on IntlBusiness {
+  category
+  id
+  title
+  subtitle1
+}

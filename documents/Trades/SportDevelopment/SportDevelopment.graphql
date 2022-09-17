@@ -1,0 +1,7 @@
+# import SportDevelopment from "./SportDevelopmentFragment.graphql"
+
+query SportDevelopment($id: ID!) {
+  sportDevelopment(id: $id) {
+    ...SportDevelopment
+  }
+}

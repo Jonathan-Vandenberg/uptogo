@@ -1,0 +1,7 @@
+# import ProjectManagementCard from "./ProjectManagementCardFragment.graphql"
+
+query ProjectManagementCard {
+  projectManagementCard {
+    ...ProjectManagementCard
+  }
+}

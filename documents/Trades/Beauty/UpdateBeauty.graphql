@@ -1,0 +1,7 @@
+# import Beauty from './BeautyFragment.graphql'
+
+mutation UpdateBeauty($input: BeautyInput!) {
+  updateBeauty(input: $input) {
+    ...Beauty
+  }
+}

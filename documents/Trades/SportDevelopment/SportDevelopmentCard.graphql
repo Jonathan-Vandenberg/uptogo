@@ -1,0 +1,7 @@
+# import SportDevelopmentCard from "./SportDevelopmentCardFragment.graphql"
+
+query SportDevelopmentCard {
+  sportDevelopmentCard {
+    ...SportDevelopmentCard
+  }
+}

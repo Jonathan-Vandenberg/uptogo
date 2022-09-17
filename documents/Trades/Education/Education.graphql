@@ -1,0 +1,7 @@
+# import Education from "./EducationFragment.graphql"
+
+query Education($id: ID!) {
+  education(id: $id) {
+    ...Education
+  }
+}

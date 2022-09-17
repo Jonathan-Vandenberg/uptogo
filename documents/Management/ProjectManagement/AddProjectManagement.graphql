@@ -1,0 +1,7 @@
+# import ProjectManagement from './ProjectManagement.graphql'
+
+mutation AddProjectManagement($input: ProjectManagementInput!) {
+  addProjectManagement(input: $input) {
+    ...ProjectManagement
+  }
+}

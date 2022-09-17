@@ -1,0 +1,7 @@
+# import YogaCard from "./YogaCardFragment.graphql"
+
+query YogaCard {
+  yogaCard {
+    ...YogaCard
+  }
+}

@@ -85,6 +85,8 @@ import {
   Veterinary,
   Yoga,
   Hospitality,
+  Trades,
+  Management,
 } from "../types";
 import { options } from "../lib/categories";
 import { BsPlus } from "react-icons/bs";
@@ -151,6 +153,8 @@ interface IProps {
     | SupplyManagement
     | LeadershipManagement
     | Hospitality
+    | Management
+    | Trades
     | undefined
     | null;
   add: boolean;

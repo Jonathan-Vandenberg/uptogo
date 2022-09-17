@@ -1,0 +1,6 @@
+fragment ProjectManagementCard on ProjectManagement {
+  category
+  id
+  title
+  subtitle1
+}

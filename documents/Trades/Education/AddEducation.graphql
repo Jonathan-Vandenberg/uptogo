@@ -1,0 +1,7 @@
+# import Education from './EducationFragment.graphql'
+
+mutation AddEducation($input: EducationInput!) {
+  addEducation(input: $input) {
+    ...Education
+  }
+}

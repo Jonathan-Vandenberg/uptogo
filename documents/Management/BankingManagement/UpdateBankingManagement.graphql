@@ -1,0 +1,7 @@
+# import BankingManagement from './BankingManagementFragment.graphql'
+
+mutation UpdateBankingManagement($input: BankingManagementInput!) {
+  updateBankingManagement(input: $input) {
+    ...BankingManagement
+  }
+}

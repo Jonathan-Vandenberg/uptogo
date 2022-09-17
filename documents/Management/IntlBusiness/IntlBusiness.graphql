@@ -1,0 +1,7 @@
+# import IntlBusiness from "./IntlBusinessFragment.graphql"
+
+query IntlBusiness($id: ID!) {
+  intlBusiness(id: $id) {
+    ...IntlBusiness
+  }
+}

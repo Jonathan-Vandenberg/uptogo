@@ -1,0 +1,7 @@
+# import BeautyCard from "./BeautyCardFragment.graphql"
+
+query BeautyCard {
+  beautyCard {
+    ...BeautyCard
+  }
+}

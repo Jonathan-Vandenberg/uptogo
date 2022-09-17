@@ -1,0 +1,7 @@
+# import SocialMediaMarketing from './SocialMediaMarketingFragment.graphql'
+
+mutation AddSocialMediaMarketing($input: SocialMediaMarketingInput!) {
+  addSocialMediaMarketing(input: $input) {
+    ...SocialMediaMarketing
+  }
+}

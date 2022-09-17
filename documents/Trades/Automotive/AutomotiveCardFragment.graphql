@@ -1,0 +1,6 @@
+fragment AutomotiveCard on Automotive {
+  category
+  id
+  title
+  subtitle1
+}

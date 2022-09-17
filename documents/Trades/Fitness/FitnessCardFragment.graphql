@@ -1,0 +1,6 @@
+fragment FitnessCard on Fitness {
+  category
+  id
+  title
+  subtitle1
+}

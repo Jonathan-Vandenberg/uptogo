@@ -1,0 +1,7 @@
+# import Hairdressing from './Hairdressing.graphql'
+
+mutation AddHairdressing($input: HairdressingInput!) {
+  addHairdressing(input: $input) {
+    ...Hairdressing
+  }
+}

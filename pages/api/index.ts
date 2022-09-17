@@ -457,6 +457,249 @@ const resolvers: Resolvers = {
       })
       return events
   },
+  automotiveCard: (_, __, {prisma}) => {
+      const automotive = prisma.automotive.findMany()
+      return automotive
+  },
+  automotive: (_, {id}, {prisma}) => {
+      const automotive = prisma.automotive.findUnique({
+        where: {
+          id
+        }
+      })
+      return automotive
+  },
+  beautyCard: (_, __, {prisma}) => {
+      const beauty = prisma.beauty.findMany()
+      return beauty
+  },
+  beauty: (_, {id}, {prisma}) => {
+      const beauty = prisma.beauty.findUnique({
+        where: {
+          id
+        }
+      })
+      return beauty
+  },
+  constructionCard: (_, __, {prisma}) => {
+      const construction = prisma.construction.findMany()
+      return construction
+  },
+  construction: (_, {id}, {prisma}) => {
+      const construction = prisma.construction.findUnique({
+        where: {
+          id
+        }
+      })
+      return construction
+  },
+  carpentryCard: (_, __, {prisma}) => {
+      const carpentry = prisma.carpentry.findMany()
+      return carpentry
+  },
+  carpentry: (_, {id}, {prisma}) => {
+      const carpentry = prisma.carpentry.findUnique({
+        where: {
+          id
+        }
+      })
+      return carpentry
+  },
+  educationCard: (_, __, {prisma}) => {
+      const education = prisma.education.findMany()
+      return education
+  },
+  education: (_, {id}, {prisma}) => {
+      const education = prisma.education.findUnique({
+        where: {
+          id
+        }
+      })
+      return education
+  },
+  fitnessCard: (_, __, {prisma}) => {
+      const fitness = prisma.fitness.findMany()
+      return fitness
+  },
+  fitness: (_, {id}, {prisma}) => {
+      const fitness = prisma.fitness.findUnique({
+        where: {
+          id
+        }
+      })
+      return fitness
+  },
+  hairdressingCard: (_, __, {prisma}) => {
+      const hairdressing = prisma.hairdressing.findMany()
+      return hairdressing
+  },
+  hairdressing: (_, {id}, {prisma}) => {
+      const hairdressing = prisma.hairdressing.findUnique({
+        where: {
+          id
+        }
+      })
+      return hairdressing
+  },
+  horticultureCard: (_, __, {prisma}) => {
+      const horticulture = prisma.horticulture.findMany()
+      return horticulture
+  },
+  horticulture: (_, {id}, {prisma}) => {
+      const horticulture = prisma.horticulture.findUnique({
+        where: {
+          id
+        }
+      })
+      return horticulture
+  },
+  sportDevelopmentCard: (_, __, {prisma}) => {
+      const sportDevelopment = prisma.sportDevelopment.findMany()
+      return sportDevelopment
+  },
+  sportDevelopment: (_, {id}, {prisma}) => {
+      const sportDevelopment = prisma.sportDevelopment.findUnique({
+        where: {
+          id
+        }
+      })
+      return sportDevelopment
+  },
+  yogaCard: (_, __, {prisma}) => {
+      const yoga = prisma.yoga.findMany()
+      return yoga
+  },
+  yoga: (_, {id}, {prisma}) => {
+      const yoga = prisma.yoga.findUnique({
+        where: {
+          id
+        }
+      })
+      return yoga
+  },
+trades: (_, {id}, {prisma}) => {
+      const trades = prisma.trades.findUnique({
+        where: {
+          id
+        }
+      })
+      return trades
+  },projectManagementCard: (_, __, {prisma}) => {
+      const projectManagement = prisma.projectManagement.findMany()
+      return projectManagement
+  },
+  projectManagement: (_, {id}, {prisma}) => {
+      const projectManagement = prisma.projectManagement.findUnique({
+        where: {
+          id
+        }
+      })
+      return projectManagement
+  },
+  businessManagementCard: (_, __, {prisma}) => {
+      const businessManagement = prisma.businessManagement.findMany()
+      return businessManagement
+  },
+  businessManagement: (_, {id}, {prisma}) => {
+      const businessManagement = prisma.businessManagement.findUnique({
+        where: {
+          id
+        }
+      })
+      return businessManagement
+  },
+  humanResourcesCard: (_, __, {prisma}) => {
+      const humanResources = prisma.humanResources.findMany()
+      return humanResources
+  },
+  humanResources: (_, {id}, {prisma}) => {
+      const humanResources = prisma.humanResources.findUnique({
+        where: {
+          id
+        }
+      })
+      return humanResources
+  },
+  bankingManagementCard: (_, __, {prisma}) => {
+      const bankingManagement = prisma.bankingManagement.findMany()
+      return bankingManagement
+  },
+  bankingManagement: (_, {id}, {prisma}) => {
+      const bankingManagement = prisma.bankingManagement.findUnique({
+        where: {
+          id
+        }
+      })
+      return bankingManagement
+  },
+  intlBusinessCard: (_, __, {prisma}) => {
+      const intlBusiness = prisma.intlBusiness.findMany()
+      return intlBusiness
+  },
+  intlBusiness: (_, {id}, {prisma}) => {
+      const intlBusiness = prisma.intlBusiness.findUnique({
+        where: {
+          id
+        }
+      })
+      return intlBusiness
+  },
+  socialMediaMarketingCard: (_, __, {prisma}) => {
+      const socialMediaMarketing = prisma.socialMediaMarketing.findMany()
+      return socialMediaMarketing
+  },
+  socialMediaMarketing: (_, {id}, {prisma}) => {
+      const socialMediaMarketing = prisma.socialMediaMarketing.findUnique({
+        where: {
+          id
+        }
+      })
+      return socialMediaMarketing
+  },
+  agribusinessManagementCard: (_, __, {prisma}) => {
+      const agribusinessManagement = prisma.agribusinessManagement.findMany()
+      return agribusinessManagement
+  },
+  agribusinessManagement: (_, {id}, {prisma}) => {
+      const agribusinessManagement = prisma.agribusinessManagement.findUnique({
+        where: {
+          id
+        }
+      })
+      return agribusinessManagement
+  },
+  supplyManagementCard: (_, __, {prisma}) => {
+      const supplyManagement = prisma.supplyManagement.findMany()
+      return supplyManagement
+  },
+  supplyManagement: (_, {id}, {prisma}) => {
+      const supplyManagement = prisma.supplyManagement.findUnique({
+        where: {
+          id
+        }
+      })
+      return supplyManagement
+  },
+  leadershipManagementCard: (_, __, {prisma}) => {
+      const leadershipManagement = prisma.leadershipManagement.findMany()
+      return leadershipManagement
+  },
+  leadershipManagement: (_, {id}, {prisma}) => {
+      const leadershipManagement = prisma.leadershipManagement.findUnique({
+        where: {
+          id
+        }
+      })
+      return leadershipManagement
+  },
+  management: (_, {id}, {prisma}) => {
+      const management = prisma.management.findUnique({
+        where: {
+          id
+        }
+      })
+      return management
+  },
   },
   Mutation: {
     updateBlogPost: async (_, {input}, {prisma}) => {

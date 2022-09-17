@@ -1,0 +1,6 @@
+fragment YogaCard on Yoga {
+  category
+  id
+  title
+  subtitle1
+}

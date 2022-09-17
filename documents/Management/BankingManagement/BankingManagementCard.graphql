@@ -1,0 +1,7 @@
+# import BankingManagementCard from "./BankingManagementCardFragment.graphql"
+
+query BankingManagementCard {
+  bankingManagementCard {
+    ...BankingManagementCard
+  }
+}

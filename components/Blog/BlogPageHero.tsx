@@ -153,7 +153,7 @@ enum CategoriesEnum {
   Fitness = "FITNESS",
   GameProgramming = "GAME_PROGRAMMING",
   GraphicDesign = "GRAPHIC_DESIGN",
-  Haridressing = "HARIDRESSING",
+  Hairdressing = "HAIRDRESSING",
   Health = "HEALTH",
   Hospitality = "HOSPITALITY",
   HospitalityManagement = "HOSPITALITY_MANAGEMENT",
@@ -167,6 +167,7 @@ enum CategoriesEnum {
   LeadershipManagement = "LEADERSHIP_MANAGEMENT",
   MachineLearning = "MACHINE_LEARNING",
   Massage = "MASSAGE",
+  Management = "MANAGEMENT",
   Medicine = "MEDICINE",
   Mental_Health = "MENTAL_HEALTH",
   MusicAudio = "MUSIC_AUDIO",
@@ -345,6 +346,76 @@ export default function App({ data }: IProps) {
     }
     if (c === CategoriesEnum.Events) {
       setSlug("/courses/hospitality/events/articles/" + data?.id);
+    }
+
+    //* -------- Management -------- *//
+
+    if (c === CategoriesEnum.ProjectManagement) {
+      setSlug("/courses/management/project-management/articles/" + data?.id);
+    }
+    if (c === CategoriesEnum.BusinessManagement) {
+      setSlug("/courses/management/business-management/articles/" + data?.id);
+    }
+    if (c === CategoriesEnum.HumanResources) {
+      setSlug("/courses/management/human-resources/articles/" + data?.id);
+    }
+    if (c === CategoriesEnum.BankingManagement) {
+      setSlug("/courses/management/banking-management/articles/" + data?.id);
+    }
+    if (c === CategoriesEnum.InternationalBusiness) {
+      setSlug(
+        "/courses/management/international-business/articles/" + data?.id
+      );
+    }
+    if (c === CategoriesEnum.SocialmediaMarketing) {
+      setSlug(
+        "/courses/management/social-media-marketing/articles/" + data?.id
+      );
+    }
+    if (c === CategoriesEnum.AgribusinessManagement) {
+      setSlug(
+        "/courses/management/agriculture-business-management/articles/" +
+          data?.id
+      );
+    }
+    if (c === CategoriesEnum.SupplychainManagement) {
+      setSlug("/courses/management/supply-management/articles/" + data?.id);
+    }
+    if (c === CategoriesEnum.LeadershipManagement) {
+      setSlug("/courses/management/leadership-management/articles/" + data?.id);
+    }
+
+    //* -------- Trades -------- *//
+
+    if (c === CategoriesEnum.Automotive) {
+      setSlug("/courses/trades/automotive/articles/" + data?.id);
+    }
+    if (c === CategoriesEnum.Beauty) {
+      setSlug("/courses/trades/beauty/articles/" + data?.id);
+    }
+    if (c === CategoriesEnum.Construction) {
+      setSlug("/courses/trades/construction/articles/" + data?.id);
+    }
+    if (c === CategoriesEnum.Carpentry) {
+      setSlug("/courses/trades/carpentry/articles/" + data?.id);
+    }
+    if (c === CategoriesEnum.Education) {
+      setSlug("/courses/trades/education/articles/" + data?.id);
+    }
+    if (c === CategoriesEnum.Fitness) {
+      setSlug("/courses/trades/fitness/articles/" + data?.id);
+    }
+    if (c === CategoriesEnum.Hairdressing) {
+      setSlug("/courses/trades/hairdressing/articles/" + data?.id);
+    }
+    if (c === CategoriesEnum.Horticulture) {
+      setSlug("/courses/trades/horticulture/articles/" + data?.id);
+    }
+    if (c === CategoriesEnum.Sport) {
+      setSlug("/courses/trades/sport-development/articles/" + data?.id);
+    }
+    if (c === CategoriesEnum.Yoga) {
+      setSlug("/courses/trades/yoga/articles/" + data?.id);
     }
 
     // eslint-disable-next-line react-hooks/exhaustive-deps

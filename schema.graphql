@@ -61,7 +61,7 @@ type Query {
   yoga(id: ID!): Yoga
 
   projectManagement(id: ID!): ProjectManagement
-  pusinessManagement(id: ID!): BusinessManagement
+  businessManagement(id: ID!): BusinessManagement
   humanResources(id: ID!): HumanResources
   bankingManagement(id: ID!): BankingManagement
   intlBusiness(id: ID!): IntlBusiness

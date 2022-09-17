@@ -1,0 +1,7 @@
+# import Horticulture from "./HorticultureFragment.graphql"
+
+query Horticulture($id: ID!) {
+  horticulture(id: $id) {
+    ...Horticulture
+  }
+}

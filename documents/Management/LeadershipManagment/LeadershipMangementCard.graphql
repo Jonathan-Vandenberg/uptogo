@@ -1,0 +1,7 @@
+# import LeadershipManagementCard from "./LeadershipManagementCardFragment.graphql"
+
+query LeadershipManagementCard {
+  leadershipManagementCard {
+    ...LeadershipManagementCard
+  }
+}

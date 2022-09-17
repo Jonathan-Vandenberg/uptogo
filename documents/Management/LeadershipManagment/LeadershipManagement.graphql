@@ -1,0 +1,7 @@
+# import LeadershipManagement from "./LeadershipManagementFragment.graphql"
+
+query LeadershipManagement($id: ID!) {
+  leadershipManagement(id: $id) {
+    ...LeadershipManagement
+  }
+}

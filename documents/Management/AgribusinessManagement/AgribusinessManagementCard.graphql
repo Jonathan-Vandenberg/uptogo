@@ -1,0 +1,7 @@
+# import AgribusinessManagementCard from "./AgribusinessManagementCardFragment.graphql"
+
+query AgribusinessManagementCard {
+  agribusinessManagementCard {
+    ...AgribusinessManagementCard
+  }
+}

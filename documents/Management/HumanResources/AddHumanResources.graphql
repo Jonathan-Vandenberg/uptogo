@@ -1,0 +1,7 @@
+# import HumanResources from './HumanResourcesFragment.graphql'
+
+mutation AddHumanResources($input: HumanResourcesInput!) {
+  addHumanResources(input: $input) {
+    ...HumanResources
+  }
+}

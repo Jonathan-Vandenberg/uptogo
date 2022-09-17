@@ -17,62 +17,97 @@ export default function App() {
             alt="IT image"
             layout="fill" // required
             objectFit="cover" // change to suit your needs
-            className="" // just an example
+            priority
           />
         </div>
         <div className="text-lg text-gray-700 bg-sky-100 w-full text-center py-2">
-          IT Majors
+          IT
         </div>
       </div>
-      <div className="flex flex-col items-center justify-center border-2 border-orange rounded-lg hover:border-lightBlue p-5">
-        <p className="flex text-lg text-orange  items-center justify-center p-6">
-          Managament
-        </p>
-        <Link href={"/courses/managament"} className="">
-          <p className="text-xl text-gray-700 text-thin md:pt-2 border-b-8 border-orange">
-            READ MORE
-          </p>
-        </Link>
+      <div
+        className="flex items-center justify-center flex-col cursor-pointer"
+        onClick={() => router.push("/courses/management")}
+      >
+        <div className="w-full h-full relative">
+          <Image
+            src={it}
+            alt="management image"
+            layout="fill" // required
+            objectFit="cover" // change to suit your needs
+            priority
+          />
+        </div>
+        <div className="text-lg text-gray-700 bg-sky-100 w-full text-center py-2">
+          Management
+        </div>
       </div>
-      <div className="flex flex-col items-center justify-center border-2 border-orange rounded-lg hover:border-lightBlue p-5">
-        <p className="flex text-lg text-orange  items-center justify-center p-6">
+      <div
+        className="flex items-center justify-center flex-col cursor-pointer"
+        onClick={() => router.push("/courses/design")}
+      >
+        <div className="w-full h-full relative">
+          <Image
+            src={it}
+            alt="design image"
+            layout="fill" // required
+            objectFit="cover" // change to suit your needs
+            priority
+          />
+        </div>
+        <div className="text-lg text-gray-700 bg-sky-100 w-full text-center py-2">
           Design
-        </p>
-        <Link href={"/courses/design"} className="">
-          <p className="text-xl text-gray-700 text-thin md:pt-2 border-b-8 border-orange">
-            READ MORE
-          </p>
-        </Link>
+        </div>
       </div>
-      <div className="flex flex-col items-center justify-center border-2 border-orange rounded-lg hover:border-lightBlue p-5">
-        <p className="flex text-lg text-orange  items-center justify-center p-6">
+      <div
+        className="flex items-center justify-center flex-col cursor-pointer"
+        onClick={() => router.push("/courses/health")}
+      >
+        <div className="w-full h-full relative">
+          <Image
+            src={it}
+            alt="health image"
+            layout="fill" // required
+            objectFit="cover" // change to suit your needs
+            priority
+          />
+        </div>
+        <div className="text-lg text-gray-700 bg-sky-100 w-full text-center py-2">
           Health
-        </p>
-        <Link href={"/courses/health"} className="">
-          <p className="text-xl text-gray-700 text-thin md:pt-2 border-b-8 border-orange">
-            READ MORE
-          </p>
-        </Link>
+        </div>
       </div>
-      <div className="flex flex-col items-center justify-center border-2 border-orange rounded-lg hover:border-lightBlue p-5">
-        <p className="flex text-lg text-orange  items-center justify-center p-6">
+      <div
+        className="flex items-center justify-center flex-col cursor-pointer"
+        onClick={() => router.push("/courses/hospitality")}
+      >
+        <div className="w-full h-full relative">
+          <Image
+            src={it}
+            alt="hospitality image"
+            layout="fill" // required
+            objectFit="cover" // change to suit your needs
+            priority
+          />
+        </div>
+        <div className="text-lg text-gray-700 bg-sky-100 w-full text-center py-2">
           Hospitality
-        </p>
-        <Link href={"/courses/hospitality"} className="">
-          <p className="text-xl text-gray-700 text-thin md:pt-2 border-b-8 border-orange">
-            READ MORE
-          </p>
-        </Link>
+        </div>
       </div>
-      <div className="flex flex-col items-center justify-center border-2 border-orange rounded-lg hover:border-lightBlue p-5">
-        <p className="flex text-lg text-orange  items-center justify-center p-6">
+      <div
+        className="flex items-center justify-center flex-col cursor-pointer"
+        onClick={() => router.push("/courses/trades")}
+      >
+        <div className="w-full h-full relative">
+          <Image
+            src={it}
+            alt="trades image"
+            layout="fill" // required
+            objectFit="cover" // change to suit your needs
+            priority
+          />
+        </div>
+        <div className="text-lg text-gray-700 bg-sky-100 w-full text-center py-2">
           Trades
-        </p>
-        <Link href={"/courses/trades"} className="">
-          <p className="text-xl text-gray-700 text-thin md:pt-2 border-b-8 border-orange">
-            READ MORE
-          </p>
-        </Link>
+        </div>
       </div>
     </div>
   );

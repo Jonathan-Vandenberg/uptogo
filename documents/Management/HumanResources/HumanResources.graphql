@@ -1,0 +1,7 @@
+# import HumanResources from "./HumanResourcesFragment.graphql"
+
+query HumanResources($id: ID!) {
+  humanResources(id: $id) {
+    ...HumanResources
+  }
+}

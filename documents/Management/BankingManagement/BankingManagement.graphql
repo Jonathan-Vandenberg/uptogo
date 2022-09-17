@@ -1,0 +1,7 @@
+# import BankingManagement from "./BankingManagementFragment.graphql"
+
+query BankingManagement($id: ID!) {
+  bankingManagement(id: $id) {
+    ...BankingManagement
+  }
+}

@@ -1,0 +1,7 @@
+# import AgribusinessManagement from './AgribusinessManagementFragment.graphql'
+
+mutation addAgribusinessManagement($input: AgribusinessManagementInput!) {
+  addAgribusinessManagement(input: $input) {
+    ...AgribusinessManagement
+  }
+}

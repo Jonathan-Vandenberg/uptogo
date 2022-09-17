@@ -1,0 +1,7 @@
+# import Yoga from './YogaFragment.graphql'
+
+mutation UpdateYoga($input: YogaInput!) {
+  updateYoga(input: $input) {
+    ...Yoga
+  }
+}

@@ -1,0 +1,7 @@
+# import Carpentry from "./CarpentryFragment.graphql"
+
+query Carpentry($id: ID!) {
+  carpentry(id: $id) {
+    ...Carpentry
+  }
+}

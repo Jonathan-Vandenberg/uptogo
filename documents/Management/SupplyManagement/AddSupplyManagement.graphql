@@ -1,0 +1,7 @@
+# import SupplyManagement from './SupplyManagementFragment.graphql'
+
+mutation AddSupplyManagement($input: SupplyManagementInput!) {
+  addSupplyManagement(input: $input) {
+    ...SupplyManagement
+  }
+}

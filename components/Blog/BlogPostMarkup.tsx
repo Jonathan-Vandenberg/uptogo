@@ -64,6 +64,8 @@ import type {
   Veterinary,
   Yoga,
   Hospitality,
+  Management,
+  Trades,
 } from "../../types";
 import EmailButton from "../UI/EmailButton";
 
@@ -128,6 +130,8 @@ interface IProps {
     | SupplyManagement
     | LeadershipManagement
     | Hospitality
+    | Management
+    | Trades
     | undefined
     | null;
   handleAdd: () => void;

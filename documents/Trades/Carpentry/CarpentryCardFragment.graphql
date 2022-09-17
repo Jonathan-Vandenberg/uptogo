@@ -1,0 +1,6 @@
+fragment CarpentryCard on Carpentry {
+  category
+  id
+  title
+  subtitle1
+}

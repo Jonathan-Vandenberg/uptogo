@@ -1,0 +1,7 @@
+# import EducationCard from "./EducationCardFragment.graphql"
+
+query EducationCard {
+  educationCard {
+    ...EducationCard
+  }
+}

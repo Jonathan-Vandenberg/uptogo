@@ -1,0 +1,6 @@
+fragment ConstructionCard on Construction {
+  category
+  id
+  title
+  subtitle1
+}

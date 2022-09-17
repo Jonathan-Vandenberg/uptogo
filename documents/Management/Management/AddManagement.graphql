@@ -1,0 +1,7 @@
+# import Management from './ManagementFragment.graphql'
+
+mutation AddManagement($input: ManagementInput!) {
+  addManagement(input: $input) {
+    ...Management
+  }
+}

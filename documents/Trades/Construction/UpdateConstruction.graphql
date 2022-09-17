@@ -1,0 +1,7 @@
+# import Construction from './ConstructionFragment.graphql'
+
+mutation UpdateConstruction($input: ConstructionInput!) {
+  updateConstruction(input: $input) {
+    ...Construction
+  }
+}

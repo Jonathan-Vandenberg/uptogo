@@ -1,0 +1,7 @@
+# import Hairdressing from "./HairdressingFragment.graphql"
+
+query Hairdressing($id: ID!) {
+  hairdressing(id: $id) {
+    ...Hairdressing
+  }
+}

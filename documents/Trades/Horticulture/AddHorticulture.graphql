@@ -1,0 +1,7 @@
+# import Horticulture from './HorticultureFragment.graphql'
+
+mutation AddHorticulture($input: HorticultureInput!) {
+  addHorticulture(input: $input) {
+    ...Horticulture
+  }
+}

@@ -1,0 +1,6 @@
+fragment BusinessManagementCard on BusinessManagement {
+  category
+  id
+  title
+  subtitle1
+}

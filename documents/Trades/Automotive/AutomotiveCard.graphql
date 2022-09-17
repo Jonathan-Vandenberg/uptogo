@@ -1,0 +1,7 @@
+# import AutomotiveCard from "./AutomotiveCardFragment.graphql"
+
+query AutomotiveCard {
+  automotiveCard {
+    ...AutomotiveCard
+  }
+}

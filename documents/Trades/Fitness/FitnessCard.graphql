@@ -1,0 +1,7 @@
+# import FitnessCard from "./FitnessCardFragment.graphql"
+
+query FitnessCard {
+  fitnessCard {
+    ...FitnessCard
+  }
+}

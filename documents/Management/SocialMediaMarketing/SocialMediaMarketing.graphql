@@ -1,0 +1,7 @@
+# import SocialMediaMarketing from "./SocialMediaMarketingFragment.graphql"
+
+query SocialMediaMarketing($id: ID!) {
+  socialMediaMarketing(id: $id) {
+    ...SocialMediaMarketing
+  }
+}

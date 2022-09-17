@@ -1,0 +1,7 @@
+# import Automotive from './AutomotiveFragment.graphql'
+
+mutation addAutomotive($input: AutomotiveInput!) {
+  addAutomotive(input: $input) {
+    ...Automotive
+  }
+}

@@ -1,0 +1,7 @@
+# import Automotive from "./AutomotiveFragment.graphql"
+
+query Automotive($id: ID!) {
+  automotive(id: $id) {
+    ...Automotive
+  }
+}

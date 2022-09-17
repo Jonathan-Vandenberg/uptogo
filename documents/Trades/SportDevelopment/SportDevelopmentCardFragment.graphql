@@ -1,0 +1,6 @@
+fragment SportDevelopmentCard on SportDevelopment {
+  category
+  id
+  title
+  subtitle1
+}

@@ -1,0 +1,7 @@
+# import BusinessManagement from './BusinessManagementFragment.graphql'
+
+mutation UpdateBusinessManagement($input: BusinessManagementInput!) {
+  updateBusinessManagement(input: $input) {
+    ...BusinessManagement
+  }
+}
