@@ -80,7 +80,7 @@ export default function BlogMain({ data, handleEdit, handleAdd }: IProps) {
           <Animation />
         </div>
       ) : ( */}
-      <div className="w-60 translate-x-1/2 pb-8 block">
+      <div className="pb-8 block">
         {
           <Image
             src={data?.mainImage || logo}
