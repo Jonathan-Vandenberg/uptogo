@@ -19,14 +19,8 @@ export default function App() {
           </p>
         </Link>
       </div>
-      <div className="h-full w-full col-span-2 max-w-[300px] block px-20">
-        <Image
-          src={logo}
-          alt="blog Image"
-          width={350}
-          height={339}
-          layout="responsive"
-        />
+      <div className="col-span-2 relative w-60 h-60">
+        <Image src={logo} alt="blog Image" layout="fill" priority />
       </div>
     </div>
   );

@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import image from "../../public/navDropdownImages/asianMale.jpg";
+import logo from "../../public/fullLogo.png";
 import {
   Acting,
   AgedCare,
@@ -328,31 +328,30 @@ export default function App({ data }: IProps) {
   }, []);
 
   return (
-    <div className="px-5 max-w-[678px] md:max-w-[900px] mx-auto w-full h-full">
-      <div className="bg-body md:px-10 pb-6 md:p-0 md:my-6 md:flex-row flex-col-reverse flex items-center justify-center">
+    <div className="px-5 md:px-0 max-w-[678px] md:max-w-[900px] mx-auto w-full h-full container">
+      <div className="bg-body md:px-0 px-8  md:flex-row flex-col-reverse flex items-center justify-evenly">
         <div className="bg-body px-4 flex items-start flex-col justify-start w-full h-full md:w-2/5 py-6">
-          <p className="text-gray-400 -mb-4 md:-mb-6 md:text-lg">
-            {data?.category}
-          </p>
-          <h1 className="text-gray-700 logoFont text-3xl py-6 md:pb-4 leading-12">
-            {data?.title}
-          </h1>
-          <p className="text-2xl text-gray-600 line-clamp-3">
-            {data?.subtitle1}
-          </p>
-          <Link href={slug} className="">
-            <p className="text-xl text-center pt-6 text-gray-700 text-thin border-b-8 border-orange">
-              READ MORE
+          <p className="text-gray-400 text-lg">{data?.category}</p>
+          <div className="flex flex-col items-center justify-between space-y-5">
+            <h1 className="text-gray-700 logoFont text-3xl leading-12">
+              {data?.title}
+            </h1>
+            <p className="text-2xl text-gray-600 line-clamp-3">
+              {data?.subtitle1}
             </p>
-          </Link>
+            <Link href={slug}>
+              <p className="text-xl text-center text-gray-700 text-thin border-b-8 border-orange cursor-pointer">
+                READ MORE
+              </p>
+            </Link>
+          </div>
         </div>
-        <div className="block w-3/5">
+        <div className="relative w-60 h-60 mt-6 md:my-6">
           <Image
-            src="https://picsum.photos/id/192/600/400"
+            src={data?.mainImage || logo}
             alt="blog Image"
-            width={600}
-            height={338}
-            layout="responsive"
+            layout="fill"
+            priority
           />
         </div>
       </div>

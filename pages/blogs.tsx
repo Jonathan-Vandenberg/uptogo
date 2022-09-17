@@ -8,7 +8,7 @@ interface IProps {
 
 export default function App({ data }: IProps) {
   return (
-    <div className="container flex flex-col items-center justify-center space-y-12">
+    <div className="flex flex-col space-y-12 mx-auto md:py-20">
       {data?.map((post) => (
         <div key={post?.id} className="w-full">
           <BlogPageHero data={post} />

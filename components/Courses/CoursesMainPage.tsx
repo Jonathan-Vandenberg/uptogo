@@ -160,6 +160,7 @@ export default function BlogMain({ data, handleEdit, handleAdd }: IProps) {
             height={data?.mainImage ? 339 : 300}
             alt="image"
             layout="responsive"
+            priority
           />
         }
       </div>

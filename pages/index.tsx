@@ -39,14 +39,9 @@ export default function App() {
           <Popup />
         </div>
         <CustomerReview customer={customer} />
-        <Image
-          src={image}
-          alt="image"
-          width={950}
-          height={280}
-          layout="responsive"
-          priority
-        />
+        <div className="block w-full">
+          <Image src={image} alt="image" layout="responsive" />
+        </div>
       </div>
     </>
   );
