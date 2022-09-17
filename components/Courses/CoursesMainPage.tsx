@@ -68,6 +68,8 @@ export function Animation() {
 }
 
 export default function BlogMain({ data, handleEdit, handleAdd }: IProps) {
+  const styles = data?.mainImage ? "pb-8 block" : "block p-20";
+
   return (
     <div className="max-w-[678px] md:max-w-[900px] mx-auto md:pt-12 pb-8">
       <div className="pb-6 px-6 md:px-0 md:pb-10">
@@ -80,7 +82,7 @@ export default function BlogMain({ data, handleEdit, handleAdd }: IProps) {
           <Animation />
         </div>
       ) : ( */}
-      <div className="pb-8 block">
+      <div className={styles}>
         {
           <Image
             src={data?.mainImage || logo}
