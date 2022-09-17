@@ -62,7 +62,7 @@ interface IProps {
 
 export function Animation() {
   return (
-    <Spline scene="https://prod.spline.design/90ca4A5JJrvryyAp/scene.splinecode" />
+    <Spline scene="https://prod.spline.design/nwlheAZ7DwGmILvC/scene.splinecode" />
   );
 }
 
