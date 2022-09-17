@@ -224,13 +224,14 @@ const SideNavModal: NextPage = () => {
             Thương mại & Thể thao (Trade & Sports)
           </Link>
         </div>
-        <Link
-          href={"/courses/design"}
-          className="w-full cursor-pointer p-3 pl-6 font-semibold"
+        <div
+          className="w-full cursor-pointer p-3 pl-6"
           onClick={() => handleClose()}
         >
-          <div>Thiết kế (Design)</div>
-        </Link>
+          <Link href={"/courses/design"}>
+            <p className="font-semibold">Thiết kế (Design)</p>
+          </Link>
+        </div>
       </div>
     </div>
   );
