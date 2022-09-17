@@ -6,6 +6,7 @@ import BlogPageHero from "../../../../components/Blog/BlogPageHero";
 import CoursesMainPage from "../../../../components/Courses/CoursesMainPage";
 import MainForm from "../../../../components/MainForm";
 import { Music, useMusicCardQuery } from "../../../../types";
+import prisma from "../../../../lib/prisma";
 
 function Posts() {
   const { data, loading, error } = useMusicCardQuery();
@@ -29,7 +30,6 @@ interface IProps {
 }
 
 export const getStaticProps: GetStaticProps = async () => {
-  const prisma = new PrismaClient();
   const data = await prisma?.music.findUnique({
     where: {
       id: "632460d8ef7048971301fdde",

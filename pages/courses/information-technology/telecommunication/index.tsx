@@ -10,6 +10,7 @@ import {
   Telecommunication,
   useTelecommunicationCardQuery,
 } from "../../../../types";
+import prisma from "../../../../lib/prisma";
 
 function Posts() {
   const { data, loading, error } = useTelecommunicationCardQuery();
@@ -33,7 +34,6 @@ interface IProps {
 }
 
 export const getStaticProps: GetStaticProps = async () => {
-  const prisma = new PrismaClient();
   const data = await prisma?.telecommunication.findUnique({
     where: {
       id: "631db7e4628acdf2748fc17f",

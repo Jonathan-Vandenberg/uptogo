@@ -1,10 +1,10 @@
-import { PrismaClient } from "@prisma/client";
 import { GetStaticProps } from "next";
 import { useRouter } from "next/router";
 import { useState } from "react";
 import BlogPageHero from "../../../../components/Blog/BlogPageHero";
 import CoursesMainPage from "../../../../components/Courses/CoursesMainPage";
 import MainForm from "../../../../components/MainForm";
+import prisma from "../../../../lib/prisma";
 import { Dental, useDentalCardQuery } from "../../../../types";
 
 function Posts() {
@@ -29,7 +29,6 @@ interface IProps {
 }
 
 export const getStaticProps: GetStaticProps = async () => {
-  const prisma = new PrismaClient();
   const data = await prisma?.dental.findUnique({
     where: {
       id: "632567491c5010b649ddea1b",

@@ -1,4 +1,3 @@
-import { PrismaClient } from "@prisma/client";
 import { GetStaticProps } from "next";
 import { useRouter } from "next/router";
 import { useState } from "react";
@@ -9,6 +8,7 @@ import {
   SoftwareDevelopment,
   useSoftwareDevelopmentCardQuery,
 } from "../../../../types";
+import prisma from "../../../../lib/prisma";
 
 function Posts() {
   const { data, loading, error } = useSoftwareDevelopmentCardQuery();
@@ -28,7 +28,6 @@ function Posts() {
 }
 
 export const getStaticProps: GetStaticProps = async () => {
-  const prisma = new PrismaClient();
   const data = await prisma?.softwareDevelopment.findUnique({
     where: {
       id: "631d68109f9c5ab336b3d04e",

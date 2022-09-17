@@ -1,10 +1,10 @@
-import { PrismaClient } from "@prisma/client";
 import { GetStaticProps } from "next";
 import { useRouter } from "next/router";
 import { useState } from "react";
 import BlogPageHero from "../../../../components/Blog/BlogPageHero";
 import CoursesMainPage from "../../../../components/Courses/CoursesMainPage";
 import MainForm from "../../../../components/MainForm";
+import prisma from "../../../../lib/prisma";
 import { Animation3D, useAnimation3DCardQuery } from "../../../../types";
 
 function Posts() {
@@ -25,7 +25,6 @@ function Posts() {
 }
 
 export const getStaticProps: GetStaticProps = async () => {
-  const prisma = new PrismaClient();
   const data = await prisma?.animation3D.findUnique({
     where: {
       id: "632477c6ef7048971301fe08",

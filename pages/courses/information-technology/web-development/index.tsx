@@ -1,4 +1,3 @@
-import { PrismaClient } from "@prisma/client";
 import { GetStaticProps } from "next";
 import { useRouter } from "next/router";
 import { useState } from "react";
@@ -6,6 +5,7 @@ import BlogPageHero from "../../../../components/Blog/BlogPageHero";
 import CoursesMainPage from "../../../../components/Courses/CoursesMainPage";
 import MainForm from "../../../../components/MainForm";
 import { useWebDevelopmentCardQuery, WebDevelopment } from "../../../../types";
+import prisma from "../../../../lib/prisma";
 
 function Posts() {
   const { data, loading, error } = useWebDevelopmentCardQuery();
@@ -29,7 +29,6 @@ interface IProps {
 }
 
 export const getStaticProps: GetStaticProps = async () => {
-  const prisma = new PrismaClient();
   const data = await prisma?.webDevelopment.findUnique({
     where: {
       id: "631db80a628acdf2748fc185",

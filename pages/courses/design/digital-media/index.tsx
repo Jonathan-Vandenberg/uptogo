@@ -1,10 +1,10 @@
-import { PrismaClient } from "@prisma/client";
 import { GetStaticProps } from "next";
 import { useRouter } from "next/router";
 import { useState } from "react";
 import BlogPageHero from "../../../../components/Blog/BlogPageHero";
 import CoursesMainPage from "../../../../components/Courses/CoursesMainPage";
 import MainForm from "../../../../components/MainForm";
+import prisma from "../../../../lib/prisma";
 import { DigitalMedia, useDigitalMediaCardQuery } from "../../../../types";
 
 function Posts() {
@@ -29,7 +29,6 @@ interface IProps {
 }
 
 export const getStaticProps: GetStaticProps = async () => {
-  const prisma = new PrismaClient();
   const data = await prisma?.digitalMedia.findUnique({
     where: {
       id: "63247e33ef7048971301fe33",

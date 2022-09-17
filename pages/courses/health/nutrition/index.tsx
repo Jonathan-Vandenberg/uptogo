@@ -1,4 +1,3 @@
-import { PrismaClient } from "@prisma/client";
 import { GetStaticProps } from "next";
 import { useRouter } from "next/router";
 import { useState } from "react";
@@ -6,6 +5,7 @@ import BlogPageHero from "../../../../components/Blog/BlogPageHero";
 import CoursesMainPage from "../../../../components/Courses/CoursesMainPage";
 import MainForm from "../../../../components/MainForm";
 import { Nutrition, useNutritionCardQuery } from "../../../../types";
+import prisma from "../../../../lib/prisma";
 
 function Posts() {
   const { data, loading, error } = useNutritionCardQuery();
@@ -25,7 +25,6 @@ function Posts() {
 }
 
 export const getStaticProps: GetStaticProps = async () => {
-  const prisma = new PrismaClient();
   const data = await prisma?.nutrition.findUnique({
     where: {
       id: "632568f01c5010b649ddea39",

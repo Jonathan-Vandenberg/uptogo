@@ -1,11 +1,11 @@
 import { GraphQLYogaError } from "@graphql-yoga/node";
-import { PrismaClient } from "@prisma/client";
 import { GetStaticProps } from "next";
 import { useRouter } from "next/router";
 import { useState } from "react";
 import CoursesMainPage from "../../../components/Courses/CoursesMainPage";
 import CoursesNarrowCards from "../../../components/Courses/CoursesNarrowCards";
 import MainForm from "../../../components/MainForm";
+import prisma from "../../../lib/prisma";
 import { Design } from "../../../types";
 
 const cardData = [
@@ -52,7 +52,6 @@ interface IProps {
 }
 
 export const getStaticProps: GetStaticProps = async () => {
-  const prisma = new PrismaClient();
   const data = await prisma.design.findUnique({
     where: {
       id: "63245ef7ef7048971301fdd9",

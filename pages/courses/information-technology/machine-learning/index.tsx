@@ -1,16 +1,14 @@
+import { GetStaticProps } from "next";
+import { useRouter } from "next/router";
 import { useState } from "react";
-import BlogMain from "../../../../components/Blog/BlogMain";
 import BlogPageHero from "../../../../components/Blog/BlogPageHero";
+import CoursesMainPage from "../../../../components/Courses/CoursesMainPage";
 import MainForm from "../../../../components/MainForm";
+import prisma from "../../../../lib/prisma";
 import {
   MachineLearning,
   useMachineLearningCardQuery,
-  useMachineLearningQuery,
 } from "../../../../types";
-import { useRouter } from "next/router";
-import { PrismaClient } from "@prisma/client";
-import { GetStaticProps } from "next";
-import CoursesMainPage from "../../../../components/Courses/CoursesMainPage";
 
 function Posts() {
   const { data, loading, error } = useMachineLearningCardQuery();
@@ -30,7 +28,6 @@ function Posts() {
 }
 
 export const getStaticProps: GetStaticProps = async () => {
-  const prisma = new PrismaClient();
   const data = await prisma?.machineLearning.findUnique({
     where: {
       id: "631db7a3628acdf2748fc179",

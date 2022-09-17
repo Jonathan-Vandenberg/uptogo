@@ -1,12 +1,11 @@
-import { useState } from "react";
-import BlogMain from "../../../../components/Blog/BlogMain";
-import BlogPageHero from "../../../../components/Blog/BlogPageHero";
-import MainForm from "../../../../components/MainForm";
-import { Acting, useActingCardQuery } from "../../../../types";
-import { useRouter } from "next/router";
-import { PrismaClient } from "@prisma/client";
 import { GetStaticProps } from "next";
+import { useRouter } from "next/router";
+import { useState } from "react";
+import BlogPageHero from "../../../../components/Blog/BlogPageHero";
 import CoursesMainPage from "../../../../components/Courses/CoursesMainPage";
+import MainForm from "../../../../components/MainForm";
+import prisma from "../../../../lib/prisma";
+import { Acting, useActingCardQuery } from "../../../../types";
 
 function Posts() {
   const { data, loading, error } = useActingCardQuery();
@@ -26,7 +25,6 @@ function Posts() {
 }
 
 export const getStaticProps: GetStaticProps = async () => {
-  const prisma = new PrismaClient();
   const data = await prisma?.acting.findUnique({
     where: {
       id: "63247e78ef7048971301fe3a",
