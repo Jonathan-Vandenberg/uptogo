@@ -17,7 +17,7 @@ export default function MediaCard({ customer }: { customer: Review[] }) {
         <Card
           key={item.name}
           sx={{ maxWidth: 345 }}
-          className="w-full h-full shadow-md"
+          className="w-full h-full shadow-xl"
         >
           <CardContent>
             <div className="flex items-center justify-between py-4">
