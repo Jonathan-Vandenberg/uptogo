@@ -7,7 +7,12 @@ import Image from "next/image";
 import router from "next/router";
 import { NextPage } from "next/types";
 import * as React from "react";
-import { FaHeart, FaMobileAlt, FaRegQuestionCircle } from "react-icons/fa";
+import {
+  FaHeart,
+  FaMobileAlt,
+  FaRegQuestionCircle,
+  FaUser,
+} from "react-icons/fa";
 import {
   MdOutlineArrowForwardIos,
   MdOutlineArrowBackIos,
@@ -19,6 +24,7 @@ import Link from "next/link";
 import { HiOutlineLocationMarker } from "react-icons/hi";
 import { useState } from "react";
 import { useSession, signIn, signOut } from "next-auth/react";
+import AuthBtn from "../../UI/AuthBtn";
 
 const style = {
   position: "absolute" as "absolute",
@@ -59,6 +65,10 @@ const SideNavModal: NextPage = () => {
 
   const MainMenu = () => (
     <div className="h-[screen] w-[80vw] space-y-5">
+      <div className="flex items-center justify-center mt-4">
+        <AuthBtn />
+      </div>
+
       <div
         onClick={() => {
           setShowMajors(!showMajors);
