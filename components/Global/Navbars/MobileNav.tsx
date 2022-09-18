@@ -73,7 +73,9 @@ const SideNavModal: NextPage = () => {
         }}
         className="flex items-center justify-between pt-2"
       >
-        <p className="cursor-pointer pl-4 font-semibold">Ngành Học</p>
+        <p className="font-semibold pb-1 pl-4 text-xl logoFont text-gray-700 cursor-pointer">
+          Ngành Học
+        </p>
         <div className="px-4">
           <MdOutlineArrowForwardIos />
         </div>
@@ -83,7 +85,9 @@ const SideNavModal: NextPage = () => {
         onClick={() => setShowHouseholdMenu(!showHouseholdMenu)}
         className="flex items-center justify-between"
       >
-        <p className="cursor-pointer pl-4 font-semibold">Sự kiện</p>
+        <p className="font-semibold pb-1 pl-4 text-xl logoFont text-gray-700 cursor-pointer">
+          Sự kiện
+        </p>
         <div className="px-4">
           <MdOutlineArrowForwardIos />
         </div>
@@ -93,7 +97,9 @@ const SideNavModal: NextPage = () => {
         onClick={() => setShowSMEMenu(!showSMEMenu)}
         className="flex items-center justify-between"
       >
-        <p className="cursor-pointer pl-4 font-semibold">Visa</p>
+        <p className="font-semibold pb-1 pl-4 text-xl logoFont text-gray-700 cursor-pointer">
+          Visa
+        </p>
         <div className="px-4">
           <MdOutlineArrowForwardIos />
         </div>
@@ -103,7 +109,9 @@ const SideNavModal: NextPage = () => {
         onClick={() => setShowCorporate(!showCorporate)}
         className="flex items-center justify-between"
       >
-        <p className="cursor-pointer pl-4 font-semibold">English</p>
+        <p className="font-semibold pb-1 pl-4 text-xl logoFont text-gray-700 cursor-pointer">
+          English
+        </p>
         <div className="px-4">
           <MdOutlineArrowForwardIos />
         </div>
@@ -111,7 +119,9 @@ const SideNavModal: NextPage = () => {
 
       <div onClick={() => handleClose()}>
         <Link href={"/blogs"}>
-          <p className="cursor-pointer pl-4 pb-1 font-semibold">Blog</p>
+          <p className="font-semibold pb-1 pl-4 text-xl logoFont text-gray-700 cursor-pointer">
+            Blog
+          </p>
         </Link>
       </div>
 
@@ -162,18 +172,6 @@ const SideNavModal: NextPage = () => {
           </a>
         </div>
       </Link>
-
-      <div
-        className="flex cursor-pointer items-center justify-start space-x-2 px-4"
-        onClick={() => {
-          handleClose(), signIn();
-        }}
-      >
-        <div className="text-xl">
-          <MdAdminPanelSettings />
-        </div>
-        <p>Admin Login</p>
-      </div>
     </div>
   );
 
@@ -194,7 +192,9 @@ const SideNavModal: NextPage = () => {
           className="w-full cursor-pointer p-3 pl-6 pt-6 font-semibold"
         >
           <Link href={"/courses/information-technology"}>
-            <p className="font-semibold">Công nghệ thông tin</p>
+            <p className="font-semibold text-xl logoFont text-gray-700 cursor-pointer">
+              Công nghệ thông tin
+            </p>
           </Link>
         </div>
 
@@ -202,32 +202,50 @@ const SideNavModal: NextPage = () => {
           className="w-full cursor-pointer p-3 pl-6 font-semibold"
           onClick={() => handleClose()}
         >
-          <Link href={"/courses/hospitality"}>Nhà hàng – Khách sạn</Link>
+          <Link href={"/courses/hospitality"}>
+            <p className="font-semibold text-xl logoFont text-gray-700 cursor-pointer">
+              Nhà hàng – Khách sạn
+            </p>
+          </Link>
         </div>
         <div
           className="w-full cursor-pointer p-3 pl-6 font-semibold"
           onClick={() => handleClose()}
         >
-          <Link href={"/courses/management"}>Quản Lý</Link>
+          <Link href={"/courses/management"}>
+            <p className="font-semibold text-xl logoFont text-gray-700 cursor-pointer">
+              Quản Lý
+            </p>
+          </Link>
         </div>
         <div
           className="w-full cursor-pointer p-3 pl-6 font-semibold"
           onClick={() => handleClose()}
         >
-          <Link href={"/courses/health"}>Sức khỏe</Link>
+          <Link href={"/courses/health"}>
+            <p className="font-semibold text-xl logoFont text-gray-700 cursor-pointer">
+              Sức khỏe
+            </p>
+          </Link>
         </div>
         <div
           className="w-full cursor-pointer p-3 pl-6 font-semibold"
           onClick={() => handleClose()}
         >
-          <Link href={"/courses/trades"}>Thương mại & Thể thao</Link>
+          <Link href={"/courses/trades"}>
+            <p className="font-semibold text-xl logoFont text-gray-700 cursor-pointer">
+              Thương mại & Thể thao
+            </p>
+          </Link>
         </div>
         <div
           className="w-full cursor-pointer p-3 pl-6"
           onClick={() => handleClose()}
         >
           <Link href={"/courses/design"}>
-            <p className="font-semibold">Thiết kế</p>
+            <p className="font-semibold text-xl logoFont text-gray-700 cursor-pointer">
+              Thiết kế
+            </p>
           </Link>
         </div>
       </div>
