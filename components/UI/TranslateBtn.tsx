@@ -14,8 +14,8 @@ export default function App() {
         <div className="text-xl">
           <GrLanguage size={20} />
         </div>
-        {translate && <p>EN</p>}
-        {!translate && <p>VN</p>}
+        {!translate && <p>EN</p>}
+        {translate && <p>VN</p>}
       </div>
     </div>
   );
