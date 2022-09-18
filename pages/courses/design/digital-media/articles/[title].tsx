@@ -10,7 +10,7 @@ export default function Blog() {
   const [add, setAdd] = useState(false);
 
   const { asPath } = useRouter();
-  const id = asPath.slice(57, 81);
+  const id = asPath.slice(39, 63);
 
   const handleAdd = () => {
     setShowForm(!showForm);
