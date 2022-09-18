@@ -7,49 +7,7 @@ import CoursesNarrowCards from "../../../components/Courses/CoursesNarrowCards";
 import MainForm from "../../../components/MainForm";
 import prisma from "../../../lib/prisma";
 import { Trades } from "../../../types";
-
-const cardData = [
-  {
-    course: "Automotive",
-    link: "/courses/trades/automotive",
-  },
-  {
-    course: "Beauty",
-    link: "/courses/trades/beauty",
-  },
-  {
-    course: "Construction",
-    link: "/courses/trades/construction",
-  },
-  {
-    course: "Carpentry",
-    link: "/courses/trades/carpentry",
-  },
-  {
-    course: "Education",
-    link: "/courses/trades/education",
-  },
-  {
-    course: "Fitness",
-    link: "/courses/trades/fitness",
-  },
-  {
-    course: "Hairdressing",
-    link: "/courses/trades/hairdressing",
-  },
-  {
-    course: "Horticulture",
-    link: "/courses/trades/horticulture",
-  },
-  {
-    course: "Sports Development",
-    link: "/courses/trades/sport-development",
-  },
-  {
-    course: "Yoga",
-    link: "/courses/trades/yoga",
-  },
-];
+import { tradeLinks } from "../../../lib/links";
 
 interface IProps {
   data: Trades;
@@ -126,7 +84,7 @@ export default function App({ data }: IProps) {
         </div>
       )}
       {data ? (
-        <CoursesNarrowCards cardData={cardData} />
+        <CoursesNarrowCards cardData={tradeLinks} />
       ) : (
         <div>
           <p>Loading...</p>

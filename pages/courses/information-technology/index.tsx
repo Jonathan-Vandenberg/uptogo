@@ -7,53 +7,7 @@ import CoursesNarrowCards from "../../../components/Courses/CoursesNarrowCards";
 import MainForm from "../../../components/MainForm";
 import { It } from "../../../types";
 import prisma from "../../../lib/prisma";
-
-const cardData = [
-  {
-    course: "Phát triển phần mền",
-    link: "/courses/information-technology/software-development",
-  },
-  {
-    course: "Công nghệ tiền ảo",
-    link: "/courses/information-technology/blockchain-technology",
-  },
-  {
-    course: "Quản lý dữ liệu",
-    link: "/courses/information-technology/data-management",
-  },
-  {
-    course: "Phương tiện máy móc",
-    link: "/courses/information-technology/machine-learning",
-  },
-  {
-    course: "Phát triển Website",
-    link: "/courses/information-technology/web-development",
-  },
-  {
-    course: "Lập trình trò chơi",
-    link: "/courses/information-technology/game-programming",
-  },
-  {
-    course: "Viễn thông",
-    link: "/courses/information-technology/telecommunication",
-  },
-  {
-    course: "Phân tích kinh doanh",
-    link: "/courses/information-technology/business-analysis",
-  },
-  {
-    course: "Điện toán đám mây",
-    link: "/courses/information-technology/cloud-computing",
-  },
-  {
-    course: "Mạng máy tính",
-    link: "/courses/information-technology/computer-networking",
-  },
-  {
-    course: "Trí tuệ nhân tạo",
-    link: "/courses/information-technology/artificial-intelligence",
-  },
-];
+import { itLinks } from "../../../lib/links";
 
 interface IProps {
   data: It;
@@ -130,7 +84,7 @@ export default function App({ data }: IProps) {
         </div>
       )}
       {data ? (
-        <CoursesNarrowCards cardData={cardData} />
+        <CoursesNarrowCards cardData={itLinks} />
       ) : (
         <div>
           <p>Loading...</p>
@@ -139,15 +93,3 @@ export default function App({ data }: IProps) {
     </div>
   );
 }
-
-// •	Phát triển phần mền – Software Development
-// •	Mạng máy tính – Compute Networking
-// •	Điện toán đám mây – Cloud Computing
-// •	Phân tích kinh doanh – Business Analysis
-// •	Viễn thông – Telecommunication
-// •	Lập trình trò chơi - Game Programming
-// •	Phát triển Website – Website Development
-// •	Phương tiện máy móc – Machine Learing
-// •	Quản lý dữ liệu – Data Management
-// •	Công nghệ tiền ảo – Blockchain Technology
-// •	Trí tuệ nhân tạo - Artificial Intelligence (AI) Aåå

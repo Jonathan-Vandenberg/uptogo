@@ -7,45 +7,7 @@ import CoursesNarrowCards from "../../../components/Courses/CoursesNarrowCards";
 import MainForm from "../../../components/MainForm";
 import prisma from "../../../lib/prisma";
 import { Health } from "../../../types";
-
-const cardData = [
-  {
-    course: "Aged Care",
-    link: "/courses/health/aged-care",
-  },
-  {
-    course: "dentistry",
-    link: "/courses/health/dental",
-  },
-  {
-    course: "Massage",
-    link: "/courses/health/massage",
-  },
-  {
-    course: "Medicine",
-    link: "/courses/health/medicine",
-  },
-  {
-    course: "Mental Health",
-    link: "/courses/health/mental-health",
-  },
-  {
-    course: "Nursing",
-    link: "/courses/health/nursing",
-  },
-  {
-    course: "Nutrition",
-    link: "/courses/health/nutrition",
-  },
-  {
-    course: "Public Health",
-    link: "/courses/health/public-health",
-  },
-  {
-    course: "Veterinary",
-    link: "/courses/health/veterinary",
-  },
-];
+import { healthLinks } from "../../../lib/links";
 
 interface IProps {
   data: Health;
@@ -122,7 +84,7 @@ export default function App({ data }: IProps) {
         </div>
       )}
       {data ? (
-        <CoursesNarrowCards cardData={cardData} />
+        <CoursesNarrowCards cardData={healthLinks} />
       ) : (
         <div>
           <p>Loading...</p>

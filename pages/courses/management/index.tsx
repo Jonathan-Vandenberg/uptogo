@@ -7,45 +7,7 @@ import CoursesNarrowCards from "../../../components/Courses/CoursesNarrowCards";
 import MainForm from "../../../components/MainForm";
 import prisma from "../../../lib/prisma";
 import { Management } from "../../../types";
-
-const cardData = [
-  {
-    course: "Project Management",
-    link: "/courses/management/project-management",
-  },
-  {
-    course: "Business Management",
-    link: "/courses/management/business-management",
-  },
-  {
-    course: "Human Resources",
-    link: "/courses/management/human-resources",
-  },
-  {
-    course: "Banking Management",
-    link: "/courses/management/banking-management",
-  },
-  {
-    course: "Intl Business",
-    link: "/courses/management/international-business",
-  },
-  {
-    course: "Social Media Marketing",
-    link: "/courses/management/social-media-marketing",
-  },
-  {
-    course: "Agri business Management",
-    link: "/courses/management/agriculture-business-management",
-  },
-  {
-    course: "Supply Management",
-    link: "/courses/management/supply-management",
-  },
-  {
-    course: "Leadership Management",
-    link: "/courses/management/leadership-management",
-  },
-];
+import { managementLinks } from "../../../lib/links";
 
 interface IProps {
   data: Management;
@@ -122,7 +84,7 @@ export default function App({ data }: IProps) {
         </div>
       )}
       {data ? (
-        <CoursesNarrowCards cardData={cardData} />
+        <CoursesNarrowCards cardData={managementLinks} />
       ) : (
         <div>
           <p>Loading...</p>

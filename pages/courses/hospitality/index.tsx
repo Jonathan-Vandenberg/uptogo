@@ -7,33 +7,7 @@ import CoursesNarrowCards from "../../../components/Courses/CoursesNarrowCards";
 import MainForm from "../../../components/MainForm";
 import prisma from "../../../lib/prisma";
 import { Hospitality } from "../../../types";
-
-const cardData = [
-  {
-    course: "Commercial-cooking",
-    link: "/courses/hospitality/commercial-cooking",
-  },
-  {
-    course: "Baking",
-    link: "/courses/hospitality/baking",
-  },
-  {
-    course: "Events",
-    link: "/courses/hospitality/events",
-  },
-  {
-    course: "Hospitality Management",
-    link: "/courses/hospitality/hospitality-management",
-  },
-  {
-    course: "Hotel Management",
-    link: "/courses/hospitality/hotel-management",
-  },
-  {
-    course: "Travel & Tourism",
-    link: "/courses/hospitality/travel-tourism",
-  },
-];
+import { hospitalityLinks } from "../../../lib/links";
 
 interface IProps {
   data: Hospitality;
@@ -110,7 +84,7 @@ export default function App({ data }: IProps) {
         </div>
       )}
       {data ? (
-        <CoursesNarrowCards cardData={cardData} />
+        <CoursesNarrowCards cardData={hospitalityLinks} />
       ) : (
         <div>
           <p>Loading...</p>
