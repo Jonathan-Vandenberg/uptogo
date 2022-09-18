@@ -14,6 +14,7 @@ import InitDivider from "../components/UI/InitDivider";
 import store from "../store/store";
 import { Provider } from "react-redux";
 import Head from "next/head";
+import CoursesLink from "../components/Global/CoursesLink";
 
 function MyApp({ Component, pageProps: { session, ...pageProps } }: AppProps) {
   // const [splashComplete, setSplashComplete] = useState(false);
@@ -101,6 +102,7 @@ function MyApp({ Component, pageProps: { session, ...pageProps } }: AppProps) {
             <InitDivider />
           </div>
           <Component {...pageProps} />
+          <CoursesLink />
           <Footer />
         </ApolloProvider>
       </SessionProvider>
