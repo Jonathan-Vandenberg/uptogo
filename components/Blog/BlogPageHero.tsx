@@ -1,69 +1,77 @@
 import Link from "next/link";
 import Image from "next/image";
 import logo from "../../public/fullLogo.png";
+import { useEffect, useState } from "react";
+import { CategoriesEnum } from "../../lib/categories-enum";
 import {
-  Acting,
-  AgedCare,
-  AgribusinessManagement,
-  Ai,
-  Animation3D,
-  Automotive,
-  Baking,
-  BankingManagement,
-  Beauty,
-  Blockchain,
   BlogPost,
+  Telecommunication,
   BusinessAnalysis,
-  BusinessManagement,
-  Carpentry,
   CloudComputing,
   ComputerNetworking,
-  Construction,
-  Cookery,
+  SoftwareDevelopment,
+  GameProgramming,
+  WebDevelopment,
+  MachineLearning,
   DataManagement,
-  Dental,
-  DigitalMedia,
-  Education,
+  Blockchain,
+  Ai,
   Events,
+  Music,
+  Landscape,
   FashionDesign,
   Film,
-  Fitness,
-  GameProgramming,
   GraphicDesign,
-  Hairdressing,
+  InteriorDesign,
+  DigitalMedia,
+  Acting,
+  Animation3D,
   Health,
-  Horticulture,
+  AgedCare,
+  Nutrition,
+  Nursing,
+  Veterinary,
+  Medicine,
+  PublicHealth,
+  Dental,
+  Massage,
+  MentalHealth,
+  Baking,
+  Cookery,
   HospitalityManagement,
   HotelManagement,
-  HumanResources,
-  InteriorDesign,
-  IntlBusiness,
-  Landscape,
-  LeadershipManagement,
-  MachineLearning,
-  Massage,
-  Medicine,
-  MentalHealth,
-  Music,
-  Nursing,
-  Nutrition,
-  ProjectManagement,
-  PublicHealth,
-  SocialMediaMarketing,
-  SoftwareDevelopment,
-  SportDevelopment,
-  SupplyManagement,
-  Telecommunication,
   TravelTourism,
-  Veterinary,
-  WebDevelopment,
+  Automotive,
+  Beauty,
+  Construction,
+  Carpentry,
+  Education,
+  Fitness,
+  Hairdressing,
+  Horticulture,
+  SportDevelopment,
   Yoga,
+  ProjectManagement,
+  BusinessManagement,
+  HumanResources,
+  BankingManagement,
+  IntlBusiness,
+  SocialMediaMarketing,
+  AgribusinessManagement,
+  SupplyManagement,
+  LeadershipManagement,
+  It,
+  Design,
+  Hospitality,
+  Management,
+  Trades,
 } from "../../types";
-import { useEffect, useState } from "react";
 
-interface IProps {
+interface IHeroProps {
   data:
     | BlogPost
+    | Trades
+    | Design
     | Telecommunication
     | BusinessAnalysis
     | CloudComputing
@@ -75,6 +83,7 @@ interface IProps {
     | DataManagement
     | Blockchain
     | Ai
+    | Hospitality
     | Music
     | Landscape
     | FashionDesign
@@ -119,75 +128,13 @@ interface IProps {
     | AgribusinessManagement
     | SupplyManagement
     | LeadershipManagement
+    | Management
+    | It
     | undefined
     | null;
 }
 
-enum CategoriesEnum {
-  Acting = "ACTING",
-  AgedCare = "AGED_CARE",
-  AgribusinessManagement = "AGRIBUSINESS_MANAGEMENT",
-  Ai = "AI",
-  Animation_3D = "ANIMATION_3D",
-  Automotive = "AUTOMOTIVE",
-  Baking = "BAKING",
-  BankingManagement = "BANKING_MANAGEMENT",
-  Beauty = "BEAUTY",
-  BlockchainTech = "BLOCKCHAIN_TECH",
-  Blog = "BLOG",
-  BusinessAnalysis = "BUSINESS_ANALYSIS",
-  BusinessManagement = "BUSINESS_MANAGEMENT",
-  Carpentry = "CARPENTRY",
-  CloudComputing = "CLOUD_COMPUTING",
-  CommercialCooking = "COMMERCIAL_COOKING",
-  ComputerNetworking = "COMPUTER_NETWORKING",
-  Construction = "CONSTRUCTION",
-  DataManagement = "DATA_MANAGEMENT",
-  Dental = "DENTAL",
-  Design = "DESIGN",
-  DigitalMedia = "DIGITAL_MEDIA",
-  Education = "EDUCATION",
-  Events = "EVENTS",
-  FashionDesign = "FASHION_DESIGN",
-  FilmMedia = "FILM_MEDIA",
-  Fitness = "FITNESS",
-  GameProgramming = "GAME_PROGRAMMING",
-  GraphicDesign = "GRAPHIC_DESIGN",
-  Hairdressing = "HAIRDRESSING",
-  Health = "HEALTH",
-  Hospitality = "HOSPITALITY",
-  HospitalityManagement = "HOSPITALITY_MANAGEMENT",
-  Horticulture = "HORTICULTURE",
-  HumanResources = "HUMAN_RESOURCES",
-  InteriorDesign = "INTERIOR_DESIGN",
-  InternationalBusiness = "INTERNATIONAL_BUSINESS",
-  IntlHotelManagement = "INTL_HOTEL_MANAGEMENT",
-  It = "IT",
-  Landscape = "LANDSCAPE",
-  LeadershipManagement = "LEADERSHIP_MANAGEMENT",
-  MachineLearning = "MACHINE_LEARNING",
-  Massage = "MASSAGE",
-  Management = "MANAGEMENT",
-  Medicine = "MEDICINE",
-  Mental_Health = "MENTAL_HEALTH",
-  MusicAudio = "MUSIC_AUDIO",
-  Nursing = "NURSING",
-  Nutrition = "NUTRITION",
-  ProjectManagement = "PROJECT_MANAGEMENT",
-  Public_Health = "PUBLIC_HEALTH",
-  SocialmediaMarketing = "SOCIALMEDIA_MARKETING",
-  SoftwareDevelopment = "SOFTWARE_DEVELOPMENT",
-  Sport = "SPORT",
-  SupplychainManagement = "SUPPLYCHAIN_MANAGEMENT",
-  Telecommunication = "TELECOMMUNICATION",
-  TravelTourism = "TRAVEL_TOURISM",
-  Trades = "TRADES",
-  Veterinary = "VETERINARY",
-  WebDevelopment = "WEB_DEVELOPMENT",
-  Yoga = "YOGA",
-}
-
-export default function App({ data }: IProps) {
+export default function App({ data }: IHeroProps) {
   const [c, setC] = useState(data?.category);
   const [slug, setSlug] = useState("");
 
@@ -195,6 +142,8 @@ export default function App({ data }: IProps) {
     if (c === CategoriesEnum.Blog) {
       setSlug("/blog/" + data?.id);
     }
+
+    // Conditionally sets the slug for posts in the relavant category
 
     //* -------- Information Technology -------- *//
 
@@ -417,7 +366,6 @@ export default function App({ data }: IProps) {
     if (c === CategoriesEnum.Yoga) {
       setSlug("/courses/trades/yoga/articles/" + data?.id);
     }
-
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 

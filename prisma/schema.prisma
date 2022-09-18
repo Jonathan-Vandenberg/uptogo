@@ -154,14 +154,12 @@ model It {
   reference1     String?
   reference2     String?
   authorName     String?
-  authorImage    String?
   authorAbout    String?
   authorLink     String?
   editedBy       String?
   photoCredit    String?
   mainImage      String?
   publishedDate  String?
-  categoriesId   String? @db.ObjectId
 }
 
 model Design {
@@ -205,14 +203,12 @@ model Design {
   reference1     String?
   reference2     String?
   authorName     String?
-  authorImage    String?
   authorAbout    String?
   authorLink     String?
   editedBy       String?
   photoCredit    String?
   mainImage      String?
   publishedDate  String?
-  categoriesId   String? @db.ObjectId
 }
 
 model Management {
@@ -256,14 +252,12 @@ model Management {
   reference1     String?
   reference2     String?
   authorName     String?
-  authorImage    String?
   authorAbout    String?
   authorLink     String?
   editedBy       String?
   photoCredit    String?
   mainImage      String?
   publishedDate  String?
-  categoriesId   String? @db.ObjectId
 }
 
 model Health {
@@ -307,14 +301,12 @@ model Health {
   reference1     String?
   reference2     String?
   authorName     String?
-  authorImage    String?
   authorAbout    String?
   authorLink     String?
   editedBy       String?
   photoCredit    String?
   mainImage      String?
   publishedDate  String?
-  categoriesId   String? @db.ObjectId
 }
 
 model Hospitality {
@@ -358,14 +350,12 @@ model Hospitality {
   reference1     String?
   reference2     String?
   authorName     String?
-  authorImage    String?
   authorAbout    String?
   authorLink     String?
   editedBy       String?
   photoCredit    String?
   mainImage      String?
   publishedDate  String?
-  categoriesId   String? @db.ObjectId
 }
 
 model Trades {
@@ -409,14 +399,12 @@ model Trades {
   reference1     String?
   reference2     String?
   authorName     String?
-  authorImage    String?
   authorAbout    String?
   authorLink     String?
   editedBy       String?
   photoCredit    String?
   mainImage      String?
   publishedDate  String?
-  categoriesId   String? @db.ObjectId
 }
 
 model SoftwareDevelopment {
@@ -460,14 +448,12 @@ model SoftwareDevelopment {
   reference1     String?
   reference2     String?
   authorName     String?
-  authorImage    String?
   authorAbout    String?
   authorLink     String?
   editedBy       String?
   photoCredit    String?
   mainImage      String?
   publishedDate  String?
-  categoriesId   String? @db.ObjectId
 }
 
 model ComputerNetworking {
@@ -511,14 +497,12 @@ model ComputerNetworking {
   reference1     String?
   reference2     String?
   authorName     String?
-  authorImage    String?
   authorAbout    String?
   authorLink     String?
   editedBy       String?
   photoCredit    String?
   mainImage      String?
   publishedDate  String?
-  categoriesId   String? @db.ObjectId
 }
 
 model CloudComputing {
@@ -562,14 +546,12 @@ model CloudComputing {
   reference1     String?
   reference2     String?
   authorName     String?
-  authorImage    String?
   authorAbout    String?
   authorLink     String?
   editedBy       String?
   photoCredit    String?
   mainImage      String?
   publishedDate  String?
-  categoriesId   String? @db.ObjectId
 }
 
 model BusinessAnalysis {
@@ -613,14 +595,12 @@ model BusinessAnalysis {
   reference1     String?
   reference2     String?
   authorName     String?
-  authorImage    String?
   authorAbout    String?
   authorLink     String?
   editedBy       String?
   photoCredit    String?
   mainImage      String?
   publishedDate  String?
-  categoriesId   String? @db.ObjectId
 }
 
 model Telecommunication {
@@ -664,14 +644,12 @@ model Telecommunication {
   reference1     String?
   reference2     String?
   authorName     String?
-  authorImage    String?
   authorAbout    String?
   authorLink     String?
   editedBy       String?
   photoCredit    String?
   mainImage      String?
   publishedDate  String?
-  categoriesId   String? @db.ObjectId
 }
 
 model GameProgramming {
@@ -715,14 +693,12 @@ model GameProgramming {
   reference1     String?
   reference2     String?
   authorName     String?
-  authorImage    String?
   authorAbout    String?
   authorLink     String?
   editedBy       String?
   photoCredit    String?
   mainImage      String?
   publishedDate  String?
-  categoriesId   String? @db.ObjectId
 }
 
 model WebDevelopment {
@@ -766,14 +742,12 @@ model WebDevelopment {
   reference1     String?
   reference2     String?
   authorName     String?
-  authorImage    String?
   authorAbout    String?
   authorLink     String?
   editedBy       String?
   photoCredit    String?
   mainImage      String?
   publishedDate  String?
-  categoriesId   String? @db.ObjectId
 }
 
 model MachineLearning {
@@ -817,14 +791,12 @@ model MachineLearning {
   reference1     String?
   reference2     String?
   authorName     String?
-  authorImage    String?
   authorAbout    String?
   authorLink     String?
   editedBy       String?
   photoCredit    String?
   mainImage      String?
   publishedDate  String?
-  categoriesId   String? @db.ObjectId
 }
 
 model DataManagement {
@@ -868,14 +840,12 @@ model DataManagement {
   reference1     String?
   reference2     String?
   authorName     String?
-  authorImage    String?
   authorAbout    String?
   authorLink     String?
   editedBy       String?
   photoCredit    String?
   mainImage      String?
   publishedDate  String?
-  categoriesId   String? @db.ObjectId
 }
 
 model Blockchain {
@@ -919,14 +889,12 @@ model Blockchain {
   reference1     String?
   reference2     String?
   authorName     String?
-  authorImage    String?
   authorAbout    String?
   authorLink     String?
   editedBy       String?
   photoCredit    String?
   mainImage      String?
   publishedDate  String?
-  categoriesId   String? @db.ObjectId
 }
 
 model Ai {
@@ -970,14 +938,12 @@ model Ai {
   reference1     String?
   reference2     String?
   authorName     String?
-  authorImage    String?
   authorAbout    String?
   authorLink     String?
   editedBy       String?
   photoCredit    String?
   mainImage      String?
   publishedDate  String?
-  categoriesId   String? @db.ObjectId
 }
 
 model BlogPost {
@@ -1021,14 +987,12 @@ model BlogPost {
   reference1     String?
   reference2     String?
   authorName     String?
-  authorImage    String?
   authorAbout    String?
   authorLink     String?
   editedBy       String?
   photoCredit    String?
   mainImage      String?
   publishedDate  String?
-  categoriesId   String? @db.ObjectId
 }
 
 model FashionDesign {
@@ -1072,14 +1036,12 @@ model FashionDesign {
   reference1     String?
   reference2     String?
   authorName     String?
-  authorImage    String?
   authorAbout    String?
   authorLink     String?
   editedBy       String?
   photoCredit    String?
   mainImage      String?
   publishedDate  String?
-  categoriesId   String? @db.ObjectId
 }
 
 model Landscape {
@@ -1123,14 +1085,12 @@ model Landscape {
   reference1     String?
   reference2     String?
   authorName     String?
-  authorImage    String?
   authorAbout    String?
   authorLink     String?
   editedBy       String?
   photoCredit    String?
   mainImage      String?
   publishedDate  String?
-  categoriesId   String? @db.ObjectId
 }
 
 model Music {
@@ -1174,14 +1134,12 @@ model Music {
   reference1     String?
   reference2     String?
   authorName     String?
-  authorImage    String?
   authorAbout    String?
   authorLink     String?
   editedBy       String?
   photoCredit    String?
   mainImage      String?
   publishedDate  String?
-  categoriesId   String? @db.ObjectId
 }
 
 model Film {
@@ -1225,14 +1183,12 @@ model Film {
   reference1     String?
   reference2     String?
   authorName     String?
-  authorImage    String?
   authorAbout    String?
   authorLink     String?
   editedBy       String?
   photoCredit    String?
   mainImage      String?
   publishedDate  String?
-  categoriesId   String? @db.ObjectId
 }
 
 model GraphicDesign {
@@ -1276,14 +1232,12 @@ model GraphicDesign {
   reference1     String?
   reference2     String?
   authorName     String?
-  authorImage    String?
   authorAbout    String?
   authorLink     String?
   editedBy       String?
   photoCredit    String?
   mainImage      String?
   publishedDate  String?
-  categoriesId   String? @db.ObjectId
 }
 
 model InteriorDesign {
@@ -1327,14 +1281,12 @@ model InteriorDesign {
   reference1     String?
   reference2     String?
   authorName     String?
-  authorImage    String?
   authorAbout    String?
   authorLink     String?
   editedBy       String?
   photoCredit    String?
   mainImage      String?
   publishedDate  String?
-  categoriesId   String? @db.ObjectId
 }
 
 model DigitalMedia {
@@ -1378,14 +1330,12 @@ model DigitalMedia {
   reference1     String?
   reference2     String?
   authorName     String?
-  authorImage    String?
   authorAbout    String?
   authorLink     String?
   editedBy       String?
   photoCredit    String?
   mainImage      String?
   publishedDate  String?
-  categoriesId   String? @db.ObjectId
 }
 
 model Acting {
@@ -1429,14 +1379,12 @@ model Acting {
   reference1     String?
   reference2     String?
   authorName     String?
-  authorImage    String?
   authorAbout    String?
   authorLink     String?
   editedBy       String?
   photoCredit    String?
   mainImage      String?
   publishedDate  String?
-  categoriesId   String? @db.ObjectId
 }
 
 model Animation3D {
@@ -1480,14 +1428,12 @@ model Animation3D {
   reference1     String?
   reference2     String?
   authorName     String?
-  authorImage    String?
   authorAbout    String?
   authorLink     String?
   editedBy       String?
   photoCredit    String?
   mainImage      String?
   publishedDate  String?
-  categoriesId   String? @db.ObjectId
 }
 
 model AgedCare {
@@ -1531,14 +1477,12 @@ model AgedCare {
   reference1     String?
   reference2     String?
   authorName     String?
-  authorImage    String?
   authorAbout    String?
   authorLink     String?
   editedBy       String?
   photoCredit    String?
   mainImage      String?
   publishedDate  String?
-  categoriesId   String? @db.ObjectId
 }
 
 model Nutrition {
@@ -1582,14 +1526,12 @@ model Nutrition {
   reference1     String?
   reference2     String?
   authorName     String?
-  authorImage    String?
   authorAbout    String?
   authorLink     String?
   editedBy       String?
   photoCredit    String?
   mainImage      String?
   publishedDate  String?
-  categoriesId   String? @db.ObjectId
 }
 
 model Nursing {
@@ -1633,14 +1575,12 @@ model Nursing {
   reference1     String?
   reference2     String?
   authorName     String?
-  authorImage    String?
   authorAbout    String?
   authorLink     String?
   editedBy       String?
   photoCredit    String?
   mainImage      String?
   publishedDate  String?
-  categoriesId   String? @db.ObjectId
 }
 
 model Veterinary {
@@ -1684,14 +1624,12 @@ model Veterinary {
   reference1     String?
   reference2     String?
   authorName     String?
-  authorImage    String?
   authorAbout    String?
   authorLink     String?
   editedBy       String?
   photoCredit    String?
   mainImage      String?
   publishedDate  String?
-  categoriesId   String? @db.ObjectId
 }
 
 model Medicine {
@@ -1735,14 +1673,12 @@ model Medicine {
   reference1     String?
   reference2     String?
   authorName     String?
-  authorImage    String?
   authorAbout    String?
   authorLink     String?
   editedBy       String?
   photoCredit    String?
   mainImage      String?
   publishedDate  String?
-  categoriesId   String? @db.ObjectId
 }
 
 model PublicHealth {
@@ -1786,14 +1722,12 @@ model PublicHealth {
   reference1     String?
   reference2     String?
   authorName     String?
-  authorImage    String?
   authorAbout    String?
   authorLink     String?
   editedBy       String?
   photoCredit    String?
   mainImage      String?
   publishedDate  String?
-  categoriesId   String? @db.ObjectId
 }
 
 model Dental {
@@ -1837,14 +1771,12 @@ model Dental {
   reference1     String?
   reference2     String?
   authorName     String?
-  authorImage    String?
   authorAbout    String?
   authorLink     String?
   editedBy       String?
   photoCredit    String?
   mainImage      String?
   publishedDate  String?
-  categoriesId   String? @db.ObjectId
 }
 
 model Massage {
@@ -1888,14 +1820,12 @@ model Massage {
   reference1     String?
   reference2     String?
   authorName     String?
-  authorImage    String?
   authorAbout    String?
   authorLink     String?
   editedBy       String?
   photoCredit    String?
   mainImage      String?
   publishedDate  String?
-  categoriesId   String? @db.ObjectId
 }
 
 model MentalHealth {
@@ -1939,14 +1869,12 @@ model MentalHealth {
   reference1     String?
   reference2     String?
   authorName     String?
-  authorImage    String?
   authorAbout    String?
   authorLink     String?
   editedBy       String?
   photoCredit    String?
   mainImage      String?
   publishedDate  String?
-  categoriesId   String? @db.ObjectId
 }
 
 model Baking {
@@ -1990,14 +1918,12 @@ model Baking {
   reference1     String?
   reference2     String?
   authorName     String?
-  authorImage    String?
   authorAbout    String?
   authorLink     String?
   editedBy       String?
   photoCredit    String?
   mainImage      String?
   publishedDate  String?
-  categoriesId   String? @db.ObjectId
 }
 
 model Cookery {
@@ -2041,14 +1967,12 @@ model Cookery {
   reference1     String?
   reference2     String?
   authorName     String?
-  authorImage    String?
   authorAbout    String?
   authorLink     String?
   editedBy       String?
   photoCredit    String?
   mainImage      String?
   publishedDate  String?
-  categoriesId   String? @db.ObjectId
 }
 
 model HospitalityManagement {
@@ -2092,14 +2016,12 @@ model HospitalityManagement {
   reference1     String?
   reference2     String?
   authorName     String?
-  authorImage    String?
   authorAbout    String?
   authorLink     String?
   editedBy       String?
   photoCredit    String?
   mainImage      String?
   publishedDate  String?
-  categoriesId   String? @db.ObjectId
 }
 
 model HotelManagement {
@@ -2143,14 +2065,12 @@ model HotelManagement {
   reference1     String?
   reference2     String?
   authorName     String?
-  authorImage    String?
   authorAbout    String?
   authorLink     String?
   editedBy       String?
   photoCredit    String?
   mainImage      String?
   publishedDate  String?
-  categoriesId   String? @db.ObjectId
 }
 
 model TravelTourism {
@@ -2194,14 +2114,12 @@ model TravelTourism {
   reference1     String?
   reference2     String?
   authorName     String?
-  authorImage    String?
   authorAbout    String?
   authorLink     String?
   editedBy       String?
   photoCredit    String?
   mainImage      String?
   publishedDate  String?
-  categoriesId   String? @db.ObjectId
 }
 
 model Events {
@@ -2245,14 +2163,12 @@ model Events {
   reference1     String?
   reference2     String?
   authorName     String?
-  authorImage    String?
   authorAbout    String?
   authorLink     String?
   editedBy       String?
   photoCredit    String?
   mainImage      String?
   publishedDate  String?
-  categoriesId   String? @db.ObjectId
 }
 
 model Automotive {
@@ -2296,14 +2212,12 @@ model Automotive {
   reference1     String?
   reference2     String?
   authorName     String?
-  authorImage    String?
   authorAbout    String?
   authorLink     String?
   editedBy       String?
   photoCredit    String?
   mainImage      String?
   publishedDate  String?
-  categoriesId   String? @db.ObjectId
 }
 
 model Beauty {
@@ -2347,14 +2261,12 @@ model Beauty {
   reference1     String?
   reference2     String?
   authorName     String?
-  authorImage    String?
   authorAbout    String?
   authorLink     String?
   editedBy       String?
   photoCredit    String?
   mainImage      String?
   publishedDate  String?
-  categoriesId   String? @db.ObjectId
 }
 
 model Construction {
@@ -2398,14 +2310,12 @@ model Construction {
   reference1     String?
   reference2     String?
   authorName     String?
-  authorImage    String?
   authorAbout    String?
   authorLink     String?
   editedBy       String?
   photoCredit    String?
   mainImage      String?
   publishedDate  String?
-  categoriesId   String? @db.ObjectId
 }
 
 model Carpentry {
@@ -2449,14 +2359,12 @@ model Carpentry {
   reference1     String?
   reference2     String?
   authorName     String?
-  authorImage    String?
   authorAbout    String?
   authorLink     String?
   editedBy       String?
   photoCredit    String?
   mainImage      String?
   publishedDate  String?
-  categoriesId   String? @db.ObjectId
 }
 
 model Education {
@@ -2500,14 +2408,12 @@ model Education {
   reference1     String?
   reference2     String?
   authorName     String?
-  authorImage    String?
   authorAbout    String?
   authorLink     String?
   editedBy       String?
   photoCredit    String?
   mainImage      String?
   publishedDate  String?
-  categoriesId   String? @db.ObjectId
 }
 
 model Fitness {
@@ -2551,14 +2457,12 @@ model Fitness {
   reference1     String?
   reference2     String?
   authorName     String?
-  authorImage    String?
   authorAbout    String?
   authorLink     String?
   editedBy       String?
   photoCredit    String?
   mainImage      String?
   publishedDate  String?
-  categoriesId   String? @db.ObjectId
 }
 
 model Hairdressing {
@@ -2602,14 +2506,12 @@ model Hairdressing {
   reference1     String?
   reference2     String?
   authorName     String?
-  authorImage    String?
   authorAbout    String?
   authorLink     String?
   editedBy       String?
   photoCredit    String?
   mainImage      String?
   publishedDate  String?
-  categoriesId   String? @db.ObjectId
 }
 
 model Horticulture {
@@ -2653,14 +2555,12 @@ model Horticulture {
   reference1     String?
   reference2     String?
   authorName     String?
-  authorImage    String?
   authorAbout    String?
   authorLink     String?
   editedBy       String?
   photoCredit    String?
   mainImage      String?
   publishedDate  String?
-  categoriesId   String? @db.ObjectId
 }
 
 model SportDevelopment {
@@ -2704,14 +2604,12 @@ model SportDevelopment {
   reference1     String?
   reference2     String?
   authorName     String?
-  authorImage    String?
   authorAbout    String?
   authorLink     String?
   editedBy       String?
   photoCredit    String?
   mainImage      String?
   publishedDate  String?
-  categoriesId   String? @db.ObjectId
 }
 
 model Yoga {
@@ -2755,14 +2653,12 @@ model Yoga {
   reference1     String?
   reference2     String?
   authorName     String?
-  authorImage    String?
   authorAbout    String?
   authorLink     String?
   editedBy       String?
   photoCredit    String?
   mainImage      String?
   publishedDate  String?
-  categoriesId   String? @db.ObjectId
 }
 
 model ProjectManagement {
@@ -2806,14 +2702,12 @@ model ProjectManagement {
   reference1     String?
   reference2     String?
   authorName     String?
-  authorImage    String?
   authorAbout    String?
   authorLink     String?
   editedBy       String?
   photoCredit    String?
   mainImage      String?
   publishedDate  String?
-  categoriesId   String? @db.ObjectId
 }
 
 model BusinessManagement {
@@ -2857,14 +2751,12 @@ model BusinessManagement {
   reference1     String?
   reference2     String?
   authorName     String?
-  authorImage    String?
   authorAbout    String?
   authorLink     String?
   editedBy       String?
   photoCredit    String?
   mainImage      String?
   publishedDate  String?
-  categoriesId   String? @db.ObjectId
 }
 
 model HumanResources {
@@ -2908,14 +2800,12 @@ model HumanResources {
   reference1     String?
   reference2     String?
   authorName     String?
-  authorImage    String?
   authorAbout    String?
   authorLink     String?
   editedBy       String?
   photoCredit    String?
   mainImage      String?
   publishedDate  String?
-  categoriesId   String? @db.ObjectId
 }
 
 model BankingManagement {
@@ -2959,14 +2849,12 @@ model BankingManagement {
   reference1     String?
   reference2     String?
   authorName     String?
-  authorImage    String?
   authorAbout    String?
   authorLink     String?
   editedBy       String?
   photoCredit    String?
   mainImage      String?
   publishedDate  String?
-  categoriesId   String? @db.ObjectId
 }
 
 model IntlBusiness {
@@ -3010,14 +2898,12 @@ model IntlBusiness {
   reference1     String?
   reference2     String?
   authorName     String?
-  authorImage    String?
   authorAbout    String?
   authorLink     String?
   editedBy       String?
   photoCredit    String?
   mainImage      String?
   publishedDate  String?
-  categoriesId   String? @db.ObjectId
 }
 
 model SocialMediaMarketing {
@@ -3061,14 +2947,12 @@ model SocialMediaMarketing {
   reference1     String?
   reference2     String?
   authorName     String?
-  authorImage    String?
   authorAbout    String?
   authorLink     String?
   editedBy       String?
   photoCredit    String?
   mainImage      String?
   publishedDate  String?
-  categoriesId   String? @db.ObjectId
 }
 
 model AgribusinessManagement {
@@ -3112,14 +2996,12 @@ model AgribusinessManagement {
   reference1     String?
   reference2     String?
   authorName     String?
-  authorImage    String?
   authorAbout    String?
   authorLink     String?
   editedBy       String?
   photoCredit    String?
   mainImage      String?
   publishedDate  String?
-  categoriesId   String? @db.ObjectId
 }
 
 model SupplyManagement {
@@ -3163,14 +3045,12 @@ model SupplyManagement {
   reference1     String?
   reference2     String?
   authorName     String?
-  authorImage    String?
   authorAbout    String?
   authorLink     String?
   editedBy       String?
   photoCredit    String?
   mainImage      String?
   publishedDate  String?
-  categoriesId   String? @db.ObjectId
 }
 
 model LeadershipManagement {
@@ -3214,12 +3094,10 @@ model LeadershipManagement {
   reference1     String?
   reference2     String?
   authorName     String?
-  authorImage    String?
   authorAbout    String?
   authorLink     String?
   editedBy       String?
   photoCredit    String?
   mainImage      String?
   publishedDate  String?
-  categoriesId   String? @db.ObjectId
 }

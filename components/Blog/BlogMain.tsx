@@ -1,68 +1,72 @@
-import {
-  Acting,
-  AgedCare,
-  AgribusinessManagement,
-  Ai,
-  Animation3D,
-  Automotive,
-  Baking,
-  BankingManagement,
-  Beauty,
-  Blockchain,
-  BlogPost,
-  BusinessAnalysis,
-  BusinessManagement,
-  Carpentry,
-  CloudComputing,
-  ComputerNetworking,
-  Construction,
-  Cookery,
-  DataManagement,
-  Dental,
-  DigitalMedia,
-  Education,
-  Events,
-  FashionDesign,
-  Film,
-  Fitness,
-  GameProgramming,
-  GraphicDesign,
-  Hairdressing,
-  Health,
-  Horticulture,
-  HospitalityManagement,
-  HotelManagement,
-  HumanResources,
-  InteriorDesign,
-  IntlBusiness,
-  Landscape,
-  LeadershipManagement,
-  MachineLearning,
-  Management,
-  Massage,
-  Medicine,
-  MentalHealth,
-  Music,
-  Nursing,
-  Nutrition,
-  ProjectManagement,
-  PublicHealth,
-  SocialMediaMarketing,
-  SoftwareDevelopment,
-  SportDevelopment,
-  SupplyManagement,
-  Telecommunication,
-  Trades,
-  TravelTourism,
-  Veterinary,
-  WebDevelopment,
-  Yoga,
-} from "../../types";
 import BlogHeader from "./BlogHeader";
 import BlogPostMarkup from "./BlogPostMarkup";
+import {
+  It,
+  BlogPost,
+  Events,
+  Telecommunication,
+  BusinessAnalysis,
+  CloudComputing,
+  ComputerNetworking,
+  SoftwareDevelopment,
+  GameProgramming,
+  WebDevelopment,
+  MachineLearning,
+  DataManagement,
+  Blockchain,
+  Ai,
+  Design,
+  Music,
+  Landscape,
+  FashionDesign,
+  Film,
+  GraphicDesign,
+  InteriorDesign,
+  DigitalMedia,
+  Acting,
+  Animation3D,
+  Health,
+  AgedCare,
+  Nutrition,
+  Nursing,
+  Veterinary,
+  Medicine,
+  PublicHealth,
+  Dental,
+  Massage,
+  MentalHealth,
+  Baking,
+  Cookery,
+  HospitalityManagement,
+  HotelManagement,
+  TravelTourism,
+  Automotive,
+  Beauty,
+  Construction,
+  Carpentry,
+  Education,
+  Fitness,
+  Hairdressing,
+  Horticulture,
+  SportDevelopment,
+  Yoga,
+  ProjectManagement,
+  BusinessManagement,
+  HumanResources,
+  BankingManagement,
+  IntlBusiness,
+  SocialMediaMarketing,
+  AgribusinessManagement,
+  SupplyManagement,
+  LeadershipManagement,
+  Hospitality,
+  Management,
+  Trades,
+} from "../../types";
 
-interface IProps {
+interface IFormProps {
   data:
+    | It
     | BlogPost
     | Telecommunication
     | BusinessAnalysis
@@ -75,6 +79,7 @@ interface IProps {
     | DataManagement
     | Blockchain
     | Ai
+    | Design
     | Music
     | Landscape
     | FashionDesign
@@ -119,6 +124,7 @@ interface IProps {
     | AgribusinessManagement
     | SupplyManagement
     | LeadershipManagement
+    | Hospitality
     | Management
     | Trades
     | undefined
@@ -127,7 +133,7 @@ interface IProps {
   handleEdit: () => void;
 }
 
-export default function BlogMain({ data, handleEdit, handleAdd }: IProps) {
+export default function BlogMain({ data, handleEdit, handleAdd }: IFormProps) {
   return (
     <div className="container">
       <BlogHeader data={data} />

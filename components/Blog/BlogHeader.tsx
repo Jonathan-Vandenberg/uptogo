@@ -1,5 +1,10 @@
+import { Avatar } from "@mui/material";
 import Image from "next/image";
-import type {
+import { useEffect, useState } from "react";
+import { FaHeart } from "react-icons/fa";
+import { GrCheckmark } from "react-icons/gr";
+import { getFromStorage, setToStorage } from "../../lib/localStorageHelper";
+import {
   Acting,
   AgedCare,
   AgribusinessManagement,
@@ -20,6 +25,7 @@ import type {
   Cookery,
   DataManagement,
   Dental,
+  Design,
   DigitalMedia,
   Education,
   Events,
@@ -31,11 +37,13 @@ import type {
   Hairdressing,
   Health,
   Horticulture,
+  Hospitality,
   HospitalityManagement,
   HotelManagement,
   HumanResources,
   InteriorDesign,
   IntlBusiness,
+  It,
   Landscape,
   LeadershipManagement,
   MachineLearning,
@@ -59,16 +67,11 @@ import type {
   WebDevelopment,
   Yoga,
 } from "../../types";
-import { Avatar } from "@mui/material";
-import { GrCheckmark } from "react-icons/gr";
-import { useRouter } from "next/router";
-import { useState, useEffect } from "react";
-import { getFromStorage, setToStorage } from "../../lib/localStorageHelper";
-import { FaHeart } from "react-icons/fa";
 
-interface IProps {
+interface IHeroProps {
   data:
     | BlogPost
+    | Trades
     | Telecommunication
     | BusinessAnalysis
     | CloudComputing
@@ -80,6 +83,7 @@ interface IProps {
     | DataManagement
     | Blockchain
     | Ai
+    | Design
     | Music
     | Landscape
     | FashionDesign
@@ -102,6 +106,7 @@ interface IProps {
     | Baking
     | Cookery
     | HospitalityManagement
+    | Hospitality
     | HotelManagement
     | TravelTourism
     | Events
@@ -125,16 +130,14 @@ interface IProps {
     | SupplyManagement
     | LeadershipManagement
     | Management
-    | Trades
+    | It
     | undefined
     | null;
 }
 
-const BlogHeader = ({ data }: IProps) => {
+const BlogHeader = ({ data }: IHeroProps) => {
   const [localStorageChange, setLocalStorageChange] = useState(false);
   const [localStorageKeys, setLocalStorageKeys] = useState([""]);
-
-  const router = useRouter();
 
   useEffect(() => {
     const allKeys = Object.keys(localStorage);
@@ -198,7 +201,7 @@ const BlogHeader = ({ data }: IProps) => {
         </div>
         <div className="border-b-[1px] border-gray-200 pb-2 block">
           <Image
-            src={"https://picsum.photos/600/250"}
+            src={"https://picsum.photos/600/338"}
             width={600}
             height={338}
             alt="IT image"

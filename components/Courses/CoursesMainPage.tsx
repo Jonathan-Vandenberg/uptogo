@@ -1,74 +1,73 @@
-import Link from "next/link";
 import Spline from "@splinetool/react-spline";
-import {
+import Image from "next/image";
+import logo from "../../public/fullLogo.png";
+import BlogPostMarkup from "../Blog/BlogPostMarkup";
+import EmailButton from "../UI/EmailButton";
+import type {
+  Ai,
+  Blockchain,
+  BlogPost,
+  BusinessAnalysis,
+  CloudComputing,
+  ComputerNetworking,
+  DataManagement,
+  Design,
+  GameProgramming,
+  It,
+  MachineLearning,
+  SoftwareDevelopment,
+  Telecommunication,
+  WebDevelopment,
+  Music,
   Acting,
+  Animation3D,
+  DigitalMedia,
+  FashionDesign,
+  Film,
+  GraphicDesign,
+  InteriorDesign,
+  Landscape,
   AgedCare,
   AgribusinessManagement,
-  Ai,
-  Animation3D,
   Automotive,
   Baking,
   BankingManagement,
   Beauty,
-  Blockchain,
-  BlogPost,
-  BusinessAnalysis,
   BusinessManagement,
   Carpentry,
-  CloudComputing,
-  ComputerNetworking,
   Construction,
   Cookery,
-  DataManagement,
   Dental,
-  Design,
-  DigitalMedia,
   Education,
   Events,
-  FashionDesign,
-  Film,
   Fitness,
-  GameProgramming,
-  GraphicDesign,
   Hairdressing,
   Health,
   Horticulture,
-  Hospitality,
   HospitalityManagement,
   HotelManagement,
   HumanResources,
-  InteriorDesign,
   IntlBusiness,
-  It,
-  Landscape,
   LeadershipManagement,
-  MachineLearning,
-  Management,
   Massage,
   Medicine,
   MentalHealth,
-  Music,
   Nursing,
   Nutrition,
   ProjectManagement,
   PublicHealth,
   SocialMediaMarketing,
-  SoftwareDevelopment,
   SportDevelopment,
   SupplyManagement,
-  Telecommunication,
-  Trades,
   TravelTourism,
   Veterinary,
-  WebDevelopment,
   Yoga,
+  Hospitality,
+  Management,
+  Trades,
 } from "../../types";
-import BlogPostMarkup from "../Blog/BlogPostMarkup";
-import Image from "next/image";
-import EmailButton from "../UI/EmailButton";
-import logo from "../../public/fullLogo.png";
 
-interface IProps {
+interface IFormProps {
   data:
     | It
     | BlogPost
@@ -143,7 +142,7 @@ export function Animation() {
   );
 }
 
-export default function BlogMain({ data, handleEdit, handleAdd }: IProps) {
+export default function BlogMain({ data, handleEdit, handleAdd }: IFormProps) {
   const styles = data?.mainImage ? "pb-8 block" : "block p-20";
 
   return (

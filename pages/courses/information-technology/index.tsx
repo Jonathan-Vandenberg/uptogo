@@ -10,47 +10,47 @@ import prisma from "../../../lib/prisma";
 
 const cardData = [
   {
-    course: "Software Development",
+    course: "Phát triển phần mền",
     link: "/courses/information-technology/software-development",
   },
   {
-    course: "Blockchain Technology",
+    course: "Công nghệ tiền ảo",
     link: "/courses/information-technology/blockchain-technology",
   },
   {
-    course: "Data Management",
+    course: "Quản lý dữ liệu",
     link: "/courses/information-technology/data-management",
   },
   {
-    course: "Machine Learning",
+    course: "Phương tiện máy móc",
     link: "/courses/information-technology/machine-learning",
   },
   {
-    course: "Website Development",
+    course: "Phát triển Website",
     link: "/courses/information-technology/web-development",
   },
   {
-    course: "Game Programming",
+    course: "Lập trình trò chơi",
     link: "/courses/information-technology/game-programming",
   },
   {
-    course: "Telecommunication",
+    course: "Viễn thông",
     link: "/courses/information-technology/telecommunication",
   },
   {
-    course: "Business Analysis",
+    course: "Phân tích kinh doanh",
     link: "/courses/information-technology/business-analysis",
   },
   {
-    course: "Cloud Computing",
+    course: "Điện toán đám mây",
     link: "/courses/information-technology/cloud-computing",
   },
   {
-    course: "Computer Networking",
+    course: "Mạng máy tính",
     link: "/courses/information-technology/computer-networking",
   },
   {
-    course: "A.I.",
+    course: "Trí tuệ nhân tạo",
     link: "/courses/information-technology/artificial-intelligence",
   },
 ];
@@ -150,4 +150,4 @@ export default function App({ data }: IProps) {
 // •	Phương tiện máy móc – Machine Learing
 // •	Quản lý dữ liệu – Data Management
 // •	Công nghệ tiền ảo – Blockchain Technology
-// •	Trí tuệ nhân tạo - Artificial Intelligence (AI)
+// •	Trí tuệ nhân tạo - Artificial Intelligence (AI) Aåå

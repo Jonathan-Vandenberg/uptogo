@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { useBlogPostsQuery } from "../../types";
-import BlogHeader from "../Blog/BlogHeader";
 import BlogPageHero from "../Blog/BlogPageHero";
 import FavoritesHeader from "./FavoritesHeader";
 
