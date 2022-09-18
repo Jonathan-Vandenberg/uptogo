@@ -3,6 +3,7 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 import { FaHeart } from "react-icons/fa";
 import { GrCheckmark } from "react-icons/gr";
+import logo from "../../public/fullLogo.png";
 import { getFromStorage, setToStorage } from "../../lib/localStorageHelper";
 import {
   Acting,
@@ -158,6 +159,7 @@ const BlogHeader = ({ data }: IHeroProps) => {
 
     setLocalStorageChange(!localStorageChange);
   };
+  const styles = data?.mainImage ? "pb-8 block" : "block p-20";
   return (
     <div className="bg-white md:pt-4">
       <div className="max-w-[640px] px-5 md:max-w-[900px] mx-auto">
@@ -200,14 +202,17 @@ const BlogHeader = ({ data }: IHeroProps) => {
           )}
         </div>
         <div className="border-b-[1px] border-gray-200 pb-2 block">
-          <Image
-            src={"https://picsum.photos/600/338"}
-            width={600}
-            height={338}
-            alt="IT image"
-            className="rounded-lg"
-            layout="responsive"
-          />
+          <div className={styles}>
+            <Image
+              src={data?.mainImage || logo}
+              width={data?.mainImage ? 600 : 100}
+              height={data?.mainImage ? 338 : 100}
+              alt="IT image"
+              className="rounded-lg"
+              layout="responsive"
+              priority
+            />
+          </div>
           {data?.photoCredit && (
             <p className="text-xs text-gray-500 mt-1">
               Image Credit: {data?.photoCredit}

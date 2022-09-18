@@ -158,16 +158,14 @@ export default function BlogMain({ data, handleEdit, handleAdd }: IFormProps) {
         </div>
       ) : ( */}
       <div className={styles}>
-        {
-          <Image
-            src={data?.mainImage || logo}
-            width={data?.mainImage ? 600 : 300}
-            height={data?.mainImage ? 339 : 300}
-            alt="image"
-            layout="responsive"
-            priority
-          />
-        }
+        <Image
+          src={data?.mainImage || logo}
+          width={data?.mainImage ? 600 : 300}
+          height={data?.mainImage ? 339 : 300}
+          alt="image"
+          layout="responsive"
+          priority
+        />
       </div>
       {/* )} */}
       <div className="pb-6 px-6 md:px-0 md:pb-10">

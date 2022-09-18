@@ -126,16 +126,16 @@ const Footer = () => {
         </div>
         <div className="bg-blue py-2 md:py-4">
           <div className="mx-auto flex flex-col-reverse items-center justify-evenly space-y-2 px-3 text-sm md:container  md:flex-row md:space-y-0">
-            <p className="text-gray-300 text-xs">
+            <p className="text-gray-700 text-sm">
               © Copyright 2009 Uptogo. All rights reserved.
             </p>
 
             <div className="flex items-center justify-center space-x-2 md:flex-row">
-              <p className="text-md cursor-pointer text-center text-gray-300 hover:text-green-300">
+              <p className="text-md cursor-pointer text-center text-gray-700 hover:text-green-300">
                 Safe and Secure
               </p>
               <p className="text-gray-300">|</p>
-              <p className="text-md cursor-pointer text-center text-gray-300 hover:text-green-300">
+              <p className="text-md cursor-pointer text-center text-gray-700 hover:text-green-300">
                 Sitemap
               </p>
             </div>
