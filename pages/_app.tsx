@@ -91,11 +91,6 @@ function MyApp({ Component, pageProps: { session, ...pageProps } }: AppProps) {
     //       <>
     <Provider store={store}>
       <Head>
-        <meta charSet="utf-8" />
-        <meta name="author" content="Jonathan van den Berg" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="description" content="Uptogo helps you study abroad" />
-        <meta name="keywords" content="Study, Abroad, Education" />
         <title>Uptogo</title>
       </Head>
       <SessionProvider session={session}>
