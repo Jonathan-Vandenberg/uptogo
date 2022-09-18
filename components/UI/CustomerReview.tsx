@@ -21,7 +21,7 @@ export default function MediaCard({ customer }: { customer: Review[] }) {
         >
           <CardContent>
             <div className="flex items-center justify-between py-4">
-              <Avatar src={item.image} />
+              <Avatar src={item.image} alt="avatar image" />
               <Rating name="read-only" value={5} readOnly />
             </div>
             <p className="py-3 text-2xl font-semibold">{item.name}</p>

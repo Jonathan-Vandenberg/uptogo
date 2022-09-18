@@ -42,7 +42,7 @@ export default function App() {
         </div>
         <CustomerReview customer={customer} />
         <div className="block w-full">
-          <Image src={image} alt="image" layout="responsive" />
+          <Image src={image} alt={"Student graduating"} layout="responsive" />
         </div>
       </div>
     </>
