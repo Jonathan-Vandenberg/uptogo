@@ -6,8 +6,10 @@ import designIcon from "../../public/courseIcons/web-design.png";
 import hospitalityIcon from "../../public/courseIcons/hospitality.png";
 import tradeIcon from "../../public/courseIcons/competence.png";
 import itIcon from "../../public/courseIcons/computer.png";
+import { useAppSelector } from "../../redux-hooks/hooks";
 
 export default function App() {
+  const translate = useAppSelector((state) => state.translationState.translate);
   const router = useRouter();
   return (
     <div className="grid grid-cols-2 md:grid-cols-3 gap-4 p-6 xl:grid-cols-6">
@@ -19,7 +21,7 @@ export default function App() {
           <Image src={itIcon} alt="IT image" width={60} height={60} priority />
         </div>
         <div className="text-lg text-gray-700 w-full text-center py-2">
-          Công nghệ thông tin
+          {translate ? "Information Technology" : "Công nghệ thông tin"}
         </div>
       </div>
       <div
@@ -36,7 +38,7 @@ export default function App() {
           />
         </div>
         <div className="text-lg text-gray-700 w-full text-center py-2">
-          Quản lý
+          {translate ? "Management" : "Quản lý"}
         </div>
       </div>
       <div
@@ -53,7 +55,7 @@ export default function App() {
           />
         </div>
         <div className="text-lg text-gray-700 w-full text-center py-2">
-          Thiết kế
+          {translate ? "Design" : "Thiết kế"}
         </div>
       </div>
       <div
@@ -70,7 +72,7 @@ export default function App() {
           />
         </div>
         <div className="text-lg text-gray-700 w-full text-center py-2">
-          Sức khỏe
+          {translate ? "Health" : "Sức khỏe"}
         </div>
       </div>
       <div
@@ -87,7 +89,7 @@ export default function App() {
           />
         </div>
         <div className="text-lg text-gray-700 w-full text-center py-2">
-          Nhà hàng khách sạn
+          {translate ? "Hospitality" : "Nhà hàng khách sạn"}
         </div>
       </div>
       <div
@@ -104,7 +106,7 @@ export default function App() {
           />
         </div>
         <div className="text-lg text-gray-700 w-full text-center py-2">
-          Thương mại & Thể thao
+          {translate ? "Trades & Sports" : "Thương mại & Thể thao"}
         </div>
       </div>
     </div>
