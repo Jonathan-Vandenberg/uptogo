@@ -9,11 +9,13 @@ import CollapseMenus from "./CollapseMenus";
 import UnCollapassedMenu from "./UnCollapassedMenu";
 import facebookLogo from "../../../public/social-media/facebook.svg";
 import zaloLogo from "../../../public/social-media/zalo.svg";
-import youtubeLogo from "../../../public/social-media/youtube.svg";
 import Link from "next/link";
+import TranslateBtn from "../../UI/TranslateBtn";
+import { useAppSelector } from "../../../redux-hooks/hooks";
 
 const Footer = () => {
   const router = useRouter();
+  const translate = useAppSelector((state) => state.translationState.translate);
 
   return (
     <>
@@ -41,20 +43,35 @@ const Footer = () => {
             <div className="rounded-full bg-white p-3 text-3xl text-gray-700">
               <GrMapLocation />
             </div>
-            <p className="p-3 text-xl font-semibold text-gray-700">
-              Find locations to study at
-            </p>
+            {translate ? (
+              <p className="p-3 text-xl font-semibold text-gray-700">
+                Find locations to study at
+              </p>
+            ) : (
+              <p className="p-3 text-xl font-semibold text-gray-700">
+                Tìm địa điểm học tại
+              </p>
+            )}
           </div>
           <div className="flex items-center justify-center p-6">
             <div className="p-3 text-3xl">
               <AiOutlineMail />
             </div>
-            <a
-              className="p-3 text-xl font-bold text-iwanttoColor"
-              href="mailto: info@uptogo.org"
-            >
-              Email Us
-            </a>
+            {translate ? (
+              <a
+                className="p-3 text-xl font-bold text-iwanttoColor"
+                href="mailto: info@uptogo.org"
+              >
+                Email Us
+              </a>
+            ) : (
+              <a
+                className="p-3 text-xl font-bold text-iwanttoColor"
+                href="mailto: info@uptogo.org"
+              >
+                Gửi email cho chúng tôi
+              </a>
+            )}
           </div>
         </div>
       </motion.div>
@@ -78,9 +95,15 @@ const Footer = () => {
             <p className="whitespace-nowrap text-center text-sm font-semibold">
               Uptogo Joint-Stock Company (Uptogo)
             </p>
-            <p className="text-grey-800 text-md text-center">
-              Head Office: 89 Lang Ha Str., Dong Da Dist., Ha Noi
-            </p>
+            {translate ? (
+              <p className="text-grey-800 text-md text-center">
+                Head Office: 89 Lang Ha Str., Dong Da Dist., HCMC
+              </p>
+            ) : (
+              <p className="text-grey-800 text-md text-center">
+                Văn phòng Chính: 89 Lang Ha Str., Dong Da Dist., HCMC
+              </p>
+            )}
           </div>
           <div className="flex items-center justify-center space-x-6">
             <a
@@ -98,6 +121,7 @@ const Footer = () => {
             <div>
               <Image src={zaloLogo} width={35} height={35} alt="zalo logo" />
             </div>
+            <TranslateBtn />
           </div>
         </div>
         <div className="bg-blue py-2 md:py-4">

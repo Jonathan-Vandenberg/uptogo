@@ -4,27 +4,30 @@ import Fade from "@mui/material/Fade";
 import Modal from "@mui/material/Modal";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import router from "next/router";
+import Link from "next/link";
 import { NextPage } from "next/types";
 import * as React from "react";
+import { useState } from "react";
+import { FaHeart, FaMobileAlt } from "react-icons/fa";
+import { HiOutlineLocationMarker } from "react-icons/hi";
 import {
-  FaHeart,
-  FaMobileAlt,
-  FaRegQuestionCircle,
-  FaUser,
-} from "react-icons/fa";
-import {
-  MdOutlineArrowForwardIos,
   MdOutlineArrowBackIos,
-  MdAdminPanelSettings,
+  MdOutlineArrowForwardIos,
 } from "react-icons/md";
 import fullLogo from "../../../public/fullLogo.png";
 import faviconLogo from "../../../public/uptogoFavicon.png";
-import Link from "next/link";
-import { HiOutlineLocationMarker } from "react-icons/hi";
-import { useState } from "react";
-import { signIn } from "next-auth/react";
 import AuthBtn from "../../UI/AuthBtn";
+import TranslateBtn from "../../UI/TranslateBtn";
+import {
+  designLinks,
+  healthLinks,
+  managementLinks,
+  itLinks,
+  hospitalityLinks,
+  tradeLinks,
+} from "../../../lib/links";
+
+import { useAppSelector } from "../../../redux-hooks/hooks";
 
 const style = {
   position: "absolute" as "absolute",
@@ -46,6 +49,8 @@ const SideNavModal: NextPage = () => {
 
   const btnRef = React.useRef<HTMLButtonElement>();
   const menuRef = React.useRef<HTMLDivElement>();
+
+  const translate = useAppSelector((state) => state.translationState.translate);
 
   const openMenu = () => {
     setOpen(true);
@@ -73,9 +78,15 @@ const SideNavModal: NextPage = () => {
         }}
         className="flex items-center justify-between pt-2"
       >
-        <p className="font-semibold pb-1 pl-4 text-xl logoFont text-gray-700 cursor-pointer">
-          Ngành Học
-        </p>
+        {translate ? (
+          <p className="font-semibold pb-1 pl-4 text-xl logoFont text-gray-700 cursor-pointer">
+            Majors
+          </p>
+        ) : (
+          <p className="font-semibold pb-1 pl-4 text-xl logoFont text-gray-700 cursor-pointer">
+            Ngành Học
+          </p>
+        )}
         <div className="px-4">
           <MdOutlineArrowForwardIos />
         </div>
@@ -85,33 +96,15 @@ const SideNavModal: NextPage = () => {
         onClick={() => setShowHouseholdMenu(!showHouseholdMenu)}
         className="flex items-center justify-between"
       >
-        <p className="font-semibold pb-1 pl-4 text-xl logoFont text-gray-700 cursor-pointer">
-          Sự kiện
-        </p>
-        <div className="px-4">
-          <MdOutlineArrowForwardIos />
-        </div>
-      </div>
-
-      <div
-        onClick={() => setShowSMEMenu(!showSMEMenu)}
-        className="flex items-center justify-between"
-      >
-        <p className="font-semibold pb-1 pl-4 text-xl logoFont text-gray-700 cursor-pointer">
-          Visa
-        </p>
-        <div className="px-4">
-          <MdOutlineArrowForwardIos />
-        </div>
-      </div>
-
-      <div
-        onClick={() => setShowCorporate(!showCorporate)}
-        className="flex items-center justify-between"
-      >
-        <p className="font-semibold pb-1 pl-4 text-xl logoFont text-gray-700 cursor-pointer">
-          English
-        </p>
+        {translate ? (
+          <p className="font-semibold pb-1 pl-4 text-xl logoFont text-gray-700 cursor-pointer">
+            Events
+          </p>
+        ) : (
+          <p className="font-semibold pb-1 pl-4 text-xl logoFont text-gray-700 cursor-pointer">
+            Sự kiện
+          </p>
+        )}
         <div className="px-4">
           <MdOutlineArrowForwardIos />
         </div>
@@ -134,13 +127,19 @@ const SideNavModal: NextPage = () => {
         </div>
       </Link>
 
-      <div className="flex flex-col items-center justify-evenly space-y-2 whitespace-nowrap">
+      <TranslateBtn />
+
+      <div className="flex flex-col items-center">
         <Link href="/about">
-          <a className="cursor-pointer px-4">About Us</a>
+          <a className="cursor-pointer px-2">
+            {translate ? <p>About Us</p> : <p>Về chúng tôi</p>}
+          </a>
         </Link>
 
         <div>
-          <a className="cursor-pointer px-4">Recruit</a>
+          <a className="cursor-pointer px-2">
+            {translate ? <p>Recruit</p> : <p>Tuyển dụng</p>}
+          </a>
         </div>
       </div>
 
@@ -150,7 +149,7 @@ const SideNavModal: NextPage = () => {
             <div className="text-xl text-red-400">
               <FaHeart />
             </div>
-            <p>My Favorites</p>
+            {translate ? <p>My Favorites</p> : <p>Sở thích</p>}
           </div>
         </Link>
       </div>
@@ -168,89 +167,94 @@ const SideNavModal: NextPage = () => {
             target="_blank"
             rel="noreferrer"
           >
-            <p>Visit Uptogo</p>
+            {translate ? <p>Visit Uptogo</p> : <p>Chuyến thăm</p>}
           </a>
         </div>
       </Link>
     </div>
   );
 
-  const MajorsMenu = () => (
-    <div className="w-[80vw]">
-      <div className="flex w-full" onClick={() => setShowMajors(!showMajors)}>
-        <div className="p-3">
-          <MdOutlineArrowBackIos />
-        </div>
-        <div className=" p-2 text-xl font-semibold text-iwanttoColor">
-          Ngành Học
-        </div>
-      </div>
-
-      <div className="flex flex-col items-start justify-center">
-        <div
-          onClick={() => handleClose()}
-          className="w-full cursor-pointer p-3 pl-6 pt-6 font-semibold"
-        >
-          <Link href={"/courses/information-technology"}>
-            <p className="font-semibold text-xl logoFont text-gray-700 cursor-pointer">
-              Công nghệ thông tin
-            </p>
-          </Link>
+  const MajorsMenu = () => {
+    const translate = useAppSelector(
+      (state) => state.translationState.translate
+    );
+    return (
+      <div className="w-[80vw]">
+        <div className="flex w-full" onClick={() => setShowMajors(!showMajors)}>
+          <div className="p-3">
+            <MdOutlineArrowBackIos />
+          </div>
+          <div className=" p-2 text-xl font-semibold text-iwanttoColor">
+            {translate ? "Majors" : "Ngành Học"}
+          </div>
         </div>
 
-        <div
-          className="w-full cursor-pointer p-3 pl-6 font-semibold"
-          onClick={() => handleClose()}
-        >
-          <Link href={"/courses/hospitality"}>
-            <p className="font-semibold text-xl logoFont text-gray-700 cursor-pointer">
-              Nhà hàng – Khách sạn
-            </p>
-          </Link>
-        </div>
-        <div
-          className="w-full cursor-pointer p-3 pl-6 font-semibold"
-          onClick={() => handleClose()}
-        >
-          <Link href={"/courses/management"}>
-            <p className="font-semibold text-xl logoFont text-gray-700 cursor-pointer">
-              Quản Lý
-            </p>
-          </Link>
-        </div>
-        <div
-          className="w-full cursor-pointer p-3 pl-6 font-semibold"
-          onClick={() => handleClose()}
-        >
-          <Link href={"/courses/health"}>
-            <p className="font-semibold text-xl logoFont text-gray-700 cursor-pointer">
-              Sức khỏe
-            </p>
-          </Link>
-        </div>
-        <div
-          className="w-full cursor-pointer p-3 pl-6 font-semibold"
-          onClick={() => handleClose()}
-        >
-          <Link href={"/courses/trades"}>
-            <p className="font-semibold text-xl logoFont text-gray-700 cursor-pointer">
-              Thương mại & Thể thao
-            </p>
-          </Link>
-        </div>
-        <div
-          className="w-full cursor-pointer p-3 pl-6"
-          onClick={() => handleClose()}
-        >
-          <Link href={"/courses/design"}>
-            <p className="font-semibold text-xl logoFont text-gray-700 cursor-pointer">
-              Thiết kế
-            </p>
-          </Link>
+        <div className="flex flex-col items-start justify-center">
+          <div
+            onClick={() => handleClose()}
+            className="w-full cursor-pointer p-3 pl-6 pt-6 font-semibold"
+          >
+            <Link href={"/courses/information-technology"}>
+              <p className="font-semibold text-xl logoFont text-gray-700 cursor-pointer">
+                {translate ? "Information Technology" : "Công nghệ thông tin"}
+              </p>
+            </Link>
+          </div>
+
+          <div
+            className="w-full cursor-pointer p-3 pl-6 font-semibold"
+            onClick={() => handleClose()}
+          >
+            <Link href={"/courses/hospitality"}>
+              <p className="font-semibold text-xl logoFont text-gray-700 cursor-pointer">
+                {translate ? "Hospitality" : "Nhà hàng – Khách sạn"}
+              </p>
+            </Link>
+          </div>
+          <div
+            className="w-full cursor-pointer p-3 pl-6 font-semibold"
+            onClick={() => handleClose()}
+          >
+            <Link href={"/courses/management"}>
+              <p className="font-semibold text-xl logoFont text-gray-700 cursor-pointer">
+                {translate ? "Management" : "Quản Lý"}
+              </p>
+            </Link>
+          </div>
+          <div
+            className="w-full cursor-pointer p-3 pl-6 font-semibold"
+            onClick={() => handleClose()}
+          >
+            <Link href={"/courses/health"}>
+              <p className="font-semibold text-xl logoFont text-gray-700 cursor-pointer">
+                {translate ? "Health" : "Sức khỏe"}
+              </p>
+            </Link>
+          </div>
+          <div
+            className="w-full cursor-pointer p-3 pl-6 font-semibold"
+            onClick={() => handleClose()}
+          >
+            <Link href={"/courses/trades"}>
+              <p className="font-semibold text-xl logoFont text-gray-700 cursor-pointer">
+                {translate ? "Trades & Sports" : "Thương mại & Thể thao"}
+              </p>
+            </Link>
+          </div>
+          <div
+            className="w-full cursor-pointer p-3 pl-6"
+            onClick={() => handleClose()}
+          >
+            <Link href={"/courses/design"}>
+              <p className="font-semibold text-xl logoFont text-gray-700 cursor-pointer">
+                {translate ? "Design" : "Thiết kế"}
+              </p>
+            </Link>
+          </div>
         </div>
       </div>
-    </div>
-  );
+    );
+  };
 
   const HouseholdMenu = () => (
     <div className="w-[80vw]">

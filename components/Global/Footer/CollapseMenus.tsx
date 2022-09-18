@@ -10,44 +10,19 @@ import {
   hospitalityLinks,
   itLinks,
 } from "../../../lib/links";
+import { useAppSelector } from "../../../redux-hooks/hooks";
 
 const App = ({ handleStepper }: IStepper) => {
+  const translate = useAppSelector((state) => state.translationState.translate);
   return (
     <div className="divide-y-2 divide-sky-900 border-b-2 border-t-2 border-blue">
-      <Collapsible
-        transitionTime={200}
-        trigger={
-          <div className="flex items-center justify-between bg-darkBlue text-gray-100">
-            <p className="p-4 text-blue text-lg">Application Process</p>
-            <div className="pr-4">
-              <FaAngleRight color={"white"} fontSize={20} />
-            </div>
-          </div>
-        }
-      >
-        <div className="divide-y-2 divide-gray-300">
-          <p className="cursor-pointer pl-6 p-4 hover:bg-lightBlue border-t-2 border-gray-200 text-lg">
-            Step 1: Choose Your Course
-          </p>
-          <p className="cursor-pointer p-4 pl-6 hover:bg-lightBlue text-lg">
-            step 2: Speak with our Consultants
-          </p>
-          <p className="cursor-pointer pl-6 p-4 hover:bg-lightBlue text-lg">
-            Step 3: Prepare for Visa Application
-          </p>
-          <p className="text-lg cursor-pointer p-4 pl-6 hover:bg-lightBlue border-b-2 border-blue">
-            Step 4: Study Abroad!
-          </p>
-        </div>
-      </Collapsible>
-
       <Courses handleStepper={handleStepper} />
 
       <Collapsible
         transitionTime={200}
         trigger={
           <div className="flex items-center justify-between bg-darkBlue text-gray-100">
-            <p className="p-4 text-blue text-lg">Visa Application</p>
+            <p className="p-4 text-blue text-lg">Visa</p>
             <div className="pr-4">
               <FaAngleRight color={"white"} fontSize={20} />
             </div>
@@ -56,7 +31,7 @@ const App = ({ handleStepper }: IStepper) => {
       >
         <div className="divide-y-2 divide-gray-300">
           <p className="cursor-pointer p-4 pl-6 hover:bg-lightBlue text-lg">
-            Visa Requirements
+            {translate ? "Visa Application" : "Đơn xin thị thực"}
           </p>
           <p className="cursor-pointer p-4 pl-6 hover:bg-lightBlue text-lg">
             Something Else
@@ -70,7 +45,9 @@ const App = ({ handleStepper }: IStepper) => {
         transitionTime={200}
         trigger={
           <div className="flex items-center justify-between bg-darkBlue text-gray-100">
-            <p className="p-4 text-blue text-lg">Things you should know</p>
+            <p className="p-4 text-blue text-lg">
+              {translate ? "Things you should know" : "Tìm hiểu thêm"}
+            </p>
             <div className="pr-4">
               <FaAngleRight color={"white"} fontSize={20} />
             </div>
@@ -78,17 +55,11 @@ const App = ({ handleStepper }: IStepper) => {
         }
       >
         <div className="divide-y-2 divide-gray-300">
-          <p className="text-lg cursor-pointer p-4 pl-6 hover:bg-lightBlue">
-            Promotions
-          </p>
           <p className="cursor-pointer p-4 pl-6 hover:bg-lightBlue text-lg">
-            Documents and Fees
+            Something
           </p>
           <p className="cursor-pointer p-4 pl-6 hover:bg-lightBlue text-lg">
             FAQs
-          </p>
-          <p className="text-lg cursor-pointer p-4 pl-6 hover:bg-lightBlue">
-            Tools and Utilities
           </p>
         </div>
       </Collapsible>
@@ -99,12 +70,15 @@ const App = ({ handleStepper }: IStepper) => {
 export default App;
 
 export const Courses = ({ handleStepper }: IStepper) => {
+  const translate = useAppSelector((state) => state.translationState.translate);
   return (
     <Collapsible
       transitionTime={200}
       trigger={
         <div className="flex  items-center justify-between bg-darkBlue text-gray-100">
-          <p className="p-4 text-blue text-lg">Ngành Học</p>
+          <p className="p-4 text-blue text-lg">
+            {translate ? "Majors" : "Ngành Học"}
+          </p>
           <div className="pr-4">
             <FaAngleRight fontSize={20} color={"white"} />
           </div>
@@ -128,6 +102,8 @@ interface IStepper {
 }
 
 export const CoursesIT = ({ handleStepper }: IStepper) => {
+  const translate = useAppSelector((state) => state.translationState.translate);
+
   return (
     <Collapsible
       transitionTime={200}
@@ -136,7 +112,9 @@ export const CoursesIT = ({ handleStepper }: IStepper) => {
           className="flex items-center justify-between px-6 bg-sky-100  text-white"
           onClick={handleStepper}
         >
-          <p className="p-4 ml-2 text-gray-700  text-lg">Công nghệ thông tin</p>
+          <p className="p-4 ml-2 text-gray-700  text-lg">
+            {translate ? "Information Technology" : "Công nghệ thông tin"}
+          </p>
           <div className="pr-4">
             <FaAngleRight fontSize={20} />
           </div>
@@ -147,7 +125,7 @@ export const CoursesIT = ({ handleStepper }: IStepper) => {
         {itLinks.map((item, i) => (
           <Link key={i} href={item.link}>
             <p className="pl-12 cursor-pointer p-4  hover:bg-lightBlue">
-              {item.course}
+              {translate ? item.courseE : item.course}
             </p>
           </Link>
         ))}
@@ -157,6 +135,7 @@ export const CoursesIT = ({ handleStepper }: IStepper) => {
 };
 
 export const CoursesHealth = ({ handleStepper }: IStepper) => {
+  const translate = useAppSelector((state) => state.translationState.translate);
   return (
     <Collapsible
       transitionTime={200}
@@ -165,7 +144,9 @@ export const CoursesHealth = ({ handleStepper }: IStepper) => {
           onClick={handleStepper}
           className="flex items-center justify-between px-6 bg-sky-100 text-white"
         >
-          <p className="p-4 ml-2 text-gray-700 text-lg">Sức khỏe</p>
+          <p className="p-4 ml-2 text-gray-700 text-lg">
+            {translate ? "Health" : "Sức khỏe"}
+          </p>
           <div className="pr-4">
             <FaAngleRight fontSize={20} />
           </div>
@@ -176,7 +157,7 @@ export const CoursesHealth = ({ handleStepper }: IStepper) => {
         {healthLinks.map((item, i) => (
           <Link key={i} href={item.link}>
             <p className="pl-12 cursor-pointer p-4  hover:bg-lightBlue">
-              {item.course}
+              {translate ? item.courseE : item.course}
             </p>
           </Link>
         ))}
@@ -186,6 +167,7 @@ export const CoursesHealth = ({ handleStepper }: IStepper) => {
 };
 
 export const CoursesManagement = ({ handleStepper }: IStepper) => {
+  const translate = useAppSelector((state) => state.translationState.translate);
   return (
     <Collapsible
       transitionTime={200}
@@ -194,7 +176,9 @@ export const CoursesManagement = ({ handleStepper }: IStepper) => {
           onClick={handleStepper}
           className="flex items-center justify-between px-6 bg-sky-100 text-gray-100"
         >
-          <p className="p-4 ml-2 text-gray-700 text-lg">Quản lý</p>
+          <p className="p-4 ml-2 text-gray-700 text-lg">
+            {translate ? "Management" : "Quản lý"}
+          </p>
           <div className="pr-4">
             <FaAngleRight fontSize={20} />
           </div>
@@ -205,7 +189,7 @@ export const CoursesManagement = ({ handleStepper }: IStepper) => {
         {managementLinks.map((item, i) => (
           <Link key={i} href={item.link}>
             <p className="pl-12 cursor-pointer p-4  hover:bg-lightBlue">
-              {item.course}
+              {translate ? item.courseE : item.course}
             </p>
           </Link>
         ))}
@@ -215,6 +199,7 @@ export const CoursesManagement = ({ handleStepper }: IStepper) => {
 };
 
 export const CoursesDesign = ({ handleStepper }: IStepper) => {
+  const translate = useAppSelector((state) => state.translationState.translate);
   return (
     <Collapsible
       transitionTime={200}
@@ -223,7 +208,9 @@ export const CoursesDesign = ({ handleStepper }: IStepper) => {
           onClick={handleStepper}
           className="flex items-center justify-between px-6 bg-sky-100 text-white"
         >
-          <p className="p-4 ml-2 text-gray-700 text-lg">Thiết kế</p>
+          <p className="p-4 ml-2 text-gray-700 text-lg">
+            {translate ? "Design" : "Thiết kế"}
+          </p>
           <div className="pr-4">
             <FaAngleRight fontSize={20} />
           </div>
@@ -234,7 +221,7 @@ export const CoursesDesign = ({ handleStepper }: IStepper) => {
         {designLinks.map((item, i) => (
           <Link key={i} href={item.link}>
             <p className="pl-12 cursor-pointer p-4  hover:bg-lightBlue">
-              {item.course}
+              {translate ? item.courseE : item.course}
             </p>
           </Link>
         ))}
@@ -244,6 +231,7 @@ export const CoursesDesign = ({ handleStepper }: IStepper) => {
 };
 
 export const CoursesHospitality = ({ handleStepper }: IStepper) => {
+  const translate = useAppSelector((state) => state.translationState.translate);
   return (
     <Collapsible
       transitionTime={200}
@@ -252,7 +240,9 @@ export const CoursesHospitality = ({ handleStepper }: IStepper) => {
           onClick={handleStepper}
           className="flex items-center justify-between px-6 bg-sky-100 text-white"
         >
-          <p className="p-4 ml-2 text-gray-700 text-lg">Nhà hàng khách sạn</p>
+          <p className="p-4 ml-2 text-gray-700 text-lg">
+            {translate ? "Hospitality" : "Nhà hàng khách sạn"}
+          </p>
           <div className="pr-4">
             <FaAngleRight fontSize={20} />
           </div>
@@ -263,7 +253,7 @@ export const CoursesHospitality = ({ handleStepper }: IStepper) => {
         {hospitalityLinks.map((item, i) => (
           <Link key={i} href={item.link}>
             <p className="pl-12 cursor-pointer p-4  hover:bg-lightBlue">
-              {item.course}
+              {translate ? item.courseE : item.course}
             </p>
           </Link>
         ))}
@@ -273,6 +263,7 @@ export const CoursesHospitality = ({ handleStepper }: IStepper) => {
 };
 
 export const CoursesTrades = ({ handleStepper }: IStepper) => {
+  const translate = useAppSelector((state) => state.translationState.translate);
   return (
     <Collapsible
       transitionTime={200}
@@ -282,7 +273,7 @@ export const CoursesTrades = ({ handleStepper }: IStepper) => {
           className="flex items-center justify-between px-6 bg-sky-100 text-white"
         >
           <p className="p-4 ml-2 text-gray-700 text-lg">
-            Thương mại & Thể thao
+            {translate ? "Trades & Sport" : "Thương mại & Thể thao"}
           </p>
           <div className="pr-4">
             <FaAngleRight fontSize={20} />
@@ -294,7 +285,7 @@ export const CoursesTrades = ({ handleStepper }: IStepper) => {
         {tradeLinks.map((item, i) => (
           <Link key={i} href={item.link}>
             <p className="pl-12 cursor-pointer p-4  hover:bg-lightBlue">
-              {item.course}
+              {translate ? item.courseE : item.course}
             </p>
           </Link>
         ))}

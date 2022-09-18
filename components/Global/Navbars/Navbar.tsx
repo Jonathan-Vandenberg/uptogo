@@ -12,6 +12,8 @@ import NavbarTop from "./NavbarTop";
 import AuthBtn from "../../UI/AuthBtn";
 import UnCollapassedMenu from "../Footer/UnCollapassedMenu";
 import UnCollapassedCourses from "../Footer/UnCollapassedCourses";
+import TranslateBtn from "../../UI/TranslateBtn";
+import { useAppSelector } from "../../../redux-hooks/hooks";
 
 const NavbarBottom: NextPage = () => {
   const [majorsDropdown, setMajorsDropdown] = useState(false);
@@ -20,6 +22,8 @@ const NavbarBottom: NextPage = () => {
 
   const [height, setHeight] = useState(0);
   const [fullBottomNav, setFullBottomNav] = useState(true);
+
+  const translate = useAppSelector((state) => state.translationState.translate);
 
   useEffect(() => {
     window.addEventListener("scroll", () => {
@@ -70,7 +74,7 @@ const NavbarBottom: NextPage = () => {
                   setNewsDropdown(false);
                 }}
               >
-                Định Hướng
+                {translate ? "Orientation" : "Định Hướng"}
               </div>
             </div>
             <Link href={"/courses"}>
@@ -88,27 +92,10 @@ const NavbarBottom: NextPage = () => {
                     setNewsDropdown(false);
                   }}
                 >
-                  Ngành Học
+                  {translate ? "Majors" : "Ngành Học"}
                 </div>
               </div>
             </Link>
-            <div className="relative flex flex-col items-center justify-center">
-              <div
-                className="cursor-pointer text-lg hover:text-iwanttoColor text-gray-800"
-                onMouseEnter={() => {
-                  setEnglishDropdown(true);
-                  setMajorsDropdown(false);
-                  setNewsDropdown(false);
-                }}
-                onClick={() => {
-                  setMajorsDropdown(false);
-                  setEnglishDropdown(!englishDropdown);
-                  setNewsDropdown(false);
-                }}
-              >
-                Tiếng Anh
-              </div>
-            </div>
             <div className="relative flex flex-col items-center justify-center">
               <div
                 className="cursor-pointer text-lg hover:text-iwanttoColor text-gray-800"
@@ -124,7 +111,7 @@ const NavbarBottom: NextPage = () => {
                   router.push("/blogs");
                 }}
               >
-                Tin Tức
+                {translate ? "News" : "Tin Tức"}
               </div>
             </div>
             <Link href={"/events"}>
@@ -136,7 +123,7 @@ const NavbarBottom: NextPage = () => {
                   setEnglishDropdown(false);
                 }}
               >
-                Sự Kiện
+                {translate ? "Events" : "Sự Kiện"}
               </p>
             </Link>
           </div>
@@ -167,8 +154,11 @@ const NavbarBottom: NextPage = () => {
               </div>
             </motion.div>
           ) : (
-            <div className="cursor-pointer">
-              <AuthBtn />
+            <div className="flex items-center justify-center space-x-6">
+              <div className="cursor-pointer">
+                <AuthBtn />
+              </div>
+              <TranslateBtn />
             </div>
           )}
         </div>

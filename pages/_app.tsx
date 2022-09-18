@@ -11,6 +11,9 @@ import Spline from "@splinetool/react-spline";
 import { useEffect, useState } from "react";
 import NextNProgress from "nextjs-progressbar";
 import InitDivider from "../components/UI/InitDivider";
+import store from "../store/store";
+import { Provider } from "react-redux";
+import Head from "next/head";
 
 function MyApp({ Component, pageProps: { session, ...pageProps } }: AppProps) {
   // const [splashComplete, setSplashComplete] = useState(false);
@@ -86,17 +89,24 @@ function MyApp({ Component, pageProps: { session, ...pageProps } }: AppProps) {
     //   <motion.div initial={{ opacity: 0 }} animate={controlsBody}>
     //     {splashComplete && (
     //       <>
-    <SessionProvider session={session}>
-      <ApolloProvider client={client}>
-        <Navbar />
-        <SideNavModal />
-        <div className="md:hidden">
-          <InitDivider />
-        </div>
-        <Component {...pageProps} />
-        <Footer />
-      </ApolloProvider>
-    </SessionProvider>
+    <Provider store={store}>
+      <Head>
+        <meta charSet="utf-8" />
+        <meta name="author" content="Jonathan van den Berg" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+      </Head>
+      <SessionProvider session={session}>
+        <ApolloProvider client={client}>
+          <Navbar />
+          <SideNavModal />
+          <div className="md:hidden">
+            <InitDivider />
+          </div>
+          <Component {...pageProps} />
+          <Footer />
+        </ApolloProvider>
+      </SessionProvider>
+    </Provider>
     //       </>
     //     )}
     //   </motion.div>
