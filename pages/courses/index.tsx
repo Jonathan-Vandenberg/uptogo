@@ -1,13 +1,11 @@
-import Link from "next/link";
 import Image from "next/image";
-import it from "../../public/courseMain/it/Data_Management.jpeg";
 import { useRouter } from "next/router";
 import healthIcon from "../../public/courseIcons/healthcare.png";
 import managementIcon from "../../public/courseIcons/management.png";
 import designIcon from "../../public/courseIcons/web-design.png";
 import hospitalityIcon from "../../public/courseIcons/hospitality.png";
 import tradeIcon from "../../public/courseIcons/competence.png";
-import itIcon from "../../public/courseIcons/computer.png";
+import codingIcon from "../../public/courseIcons/coding.png";
 
 export default function App() {
   const router = useRouter();
@@ -18,7 +16,13 @@ export default function App() {
         onClick={() => router.push("/courses/information-technology")}
       >
         <div className="w-60 h-full items-center flex justify-center">
-          <Image src={itIcon} alt="IT image" width={60} height={60} priority />
+          <Image
+            src={codingIcon}
+            alt="IT image"
+            width={60}
+            height={60}
+            priority
+          />
         </div>
         <div className="text-lg text-gray-700 w-full text-center py-2">
           Công nghệ thông tin
@@ -29,7 +33,13 @@ export default function App() {
         onClick={() => router.push("/courses/management")}
       >
         <div className="w-60 h-full items-center flex justify-center">
-          <Image src={itIcon} alt="IT image" width={60} height={60} priority />
+          <Image
+            src={managementIcon}
+            alt="IT image"
+            width={60}
+            height={60}
+            priority
+          />
         </div>
         <div className="text-lg text-gray-700 w-full text-center py-2">
           Quản lý
