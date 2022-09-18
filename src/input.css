@@ -27,6 +27,16 @@ a {
   -webkit-touch-callout: none !important;
   outline: none !important;
 }
+::selection {
+  color: none;
+  background: none;
+}
+
+/* For Mozilla Firefox */
+::-moz-selection {
+  color: none;
+  background: none;
+}
 
 a.anchor {
   display: block;
