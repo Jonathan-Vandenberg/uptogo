@@ -21,7 +21,7 @@ export default function App() {
           />
         </div>
         <div className="text-lg text-gray-700 bg-sky-100 w-full text-center py-2">
-          IT
+          Công nghệ thông tin
         </div>
       </div>
       <div
@@ -38,7 +38,7 @@ export default function App() {
           />
         </div>
         <div className="text-lg text-gray-700 bg-sky-100 w-full text-center py-2">
-          Management
+          Quản lý
         </div>
       </div>
       <div
@@ -55,7 +55,7 @@ export default function App() {
           />
         </div>
         <div className="text-lg text-gray-700 bg-sky-100 w-full text-center py-2">
-          Design
+          Thiết kế
         </div>
       </div>
       <div
@@ -72,7 +72,7 @@ export default function App() {
           />
         </div>
         <div className="text-lg text-gray-700 bg-sky-100 w-full text-center py-2">
-          Health
+          Sức khỏe
         </div>
       </div>
       <div
@@ -89,7 +89,7 @@ export default function App() {
           />
         </div>
         <div className="text-lg text-gray-700 bg-sky-100 w-full text-center py-2">
-          Hospitality
+          Nhà hàng khách sạn
         </div>
       </div>
       <div
@@ -106,7 +106,7 @@ export default function App() {
           />
         </div>
         <div className="text-lg text-gray-700 bg-sky-100 w-full text-center py-2">
-          Trades
+          Thương mại & Thể thao
         </div>
       </div>
     </div>

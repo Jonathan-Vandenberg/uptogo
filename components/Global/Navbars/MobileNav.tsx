@@ -23,7 +23,7 @@ import faviconLogo from "../../../public/uptogoFavicon.png";
 import Link from "next/link";
 import { HiOutlineLocationMarker } from "react-icons/hi";
 import { useState } from "react";
-import { useSession, signIn, signOut } from "next-auth/react";
+import { signIn } from "next-auth/react";
 import AuthBtn from "../../UI/AuthBtn";
 
 const style = {
@@ -46,8 +46,6 @@ const SideNavModal: NextPage = () => {
 
   const btnRef = React.useRef<HTMLButtonElement>();
   const menuRef = React.useRef<HTMLDivElement>();
-
-  const { data: session, status } = useSession();
 
   const openMenu = () => {
     setOpen(true);
@@ -85,7 +83,7 @@ const SideNavModal: NextPage = () => {
         onClick={() => setShowHouseholdMenu(!showHouseholdMenu)}
         className="flex items-center justify-between"
       >
-        <p className="cursor-pointer pl-4 font-semibold">Events</p>
+        <p className="cursor-pointer pl-4 font-semibold">Sự kiện</p>
         <div className="px-4">
           <MdOutlineArrowForwardIos />
         </div>
@@ -113,7 +111,7 @@ const SideNavModal: NextPage = () => {
 
       <div onClick={() => handleClose()}>
         <Link href={"/blogs"}>
-          <p className="cursor-pointer pl-4 pb-1 font-semibold">News</p>
+          <p className="cursor-pointer pl-4 pb-1 font-semibold">Blog</p>
         </Link>
       </div>
 
@@ -196,7 +194,7 @@ const SideNavModal: NextPage = () => {
           className="w-full cursor-pointer p-3 pl-6 pt-6 font-semibold"
         >
           <Link href={"/courses/information-technology"}>
-            <p className="font-semibold">Công nghệ thông tin (IT)</p>
+            <p className="font-semibold">Công nghệ thông tin</p>
           </Link>
         </div>
 
@@ -204,36 +202,32 @@ const SideNavModal: NextPage = () => {
           className="w-full cursor-pointer p-3 pl-6 font-semibold"
           onClick={() => handleClose()}
         >
-          <Link href={"/courses/hospitality"}>
-            Nhà hàng – Khách sạn (Hospitality)
-          </Link>
+          <Link href={"/courses/hospitality"}>Nhà hàng – Khách sạn</Link>
         </div>
         <div
           className="w-full cursor-pointer p-3 pl-6 font-semibold"
           onClick={() => handleClose()}
         >
-          <Link href={"/courses/management"}>Quản Lý (Mangement)</Link>
+          <Link href={"/courses/management"}>Quản Lý</Link>
         </div>
         <div
           className="w-full cursor-pointer p-3 pl-6 font-semibold"
           onClick={() => handleClose()}
         >
-          <Link href={"/courses/health"}>Sức khỏe (Health)</Link>
+          <Link href={"/courses/health"}>Sức khỏe</Link>
         </div>
         <div
           className="w-full cursor-pointer p-3 pl-6 font-semibold"
           onClick={() => handleClose()}
         >
-          <Link href={"/courses/trades"}>
-            Thương mại & Thể thao (Trade & Sports)
-          </Link>
+          <Link href={"/courses/trades"}>Thương mại & Thể thao</Link>
         </div>
         <div
           className="w-full cursor-pointer p-3 pl-6"
           onClick={() => handleClose()}
         >
           <Link href={"/courses/design"}>
-            <p className="font-semibold">Thiết kế (Design)</p>
+            <p className="font-semibold">Thiết kế</p>
           </Link>
         </div>
       </div>
