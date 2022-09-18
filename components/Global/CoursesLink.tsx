@@ -32,7 +32,7 @@ export default function App() {
           animate={{
             rotateX: 360,
             rotateY: 360,
-            transition: { duration: 2, repeat: 6, repeatDelay: 20 },
+            transition: { duration: 2, repeat: 10, repeatDelay: 20 },
           }}
         >
           <a href="tel:+84926561080">
