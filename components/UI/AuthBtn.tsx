@@ -12,9 +12,7 @@ const AuthBtn = () => {
   if (status === "loading") {
     return <div className="auth-btn">loading...</div>;
   }
-  if (status === "authenticated") {
-    router.push("/");
-  }
+
   if (status === "unauthenticated") {
     return (
       <button
