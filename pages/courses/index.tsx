@@ -15,7 +15,7 @@ export default function App() {
   return (
     <div className="fixed top-0 left-0 w-screen h-screen bg-white z-30">
       <div className="grid grid-cols-2 mt-20 w-screen h-auto z-40 bg-white">
-        <div>
+        <div className="pb-4">
           <Link href={"/courses/information-technology"}>
             <div className="flex items-center justify-center flex-col cursor-pointer">
               <div className="w-60 h-full items-center flex justify-center">
@@ -27,13 +27,13 @@ export default function App() {
                   priority
                 />
               </div>
-              <div className="text-lg text-gray-700 w-full text-center py-2 leading-5">
+              <div className="text-lg text-gray-700 w-full text-center px-6 py-1 leading-5">
                 {translate ? "Information Technology" : "Công nghệ thông tin"}
               </div>
             </div>
           </Link>
         </div>
-        <div>
+        <div className="pb-4">
           <Link href={"/courses/management"}>
             <div className="flex items-center justify-center flex-col cursor-pointer">
               <div className="w-60 h-full items-center flex justify-center">
@@ -45,13 +45,13 @@ export default function App() {
                   priority
                 />
               </div>
-              <div className="text-lg text-gray-700 w-full text-center py-2">
+              <div className="text-lg text-gray-700 w-full text-center px-6 py-1">
                 {translate ? "Management" : "Quản lý"}
               </div>
             </div>
           </Link>
         </div>
-        <div>
+        <div className="pb-4">
           <Link href={"/courses/design"}>
             <div className="flex items-center justify-center flex-col cursor-pointer">
               <div className="w-60 h-full items-center flex justify-center">
@@ -63,13 +63,13 @@ export default function App() {
                   priority
                 />
               </div>
-              <div className="text-lg text-gray-700 w-full text-center py-2">
+              <div className="text-lg text-gray-700 w-full text-center px-6 py-1">
                 {translate ? "Design" : "Thiết kế"}
               </div>
             </div>
           </Link>
         </div>
-        <div>
+        <div className="pb-4">
           <Link href={"/courses/health"}>
             <div className="flex items-center justify-center flex-col cursor-pointer">
               <div className="w-60 h-full items-center flex justify-center">
@@ -81,13 +81,13 @@ export default function App() {
                   priority
                 />
               </div>
-              <div className="text-lg text-gray-700 w-full text-center py-2">
+              <div className="text-lg text-gray-700 w-full text-center px-6 py-1">
                 {translate ? "Health" : "Sức khỏe"}
               </div>
             </div>
           </Link>
         </div>
-        <div>
+        <div className="pb-4">
           <Link href={"/courses/hospitality"}>
             <div
               className="flex items-center justify-center flex-col cursor-pointer"
@@ -102,13 +102,13 @@ export default function App() {
                   priority
                 />
               </div>
-              <div className="text-lg text-gray-700 w-full text-center py-2">
+              <div className="leading-5 text-lg text-gray-700 w-full text-center px-6 py-1">
                 {translate ? "Hospitality" : "Nhà hàng khách sạn"}
               </div>
             </div>
           </Link>
         </div>
-        <div>
+        <div className="pb-4">
           <Link href={"/courses/trades"}>
             <div
               className="flex items-center justify-center flex-col cursor-pointer"
@@ -123,13 +123,14 @@ export default function App() {
                   priority
                 />
               </div>
-              <div className="text-lg text-gray-700 w-full text-center py-2 leading-5">
+              <div className="text-lg text-gray-700 w-full text-center px-6 py-1 leading-5">
                 {translate ? "Trades & Sports" : "Thương mại & Thể thao"}
               </div>
             </div>
           </Link>
         </div>
       </div>
+      <span className="fixed bottom-0 left-0 w-screen h-12 bg-orange" />
     </div>
   );
 }
