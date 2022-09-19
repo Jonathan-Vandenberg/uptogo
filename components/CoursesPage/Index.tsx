@@ -13,8 +13,8 @@ import Link from "next/link";
 export default function App() {
   const translate = useAppSelector((state) => state.translationState.translate);
   return (
-    <div className="fixed top-0 left-0 w-screen h-screen bg-white z-30">
-      <div className="grid grid-cols-2 mt-20 w-screen h-auto z-40 bg-white">
+    <div className="fixed md:static md:z-0  md:w-auto md:h-auto top-0 left-0 w-screen h-screen bg-white z-30">
+      <div className="md:flex md:mt-12 md:items-center md:justify-center grid grid-cols-2 mt-20 w-screen h-auto z-40 bg-white">
         <div className="pb-6">
           <Link href={"/courses/information-technology"}>
             <div className="flex items-center justify-center flex-col cursor-pointer">
@@ -160,7 +160,7 @@ export default function App() {
           </Link>
         </div>
       </div>
-      <span className="fixed bottom-0 left-0 w-screen h-12 bg-orange" />
+      <span className="fixed bottom-0 left-0 w-screen h-12 bg-orange md:hidden" />
     </div>
   );
 }
