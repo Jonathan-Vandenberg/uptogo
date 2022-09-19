@@ -127,7 +127,9 @@ const SideNavModal: NextPage = () => {
         </div>
       </Link>
 
-      <TranslateBtn />
+      <div onClick={() => handleClose()}>
+        <TranslateBtn />
+      </div>
 
       <div className="flex flex-col items-center">
         <Link href="/about">
