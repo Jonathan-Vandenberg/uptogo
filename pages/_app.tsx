@@ -93,6 +93,7 @@ function MyApp({ Component, pageProps: { session, ...pageProps } }: AppProps) {
     <Provider store={store}>
       <Head>
         <title>Uptogo</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       <SessionProvider session={session}>
         <ApolloProvider client={client}>

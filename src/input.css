@@ -27,6 +27,7 @@ a {
   -webkit-touch-callout: none !important;
   outline: none !important;
 }
+
 ::selection {
   color: none;
   background: none;
