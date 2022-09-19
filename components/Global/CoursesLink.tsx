@@ -1,21 +1,7 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { BsNewspaper } from "react-icons/bs";
-import {
-  FaBlog,
-  FaBlogger,
-  FaGraduationCap,
-  FaHackerNews,
-  FaNewspaper,
-} from "react-icons/fa";
-import { GrBlog } from "react-icons/gr";
-import { HiNewspaper } from "react-icons/hi";
-import {
-  MdCall,
-  MdCastForEducation,
-  MdEmail,
-  MdOutlineCastForEducation,
-} from "react-icons/md";
+import { FaGraduationCap } from "react-icons/fa";
+import { MdCall, MdEmail } from "react-icons/md";
 
 export default function App() {
   return (

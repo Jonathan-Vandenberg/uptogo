@@ -1,12 +1,24 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import logo from "../public/fullLogo.png";
 import { signIn, useSession } from "next-auth/react";
-import Google from "next-auth/providers/google";
 import { motion } from "framer-motion";
+import { useRouter } from "next/router";
 
 export default function Login() {
   const { data: session } = useSession();
+
+  const [auth, setAuth] = useState(false);
+
+  useEffect(() => {
+    session?.user === "Authenticated" && setAuth(!auth);
+  }, [auth, session?.user]);
+
+  const router = useRouter();
+
+  if (auth) {
+    return router.push("/");
+  }
 
   return (
     <div className="relative">
