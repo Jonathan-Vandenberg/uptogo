@@ -13,23 +13,27 @@ import CourseStepper from "./CourseStepper";
 
 export default function App() {
   const [step, setStep] = useState(0);
-  const [subject, setSubject] = useState(false);
+  const [category, setCategory] = useState(false);
   const [major, setMajor] = useState(false);
 
-  const handleStepper = () => {
-    setSubject(!subject);
+  const handleCategoryStepper = () => {
+    setCategory(!category);
+  };
+
+  const handleMajorStepper = () => {
+    setMajor(!major);
   };
 
   useEffect(() => {
-    if (subject) {
+    if (category) {
       setStep(1);
     } else {
       setStep(0);
     }
-    if (major) {
+    if (major && category) {
       setStep(2);
     }
-  }, [subject, major]);
+  }, [category, major]);
 
   return (
     <>
@@ -49,12 +53,30 @@ export default function App() {
           <div className="flex flex-col items-center justify-center space-y-12 py-12 px-10">
             <CourseStepper step={step} />
             <div className="flex -tems-center-justify-center space-y-1 flex-col">
-              <CoursesIT handleStepper={handleStepper} />
-              <CoursesHealth handleStepper={handleStepper} />
-              <CoursesManagement handleStepper={handleStepper} />
-              <CoursesDesign handleStepper={handleStepper} />
-              <CoursesHospitality handleStepper={handleStepper} />
-              <CoursesTrades handleStepper={handleStepper} />
+              <CoursesIT
+                handleMajorStepper={handleMajorStepper}
+                handleCategoryStepper={handleCategoryStepper}
+              />
+              <CoursesHealth
+                handleMajorStepper={handleMajorStepper}
+                handleCategoryStepper={handleCategoryStepper}
+              />
+              <CoursesManagement
+                handleMajorStepper={handleMajorStepper}
+                handleCategoryStepper={handleCategoryStepper}
+              />
+              <CoursesDesign
+                handleMajorStepper={handleMajorStepper}
+                handleCategoryStepper={handleCategoryStepper}
+              />
+              <CoursesHospitality
+                handleMajorStepper={handleMajorStepper}
+                handleCategoryStepper={handleCategoryStepper}
+              />
+              <CoursesTrades
+                handleMajorStepper={handleMajorStepper}
+                handleCategoryStepper={handleCategoryStepper}
+              />
             </div>
           </div>
         </div>

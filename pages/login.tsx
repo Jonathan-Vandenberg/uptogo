@@ -16,8 +16,8 @@ export default function Login() {
 
   return (
     <div className="relative">
-      <div className="fixed top-0 left-0 w-screen h-screen bg-white z-40 md:block ">
-        <div className="flex flex-col items-center justify-center space-y-2 mt-12">
+      <div className="fixed md:static top-0 left-0 w-screen h-screen bg-white z-40 md:z-0">
+        <div className="flex flex-col items-center justify-center space-y-2 mt-12 md:mt-20">
           <div className="pb-8">
             <Image src={logo} width={240} height={240} alt="signin logo" />
           </div>

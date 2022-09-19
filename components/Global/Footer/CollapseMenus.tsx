@@ -12,11 +12,14 @@ import {
 } from "../../../lib/links";
 import { useAppSelector } from "../../../redux-hooks/hooks";
 
-const App = ({ handleStepper }: IStepper) => {
+const App = ({ handleCategoryStepper, handleMajorStepper }: IStepper) => {
   const translate = useAppSelector((state) => state.translationState.translate);
   return (
     <div className="divide-y-2 divide-sky-900 border-b-2 border-t-2 border-blue">
-      <Courses handleStepper={handleStepper} />
+      <Courses
+        handleCategoryStepper={handleCategoryStepper}
+        handleMajorStepper={handleMajorStepper}
+      />
 
       <Collapsible
         transitionTime={200}
@@ -69,7 +72,10 @@ const App = ({ handleStepper }: IStepper) => {
 
 export default App;
 
-export const Courses = ({ handleStepper }: IStepper) => {
+export const Courses = ({
+  handleCategoryStepper,
+  handleMajorStepper,
+}: IStepper) => {
   const translate = useAppSelector((state) => state.translationState.translate);
   return (
     <Collapsible
@@ -86,22 +92,44 @@ export const Courses = ({ handleStepper }: IStepper) => {
       }
     >
       <div className="divide-y-2 divide-white">
-        <CoursesIT handleStepper={handleStepper} />
-        <CoursesHealth handleStepper={handleStepper} />
-        <CoursesManagement handleStepper={handleStepper} />
-        <CoursesDesign handleStepper={handleStepper} />
-        <CoursesHospitality handleStepper={handleStepper} />
-        <CoursesTrades handleStepper={handleStepper} />
+        <CoursesIT
+          handleCategoryStepper={handleCategoryStepper}
+          handleMajorStepper={handleMajorStepper}
+        />
+        <CoursesHealth
+          handleCategoryStepper={handleCategoryStepper}
+          handleMajorStepper={handleMajorStepper}
+        />
+        <CoursesManagement
+          handleCategoryStepper={handleCategoryStepper}
+          handleMajorStepper={handleMajorStepper}
+        />
+        <CoursesDesign
+          handleCategoryStepper={handleCategoryStepper}
+          handleMajorStepper={handleMajorStepper}
+        />
+        <CoursesHospitality
+          handleCategoryStepper={handleCategoryStepper}
+          handleMajorStepper={handleMajorStepper}
+        />
+        <CoursesTrades
+          handleCategoryStepper={handleCategoryStepper}
+          handleMajorStepper={handleMajorStepper}
+        />
       </div>
     </Collapsible>
   );
 };
 
 interface IStepper {
-  handleStepper: () => void;
+  handleCategoryStepper: () => void;
+  handleMajorStepper: () => void;
 }
 
-export const CoursesIT = ({ handleStepper }: IStepper) => {
+export const CoursesIT = ({
+  handleCategoryStepper,
+  handleMajorStepper,
+}: IStepper) => {
   const translate = useAppSelector((state) => state.translationState.translate);
 
   return (
@@ -110,7 +138,7 @@ export const CoursesIT = ({ handleStepper }: IStepper) => {
       trigger={
         <div
           className="flex items-center justify-between px-6 bg-sky-100  text-white"
-          onClick={handleStepper}
+          onClick={handleCategoryStepper}
         >
           <p className="p-4 ml-2 text-gray-700  text-lg">
             {translate ? "Information Technology" : "Công nghệ thông tin"}
@@ -121,7 +149,7 @@ export const CoursesIT = ({ handleStepper }: IStepper) => {
         </div>
       }
     >
-      <div className="divide-y divide-gray-300">
+      <div className="divide-y divide-gray-300" onClick={handleMajorStepper}>
         {itLinks.map((item, i) => (
           <Link key={i} href={item.link}>
             <p className="pl-12 cursor-pointer p-4  hover:bg-lightBlue">
@@ -134,14 +162,17 @@ export const CoursesIT = ({ handleStepper }: IStepper) => {
   );
 };
 
-export const CoursesHealth = ({ handleStepper }: IStepper) => {
+export const CoursesHealth = ({
+  handleCategoryStepper,
+  handleMajorStepper,
+}: IStepper) => {
   const translate = useAppSelector((state) => state.translationState.translate);
   return (
     <Collapsible
       transitionTime={200}
       trigger={
         <div
-          onClick={handleStepper}
+          onClick={handleCategoryStepper}
           className="flex items-center justify-between px-6 bg-sky-100 text-white"
         >
           <p className="p-4 ml-2 text-gray-700 text-lg">
@@ -166,14 +197,17 @@ export const CoursesHealth = ({ handleStepper }: IStepper) => {
   );
 };
 
-export const CoursesManagement = ({ handleStepper }: IStepper) => {
+export const CoursesManagement = ({
+  handleCategoryStepper,
+  handleMajorStepper,
+}: IStepper) => {
   const translate = useAppSelector((state) => state.translationState.translate);
   return (
     <Collapsible
       transitionTime={200}
       trigger={
         <div
-          onClick={handleStepper}
+          onClick={handleCategoryStepper}
           className="flex items-center justify-between px-6 bg-sky-100 text-gray-100"
         >
           <p className="p-4 ml-2 text-gray-700 text-lg">
@@ -185,7 +219,7 @@ export const CoursesManagement = ({ handleStepper }: IStepper) => {
         </div>
       }
     >
-      <div className="divide-y divide-gray-300">
+      <div className="divide-y divide-gray-300" onClick={handleMajorStepper}>
         {managementLinks.map((item, i) => (
           <Link key={i} href={item.link}>
             <p className="pl-12 cursor-pointer p-4  hover:bg-lightBlue">
@@ -198,14 +232,17 @@ export const CoursesManagement = ({ handleStepper }: IStepper) => {
   );
 };
 
-export const CoursesDesign = ({ handleStepper }: IStepper) => {
+export const CoursesDesign = ({
+  handleCategoryStepper,
+  handleMajorStepper,
+}: IStepper) => {
   const translate = useAppSelector((state) => state.translationState.translate);
   return (
     <Collapsible
       transitionTime={200}
       trigger={
         <div
-          onClick={handleStepper}
+          onClick={handleCategoryStepper}
           className="flex items-center justify-between px-6 bg-sky-100 text-white"
         >
           <p className="p-4 ml-2 text-gray-700 text-lg">
@@ -217,7 +254,7 @@ export const CoursesDesign = ({ handleStepper }: IStepper) => {
         </div>
       }
     >
-      <div className="divide-y divide-gray-300">
+      <div className="divide-y divide-gray-300" onClick={handleMajorStepper}>
         {designLinks.map((item, i) => (
           <Link key={i} href={item.link}>
             <p className="pl-12 cursor-pointer p-4  hover:bg-lightBlue">
@@ -230,14 +267,17 @@ export const CoursesDesign = ({ handleStepper }: IStepper) => {
   );
 };
 
-export const CoursesHospitality = ({ handleStepper }: IStepper) => {
+export const CoursesHospitality = ({
+  handleCategoryStepper,
+  handleMajorStepper,
+}: IStepper) => {
   const translate = useAppSelector((state) => state.translationState.translate);
   return (
     <Collapsible
       transitionTime={200}
       trigger={
         <div
-          onClick={handleStepper}
+          onClick={handleCategoryStepper}
           className="flex items-center justify-between px-6 bg-sky-100 text-white"
         >
           <p className="p-4 ml-2 text-gray-700 text-lg">
@@ -249,7 +289,7 @@ export const CoursesHospitality = ({ handleStepper }: IStepper) => {
         </div>
       }
     >
-      <div className="divide-y divide-gray-300">
+      <div className="divide-y divide-gray-300" onClick={handleMajorStepper}>
         {hospitalityLinks.map((item, i) => (
           <Link key={i} href={item.link}>
             <p className="pl-12 cursor-pointer p-4  hover:bg-lightBlue">
@@ -262,14 +302,17 @@ export const CoursesHospitality = ({ handleStepper }: IStepper) => {
   );
 };
 
-export const CoursesTrades = ({ handleStepper }: IStepper) => {
+export const CoursesTrades = ({
+  handleCategoryStepper,
+  handleMajorStepper,
+}: IStepper) => {
   const translate = useAppSelector((state) => state.translationState.translate);
   return (
     <Collapsible
       transitionTime={200}
       trigger={
         <div
-          onClick={handleStepper}
+          onClick={handleCategoryStepper}
           className="flex items-center justify-between px-6 bg-sky-100 text-white"
         >
           <p className="p-4 ml-2 text-gray-700 text-lg">
@@ -281,7 +324,7 @@ export const CoursesTrades = ({ handleStepper }: IStepper) => {
         </div>
       }
     >
-      <div className="divide-y divide-gray-300">
+      <div className="divide-y divide-gray-300" onClick={handleMajorStepper}>
         {tradeLinks.map((item, i) => (
           <Link key={i} href={item.link}>
             <p className="pl-12 cursor-pointer p-4  hover:bg-lightBlue">
