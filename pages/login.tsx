@@ -10,13 +10,13 @@ export default function Login() {
 
   const router = useRouter();
 
-  if (status === "unauthenticated") {
+  if (status === "authenticated") {
     router.push("/");
   }
 
   return (
     <div className="relative">
-      <div className="absolute top-0 left-0 w-screen h-screen bg-white z-40 ">
+      <div className="fixed top-0 left-0 w-screen h-screen bg-white z-40 md:block ">
         <div className="flex flex-col items-center justify-center space-y-2 mt-12">
           <div className="pb-8">
             <Image src={logo} width={240} height={240} alt="signin logo" />
