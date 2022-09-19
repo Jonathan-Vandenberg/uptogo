@@ -78,7 +78,10 @@ const Footer = () => {
       <MobileFooterHeader />
       <div className="bg-body">
         <div className="md:hidden">
-          <CollapseMenus handleStepper={function (): void {}} />
+          <CollapseMenus
+            handleCategoryStepper={function (): void {}}
+            handleMajorStepper={function (): void {}}
+          />
         </div>
         <UnCollapassedMenu />
         <div className="flex flex-col items-center justify-center space-y-6 py-8 px-28 lg:flex lg:flex-row lg:items-center lg:justify-evenly lg:space-y-0 lg:space-x-6">
