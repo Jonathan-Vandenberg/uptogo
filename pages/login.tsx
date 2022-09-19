@@ -8,17 +8,14 @@ import { useRouter } from "next/router";
 export default function Login() {
   const { data: session } = useSession();
 
-  const [auth, setAuth] = useState(false);
-
-  useEffect(() => {
-    session?.user === "Authenticated" && setAuth(!auth);
-  }, [auth, session?.user]);
-
   const router = useRouter();
 
-  if (auth) {
-    return router.push("/");
-  }
+  useEffect(() => {
+    if (session?.user === "Authenticated") {
+      router.push("/");
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   return (
     <div className="relative">
