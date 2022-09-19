@@ -285,6 +285,8 @@ const AddClientForm = ({ details, add, edit, handleClose }: IProps) => {
   const [updateDesign] = useUpdateDesignMutation();
   const [updateMusic] = useUpdateMusicMutation();
 
+  const [authorNameLength, setAuthorNameLength] = useState(0);
+
   let form = {
     variables: {
       input: {
@@ -420,6 +422,8 @@ const AddClientForm = ({ details, add, edit, handleClose }: IProps) => {
     setMainImage("");
     setPhotoCredit("");
   };
+
+  console.log(`The Authors\'s name takes up ${authorName?.length} characters`);
 
   return (
     <div className="px-5 max-w-[678px] md:max-w-[900px] mx-auto">
