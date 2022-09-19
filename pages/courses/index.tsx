@@ -6,6 +6,8 @@ import designIcon from "../../public/courseIcons/web-design.png";
 import hospitalityIcon from "../../public/courseIcons/hospitality.png";
 import tradeIcon from "../../public/courseIcons/competence.png";
 import itIcon from "../../public/courseIcons/computer.png";
+import newsIcon from "../../public/courseIcons/newspaper.png";
+import eventIcon from "../../public/courseIcons/event.png";
 import { useAppSelector } from "../../redux-hooks/hooks";
 import Link from "next/link";
 
@@ -15,7 +17,7 @@ export default function App() {
   return (
     <div className="fixed top-0 left-0 w-screen h-screen bg-white z-30">
       <div className="grid grid-cols-2 mt-20 w-screen h-auto z-40 bg-white">
-        <div className="pb-4">
+        <div className="pb-6">
           <Link href={"/courses/information-technology"}>
             <div className="flex items-center justify-center flex-col cursor-pointer">
               <div className="w-60 h-full items-center flex justify-center">
@@ -33,7 +35,7 @@ export default function App() {
             </div>
           </Link>
         </div>
-        <div className="pb-4">
+        <div className="pb-6">
           <Link href={"/courses/management"}>
             <div className="flex items-center justify-center flex-col cursor-pointer">
               <div className="w-60 h-full items-center flex justify-center">
@@ -51,7 +53,7 @@ export default function App() {
             </div>
           </Link>
         </div>
-        <div className="pb-4">
+        <div className="pb-6">
           <Link href={"/courses/design"}>
             <div className="flex items-center justify-center flex-col cursor-pointer">
               <div className="w-60 h-full items-center flex justify-center">
@@ -69,7 +71,7 @@ export default function App() {
             </div>
           </Link>
         </div>
-        <div className="pb-4">
+        <div className="pb-6">
           <Link href={"/courses/health"}>
             <div className="flex items-center justify-center flex-col cursor-pointer">
               <div className="w-60 h-full items-center flex justify-center">
@@ -87,12 +89,9 @@ export default function App() {
             </div>
           </Link>
         </div>
-        <div className="pb-4">
+        <div className="pb-6">
           <Link href={"/courses/hospitality"}>
-            <div
-              className="flex items-center justify-center flex-col cursor-pointer"
-              onClick={() => router.push("/courses/hospitality")}
-            >
+            <div className="flex items-center justify-center flex-col cursor-pointer">
               <div className="w-60 h-full items-center flex justify-center">
                 <Image
                   src={hospitalityIcon}
@@ -108,12 +107,9 @@ export default function App() {
             </div>
           </Link>
         </div>
-        <div className="pb-4">
+        <div className="pb-6">
           <Link href={"/courses/trades"}>
-            <div
-              className="flex items-center justify-center flex-col cursor-pointer"
-              onClick={() => router.push("/courses/trades")}
-            >
+            <div className="flex items-center justify-center flex-col cursor-pointer">
               <div className="w-60 h-full items-center flex justify-center">
                 <Image
                   src={tradeIcon}
@@ -125,6 +121,42 @@ export default function App() {
               </div>
               <div className="text-lg text-gray-700 w-full text-center px-6 py-1 leading-5">
                 {translate ? "Trades & Sports" : "Thương mại & Thể thao"}
+              </div>
+            </div>
+          </Link>
+        </div>
+        <div className="pb-6">
+          <Link href={"/events"}>
+            <div className="flex items-center justify-center flex-col cursor-pointer">
+              <div className="w-60 h-full items-center flex justify-center">
+                <Image
+                  src={eventIcon}
+                  alt="Events image"
+                  width={60}
+                  height={60}
+                  priority
+                />
+              </div>
+              <div className="text-lg text-gray-700 w-full text-center px-6 py-1 leading-5">
+                {translate ? "Events" : "Events-VN"}
+              </div>
+            </div>
+          </Link>
+        </div>
+        <div className="pb-6">
+          <Link href={"/blogs"}>
+            <div className="flex items-center justify-center flex-col cursor-pointer">
+              <div className="w-60 h-full items-center flex justify-center">
+                <Image
+                  src={newsIcon}
+                  alt="News Image"
+                  width={60}
+                  height={60}
+                  priority
+                />
+              </div>
+              <div className="text-lg text-gray-700 w-full text-center px-6 py-1 leading-5">
+                {translate ? "News" : "News-VN"}
               </div>
             </div>
           </Link>
