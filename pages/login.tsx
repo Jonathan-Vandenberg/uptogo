@@ -6,16 +6,13 @@ import { motion } from "framer-motion";
 import { useRouter } from "next/router";
 
 export default function Login() {
-  const { data: session } = useSession();
+  const { data: session, status } = useSession();
 
   const router = useRouter();
 
-  useEffect(() => {
-    if (session?.user === "Authenticated") {
-      router.push("/");
-    }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [session?.user]);
+  if (status === "unauthenticated") {
+    router.push("/");
+  }
 
   return (
     <div className="relative">
