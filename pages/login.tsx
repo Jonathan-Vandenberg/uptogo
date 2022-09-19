@@ -1,19 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import Image from "next/image";
 import logo from "../public/fullLogo.png";
-import { signIn, useSession } from "next-auth/react";
+import { signIn } from "next-auth/react";
 import { motion } from "framer-motion";
-import { useRouter } from "next/router";
 
 export default function Login() {
-  const { data: session, status } = useSession();
-
-  const router = useRouter();
-
-  if (status === "authenticated") {
-    router.push("/");
-  }
-
   return (
     <div className="relative">
       <div className="fixed md:static top-0 left-0 w-screen h-screen bg-white z-40 md:z-0">
