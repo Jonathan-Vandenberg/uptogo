@@ -85,7 +85,7 @@ export default function App({ data }: IProps) {
           handleClose={() => setShowForm(false)}
         />
       )}
-      <Posts />
+      {/* <Posts /> */}
     </div>
   );
 }

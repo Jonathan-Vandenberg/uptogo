@@ -419,16 +419,16 @@ export default function BlogPostMarkup({
       {data?.reference2 && (
         <p className="text-gray-500 py-1 text">Reference: {data?.reference2}</p>
       )}
-      {/* {session?.user?.email === process.env.ADMIN_EMAIL || */}
-      {/* ("urbangentryjon@gmail.com" && ( */}
-      <div className="flex space-x-5 justify-center items-center py-6">
-        <div className="flex items-center space-x-1" onClick={handleEdit}>
-          <div className="text-xl">
-            <FaEdit size={25} className="text-orange" />
-          </div>
-          <p className="text-lg text-orange">Edit</p>
-        </div>
-        <div className="flex items-center space-x-1" onClick={handleAdd}>
+      {session?.user?.email === process.env.ADMIN_EMAIL ||
+        ("urbangentryjon@gmail.com" && (
+          <div className="flex space-x-5 justify-center items-center py-6">
+            <div className="flex items-center space-x-1" onClick={handleEdit}>
+              <div className="text-xl">
+                <FaEdit size={25} className="text-orange" />
+              </div>
+              <p className="text-lg text-orange">Edit</p>
+            </div>
+            {/* <div className="flex items-center space-x-1" onClick={handleAdd}>
           <div className="text-xl text-green-600">
             <MdAddCircleOutline size={25} />
           </div>
@@ -439,9 +439,9 @@ export default function BlogPostMarkup({
             <MdDeleteForever size={25} className="text-red-500" />
           </div>
           <p className="text-lg text-red-500">Delete</p>
-        </div>
-      </div>
-      {/* ))} */}
+        </div> */}
+          </div>
+        ))}
     </div>
   );
 }
