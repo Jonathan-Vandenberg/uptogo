@@ -46,11 +46,12 @@ export default function App() {
             layout="responsive"
             width={900}
             height={400}
+            priority
           />
         </div>
         <span className="absolute w-screen h-full left-0 top-0 bg-gradient-to-t from-transparent to-sky-500/20" />
       </div>
-      <div className="bg-body">
+      <div className="bg-body md:pt-16">
         <WhyUptogo />
       </div>
       <div className="max-w-[678px] md:max-w-[900px] mx-auto container">

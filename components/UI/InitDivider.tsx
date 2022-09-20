@@ -3,7 +3,7 @@ interface IProps {
 }
 
 export default function App() {
-  const style = `bg-white -z-10 h-12 md:h-32 absolute top-0 left-0 w-full`;
+  const style = `bg-sky-50/90 -z-10 h-12 md:h-32 absolute top-0 left-0 w-full`;
 
   return (
     <>
