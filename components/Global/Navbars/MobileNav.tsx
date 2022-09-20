@@ -377,7 +377,7 @@ const SideNavModal: NextPage = () => {
   );
 
   return (
-    <div className="sticky bg-sky-50/90 top-0 z-40 flex items-center justify-between p-2 sm:px-4 lg:hidden">
+    <div className="sticky bg-sky-50/80 top-0 z-40 flex items-center justify-between p-2 sm:px-4 lg:hidden">
       <Link href={"/"}>
         <div className="ml-5 cursor-pointer flex items-center gap-3 justify-center">
           <Image src={faviconLogo} width="45" height="45" alt="logo" />

@@ -72,12 +72,12 @@ export default function App() {
   const translate = useAppSelector((state) => state.translationState.translate);
   return (
     <div className="fixed md:static md:z-0  md:w-auto md:h-auto top-0 left-0 w-screen h-screen bg-white z-30">
-      <div className="md:flex md:mt-12 md:items-center md:justify-center grid grid-cols-3 mt-20 w-screen h-auto z-40 bg-white">
+      <div className="md:flex md:mt-12 md:items-center md:justify-center grid grid-cols-3 mt-20 w-screen h-auto z-40 ">
         {designLinks.map((item, i) => (
           <div key={i} className="pb-3">
             <Link href={item.link}>
               <div className="flex items-center justify-center flex-col cursor-pointer">
-                <div className="shadow-lg w-auto h-full items-center flex justify-center p-2 rounded-lg">
+                <div className="w-auto h-full items-center flex justify-center p-2 rounded-lg bg-white shadow-md mb-1">
                   <Image
                     src={item.icon}
                     alt="IT image"
@@ -86,7 +86,7 @@ export default function App() {
                     priority
                   />
                 </div>
-                <div className="text-sm text-gray-700 w-full text-center px-6 py-1 leading-5">
+                <div className="text-sm text-gray-800 w-full text-center px-6 py-1 leading-5">
                   {translate ? item.courseE : item.course}
                 </div>
               </div>
@@ -94,6 +94,7 @@ export default function App() {
           </div>
         ))}
       </div>
+      <span className="fixed bottom-0 left-0 w-screen h-12 bg-orange md:hidden" />
     </div>
   );
 }

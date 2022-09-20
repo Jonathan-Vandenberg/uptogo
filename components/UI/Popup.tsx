@@ -37,11 +37,11 @@ export default function PopupCard() {
             <p className="text-lg">On-campus transition support</p>
           </li>
         </ul>
-        <div className="px-4 py-2 rounded-full text-white bg-orange">
+        <div>
           <Link href={"/courses"}>
-            <div className="items-center justify-center flex space-x-2">
+            <div className="md:text-lg lg:text-xl flex items-center justify-center space-x-3  cursor-pointer text-gray-700 border-b-8 rounded-full px-6 py-2 border-orange border-2">
               <p>Start Now</p>
-              <BsArrowRight />
+              <BsArrowRight size={20} />
             </div>
           </Link>
         </div>
