@@ -10,6 +10,7 @@ import {
   CoursesTrades,
 } from "../Global/Footer/CollapseMenus";
 import CourseStepper from "./CourseStepper";
+import travel from "../../public/heroImages/heroTravel.jpg";
 
 export default function App() {
   const [step, setStep] = useState(0);
@@ -37,6 +38,18 @@ export default function App() {
 
   return (
     <>
+      <div className="md:-mt-40 lg:-mt-68 xl:-mt-72 w-full -z-10">
+        <div className="block w-full">
+          <Image
+            src={travel}
+            alt="travel locations image, decorational"
+            layout="responsive"
+            width={900}
+            height={400}
+          />
+        </div>
+        <span className="absolute w-screen h-full left-0 top-0 bg-gradient-to-t from-transparent to-sky-500/20" />
+      </div>
       <div className="bg-body">
         <WhyUptogo />
       </div>

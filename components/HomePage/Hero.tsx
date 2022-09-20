@@ -1,26 +1,27 @@
 import Link from "next/link";
 import Image from "next/image";
-import logo from "../../public/uptogoLogoBig.png";
+import logo from "../../public/fullLogo.png";
+import { motion } from "framer-motion";
 
 export default function App() {
   return (
-    <div className="bg-white md:grid md:grid-cols-4 flex-col-reverse flex items-center justify-center">
-      <div className="col-span-1"></div>
-      <div className="bg-white flex items-center flex-col justify-center md:items-start w-full h-full md:col-span-1">
-        <h1 className="text-gray-600 logoFont text-4xl pb-2 col-span-1">
-          Study Abroad
-        </h1>
-        <p className="text-2xl text-gray-600">
-          <i>easily.</i>
-        </p>
+    <div className="flex items-center  flex-col-reverse justify-center z-10">
+      <motion.div
+        whileHover={{
+          scale: 1.03,
+          transition: { duration: 0.2 },
+        }}
+        whileTap={{ scale: 0.98 }}
+        className="z-10"
+      >
         <Link href={"/courses"}>
-          <p className="text-xl cursor-pointer text-gray-700 text-thin  pt-10 md:pt-12 border-b-8 border-orange">
+          <p className="md:text-lg lg:text-xl  cursor-pointer text-gray-700 border-b-8 rounded-full px-6 py-2 mt-12 border-orange border-2">
             Find Courses
           </p>
         </Link>
-      </div>
-      <div className="col-span-2 relative w-60 h-60">
-        <Image src={logo} alt="blog Image" layout="fill" priority />
+      </motion.div>
+      <div className="w-40 h-40 md:w-52 md:h-52 lg:w-60 lg:h-60 block z-10">
+        <Image src={logo} alt="blog Image" layout="responsive" priority />
       </div>
     </div>
   );

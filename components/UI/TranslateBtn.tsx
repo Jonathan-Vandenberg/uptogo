@@ -11,7 +11,7 @@ export default function App() {
         className="flex cursor-pointer items-center justify-center space-x-1"
         onClick={() => dispatch(translationState(!translate))}
       >
-        <div className="text-xl">
+        <div className="text-xl text-white">
           <GrLanguage size={20} />
         </div>
         {!translate && <p>EN</p>}
