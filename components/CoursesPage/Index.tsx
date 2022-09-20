@@ -15,7 +15,7 @@ export default function App() {
   return (
     <div className="fixed md:static md:z-0  md:w-auto md:h-auto top-0 left-0 w-screen h-screen bg-white z-30">
       <div className="md:flex md:mt-12 md:items-center md:justify-center grid grid-cols-2 mt-20 w-screen h-auto z-40 bg-">
-        <div className="pb-6">
+        <div className="pb-4">
           <Link href={"/courses/information-technology"}>
             <div className="flex items-center justify-center flex-col cursor-pointer">
               <div className="h-full items-center flex justify-center w-auto rounded-lg shadow-md bg-white p-2">
@@ -33,7 +33,7 @@ export default function App() {
             </div>
           </Link>
         </div>
-        <div className="pb-6">
+        <div className="pb-4">
           <Link href={"/courses/management"}>
             <div className="flex items-center justify-center flex-col cursor-pointer">
               <div className="h-full items-center flex justify-center w-auto rounded-lg shadow-md bg-white p-2">
@@ -51,7 +51,7 @@ export default function App() {
             </div>
           </Link>
         </div>
-        <div className="pb-6">
+        <div className="pb-4">
           <Link href={"/design"}>
             <div className="flex items-center justify-center flex-col cursor-pointer">
               <div className="h-full items-center flex justify-center w-auto rounded-lg shadow-md bg-white p-2">
@@ -69,7 +69,7 @@ export default function App() {
             </div>
           </Link>
         </div>
-        <div className="pb-6">
+        <div className="pb-4">
           <Link href={"/courses/health"}>
             <div className="flex items-center justify-center flex-col cursor-pointer">
               <div className="h-full items-center flex justify-center w-auto rounded-lg shadow-md bg-white p-2">
@@ -87,7 +87,7 @@ export default function App() {
             </div>
           </Link>
         </div>
-        <div className="pb-6">
+        <div className="pb-4">
           <Link href={"/courses/hospitality"}>
             <div className="flex items-center justify-center flex-col cursor-pointer">
               <div className="h-full items-center flex justify-center w-auto rounded-lg shadow-md bg-white p-2">
@@ -105,7 +105,7 @@ export default function App() {
             </div>
           </Link>
         </div>
-        <div className="pb-6">
+        <div className="pb-4">
           <Link href={"/courses/trades"}>
             <div className="flex items-center justify-center flex-col cursor-pointer">
               <div className="h-full items-center flex justify-center w-auto rounded-lg shadow-md bg-white p-2">
@@ -123,7 +123,7 @@ export default function App() {
             </div>
           </Link>
         </div>
-        <div className="pb-6">
+        <div className="pb-4">
           <Link href={"/events"}>
             <div className="flex items-center justify-center flex-col cursor-pointer">
               <div className="h-full items-center flex justify-center w-auto rounded-lg shadow-md bg-white p-2">
@@ -141,7 +141,7 @@ export default function App() {
             </div>
           </Link>
         </div>
-        <div className="pb-6">
+        <div className="pb-4">
           <Link href={"/blogs"}>
             <div className="flex items-center justify-center flex-col cursor-pointer">
               <div className="h-full items-center flex justify-center w-auto rounded-lg shadow-md bg-white p-2">
