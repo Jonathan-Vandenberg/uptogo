@@ -1,5 +1,6 @@
 import CheckIcon from "@mui/icons-material/Check";
 import Image from "next/image";
+import Link from "next/link";
 import { BsArrowRight } from "react-icons/bs";
 import bermingham from "../../public/partnersLogos/BerminhamLogo.png";
 import diakin from "../../public/partnersLogos/diakinLogo.png";
@@ -36,12 +37,14 @@ export default function PopupCard() {
             <p className="text-lg">On-campus transition support</p>
           </li>
         </ul>
-        <button className="px-4 py-2 rounded-full text-white bg-orange">
-          <div className="items-center justify-center flex space-x-">
-            <p>Start Now</p>
-            <BsArrowRight />
-          </div>
-        </button>
+        <div className="px-4 py-2 rounded-full text-white bg-orange">
+          <Link href={"/courses"}>
+            <div className="items-center justify-center flex space-x-2">
+              <p>Start Now</p>
+              <BsArrowRight />
+            </div>
+          </Link>
+        </div>
         <p>Some of our partners include:</p>
         <div className="flex items-center justify-center space-x-2">
           <div>

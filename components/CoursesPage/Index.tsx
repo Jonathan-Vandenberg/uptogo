@@ -1,14 +1,14 @@
 import Image from "next/image";
-import healthIcon from "../../public/courseIcons/healthcare.png";
-import managementIcon from "../../public/courseIcons/management.png";
-import designIcon from "../../public/courseIcons/web-design.png";
-import hospitalityIcon from "../../public/courseIcons/hospitality.png";
-import tradeIcon from "../../public/courseIcons/competence.png";
-import itIcon from "../../public/courseIcons/computer.png";
-import newsIcon from "../../public/courseIcons/newspaper.png";
-import eventIcon from "../../public/courseIcons/event.png";
-import { useAppSelector } from "../../redux-hooks/hooks";
 import Link from "next/link";
+import designIcon from "../../public/courseIcons/designIcons/designMain.png";
+import healthIcon from "../../public/courseIcons/healthIcons/healthMain.png";
+import eventIcon from "../../public/courseIcons/hospitalityIcons/events.png";
+import hospitalityIcon from "../../public/courseIcons/hospitalityIcons/hospitality (1).png";
+import itIcon from "../../public/courseIcons/ITIcons/ITMain.png";
+import managementIcon from "../../public/courseIcons/managementIcons/management (1).png";
+import tradeIcon from "../../public/courseIcons/tradesIcons/tradesMain.png";
+import newsIcon from "../../public/newspaper (1).png";
+import { useAppSelector } from "../../redux-hooks/hooks";
 
 export default function App() {
   const translate = useAppSelector((state) => state.translationState.translate);
@@ -52,7 +52,7 @@ export default function App() {
           </Link>
         </div>
         <div className="pb-6">
-          <Link href={"/courses/design"}>
+          <Link href={"/design"}>
             <div className="flex items-center justify-center flex-col cursor-pointer">
               <div className="w-60 h-full items-center flex justify-center">
                 <Image

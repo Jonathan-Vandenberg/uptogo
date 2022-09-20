@@ -56,6 +56,7 @@ export default function App({ data }: IProps) {
 
   return (
     <div className="mx-auto container">
+      <div></div>
       {data ? (
         <CoursesMainPage
           data={data}
