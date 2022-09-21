@@ -603,7 +603,7 @@ const AddClientForm = ({ details, add, edit, handleClose }: IProps) => {
   return (
     <div className="px-5 max-w-[678px] md:max-w-[900px] mx-auto">
       <form onSubmit={onFinish} className="space-y-3 py-12">
-        <div className="px-8 ">
+        {/* <div className="px-8 ">
           <select
             value={category as string}
             onChange={(e) => setCategory(e.target.value)}
@@ -615,7 +615,7 @@ const AddClientForm = ({ details, add, edit, handleClose }: IProps) => {
               </option>
             ))}
           </select>
-        </div>
+        </div> */}
 
         <div className="px-8 flex items-start space-y-3 justify-center flex-col pt-3">
           <input
