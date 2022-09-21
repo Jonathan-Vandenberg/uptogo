@@ -106,6 +106,37 @@ import {
   useUpdateNutritionMutation,
   useUpdatePublicHealthMutation,
   useUpdateVeterinaryMutation,
+  useUpdateHealthMutation,
+  useUpdateHospitalityMutation,
+  useUpdateBakingMutation,
+  useUpdateCookeryMutation,
+  useUpdateEventsMutation,
+  useUpdateHospitalityManagementMutation,
+  useUpdateHotelManagementMutation,
+  useUpdateTravelTourismMutation,
+  useUpdateAutomotiveMutation,
+  useUpdateBeautyMutation,
+  useUpdateCarpentryMutation,
+  useUpdateConstructionMutation,
+  useUpdateEducationMutation,
+  useUpdateFitnessMutation,
+  useUpdateHairdressingMutation,
+  useUpdateHorticultureMutation,
+  useUpdateSportDevelopmentMutation,
+  useUpdateYogaMutation,
+  UpdateTradesDocument,
+  useUpdateTradesMutation,
+  UpdateManagementDocument,
+  useUpdateAgribusinessManagementMutation,
+  useUpdateBankingManagementMutation,
+  useUpdateBusinessManagementMutation,
+  useUpdateHumanResourcesMutation,
+  useUpdateIntlBusinessMutation,
+  useUpdateManagementMutation,
+  useUpdateProjectManagementMutation,
+  useUpdateSocialMediaMarketingMutation,
+  useUpdateLeadershipManagementMutation,
+  useUpdateSupplyManagementMutation,
 } from "../types";
 import { options } from "../lib/categories";
 import { BsPlus } from "react-icons/bs";
@@ -317,6 +348,7 @@ const AddClientForm = ({ details, add, edit, handleClose }: IProps) => {
   const [updateAnimation3D] = useUpdateAnimation3DMutation();
 
   /* Health */
+  const [updateHealth] = useUpdateHealthMutation();
   const [updateAgedCare] = useUpdateAgedCareMutation();
   const [updateNutrition] = useUpdateNutritionMutation();
   const [updateNursing] = useUpdateNursingMutation();
@@ -326,6 +358,42 @@ const AddClientForm = ({ details, add, edit, handleClose }: IProps) => {
   const [updateDental] = useUpdateDentalMutation();
   const [updateMassage] = useUpdateMassageMutation();
   const [updateMentalHealth] = useUpdateMentalHealthMutation();
+
+  /* Hospitality */
+  const [updateHospitality] = useUpdateHospitalityMutation();
+  const [updateBaking] = useUpdateBakingMutation();
+  const [updateCookery] = useUpdateCookeryMutation();
+  const [updateHospitalityManagement] =
+    useUpdateHospitalityManagementMutation();
+  const [updateHotelManagement] = useUpdateHotelManagementMutation();
+  const [updateTravelTourism] = useUpdateTravelTourismMutation();
+  const [updateEvents] = useUpdateEventsMutation();
+
+  /* Trades */
+  const [updateTrades] = useUpdateTradesMutation();
+  const [updateAutomotive] = useUpdateAutomotiveMutation();
+  const [updateBeauty] = useUpdateBeautyMutation();
+  const [updateConstruction] = useUpdateConstructionMutation();
+  const [updateCarpentry] = useUpdateCarpentryMutation();
+  const [updateEducation] = useUpdateEducationMutation();
+  const [updateFitness] = useUpdateFitnessMutation();
+  const [updateHairdressing] = useUpdateHairdressingMutation();
+  const [updateHorticulture] = useUpdateHorticultureMutation();
+  const [updateSportDevelopment] = useUpdateSportDevelopmentMutation();
+  const [updateYoga] = useUpdateYogaMutation();
+
+  /* Management */
+  const [updateManagement] = useUpdateManagementMutation();
+  const [updateProjectManagement] = useUpdateProjectManagementMutation();
+  const [updateBusinessManagement] = useUpdateBusinessManagementMutation();
+  const [updateHumanResources] = useUpdateHumanResourcesMutation();
+  const [updateBankingManagement] = useUpdateBankingManagementMutation();
+  const [updateIntlBusiness] = useUpdateIntlBusinessMutation();
+  const [updateSocialMediaMarketing] = useUpdateSocialMediaMarketingMutation();
+  const [updateAgribusinessManagement] =
+    useUpdateAgribusinessManagementMutation();
+  const [updateSupplyManagement] = useUpdateSupplyManagementMutation();
+  const [updateLeadershipManagement] = useUpdateLeadershipManagementMutation();
 
   const [updateCurrentEvent] = useUpdateCurrentEventMutation();
   const [authorNameLength, setAuthorNameLength] = useState(0);
@@ -397,7 +465,7 @@ const AddClientForm = ({ details, add, edit, handleClose }: IProps) => {
         if (category === "BLOG") updateBlogPost(form);
         if (category === "CURRENT_EVENT") updateCurrentEvent(form);
 
-        /* Softtware Development */
+        /* Software Development */
         if (category === "SOFTWARE_DEVELOPMENT")
           updateSoftwareDevelopment(form);
         if (category === "COMPUTER_NETWORKING") updateComputerNetworking(form);
@@ -426,6 +494,7 @@ const AddClientForm = ({ details, add, edit, handleClose }: IProps) => {
         if (category === "ANIMATION_3D") updateAnimation3D(form);
 
         /* Health */
+        if (category === "HEALTH") updateHealth(form);
         if (category === "AGED_CARE") updateAgedCare(form);
         if (category === "NUTRITION") updateNutrition(form);
         if (category === "NURSING") updateNursing(form);
@@ -435,6 +504,44 @@ const AddClientForm = ({ details, add, edit, handleClose }: IProps) => {
         if (category === "DENTAL") updateDental(form);
         if (category === "MASSAGE") updateMassage(form);
         if (category === "MENTAL_HEALTH") updateMentalHealth(form);
+
+        /* Hospitality */
+        if (category === "HOSPITALITY") updateHospitality();
+        if (category === "BAKING") updateBaking(form);
+        if (category === "COMMERCIAL_COOKING") updateCookery(form);
+        if (category === "HOPITALITY_MANAGEMENT")
+          updateHospitalityManagement(form);
+        if (category === "INTL_HOTEL_MANAGEMENT") updateHotelManagement(form);
+        if (category === "TRAVEL_TOURISM") updateTravelTourism(form);
+        if (category === "EVENTS") updateEvents(form);
+
+        /* Trades */
+        if (category === "TRADES") updateTrades(form);
+        if (category === "AUTOMOTIVE") updateAutomotive(form);
+        if (category === "BEAUTY") updateBeauty(form);
+        if (category === "CONSTRUCTION") updateConstruction(form);
+        if (category === "CARPENTRY") updateCarpentry(form);
+        if (category === "EDUCATION") updateEducation(form);
+        if (category === "FITNESS") updateFitness(form);
+        if (category === "HARIDRESSING") updateHairdressing(form);
+        if (category === "HORTICULTURE") updateHorticulture(form);
+        if (category === "SPORT") updateSportDevelopment(form);
+        if (category === "YOGA") updateYoga(form);
+
+        /* Management */
+        if (category === "MANAGEMENT") updateManagement(form);
+        if (category === "PROJECT_MANAGEMENT") updateProjectManagement(form);
+        if (category === "BUSINESS_MANAGEMENT") updateBusinessManagement(form);
+        if (category === "HUMAN_RESOURCES") updateHumanResources(form);
+        if (category === "BANKING_MANAGEMENT") updateBankingManagement(form);
+        if (category === "INTERNATIONAL_BUSINESS") updateIntlBusiness(form);
+        if (category === "SOCIALMEDIA_MARKETING")
+          updateSocialMediaMarketing(form);
+        if (category === "AGRIBUSINESS_MANAGEMENT")
+          updateAgribusinessManagement(form);
+        if (category === "SUPPLYCHAIN_MANAGEMENT") updateSupplyManagement(form);
+        if (category === "LEADERSHIP_MANAGEMENT")
+          updateLeadershipManagement(form);
       }
 
       // if (add) {

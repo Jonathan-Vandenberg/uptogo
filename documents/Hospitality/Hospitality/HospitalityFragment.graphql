@@ -1,4 +1,4 @@
-fragment AgedCare on AgedCare {
+fragment Hospitality on Hospitality {
   id
   category
   publishedDate

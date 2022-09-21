@@ -12787,6 +12787,56 @@ export const HospitalityManagementFragmentDoc = gql`
   mainImage
 }
     `;
+export const HospitalityFragmentDoc = gql`
+    fragment Hospitality on Hospitality {
+  id
+  category
+  publishedDate
+  title
+  subtitle1
+  tableContents1
+  tableContents2
+  tableContents3
+  tableContents4
+  p1
+  p2
+  p3
+  subtitle2
+  p4
+  p5
+  l1
+  l2
+  l3
+  l4
+  l5
+  subtitle3
+  p6
+  p7
+  l6
+  l7
+  l8
+  l9
+  l10
+  l11
+  l12
+  l13
+  l14
+  l15
+  p8
+  subtitle4
+  conclusion1
+  conclusion2
+  conclusion3
+  reference1
+  reference2
+  authorName
+  authorAbout
+  authorLink
+  photoCredit
+  editedBy
+  mainImage
+}
+    `;
 export const HotelManagementCardFragmentDoc = gql`
     fragment HotelManagementCard on HotelManagement {
   category
@@ -18169,6 +18219,107 @@ export function useUpdateHospitalityManagementMutation(baseOptions?: Apollo.Muta
 export type UpdateHospitalityManagementMutationHookResult = ReturnType<typeof useUpdateHospitalityManagementMutation>;
 export type UpdateHospitalityManagementMutationResult = Apollo.MutationResult<UpdateHospitalityManagementMutation>;
 export type UpdateHospitalityManagementMutationOptions = Apollo.BaseMutationOptions<UpdateHospitalityManagementMutation, UpdateHospitalityManagementMutationVariables>;
+export const AddHospitalityDocument = gql`
+    mutation AddHospitality($input: HospitalityInput!) {
+  addHospitality(input: $input) {
+    ...Hospitality
+  }
+}
+    ${HospitalityFragmentDoc}`;
+export type AddHospitalityMutationFn = Apollo.MutationFunction<AddHospitalityMutation, AddHospitalityMutationVariables>;
+
+/**
+ * __useAddHospitalityMutation__
+ *
+ * To run a mutation, you first call `useAddHospitalityMutation` within a React component and pass it any options that fit your needs.
+ * When your component renders, `useAddHospitalityMutation` returns a tuple that includes:
+ * - A mutate function that you can call at any time to execute the mutation
+ * - An object with fields that represent the current status of the mutation's execution
+ *
+ * @param baseOptions options that will be passed into the mutation, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options-2;
+ *
+ * @example
+ * const [addHospitalityMutation, { data, loading, error }] = useAddHospitalityMutation({
+ *   variables: {
+ *      input: // value for 'input'
+ *   },
+ * });
+ */
+export function useAddHospitalityMutation(baseOptions?: Apollo.MutationHookOptions<AddHospitalityMutation, AddHospitalityMutationVariables>) {
+        const options = {...defaultOptions, ...baseOptions}
+        return Apollo.useMutation<AddHospitalityMutation, AddHospitalityMutationVariables>(AddHospitalityDocument, options);
+      }
+export type AddHospitalityMutationHookResult = ReturnType<typeof useAddHospitalityMutation>;
+export type AddHospitalityMutationResult = Apollo.MutationResult<AddHospitalityMutation>;
+export type AddHospitalityMutationOptions = Apollo.BaseMutationOptions<AddHospitalityMutation, AddHospitalityMutationVariables>;
+export const HospitalityDocument = gql`
+    query Hospitality($id: ID!) {
+  hospitality(id: $id) {
+    ...Hospitality
+  }
+}
+    ${HospitalityFragmentDoc}`;
+
+/**
+ * __useHospitalityQuery__
+ *
+ * To run a query within a React component, call `useHospitalityQuery` and pass it any options that fit your needs.
+ * When your component renders, `useHospitalityQuery` returns an object from Apollo Client that contains loading, error, and data properties
+ * you can use to render your UI.
+ *
+ * @param baseOptions options that will be passed into the query, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options;
+ *
+ * @example
+ * const { data, loading, error } = useHospitalityQuery({
+ *   variables: {
+ *      id: // value for 'id'
+ *   },
+ * });
+ */
+export function useHospitalityQuery(baseOptions: Apollo.QueryHookOptions<HospitalityQuery, HospitalityQueryVariables>) {
+        const options = {...defaultOptions, ...baseOptions}
+        return Apollo.useQuery<HospitalityQuery, HospitalityQueryVariables>(HospitalityDocument, options);
+      }
+export function useHospitalityLazyQuery(baseOptions?: Apollo.LazyQueryHookOptions<HospitalityQuery, HospitalityQueryVariables>) {
+          const options = {...defaultOptions, ...baseOptions}
+          return Apollo.useLazyQuery<HospitalityQuery, HospitalityQueryVariables>(HospitalityDocument, options);
+        }
+export type HospitalityQueryHookResult = ReturnType<typeof useHospitalityQuery>;
+export type HospitalityLazyQueryHookResult = ReturnType<typeof useHospitalityLazyQuery>;
+export type HospitalityQueryResult = Apollo.QueryResult<HospitalityQuery, HospitalityQueryVariables>;
+export const UpdateHospitalityDocument = gql`
+    mutation UpdateHospitality($input: HospitalityInput!) {
+  updateHospitality(input: $input) {
+    ...Hospitality
+  }
+}
+    ${HospitalityFragmentDoc}`;
+export type UpdateHospitalityMutationFn = Apollo.MutationFunction<UpdateHospitalityMutation, UpdateHospitalityMutationVariables>;
+
+/**
+ * __useUpdateHospitalityMutation__
+ *
+ * To run a mutation, you first call `useUpdateHospitalityMutation` within a React component and pass it any options that fit your needs.
+ * When your component renders, `useUpdateHospitalityMutation` returns a tuple that includes:
+ * - A mutate function that you can call at any time to execute the mutation
+ * - An object with fields that represent the current status of the mutation's execution
+ *
+ * @param baseOptions options that will be passed into the mutation, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options-2;
+ *
+ * @example
+ * const [updateHospitalityMutation, { data, loading, error }] = useUpdateHospitalityMutation({
+ *   variables: {
+ *      input: // value for 'input'
+ *   },
+ * });
+ */
+export function useUpdateHospitalityMutation(baseOptions?: Apollo.MutationHookOptions<UpdateHospitalityMutation, UpdateHospitalityMutationVariables>) {
+        const options = {...defaultOptions, ...baseOptions}
+        return Apollo.useMutation<UpdateHospitalityMutation, UpdateHospitalityMutationVariables>(UpdateHospitalityDocument, options);
+      }
+export type UpdateHospitalityMutationHookResult = ReturnType<typeof useUpdateHospitalityMutation>;
+export type UpdateHospitalityMutationResult = Apollo.MutationResult<UpdateHospitalityMutation>;
+export type UpdateHospitalityMutationOptions = Apollo.BaseMutationOptions<UpdateHospitalityMutation, UpdateHospitalityMutationVariables>;
 export const AddHotelManagementDocument = gql`
     mutation AddHotelManagement($input: HotelManagementInput!) {
   addHotelManagement(input: $input) {
@@ -23574,6 +23725,29 @@ export type UpdateHospitalityManagementMutationVariables = Exact<{
 
 
 export type UpdateHospitalityManagementMutation = { __typename?: 'Mutation', updateHospitalityManagement?: { __typename?: 'HospitalityManagement', id: string, category?: string | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, l6?: string | null, l7?: string | null, l8?: string | null, l9?: string | null, l10?: string | null, l11?: string | null, l12?: string | null, l13?: string | null, l14?: string | null, l15?: string | null, p8?: string | null, subtitle4?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null } | null };
+
+export type AddHospitalityMutationVariables = Exact<{
+  input: HospitalityInput;
+}>;
+
+
+export type AddHospitalityMutation = { __typename?: 'Mutation', addHospitality?: { __typename?: 'Hospitality', id: string, category?: string | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, l6?: string | null, l7?: string | null, l8?: string | null, l9?: string | null, l10?: string | null, l11?: string | null, l12?: string | null, l13?: string | null, l14?: string | null, l15?: string | null, p8?: string | null, subtitle4?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null } | null };
+
+export type HospitalityQueryVariables = Exact<{
+  id: Scalars['ID'];
+}>;
+
+
+export type HospitalityQuery = { __typename?: 'Query', hospitality?: { __typename?: 'Hospitality', id: string, category?: string | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, l6?: string | null, l7?: string | null, l8?: string | null, l9?: string | null, l10?: string | null, l11?: string | null, l12?: string | null, l13?: string | null, l14?: string | null, l15?: string | null, p8?: string | null, subtitle4?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null } | null };
+
+export type HospitalityFragment = { __typename?: 'Hospitality', id: string, category?: string | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, l6?: string | null, l7?: string | null, l8?: string | null, l9?: string | null, l10?: string | null, l11?: string | null, l12?: string | null, l13?: string | null, l14?: string | null, l15?: string | null, p8?: string | null, subtitle4?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null };
+
+export type UpdateHospitalityMutationVariables = Exact<{
+  input: HospitalityInput;
+}>;
+
+
+export type UpdateHospitalityMutation = { __typename?: 'Mutation', updateHospitality?: { __typename?: 'Hospitality', id: string, category?: string | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, l6?: string | null, l7?: string | null, l8?: string | null, l9?: string | null, l10?: string | null, l11?: string | null, l12?: string | null, l13?: string | null, l14?: string | null, l15?: string | null, p8?: string | null, subtitle4?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null } | null };
 
 export type AddHotelManagementMutationVariables = Exact<{
   input: HotelManagementInput;

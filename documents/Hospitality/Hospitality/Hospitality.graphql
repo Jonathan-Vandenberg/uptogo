@@ -1,7 +1,7 @@
-# import AgedCare from "./AgedCareFragment.graphql"
+# import Hospitality from "./HospitalityFragment.graphql"
 
-query AgedCare($id: ID!) {
-  agedCare(id: $id) {
-    ...AgedCare
+query Hospitality($id: ID!) {
+  hospitality(id: $id) {
+    ...Hospitality
   }
 }
