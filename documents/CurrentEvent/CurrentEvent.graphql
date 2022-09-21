@@ -1,0 +1,7 @@
+# import CurrentEvent from "./CurrentEventFragment.graphql"
+
+query CurrentEvent($id: ID!) {
+  currentEvent(id: $id) {
+    ...CurrentEvent
+  }
+}

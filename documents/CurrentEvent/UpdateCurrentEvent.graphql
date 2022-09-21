@@ -1,0 +1,7 @@
+# import CurrentEvent from './CurrentEventFragment.graphql'
+
+mutation UpdateCurrentEvent($input: CurrentEventInput!) {
+  updateCurrentEvent(input: $input) {
+    ...CurrentEvent
+  }
+}

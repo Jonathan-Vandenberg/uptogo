@@ -34,6 +34,7 @@ import {
   useUpdateTelecommunicationMutation,
   useUpdateWebDevelopmentMutation,
   useUpdateDesignMutation,
+  useUpdateCurrentEventMutation,
   BlogPost,
   useUpdateBlogPostMutation,
   useUpdateItMutation,
@@ -87,6 +88,7 @@ import {
   Hospitality,
   Trades,
   Management,
+  CurrentEvent,
 } from "../types";
 import { options } from "../lib/categories";
 import { BsPlus } from "react-icons/bs";
@@ -96,6 +98,7 @@ interface IProps {
   details:
     | It
     | BlogPost
+    | CurrentEvent
     | Telecommunication
     | BusinessAnalysis
     | CloudComputing
@@ -256,18 +259,18 @@ const AddClientForm = ({ details, add, edit, handleClose }: IProps) => {
   const [mainImage, setMainImage] = useState(DmainImage);
   const [photoCredit, setPhotoCredit] = useState(DphotoCredit);
 
-  const [addSoftwareDevelopment] = useAddSoftwareDevelopmentMutation();
-  addSoftwareDevelopment;
-  const [addComputerNetworking] = useAddComputerNetworkingMutation();
-  const [addCloudComputing] = useAddCloudComputingMutation();
-  const [addBusinessAnalysis] = useAddBusinessAnalysisMutation();
-  const [addTelecommunication] = useAddTelecommunicationMutation();
-  const [addGameProgramming] = useAddGameProgrammingMutation();
-  const [addWebDevelopment] = useAddWebDevelopmentMutation();
-  const [addMachineLearning] = useAddMachineLearningMutation();
-  const [addDataManagement] = useAddDataManagementMutation();
-  const [addBlockchain] = useAddBlockchainMutation();
-  const [addAi] = useAddAiMutation();
+  // const [addSoftwareDevelopment] = useAddSoftwareDevelopmentMutation();
+  // addSoftwareDevelopment;
+  // const [addComputerNetworking] = useAddComputerNetworkingMutation();
+  // const [addCloudComputing] = useAddCloudComputingMutation();
+  // const [addBusinessAnalysis] = useAddBusinessAnalysisMutation();
+  // const [addTelecommunication] = useAddTelecommunicationMutation();
+  // const [addGameProgramming] = useAddGameProgrammingMutation();
+  // const [addWebDevelopment] = useAddWebDevelopmentMutation();
+  // const [addMachineLearning] = useAddMachineLearningMutation();
+  // const [addDataManagement] = useAddDataManagementMutation();
+  // const [addBlockchain] = useAddBlockchainMutation();
+  // const [addAi] = useAddAiMutation();
 
   const [updateSoftwareDevelopment] = useUpdateSoftwareDevelopmentMutation();
   const [updateComputerNetworking] = useUpdateComputerNetworkingMutation();
@@ -285,6 +288,7 @@ const AddClientForm = ({ details, add, edit, handleClose }: IProps) => {
   const [updateDesign] = useUpdateDesignMutation();
   const [updateMusic] = useUpdateMusicMutation();
 
+  const [updateCurrentEvent] = useUpdateCurrentEventMutation();
   const [authorNameLength, setAuthorNameLength] = useState(0);
 
   let form = {
@@ -351,6 +355,9 @@ const AddClientForm = ({ details, add, edit, handleClose }: IProps) => {
     function sendForm() {
       console.log(category);
       if (edit) {
+        if (category === "BLOG") updateBlogPost(form);
+        if (category === "CURRENT_EVENT") updateCurrentEvent(form);
+
         if (category === "SOFTWARE_DEVELOPMENT")
           updateSoftwareDevelopment(form);
         if (category === "COMPUTER_NETWORKING") updateComputerNetworking(form);
@@ -369,9 +376,9 @@ const AddClientForm = ({ details, add, edit, handleClose }: IProps) => {
         if (category === "MUSIC_AUDIO") updateMusic(form);
       }
 
-      if (add) {
-        addSoftwareDevelopment(form);
-      }
+      // if (add) {
+      //   addSoftwareDevelopment(form);
+      // }
     }
 
     sendForm();

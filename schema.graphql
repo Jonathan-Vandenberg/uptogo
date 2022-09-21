@@ -3,6 +3,8 @@ type Query {
   blogPost(id: ID!): BlogPost
   blogCard: [BlogPost]
 
+  currentEvent(id: ID!): CurrentEvent
+
   it(id: ID!): It
   design(id: ID!): Design
   health(id: ID!): Health
@@ -134,6 +136,8 @@ type Query {
 type Mutation {
   addBlogPost(input: BlogPostInput!): BlogPost
   updateBlogPost(input: BlogPostInput!): BlogPost
+
+  updateCurrentEvent(input: CurrentEventInput!): CurrentEvent
 
   addIt(input: ItInput!): It
   updateIt(input: ItInput!): It
@@ -389,6 +393,104 @@ type Categories {
   Web_Development: String
   Yoga: String
   map: String
+}
+
+type CurrentEvent {
+  category: String
+  id: ID!
+  title: String
+  subtitle1: String
+  tableContents1: String
+  tableContents2: String
+  tableContents3: String
+  tableContents4: String
+  p1: String
+  p2: String
+  p3: String
+  subtitle2: String
+  p4: String
+  p5: String
+  l1: String
+  l2: String
+  l3: String
+  l4: String
+  l5: String
+  subtitle3: String
+  p6: String
+  p7: String
+  l6: String
+  l7: String
+  l8: String
+  l9: String
+  l10: String
+  l11: String
+  l12: String
+  l13: String
+  l14: String
+  l15: String
+  p8: String
+  subtitle4: String
+  conclusion1: String
+  conclusion2: String
+  conclusion3: String
+  reference1: String
+  reference2: String
+  authorName: String
+  authorAbout: String
+  authorLink: String
+  editedBy: String
+  photoCredit: String
+  mainImage: String
+  publishedDate: String
+}
+
+input CurrentEventInput {
+  category: String
+  id: ID!
+  title: String
+  subtitle1: String
+  tableContents1: String
+  tableContents2: String
+  tableContents3: String
+  tableContents4: String
+  p1: String
+  p2: String
+  p3: String
+  subtitle2: String
+  p4: String
+  p5: String
+  l1: String
+  l2: String
+  l3: String
+  l4: String
+  l5: String
+  subtitle3: String
+  p6: String
+  p7: String
+  l6: String
+  l7: String
+  l8: String
+  l9: String
+  l10: String
+  l11: String
+  l12: String
+  l13: String
+  l14: String
+  l15: String
+  p8: String
+  subtitle4: String
+  conclusion1: String
+  conclusion2: String
+  conclusion3: String
+  reference1: String
+  reference2: String
+  authorName: String
+  authorAbout: String
+  authorLink: String
+  editedBy: String
+  photoCredit: String
+  mainImage: String
+  publishedDate: String
 }
 
 type It {

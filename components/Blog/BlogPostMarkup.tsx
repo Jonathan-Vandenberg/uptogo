@@ -66,11 +66,13 @@ import type {
   Veterinary,
   WebDevelopment,
   Yoga,
+  CurrentEvent,
 } from "../../types";
 import EmailButton from "../UI/EmailButton";
 
 interface IProps {
   data:
+    | CurrentEvent
     | It
     | BlogPost
     | Telecommunication

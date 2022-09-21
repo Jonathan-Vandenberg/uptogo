@@ -113,6 +113,55 @@ model Categories {
   Yoga                    String?
 }
 
+model CurrentEvent {
+  id             String  @id @default(auto()) @map("_id") @db.ObjectId
+  category       String?
+  title          String?
+  subtitle1      String?
+  tableContents1 String?
+  tableContents2 String?
+  tableContents3 String?
+  tableContents4 String?
+  p1             String?
+  p2             String?
+  p3             String?
+  subtitle2      String?
+  p4             String?
+  p5             String?
+  l1             String?
+  l2             String?
+  l3             String?
+  l4             String?
+  l5             String?
+  subtitle3      String?
+  p6             String?
+  p7             String?
+  l6             String?
+  l7             String?
+  l8             String?
+  l9             String?
+  l10            String?
+  l11            String?
+  l12            String?
+  l13            String?
+  l14            String?
+  l15            String?
+  p8             String?
+  subtitle4      String?
+  conclusion1    String?
+  conclusion2    String?
+  conclusion3    String?
+  reference1     String?
+  reference2     String?
+  authorName     String?
+  authorAbout    String?
+  authorLink     String?
+  editedBy       String?
+  photoCredit    String?
+  mainImage      String?
+  publishedDate  String?
+}
+
 model It {
   id             String  @id @default(auto()) @map("_id") @db.ObjectId
   category       String?

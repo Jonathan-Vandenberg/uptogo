@@ -69,6 +69,7 @@ generates:
         LeadershipManagement: "@prisma/client#LeadershipManagement"
 
         BlogPost: "@prisma/client#BlogPost"
+        CurrentEvent: "@prisma/client#CurrentEvent"
         It: "@prisma/client#It"
         Trades: "@prisma/client#Trades"
         Hospitality: "@prisma/client#Hospitality"

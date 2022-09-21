@@ -1,5 +1,5 @@
 import { GraphQLResolveInfo } from 'graphql';
-import { Categories as CategoriesModel, SoftwareDevelopment as SoftwareDevelopmentModel, ComputerNetworking as ComputerNetworkingModel, CloudComputing as CloudComputingModel, BusinessAnalysis as BusinessAnalysisModel, Telecommunication as TelecommunicationModel, GameProgramming as GameProgrammingModel, WebDevelopment as WebDevelopmentModel, MachineLearning as MachineLearningModel, DataManagement as DataManagementModel, Blockchain as BlockchainModel, Ai as AiModel, FashionDesign as FashionDesignModel, Landscape as LandscapeModel, Music as MusicModel, Film as FilmModel, GraphicDesign as GraphicDesignModel, InteriorDesign as InteriorDesignModel, DigitalMedia as DigitalMediaModel, Acting as ActingModel, Animation3D as Animation3DModel, AgedCare as AgedCareModel, Nutrition as NutritionModel, Nursing as NursingModel, Veterinary as VeterinaryModel, Medicine as MedicineModel, PublicHealth as PublicHealthModel, Dental as DentalModel, Massage as MassageModel, MentalHealth as MentalHealthModel, Baking as BakingModel, Cookery as CookeryModel, HospitalityManagement as HospitalityManagementModel, HotelManagement as HotelManagementModel, TravelTourism as TravelTourismModel, Events as EventsModel, Automotive as AutomotiveModel, Beauty as BeautyModel, Construction as ConstructionModel, Carpentry as CarpentryModel, Education as EducationModel, Fitness as FitnessModel, Hairdressing as HairdressingModel, Horticulture as HorticultureModel, SportDevelopment as SportDevelopmentModel, Yoga as YogaModel, ProjectManagement as ProjectManagementModel, BusinessManagement as BusinessManagementModel, HumanResources as HumanResourcesModel, BankingManagement as BankingManagementModel, IntlBusiness as IntlBusinessModel, SocialMediaMarketing as SocialMediaMarketingModel, AgribusinessManagement as AgribusinessManagementModel, SupplyManagement as SupplyManagementModel, LeadershipManagement as LeadershipManagementModel, BlogPost as BlogPostModel, It as ItModel, Trades as TradesModel, Hospitality as HospitalityModel, Health as HealthModel, Management as ManagementModel, Design as DesignModel, Session as SessionModel, User as UserModel, VerificationToken as VerificationTokenModel } from '@prisma/client';
+import { Categories as CategoriesModel, SoftwareDevelopment as SoftwareDevelopmentModel, ComputerNetworking as ComputerNetworkingModel, CloudComputing as CloudComputingModel, BusinessAnalysis as BusinessAnalysisModel, Telecommunication as TelecommunicationModel, GameProgramming as GameProgrammingModel, WebDevelopment as WebDevelopmentModel, MachineLearning as MachineLearningModel, DataManagement as DataManagementModel, Blockchain as BlockchainModel, Ai as AiModel, FashionDesign as FashionDesignModel, Landscape as LandscapeModel, Music as MusicModel, Film as FilmModel, GraphicDesign as GraphicDesignModel, InteriorDesign as InteriorDesignModel, DigitalMedia as DigitalMediaModel, Acting as ActingModel, Animation3D as Animation3DModel, AgedCare as AgedCareModel, Nutrition as NutritionModel, Nursing as NursingModel, Veterinary as VeterinaryModel, Medicine as MedicineModel, PublicHealth as PublicHealthModel, Dental as DentalModel, Massage as MassageModel, MentalHealth as MentalHealthModel, Baking as BakingModel, Cookery as CookeryModel, HospitalityManagement as HospitalityManagementModel, HotelManagement as HotelManagementModel, TravelTourism as TravelTourismModel, Events as EventsModel, Automotive as AutomotiveModel, Beauty as BeautyModel, Construction as ConstructionModel, Carpentry as CarpentryModel, Education as EducationModel, Fitness as FitnessModel, Hairdressing as HairdressingModel, Horticulture as HorticultureModel, SportDevelopment as SportDevelopmentModel, Yoga as YogaModel, ProjectManagement as ProjectManagementModel, BusinessManagement as BusinessManagementModel, HumanResources as HumanResourcesModel, BankingManagement as BankingManagementModel, IntlBusiness as IntlBusinessModel, SocialMediaMarketing as SocialMediaMarketingModel, AgribusinessManagement as AgribusinessManagementModel, SupplyManagement as SupplyManagementModel, LeadershipManagement as LeadershipManagementModel, BlogPost as BlogPostModel, CurrentEvent as CurrentEventModel, It as ItModel, Trades as TradesModel, Hospitality as HospitalityModel, Health as HealthModel, Management as ManagementModel, Design as DesignModel, Session as SessionModel, User as UserModel, VerificationToken as VerificationTokenModel } from '@prisma/client';
 import { GraphQLContext } from './pages/api/index';
 import { gql } from '@apollo/client';
 import * as Apollo from '@apollo/client';
@@ -1831,6 +1831,105 @@ export type Cookery = {
 };
 
 export type CookeryInput = {
+  authorAbout?: InputMaybe<Scalars['String']>;
+  authorLink?: InputMaybe<Scalars['String']>;
+  authorName?: InputMaybe<Scalars['String']>;
+  category?: InputMaybe<Scalars['String']>;
+  conclusion1?: InputMaybe<Scalars['String']>;
+  conclusion2?: InputMaybe<Scalars['String']>;
+  conclusion3?: InputMaybe<Scalars['String']>;
+  editedBy?: InputMaybe<Scalars['String']>;
+  id: Scalars['ID'];
+  l1?: InputMaybe<Scalars['String']>;
+  l2?: InputMaybe<Scalars['String']>;
+  l3?: InputMaybe<Scalars['String']>;
+  l4?: InputMaybe<Scalars['String']>;
+  l5?: InputMaybe<Scalars['String']>;
+  l6?: InputMaybe<Scalars['String']>;
+  l7?: InputMaybe<Scalars['String']>;
+  l8?: InputMaybe<Scalars['String']>;
+  l9?: InputMaybe<Scalars['String']>;
+  l10?: InputMaybe<Scalars['String']>;
+  l11?: InputMaybe<Scalars['String']>;
+  l12?: InputMaybe<Scalars['String']>;
+  l13?: InputMaybe<Scalars['String']>;
+  l14?: InputMaybe<Scalars['String']>;
+  l15?: InputMaybe<Scalars['String']>;
+  mainImage?: InputMaybe<Scalars['String']>;
+  p1?: InputMaybe<Scalars['String']>;
+  p2?: InputMaybe<Scalars['String']>;
+  p3?: InputMaybe<Scalars['String']>;
+  p4?: InputMaybe<Scalars['String']>;
+  p5?: InputMaybe<Scalars['String']>;
+  p6?: InputMaybe<Scalars['String']>;
+  p7?: InputMaybe<Scalars['String']>;
+  p8?: InputMaybe<Scalars['String']>;
+  photoCredit?: InputMaybe<Scalars['String']>;
+  publishedDate?: InputMaybe<Scalars['String']>;
+  reference1?: InputMaybe<Scalars['String']>;
+  reference2?: InputMaybe<Scalars['String']>;
+  subtitle1?: InputMaybe<Scalars['String']>;
+  subtitle2?: InputMaybe<Scalars['String']>;
+  subtitle3?: InputMaybe<Scalars['String']>;
+  subtitle4?: InputMaybe<Scalars['String']>;
+  tableContents1?: InputMaybe<Scalars['String']>;
+  tableContents2?: InputMaybe<Scalars['String']>;
+  tableContents3?: InputMaybe<Scalars['String']>;
+  tableContents4?: InputMaybe<Scalars['String']>;
+  title?: InputMaybe<Scalars['String']>;
+};
+
+export type CurrentEvent = {
+  __typename?: 'CurrentEvent';
+  authorAbout?: Maybe<Scalars['String']>;
+  authorLink?: Maybe<Scalars['String']>;
+  authorName?: Maybe<Scalars['String']>;
+  category?: Maybe<Scalars['String']>;
+  conclusion1?: Maybe<Scalars['String']>;
+  conclusion2?: Maybe<Scalars['String']>;
+  conclusion3?: Maybe<Scalars['String']>;
+  editedBy?: Maybe<Scalars['String']>;
+  id: Scalars['ID'];
+  l1?: Maybe<Scalars['String']>;
+  l2?: Maybe<Scalars['String']>;
+  l3?: Maybe<Scalars['String']>;
+  l4?: Maybe<Scalars['String']>;
+  l5?: Maybe<Scalars['String']>;
+  l6?: Maybe<Scalars['String']>;
+  l7?: Maybe<Scalars['String']>;
+  l8?: Maybe<Scalars['String']>;
+  l9?: Maybe<Scalars['String']>;
+  l10?: Maybe<Scalars['String']>;
+  l11?: Maybe<Scalars['String']>;
+  l12?: Maybe<Scalars['String']>;
+  l13?: Maybe<Scalars['String']>;
+  l14?: Maybe<Scalars['String']>;
+  l15?: Maybe<Scalars['String']>;
+  mainImage?: Maybe<Scalars['String']>;
+  p1?: Maybe<Scalars['String']>;
+  p2?: Maybe<Scalars['String']>;
+  p3?: Maybe<Scalars['String']>;
+  p4?: Maybe<Scalars['String']>;
+  p5?: Maybe<Scalars['String']>;
+  p6?: Maybe<Scalars['String']>;
+  p7?: Maybe<Scalars['String']>;
+  p8?: Maybe<Scalars['String']>;
+  photoCredit?: Maybe<Scalars['String']>;
+  publishedDate?: Maybe<Scalars['String']>;
+  reference1?: Maybe<Scalars['String']>;
+  reference2?: Maybe<Scalars['String']>;
+  subtitle1?: Maybe<Scalars['String']>;
+  subtitle2?: Maybe<Scalars['String']>;
+  subtitle3?: Maybe<Scalars['String']>;
+  subtitle4?: Maybe<Scalars['String']>;
+  tableContents1?: Maybe<Scalars['String']>;
+  tableContents2?: Maybe<Scalars['String']>;
+  tableContents3?: Maybe<Scalars['String']>;
+  tableContents4?: Maybe<Scalars['String']>;
+  title?: Maybe<Scalars['String']>;
+};
+
+export type CurrentEventInput = {
   authorAbout?: InputMaybe<Scalars['String']>;
   authorLink?: InputMaybe<Scalars['String']>;
   authorName?: InputMaybe<Scalars['String']>;
@@ -4831,6 +4930,7 @@ export type Mutation = {
   updateComputerNetworking?: Maybe<ComputerNetworking>;
   updateConstruction?: Maybe<Construction>;
   updateCookery?: Maybe<Cookery>;
+  updateCurrentEvent?: Maybe<CurrentEvent>;
   updateDataManagement?: Maybe<DataManagement>;
   updateDental?: Maybe<Dental>;
   updateDesign?: Maybe<Design>;
@@ -5269,6 +5369,11 @@ export type MutationUpdateConstructionArgs = {
 
 export type MutationUpdateCookeryArgs = {
   input: CookeryInput;
+};
+
+
+export type MutationUpdateCurrentEventArgs = {
+  input: CurrentEventInput;
 };
 
 
@@ -5921,6 +6026,7 @@ export type Query = {
   constructionCard?: Maybe<Array<Maybe<Construction>>>;
   cookery?: Maybe<Cookery>;
   cookeryCard?: Maybe<Array<Maybe<Cookery>>>;
+  currentEvent?: Maybe<CurrentEvent>;
   dataManagement?: Maybe<DataManagement>;
   dataManagementCard?: Maybe<Array<Maybe<DataManagement>>>;
   dental?: Maybe<Dental>;
@@ -6090,6 +6196,11 @@ export type QueryConstructionArgs = {
 
 
 export type QueryCookeryArgs = {
+  id: Scalars['ID'];
+};
+
+
+export type QueryCurrentEventArgs = {
   id: Scalars['ID'];
 };
 
@@ -7433,6 +7544,8 @@ export type ResolversTypes = {
   ConstructionInput: ConstructionInput;
   Cookery: ResolverTypeWrapper<CookeryModel>;
   CookeryInput: CookeryInput;
+  CurrentEvent: ResolverTypeWrapper<CurrentEventModel>;
+  CurrentEventInput: CurrentEventInput;
   DataManagement: ResolverTypeWrapper<DataManagementModel>;
   DataManagementInput: DataManagementInput;
   Dental: ResolverTypeWrapper<DentalModel>;
@@ -7569,6 +7682,8 @@ export type ResolversParentTypes = {
   ConstructionInput: ConstructionInput;
   Cookery: CookeryModel;
   CookeryInput: CookeryInput;
+  CurrentEvent: CurrentEventModel;
+  CurrentEventInput: CurrentEventInput;
   DataManagement: DataManagementModel;
   DataManagementInput: DataManagementInput;
   Dental: DentalModel;
@@ -8592,6 +8707,56 @@ export type ConstructionResolvers<ContextType = GraphQLContext, ParentType exten
 };
 
 export type CookeryResolvers<ContextType = GraphQLContext, ParentType extends ResolversParentTypes['Cookery'] = ResolversParentTypes['Cookery']> = {
+  authorAbout?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  authorLink?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  authorName?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  category?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  conclusion1?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  conclusion2?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  conclusion3?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  editedBy?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  id?: Resolver<ResolversTypes['ID'], ParentType, ContextType>;
+  l1?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  l2?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  l3?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  l4?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  l5?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  l6?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  l7?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  l8?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  l9?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  l10?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  l11?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  l12?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  l13?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  l14?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  l15?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  mainImage?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  p1?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  p2?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  p3?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  p4?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  p5?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  p6?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  p7?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  p8?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  photoCredit?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  publishedDate?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  reference1?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  reference2?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  subtitle1?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  subtitle2?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  subtitle3?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  subtitle4?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  tableContents1?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  tableContents2?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  tableContents3?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  tableContents4?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  title?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
+};
+
+export type CurrentEventResolvers<ContextType = GraphQLContext, ParentType extends ResolversParentTypes['CurrentEvent'] = ResolversParentTypes['CurrentEvent']> = {
   authorAbout?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   authorLink?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   authorName?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
@@ -10171,6 +10336,7 @@ export type MutationResolvers<ContextType = GraphQLContext, ParentType extends R
   updateComputerNetworking?: Resolver<Maybe<ResolversTypes['ComputerNetworking']>, ParentType, ContextType, RequireFields<MutationUpdateComputerNetworkingArgs, 'input'>>;
   updateConstruction?: Resolver<Maybe<ResolversTypes['Construction']>, ParentType, ContextType, RequireFields<MutationUpdateConstructionArgs, 'input'>>;
   updateCookery?: Resolver<Maybe<ResolversTypes['Cookery']>, ParentType, ContextType, RequireFields<MutationUpdateCookeryArgs, 'input'>>;
+  updateCurrentEvent?: Resolver<Maybe<ResolversTypes['CurrentEvent']>, ParentType, ContextType, RequireFields<MutationUpdateCurrentEventArgs, 'input'>>;
   updateDataManagement?: Resolver<Maybe<ResolversTypes['DataManagement']>, ParentType, ContextType, RequireFields<MutationUpdateDataManagementArgs, 'input'>>;
   updateDental?: Resolver<Maybe<ResolversTypes['Dental']>, ParentType, ContextType, RequireFields<MutationUpdateDentalArgs, 'input'>>;
   updateDesign?: Resolver<Maybe<ResolversTypes['Design']>, ParentType, ContextType, RequireFields<MutationUpdateDesignArgs, 'input'>>;
@@ -10454,6 +10620,7 @@ export type QueryResolvers<ContextType = GraphQLContext, ParentType extends Reso
   constructionCard?: Resolver<Maybe<Array<Maybe<ResolversTypes['Construction']>>>, ParentType, ContextType>;
   cookery?: Resolver<Maybe<ResolversTypes['Cookery']>, ParentType, ContextType, RequireFields<QueryCookeryArgs, 'id'>>;
   cookeryCard?: Resolver<Maybe<Array<Maybe<ResolversTypes['Cookery']>>>, ParentType, ContextType>;
+  currentEvent?: Resolver<Maybe<ResolversTypes['CurrentEvent']>, ParentType, ContextType, RequireFields<QueryCurrentEventArgs, 'id'>>;
   dataManagement?: Resolver<Maybe<ResolversTypes['DataManagement']>, ParentType, ContextType, RequireFields<QueryDataManagementArgs, 'id'>>;
   dataManagementCard?: Resolver<Maybe<Array<Maybe<ResolversTypes['DataManagement']>>>, ParentType, ContextType>;
   dental?: Resolver<Maybe<ResolversTypes['Dental']>, ParentType, ContextType, RequireFields<QueryDentalArgs, 'id'>>;
@@ -11084,6 +11251,7 @@ export type Resolvers<ContextType = GraphQLContext> = {
   ComputerNetworking?: ComputerNetworkingResolvers<ContextType>;
   Construction?: ConstructionResolvers<ContextType>;
   Cookery?: CookeryResolvers<ContextType>;
+  CurrentEvent?: CurrentEventResolvers<ContextType>;
   DataManagement?: DataManagementResolvers<ContextType>;
   Dental?: DentalResolvers<ContextType>;
   Design?: DesignResolvers<ContextType>;
@@ -11145,6 +11313,56 @@ export const BlogCardFragmentDoc = gql`
     `;
 export const BlogPostFragmentDoc = gql`
     fragment BlogPost on BlogPost {
+  id
+  category
+  publishedDate
+  title
+  subtitle1
+  tableContents1
+  tableContents2
+  tableContents3
+  tableContents4
+  p1
+  p2
+  p3
+  subtitle2
+  p4
+  p5
+  l1
+  l2
+  l3
+  l4
+  l5
+  subtitle3
+  p6
+  p7
+  l6
+  l7
+  l8
+  l9
+  l10
+  l11
+  l12
+  l13
+  l14
+  l15
+  p8
+  subtitle4
+  conclusion1
+  conclusion2
+  conclusion3
+  reference1
+  reference2
+  authorName
+  authorAbout
+  authorLink
+  photoCredit
+  editedBy
+  mainImage
+}
+    `;
+export const CurrentEventFragmentDoc = gql`
+    fragment CurrentEvent on CurrentEvent {
   id
   category
   publishedDate
@@ -14711,6 +14929,74 @@ export function useBlogPostsLazyQuery(baseOptions?: Apollo.LazyQueryHookOptions<
 export type BlogPostsQueryHookResult = ReturnType<typeof useBlogPostsQuery>;
 export type BlogPostsLazyQueryHookResult = ReturnType<typeof useBlogPostsLazyQuery>;
 export type BlogPostsQueryResult = Apollo.QueryResult<BlogPostsQuery, BlogPostsQueryVariables>;
+export const CurrentEventDocument = gql`
+    query CurrentEvent($id: ID!) {
+  currentEvent(id: $id) {
+    ...CurrentEvent
+  }
+}
+    ${CurrentEventFragmentDoc}`;
+
+/**
+ * __useCurrentEventQuery__
+ *
+ * To run a query within a React component, call `useCurrentEventQuery` and pass it any options that fit your needs.
+ * When your component renders, `useCurrentEventQuery` returns an object from Apollo Client that contains loading, error, and data properties
+ * you can use to render your UI.
+ *
+ * @param baseOptions options that will be passed into the query, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options;
+ *
+ * @example
+ * const { data, loading, error } = useCurrentEventQuery({
+ *   variables: {
+ *      id: // value for 'id'
+ *   },
+ * });
+ */
+export function useCurrentEventQuery(baseOptions: Apollo.QueryHookOptions<CurrentEventQuery, CurrentEventQueryVariables>) {
+        const options = {...defaultOptions, ...baseOptions}
+        return Apollo.useQuery<CurrentEventQuery, CurrentEventQueryVariables>(CurrentEventDocument, options);
+      }
+export function useCurrentEventLazyQuery(baseOptions?: Apollo.LazyQueryHookOptions<CurrentEventQuery, CurrentEventQueryVariables>) {
+          const options = {...defaultOptions, ...baseOptions}
+          return Apollo.useLazyQuery<CurrentEventQuery, CurrentEventQueryVariables>(CurrentEventDocument, options);
+        }
+export type CurrentEventQueryHookResult = ReturnType<typeof useCurrentEventQuery>;
+export type CurrentEventLazyQueryHookResult = ReturnType<typeof useCurrentEventLazyQuery>;
+export type CurrentEventQueryResult = Apollo.QueryResult<CurrentEventQuery, CurrentEventQueryVariables>;
+export const UpdateCurrentEventDocument = gql`
+    mutation UpdateCurrentEvent($input: CurrentEventInput!) {
+  updateCurrentEvent(input: $input) {
+    ...CurrentEvent
+  }
+}
+    ${CurrentEventFragmentDoc}`;
+export type UpdateCurrentEventMutationFn = Apollo.MutationFunction<UpdateCurrentEventMutation, UpdateCurrentEventMutationVariables>;
+
+/**
+ * __useUpdateCurrentEventMutation__
+ *
+ * To run a mutation, you first call `useUpdateCurrentEventMutation` within a React component and pass it any options that fit your needs.
+ * When your component renders, `useUpdateCurrentEventMutation` returns a tuple that includes:
+ * - A mutate function that you can call at any time to execute the mutation
+ * - An object with fields that represent the current status of the mutation's execution
+ *
+ * @param baseOptions options that will be passed into the mutation, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options-2;
+ *
+ * @example
+ * const [updateCurrentEventMutation, { data, loading, error }] = useUpdateCurrentEventMutation({
+ *   variables: {
+ *      input: // value for 'input'
+ *   },
+ * });
+ */
+export function useUpdateCurrentEventMutation(baseOptions?: Apollo.MutationHookOptions<UpdateCurrentEventMutation, UpdateCurrentEventMutationVariables>) {
+        const options = {...defaultOptions, ...baseOptions}
+        return Apollo.useMutation<UpdateCurrentEventMutation, UpdateCurrentEventMutationVariables>(UpdateCurrentEventDocument, options);
+      }
+export type UpdateCurrentEventMutationHookResult = ReturnType<typeof useUpdateCurrentEventMutation>;
+export type UpdateCurrentEventMutationResult = Apollo.MutationResult<UpdateCurrentEventMutation>;
+export type UpdateCurrentEventMutationOptions = Apollo.BaseMutationOptions<UpdateCurrentEventMutation, UpdateCurrentEventMutationVariables>;
 export const ActingDocument = gql`
     query Acting($id: ID!) {
   acting(id: $id) {
@@ -22566,6 +22852,22 @@ export type BlogPostsQueryVariables = Exact<{ [key: string]: never; }>;
 
 
 export type BlogPostsQuery = { __typename?: 'Query', blogPosts?: Array<{ __typename?: 'BlogPost', id: string, category?: string | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, l6?: string | null, l7?: string | null, l8?: string | null, l9?: string | null, l10?: string | null, l11?: string | null, l12?: string | null, l13?: string | null, l14?: string | null, l15?: string | null, p8?: string | null, subtitle4?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null } | null> | null };
+
+export type CurrentEventQueryVariables = Exact<{
+  id: Scalars['ID'];
+}>;
+
+
+export type CurrentEventQuery = { __typename?: 'Query', currentEvent?: { __typename?: 'CurrentEvent', id: string, category?: string | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, l6?: string | null, l7?: string | null, l8?: string | null, l9?: string | null, l10?: string | null, l11?: string | null, l12?: string | null, l13?: string | null, l14?: string | null, l15?: string | null, p8?: string | null, subtitle4?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null } | null };
+
+export type CurrentEventFragment = { __typename?: 'CurrentEvent', id: string, category?: string | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, l6?: string | null, l7?: string | null, l8?: string | null, l9?: string | null, l10?: string | null, l11?: string | null, l12?: string | null, l13?: string | null, l14?: string | null, l15?: string | null, p8?: string | null, subtitle4?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null };
+
+export type UpdateCurrentEventMutationVariables = Exact<{
+  input: CurrentEventInput;
+}>;
+
+
+export type UpdateCurrentEventMutation = { __typename?: 'Mutation', updateCurrentEvent?: { __typename?: 'CurrentEvent', id: string, category?: string | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, l6?: string | null, l7?: string | null, l8?: string | null, l9?: string | null, l10?: string | null, l11?: string | null, l12?: string | null, l13?: string | null, l14?: string | null, l15?: string | null, p8?: string | null, subtitle4?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null } | null };
 
 export type ActingQueryVariables = Exact<{
   id: Scalars['ID'];

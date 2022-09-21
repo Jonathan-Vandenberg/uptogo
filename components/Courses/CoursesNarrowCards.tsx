@@ -4,7 +4,7 @@ import { BsChevronRight } from "react-icons/bs";
 import { useAppSelector } from "../../redux-hooks/hooks";
 
 interface CardData {
-  cardData: CourseLink[];
+  cardData: CourseLink[] | null;
 }
 
 type CourseLink = {
@@ -17,7 +17,7 @@ export default function CoursesNarrowCards({ cardData }: CardData) {
   const translate = useAppSelector((state) => state.translationState.translate);
   return (
     <div className="px-5 max-w-[678px] md:max-w-[900px] mx-auto divide divide-orange bg-body space-y-4 py-8">
-      {cardData.map((card, index) => (
+      {cardData?.map((card, index) => (
         <motion.div
           key={index}
           whileHover={{

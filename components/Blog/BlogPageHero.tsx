@@ -65,6 +65,7 @@ import {
   Hospitality,
   Management,
   Trades,
+  CurrentEvent,
 } from "../../types";
 
 interface IHeroProps {
@@ -130,6 +131,7 @@ interface IHeroProps {
     | LeadershipManagement
     | Management
     | It
+    | CurrentEvent
     | undefined
     | null;
 }

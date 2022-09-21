@@ -62,10 +62,12 @@ import {
   Hospitality,
   Management,
   Trades,
+  CurrentEvent,
 } from "../../types";
 
 interface IFormProps {
   data:
+    | CurrentEvent
     | It
     | BlogPost
     | Telecommunication

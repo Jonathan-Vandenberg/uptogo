@@ -65,6 +65,7 @@ import type {
   Hospitality,
   Management,
   Trades,
+  CurrentEvent,
 } from "../../types";
 
 interface IFormProps {
@@ -130,6 +131,7 @@ interface IFormProps {
     | Hospitality
     | Management
     | Trades
+    | CurrentEvent
     | undefined
     | null;
   handleAdd: () => void;

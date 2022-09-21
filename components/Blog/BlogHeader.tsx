@@ -24,6 +24,7 @@ import {
   ComputerNetworking,
   Construction,
   Cookery,
+  CurrentEvent,
   DataManagement,
   Dental,
   Design,
@@ -132,6 +133,7 @@ interface IHeroProps {
     | LeadershipManagement
     | Management
     | It
+    | CurrentEvent
     | undefined
     | null;
 }
