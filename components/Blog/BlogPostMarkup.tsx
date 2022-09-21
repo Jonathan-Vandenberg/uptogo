@@ -425,10 +425,10 @@ export default function BlogPostMarkup({
         ("urbangentryjon@gmail.com" && (
           <div className="flex space-x-5 justify-center items-center py-6">
             <div className="flex items-center space-x-1" onClick={handleEdit}>
-              <div className="text-xl">
-                <FaEdit size={25} className="text-orange" />
+              <div className="text-xl ">
+                <FaEdit size={25} className="text-red-600" />
               </div>
-              <p className="text-lg text-orange">Edit</p>
+              <p className="text-lg text-orange">Chỉnh Sửa</p>
             </div>
             {/* <div className="flex items-center space-x-1" onClick={handleAdd}>
           <div className="text-xl text-green-600">

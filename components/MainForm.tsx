@@ -1079,10 +1079,10 @@ const AddClientForm = ({ details, add, edit, handleClose }: IProps) => {
         >
           <button
             type="submit"
-            className="flex items-center justify-between space-x-2 px-4 h-10 rounded-full text-green-500 bg-white border-[1px] border-green-500"
+            className="flex items-center justify-between space-x-2 px-4 h-10 rounded-full text-green-500 bg-white border-2 border-green-500"
           >
             <BsPlus size={25} className="text-green-500 hover:text-white" />
-            Update
+            Cập Nhật
           </button>
         </motion.div>
       </form>
