@@ -3,7 +3,6 @@ import { GetStaticProps } from "next";
 import { useRouter } from "next/router";
 import { useState } from "react";
 import CoursesMainPage from "../components/Courses/CoursesMainPage";
-import CoursesNarrowCards from "../components/Courses/CoursesNarrowCards";
 import MainForm from "../components/MainForm";
 import prisma from "../lib/prisma";
 import { CurrentEvent } from "../types";
@@ -80,13 +79,6 @@ export default function App({ data }: IProps) {
               <p>Loading..</p>
             </div>
           )}
-        </div>
-      )}
-      {data ? (
-        <CoursesNarrowCards cardData={null} />
-      ) : (
-        <div>
-          <p>Loading...</p>
         </div>
       )}
     </div>
