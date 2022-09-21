@@ -107,7 +107,7 @@ export default function App() {
           </Link>
         </div>
         <div className="pb-4">
-          <Link href={"/courses/health"}>
+          <Link href={"/health"}>
             <div className="flex items-center justify-center flex-col cursor-pointer">
               <div className="z-10 h-full items-center flex justify-center w-auto rounded-lg shadow-md bg-white p-2">
                 <Image
@@ -125,7 +125,7 @@ export default function App() {
           </Link>
         </div>
         <div className="pb-4">
-          <Link href={"/courses/hospitality"}>
+          <Link href={"/hospitality"}>
             <div className="flex items-center justify-center flex-col cursor-pointer">
               <div className="z-10 h-full items-center flex justify-center w-auto rounded-lg shadow-md bg-white p-2">
                 <Image
@@ -143,7 +143,7 @@ export default function App() {
           </Link>
         </div>
         <div className="pb-4">
-          <Link href={"/courses/trades"}>
+          <Link href={"/trades"}>
             <div className="flex items-center justify-center flex-col cursor-pointer">
               <div className="z-10 h-full items-center flex justify-center w-auto rounded-lg shadow-md bg-white p-2">
                 <Image
