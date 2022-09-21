@@ -88,7 +88,7 @@ export default function App() {
                     priority
                   />
                 </div>
-                <div className="text-sm text-gray-800 w-full text-center px-6 py-1 leading-5">
+                <div className="text-sm text-gray-700 w-full text-center px-6 py-1 leading-5">
                   {translate ? item.courseE : item.course}
                 </div>
               </div>

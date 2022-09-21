@@ -17,7 +17,43 @@ export default function App() {
     <div className="fixed md:static md:z-0  md:w-auto md:h-auto top-0 left-0 w-screen h-screen bg-gradient-to-b from-sky-200 via-white to-white z-30">
       <div className="md:flex md:mt-12 md:items-center md:justify-center grid grid-cols-2 mt-20 w-screen h-auto z-40 bg-">
         <div className="pb-4">
-          <Link href={"/courses/information-technology"}>
+          <Link href={"/events"}>
+            <div className="flex items-center justify-center flex-col cursor-pointer">
+              <div className="z-10 h-full items-center flex justify-center w-auto rounded-lg shadow-md bg-white p-2">
+                <Image
+                  src={eventIcon}
+                  alt="Events image"
+                  width={40}
+                  height={40}
+                  priority
+                />
+              </div>
+              <div className="z-10 text-gray-700 w-full text-center px-6 py-1 leading-5">
+                {translate ? "Uptogo Events" : "Sự Kiện Uptogo"}
+              </div>
+            </div>
+          </Link>
+        </div>
+        <div className="pb-4">
+          <Link href={"/blogs"}>
+            <div className="flex items-center justify-center flex-col cursor-pointer">
+              <div className="z-10 h-full items-center flex justify-center w-auto rounded-lg shadow-md bg-white p-2">
+                <Image
+                  src={newsIcon}
+                  alt="News Image"
+                  width={40}
+                  height={40}
+                  priority
+                />
+              </div>
+              <div className="z-10 text-sm text-gray-700 w-full text-center px-6 py-1 leading-5">
+                {translate ? "News" : "Tin Tức"}
+              </div>
+            </div>
+          </Link>
+        </div>
+        <div className="pb-4">
+          <Link href={"/information-technology"}>
             <div className="flex items-center justify-center flex-col cursor-pointer">
               <div className="z-10 h-full items-center flex justify-center w-auto rounded-lg shadow-md bg-white p-2">
                 <Image
@@ -120,42 +156,6 @@ export default function App() {
               </div>
               <div className="z-10 text-gray-700 w-full text-center px-6 py-1 leading-5">
                 {translate ? "Trades & Sports" : "Thương mại & Thể thao"}
-              </div>
-            </div>
-          </Link>
-        </div>
-        <div className="pb-4">
-          <Link href={"/events"}>
-            <div className="flex items-center justify-center flex-col cursor-pointer">
-              <div className="z-10 h-full items-center flex justify-center w-auto rounded-lg shadow-md bg-white p-2">
-                <Image
-                  src={eventIcon}
-                  alt="Events image"
-                  width={40}
-                  height={40}
-                  priority
-                />
-              </div>
-              <div className="z-10 text-gray-700 w-full text-center px-6 py-1 leading-5">
-                {translate ? "Events" : "Events-VN"}
-              </div>
-            </div>
-          </Link>
-        </div>
-        <div className="pb-4">
-          <Link href={"/blogs"}>
-            <div className="flex items-center justify-center flex-col cursor-pointer">
-              <div className="z-10 h-full items-center flex justify-center w-auto rounded-lg shadow-md bg-white p-2">
-                <Image
-                  src={newsIcon}
-                  alt="News Image"
-                  width={40}
-                  height={40}
-                  priority
-                />
-              </div>
-              <div className="z-10 text-gray-700 w-full text-center px-6 py-1 leading-5">
-                {translate ? "News" : "News-VN"}
               </div>
             </div>
           </Link>
