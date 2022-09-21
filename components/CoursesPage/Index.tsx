@@ -71,7 +71,7 @@ export default function App() {
           </Link>
         </div>
         <div className="pb-4">
-          <Link href={"/courses/management"}>
+          <Link href={"/management"}>
             <div className="flex items-center justify-center flex-col cursor-pointer">
               <div className="z-10 h-full items-center flex justify-center w-auto rounded-lg shadow-md bg-white p-2">
                 <Image
@@ -136,7 +136,7 @@ export default function App() {
                   priority
                 />
               </div>
-              <div className="z-10leading-5  text-gray-700 w-full text-center px-6 py-1">
+              <div className="z-10 leading-5  text-gray-700 w-full text-center px-6 py-1">
                 {translate ? "Hospitality" : "Nhà hàng khách sạn"}
               </div>
             </div>
