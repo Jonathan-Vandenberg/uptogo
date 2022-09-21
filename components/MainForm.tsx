@@ -89,6 +89,23 @@ import {
   Trades,
   Management,
   CurrentEvent,
+  useUpdateFashionDesignMutation,
+  useUpdateActingMutation,
+  useUpdateAnimation3DMutation,
+  useUpdateDigitalMediaMutation,
+  useUpdateFilmMutation,
+  useUpdateGraphicDesignMutation,
+  useUpdateInteriorDesignMutation,
+  useUpdateLandscapeMutation,
+  useUpdateAgedCareMutation,
+  useUpdateDentalMutation,
+  useUpdateMassageMutation,
+  useUpdateMedicineMutation,
+  useUpdateMentalHealthMutation,
+  useUpdateNursingMutation,
+  useUpdateNutritionMutation,
+  useUpdatePublicHealthMutation,
+  useUpdateVeterinaryMutation,
 } from "../types";
 import { options } from "../lib/categories";
 import { BsPlus } from "react-icons/bs";
@@ -272,6 +289,7 @@ const AddClientForm = ({ details, add, edit, handleClose }: IProps) => {
   // const [addBlockchain] = useAddBlockchainMutation();
   // const [addAi] = useAddAiMutation();
 
+  /* Software Development */
   const [updateSoftwareDevelopment] = useUpdateSoftwareDevelopmentMutation();
   const [updateComputerNetworking] = useUpdateComputerNetworkingMutation();
   const [updateCloudComputing] = useUpdateCloudComputingMutation();
@@ -285,8 +303,29 @@ const AddClientForm = ({ details, add, edit, handleClose }: IProps) => {
   const [updateAi] = useUpdateAiMutation();
   const [updateBlogPost] = useUpdateBlogPostMutation();
   const [updateIt] = useUpdateItMutation();
+
+  /* Design */
   const [updateDesign] = useUpdateDesignMutation();
   const [updateMusic] = useUpdateMusicMutation();
+  const [updateFashionDesign] = useUpdateFashionDesignMutation();
+  const [updateLandscape] = useUpdateLandscapeMutation();
+  const [updateFilm] = useUpdateFilmMutation();
+  const [updateGraphicDesign] = useUpdateGraphicDesignMutation();
+  const [updateInteriorDesign] = useUpdateInteriorDesignMutation();
+  const [updateDigitalMedia] = useUpdateDigitalMediaMutation();
+  const [updateActing] = useUpdateActingMutation();
+  const [updateAnimation3D] = useUpdateAnimation3DMutation();
+
+  /* Health */
+  const [updateAgedCare] = useUpdateAgedCareMutation();
+  const [updateNutrition] = useUpdateNutritionMutation();
+  const [updateNursing] = useUpdateNursingMutation();
+  const [updateVeterinary] = useUpdateVeterinaryMutation();
+  const [updateMedicine] = useUpdateMedicineMutation();
+  const [updatePublicHealth] = useUpdatePublicHealthMutation();
+  const [updateDental] = useUpdateDentalMutation();
+  const [updateMassage] = useUpdateMassageMutation();
+  const [updateMentalHealth] = useUpdateMentalHealthMutation();
 
   const [updateCurrentEvent] = useUpdateCurrentEventMutation();
   const [authorNameLength, setAuthorNameLength] = useState(0);
@@ -358,6 +397,7 @@ const AddClientForm = ({ details, add, edit, handleClose }: IProps) => {
         if (category === "BLOG") updateBlogPost(form);
         if (category === "CURRENT_EVENT") updateCurrentEvent(form);
 
+        /* Softtware Development */
         if (category === "SOFTWARE_DEVELOPMENT")
           updateSoftwareDevelopment(form);
         if (category === "COMPUTER_NETWORKING") updateComputerNetworking(form);
@@ -372,8 +412,29 @@ const AddClientForm = ({ details, add, edit, handleClose }: IProps) => {
         if (category === "AI") updateAi(form);
         if (category === "BLOG") updateBlogPost(form);
         if (category === "IT") updateIt(form);
+
+        /* Design */
         if (category === "DESIGN") updateDesign(form);
         if (category === "MUSIC_AUDIO") updateMusic(form);
+        if (category === "FASHION_DESIGN") updateFashionDesign(form);
+        if (category === "LANDSCAPE") updateLandscape(form);
+        if (category === "FILM_MEDIA") updateFilm(form);
+        if (category === "GRAPHIC_DESIGN") updateGraphicDesign(form);
+        if (category === "INTERIOR_DESIGN") updateInteriorDesign(form);
+        if (category === "DIGITAL_MEDIA") updateDigitalMedia(form);
+        if (category === "ACTING") updateActing(form);
+        if (category === "ANIMATION_3D") updateAnimation3D(form);
+
+        /* Health */
+        if (category === "AGED_CARE") updateAgedCare(form);
+        if (category === "NUTRITION") updateNutrition(form);
+        if (category === "NURSING") updateNursing(form);
+        if (category === "VETENARY") updateVeterinary(form);
+        if (category === "MEDICINE") updateMedicine(form);
+        if (category === "PUBLIC_HEALTH") updatePublicHealth(form);
+        if (category === "DENTAL") updateDental(form);
+        if (category === "MASSAGE") updateMassage(form);
+        if (category === "MENTAL_HEALTH") updateMentalHealth(form);
       }
 
       // if (add) {

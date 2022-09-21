@@ -57,7 +57,7 @@ export const options: Category[] = [
   {value: "SUPPLYCHAIN_MANAGEMENT" , label: "Supplychain Management"},
   {value: "TELECOMMUNICATION" , label: "Telecommunication"},
   {value: "TRAVEL_TOURISM" , label: "Travel & Tourism"},
-  {value: "VETENARY" , label: "Vetenary"},
+  {value: "VETENARY" , label: "Veterinary"},
   {value: "WEB_DEVELOPMENT" , label: "Web Development"},
   {value: "YOGA" , label: "Yoga"},
   {value: "map" , label: "map"},
