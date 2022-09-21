@@ -11,6 +11,8 @@ import interiorIcon from "../public/courseIcons/designIcons/staircase.png";
 import landscapeIcon from "../public/courseIcons/designIcons/forest.png";
 import musicIcon from "../public/courseIcons/designIcons/music-notes.png";
 
+import landmarks from "../public/heroImages/heroTravel.jpg";
+
 export const designLinks = [
   {
     courseE: "Acting",
@@ -71,7 +73,7 @@ export const designLinks = [
 export default function App() {
   const translate = useAppSelector((state) => state.translationState.translate);
   return (
-    <div className="fixed md:static md:z-0  md:w-auto md:h-auto top-0 left-0 w-screen h-screen bg-white z-30">
+    <div className="fixed md:static md:z-0  md:w-auto md:h-auto top-0 left-0 w-screen h-screen z-30  bg-gradient-to-b from-sky-200 via-white to-white">
       <div className="md:flex md:mt-12 md:items-center md:justify-center grid grid-cols-3 mt-20 w-screen h-auto z-40 ">
         {designLinks.map((item, i) => (
           <div key={i} className="pb-3">
@@ -93,6 +95,14 @@ export default function App() {
             </Link>
           </div>
         ))}
+      </div>
+      <div className="absolute bottom-12 left-0 w-screen">
+        <Image
+          src={landmarks}
+          alt="landmarks decorational"
+          layout="responsive"
+          priority
+        />
       </div>
       <span className="fixed bottom-0 left-0 w-screen h-12 bg-orange md:hidden" />
     </div>
