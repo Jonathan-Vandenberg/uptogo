@@ -96,7 +96,7 @@ export default function App() {
           </div>
         ))}
       </div>
-      <div className="absolute bottom-12 left-0 w-screen">
+      <div className="fixed bottom-12 left-0 w-screen">
         <Image
           src={landmarks}
           alt="landmarks decorational"
