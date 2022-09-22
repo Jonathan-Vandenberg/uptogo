@@ -11,17 +11,17 @@ import logo from "../../public/uptogoFavicon.png";
 
 export default function PopupCard() {
   return (
-    <div className="min-w-[340px] max-w-[680px] flex items-center justify-center flex-col relative rounded-xl">
+    <div className="min-w-[340px] max-w-[680px] flex items-center justify-center flex-col relative rounded-xl -mt-10 md:mt-0">
       <div className="p-2 rounded-full bg-white shadow-md flex items-center justify-center">
         <Image src={logo} alt="logo" width={60} height={60} />
       </div>
-      <div className="px-6 md:px-12 pb-4 pt-16 flex items-center justify-center flex-col space-y-10">
+      <div className="px-6 md:px-12 pt-8 pb-4 md:pt-16 flex items-center justify-center flex-col space-y-10">
         <p className="lg:px-20 px-6 text-2xl logoFont text-center">
           Take the first step toward a successful career.
         </p>
         <p className="text-lg text-center lg:px-20">
-          Answer a few questions and we&apos;ll get you connected with a
-          university in the U.S., along with:
+          Contact us and we&apos;ll get you connected with a university Canada,
+          Úc, Mỹ, New Zealand Thụy Sĩ, Anh along with:
         </p>
         <ul>
           <li className="space-x-2 flex items-center justify-center">
@@ -46,8 +46,9 @@ export default function PopupCard() {
           </Link>
         </div>
         <p>Some of our partners include:</p>
-        <div className="flex items-center justify-center space-x-2">
-          <div>
+
+        <div className="grid grid-cols-1 gap-8">
+          <div className="flex items-center justify-center">
             <Image
               src={bermingham}
               alt="Berminham Unversity logo"
@@ -55,7 +56,7 @@ export default function PopupCard() {
               height={35}
             />
           </div>
-          <div>
+          <div className="flex items-center justify-center">
             <Image
               src={diakin}
               alt="Berminham Unversity logo"
@@ -63,7 +64,7 @@ export default function PopupCard() {
               height={50}
             />
           </div>
-          <div>
+          <div className="flex items-center justify-center">
             <Image
               src={image}
               alt="Berminham Unversity logo"
@@ -71,7 +72,7 @@ export default function PopupCard() {
               height={35}
             />
           </div>
-          <div>
+          <div className="flex items-center justify-center">
             <Image
               src={james}
               alt="Berminham Unversity logo"
@@ -79,12 +80,12 @@ export default function PopupCard() {
               height={48}
             />
           </div>
-          <div>
+          <div className="flex items-center justify-center">
             <Image
               src={vancouver}
               alt="Berminham Unversity logo"
-              width={90}
-              height={60}
+              width={120}
+              height={80}
             />
           </div>
         </div>

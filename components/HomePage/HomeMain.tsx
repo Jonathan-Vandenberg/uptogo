@@ -11,6 +11,7 @@ import {
 } from "../Global/Footer/CollapseMenus";
 import CourseStepper from "./CourseStepper";
 import travel from "../../public/heroImages/heroTravel.jpg";
+import banner1 from "../../public/heroImages/biawweb.jpeg";
 
 export default function App() {
   const [step, setStep] = useState(0);
@@ -51,7 +52,7 @@ export default function App() {
         </div>
         <span className="absolute w-screen h-full left-0 top-0 bg-gradient-to-t from-transparent to-sky-500/20" />
       </div>
-      <div className="bg-body md:pt-16">
+      <div className="pt-2 md:pt-16">
         <WhyUptogo />
       </div>
       <div className="max-w-[678px] md:max-w-[900px] mx-auto container">
@@ -101,10 +102,10 @@ export default function App() {
 
 const WhyUptogo = () => {
   return (
-    <div className="p-6 md:p-0 max-w-[678px] md:max-w-[900px] mx-auto container">
+    <div className="relative p-6 md:p-0 max-w-[678px] md:max-w-[900px] mx-auto container">
       <div className="flex items-center justify-center flex-col md:grid md:grid-cols-2">
         <div className="md:grid-cols-1 md:py-12 px-2">
-          <h2 className="pb-12  text-3xl logoFont text-gray-700 md:text-5xl lg:text-5xl">
+          <h2 className="pb-8  text-3xl logoFont text-orange md:text-5xl lg:text-5xl">
             Lý Do Lựa Chọn Uptogo?
           </h2>
           <p className="text-xl text-gray-600 md:grid-cols-1">
@@ -129,6 +130,9 @@ const WhyUptogo = () => {
           />
         </div>
       </div>
+      <span className="absolute -z-10 overflow-hidden rounded-full w-96 h-52 top-60 transform -translate-x-2/3 bg-orange/10" />
+      <span className="absolute -z-10 overflow-hidden rounded-l-full w-52 h-60 -top-32 transform right-0 bg-sky-50" />
+      <span className="absolute -z-10 rounded-l-full w-60 h-60 -bottom-20 transform right-0 bg-orange/10 overflow-hidden" />
     </div>
   );
 };

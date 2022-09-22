@@ -4,6 +4,7 @@ import HomeMain from "../components/HomePage/HomeMain";
 import CustomerReview from "../components/UI/CustomerReview";
 import Popup from "../components/UI/Popup";
 import image from "../public/heroImages/Du-hoc-Sp-jain-01.jpeg";
+import banner1 from "../public/heroImages/biawweb.jpeg";
 
 const customer = [
   {
@@ -37,9 +38,12 @@ export default function App() {
         <div className="py-12 flex items-center justify-center">
           <Popup />
         </div>
+        <div className="block w-full pb-14">
+          <Image src={image} alt={"uptogo banner"} layout="responsive" />
+        </div>
         <CustomerReview customer={customer} />
-        <div className="block w-full">
-          <Image src={image} alt={"Student graduating"} layout="responsive" />
+        <div className="w-full block">
+          <Image src={banner1} alt="uptogo banner" layout="responsive" />
         </div>
       </div>
     </>
