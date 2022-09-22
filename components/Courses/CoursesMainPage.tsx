@@ -145,7 +145,9 @@ export function Animation() {
 }
 
 export default function BlogMain({ data, handleEdit, handleAdd }: IFormProps) {
-  const styles = data?.mainImage ? "pb-8 block" : "block p-20";
+  const styles = data?.mainImage
+    ? "pb-8 block flex items-center justify-center"
+    : "block p-20 flex items-center justify-center";
 
   return (
     <div className="max-w-[678px] md:max-w-[900px] mx-auto md:pt-12 pb-8">
