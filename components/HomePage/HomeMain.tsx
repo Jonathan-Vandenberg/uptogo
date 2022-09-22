@@ -11,7 +11,6 @@ import {
 } from "../Global/Footer/CollapseMenus";
 import CourseStepper from "./CourseStepper";
 import travel from "../../public/heroImages/heroTravel.jpg";
-import banner1 from "../../public/heroImages/biawweb.jpeg";
 
 export default function App() {
   const [step, setStep] = useState(0);
@@ -56,7 +55,7 @@ export default function App() {
         <WhyUptogo />
       </div>
       <div className="max-w-[678px] md:max-w-[900px] mx-auto container">
-        <div className="bg-body my-6">
+        <div className="bg-sky-50 my-6">
           <div className="pt-5 text-center ">
             <h2 className="logoFont text-3xl md:text-5xl text-gray-700 py-1 md:py-3">
               Ready to Explore?
@@ -102,7 +101,7 @@ export default function App() {
 
 const WhyUptogo = () => {
   return (
-    <div className="relative p-6 md:p-0 max-w-[678px] md:max-w-[900px] mx-auto container">
+    <div className="overflow-hidden relative p-6 md:p-0 max-w-[678px] md:max-w-[900px] mx-auto container">
       <div className="flex items-center justify-center flex-col md:grid md:grid-cols-2">
         <div className="md:grid-cols-1 md:py-12 px-2">
           <h2 className="pb-8  text-3xl logoFont text-orange md:text-5xl lg:text-5xl">
@@ -130,9 +129,8 @@ const WhyUptogo = () => {
           />
         </div>
       </div>
-      <span className="absolute -z-10 overflow-hidden rounded-full w-96 h-52 top-60 transform -translate-x-2/3 bg-orange/10" />
-      <span className="absolute -z-10 overflow-hidden rounded-l-full w-52 h-60 -top-32 transform right-0 bg-sky-50" />
-      <span className="absolute -z-10 rounded-l-full w-60 h-60 -bottom-20 transform right-0 bg-orange/10 overflow-hidden" />
+      <span className="absolute -z-10 rounded-full w-96 h-40 rotate-45 top-48 transform -translate-x-2/3 bg-orange/10" />
+      <span className="absolute -z-10 rounded-full w-96 h-40 rotate-45 top-36 transform translate-x-2/3 bg-orange/10" />
     </div>
   );
 };

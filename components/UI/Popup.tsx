@@ -15,7 +15,7 @@ export default function PopupCard() {
       <div className="p-2 rounded-full bg-white shadow-md flex items-center justify-center">
         <Image src={logo} alt="logo" width={60} height={60} />
       </div>
-      <div className="px-6 md:px-12 pt-8 pb-4 md:pt-16 flex items-center justify-center flex-col space-y-10">
+      <div className="px-6 md:px-12 pt-8 pb-4 md:pt-16 flex items-center justify-center flex-col space-y-10 relative">
         <p className="lg:px-20 px-6 text-2xl logoFont text-center">
           Take the first step toward a successful career.
         </p>
@@ -46,8 +46,10 @@ export default function PopupCard() {
           </Link>
         </div>
         <p>Some of our partners include:</p>
+        <span className="absolute -z-10 rounded-full w-96 h-40 rotate-45 top-28 transform left-72 bg-sky-50" />
+        <span className="absolute -z-10 rounded-full w-96 h-40 rotate-45 top-52 right-80 bg-orange/10" />
 
-        <div className="grid grid-cols-1 gap-8">
+        <div className="grid grid-cols-1 gap-8 relative">
           <div className="flex items-center justify-center">
             <Image
               src={bermingham}
@@ -88,6 +90,8 @@ export default function PopupCard() {
               height={80}
             />
           </div>
+          <span className="absolute -z-10 rounded-full w-96 h-40 rotate-45 top-28 transform left-32 bg-orange/10" />
+          <span className="absolute -z-10 rounded-full w-96 h-40 rotate-45 top-36 right-36 bg-sky-50" />
         </div>
       </div>
     </div>
