@@ -56,15 +56,15 @@ export default function App() {
     <div className="fixed md:static md:z-0  md:w-auto md:h-auto top-0 left-0 w-screen h-screen z-30  bg-gradient-to-b from-sky-200 via-white to-white">
       <div className="md:flex md:mt-12 md:items-center md:justify-center grid grid-cols-3 mt-20 w-screen h-auto z-40 ">
         {hospitalityLinks.map((item, i) => (
-          <div key={i} className="pb-3 z-10">
+          <div key={i} className="pb-7 z-10">
             <Link href={item.link}>
               <div className="flex items-center justify-center flex-col cursor-pointer">
-                <div className="w-auto h-full items-center flex justify-center p-2 rounded-lg bg-white shadow-md mb-1">
+                <div className="w-auto h-full items-center flex justify-center mb-1">
                   <Image
                     src={item.icon}
                     alt="IT image"
-                    width={40}
-                    height={40}
+                    width={60}
+                    height={60}
                     priority
                   />
                 </div>

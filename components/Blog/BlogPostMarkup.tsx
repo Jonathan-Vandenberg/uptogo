@@ -428,7 +428,7 @@ export default function BlogPostMarkup({
               <div className="text-xl ">
                 <FaEdit size={25} className="text-red-600" />
               </div>
-              <p className="text-lg text-orange">Chỉnh Sửa</p>
+              <p className="text-lg text-red-600">Chỉnh Sửa</p>
             </div>
             {/* <div className="flex items-center space-x-1" onClick={handleAdd}>
           <div className="text-xl text-green-600">

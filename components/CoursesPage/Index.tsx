@@ -19,12 +19,12 @@ export default function App() {
         <div className="pb-4">
           <Link href={"/events"}>
             <div className="flex items-center justify-center flex-col cursor-pointer">
-              <div className="z-10 h-full items-center flex justify-center w-auto rounded-lg shadow-md bg-white p-2">
+              <div className="z-10 h-full items-center flex justify-center w-auto">
                 <Image
                   src={eventIcon}
                   alt="Events image"
-                  width={40}
-                  height={40}
+                  width={60}
+                  height={60}
                   priority
                 />
               </div>
@@ -37,16 +37,16 @@ export default function App() {
         <div className="pb-4">
           <Link href={"/blogs"}>
             <div className="flex items-center justify-center flex-col cursor-pointer">
-              <div className="z-10 h-full items-center flex justify-center w-auto rounded-lg shadow-md bg-white p-2">
+              <div className="z-10 h-full items-center flex justify-center w-auto">
                 <Image
                   src={newsIcon}
                   alt="News Image"
-                  width={40}
-                  height={40}
+                  width={60}
+                  height={60}
                   priority
                 />
               </div>
-              <div className="z-10 text-sm text-gray-700 w-full text-center px-6 py-1 leading-5">
+              <div className="z-10 text-gray-700 w-full text-center px-6 py-1 leading-5">
                 {translate ? "News" : "Tin Tức"}
               </div>
             </div>
@@ -55,12 +55,12 @@ export default function App() {
         <div className="pb-4">
           <Link href={"/information-technology"}>
             <div className="flex items-center justify-center flex-col cursor-pointer">
-              <div className="z-10 h-full items-center flex justify-center w-auto rounded-lg shadow-md bg-white p-2">
+              <div className="z-10 h-full items-center flex justify-center w-auto">
                 <Image
                   src={itIcon}
                   alt="IT image"
-                  width={40}
-                  height={40}
+                  width={60}
+                  height={60}
                   priority
                 />
               </div>
@@ -73,12 +73,12 @@ export default function App() {
         <div className="pb-4">
           <Link href={"/management"}>
             <div className="flex items-center justify-center flex-col cursor-pointer">
-              <div className="z-10 h-full items-center flex justify-center w-auto rounded-lg shadow-md bg-white p-2">
+              <div className="z-10 h-full items-center flex justify-center w-auto">
                 <Image
                   src={managementIcon}
                   alt="IT image"
-                  width={40}
-                  height={40}
+                  width={60}
+                  height={60}
                   priority
                 />
               </div>
@@ -91,12 +91,12 @@ export default function App() {
         <div className="pb-4">
           <Link href={"/design"}>
             <div className="flex items-center justify-center flex-col cursor-pointer">
-              <div className="z-10 h-full items-center flex justify-center w-auto rounded-lg shadow-md bg-white p-2">
+              <div className="z-10 h-full items-center flex justify-center w-auto">
                 <Image
                   src={designIcon}
                   alt="IT image"
-                  width={40}
-                  height={40}
+                  width={60}
+                  height={60}
                   priority
                 />
               </div>
@@ -109,12 +109,12 @@ export default function App() {
         <div className="pb-4">
           <Link href={"/health"}>
             <div className="flex items-center justify-center flex-col cursor-pointer">
-              <div className="z-10 h-full items-center flex justify-center w-auto rounded-lg shadow-md bg-white p-2">
+              <div className="z-10 h-full items-center flex justify-center w-auto">
                 <Image
                   src={healthIcon}
                   alt="IT image"
-                  width={40}
-                  height={40}
+                  width={60}
+                  height={60}
                   priority
                 />
               </div>
@@ -127,12 +127,12 @@ export default function App() {
         <div className="pb-4">
           <Link href={"/hospitality"}>
             <div className="flex items-center justify-center flex-col cursor-pointer">
-              <div className="z-10 h-full items-center flex justify-center w-auto rounded-lg shadow-md bg-white p-2">
+              <div className="z-10 h-full items-center flex justify-center w-auto">
                 <Image
                   src={hospitalityIcon}
                   alt="IT image"
-                  width={40}
-                  height={40}
+                  width={60}
+                  height={60}
                   priority
                 />
               </div>
@@ -145,12 +145,12 @@ export default function App() {
         <div className="pb-4">
           <Link href={"/trades"}>
             <div className="flex items-center justify-center flex-col cursor-pointer">
-              <div className="z-10 h-full items-center flex justify-center w-auto rounded-lg shadow-md bg-white p-2">
+              <div className="z-10 h-full items-center flex justify-center w-auto">
                 <Image
                   src={tradeIcon}
                   alt="IT image"
-                  width={40}
-                  height={40}
+                  width={60}
+                  height={60}
                   priority
                 />
               </div>
