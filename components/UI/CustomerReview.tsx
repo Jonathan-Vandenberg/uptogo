@@ -10,12 +10,18 @@ type Review = {
 
 export default function MediaCard({ customer }: { customer: Review[] }) {
   return (
-    <div className="flex items-center justify-between pb-12 md:flex-row md:justify-evenly md:space-x-2 flex-col space-y-6 md:space-y-0">
+    <div className="flex  items-center justify-between pb-12 md:flex-row md:justify-evenly md:space-x-2 flex-col space-y-6 md:space-y-0">
       {customer.map((item) => (
         <Card
           key={item.name}
-          sx={{ maxWidth: 345 }}
-          className="w-full h-full shadow-xl"
+          sx={{
+            maxWidth: 345,
+            border: 1,
+            borderRadius: 2,
+            borderColor: "orange",
+            boxShadow: "none",
+          }}
+          className="w-full h-full"
         >
           <CardContent>
             <div className="flex items-center justify-between py-4">

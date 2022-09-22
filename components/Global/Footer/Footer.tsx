@@ -35,7 +35,7 @@ const Footer = () => {
             <div className="p-3 text-2xl text-green-500">
               <BsFillTelephoneOutboundFill />
             </div>
-            <p className="p-3 text-xl font-bold text-iwanttoColor">
+            <p className="p-3 text-xl font-bold text-gray-700">
               <a href="tel:+84926561080">0926 561 080</a>
             </p>
           </div>
@@ -59,7 +59,7 @@ const Footer = () => {
             </div>
             {translate ? (
               <a
-                className="p-3 text-xl font-bold text-iwanttoColor"
+                className="p-3 text-xl font-bold text-gray-700"
                 href="mailto: info@uptogo.org"
               >
                 Email Us
@@ -159,7 +159,7 @@ const MobileFooterHeader = () => (
         <div className="p-3 text-2xl text-green-500">
           <BsFillTelephoneOutboundFill />
         </div>
-        <p className="p-3 text-xl font-bold text-iwanttoColor">
+        <p className="p-3 text-xl font-bold text-gray-700">
           <a href="tel:+84926561080">0926 561 080</a>
         </p>
       </div>
@@ -175,7 +175,7 @@ const MobileFooterHeader = () => (
         <div className="p-3 text-3xl">
           <AiOutlineMail />
         </div>
-        <p className="p-3 text-xl font-bold text-iwanttoColor">Email Us</p>
+        <p className="p-3 text-xl font-bold text-gray-700">Email Us</p>
       </div>
     </div>
   </div>
