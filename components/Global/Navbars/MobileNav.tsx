@@ -35,7 +35,7 @@ const style = {
   left: 0,
   width: "80vw",
   height: "100vh",
-  bgcolor: "background.paper",
+  bgcolor: "rgb(240 249 255)",
   outline: "none",
 };
 
@@ -67,7 +67,7 @@ const SideNavModal: NextPage = () => {
   };
 
   const MainMenu = () => (
-    <div className="h-[screen] w-[80vw] space-y-5">
+    <div className="h-[screen] w-[80vw] space-y-5 bg-sky-50">
       <div className="flex items-center justify-center mt-4">
         <AuthBtn />
       </div>
