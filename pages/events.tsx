@@ -20,7 +20,7 @@ export const getStaticProps: GetStaticProps = async () => {
 
   if (!data) {
     throw new GraphQLYogaError(`Trades with data not found.`, {
-      code: "Trades_NOT_FOUND",
+      code: "TRADES_NOT_FOUND",
     });
   }
 
