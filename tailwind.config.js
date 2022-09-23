@@ -34,7 +34,7 @@ module.exports = {
         bg3: "rgb(240, 84, 128)",
       },
       backgroundImage: {
-        bgUrl: "url('../public/stacked-waves-haikei.png')",
+        bgUrl: "url('../public/stacked-waves-haikei (6).png')",
       },
     },
   },
