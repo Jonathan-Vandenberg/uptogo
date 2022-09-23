@@ -19,7 +19,7 @@ import landmarks from "../public/heroImages/heroTravel.jpg";
 export const itLinks = [
   {
     courseE: "Software Development",
-    course: "Phát triển phần mền",
+    course: "Phát triển phần mềm",
     link: "/courses/information-technology/software-development",
     icon: softwareDevelopment,
   },
