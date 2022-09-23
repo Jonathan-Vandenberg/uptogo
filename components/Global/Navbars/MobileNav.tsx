@@ -11,6 +11,7 @@ import { useState } from "react";
 import { FaHeart, FaMobileAlt } from "react-icons/fa";
 import { HiOutlineLocationMarker } from "react-icons/hi";
 import {
+  MdAdminPanelSettings,
   MdOutlineArrowBackIos,
   MdOutlineArrowForwardIos,
 } from "react-icons/md";
@@ -28,6 +29,10 @@ import {
 } from "../../../lib/links";
 
 import { useAppSelector } from "../../../redux-hooks/hooks";
+import { GrUserAdmin } from "react-icons/gr";
+import { useSession } from "next-auth/react";
+
+import { UserInterestedQuery, useUserInterestedQuery } from "../../../types";
 
 const style = {
   position: "absolute" as "absolute",
@@ -39,8 +44,9 @@ const style = {
   outline: "none",
 };
 
-const SideNavModal: NextPage = () => {
+const SideNavModal = () => {
   const [open, setOpen] = React.useState(false);
+  const [showAdmin, setShowAdmin] = useState(false);
 
   const [showMajors, setShowMajors] = useState(false);
   const [showHouseholdMenu, setShowHouseholdMenu] = useState(false);
@@ -51,6 +57,32 @@ const SideNavModal: NextPage = () => {
   const menuRef = React.useRef<HTMLDivElement>();
 
   const translate = useAppSelector((state) => state.translationState.translate);
+  const { data: session, status } = useSession();
+
+  const Admin = () => {
+    const { data } = useUserInterestedQuery();
+    return (
+      <div className="w-full">
+        <ul>
+          {data?.userInterested?.map((user, i) => (
+            <li key={i}>
+              <p>{user?.name}</p>
+              <p>{user?.email}</p>
+              <p>{user?.mobile}</p>
+              <p>{user?.course}</p>
+            </li>
+          ))}
+        </ul>
+        <button
+          onClick={() => {
+            setShowAdmin(!showAdmin), handleClose();
+          }}
+        >
+          Close
+        </button>
+      </div>
+    );
+  };
 
   const openMenu = () => {
     setOpen(true);
@@ -72,107 +104,125 @@ const SideNavModal: NextPage = () => {
         <AuthBtn />
       </div>
 
-      <div
-        onClick={() => {
-          setShowMajors(!showMajors);
-        }}
-        className="flex items-center justify-between pt-2"
-      >
-        {translate ? (
-          <p className="font-semibold pb-1 pl-4 text-xl logoFont text-gray-700 cursor-pointer">
-            Majors
-          </p>
-        ) : (
-          <p className="font-semibold pb-1 pl-4 text-xl logoFont text-gray-700 cursor-pointer">
-            Ngành Học
-          </p>
-        )}
-        <div className="px-4">
-          <MdOutlineArrowForwardIos />
-        </div>
-      </div>
-
-      <div
-        onClick={() => setShowHouseholdMenu(!showHouseholdMenu)}
-        className="flex items-center justify-between"
-      >
-        {translate ? (
-          <p className="font-semibold pb-1 pl-4 text-xl logoFont text-gray-700 cursor-pointer">
-            Events
-          </p>
-        ) : (
-          <p className="font-semibold pb-1 pl-4 text-xl logoFont text-gray-700 cursor-pointer">
-            Sự kiện
-          </p>
-        )}
-        <div className="px-4">
-          <MdOutlineArrowForwardIos />
-        </div>
-      </div>
-
-      <div onClick={() => handleClose()}>
-        <Link href={"/blogs"}>
-          <p className="font-semibold pb-1 pl-4 text-xl logoFont text-gray-700 cursor-pointer">
-            Blog
-          </p>
-        </Link>
-      </div>
-
-      <Link href={"/"}>
-        <div
-          className="flex cursor-pointer items-center justify-center"
-          onClick={handleClose}
-        >
-          <Image src={fullLogo} width="100" height="100" alt="logo" />
-        </div>
-      </Link>
-
-      <div onClick={() => handleClose()}>
-        <TranslateBtn />
-      </div>
-
-      <div className="flex flex-col items-center">
-        <Link href="/about">
-          <a className="cursor-pointer px-2">
-            {translate ? <p>About Us</p> : <p>Về chúng tôi</p>}
-          </a>
-        </Link>
-
-        <div>
-          <a className="cursor-pointer px-2">
-            {translate ? <p>Recruit</p> : <p>Tuyển dụng</p>}
-          </a>
-        </div>
-      </div>
-
-      <div onClick={handleClose}>
-        <Link href={"/favorites"}>
-          <div className="flex cursor-pointer items-center justify-start space-x-2 px-4 pt-1">
-            <div className="text-xl text-red-400">
-              <FaHeart />
-            </div>
-            {translate ? <p>My Favorites</p> : <p>Sở thích</p>}
-          </div>
-        </Link>
-      </div>
-
-      <Link href={""}>
-        <div
-          className="flex cursor-pointer items-center justify-start space-x-2 px-4"
-          onClick={() => handleClose()}
-        >
-          <div className="text-xl">
-            <HiOutlineLocationMarker />
-          </div>
-          <a
-            href="https://www.google.com/maps/dir/?api=1&destination=10.814211192365%2C106.7785692215"
-            target="_blank"
-            rel="noreferrer"
+      {session?.user?.email ===
+        (process.env.ADMIN_EMAIL || "urbangentryjon@gmail.com") && showAdmin ? (
+        <Admin />
+      ) : (
+        <>
+          <div
+            onClick={() => {
+              setShowMajors(!showMajors);
+            }}
+            className="flex items-center justify-between pt-2"
           >
-            {translate ? <p>Visit Uptogo</p> : <p>Chuyến thăm</p>}
-          </a>
-        </div>
-      </Link>
+            {translate ? (
+              <p className="font-semibold pb-1 pl-4 text-xl logoFont text-gray-700 cursor-pointer">
+                Majors
+              </p>
+            ) : (
+              <p className="font-semibold pb-1 pl-4 text-xl logoFont text-gray-700 cursor-pointer">
+                Ngành Học
+              </p>
+            )}
+            <div className="px-4">
+              <MdOutlineArrowForwardIos />
+            </div>
+          </div>
+
+          <div
+            onClick={() => setShowHouseholdMenu(!showHouseholdMenu)}
+            className="flex items-center justify-between"
+          >
+            {translate ? (
+              <p className="font-semibold pb-1 pl-4 text-xl logoFont text-gray-700 cursor-pointer">
+                Events
+              </p>
+            ) : (
+              <p className="font-semibold pb-1 pl-4 text-xl logoFont text-gray-700 cursor-pointer">
+                Sự kiện
+              </p>
+            )}
+            <div className="px-4">
+              <MdOutlineArrowForwardIos />
+            </div>
+          </div>
+
+          <div onClick={() => handleClose()}>
+            <Link href={"/blogs"}>
+              <p className="font-semibold pb-1 pl-4 text-xl logoFont text-gray-700 cursor-pointer">
+                Blog
+              </p>
+            </Link>
+          </div>
+
+          <Link href={"/"}>
+            <div
+              className="flex cursor-pointer items-center justify-center"
+              onClick={handleClose}
+            >
+              <Image src={fullLogo} width="100" height="100" alt="logo" />
+            </div>
+          </Link>
+
+          <div onClick={() => handleClose()}>
+            <TranslateBtn />
+          </div>
+
+          <div className="flex flex-col items-center">
+            <Link href="/about">
+              <a className="cursor-pointer px-2">
+                {translate ? <p>About Us</p> : <p>Về chúng tôi</p>}
+              </a>
+            </Link>
+
+            <div>
+              <a className="cursor-pointer px-2">
+                {translate ? <p>Recruit</p> : <p>Tuyển dụng</p>}
+              </a>
+            </div>
+          </div>
+
+          <div onClick={handleClose}>
+            <Link href={"/favorites"}>
+              <div className="flex cursor-pointer items-center justify-start space-x-2 px-4 pt-1">
+                <div className="text-xl text-red-400">
+                  <FaHeart />
+                </div>
+                {translate ? <p>My Favorites</p> : <p>Sở thích</p>}
+              </div>
+            </Link>
+          </div>
+
+          <Link href={""}>
+            <div
+              className="flex cursor-pointer items-center justify-start space-x-2 px-4"
+              onClick={() => handleClose()}
+            >
+              <div className="text-xl">
+                <HiOutlineLocationMarker />
+              </div>
+              <a
+                href="https://www.google.com/maps/dir/?api=1&destination=10.814211192365%2C106.7785692215"
+                target="_blank"
+                rel="noreferrer"
+              >
+                {translate ? <p>Visit Uptogo</p> : <p>Chuyến thăm</p>}
+              </a>
+            </div>
+          </Link>
+
+          <Link href={""}>
+            <div
+              className="flex cursor-pointer items-center justify-start space-x-2 px-4"
+              onClick={() => setShowAdmin(!showAdmin)}
+            >
+              <div className="text-xl">
+                <MdAdminPanelSettings />
+              </div>
+            </div>
+          </Link>
+        </>
+      )}
     </div>
   );
 
