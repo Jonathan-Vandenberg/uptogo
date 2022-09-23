@@ -19,7 +19,7 @@ export default function Admin() {
             {data?.userInterested?.map((user, i) => (
               <li
                 key={i}
-                className="mt-4 p-4 border-2 border-orange/30 rounded-lg"
+                className="mt-4 p-4 border-2 border-gray-400 rounded-lg"
               >
                 <p className="logoFont">{user?.name}</p>
                 <p className="logoFont">{user?.email}</p>
