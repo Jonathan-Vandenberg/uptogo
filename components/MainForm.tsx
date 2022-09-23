@@ -619,7 +619,7 @@ const AddClientForm = ({ details, add, edit, handleClose }: IProps) => {
 
         <div className="px-8 flex items-start space-y-3 justify-center flex-col pt-3">
           <input
-            id="publishedDate"
+            id="form"
             value={publishedDate as string}
             placeholder="Published Date"
             onChange={(e) => setPublishedDate(e.target.value)}

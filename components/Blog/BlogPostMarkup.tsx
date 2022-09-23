@@ -424,12 +424,16 @@ export default function BlogPostMarkup({
       {session?.user?.email === process.env.ADMIN_EMAIL ||
         ("urbangentryjon@gmail.com" && (
           <div className="flex space-x-5 justify-center items-center py-6">
-            <div className="flex items-center space-x-1" onClick={handleEdit}>
+            <a
+              href="#form"
+              className="flex items-center space-x-1"
+              onClick={handleEdit}
+            >
               <div className="text-xl ">
                 <FaEdit size={25} className="text-red-600" />
               </div>
               <p className="text-lg text-red-600">Chỉnh Sửa</p>
-            </div>
+            </a>
             {/* <div className="flex items-center space-x-1" onClick={handleAdd}>
           <div className="text-xl text-green-600">
             <MdAddCircleOutline size={25} />
