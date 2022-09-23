@@ -24,7 +24,7 @@ export default function App() {
   const translate = useAppSelector((state) => state.translationState.translate);
   const bw = useAppSelector((state) => state.iconState.bw);
   const style = bw
-    ? "fixed md:static md:z-0  md:w-auto md:h-auto top-0 left-0 w-screen h-screen bg-gradient-to-bl from-[#40E0D0] via-[#FF8C00] to-[#FF5480] z-30"
+    ? "fixed md:static md:z-0  md:w-auto md:h-auto top-0 left-0 w-screen h-screen bg-gradient-to-bl from-bg1 via-bg2 to-bg3 z-30"
     : "fixed md:static md:z-0  md:w-auto md:h-auto top-0 left-0 w-screen h-screen bg-gradient-to-b from-sky-200 via-white to-white z-30";
   return (
     <div className={style}>
