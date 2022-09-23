@@ -11,6 +11,7 @@ import { FaHeart } from "react-icons/fa";
 import { HiOutlineLocationMarker } from "react-icons/hi";
 import {
   MdAdminPanelSettings,
+  MdChangeCircle,
   MdOutlineArrowBackIos,
   MdOutlineArrowForwardIos,
 } from "react-icons/md";
@@ -20,6 +21,8 @@ import AuthBtn from "../../UI/AuthBtn";
 import TranslateBtn from "../../UI/TranslateBtn";
 
 import { useAppSelector } from "../../../redux-hooks/hooks";
+import { useAppDispatch } from "../../../redux-hooks/hooks";
+import { iconState } from "../../../slices/bwSlice";
 
 const style = {
   position: "absolute" as "absolute",
@@ -182,6 +185,7 @@ const SideNavModal = () => {
     const translate = useAppSelector(
       (state) => state.translationState.translate
     );
+    const bw = useAppSelector((state) => state.iconState.bw);
     return (
       <div className="w-[80vw]">
         <div className="flex w-full" onClick={() => setShowMajors(!showMajors)}>
@@ -378,14 +382,24 @@ const SideNavModal = () => {
     </div>
   );
 
+  const bw = useAppSelector((state) => state.iconState.bw);
+  const dispatch = useAppDispatch();
+
+  const styleBG = bw
+    ? "sticky bg-darkBlue top-0 z-40 flex items-center justify-between p-2 sm:px-4 lg:hidden"
+    : "sticky bg-sky-50/80 top-0 z-40 flex items-center justify-between p-2 sm:px-4 lg:hidden";
+
   return (
-    <div className="sticky bg-sky-50/80 top-0 z-40 flex items-center justify-between p-2 sm:px-4 lg:hidden">
+    <div className={styleBG}>
       <Link href={"/"}>
         <div className="ml-5 cursor-pointer flex items-center gap-3 justify-center">
           <Image src={faviconLogo} width="45" height="45" alt="logo" />
           <p className="logoFont text-orange text-2xl">Uptogo</p>
         </div>
       </Link>
+      <div onClick={() => dispatch(iconState(!bw))}>
+        <MdChangeCircle />
+      </div>
       <div className="flex h-full items-center justify-end space-x-6 mr-5">
         <button
           ref={btnRef as any}
