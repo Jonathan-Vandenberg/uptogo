@@ -34,16 +34,6 @@ import { useSession } from "next-auth/react";
 
 import { UserInterestedQuery, useUserInterestedQuery } from "../../../types";
 
-const style = {
-  position: "absolute" as "absolute",
-  top: 0,
-  left: 0,
-  width: "80vw",
-  height: "100vh",
-  bgcolor: "rgb(240 249 255)",
-  outline: "none",
-};
-
 const SideNavModal = () => {
   const [open, setOpen] = React.useState(false);
   const [showAdmin, setShowAdmin] = useState(false);
@@ -58,6 +48,26 @@ const SideNavModal = () => {
 
   const translate = useAppSelector((state) => state.translationState.translate);
   const { data: session, status } = useSession();
+
+  const style = showAdmin
+    ? {
+        display: "flex",
+        centerItems: "center",
+        justifyContent: "center",
+        width: "80vw",
+        height: "auto",
+        bgcolor: "rgb(240 249 255)",
+        outline: "none",
+      }
+    : {
+        position: "absolute" as "absolute",
+        top: 0,
+        left: 0,
+        width: "80vw",
+        height: "100vh",
+        bgcolor: "rgb(240 249 255)",
+        outline: "none",
+      };
 
   const Admin = () => {
     const { data } = useUserInterestedQuery();
