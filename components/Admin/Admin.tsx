@@ -3,6 +3,9 @@ import Link from "next/link";
 import { useUserInterestedQuery } from "../../types";
 import logo from "../../public/uptogoFavicon.png";
 import Image from "next/image";
+import Skeleton from "@mui/material/Skeleton";
+import Stack from "@mui/material/Stack";
+import * as React from "react";
 
 export default function Admin() {
   const { data } = useUserInterestedQuery();
@@ -16,17 +19,21 @@ export default function Admin() {
             <Image src={logo} alt="logo" width={60} height={60} />
           </div>
           <ul className="p-4 w-full">
-            {data?.userInterested?.map((user, i) => (
-              <li
-                key={i}
-                className="mt-4 p-4 border-2 border-gray-400 rounded-lg"
-              >
-                <p className="logoFont">{user?.name}</p>
-                <p className="logoFont">{user?.email}</p>
-                <p className="logoFont">{user?.mobile}</p>
-                <p className="logoFont">{user?.course}</p>
-              </li>
-            ))}
+            {data ? (
+              data?.userInterested?.map((user, i) => (
+                <li
+                  key={i}
+                  className="mt-4 p-4 border-2 border-gray-400 rounded-lg"
+                >
+                  <p className="logoFont">{user?.name}</p>
+                  <p className="logoFont">{user?.email}</p>
+                  <p className="logoFont">{user?.mobile}</p>
+                  <p className="logoFont">{user?.course}</p>
+                </li>
+              ))
+            ) : (
+              <SkeletonComponent />
+            )}
           </ul>
           <div>
             <Link href={"/"}>
@@ -40,3 +47,41 @@ export default function Admin() {
     </>
   );
 }
+
+const SkeletonComponent = () => {
+  return (
+    <Stack spacing={1}>
+      <Skeleton
+        width={400}
+        height={210}
+        variant="rectangular"
+        className="logoFont"
+      >
+        <Skeleton
+          width={180}
+          height={20}
+          variant="rectangular"
+          className="logoFont"
+        />
+        <Skeleton
+          width={90}
+          height={20}
+          variant="rectangular"
+          className="logoFont"
+        />
+        <Skeleton
+          width={60}
+          height={20}
+          variant="rectangular"
+          className="logoFont"
+        />
+        <Skeleton
+          width={157}
+          height={20}
+          variant="rectangular"
+          className="logoFont"
+        />
+      </Skeleton>
+    </Stack>
+  );
+};
