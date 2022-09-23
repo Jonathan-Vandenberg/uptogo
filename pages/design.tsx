@@ -10,6 +10,7 @@ import graphicIcon from "../public/courseIcons/designIcons/illustration.png";
 import interiorIcon from "../public/courseIcons/designIcons/staircase.png";
 import landscapeIcon from "../public/courseIcons/designIcons/forest.png";
 import musicIcon from "../public/courseIcons/designIcons/music-notes.png";
+import filmIcon from "../public/courseIcons/designIcons/camera.png";
 
 import landmarks from "../public/heroImages/heroTravel.jpg";
 
@@ -42,7 +43,7 @@ export const designLinks = [
     courseE: "Film",
     course: "Phim & Truyền thông",
     link: "/courses/design/film",
-    icon: actingIcon,
+    icon: filmIcon,
   },
   {
     courseE: "Graphic Design",
