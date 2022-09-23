@@ -166,7 +166,10 @@ const SideNavModal = () => {
       </Link>
 
       <Link href={"/admin"}>
-        <div className="flex cursor-pointer items-center justify-start space-x-2 px-4">
+        <div
+          className="flex cursor-pointer items-center justify-start space-x-2 px-4"
+          onClick={() => handleClose()}
+        >
           <div className="text-xl">
             <MdAdminPanelSettings />
           </div>
