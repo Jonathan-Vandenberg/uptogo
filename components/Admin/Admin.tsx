@@ -52,35 +52,15 @@ const SkeletonComponent = () => {
   return (
     <Stack spacing={1}>
       <Skeleton
-        width={400}
+        width={370}
         height={210}
         variant="rectangular"
-        className="logoFont"
+        className="logoFont w-full"
       >
-        <Skeleton
-          width={180}
-          height={20}
-          variant="rectangular"
-          className="logoFont"
-        />
-        <Skeleton
-          width={90}
-          height={20}
-          variant="rectangular"
-          className="logoFont"
-        />
-        <Skeleton
-          width={60}
-          height={20}
-          variant="rectangular"
-          className="logoFont"
-        />
-        <Skeleton
-          width={157}
-          height={20}
-          variant="rectangular"
-          className="logoFont"
-        />
+        <Skeleton width={180} height={20} variant="rectangular" />
+        <Skeleton width={90} height={20} variant="rectangular" />
+        <Skeleton width={60} height={20} variant="rectangular" />
+        <Skeleton width={157} height={20} variant="rectangular" />
       </Skeleton>
     </Stack>
   );
