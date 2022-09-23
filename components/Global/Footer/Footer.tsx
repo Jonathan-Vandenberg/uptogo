@@ -66,7 +66,7 @@ const Footer = () => {
               </a>
             ) : (
               <a
-                className="p-3 text-xl font-bold text-iwanttoColor"
+                className="p-3 text-xl logoFont text-iwanttoColor"
                 href="mailto: info@uptogo.org"
               >
                 Gửi email cho chúng tôi
@@ -151,32 +151,45 @@ const Footer = () => {
 
 export default Footer;
 
-const MobileFooterHeader = () => (
-  <div className="pt-0 md:hidden">
-    <div className="h-[2px] bg-gradient-to-r from-startColor to-endColor"></div>
-    <div className="drop-shadow lg:flex lg:items-center lg:justify-evenly">
-      <div className="flex items-center justify-center p-6">
-        <div className="p-3 text-2xl text-green-500">
-          <BsFillTelephoneOutboundFill />
+const MobileFooterHeader = () => {
+  const translate = useAppSelector((state) => state.translationState.translate);
+
+  return (
+    <div className="pt-0 md:hidden">
+      <div className="h-[2px] bg-gradient-to-r from-startColor to-endColor"></div>
+      <div className="drop-shadow lg:flex lg:items-center lg:justify-evenly">
+        <div className="flex items-center justify-center p-6">
+          <div className="p-3 text-2xl text-green-500">
+            <BsFillTelephoneOutboundFill />
+          </div>
+          <p className="p-3 logoFont text-xl text-gray-700">
+            <a href="tel:+84926561080">0926 561 080</a>
+          </p>
         </div>
-        <p className="p-3 logoFont text-xl text-gray-700">
-          <a href="tel:+84926561080">0926 561 080</a>
-        </p>
-      </div>
-      <div className="flex items-center justify-center bg-gradient-to-r from-startColor to-endColor p-6">
-        <div className="rounded-full bg-white p-3 text-3xl">
-          <GrMapLocation />
+        <div className="flex items-center justify-center bg-gradient-to-r from-startColor to-endColor p-6">
+          <div className="rounded-full bg-white p-3 text-3xl">
+            <GrMapLocation />
+          </div>
+          <p className="p-3 text-xl font-semibold text-gray-700">
+            Find locations to study at
+          </p>
         </div>
-        <p className="p-3 text-xl font-semibold text-gray-700">
-          Find locations to study at
-        </p>
-      </div>
-      <div className="flex items-center justify-center p-6">
-        <div className="p-3 text-3xl">
-          <AiOutlineMail />
+        <div className="flex items-center justify-center p-6">
+          <div className="p-3 text-3xl">
+            <AiOutlineMail />
+          </div>
+          {translate ? (
+            <p className="p-3 text-xl text-gray-700 logoFont">Email Us</p>
+          ) : (
+            <a
+              className="p-3 text-xl logoFont text-iwanttoColor"
+              href="mailto: info@uptogo.org"
+            >
+              Gửi email cho chúng tôi
+            </a>
+          )}
         </div>
-        <p className="p-3 text-xl text-gray-700 logoFont">Email Us</p>
       </div>
     </div>
-  </div>
-);
+  );
+};

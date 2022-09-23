@@ -1,5 +1,5 @@
 import { GraphQLResolveInfo } from 'graphql';
-import { Categories as CategoriesModel, SoftwareDevelopment as SoftwareDevelopmentModel, ComputerNetworking as ComputerNetworkingModel, CloudComputing as CloudComputingModel, BusinessAnalysis as BusinessAnalysisModel, Telecommunication as TelecommunicationModel, GameProgramming as GameProgrammingModel, WebDevelopment as WebDevelopmentModel, MachineLearning as MachineLearningModel, DataManagement as DataManagementModel, Blockchain as BlockchainModel, Ai as AiModel, FashionDesign as FashionDesignModel, Landscape as LandscapeModel, Music as MusicModel, Film as FilmModel, GraphicDesign as GraphicDesignModel, InteriorDesign as InteriorDesignModel, DigitalMedia as DigitalMediaModel, Acting as ActingModel, Animation3D as Animation3DModel, AgedCare as AgedCareModel, Nutrition as NutritionModel, Nursing as NursingModel, Veterinary as VeterinaryModel, Medicine as MedicineModel, PublicHealth as PublicHealthModel, Dental as DentalModel, Massage as MassageModel, MentalHealth as MentalHealthModel, Baking as BakingModel, Cookery as CookeryModel, HospitalityManagement as HospitalityManagementModel, HotelManagement as HotelManagementModel, TravelTourism as TravelTourismModel, Events as EventsModel, Automotive as AutomotiveModel, Beauty as BeautyModel, Construction as ConstructionModel, Carpentry as CarpentryModel, Education as EducationModel, Fitness as FitnessModel, Hairdressing as HairdressingModel, Horticulture as HorticultureModel, SportDevelopment as SportDevelopmentModel, Yoga as YogaModel, ProjectManagement as ProjectManagementModel, BusinessManagement as BusinessManagementModel, HumanResources as HumanResourcesModel, BankingManagement as BankingManagementModel, IntlBusiness as IntlBusinessModel, SocialMediaMarketing as SocialMediaMarketingModel, AgribusinessManagement as AgribusinessManagementModel, SupplyManagement as SupplyManagementModel, LeadershipManagement as LeadershipManagementModel, BlogPost as BlogPostModel, CurrentEvent as CurrentEventModel, It as ItModel, Trades as TradesModel, Hospitality as HospitalityModel, Health as HealthModel, Management as ManagementModel, Design as DesignModel, Session as SessionModel, User as UserModel, VerificationToken as VerificationTokenModel } from '@prisma/client';
+import { Categories as CategoriesModel, SoftwareDevelopment as SoftwareDevelopmentModel, ComputerNetworking as ComputerNetworkingModel, CloudComputing as CloudComputingModel, BusinessAnalysis as BusinessAnalysisModel, Telecommunication as TelecommunicationModel, GameProgramming as GameProgrammingModel, WebDevelopment as WebDevelopmentModel, MachineLearning as MachineLearningModel, DataManagement as DataManagementModel, Blockchain as BlockchainModel, Ai as AiModel, FashionDesign as FashionDesignModel, Landscape as LandscapeModel, Music as MusicModel, Film as FilmModel, GraphicDesign as GraphicDesignModel, InteriorDesign as InteriorDesignModel, DigitalMedia as DigitalMediaModel, Acting as ActingModel, Animation3D as Animation3DModel, AgedCare as AgedCareModel, Nutrition as NutritionModel, Nursing as NursingModel, Veterinary as VeterinaryModel, Medicine as MedicineModel, PublicHealth as PublicHealthModel, Dental as DentalModel, Massage as MassageModel, MentalHealth as MentalHealthModel, Baking as BakingModel, Cookery as CookeryModel, HospitalityManagement as HospitalityManagementModel, HotelManagement as HotelManagementModel, TravelTourism as TravelTourismModel, Events as EventsModel, Automotive as AutomotiveModel, Beauty as BeautyModel, Construction as ConstructionModel, Carpentry as CarpentryModel, Education as EducationModel, Fitness as FitnessModel, Hairdressing as HairdressingModel, Horticulture as HorticultureModel, SportDevelopment as SportDevelopmentModel, Yoga as YogaModel, ProjectManagement as ProjectManagementModel, BusinessManagement as BusinessManagementModel, HumanResources as HumanResourcesModel, BankingManagement as BankingManagementModel, IntlBusiness as IntlBusinessModel, SocialMediaMarketing as SocialMediaMarketingModel, AgribusinessManagement as AgribusinessManagementModel, SupplyManagement as SupplyManagementModel, LeadershipManagement as LeadershipManagementModel, BlogPost as BlogPostModel, CurrentEvent as CurrentEventModel, It as ItModel, Trades as TradesModel, Hospitality as HospitalityModel, Health as HealthModel, Management as ManagementModel, Design as DesignModel, Session as SessionModel, User as UserModel, UserInterested as UserInterestedModel, VerificationToken as VerificationTokenModel } from '@prisma/client';
 import { GraphQLContext } from './pages/api/index';
 import { gql } from '@apollo/client';
 import * as Apollo from '@apollo/client';
@@ -4909,6 +4909,7 @@ export type Mutation = {
   addTelecommunication?: Maybe<Telecommunication>;
   addTrades?: Maybe<Trades>;
   addTravelTourism?: Maybe<TravelTourism>;
+  addUserInterested?: Maybe<UserInterested>;
   addVeterinary?: Maybe<Veterinary>;
   addWebDevelopment?: Maybe<WebDevelopment>;
   addYoga?: Maybe<Yoga>;
@@ -5264,6 +5265,11 @@ export type MutationAddTradesArgs = {
 
 export type MutationAddTravelTourismArgs = {
   input: TravelTourismInput;
+};
+
+
+export type MutationAddUserInterestedArgs = {
+  input?: InputMaybe<UserInterestedInput>;
 };
 
 
@@ -6101,6 +6107,7 @@ export type Query = {
   trades?: Maybe<Trades>;
   travelTourism?: Maybe<TravelTourism>;
   travelTourismCard?: Maybe<Array<Maybe<TravelTourism>>>;
+  userInterested?: Maybe<Array<Maybe<UserInterested>>>;
   veterinary?: Maybe<Veterinary>;
   veterinaryCard?: Maybe<Array<Maybe<Veterinary>>>;
   webDevelopment?: Maybe<WebDevelopment>;
@@ -7132,6 +7139,23 @@ export type User = {
   sessions?: Maybe<Array<Maybe<Session>>>;
 };
 
+export type UserInterested = {
+  __typename?: 'UserInterested';
+  course?: Maybe<Scalars['String']>;
+  email?: Maybe<Scalars['String']>;
+  id: Scalars['ID'];
+  mobile?: Maybe<Scalars['String']>;
+  name?: Maybe<Scalars['String']>;
+};
+
+export type UserInterestedInput = {
+  course?: InputMaybe<Scalars['String']>;
+  email?: InputMaybe<Scalars['String']>;
+  id: Scalars['ID'];
+  mobile?: InputMaybe<Scalars['String']>;
+  name?: InputMaybe<Scalars['String']>;
+};
+
 export type VerificationToken = {
   __typename?: 'VerificationToken';
   expires: Scalars['String'];
@@ -7632,6 +7656,8 @@ export type ResolversTypes = {
   TravelTourism: ResolverTypeWrapper<TravelTourismModel>;
   TravelTourismInput: TravelTourismInput;
   User: ResolverTypeWrapper<UserModel>;
+  UserInterested: ResolverTypeWrapper<UserInterestedModel>;
+  UserInterestedInput: UserInterestedInput;
   VerificationToken: ResolverTypeWrapper<VerificationTokenModel>;
   Veterinary: ResolverTypeWrapper<VeterinaryModel>;
   VeterinaryInput: VeterinaryInput;
@@ -7770,6 +7796,8 @@ export type ResolversParentTypes = {
   TravelTourism: TravelTourismModel;
   TravelTourismInput: TravelTourismInput;
   User: UserModel;
+  UserInterested: UserInterestedModel;
+  UserInterestedInput: UserInterestedInput;
   VerificationToken: VerificationTokenModel;
   Veterinary: VeterinaryModel;
   VeterinaryInput: VeterinaryInput;
@@ -10315,6 +10343,7 @@ export type MutationResolvers<ContextType = GraphQLContext, ParentType extends R
   addTelecommunication?: Resolver<Maybe<ResolversTypes['Telecommunication']>, ParentType, ContextType, Partial<MutationAddTelecommunicationArgs>>;
   addTrades?: Resolver<Maybe<ResolversTypes['Trades']>, ParentType, ContextType, RequireFields<MutationAddTradesArgs, 'input'>>;
   addTravelTourism?: Resolver<Maybe<ResolversTypes['TravelTourism']>, ParentType, ContextType, RequireFields<MutationAddTravelTourismArgs, 'input'>>;
+  addUserInterested?: Resolver<Maybe<ResolversTypes['UserInterested']>, ParentType, ContextType, Partial<MutationAddUserInterestedArgs>>;
   addVeterinary?: Resolver<Maybe<ResolversTypes['Veterinary']>, ParentType, ContextType, RequireFields<MutationAddVeterinaryArgs, 'input'>>;
   addWebDevelopment?: Resolver<Maybe<ResolversTypes['WebDevelopment']>, ParentType, ContextType, Partial<MutationAddWebDevelopmentArgs>>;
   addYoga?: Resolver<Maybe<ResolversTypes['Yoga']>, ParentType, ContextType, RequireFields<MutationAddYogaArgs, 'input'>>;
@@ -10695,6 +10724,7 @@ export type QueryResolvers<ContextType = GraphQLContext, ParentType extends Reso
   trades?: Resolver<Maybe<ResolversTypes['Trades']>, ParentType, ContextType, RequireFields<QueryTradesArgs, 'id'>>;
   travelTourism?: Resolver<Maybe<ResolversTypes['TravelTourism']>, ParentType, ContextType, RequireFields<QueryTravelTourismArgs, 'id'>>;
   travelTourismCard?: Resolver<Maybe<Array<Maybe<ResolversTypes['TravelTourism']>>>, ParentType, ContextType>;
+  userInterested?: Resolver<Maybe<Array<Maybe<ResolversTypes['UserInterested']>>>, ParentType, ContextType>;
   veterinary?: Resolver<Maybe<ResolversTypes['Veterinary']>, ParentType, ContextType, RequireFields<QueryVeterinaryArgs, 'id'>>;
   veterinaryCard?: Resolver<Maybe<Array<Maybe<ResolversTypes['Veterinary']>>>, ParentType, ContextType>;
   webDevelopment?: Resolver<Maybe<ResolversTypes['WebDevelopment']>, ParentType, ContextType, RequireFields<QueryWebDevelopmentArgs, 'id'>>;
@@ -11073,6 +11103,15 @@ export type UserResolvers<ContextType = GraphQLContext, ParentType extends Resol
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 };
 
+export type UserInterestedResolvers<ContextType = GraphQLContext, ParentType extends ResolversParentTypes['UserInterested'] = ResolversParentTypes['UserInterested']> = {
+  course?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  email?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  id?: Resolver<ResolversTypes['ID'], ParentType, ContextType>;
+  mobile?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  name?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
+};
+
 export type VerificationTokenResolvers<ContextType = GraphQLContext, ParentType extends ResolversParentTypes['VerificationToken'] = ResolversParentTypes['VerificationToken']> = {
   expires?: Resolver<ResolversTypes['String'], ParentType, ContextType>;
   identifier?: Resolver<ResolversTypes['String'], ParentType, ContextType>;
@@ -11296,6 +11335,7 @@ export type Resolvers<ContextType = GraphQLContext> = {
   Trades?: TradesResolvers<ContextType>;
   TravelTourism?: TravelTourismResolvers<ContextType>;
   User?: UserResolvers<ContextType>;
+  UserInterested?: UserInterestedResolvers<ContextType>;
   VerificationToken?: VerificationTokenResolvers<ContextType>;
   Veterinary?: VeterinaryResolvers<ContextType>;
   WebDevelopment?: WebDevelopmentResolvers<ContextType>;
@@ -14841,6 +14881,15 @@ export const YogaFragmentDoc = gql`
   photoCredit
   editedBy
   mainImage
+}
+    `;
+export const UserInterestedFragmentDoc = gql`
+    fragment UserInterested on UserInterested {
+  id
+  name
+  email
+  mobile
+  course
 }
     `;
 export const AddBlogPostDocument = gql`
@@ -22976,6 +23025,73 @@ export function useUpdateBlogPostMutation(baseOptions?: Apollo.MutationHookOptio
 export type UpdateBlogPostMutationHookResult = ReturnType<typeof useUpdateBlogPostMutation>;
 export type UpdateBlogPostMutationResult = Apollo.MutationResult<UpdateBlogPostMutation>;
 export type UpdateBlogPostMutationOptions = Apollo.BaseMutationOptions<UpdateBlogPostMutation, UpdateBlogPostMutationVariables>;
+export const AddUserInterestedDocument = gql`
+    mutation AddUserInterested($input: UserInterestedInput!) {
+  addUserInterested(input: $input) {
+    ...UserInterested
+  }
+}
+    ${UserInterestedFragmentDoc}`;
+export type AddUserInterestedMutationFn = Apollo.MutationFunction<AddUserInterestedMutation, AddUserInterestedMutationVariables>;
+
+/**
+ * __useAddUserInterestedMutation__
+ *
+ * To run a mutation, you first call `useAddUserInterestedMutation` within a React component and pass it any options that fit your needs.
+ * When your component renders, `useAddUserInterestedMutation` returns a tuple that includes:
+ * - A mutate function that you can call at any time to execute the mutation
+ * - An object with fields that represent the current status of the mutation's execution
+ *
+ * @param baseOptions options that will be passed into the mutation, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options-2;
+ *
+ * @example
+ * const [addUserInterestedMutation, { data, loading, error }] = useAddUserInterestedMutation({
+ *   variables: {
+ *      input: // value for 'input'
+ *   },
+ * });
+ */
+export function useAddUserInterestedMutation(baseOptions?: Apollo.MutationHookOptions<AddUserInterestedMutation, AddUserInterestedMutationVariables>) {
+        const options = {...defaultOptions, ...baseOptions}
+        return Apollo.useMutation<AddUserInterestedMutation, AddUserInterestedMutationVariables>(AddUserInterestedDocument, options);
+      }
+export type AddUserInterestedMutationHookResult = ReturnType<typeof useAddUserInterestedMutation>;
+export type AddUserInterestedMutationResult = Apollo.MutationResult<AddUserInterestedMutation>;
+export type AddUserInterestedMutationOptions = Apollo.BaseMutationOptions<AddUserInterestedMutation, AddUserInterestedMutationVariables>;
+export const UserInterestedDocument = gql`
+    query UserInterested {
+  userInterested {
+    ...UserInterested
+  }
+}
+    ${UserInterestedFragmentDoc}`;
+
+/**
+ * __useUserInterestedQuery__
+ *
+ * To run a query within a React component, call `useUserInterestedQuery` and pass it any options that fit your needs.
+ * When your component renders, `useUserInterestedQuery` returns an object from Apollo Client that contains loading, error, and data properties
+ * you can use to render your UI.
+ *
+ * @param baseOptions options that will be passed into the query, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options;
+ *
+ * @example
+ * const { data, loading, error } = useUserInterestedQuery({
+ *   variables: {
+ *   },
+ * });
+ */
+export function useUserInterestedQuery(baseOptions?: Apollo.QueryHookOptions<UserInterestedQuery, UserInterestedQueryVariables>) {
+        const options = {...defaultOptions, ...baseOptions}
+        return Apollo.useQuery<UserInterestedQuery, UserInterestedQueryVariables>(UserInterestedDocument, options);
+      }
+export function useUserInterestedLazyQuery(baseOptions?: Apollo.LazyQueryHookOptions<UserInterestedQuery, UserInterestedQueryVariables>) {
+          const options = {...defaultOptions, ...baseOptions}
+          return Apollo.useLazyQuery<UserInterestedQuery, UserInterestedQueryVariables>(UserInterestedDocument, options);
+        }
+export type UserInterestedQueryHookResult = ReturnType<typeof useUserInterestedQuery>;
+export type UserInterestedLazyQueryHookResult = ReturnType<typeof useUserInterestedLazyQuery>;
+export type UserInterestedQueryResult = Apollo.QueryResult<UserInterestedQuery, UserInterestedQueryVariables>;
 export type AddBlogPostMutationVariables = Exact<{
   input: BlogPostInput;
 }>;
@@ -24784,3 +24900,17 @@ export type UpdateBlogPostMutationVariables = Exact<{
 
 
 export type UpdateBlogPostMutation = { __typename?: 'Mutation', updateBlogPost?: { __typename?: 'BlogPost', id: string, category?: string | null, publishedDate?: string | null, title?: string | null, subtitle1?: string | null, tableContents1?: string | null, tableContents2?: string | null, tableContents3?: string | null, tableContents4?: string | null, p1?: string | null, p2?: string | null, p3?: string | null, subtitle2?: string | null, p4?: string | null, p5?: string | null, l1?: string | null, l2?: string | null, l3?: string | null, l4?: string | null, l5?: string | null, subtitle3?: string | null, p6?: string | null, p7?: string | null, l6?: string | null, l7?: string | null, l8?: string | null, l9?: string | null, l10?: string | null, l11?: string | null, l12?: string | null, l13?: string | null, l14?: string | null, l15?: string | null, p8?: string | null, subtitle4?: string | null, conclusion1?: string | null, conclusion2?: string | null, conclusion3?: string | null, reference1?: string | null, reference2?: string | null, authorName?: string | null, authorAbout?: string | null, authorLink?: string | null, photoCredit?: string | null, editedBy?: string | null, mainImage?: string | null } | null };
+
+export type AddUserInterestedMutationVariables = Exact<{
+  input: UserInterestedInput;
+}>;
+
+
+export type AddUserInterestedMutation = { __typename?: 'Mutation', addUserInterested?: { __typename?: 'UserInterested', id: string, name?: string | null, email?: string | null, mobile?: string | null, course?: string | null } | null };
+
+export type UserInterestedFragment = { __typename?: 'UserInterested', id: string, name?: string | null, email?: string | null, mobile?: string | null, course?: string | null };
+
+export type UserInterestedQueryVariables = Exact<{ [key: string]: never; }>;
+
+
+export type UserInterestedQuery = { __typename?: 'Query', userInterested?: Array<{ __typename?: 'UserInterested', id: string, name?: string | null, email?: string | null, mobile?: string | null, course?: string | null } | null> | null };

@@ -79,6 +79,7 @@ generates:
 
         Session: "@prisma/client#Session"
         User: "@prisma/client#User"
+        UserInterested: "@prisma/client#UserInterested"
         VerificationToken: "@prisma/client#VerificationToken"
       contextType: ./pages/api/index#GraphQLContext
     plugins:

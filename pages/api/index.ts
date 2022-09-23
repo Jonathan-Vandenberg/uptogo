@@ -18,6 +18,9 @@ const typeDefs = readFileSync(join(process.cwd(), "schema.graphql"), {encoding: 
 
 const resolvers: Resolvers = {
   Query: {
+    userInterested: (_, __, {prisma}) => {
+      return prisma.userInterested.findMany()
+    },
     blogPosts: (_, __, {prisma}) => {
       return prisma.blogPost.findMany()
     },
@@ -1479,6 +1482,17 @@ trades: (_, {id}, {prisma}) => {
         }
       })
       return ai
+    },
+    addUserInterested: async (_, {input}, {prisma}) => {
+      const userInterested = await prisma.userInterested.create({
+        data: {
+          name: input?.name,
+          email: input?.email,
+          mobile: input?.mobile,
+          course: input?.course
+        }
+      })
+      return userInterested
     },
   addIt: async (_, {input}, {prisma}) => {
     const it = await prisma.softwareDevelopment.create({

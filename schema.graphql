@@ -5,6 +5,8 @@ type Query {
 
   currentEvent(id: ID!): CurrentEvent
 
+  userInterested: [UserInterested]
+
   it(id: ID!): It
   design(id: ID!): Design
   health(id: ID!): Health
@@ -134,6 +136,8 @@ type Query {
 }
 
 type Mutation {
+  addUserInterested(input: UserInterestedInput): UserInterested
+
   addBlogPost(input: BlogPostInput!): BlogPost
   updateBlogPost(input: BlogPostInput!): BlogPost
 
@@ -334,6 +338,22 @@ type User {
   image: String
   accounts: [Account]
   sessions: [Session]
+}
+
+type UserInterested {
+  id: ID!
+  name: String
+  email: String
+  mobile: String
+  course: String
+}
+
+input UserInterestedInput {
+  id: ID!
+  name: String
+  email: String
+  mobile: String
+  course: String
 }
 
 type Categories {

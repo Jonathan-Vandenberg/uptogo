@@ -5,6 +5,7 @@ import CustomerReview from "../components/UI/CustomerReview";
 import Popup from "../components/UI/Popup";
 import image from "../public/heroImages/Du-hoc-Sp-jain-01.jpeg";
 import banner1 from "../public/heroImages/biawweb.jpeg";
+import UserInterestedForm from "../components/UserInterestedForm";
 
 const customer = [
   {
@@ -45,6 +46,11 @@ export default function App() {
         <div className="w-full block">
           <Image src={banner1} alt="uptogo banner" layout="responsive" />
         </div>
+        <UserInterestedForm
+          handleClose={function (): void {
+            throw new Error("Function not implemented.");
+          }}
+        />
       </div>
     </>
   );

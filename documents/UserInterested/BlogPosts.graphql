@@ -1,0 +1,7 @@
+# import UserInterested from "./UserInterestedFragment.graphql"
+
+query UserInterested {
+  userInterested {
+    ...UserInterested
+  }
+}

@@ -1,0 +1,7 @@
+fragment UserInterested on UserInterested {
+  id
+  name
+  email
+  mobile
+  course
+}

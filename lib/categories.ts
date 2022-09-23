@@ -4,6 +4,7 @@ export interface Category {
 }
 
 export const options: Category[] = [
+  
   {value: "ACTING" , label: "Acting"},
   {value: "AGED_CARE" , label: "AgedCare"},
   {value: "AGRIBUSINESS_MANAGEMENT" , label: "Agribusiness Management"},

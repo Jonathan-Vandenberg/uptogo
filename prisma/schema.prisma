@@ -45,6 +45,14 @@ model User {
   sessions      Session[]
 }
 
+model UserInterested {
+  id     String  @id @default(auto()) @map("_id") @db.ObjectId
+  name   String?
+  email  String?
+  mobile String?
+  course String?
+}
+
 model VerificationToken {
   identifier String   @id @default(auto()) @map("_id") @db.ObjectId
   token      String   @unique
