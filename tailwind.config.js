@@ -33,6 +33,9 @@ module.exports = {
         bg2: "rgb(255, 170, 0)",
         bg3: "rgb(240, 84, 128)",
       },
+      backgroundImage: {
+        bgUrl: "url('../public/logoMobile.png')",
+      },
     },
   },
   plugins: [require("@tailwindcss/line-clamp")],

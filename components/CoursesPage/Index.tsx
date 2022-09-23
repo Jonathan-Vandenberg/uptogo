@@ -24,16 +24,17 @@ export default function App() {
   const translate = useAppSelector((state) => state.translationState.translate);
   const bw = useAppSelector((state) => state.iconState.bw);
   const style = bw
-    ? "fixed md:static md:z-0  md:w-auto md:h-auto top-0 left-0 w-screen h-screen bg-gradient-to-bl from-bg1 via-bg2 to-bg3 z-30"
+    ? "fixed md:static md:z-0  md:w-auto md:h-auto top-0 left-0 w-screen h-screen z-30 bg-bgURl backdrop-blur"
     : "fixed md:static md:z-0  md:w-auto md:h-auto top-0 left-0 w-screen h-screen bg-gradient-to-b from-sky-200 via-white to-white z-30";
   return (
     <div className={style}>
-      <div className="md:flex md:mt-12 md:items-center md:justify-center grid grid-cols-2 mt-20 w-screen h-auto z-40 bg-">
+      <span className="absolute left-0 bg-bgUrl top-0 w-screen h-screen  backdrop-blur-lg" />
+      <div className="md:flex md:mt-12 md:items-center md:justify-center grid grid-cols-2 mt-20 w-screen h-auto">
         <div className="pb-4">
           <Link href={"/events"}>
             <div className="flex items-center justify-center flex-col cursor-pointer">
               {bw ? (
-                <div className="bg-white/10 p-2 rounded-lg z-10 h-full items-center flex justify-center w-auto">
+                <div className="bg-white/80 p-2 rounded-lg z-10 h-full items-center flex justify-center w-auto">
                   <Image
                     src={BWeventIcon}
                     alt="Events image"
@@ -63,7 +64,7 @@ export default function App() {
           <Link href={"/blogs"}>
             <div className="flex items-center justify-center flex-col cursor-pointer">
               {bw ? (
-                <div className="bg-white/10 p-2 rounded-lg z-10 h-full items-center flex justify-center w-auto">
+                <div className="bg-white/80 p-2 rounded-lg z-10 h-full items-center flex justify-center w-auto">
                   <Image
                     src={BWnewsIcon}
                     alt="News Image"
@@ -93,7 +94,7 @@ export default function App() {
           <Link href={"/information-technology"}>
             <div className="flex items-center justify-center flex-col cursor-pointer">
               {bw ? (
-                <div className="bg-white/10 p-2 rounded-lg z-10 h-full items-center flex justify-center w-auto">
+                <div className="bg-white/80 p-2 rounded-lg z-10 h-full items-center flex justify-center w-auto">
                   <Image
                     src={BWitIcon}
                     alt="IT image"
@@ -123,7 +124,7 @@ export default function App() {
           <Link href={"/management"}>
             <div className="flex items-center justify-center flex-col cursor-pointer">
               {bw ? (
-                <div className="bg-white/10 p-2 rounded-lg z-10 h-full items-center flex justify-center w-auto">
+                <div className="bg-white/80 p-2 rounded-lg z-10 h-full items-center flex justify-center w-auto">
                   <Image
                     src={BWmanagementIcon}
                     alt="IT image"
@@ -153,7 +154,7 @@ export default function App() {
           <Link href={"/design"}>
             <div className="flex items-center justify-center flex-col cursor-pointer">
               {bw ? (
-                <div className="bg-white/10 p-2 rounded-lg z-10 h-full items-center flex justify-center w-auto">
+                <div className="bg-white/80 p-2 rounded-lg z-10 h-full items-center flex justify-center w-auto">
                   <Image
                     src={BWdesignIcon}
                     alt="IT image"
@@ -183,7 +184,7 @@ export default function App() {
           <Link href={"/health"}>
             <div className="flex items-center justify-center flex-col cursor-pointer">
               {bw ? (
-                <div className="bg-white/10 p-2 rounded-lg z-10 h-full items-center flex justify-center w-auto">
+                <div className="bg-white/80 p-2 rounded-lg z-10 h-full items-center flex justify-center w-auto">
                   <Image
                     src={BWhealthIcon}
                     alt="IT image"
@@ -213,7 +214,7 @@ export default function App() {
           <Link href={"/hospitality"}>
             <div className="flex items-center justify-center flex-col cursor-pointer">
               {bw ? (
-                <div className="bg-white/10 p-2 rounded-lg z-10 h-full items-center flex justify-center w-auto">
+                <div className="bg-white/80 p-2 rounded-lg z-10 h-full items-center flex justify-center w-auto">
                   <Image
                     src={BWhospitalityIcon}
                     alt="IT image"
@@ -243,7 +244,7 @@ export default function App() {
           <Link href={"/trades"}>
             <div className="flex items-center justify-center flex-col cursor-pointer">
               {bw ? (
-                <div className="bg-white/10 p-2 rounded-lg z-10 h-full items-center flex justify-center w-auto">
+                <div className="bg-white/80 p-2 rounded-lg z-10 h-full items-center flex justify-center w-auto">
                   <Image
                     src={BWtradeIcon}
                     alt="IT image"
