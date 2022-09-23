@@ -51,17 +51,10 @@ export default function Admin() {
 const SkeletonComponent = () => {
   return (
     <Stack spacing={1}>
-      <Skeleton
-        width={370}
-        height={210}
-        variant="rectangular"
-        className="logoFont w-full"
-      >
-        <Skeleton width={180} height={20} variant="rectangular" />
-        <Skeleton width={90} height={20} variant="rectangular" />
-        <Skeleton width={60} height={20} variant="rectangular" />
-        <Skeleton width={157} height={20} variant="rectangular" />
-      </Skeleton>
+      <Skeleton width={180} height={20} variant="rectangular" />
+      <Skeleton width={90} height={20} variant="rectangular" />
+      <Skeleton width={60} height={20} variant="rectangular" />
+      <Skeleton width={157} height={20} variant="rectangular" />
     </Stack>
   );
 };
