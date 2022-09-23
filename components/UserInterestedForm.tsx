@@ -7,6 +7,7 @@ import { v4 as uuidv4 } from "uuid";
 import logo from "../public/uptogoFavicon.png";
 import CheckIcon from "@mui/icons-material/Check";
 import Image from "next/image";
+import { useAppSelector } from "../redux-hooks/hooks";
 
 interface IProps {
   handleClose: () => void;
@@ -14,6 +15,7 @@ interface IProps {
 
 const AddClientForm = ({ handleClose }: IProps) => {
   const [addUserInterested] = useAddUserInterestedMutation();
+  const translate = useAppSelector((state) => state.translationState.translate);
 
   const [submitted, setSubmitted] = useState(false);
 
@@ -106,7 +108,7 @@ const AddClientForm = ({ handleClose }: IProps) => {
             </option>
             {options.map((o, i) => (
               <option key={i} value={o.value}>
-                {o.label}
+                {translate ? o.Elabel : o.label}
               </option>
             ))}
           </select>
