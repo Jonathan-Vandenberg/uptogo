@@ -53,7 +53,7 @@ export default function App() {
                   />
                 </div>
               )}
-              <div className="z-10 text-gray-700 w-full text-center px-6 py-1 leading-5">
+              <div className="z-10 text-black w-full text-center px-6 py-1 leading-5">
                 {translate ? "Uptogo Events" : "Sự Kiện Uptogo"}
               </div>
             </div>
@@ -83,7 +83,7 @@ export default function App() {
                   />
                 </div>
               )}
-              <div className="z-10 text-gray-700 w-full text-center px-6 py-1 leading-5">
+              <div className="z-10 text-black w-full text-center px-6 py-1 leading-5">
                 {translate ? "News" : "Tin Tức"}
               </div>
             </div>
@@ -113,7 +113,7 @@ export default function App() {
                   />
                 </div>
               )}
-              <div className="z-10 text-gray-700 w-full text-center px-6 py-1 leading-5">
+              <div className="z-10 text-black w-full text-center px-6 py-1 leading-5">
                 {translate ? "Information Technology" : "Công nghệ thông tin"}
               </div>
             </div>
@@ -143,7 +143,7 @@ export default function App() {
                   />
                 </div>
               )}
-              <div className="z-10 text-gray-700 w-full text-center px-6 py-1">
+              <div className="z-10 text-black w-full text-center px-6 py-1">
                 {translate ? "Management" : "Quản lý"}
               </div>
             </div>
@@ -173,7 +173,7 @@ export default function App() {
                   />
                 </div>
               )}
-              <div className="z-10 text-gray-700 w-full text-center px-6 py-1">
+              <div className="z-10 text-black w-full text-center px-6 py-1">
                 {translate ? "Design" : "Thiết kế"}
               </div>
             </div>
@@ -203,7 +203,7 @@ export default function App() {
                   />
                 </div>
               )}
-              <div className="z-10 text-gray-700 w-full text-center px-6 py-1">
+              <div className="z-10 text-black w-full text-center px-6 py-1">
                 {translate ? "Health" : "Sức khỏe"}
               </div>
             </div>
@@ -233,7 +233,7 @@ export default function App() {
                   />
                 </div>
               )}
-              <div className="z-10 leading-5  text-gray-700 w-full text-center px-6 py-1">
+              <div className="z-10 leading-5  text-black w-full text-center px-6 py-1">
                 {translate ? "Hospitality" : "Nhà hàng khách sạn"}
               </div>
             </div>
@@ -263,7 +263,7 @@ export default function App() {
                   />
                 </div>
               )}
-              <div className="z-10 text-gray-700 w-full text-center px-6 py-1 leading-5">
+              <div className="z-10 text-black w-full text-center px-6 py-1 leading-5">
                 {translate ? "Trades & Sports" : "Thương mại & Thể thao"}
               </div>
             </div>
