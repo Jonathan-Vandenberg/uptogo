@@ -25,6 +25,7 @@ import BWsportDevelopment from "../public/courseIcons/BWIcons/tradesBWicons/rati
 import BWyoga from "../public/courseIcons/BWIcons/tradesBWicons/yoga.png";
 
 import landmarks from "../public/heroImages/heroTravel.jpg";
+import ColorLangBtn from "../components/UI/ColorLangBtn";
 
 export const tradeLinks = [
   {
@@ -164,7 +165,7 @@ export default function App() {
           />
         </div>
       )}
-      <span className="fixed bottom-0 left-0 w-screen h-12 bg-orange md:hidden" />
+      <ColorLangBtn />
     </div>
   );
 }

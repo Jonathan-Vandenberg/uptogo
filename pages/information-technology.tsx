@@ -27,6 +27,7 @@ import BWblockchain from "../public/courseIcons/BWIcons/itBWicons/blockchain.png
 import BWai from "../public/courseIcons/BWIcons/itBWicons/artificial-intelligence.png";
 
 import landmarks from "../public/heroImages/heroTravel.jpg";
+import ColorLangBtn from "../components/UI/ColorLangBtn";
 
 export const itLinks = [
   {
@@ -173,7 +174,7 @@ export default function App() {
           />
         </div>
       )}
-      <span className="fixed bottom-0 left-0 w-screen h-12 bg-orange md:hidden" />
+      <ColorLangBtn />
     </div>
   );
 }

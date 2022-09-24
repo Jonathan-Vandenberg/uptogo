@@ -7,27 +7,23 @@ import hospitalityIcon from "../../public/courseIcons/hospitalityIcons/hospitali
 import itIcon from "../../public/courseIcons/ITIcons/ITMain.png";
 import managementIcon from "../../public/courseIcons/managementIcons/management (1).png";
 import tradeIcon from "../../public/courseIcons/tradesIcons/tradesMain.png";
-import newsIcon from "../../public/newspaper (1).png";
-import { useAppDispatch, useAppSelector } from "../../redux-hooks/hooks";
 import landmarks from "../../public/heroImages/heroTravel.jpg";
+import newsIcon from "../../public/newspaper (1).png";
+import { useAppSelector } from "../../redux-hooks/hooks";
 
-import BWdesignIcon from "../../public/courseIcons/BWIcons/coursesMainBWicons/web-design (1).png";
-import BWhealthIcon from "../../public/courseIcons/BWIcons/coursesMainBWicons/healthcare (1).png";
-import BWeventIcon from "../../public/courseIcons/BWIcons/coursesMainBWicons/event (1).png";
-import BWhospitalityIcon from "../../public/courseIcons/BWIcons/coursesMainBWicons/pin.png";
-import BWitIcon from "../../public/courseIcons/BWIcons/coursesMainBWicons/computer (1).png";
-import BWmanagementIcon from "../../public/courseIcons/BWIcons/coursesMainBWicons/team-management.png";
 import BWtradeIcon from "../../public/courseIcons/BWIcons/coursesMainBWicons/competence (1).png";
+import BWitIcon from "../../public/courseIcons/BWIcons/coursesMainBWicons/computer (1).png";
+import BWeventIcon from "../../public/courseIcons/BWIcons/coursesMainBWicons/event (1).png";
+import BWhealthIcon from "../../public/courseIcons/BWIcons/coursesMainBWicons/healthcare (1).png";
 import BWnewsIcon from "../../public/courseIcons/BWIcons/coursesMainBWicons/newspaper (2).png";
-import { iconState } from "../../slices/bwSlice";
-import colorWheel from "../../public/icons8-rgb-color-wheel-80.png";
-import BWcolorWheel from "../../public/icons8-rgb-color-wheel-96.png";
-import TranslateBtn from "../UI/TranslateBtn";
+import BWhospitalityIcon from "../../public/courseIcons/BWIcons/coursesMainBWicons/pin.png";
+import BWmanagementIcon from "../../public/courseIcons/BWIcons/coursesMainBWicons/team-management.png";
+import BWdesignIcon from "../../public/courseIcons/BWIcons/coursesMainBWicons/web-design (1).png";
+import ColorLangBtn from "../UI/ColorLangBtn";
 
 export default function App() {
   const translate = useAppSelector((state) => state.translationState.translate);
   const bw = useAppSelector((state) => state.iconState.bw);
-  const dispatch = useAppDispatch();
   const style = bw
     ? "fixed md:static md:z-0  md:w-auto md:h-auto top-0 left-0 w-screen h-screen z-10 bg-bgUrl"
     : "fixed md:static md:z-0  md:w-auto md:h-auto top-0 left-0 w-screen h-screen bg-gradient-to-b from-sky-200 via-white to-white z-30";
@@ -286,24 +282,7 @@ export default function App() {
           />
         </div>
       )}
-      <span className="flex items-center space-x-5 justify-start pl-4 fixed bottom-0 left-0 w-screen h-12 bg-orange md:hidden">
-        {bw ? (
-          <div
-            onClick={() => dispatch(iconState(!bw))}
-            className="block w-6 h-6"
-          >
-            <Image src={colorWheel} alt="wheel" layout="responsive" />
-          </div>
-        ) : (
-          <div
-            onClick={() => dispatch(iconState(!bw))}
-            className="block w-6 h-6"
-          >
-            <Image src={BWcolorWheel} alt="wheel" layout="responsive" />
-          </div>
-        )}
-        <TranslateBtn />
-      </span>
+      <ColorLangBtn />
     </div>
   );
 }

@@ -23,6 +23,7 @@ import BWmassage from "../public/courseIcons/BWIcons/healthBWicons/facial-massag
 import BWmentalHealth from "../public/courseIcons/BWIcons/healthBWicons/mental-health.png";
 
 import landmarks from "../public/heroImages/heroTravel.jpg";
+import ColorLangBtn from "../components/UI/ColorLangBtn";
 
 export const healthLinks = [
   {
@@ -155,7 +156,7 @@ export default function App() {
           />
         </div>
       )}
-      <span className="fixed bottom-0 left-0 w-screen h-12 bg-orange md:hidden" />
+      <ColorLangBtn />
     </div>
   );
 }

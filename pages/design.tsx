@@ -23,6 +23,7 @@ import BWmusicIcon from "../public/courseIcons/BWIcons/designBWicons/music-note.
 import BWfilmIcon from "../public/courseIcons/BWIcons/designBWicons/video.png";
 
 import landmarks from "../public/heroImages/heroTravel.jpg";
+import ColorLangBtn from "../components/UI/ColorLangBtn";
 
 export const designLinks = [
   {
@@ -155,7 +156,7 @@ export default function App() {
           />
         </div>
       )}
-      <span className="fixed bottom-0 left-0 w-screen h-12 bg-orange md:hidden" />
+      <ColorLangBtn />
     </div>
   );
 }

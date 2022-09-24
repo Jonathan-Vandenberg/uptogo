@@ -17,6 +17,7 @@ import BWtravelTourism from "../public/courseIcons/BWIcons/hospitalityBWicons/fl
 import BWevents from "../public/courseIcons/BWIcons/hospitalityBWicons/event (1).png";
 
 import landmarks from "../public/heroImages/heroTravel.jpg";
+import ColorLangBtn from "../components/UI/ColorLangBtn";
 
 export const hospitalityLinks = [
   {
@@ -128,7 +129,7 @@ export default function App() {
           />
         </div>
       )}
-      <span className="fixed bottom-0 left-0 w-screen h-12 bg-orange md:hidden" />
+      <ColorLangBtn />
     </div>
   );
 }
