@@ -4,9 +4,6 @@
 /* purgecss end ignore */
 @tailwind utilities;
 
-@import "react-slideshow-image/dist/styles.css";
-@import "slick-carousel/slick/slick-theme.css";
-@import "slick-carousel/slick/slick.css";
 @import "../public/fonts/fonts_style.css";
 
 html,
