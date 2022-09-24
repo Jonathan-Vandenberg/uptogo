@@ -34,7 +34,7 @@ module.exports = {
         bg3: "rgb(240, 84, 128)",
       },
       backgroundImage: {
-        bgUrl: "url('../public/low-poly-grid-haikei (1).png')",
+        bgUrl: "url('../public/low-poly-grid-haikei (2).png')",
       },
     },
   },
