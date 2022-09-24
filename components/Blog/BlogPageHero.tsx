@@ -373,7 +373,7 @@ export default function App({ data }: IHeroProps) {
 
   return (
     <div className="px-5 md:mb-8 md:px-0 max-w-[678px] md:max-w-[900px] mx-auto w-full h-full container">
-      <div className="bg-body md:px-0 px-8  md:flex-row flex-col-reverse flex items-center justify-evenly">
+      <div className="bg-sky-100 md:px-0 px-8  md:flex-row flex-col-reverse flex items-center justify-evenly">
         <div className="bg-body px-4 flex items-start flex-col justify-start w-full h-full md:w-2/5 py-6">
           <p className="text-gray-400 text-lg">{data?.category}</p>
           <div className="flex flex-col items-center justify-between space-y-5">
