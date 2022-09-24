@@ -28,8 +28,6 @@ function MyApp({ Component, pageProps: { session, ...pageProps } }: AppProps) {
             <InitDivider />
           </div>
           <Component {...pageProps} />
-          <CoursesLink />
-          <Footer />
         </ApolloProvider>
       </SessionProvider>
     </Provider>

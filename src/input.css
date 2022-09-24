@@ -4,8 +4,10 @@
 /* purgecss end ignore */
 @tailwind utilities;
 
+@import "react-slideshow-image/dist/styles.css";
+@import "slick-carousel/slick/slick-theme.css";
+@import "slick-carousel/slick/slick.css";
 @import "../public/fonts/fonts_style.css";
-@import"react-slideshow-image/dist/styles.css";
 
 html,
 body {
@@ -53,6 +55,20 @@ a {
   box-sizing: border-box;
   font-family: "ClearSans", sans-serif;
 }
+
+select {
+  width: 268px;
+  padding: 5px;
+  font-size: 16px;
+  line-height: 1;
+  border: 0;
+  border-radius: 5px;
+  height: 52px;
+  background: url(http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png) no-repeat right #ddd;
+  -webkit-appearance: none;
+  background-position-x: 170px;
+}
+
 
 @font-face {
   font-family: 'ClearSans';

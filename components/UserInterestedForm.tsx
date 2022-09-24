@@ -103,9 +103,7 @@ const AddClientForm = ({ handleClose }: IProps) => {
             required
             className="border-2 border-gray-200 p-3 rounded-xl w-full"
           >
-            <option value="" selected disabled hidden>
-              <p>Choose Your Major</p>
-            </option>
+            <option value="">Choose Your Major</option>
             {options.map((o, i) => (
               <option key={i} value={o.value}>
                 {translate ? o.Elabel : o.label}

@@ -5,7 +5,7 @@ export const iconSlice = createSlice({
   name: 'icon',
   initialState: {
     // Default cards being show on page load
-    bw: true,
+    bw: false,
   },
   reducers: {
     iconState: (state, action: PayloadAction<boolean>) => {
