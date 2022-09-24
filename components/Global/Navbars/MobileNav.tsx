@@ -8,12 +8,15 @@ import Link from "next/link";
 import * as React from "react";
 import { useState } from "react";
 import { FaHeart } from "react-icons/fa";
-import { HiOutlineLocationMarker } from "react-icons/hi";
+import { HiColorSwatch, HiOutlineLocationMarker } from "react-icons/hi";
 import {
   MdAdminPanelSettings,
   MdChangeCircle,
+  MdColorLens,
+  MdFormatColorFill,
   MdOutlineArrowBackIos,
   MdOutlineArrowForwardIos,
+  MdOutlineColorize,
 } from "react-icons/md";
 import fullLogo from "../../../public/fullLogo.png";
 import faviconLogo from "../../../public/uptogoFavicon.png";
@@ -397,9 +400,6 @@ const SideNavModal = () => {
           <p className="logoFont text-orange text-2xl">Uptogo</p>
         </div>
       </Link>
-      <div onClick={() => dispatch(iconState(!bw))}>
-        <MdChangeCircle />
-      </div>
       <div className="flex h-full items-center justify-end space-x-6 mr-5">
         <button
           ref={btnRef as any}

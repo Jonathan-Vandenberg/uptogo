@@ -10,7 +10,7 @@ import travelTourism from "../public/courseIcons/hospitalityIcons/travel.png";
 import events from "../public/courseIcons/hospitalityIcons/events.png";
 
 import BWbaking from "../public/courseIcons/BWIcons/hospitalityBWicons/bake.png";
-import BWcookery from "../public/courseIcons/BWIcons/hospitalityBWicons/cooking.png";
+import BWcookery from "../public/courseIcons/BWIcons/hospitalityBWicons/icons8-cooker-50.png";
 import BWhospitalityManagement from "../public/courseIcons/BWIcons/hospitalityBWicons/hospitality (1).png";
 import BWhotelManagement from "../public/courseIcons/BWIcons/hospitalityBWicons/available.png";
 import BWtravelTourism from "../public/courseIcons/BWIcons/hospitalityBWicons/flight.png";

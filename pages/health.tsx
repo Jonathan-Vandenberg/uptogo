@@ -12,7 +12,7 @@ import dental from "../public/courseIcons/healthIcons/floss.png";
 import massage from "../public/courseIcons/healthIcons/massage.png";
 import mentalHealth from "../public/courseIcons/healthIcons/mental-health.png";
 
-import BWagedCare from "../public/courseIcons/BWIcons/healthBWicons/care.png";
+import BWagedCare from "../public/courseIcons/BWIcons/healthBWicons/icons8-grandparents-50.png";
 import BWnutrition from "../public/courseIcons/BWIcons/healthBWicons/nutrition.png";
 import BWnursing from "../public/courseIcons/BWIcons/healthBWicons/nurse.png";
 import BWveterinary from "../public/courseIcons/BWIcons/healthBWicons/veterinarian.png";

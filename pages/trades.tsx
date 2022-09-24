@@ -13,6 +13,17 @@ import horticulture from "../public/courseIcons/tradesIcons/horticulture.png";
 import sportDevelopment from "../public/courseIcons/tradesIcons/sports.png";
 import yoga from "../public/courseIcons/tradesIcons/meditation.png";
 
+import BWautomotive from "../public/courseIcons/BWIcons/tradesBWicons/car-parts.png";
+import BWbeauty from "../public/courseIcons/BWIcons/tradesBWicons/makeover.png";
+import BWconstruction from "../public/courseIcons/BWIcons/tradesBWicons/hook.png";
+import BWcarpentry from "../public/courseIcons/BWIcons/managementBWicons/icons8-carpentry-85.png";
+import BWeducation from "../public/courseIcons/BWIcons/tradesBWicons/graduation-cap.png";
+import BWfitness from "../public/courseIcons/BWIcons/tradesBWicons/dumbbell.png";
+import BWhairdressing from "../public/courseIcons/BWIcons/tradesBWicons/salon.png";
+import BWhorticulture from "../public/courseIcons/BWIcons/tradesBWicons/horticulture.png";
+import BWsportDevelopment from "../public/courseIcons/BWIcons/tradesBWicons/rating.png";
+import BWyoga from "../public/courseIcons/BWIcons/tradesBWicons/yoga.png";
+
 import landmarks from "../public/heroImages/heroTravel.jpg";
 
 export const tradeLinks = [
@@ -21,97 +32,138 @@ export const tradeLinks = [
     course: "Máy móc",
     link: "/courses/trades/automotive",
     icon: automotive,
+    BWicon: BWautomotive,
   },
   {
     courseE: "Beauty",
     course: "Làm đẹp",
     link: "/courses/trades/beauty",
     icon: beauty,
+    BWicon: BWbeauty,
   },
   {
     courseE: "Construction",
     course: "Công trình xây dựng",
     link: "/courses/trades/construction",
     icon: construction,
+    BWicon: BWconstruction,
   },
   {
     courseE: "Carpentry",
     course: "Mộc",
     link: "/courses/trades/carpentry",
     icon: carpentry,
+    BWicon: BWcarpentry,
   },
   {
     courseE: "Education",
     course: "Giáo dục",
     link: "/courses/trades/education",
     icon: education,
+    BWicon: BWeducation,
   },
   {
     courseE: "Fitness",
     course: "Thể thao",
     link: "/courses/trades/fitness",
     icon: fitness,
+    BWicon: BWfitness,
   },
   {
     courseE: "Hairdressing",
     course: "Làm tóc",
     link: "/courses/trades/hairdressing",
     icon: hairdressing,
+    BWicon: BWhairdressing,
   },
   {
     courseE: "Horticulture",
     course: "Làm vườn",
     link: "/courses/trades/horticulture",
     icon: horticulture,
+    BWicon: BWhorticulture,
   },
   {
     courseE: "Sport Development",
     course: "Giáo dục thể chất",
     link: "/courses/trades/sport-development",
     icon: sportDevelopment,
+    BWicon: BWsportDevelopment,
   },
   {
     courseE: "Yoga",
     course: "Yoga",
     link: "/courses/trades/yoga",
     icon: yoga,
+    BWicon: BWyoga,
   },
 ];
 
 export default function App() {
   const translate = useAppSelector((state) => state.translationState.translate);
+  const bw = useAppSelector((state) => state.iconState.bw);
+  const style = bw
+    ? "fixed md:static md:z-0  md:w-auto md:h-auto top-0 left-0 w-screen h-screen z-10 bg-bgUrl"
+    : "fixed md:static md:z-0  md:w-auto md:h-auto top-0 left-0 w-screen h-screen z-10  bg-gradient-to-b from-sky-200 via-white to-white";
   return (
-    <div className="fixed md:static md:z-0  md:w-auto md:h-auto top-0 left-0 w-screen h-screen z-30  bg-gradient-to-b from-sky-200 via-white to-white">
-      <div className="md:flex md:mt-12 md:items-center md:justify-center grid grid-cols-3 mt-20 w-screen h-auto z-40 ">
-        {tradeLinks.map((item, i) => (
-          <div key={i} className="pb-7 z-10">
-            <Link href={item.link}>
-              <div className="flex items-center justify-center flex-col cursor-pointer">
-                <div className="w-auto h-full items-center flex justify-center mb-1">
-                  <Image
-                    src={item.icon}
-                    alt="IT image"
-                    width={60}
-                    height={60}
-                    priority
-                  />
+    <div className={style}>
+      {bw ? (
+        <div className="md:flex md:mt-12 bg-bgUrl md:items-center md:justify-center grid grid-cols-3 mt-20 w-screen h-auto z-40 ">
+          {tradeLinks.map((item, i) => (
+            <div key={i} className="pb-7 z-10">
+              <Link href={item.link}>
+                <div className="flex items-center justify-center flex-col cursor-pointer">
+                  <div className="w-auto h-full items-center flex justify-center mb-1">
+                    <Image
+                      src={item.BWicon}
+                      alt="Management image"
+                      width={60}
+                      height={60}
+                      priority
+                    />
+                  </div>
+                  <div className="text-sm text-gray-700 w-full text-center px-6 py-1 leading-4">
+                    {translate ? item.courseE : item.course}
+                  </div>
                 </div>
-                <div className="text-sm text-gray-700 w-full text-center px-6 py-1 leading-4">
-                  {translate ? item.courseE : item.course}
+              </Link>
+            </div>
+          ))}
+        </div>
+      ) : (
+        <div className="md:flex md:mt-12 md:items-center md:justify-center grid grid-cols-3 pt-20 w-screen h-auto z-40">
+          {tradeLinks.map((item, i) => (
+            <div key={i} className="pb-7 z-10">
+              <Link href={item.link}>
+                <div className="flex items-center justify-center flex-col cursor-pointer">
+                  <div className="w-auto h-full items-center flex justify-center mb-1">
+                    <Image
+                      src={item.icon}
+                      alt="IT image"
+                      width={60}
+                      height={60}
+                      priority
+                    />
+                  </div>
+                  <div className="text-sm text-gray-700 w-full text-center px-6 py-1 leading-4">
+                    {translate ? item.courseE : item.course}
+                  </div>
                 </div>
-              </div>
-            </Link>
-          </div>
-        ))}
-      </div>
-      <div className="fixed bottom-12 left-0 w-screen">
-        <Image
-          src={landmarks}
-          alt="landmarks decorational"
-          layout="responsive"
-          priority
-        />
-      </div>
+              </Link>
+            </div>
+          ))}
+        </div>
+      )}
+      {!bw && (
+        <div className="fixed bottom-12 left-0 w-screen">
+          <Image
+            src={landmarks}
+            alt="landmarks decorational"
+            layout="responsive"
+            priority
+          />
+        </div>
+      )}
       <span className="fixed bottom-0 left-0 w-screen h-12 bg-orange md:hidden" />
     </div>
   );

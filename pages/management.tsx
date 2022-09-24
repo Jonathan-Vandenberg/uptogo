@@ -12,6 +12,16 @@ import agribusinessManagement from "../public/courseIcons/managementIcons/harves
 import supplyManagement from "../public/courseIcons/managementIcons/process.png";
 import leadershipManagement from "../public/courseIcons/managementIcons/leader.png";
 
+import BWprojectManagement from "../public/courseIcons/BWIcons/managementBWicons/team.png";
+import BWbusinessManagement from "../public/courseIcons/BWIcons/managementBWicons/management (1).png";
+import BWhumanResources from "../public/courseIcons/BWIcons/managementBWicons/hr.png";
+import BWbankingManagement from "../public/courseIcons/BWIcons/managementBWicons/banker.png";
+import BWintlBusiness from "../public/courseIcons/BWIcons/managementBWicons/international.png";
+import BWsocialMediaMarketing from "../public/courseIcons/BWIcons/managementBWicons/bullhorn.png";
+import BWagribusinessManagement from "../public/courseIcons/BWIcons/managementBWicons/planting.png";
+import BWsupplyManagement from "../public/courseIcons/BWIcons/managementBWicons/supply-chain.png";
+import BWleadershipManagement from "../public/courseIcons/BWIcons/managementBWicons/leadership.png";
+
 import landmarks from "../public/heroImages/heroTravel.jpg";
 
 export const managementLinks = [
@@ -20,91 +30,131 @@ export const managementLinks = [
     course: "Quản lý dự án",
     link: "/courses/management/project-management",
     icon: projectManagement,
+    BWicon: BWprojectManagement,
   },
   {
     courseE: "Business Management",
     course: "Quản trị kinh doanh",
     link: "/courses/management/business-management",
     icon: businessManagement,
+    BWicon: BWbusinessManagement,
   },
   {
     courseE: "Human Resources",
     course: "Quản lý nhân sự",
     link: "/courses/management/human-resources",
     icon: humanResources,
+    BWicon: BWhumanResources,
   },
   {
     courseE: "Banking Management",
     course: "Ngân hàng",
     link: "/courses/management/banking-management",
     icon: bankingManagement,
+    BWicon: BWbankingManagement,
   },
   {
     courseE: "International Business",
     course: "Kinh doanh quốc tế",
     link: "/courses/management/international-business",
     icon: intlBusiness,
+    BWicon: BWintlBusiness,
   },
   {
     courseE: "Social Media Marketing",
     course: "Truyền thông xã hội & Tiếp thị",
     link: "/courses/management/social-media-marketing",
     icon: socialMediaMarketing,
+    BWicon: BWsocialMediaMarketing,
   },
   {
     courseE: "Agri Business Management",
     course: "Quản lý nông nghiệp",
     link: "/courses/management/agriculture-business-management",
     icon: agribusinessManagement,
+    BWicon: BWagribusinessManagement,
   },
   {
     courseE: "Supply Management",
     course: "Quản lý chuỗi cung ứng",
     link: "/courses/management/supply-management",
     icon: supplyManagement,
+    BWicon: BWsupplyManagement,
   },
   {
     courseE: "Leadership Management",
     course: "Lãnh đạo & Quản lý",
     link: "/courses/management/leadership-management",
     icon: leadershipManagement,
+    BWicon: BWleadershipManagement,
   },
 ];
 
 export default function App() {
   const translate = useAppSelector((state) => state.translationState.translate);
+  const bw = useAppSelector((state) => state.iconState.bw);
+  const style = bw
+    ? "fixed md:static md:z-0  md:w-auto md:h-auto top-0 left-0 w-screen h-screen z-10 bg-bgUrl"
+    : "fixed md:static md:z-0  md:w-auto md:h-auto top-0 left-0 w-screen h-screen z-10  bg-gradient-to-b from-sky-200 via-white to-white";
   return (
-    <div className="fixed md:static md:z-0  md:w-auto md:h-auto top-0 left-0 w-screen h-screen z-30  bg-gradient-to-b from-sky-200 via-white to-white">
-      <div className="md:flex md:mt-12 md:items-center md:justify-center grid grid-cols-3 mt-20 w-screen h-auto z-40 ">
-        {managementLinks.map((item, i) => (
-          <div key={i} className="pb-7 z-10">
-            <Link href={item.link}>
-              <div className="flex items-center justify-center flex-col cursor-pointer">
-                <div className="w-auto h-full items-center flex justify-center mb-1">
-                  <Image
-                    src={item.icon}
-                    alt="IT image"
-                    width={70}
-                    height={70}
-                    priority
-                  />
+    <div className={style}>
+      {bw ? (
+        <div className="md:flex md:mt-12 bg-bgUrl md:items-center md:justify-center grid grid-cols-3 mt-20 w-screen h-auto z-40 ">
+          {managementLinks.map((item, i) => (
+            <div key={i} className="pb-7 z-10">
+              <Link href={item.link}>
+                <div className="flex items-center justify-center flex-col cursor-pointer">
+                  <div className="w-auto h-full items-center flex justify-center mb-1">
+                    <Image
+                      src={item.BWicon}
+                      alt="Management image"
+                      width={60}
+                      height={60}
+                      priority
+                    />
+                  </div>
+                  <div className="text-sm text-gray-700 w-full text-center px-6 py-1 leading-4">
+                    {translate ? item.courseE : item.course}
+                  </div>
                 </div>
-                <div className="text-sm text-gray-700 w-full text-center px-6 py-1 leading-4">
-                  {translate ? item.courseE : item.course}
+              </Link>
+            </div>
+          ))}
+        </div>
+      ) : (
+        <div className="md:flex md:mt-12 md:items-center md:justify-center grid grid-cols-3 pt-20 w-screen h-auto z-40">
+          {managementLinks.map((item, i) => (
+            <div key={i} className="pb-7 z-10">
+              <Link href={item.link}>
+                <div className="flex items-center justify-center flex-col cursor-pointer">
+                  <div className="w-auto h-full items-center flex justify-center mb-1">
+                    <Image
+                      src={item.icon}
+                      alt="IT image"
+                      width={60}
+                      height={60}
+                      priority
+                    />
+                  </div>
+                  <div className="text-sm text-gray-700 w-full text-center px-6 py-1 leading-4">
+                    {translate ? item.courseE : item.course}
+                  </div>
                 </div>
-              </div>
-            </Link>
-          </div>
-        ))}
-      </div>
-      <div className="fixed bottom-12 left-0 w-screen">
-        <Image
-          src={landmarks}
-          alt="landmarks decorational"
-          layout="responsive"
-          priority
-        />
-      </div>
+              </Link>
+            </div>
+          ))}
+        </div>
+      )}
+      {!bw && (
+        <div className="fixed bottom-12 left-0 w-screen">
+          <Image
+            src={landmarks}
+            alt="landmarks decorational"
+            layout="responsive"
+            priority
+          />
+        </div>
+      )}
       <span className="fixed bottom-0 left-0 w-screen h-12 bg-orange md:hidden" />
     </div>
   );
