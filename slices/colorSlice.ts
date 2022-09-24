@@ -5,11 +5,11 @@ export const iconSlice = createSlice({
   name: 'icon',
   initialState: {
     // Default cards being show on page load
-    bw: false,
+    color: false,
   },
   reducers: {
     iconState: (state, action: PayloadAction<boolean>) => {
-      state.bw = action.payload
+      state.color = action.payload
     }
   },
 })
@@ -17,4 +17,4 @@ export const iconSlice = createSlice({
 export const { iconState } = iconSlice.actions
 export default iconSlice.reducer
 // Other code such as selectors can use the imported `RootState` type
-export const selectIcon = (state: RootState) => state.iconState.bw
+export const selectIcon = (state: RootState) => state.iconState.color

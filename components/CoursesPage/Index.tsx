@@ -23,10 +23,10 @@ import ColorLangBtn from "../UI/ColorLangBtn";
 
 export default function App() {
   const translate = useAppSelector((state) => state.translationState.translate);
-  const bw = useAppSelector((state) => state.iconState.bw);
-  const style = bw
-    ? "fixed md:static md:z-0  md:w-auto md:h-auto top-0 left-0 w-screen h-screen z-10 bg-bgUrl"
-    : "fixed md:static md:z-0  md:w-auto md:h-auto top-0 left-0 w-screen h-screen bg-gradient-to-b from-sky-200 via-white to-white z-30";
+  const color = useAppSelector((state) => state.iconState.color);
+  const style = color
+    ? "fixed md:static md:z-0  md:w-auto md:h-auto top-0 left-0 w-screen h-screen bg-gradient-to-b from-sky-200 via-white to-white z-30"
+    : "fixed md:static md:z-0  md:w-auto md:h-auto top-0 left-0 w-screen h-screen z-10 bg-bgUrl";
   return (
     <div className={style}>
       <span className="absolute left-0  top-0 w-screen h-screen" />
@@ -34,10 +34,10 @@ export default function App() {
         <div className="pb-4">
           <Link href={"/events"}>
             <div className="flex items-center justify-center flex-col cursor-pointer">
-              {bw ? (
+              {color ? (
                 <div className="p-2 rounded-lg z-10 h-full items-center flex justify-center w-auto">
                   <Image
-                    src={BWeventIcon}
+                    src={eventIcon}
                     alt="Events image"
                     width={60}
                     height={60}
@@ -47,7 +47,7 @@ export default function App() {
               ) : (
                 <div className="z-10 h-full items-center flex justify-center w-auto">
                   <Image
-                    src={eventIcon}
+                    src={BWeventIcon}
                     alt="Events image"
                     width={60}
                     height={60}
@@ -64,10 +64,10 @@ export default function App() {
         <div className="pb-4">
           <Link href={"/blogs"}>
             <div className="flex items-center justify-center flex-col cursor-pointer">
-              {bw ? (
+              {color ? (
                 <div className="p-2 rounded-lg z-10 h-full items-center flex justify-center w-auto">
                   <Image
-                    src={BWnewsIcon}
+                    src={newsIcon}
                     alt="News Image"
                     width={60}
                     height={60}
@@ -77,7 +77,7 @@ export default function App() {
               ) : (
                 <div className="z-10 h-full items-center flex justify-center w-auto">
                   <Image
-                    src={newsIcon}
+                    src={BWnewsIcon}
                     alt="News Image"
                     width={60}
                     height={60}
@@ -94,10 +94,10 @@ export default function App() {
         <div className="pb-4">
           <Link href={"/information-technology"}>
             <div className="flex items-center justify-center flex-col cursor-pointer">
-              {bw ? (
+              {color ? (
                 <div className="p-2 rounded-lg z-10 h-full items-center flex justify-center w-auto">
                   <Image
-                    src={BWitIcon}
+                    src={itIcon}
                     alt="IT image"
                     width={60}
                     height={60}
@@ -107,7 +107,7 @@ export default function App() {
               ) : (
                 <div className="z-10 h-full items-center flex justify-center w-auto">
                   <Image
-                    src={itIcon}
+                    src={BWitIcon}
                     alt="IT image"
                     width={60}
                     height={60}
@@ -124,10 +124,10 @@ export default function App() {
         <div className="pb-4">
           <Link href={"/management"}>
             <div className="flex items-center justify-center flex-col cursor-pointer">
-              {bw ? (
+              {color ? (
                 <div className="p-2 rounded-lg z-10 h-full items-center flex justify-center w-auto">
                   <Image
-                    src={BWmanagementIcon}
+                    src={managementIcon}
                     alt="IT image"
                     width={60}
                     height={60}
@@ -137,7 +137,7 @@ export default function App() {
               ) : (
                 <div className="z-10 h-full items-center flex justify-center w-auto">
                   <Image
-                    src={managementIcon}
+                    src={BWmanagementIcon}
                     alt="IT image"
                     width={60}
                     height={60}
@@ -154,10 +154,10 @@ export default function App() {
         <div className="pb-4">
           <Link href={"/design"}>
             <div className="flex items-center justify-center flex-col cursor-pointer">
-              {bw ? (
+              {color ? (
                 <div className="p-2 rounded-lg z-10 h-full items-center flex justify-center w-auto">
                   <Image
-                    src={BWdesignIcon}
+                    src={designIcon}
                     alt="IT image"
                     width={60}
                     height={60}
@@ -167,7 +167,7 @@ export default function App() {
               ) : (
                 <div className="z-10 h-full items-center flex justify-center w-auto">
                   <Image
-                    src={designIcon}
+                    src={BWdesignIcon}
                     alt="IT image"
                     width={60}
                     height={60}
@@ -184,10 +184,10 @@ export default function App() {
         <div className="pb-4">
           <Link href={"/health"}>
             <div className="flex items-center justify-center flex-col cursor-pointer">
-              {bw ? (
+              {color ? (
                 <div className="p-2 rounded-lg z-10 h-full items-center flex justify-center w-auto">
                   <Image
-                    src={BWhealthIcon}
+                    src={healthIcon}
                     alt="IT image"
                     width={60}
                     height={60}
@@ -197,7 +197,7 @@ export default function App() {
               ) : (
                 <div className="z-10 h-full items-center flex justify-center w-auto">
                   <Image
-                    src={healthIcon}
+                    src={BWhealthIcon}
                     alt="IT image"
                     width={60}
                     height={60}
@@ -214,10 +214,10 @@ export default function App() {
         <div className="pb-4">
           <Link href={"/hospitality"}>
             <div className="flex items-center justify-center flex-col cursor-pointer">
-              {bw ? (
+              {color ? (
                 <div className="p-2 rounded-lg z-10 h-full items-center flex justify-center w-auto">
                   <Image
-                    src={BWhospitalityIcon}
+                    src={hospitalityIcon}
                     alt="IT image"
                     width={60}
                     height={60}
@@ -227,7 +227,7 @@ export default function App() {
               ) : (
                 <div className="z-10 h-full items-center flex justify-center w-auto">
                   <Image
-                    src={hospitalityIcon}
+                    src={BWhospitalityIcon}
                     alt="IT image"
                     width={60}
                     height={60}
@@ -244,10 +244,10 @@ export default function App() {
         <div className="pb-4">
           <Link href={"/trades"}>
             <div className="flex items-center justify-center flex-col cursor-pointer">
-              {bw ? (
+              {color ? (
                 <div className="p-2 rounded-lg z-10 h-full items-center flex justify-center w-auto">
                   <Image
-                    src={BWtradeIcon}
+                    src={tradeIcon}
                     alt="IT image"
                     width={60}
                     height={60}
@@ -257,7 +257,7 @@ export default function App() {
               ) : (
                 <div className="z-10 h-full items-center flex justify-center w-auto">
                   <Image
-                    src={tradeIcon}
+                    src={BWtradeIcon}
                     alt="IT image"
                     width={60}
                     height={60}
@@ -272,7 +272,7 @@ export default function App() {
           </Link>
         </div>
       </div>
-      {!bw && (
+      {color && (
         <div className="fixed bottom-12 left-0 w-screen">
           <Image
             src={landmarks}

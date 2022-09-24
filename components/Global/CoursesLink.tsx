@@ -7,7 +7,7 @@ import BackBtn from "../UI/BackBtn";
 export default function App() {
   return (
     <div className="p-2 fixed bg-darkBlue shadow-lg rounded-full bottom-5 z-50 right-5 md:hidden">
-      <div className="flex items-center justify-center space-x-8 px-4">
+      <div className="flex items-center justify-center space-x-6 px-4">
         <BackBtn />
         <Link href={"/courses"}>
           <FaGraduationCap color="white" size={35} />

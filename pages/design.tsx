@@ -93,37 +93,14 @@ export const designLinks = [
 
 export default function App() {
   const translate = useAppSelector((state) => state.translationState.translate);
-  const bw = useAppSelector((state) => state.iconState.bw);
-  const style = bw
-    ? "fixed md:static md:z-0  md:w-auto md:h-auto top-0 left-0 w-screen h-screen z-10 bg-bgUrl"
-    : "fixed md:static md:z-0  md:w-auto md:h-auto top-0 left-0 w-screen h-screen z-10  bg-gradient-to-b from-sky-200 via-white to-white";
+  const color = useAppSelector((state) => state.iconState.color);
+  const style = color
+    ? "fixed md:static md:z-0  md:w-auto md:h-auto top-0 left-0 w-screen h-screen z-10 bg-gradient-to-b from-sky-200 via-white to-white"
+    : "fixed md:static md:z-0  md:w-auto md:h-auto top-0 left-0 w-screen h-screen z-10 bg-bgUrl";
   return (
     <div className={style}>
-      {bw ? (
-        <div className="md:flex md:mt-12 md:items-center md:justify-center grid grid-cols-3 mt-20 bg-bgUrl w-screen h-auto z-40 ">
-          {designLinks.map((item, i) => (
-            <div key={i} className="pb-7 z-10">
-              <Link href={item.link}>
-                <div className="flex items-center justify-center flex-col cursor-pointer">
-                  <div className="w-auto h-full items-center flex justify-center mb-1">
-                    <Image
-                      src={item.BWicon}
-                      alt="Design image"
-                      width={60}
-                      height={60}
-                      priority
-                    />
-                  </div>
-                  <div className="text-sm text-gray-700 w-full text-center px-6 py-1 leading-4">
-                    {translate ? item.courseE : item.course}
-                  </div>
-                </div>
-              </Link>
-            </div>
-          ))}
-        </div>
-      ) : (
-        <div className="md:flex md:mt-12 md:items-center md:justify-center grid grid-cols-3 pt-20 w-screen h-auto z-40">
+      {color ? (
+        <div className="md:flex md:mt-12 md:items-center md:justify-center grid grid-cols-3 mt-20 w-screen h-auto z-40 ">
           {designLinks.map((item, i) => (
             <div key={i} className="pb-7 z-10">
               <Link href={item.link}>
@@ -145,8 +122,31 @@ export default function App() {
             </div>
           ))}
         </div>
+      ) : (
+        <div className="md:flex md:mt-12 md:items-center md:justify-center grid grid-cols-3 pt-20 w-screen h-auto z-40 bg-bgUrl">
+          {designLinks.map((item, i) => (
+            <div key={i} className="pb-7 z-10">
+              <Link href={item.link}>
+                <div className="flex items-center justify-center flex-col cursor-pointer">
+                  <div className="w-auto h-full items-center flex justify-center mb-1">
+                    <Image
+                      src={item.BWicon}
+                      alt="Design image"
+                      width={60}
+                      height={60}
+                      priority
+                    />
+                  </div>
+                  <div className="text-sm text-gray-700 w-full text-center px-6 py-1 leading-4">
+                    {translate ? item.courseE : item.course}
+                  </div>
+                </div>
+              </Link>
+            </div>
+          ))}
+        </div>
       )}
-      {!bw && (
+      {color && (
         <div className="fixed bottom-12 left-0 w-screen">
           <Image
             src={landmarks}

@@ -25,7 +25,7 @@ import TranslateBtn from "../../UI/TranslateBtn";
 
 import { useAppSelector } from "../../../redux-hooks/hooks";
 import { useAppDispatch } from "../../../redux-hooks/hooks";
-import { iconState } from "../../../slices/bwSlice";
+import { iconState } from "../../../slices/colorSlice";
 
 const style = {
   position: "absolute" as "absolute",
@@ -188,7 +188,6 @@ const SideNavModal = () => {
     const translate = useAppSelector(
       (state) => state.translationState.translate
     );
-    const bw = useAppSelector((state) => state.iconState.bw);
     return (
       <div className="w-[80vw]">
         <div className="flex w-full" onClick={() => setShowMajors(!showMajors)}>
@@ -385,10 +384,10 @@ const SideNavModal = () => {
     </div>
   );
 
-  const bw = useAppSelector((state) => state.iconState.bw);
+  const color = useAppSelector((state) => state.iconState.color);
   const dispatch = useAppDispatch();
 
-  const styleBG = bw
+  const styleBG = color
     ? "sticky bg-darkBlue top-0 z-40 flex items-center justify-between p-2 sm:px-4 lg:hidden"
     : "sticky bg-sky-50/80 top-0 z-40 flex items-center justify-between p-2 sm:px-4 lg:hidden";
 

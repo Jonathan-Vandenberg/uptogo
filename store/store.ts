@@ -1,6 +1,6 @@
 import { configureStore } from '@reduxjs/toolkit'
 import translationReducer from '../slices/translationSlice'
-import iconReducer from '../slices/bwSlice'
+import iconReducer from '../slices/colorSlice'
 
 const store = configureStore({
   reducer: {
