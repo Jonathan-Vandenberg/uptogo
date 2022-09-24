@@ -2,7 +2,6 @@ import Spline from "@splinetool/react-spline";
 import Image from "next/image";
 import logo from "../../public/fullLogo.png";
 import BlogPostMarkup from "../Blog/BlogPostMarkup";
-import { SpinnerCircular } from "spinners-react";
 import type {
   Ai,
   Blockchain,
@@ -140,12 +139,6 @@ interface IFormProps {
   handleEdit: () => void;
 }
 
-export function Animation() {
-  return (
-    <Spline scene="https://prod.spline.design/nwlheAZ7DwGmILvC/scene.splinecode" />
-  );
-}
-
 export default function BlogMain({ data, handleEdit, handleAdd }: IFormProps) {
   const styles = data?.mainImage ? "pb-8 block" : "block p-20";
 
@@ -161,24 +154,18 @@ export default function BlogMain({ data, handleEdit, handleAdd }: IFormProps) {
           <Animation />
         </div>
       ) : ( */}
-      {data?.category === "ANIMATION_3D" ? (
-        <div className={styles}>
-          <Suspense fallback={<SpinnerCircular enabled={true} />}>
-            <Spline scene="https://prod.spline.design/gg0modFcZyGWPqfY/scene.splinecode" />
-          </Suspense>
-        </div>
-      ) : (
-        <div className={styles}>
-          <Image
-            src={data?.mainImage || logo}
-            width={data?.mainImage ? 600 : 300}
-            height={data?.mainImage ? 339 : 300}
-            alt="image"
-            layout="responsive"
-            priority
-          />
-        </div>
-      )}
+
+      <div className={styles}>
+        <Image
+          src={data?.mainImage || logo}
+          width={data?.mainImage ? 600 : 300}
+          height={data?.mainImage ? 339 : 300}
+          alt="image"
+          layout="responsive"
+          priority
+        />
+      </div>
+
       {/* )} */}
       <div className="pb-6 px-6 md:px-0 md:pb-10">
         <div

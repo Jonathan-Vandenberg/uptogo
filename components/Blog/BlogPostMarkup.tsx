@@ -4,6 +4,7 @@ import { AiTwotoneCheckCircle } from "react-icons/ai";
 import { BsCircleFill } from "react-icons/bs";
 import { FaEdit } from "react-icons/fa";
 import { MdAddCircleOutline, MdDeleteForever } from "react-icons/md";
+import Spline from "@splinetool/react-spline";
 import type {
   Acting,
   AgedCare,
@@ -408,6 +409,12 @@ export default function BlogPostMarkup({
           {data?.subtitle4}
         </p>
       )}
+      {data?.category === "ANIMATION_3D" && (
+        <div className="flex items-center justify-center">
+          <Spline scene="https://prod.spline.design/gg0modFcZyGWPqfY/scene.splinecode" />
+        </div>
+      )}
+
       {data?.conclusion1 && (
         <p className="text-gray-600 py-4 text-xl">{data?.conclusion1}</p>
       )}
