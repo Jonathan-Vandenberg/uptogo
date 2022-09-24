@@ -3,7 +3,7 @@ import { SessionProvider } from "next-auth/react";
 import type { AppProps } from "next/app";
 import Head from "next/head";
 import { Provider } from "react-redux";
-import CoursesLink from "../components/Global/CoursesLink";
+import CoursesPill from "../components/Global/CoursesPill";
 import Footer from "../components/Global/Footer/Footer";
 import SideNavModal from "../components/Global/Navbars/MobileNav";
 import Navbar from "../components/Global/Navbars/Navbar";
@@ -28,7 +28,7 @@ function MyApp({ Component, pageProps: { session, ...pageProps } }: AppProps) {
             <InitDivider />
           </div>
           <Component {...pageProps} />
-          <CoursesLink />
+          <CoursesPill />
           <Footer />
         </ApolloProvider>
       </SessionProvider>

@@ -9,7 +9,7 @@ export default function App() {
   const dispatch = useAppDispatch();
   const color = useAppSelector((state) => state.iconState.color);
   return (
-    <div className="flex items-center space-x-5 justify-start pl-4 fixed bottom-0 left-0 w-screen h-12 bg-orange md:hidden">
+    <div className="flex items-center space-x-5 justify-start pl-4 fixed bottom-0 left-0 w-screen h-12 bg-sky-100 md:hidden">
       {color ? (
         <div
           onClick={() => dispatch(iconState(!color))}
