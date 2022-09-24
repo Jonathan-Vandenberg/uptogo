@@ -29,6 +29,7 @@
     "@splinetool/react-spline": "^2.2.1",
     "@splinetool/runtime": "^0.9.103",
     "@tailwindcss/line-clamp": "^0.4.2",
+    "@types/react-loader-spinner": "^4.0.0",
     "antd": "^4.22.8",
     "axios": "^0.27.2",
     "dotenv": "^16.0.1",
@@ -52,6 +53,7 @@
     "react-slideshow-image": "^4.0.4",
     "sharp": "^0.31.0",
     "slick-carousel": "^1.8.1",
+    "spinners-react": "^1.0.7",
     "three": "^0.143.0",
     "uniqid": "^5.4.0",
     "uuid": "^8.3.2"

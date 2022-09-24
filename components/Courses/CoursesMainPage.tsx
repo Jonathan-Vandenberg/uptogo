@@ -2,7 +2,7 @@ import Spline from "@splinetool/react-spline";
 import Image from "next/image";
 import logo from "../../public/fullLogo.png";
 import BlogPostMarkup from "../Blog/BlogPostMarkup";
-import EmailButton from "../UI/EmailButton";
+import { SpinnerCircular } from "spinners-react";
 import type {
   Ai,
   Blockchain,
@@ -68,6 +68,7 @@ import type {
   CurrentEvent,
 } from "../../types";
 import UserInterestedForm from "../UserInterestedForm";
+import { Suspense } from "react";
 
 interface IFormProps {
   data:
@@ -161,7 +162,11 @@ export default function BlogMain({ data, handleEdit, handleAdd }: IFormProps) {
         </div>
       ) : ( */}
       {data?.category === "ANIMATION_3D" ? (
-        <Spline scene="https://prod.spline.design/gg0modFcZyGWPqfY/scene.splinecode" />
+        <div className={styles}>
+          <Suspense fallback={<SpinnerCircular enabled={true} />}>
+            <Spline scene="https://prod.spline.design/gg0modFcZyGWPqfY/scene.splinecode" />
+          </Suspense>
+        </div>
       ) : (
         <div className={styles}>
           <Image
