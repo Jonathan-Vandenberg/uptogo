@@ -95,11 +95,11 @@ export default function App() {
   const bw = useAppSelector((state) => state.iconState.bw);
   const style = bw
     ? "fixed md:static md:z-0  md:w-auto md:h-auto top-0 left-0 w-screen h-screen z-10 bg-bgUrl"
-    : "fixed md:static md:z-0  md:w-auto md:h-auto top-0 left-0 w-screen h-screen bg-gradient-to-b from-sky-200 via-white to-white z-30";
+    : "fixed md:static md:z-0  md:w-auto md:h-auto top-0 left-0 w-screen h-screen z-10  bg-gradient-to-b from-sky-200 via-white to-white";
   return (
-    <div className="fixed md:static md:z-0  md:w-auto md:h-auto top-0 left-0 w-screen h-screen z-10 bg-bgUrl">
+    <div className={style}>
       {bw ? (
-        <div className="md:flex md:mt-12 md:items-center md:justify-center grid grid-cols-3 mt-20 w-screen h-auto z-40 ">
+        <div className="md:flex md:mt-12 md:items-center md:justify-center grid grid-cols-3 mt-20 bg-bgUrl w-screen h-auto z-40 ">
           {designLinks.map((item, i) => (
             <div key={i} className="pb-7 z-10">
               <Link href={item.link}>
@@ -122,7 +122,7 @@ export default function App() {
           ))}
         </div>
       ) : (
-        <div className="md:flex md:mt-12 md:items-center md:justify-center grid grid-cols-3 mt-20 w-screen h-auto z-40 ">
+        <div className="md:flex md:mt-12 md:items-center md:justify-center grid grid-cols-3 pt-20 w-screen h-auto z-40">
           {designLinks.map((item, i) => (
             <div key={i} className="pb-7 z-10">
               <Link href={item.link}>
