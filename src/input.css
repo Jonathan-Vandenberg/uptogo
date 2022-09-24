@@ -5,6 +5,7 @@
 @tailwind utilities;
 
 @import "../public/fonts/fonts_style.css";
+@import"react-slideshow-image/dist/styles.css";
 
 html,
 body {
