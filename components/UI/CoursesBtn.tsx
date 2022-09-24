@@ -3,10 +3,9 @@ import Link from "next/link";
 
 interface IProps {
   title: string;
-  link: string;
 }
 
-export default function App({ title, link }: IProps) {
+export default function App({ title }: IProps) {
   return (
     <motion.div
       whileHover={{
