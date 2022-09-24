@@ -8,10 +8,11 @@ import image from "../../public/partnersLogos/download.png";
 import james from "../../public/partnersLogos/jamesCookLogo.png";
 import vancouver from "../../public/partnersLogos/vancouverLogo.jpeg";
 import logo from "../../public/uptogoFavicon.png";
+import CoursesBtn from "./CoursesBtn";
 
 export default function PopupCard() {
   return (
-    <div className="min-w-[340px] max-w-[680px] flex items-center justify-center flex-col relative rounded-xl -mt-10 md:mt-0">
+    <div className="py-10 flex items-center justify-center flex-col relative -mt-10 md:mt-0 md:bg-sky-50">
       <div className="p-2 rounded-full bg-white shadow-md flex items-center justify-center">
         <Image src={logo} alt="logo" width={60} height={60} />
       </div>
@@ -37,19 +38,12 @@ export default function PopupCard() {
             <p className="text-lg">On-campus transition support</p>
           </li>
         </ul>
-        <div>
-          <Link href={"/courses"}>
-            <div className="md:text-lg lg:text-xl flex items-center justify-center space-x-3  cursor-pointer text-gray-700 border-b-8 rounded-full px-6 py-2 border-orange border-2">
-              <p>Start Now</p>
-              <BsArrowRight size={20} />
-            </div>
-          </Link>
-        </div>
+        <CoursesBtn title="Find Courses" />
         <p>Some of our partners include:</p>
         <span className="absolute -z-10 rounded-full w-96 h-40 rotate-45 top-28 transform left-72 bg-sky-50" />
         <span className="absolute -z-10 rounded-full w-96 h-40 rotate-45 top-52 right-80 bg-orange/10" />
 
-        <div className="grid grid-cols-1 gap-8 relative overflow-hidden">
+        <div className="grid grid-cols-1 gap-8 relative overflow-hidden md:flex md:items-center md:justify-center md:space-x-5">
           <div className="flex items-center justify-center">
             <Image
               src={bermingham}

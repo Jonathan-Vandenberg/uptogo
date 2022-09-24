@@ -8,10 +8,10 @@ type Review = {
   image: string;
 };
 
-export default function MediaCard({ customer }: { customer: Review[] }) {
+export default function MediaCard({ reviews }: { reviews: Review[] }) {
   return (
     <div className="flex  items-center justify-between pb-12 md:flex-row md:justify-evenly md:space-x-2 flex-col space-y-6 md:space-y-0">
-      {customer.map((item) => (
+      {reviews.map((item) => (
         <Card
           key={item.name}
           sx={{
