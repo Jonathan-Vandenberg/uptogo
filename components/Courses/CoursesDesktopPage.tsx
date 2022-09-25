@@ -1,11 +1,12 @@
 import { AnimatePresence, motion } from "framer-motion";
 import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
-import { BsCircleFill } from "react-icons/bs";
+import { BsArrowDownRightSquare, BsCircleFill } from "react-icons/bs";
 import heroImage from "../../public/courseMain/CouresesHomeImage.jpg";
 import ITDesktop from "../../public/courseMain/ITDesktop.jpg";
 import landmarks from "../../public/heroImages/heroTravel.jpg";
 import { useAppSelector } from "../../redux-hooks/hooks";
+import hero from "../../public/courseMain/couresesDesktopMain.jpg";
 import {
   Design,
   Health,
@@ -15,6 +16,7 @@ import {
   Trades,
 } from "../../types";
 import ColorLangBtn from "../UI/ColorLangBtn";
+import { FaAngleDoubleDown } from "react-icons/fa";
 
 interface IProps {
   it: It;
@@ -39,11 +41,18 @@ export default function App({
   return (
     <>
       <div className="snap-y h-screen overflow-y-scroll snap-mandatory">
-        <div className="h-screen snap-start bg-gradient-to-b from-sky-100 via-white to-orange/20 block">
-          <div className="container mx-auto relative">
-            <Image src={heroImage} layout="responsive" alt="eduaction image" />
+        <div className="h-screen snap-start to-orange/20 block">
+          <div className="container mx-auto relative max-w-[1200px]">
+            <Image src={hero} layout="responsive" alt="eduaction image" />
           </div>
-          <p></p>
+          <div className="flex items-center justify-center flex-col space-y-4">
+            <p className="flex items-center justify-center p-16 text-2xl">
+              Subjects
+            </p>
+            <div className="">
+              <FaAngleDoubleDown size={20} />
+            </div>
+          </div>
         </div>
         <Category
           title={"Công nghệ thông tin"}
@@ -54,67 +63,67 @@ export default function App({
           list1={it?.l1}
           list2={it?.l2}
           list3={it?.l3}
-          link={"/information-technology"}
+          link={"/courses/information-technology"}
           image={ITDesktop}
         />
         <Category
           title={"Quản lý"}
           Etitle={"Management"}
           translate={translate}
-          bgColor="purple-200"
+          bgColor="red-200"
           paragraph1={management?.p1}
           list1={management?.l1}
           list2={management?.l2}
           list3={management?.l3}
-          link={"/management"}
+          link={"/courses/management"}
           image={ITDesktop}
         />
         <Category
           title={"Thiết kế"}
           Etitle={"Design"}
           translate={translate}
-          bgColor="purple-200"
+          bgColor="yellow-200"
           paragraph1={design?.p1}
           list1={design?.l1}
           list2={design?.l2}
           list3={design?.l3}
-          link={"/design"}
+          link={"/courses/design"}
           image={ITDesktop}
         />
         <Category
           title={"Sức khỏe"}
           Etitle={"Health"}
           translate={translate}
-          bgColor="purple-200"
+          bgColor="green-200"
           paragraph1={health?.p1}
           list1={health?.l1}
           list2={health?.l2}
           list3={health?.l3}
-          link={"/health"}
+          link={"/courses/health"}
           image={ITDesktop}
         />
         <Category
           title={"Nhà hàng khách sạn"}
           Etitle={"Hospitality"}
           translate={translate}
-          bgColor="purple-200"
+          bgColor="orange-200"
           paragraph1={hospitality?.p1}
           list1={hospitality?.l1}
           list2={hospitality?.l2}
           list3={hospitality?.l3}
-          link={"/hospitality"}
+          link={"/courses/hospitality"}
           image={ITDesktop}
         />
         <Category
           title={"Thương mại & Thể thao"}
           Etitle={"Trades & Sports"}
           translate={translate}
-          bgColor="purple-200"
+          bgColor="blue-200"
           paragraph1={trades?.p1}
           list1={trades?.l1}
           list2={trades?.l1}
           list3={trades?.l1}
-          link={"/trades"}
+          link={"/courses/trades"}
           image={ITDesktop}
         />
         {color && (
@@ -136,7 +145,7 @@ export default function App({
 interface ICategory {
   title: string | undefined | null;
   Etitle: string | undefined | null;
-  bgColor: string | undefined | null;
+  bgColor: string;
   translate: boolean | undefined | null;
   paragraph1: string | undefined | null;
   list1: string | undefined | null;
@@ -160,12 +169,12 @@ const Category = ({
 }: ICategory) => {
   return (
     <AnimatePresence>
-      <div className="snap-start h-screen grid grid-cols-2 w-full bg-gradient-to-r from-purple-200 via-white to-white">
+      <div className="snap-start h-screen flex items-center justify-center flex-col lg:flex-row w-full">
         <motion.div
           key="Content"
           initial={{ x: -180 }}
           whileInView={{ x: 0, transition: { duration: 0.5 } }}
-          className="flex flex-col items-center justify-start pb-20 px-20 pt-6"
+          className="flex flex-col items-center justify-start w-full lg:w-1/2 pb-20 px-20 pt-6"
         >
           <div className="p-6">
             <Link href={link as string}>
@@ -200,7 +209,7 @@ const Category = ({
           <div className="px-4 py-2 border-2 hover:bg-darkBlue/20 hover:text-black text-white bg-darkBlue rounded-full mt-12">
             <Link href={link as string}>
               <div className="border-b-6 border-orange flex items-center justify-center text-lg">
-                {translate ? "Find Courses" : "Công nghệ thông tin"}
+                {translate ? "Read More" : "đọc thêm"}
               </div>
             </Link>
           </div>
@@ -211,9 +220,9 @@ const Category = ({
             opacity: 1,
             transition: { delay: 0.3, duration: 0.7 },
           }}
-          className="h-full w-full"
+          className="h-full max-w-[600px] lg:w-1/2"
         >
-          <div className="mt-32 block">
+          <div className="lg:mt-40 block">
             <Image src={image as string} alt="IT image" layout="responsive" />
           </div>
         </motion.div>

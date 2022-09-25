@@ -621,7 +621,7 @@ const AddClientForm = ({ details, add, edit, handleClose }: IProps) => {
           <input
             id="form"
             value={publishedDate as string}
-            placeholder="Published Date"
+            placeholder="Ngày xuất bản"
             onChange={(e) => setPublishedDate(e.target.value)}
             className="border-2 border-gray-200 p-3 rounded-xl w-full"
           />
@@ -631,7 +631,7 @@ const AddClientForm = ({ details, add, edit, handleClose }: IProps) => {
           <input
             id="authorName"
             value={authorName as string}
-            placeholder="Author Name"
+            placeholder="Tên tác giả"
             onChange={(e) => setAuthorName(e.target.value)}
             className="border-2 border-gray-200 p-3 rounded-xl w-full"
           />
@@ -641,7 +641,7 @@ const AddClientForm = ({ details, add, edit, handleClose }: IProps) => {
           <input
             id="authorAbout"
             value={authorAbout as string}
-            placeholder="About the Author"
+            placeholder="Thông tin về các Tác giả"
             onChange={(e) => setAuthorAbout(e.target.value)}
             className="border-2 border-gray-200 p-3 rounded-xl w-full"
           />
@@ -651,7 +651,7 @@ const AddClientForm = ({ details, add, edit, handleClose }: IProps) => {
           <input
             id="authorLink"
             value={authorLink as string}
-            placeholder="Author's Profile/Website Link"
+            placeholder="Hồ sơ của tác giả / Liên kết trang web"
             onChange={(e) => setAuthorLink(e.target.value)}
             className="border-2 border-gray-200 p-3 rounded-xl w-full"
           />
@@ -661,7 +661,7 @@ const AddClientForm = ({ details, add, edit, handleClose }: IProps) => {
           <input
             id="editedBy"
             value={editedBy as string}
-            placeholder="Edited By"
+            placeholder="Sửa bởi"
             onChange={(e) => setEditedBy(e.target.value)}
             className="border-2 border-gray-200 p-3 rounded-xl w-full"
           />
@@ -671,7 +671,7 @@ const AddClientForm = ({ details, add, edit, handleClose }: IProps) => {
           <input
             id="photoCredit"
             value={photoCredit as string}
-            placeholder="Photo Credit"
+            placeholder="Tín dụng hình ảnh"
             onChange={(e) => setPhotoCredit(e.target.value)}
             className="border-2 border-gray-200 p-3 rounded-xl w-full"
           />
@@ -681,7 +681,7 @@ const AddClientForm = ({ details, add, edit, handleClose }: IProps) => {
           <input
             id="title"
             value={title as string}
-            placeholder="Title"
+            placeholder="Tiêu đề"
             onChange={(e) => setTitle(e.target.value)}
             className="border-2 border-gray-200 p-3 rounded-xl w-full"
           />
@@ -691,7 +691,7 @@ const AddClientForm = ({ details, add, edit, handleClose }: IProps) => {
           <input
             id="subtitle1"
             value={subtitle1 as string}
-            placeholder="Subtitle 1"
+            placeholder="Phụ đề 1"
             onChange={(e) => setSubtitle1(e.target.value)}
             className="border-2 border-gray-200 p-3 rounded-xl w-full"
           />
@@ -701,7 +701,7 @@ const AddClientForm = ({ details, add, edit, handleClose }: IProps) => {
           <input
             id="tableContents1"
             value={tableContents1 as string}
-            placeholder="table of contents #1"
+            placeholder="Mục lục 1"
             onChange={(e) => setTableContents1(e.target.value)}
             className="border-2 border-gray-200 p-3 rounded-xl w-full"
           />
@@ -711,7 +711,7 @@ const AddClientForm = ({ details, add, edit, handleClose }: IProps) => {
           <input
             id="tableContents2"
             value={tableContents2 as string}
-            placeholder="table of contents #2"
+            placeholder="Mục lục 2"
             onChange={(e) => setTableContents2(e.target.value)}
             className="border-2 border-gray-200 p-3 rounded-xl w-full"
           />
@@ -721,7 +721,7 @@ const AddClientForm = ({ details, add, edit, handleClose }: IProps) => {
           <input
             id="tableContents3"
             value={tableContents3 as string}
-            placeholder="table of contents #3"
+            placeholder="Mục lục 3"
             onChange={(e) => setTableContents3(e.target.value)}
             className="border-2 border-gray-200 p-3 rounded-xl w-full"
           />
@@ -731,7 +731,7 @@ const AddClientForm = ({ details, add, edit, handleClose }: IProps) => {
           <input
             id="tableContents4"
             value={tableContents4 as string}
-            placeholder="table of contents #4"
+            placeholder="Mục lục 4"
             onChange={(e) => setTableContents4(e.target.value)}
             className="border-2 border-gray-200 p-3 rounded-xl w-full"
           />
@@ -742,7 +742,7 @@ const AddClientForm = ({ details, add, edit, handleClose }: IProps) => {
             rows={4}
             cols={50}
             value={p1 as string}
-            placeholder="Paragraph #1"
+            placeholder="Đoạn văn 1"
             onChange={(e) => setP1(e.target.value)}
             className="border-2 border-gray-200 p-3 rounded-xl w-full"
           />
@@ -753,7 +753,7 @@ const AddClientForm = ({ details, add, edit, handleClose }: IProps) => {
             rows={4}
             cols={50}
             value={p2 as string}
-            placeholder="Paragraph #2"
+            placeholder="Đoạn văn 2"
             onChange={(e) => setP2(e.target.value)}
             className="border-2 border-gray-200 p-3 rounded-xl w-full"
           />
@@ -764,7 +764,7 @@ const AddClientForm = ({ details, add, edit, handleClose }: IProps) => {
             rows={4}
             cols={50}
             value={p3 as string}
-            placeholder="Paragraph #3"
+            placeholder="Đoạn văn 3"
             onChange={(e) => setP3(e.target.value)}
             className="border-2 border-gray-200 p-3 rounded-xl w-full"
           />
@@ -774,7 +774,7 @@ const AddClientForm = ({ details, add, edit, handleClose }: IProps) => {
           <input
             id="subtitle2"
             value={subtitle2 as string}
-            placeholder="Subtitle #2"
+            placeholder="Phụ đề 2"
             onChange={(e) => setSubtitle2(e.target.value)}
             className="border-2 border-gray-200 p-3 rounded-xl w-full"
           />
@@ -785,7 +785,7 @@ const AddClientForm = ({ details, add, edit, handleClose }: IProps) => {
             rows={4}
             cols={50}
             value={p4 as string}
-            placeholder="Paragraph #4"
+            placeholder="Đoạn văn 4"
             onChange={(e) => setP4(e.target.value)}
             className="border-2 border-gray-200 p-3 rounded-xl w-full"
           />
@@ -796,7 +796,7 @@ const AddClientForm = ({ details, add, edit, handleClose }: IProps) => {
             rows={4}
             cols={50}
             value={p5 as string}
-            placeholder="Paragraph #5"
+            placeholder="Đoạn văn 5"
             onChange={(e) => setP5(e.target.value)}
             className="border-2 border-gray-200 p-3 rounded-xl w-full"
           />
@@ -806,7 +806,7 @@ const AddClientForm = ({ details, add, edit, handleClose }: IProps) => {
           <input
             id="l1"
             value={l1 as string}
-            placeholder="Green Check Mark #1"
+            placeholder="Dấu kiểm màu xanh lá cây #1"
             onChange={(e) => setL1(e.target.value)}
             className="border-2 border-gray-200 p-3 rounded-xl w-full"
           />
@@ -816,7 +816,7 @@ const AddClientForm = ({ details, add, edit, handleClose }: IProps) => {
           <input
             id="l2"
             value={l2 as string}
-            placeholder="Green Check Mark #2"
+            placeholder="Dấu kiểm màu xanh lá cây #2"
             onChange={(e) => setL2(e.target.value)}
             className="border-2 border-gray-200 p-3 rounded-xl w-full"
           />
@@ -826,7 +826,7 @@ const AddClientForm = ({ details, add, edit, handleClose }: IProps) => {
           <input
             id="l3"
             value={l3 as string}
-            placeholder="Green Check Mark #3"
+            placeholder="Dấu kiểm màu xanh lá cây #3"
             onChange={(e) => setL3(e.target.value)}
             className="border-2 border-gray-200 p-3 rounded-xl w-full"
           />
@@ -836,7 +836,7 @@ const AddClientForm = ({ details, add, edit, handleClose }: IProps) => {
           <input
             id="l4"
             value={l4 as string}
-            placeholder="Green Check Mark #4"
+            placeholder="Dấu kiểm màu xanh lá cây #4"
             onChange={(e) => setL4(e.target.value)}
             className="border-2 border-gray-200 p-3 rounded-xl w-full"
           />
@@ -846,7 +846,7 @@ const AddClientForm = ({ details, add, edit, handleClose }: IProps) => {
           <input
             id="l5"
             value={l5 as string}
-            placeholder="Green Check Mark #5"
+            placeholder="Dấu kiểm màu xanh lá cây #5"
             onChange={(e) => setL5(e.target.value)}
             className="border-2 border-gray-200 p-3 rounded-xl w-full"
           />
@@ -856,7 +856,7 @@ const AddClientForm = ({ details, add, edit, handleClose }: IProps) => {
           <input
             id="subtitle3"
             value={subtitle3 as string}
-            placeholder="Subtitle #3"
+            placeholder="Phụ đề 3"
             onChange={(e) => setSubtitle3(e.target.value)}
             className="border-2 border-gray-200 p-3 rounded-xl w-full"
           />
@@ -867,7 +867,7 @@ const AddClientForm = ({ details, add, edit, handleClose }: IProps) => {
             rows={4}
             cols={50}
             value={p6 as string}
-            placeholder="Paragraph #6"
+            placeholder="Đoạn văn 6"
             onChange={(e) => setP6(e.target.value)}
             className="border-2 border-gray-200 p-3 rounded-xl w-full"
           />
@@ -878,7 +878,7 @@ const AddClientForm = ({ details, add, edit, handleClose }: IProps) => {
             rows={4}
             cols={50}
             value={p7 as string}
-            placeholder="Paragraph #7"
+            placeholder="Đoạn văn 7"
             onChange={(e) => setP7(e.target.value)}
             className="border-2 border-gray-200 p-3 rounded-xl w-full"
           />
@@ -888,7 +888,7 @@ const AddClientForm = ({ details, add, edit, handleClose }: IProps) => {
           <input
             id="l6"
             value={l6 as string}
-            placeholder="List Item"
+            placeholder="Liệt kê mục"
             onChange={(e) => setL6(e.target.value)}
             className="border-2 border-gray-200 p-3 rounded-xl w-full"
           />
@@ -898,7 +898,7 @@ const AddClientForm = ({ details, add, edit, handleClose }: IProps) => {
           <input
             id="l7"
             value={l7 as string}
-            placeholder="List Item"
+            placeholder="Liệt kê mục"
             onChange={(e) => setL7(e.target.value)}
             className="border-2 border-gray-200 p-3 rounded-xl w-full"
           />
@@ -908,7 +908,7 @@ const AddClientForm = ({ details, add, edit, handleClose }: IProps) => {
           <input
             id="l8"
             value={l8 as string}
-            placeholder="List Item"
+            placeholder="Liệt kê mục"
             onChange={(e) => setL8(e.target.value)}
             className="border-2 border-gray-200 p-3 rounded-xl w-full"
           />
@@ -918,7 +918,7 @@ const AddClientForm = ({ details, add, edit, handleClose }: IProps) => {
           <input
             id="l9"
             value={l9 as string}
-            placeholder="List Item"
+            placeholder="Liệt kê mục"
             onChange={(e) => setL9(e.target.value)}
             className="border-2 border-gray-200 p-3 rounded-xl w-full"
           />
@@ -928,7 +928,7 @@ const AddClientForm = ({ details, add, edit, handleClose }: IProps) => {
           <input
             id="l10"
             value={l10 as string}
-            placeholder="List Item"
+            placeholder="Liệt kê mục"
             onChange={(e) => setL10(e.target.value)}
             className="border-2 border-gray-200 p-3 rounded-xl w-full"
           />
@@ -938,7 +938,7 @@ const AddClientForm = ({ details, add, edit, handleClose }: IProps) => {
           <input
             id="l11"
             value={l11 as string}
-            placeholder="List Item"
+            placeholder="Liệt kê mục"
             onChange={(e) => setL11(e.target.value)}
             className="border-2 border-gray-200 p-3 rounded-xl w-full"
           />
@@ -948,7 +948,7 @@ const AddClientForm = ({ details, add, edit, handleClose }: IProps) => {
           <input
             id="l12"
             value={l12 as string}
-            placeholder="List Item"
+            placeholder="Liệt kê mục"
             onChange={(e) => setL12(e.target.value)}
             className="border-2 border-gray-200 p-3 rounded-xl w-full"
           />
@@ -958,7 +958,7 @@ const AddClientForm = ({ details, add, edit, handleClose }: IProps) => {
           <input
             id="l13"
             value={l13 as string}
-            placeholder="List Item"
+            placeholder="Liệt kê mục"
             onChange={(e) => setL13(e.target.value)}
             className="border-2 border-gray-200 p-3 rounded-xl w-full"
           />
@@ -968,7 +968,7 @@ const AddClientForm = ({ details, add, edit, handleClose }: IProps) => {
           <input
             id="l14"
             value={l14 as string}
-            placeholder="List Item"
+            placeholder="Liệt kê mục"
             onChange={(e) => setL14(e.target.value)}
             className="border-2 border-gray-200 p-3 rounded-xl w-full"
           />
@@ -978,7 +978,7 @@ const AddClientForm = ({ details, add, edit, handleClose }: IProps) => {
           <input
             id="l15"
             value={l15 as string}
-            placeholder="List Item"
+            placeholder="Liệt kê mục"
             onChange={(e) => setL15(e.target.value)}
             className="border-2 border-gray-200 p-3 rounded-xl w-full"
           />
@@ -989,7 +989,7 @@ const AddClientForm = ({ details, add, edit, handleClose }: IProps) => {
             rows={4}
             cols={50}
             value={p8 as string}
-            placeholder="Paragraph #8"
+            placeholder="Đoạn văn 8"
             onChange={(e) => setP8(e.target.value)}
             className="border-2 border-gray-200 p-3 rounded-xl w-full"
           />
@@ -999,7 +999,7 @@ const AddClientForm = ({ details, add, edit, handleClose }: IProps) => {
           <input
             id="subtitle4"
             value={subtitle4 as string}
-            placeholder="Subtitle #4"
+            placeholder="Phụ đề 4"
             onChange={(e) => setSubtitle4(e.target.value)}
             className="border-2 border-gray-200 p-3 rounded-xl w-full"
           />
@@ -1010,18 +1010,7 @@ const AddClientForm = ({ details, add, edit, handleClose }: IProps) => {
             rows={4}
             cols={50}
             value={conclusion1 as string}
-            placeholder="Paragraph #8"
-            onChange={(e) => setConclusion1(e.target.value)}
-            className="border-2 border-gray-200 p-3 rounded-xl w-full"
-          />
-        </div>
-
-        <div className="px-8 flex items-start space-y-3 justify-center flex-col pt-10">
-          <textarea
-            rows={4}
-            cols={50}
-            value={conclusion1 as string}
-            placeholder="Conclusion #1"
+            placeholder="Sự kết luận 1"
             onChange={(e) => setConclusion1(e.target.value)}
             className="border-2 border-gray-200 p-3 rounded-xl w-full"
           />
@@ -1032,7 +1021,7 @@ const AddClientForm = ({ details, add, edit, handleClose }: IProps) => {
             rows={4}
             cols={50}
             value={conclusion2 as string}
-            placeholder="Conclusion #2"
+            placeholder="Sự kết luận 2"
             onChange={(e) => setConclusion2(e.target.value)}
             className="border-2 border-gray-200 p-3 rounded-xl w-full"
           />
@@ -1043,7 +1032,7 @@ const AddClientForm = ({ details, add, edit, handleClose }: IProps) => {
             rows={4}
             cols={50}
             value={conclusion3 as string}
-            placeholder="Conclusion #3"
+            placeholder="Sự kết luận 3"
             onChange={(e) => setConclusion3(e.target.value)}
             className="border-2 border-gray-200 p-3 rounded-xl w-full"
           />
@@ -1053,7 +1042,7 @@ const AddClientForm = ({ details, add, edit, handleClose }: IProps) => {
           <input
             id="reference1"
             value={reference1 as string}
-            placeholder="Reference URL Link #1"
+            placeholder="Liên kết tham khảo #1"
             onChange={(e) => setReference1(e.target.value)}
             className="border-2 border-gray-200 p-3 rounded-xl w-full"
           />
@@ -1063,7 +1052,7 @@ const AddClientForm = ({ details, add, edit, handleClose }: IProps) => {
           <input
             id="reference2"
             value={reference2 as string}
-            placeholder="Reference URL Link #2"
+            placeholder="Liên kết tham khảo #2"
             onChange={(e) => setReference2(e.target.value)}
             className="border-2 border-gray-200 p-3 rounded-xl w-full"
           />
