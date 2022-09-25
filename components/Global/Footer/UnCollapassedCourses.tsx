@@ -17,7 +17,7 @@ const App = ({ handleCloseDropdowns }: IProps) => {
   const translate = useAppSelector((state) => state.translationState.translate);
 
   return (
-    <div className="flex items-start justify-between px-12">
+    <div className="flex items-start justify-between px-12 2xl:container mx-auto py-6">
       <div className="col-span-1">
         <div className="flex items-center justify-between">
           {translate ? (
