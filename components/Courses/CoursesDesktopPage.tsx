@@ -48,7 +48,7 @@ export default function App({
           <div className="container mx-auto relative max-w-[1200px]">
             <Image src={hero} layout="responsive" alt="eduaction image" />
           </div>
-          <div className="flex items-center justify-center flex-col space-y-4">
+          <div className="flex items-center justify-center flex-col">
             <p className="flex items-center justify-center p-16 text-2xl">
               Subjects
             </p>
