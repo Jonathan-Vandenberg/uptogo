@@ -8,7 +8,6 @@ import landmarks from "../../public/heroImages/heroTravel.jpg";
 import { useAppSelector } from "../../redux-hooks/hooks";
 import { It } from "../../types";
 import ColorLangBtn from "../UI/ColorLangBtn";
-import { GetStaticProps } from "next/types";
 
 interface IProps {
   data: It;
@@ -241,17 +240,4 @@ const Category = ({
       </div>
     </AnimatePresence>
   );
-};
-
-export const getStaticProps: GetStaticProps = async () => {
-  const data: It | null | undefined = await prisma?.it?.findUnique({
-    where: {
-      id: "631f0640cb1d9c50bf6dd5a7",
-    },
-  });
-  return {
-    props: {
-      data,
-    },
-  };
 };
