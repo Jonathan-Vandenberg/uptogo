@@ -44,7 +44,7 @@ export default function App({ data }: IProps) {
           translate={translate}
           bgColor="purple-200"
           paragraph1={
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat nihil error eum, vel a commodi sint odit rem eos blanditiis velit obcaecati veniam unde enim voluptatum autem facilis. Quos, placeat!"
+            "Lorem ipsum dolor sit amet cnsectetur adipisicing elit. Repellat nihil error eum, vel a commodi sint odit rem eos blanditiis velit obcaecati veniam unde enim voluptatum autem facilis. Quos, placeat!"
           }
           list1={"Lorem ipsum dolor sit amet consectetur adipisicing elit."}
           list2={"Repellat nihil error eum, vel a"}
