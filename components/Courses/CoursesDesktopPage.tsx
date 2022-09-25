@@ -159,10 +159,9 @@ const Category = ({
   link,
   image,
 }: ICategory) => {
-  const colorStyle = `snap-start h-screen grid grid-cols-2 w-full bg-gradient-to-r from-${bgColor} via-white to-white`;
   return (
     <AnimatePresence>
-      <div className={colorStyle}>
+      <div className="snap-start h-screen grid grid-cols-2 w-full bg-gradient-to-r from-purple-200 via-white to-white">
         <motion.div
           key="Content"
           initial={{ x: -180 }}
@@ -213,7 +212,7 @@ const Category = ({
             opacity: 1,
             transition: { delay: 0.3, duration: 0.7 },
           }}
-          className="mt-[25%]"
+          className="mt-[25%] block"
         >
           <Image src={image as string} alt="IT image" layout="responsive" />
         </motion.div>
