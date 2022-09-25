@@ -54,29 +54,29 @@ export const getStaticProps: GetStaticProps = async () => {
       id: "631f0640cb1d9c50bf6dd5a7",
     },
   });
-  const design: It | null | undefined = await prisma?.it?.findUnique({
+  const design: It | null | undefined = await prisma?.design?.findUnique({
     where: {
       id: "63245ef7ef7048971301fdd9",
     },
   });
   const hospitality: Hospitality | null | undefined =
-    await prisma?.it?.findUnique({
+    await prisma?.hospitality?.findUnique({
       where: {
         id: "63259c79aa4a7bfef376d1d4",
       },
     });
-  const trades: Trades | null | undefined = await prisma?.it?.findUnique({
+  const trades: Trades | null | undefined = await prisma?.trades?.findUnique({
     where: {
       id: "631f0640cb1d9c50bf6dd5a7",
     },
   });
-  const health: Health | null | undefined = await prisma?.it?.findUnique({
+  const health: Health | null | undefined = await prisma?.health?.findUnique({
     where: {
       id: "632559421c5010b649ddea07",
     },
   });
   const management: Management | null | undefined =
-    await prisma?.it?.findUnique({
+    await prisma?.management?.findUnique({
       where: {
         id: "6325e110aa4a7bfef376d238",
       },
