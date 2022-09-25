@@ -6,14 +6,33 @@ import heroImage from "../../public/courseMain/CouresesHomeImage.jpg";
 import ITDesktop from "../../public/courseMain/ITDesktop.jpg";
 import landmarks from "../../public/heroImages/heroTravel.jpg";
 import { useAppSelector } from "../../redux-hooks/hooks";
-import { It } from "../../types";
+import {
+  Design,
+  Health,
+  Hospitality,
+  It,
+  Management,
+  Trades,
+} from "../../types";
 import ColorLangBtn from "../UI/ColorLangBtn";
 
 interface IProps {
-  data: It;
+  it: It;
+  design: Design;
+  hospitality: Hospitality;
+  trades: Trades;
+  health: Health;
+  management: Management;
 }
 
-export default function App({ data }: IProps) {
+export default function App({
+  it,
+  design,
+  hospitality,
+  trades,
+  health,
+  management,
+}: IProps) {
   const translate = useAppSelector((state) => state.translationState.translate);
   const color = useAppSelector((state) => state.iconState.color);
 
@@ -31,10 +50,10 @@ export default function App({ data }: IProps) {
           Etitle={"E Information Technology"}
           translate={translate}
           bgColor="purple-200"
-          paragraph1={data?.p1}
-          list1={data?.l1}
-          list2={data?.l2}
-          list3={data?.l3}
+          paragraph1={it?.p1}
+          list1={it?.l1}
+          list2={it?.l2}
+          list3={it?.l3}
           link={"/information-technology"}
           image={ITDesktop}
         />
@@ -43,14 +62,10 @@ export default function App({ data }: IProps) {
           Etitle={"Management"}
           translate={translate}
           bgColor="purple-200"
-          paragraph1={
-            "Lorem ipsum dolor sit amet cnsectetur adipisicing elit. Repellat nihil error eum, vel a commodi sint odit rem eos blanditiis velit obcaecati veniam unde enim voluptatum autem facilis. Quos, placeat!"
-          }
-          list1={"Lorem ipsum dolor sit amet consectetur adipisicing elit."}
-          list2={"Repellat nihil error eum, vel a"}
-          list3={
-            "Dolor sit amet consectetur adipisicing elit. Repellat nihil error eum, vel a commodi sint odit rem eos blanditiis"
-          }
+          paragraph1={management?.p1}
+          list1={management?.l1}
+          list2={management?.l2}
+          list3={management?.l3}
           link={"/management"}
           image={ITDesktop}
         />
@@ -59,14 +74,10 @@ export default function App({ data }: IProps) {
           Etitle={"Design"}
           translate={translate}
           bgColor="purple-200"
-          paragraph1={
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat nihil error eum, vel a commodi sint odit rem eos blanditiis velit obcaecati veniam unde enim voluptatum autem facilis. Quos, placeat!"
-          }
-          list1={"Lorem ipsum dolor sit amet consectetur adipisicing elit."}
-          list2={"Repellat nihil error eum, vel a"}
-          list3={
-            "Dolor sit amet consectetur adipisicing elit. Repellat nihil error eum, vel a commodi sint odit rem eos blanditiis"
-          }
+          paragraph1={design?.p1}
+          list1={design?.l1}
+          list2={design?.l2}
+          list3={design?.l3}
           link={"/design"}
           image={ITDesktop}
         />
@@ -75,14 +86,10 @@ export default function App({ data }: IProps) {
           Etitle={"Health"}
           translate={translate}
           bgColor="purple-200"
-          paragraph1={
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat nihil error eum, vel a commodi sint odit rem eos blanditiis velit obcaecati veniam unde enim voluptatum autem facilis. Quos, placeat!"
-          }
-          list1={"Lorem ipsum dolor sit amet consectetur adipisicing elit."}
-          list2={"Repellat nihil error eum, vel a"}
-          list3={
-            "Dolor sit amet consectetur adipisicing elit. Repellat nihil error eum, vel a commodi sint odit rem eos blanditiis"
-          }
+          paragraph1={health?.p1}
+          list1={health?.l1}
+          list2={health?.l2}
+          list3={health?.l3}
           link={"/health"}
           image={ITDesktop}
         />
@@ -91,14 +98,10 @@ export default function App({ data }: IProps) {
           Etitle={"Hospitality"}
           translate={translate}
           bgColor="purple-200"
-          paragraph1={
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat nihil error eum, vel a commodi sint odit rem eos blanditiis velit obcaecati veniam unde enim voluptatum autem facilis. Quos, placeat!"
-          }
-          list1={"Lorem ipsum dolor sit amet consectetur adipisicing elit."}
-          list2={"Repellat nihil error eum, vel a"}
-          list3={
-            "Dolor sit amet consectetur adipisicing elit. Repellat nihil error eum, vel a commodi sint odit rem eos blanditiis"
-          }
+          paragraph1={hospitality?.p1}
+          list1={hospitality?.l1}
+          list2={hospitality?.l2}
+          list3={hospitality?.l3}
           link={"/hospitality"}
           image={ITDesktop}
         />
@@ -107,14 +110,10 @@ export default function App({ data }: IProps) {
           Etitle={"Trades & Sports"}
           translate={translate}
           bgColor="purple-200"
-          paragraph1={
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat nihil error eum, vel a commodi sint odit rem eos blanditiis velit obcaecati veniam unde enim voluptatum autem facilis. Quos, placeat!"
-          }
-          list1={"Lorem ipsum dolor sit amet consectetur adipisicing elit."}
-          list2={"Repellat nihil error eum, vel a"}
-          list3={
-            "Dolor sit amet consectetur adipisicing elit. Repellat nihil error eum, vel a commodi sint odit rem eos blanditiis"
-          }
+          paragraph1={trades?.p1}
+          list1={trades?.l1}
+          list2={trades?.l1}
+          list3={trades?.l1}
           link={"/trades"}
           image={ITDesktop}
         />
