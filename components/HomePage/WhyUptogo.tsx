@@ -6,7 +6,7 @@ interface IProps {
 
 export default function App({ whyUptogoImage }: IProps) {
   return (
-    <div className="overflow-hidden md:overflow-visible relative p-6 md:p-0 max-w-[678px] md:max-w-[900px] mx-auto">
+    <div className="overflow-hidden md:overflow-visible relative p-6 md:p-0 max-w-[678px] md:max-w-[900px] container mx-auto">
       <div className="flex items-center justify-center flex-col md:grid md:grid-cols-2">
         <div className="md:grid-cols-1 md:py-12 px-2">
           <h2 className="pb-8  text-3xl logoFont text-orange md:text-5xl lg:text-5xl">
