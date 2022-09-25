@@ -213,7 +213,7 @@ const Category = ({
           }}
           className="h-full w-full"
         >
-          <div className="mt-[25%] block">
+          <div className="mt-32 block">
             <Image src={image as string} alt="IT image" layout="responsive" />
           </div>
         </motion.div>
