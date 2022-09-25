@@ -36,7 +36,7 @@ export default function App({ whyUptogoImage }: IProps) {
       </div>
       <span className="absolute -z-10 rounded-full w-96 h-40 rotate-45 top-48 transform -translate-x-2/3 bg-orange/10" />
       <span className="absolute -z-10 rounded-full w-96 h-40 rotate-45 md:top-44 top-28 transform translate-x-2/3 bg-orange/10 md:bg-sky-100/50" />
-      <span className="absolute -z-10 rounded-full w-96 h-40 -rotate-45 top-72 md:top-44 transform -right-60 md:-right-52 bg-orange/10" />
+      <span className="absolute -z-10 rounded-full w-96 h-40 -rotate-45 top-72 md:top-44 transform -right-60 md:-right-52 bg-orange/10 hidden md:block" />
     </div>
   );
 }

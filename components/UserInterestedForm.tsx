@@ -103,7 +103,9 @@ const AddClientForm = ({ handleClose }: IProps) => {
             required
             className="border-2 border-gray-200 p-3 rounded-xl w-full"
           >
-            <option value="">Choose Your Major</option>
+            <option value="">
+              {translate ? "Choose Your Major" : "Chọn Ngành Học"}
+            </option>
             {options.map((o, i) => (
               <option key={i} value={o.value}>
                 {translate ? o.Elabel : o.label}
