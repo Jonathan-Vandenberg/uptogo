@@ -38,7 +38,7 @@ export default function App({
 
   return (
     <>
-      <div className="snap-y h-screen overflow-y-scroll snap-mandatory">
+      <div className="snap-y h-screen overflow-y-scroll snap-mandatory lg:flex lg:items-center lg:justify-center lg:flex-col">
         <div className="h-screen snap-start bg-gradient-to-b from-sky-100 via-white to-orange/20 block">
           <div className="container mx-auto relative">
             <Image src={heroImage} layout="responsive" alt="eduaction image" />
@@ -47,7 +47,7 @@ export default function App({
         </div>
         <Category
           title={"Công nghệ thông tin"}
-          Etitle={"E Information Technology"}
+          Etitle={"Information Technology"}
           translate={translate}
           bgColor="purple-200"
           paragraph1={it?.p1}
