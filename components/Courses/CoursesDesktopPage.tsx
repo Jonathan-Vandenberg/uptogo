@@ -27,7 +27,7 @@ export default function App({ data }: IProps) {
           <p></p>
         </div>
         <Category
-          title={"V Information Technology"}
+          title={"Công nghệ thông tin"}
           Etitle={"E Information Technology"}
           translate={translate}
           bgColor="purple-200"
@@ -212,9 +212,11 @@ const Category = ({
             opacity: 1,
             transition: { delay: 0.3, duration: 0.7 },
           }}
-          className="my-[25%] block"
+          className="h-full w-full"
         >
-          <Image src={image as string} alt="IT image" layout="responsive" />
+          <div className="mt-[25%] block">
+            <Image src={image as string} alt="IT image" layout="responsive" />
+          </div>
         </motion.div>
       </div>
     </AnimatePresence>
