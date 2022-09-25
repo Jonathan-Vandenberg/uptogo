@@ -32,7 +32,6 @@ export default function App({ data }: IProps) {
           translate={translate}
           bgColor="purple-200"
           paragraph1={data?.p1}
-          paragraph2={data?.p2}
           list1={data?.l1}
           list2={data?.l2}
           list3={data?.l3}
@@ -45,9 +44,6 @@ export default function App({ data }: IProps) {
           translate={translate}
           bgColor="purple-200"
           paragraph1={
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat nihil error eum, vel a commodi sint odit rem eos blanditiis velit obcaecati veniam unde enim voluptatum autem facilis. Quos, placeat!"
-          }
-          paragraph2={
             "Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat nihil error eum, vel a commodi sint odit rem eos blanditiis velit obcaecati veniam unde enim voluptatum autem facilis. Quos, placeat!"
           }
           list1={"Lorem ipsum dolor sit amet consectetur adipisicing elit."}
@@ -66,9 +62,6 @@ export default function App({ data }: IProps) {
           paragraph1={
             "Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat nihil error eum, vel a commodi sint odit rem eos blanditiis velit obcaecati veniam unde enim voluptatum autem facilis. Quos, placeat!"
           }
-          paragraph2={
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat nihil error eum, vel a commodi sint odit rem eos blanditiis velit obcaecati veniam unde enim voluptatum autem facilis. Quos, placeat!"
-          }
           list1={"Lorem ipsum dolor sit amet consectetur adipisicing elit."}
           list2={"Repellat nihil error eum, vel a"}
           list3={
@@ -83,9 +76,6 @@ export default function App({ data }: IProps) {
           translate={translate}
           bgColor="purple-200"
           paragraph1={
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat nihil error eum, vel a commodi sint odit rem eos blanditiis velit obcaecati veniam unde enim voluptatum autem facilis. Quos, placeat!"
-          }
-          paragraph2={
             "Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat nihil error eum, vel a commodi sint odit rem eos blanditiis velit obcaecati veniam unde enim voluptatum autem facilis. Quos, placeat!"
           }
           list1={"Lorem ipsum dolor sit amet consectetur adipisicing elit."}
@@ -104,9 +94,6 @@ export default function App({ data }: IProps) {
           paragraph1={
             "Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat nihil error eum, vel a commodi sint odit rem eos blanditiis velit obcaecati veniam unde enim voluptatum autem facilis. Quos, placeat!"
           }
-          paragraph2={
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat nihil error eum, vel a commodi sint odit rem eos blanditiis velit obcaecati veniam unde enim voluptatum autem facilis. Quos, placeat!"
-          }
           list1={"Lorem ipsum dolor sit amet consectetur adipisicing elit."}
           list2={"Repellat nihil error eum, vel a"}
           list3={
@@ -121,9 +108,6 @@ export default function App({ data }: IProps) {
           translate={translate}
           bgColor="purple-200"
           paragraph1={
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat nihil error eum, vel a commodi sint odit rem eos blanditiis velit obcaecati veniam unde enim voluptatum autem facilis. Quos, placeat!"
-          }
-          paragraph2={
             "Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat nihil error eum, vel a commodi sint odit rem eos blanditiis velit obcaecati veniam unde enim voluptatum autem facilis. Quos, placeat!"
           }
           list1={"Lorem ipsum dolor sit amet consectetur adipisicing elit."}
@@ -156,7 +140,6 @@ interface ICategory {
   bgColor: string | undefined | null;
   translate: boolean | undefined | null;
   paragraph1: string | undefined | null;
-  paragraph2: string | undefined | null;
   list1: string | undefined | null;
   list2: string | undefined | null;
   list3: string | undefined | null;
@@ -170,7 +153,6 @@ const Category = ({
   bgColor,
   translate,
   paragraph1,
-  paragraph2,
   list1,
   list2,
   list3,
@@ -196,8 +178,6 @@ const Category = ({
           </div>
           <div className=" flex flex-col items-center justify-center space-y-6">
             <p className="text-lg ">{paragraph1}</p>
-
-            <p className="text-lg ">{paragraph2}</p>
             <ul className="flex items-start justify-center flex-col space-y-3">
               <div className="flex items-center justify-center space-x-3">
                 <div>
