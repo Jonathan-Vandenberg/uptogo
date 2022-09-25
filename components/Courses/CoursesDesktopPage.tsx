@@ -36,7 +36,7 @@ export default function App({ data }: IProps) {
           list2={data?.l2}
           list3={data?.l3}
           link={"/information-technology"}
-          image={data?.mainImage}
+          image={ITDesktop}
         />
         <Category
           title={"Quản lý"}
