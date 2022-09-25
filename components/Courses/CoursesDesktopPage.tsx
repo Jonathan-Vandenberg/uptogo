@@ -121,7 +121,7 @@ export default function App({
           <div className="fixed bottom-12 left-0 w-screen">
             <Image
               src={landmarks}
-              alt="landmarks decorational"
+              alt="Landmarks decorational"
               layout="responsive"
               priority
             />
