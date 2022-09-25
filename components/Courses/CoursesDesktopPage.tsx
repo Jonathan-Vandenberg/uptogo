@@ -166,7 +166,7 @@ const Category = ({
           key="Content"
           initial={{ x: -180 }}
           whileInView={{ x: 0, transition: { duration: 0.5 } }}
-          className="flex flex-col items-center justify-start pb-20 px-20 pt-10"
+          className="flex flex-col items-center justify-start pb-20 px-20 pt-6"
         >
           <div className="p-6">
             <Link href={link as string}>
@@ -176,7 +176,7 @@ const Category = ({
             </Link>
           </div>
           <div className=" flex flex-col items-center justify-center space-y-6">
-            <p className="text-lg ">{paragraph1}</p>
+            <p className="text-lg line-clamp-6">{paragraph1}</p>
             <ul className="flex items-start justify-center flex-col space-y-3">
               <div className="flex items-center justify-center space-x-3">
                 <div>
@@ -212,7 +212,7 @@ const Category = ({
             opacity: 1,
             transition: { delay: 0.3, duration: 0.7 },
           }}
-          className="mt-[25%] block"
+          className="my-[25%] block"
         >
           <Image src={image as string} alt="IT image" layout="responsive" />
         </motion.div>
