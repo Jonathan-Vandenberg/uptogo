@@ -16,7 +16,7 @@ export default function MediaCard({ reviews }: { reviews: Review[] }) {
           key={item.name}
           sx={{
             maxWidth: 345,
-            border: 1,
+            border: 4,
             borderRadius: 2,
             borderColor: "orange",
             boxShadow: "none",
