@@ -143,7 +143,7 @@ export default function BlogMain({ data, handleEdit, handleAdd }: IFormProps) {
   const styles = data?.mainImage ? "pb-8 block" : "block p-20";
 
   return (
-    <div className="max-w-[678px] md:max-w-[900px] mx-auto md:pt-12">
+    <div className="max-w-[678px] md:max-w-[900px] mx-auto md:py-12">
       <div className="pb-4 px-6 md:px-0 md:pb-10">
         <div className="logoFont text-darkBlue text-2xl md:text-3xl lg:text-4xl">
           {data?.title}
@@ -182,11 +182,7 @@ export default function BlogMain({ data, handleEdit, handleAdd }: IFormProps) {
           handleAdd={handleAdd}
         />
       </div>
-      <UserInterestedForm
-        handleClose={function (): void {
-          throw new Error("Function not implemented.");
-        }}
-      />
+      <UserInterestedForm />
     </div>
   );
 }

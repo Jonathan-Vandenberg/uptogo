@@ -9,11 +9,7 @@ import CheckIcon from "@mui/icons-material/Check";
 import Image from "next/image";
 import { useAppSelector } from "../redux-hooks/hooks";
 
-interface IProps {
-  handleClose: () => void;
-}
-
-const AddClientForm = ({ handleClose }: IProps) => {
+const AddClientForm = () => {
   const [addUserInterested] = useAddUserInterestedMutation();
   const translate = useAppSelector((state) => state.translationState.translate);
 
@@ -58,11 +54,14 @@ const AddClientForm = ({ handleClose }: IProps) => {
   };
 
   return (
-    <div className="pt-8 max-w-[678px] md:max-w-[900px] mx-auto flex flex-col items-center juistify-center">
+    <div className="pt-8 max-w-[678px] md:max-w-[900px] mx-auto flex flex-col items-center juistify-center container">
       <div className="p-2 w-auto rounded-full bg-white shadow-md flex items-center justify-center -mb-6">
         <Image src={logo} alt="logo" width={60} height={60} />
       </div>
-      <form onSubmit={onFinish} className="space-y-3 py-12 w-full">
+      <p className="pt-12 text-center px-5 pb-6 text-xl text-gray-700 container mx-auto logoFont">
+        Để lại thông tin của bạn và chúng tôi sẽ liên hệ với bạn
+      </p>
+      <form onSubmit={onFinish} className="space-y-3 pb-12 w-full">
         <div className="px-8 flex items-start space-y-3 justify-center flex-col pt-3">
           <input
             required
@@ -120,7 +119,7 @@ const AddClientForm = ({ handleClose }: IProps) => {
             transition: { duration: 0.2 },
           }}
           whileTap={{ scale: 0.98 }}
-          className="flex items-center justify-center border-green-600 pt-6"
+          className="flex items-center justify-center border-green-600 pt-10"
         >
           <button
             type="submit"

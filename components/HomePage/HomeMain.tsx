@@ -56,7 +56,7 @@ export default function App() {
         <Image src={banner1} alt="uptogo banner" layout="responsive" />
       </div>
       <div className="container mx-auto">
-        <div className="py-12 flex items-center justify-center">
+        <div className="pt-12 flex items-center justify-center">
           <Popup />
         </div>
         <ReadyToExplore
@@ -64,15 +64,11 @@ export default function App() {
           handleCategoryStepper={handleCategoryStepper}
           step={step}
         />
-        <div className="block w-full pb-14">
+        <div className="block w-full pb-20">
           <Image src={banner3} alt={"uptogo banner"} layout="responsive" />
         </div>
         <CustomerReview reviews={reviews} />
-        <UserInterestedForm
-          handleClose={function (): void {
-            throw new Error("Function not implemented.");
-          }}
-        />
+        <UserInterestedForm />
       </div>
       {/* <CourseCard
         course={"Yoga"}

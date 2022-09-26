@@ -137,7 +137,7 @@ interface IFormProps {
 
 export default function BlogMain({ data, handleEdit, handleAdd }: IFormProps) {
   return (
-    <div className="container">
+    <div className="container mx-auto">
       <BlogHeader data={data} />
       <div className="px-5 max-w-[678px] md:max-w-[900px] mx-auto">
         <BlogPostMarkup

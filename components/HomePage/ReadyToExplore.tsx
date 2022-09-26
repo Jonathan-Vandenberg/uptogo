@@ -20,8 +20,8 @@ export default function App({
   step,
 }: IProps) {
   return (
-    <div className="max-w-[678px] md:max-w-[900px] mx-auto container">
-      <div className="my-6">
+    <div className="max-w-[678px] md:max-w-[900px] md:my-12 mx-auto container border-t-gray-300 md:border-none border-2">
+      <div className="mb-6">
         <div className="pt-5 text-center ">
           <h2 className="logoFont text-3xl md:text-5xl text-gray-700 py-1 md:py-3">
             Ready to Explore?

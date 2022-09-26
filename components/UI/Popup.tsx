@@ -12,7 +12,7 @@ import CoursesBtn from "./CoursesBtn";
 
 export default function PopupCard() {
   return (
-    <div className="py-10 flex items-center justify-center flex-col relative -mt-10 md:mt-0 md:bg-sky-50">
+    <div className="pt-10 flex items-center justify-center flex-col relative -mt-10 md:mt-0 md:bg-sky-50">
       <div className="p-2 rounded-full bg-white shadow-md flex items-center justify-center">
         <Image src={logo} alt="logo" width={60} height={60} />
       </div>
@@ -37,8 +37,10 @@ export default function PopupCard() {
             <CheckIcon className="text-green-500" fontSize="medium" />
             <p className="text-lg">On-campus transition support</p>
           </li>
+          <li className="w-auto flex items-center justify-center">
+            <CoursesBtn title="Find Courses" />
+          </li>
         </ul>
-        <CoursesBtn title="Find Courses" />
         <p>Some of our partners include:</p>
         <span className="absolute -z-10 rounded-full w-96 h-40 rotate-45 top-28 transform left-72 bg-sky-50" />
         <span className="absolute -z-10 rounded-full w-96 h-40 rotate-45 top-52 right-80 bg-orange/10" />

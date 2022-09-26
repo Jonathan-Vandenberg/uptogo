@@ -21,13 +21,17 @@ const App = ({ handleCloseDropdowns }: IProps) => {
       <div className="col-span-1">
         <div className="flex items-center justify-between">
           {translate ? (
-            <p className="text-lg text-gray-800 py-3 underline underline-offset-4 whitespace-nowrap px-4 w-full font-semibold">
-              Information Technology
-            </p>
+            <Link href="/courses/information-technology">
+              <p className="text-gray-800 py-1 underline cursor-pointer underline-offset-4 whitespace-nowrap w-full font-semibold">
+                Information Technology
+              </p>
+            </Link>
           ) : (
-            <p className="text-lg text-gray-800 py-3 underline underline-offset-4 whitespace-nowrap px-4 w-full font-semibold">
-              Công nghệ thông tin
-            </p>
+            <Link href="/courses/information-technology">
+              <p className=" text-gray-800 py-1 underline cursor-pointer underline-offset-4 whitespace-nowrap w-full font-semibold">
+                Công nghệ thông tin
+              </p>
+            </Link>
           )}
         </div>
         <div className="flex items-start justify-center flex-col">
@@ -41,7 +45,7 @@ const App = ({ handleCloseDropdowns }: IProps) => {
                 href={item.link}
                 className="cursor-pointer text-sm text-gray-600 hover:text-iwanttoColor"
               >
-                <p className="text-gray-600 hover:text-orange leading-5 text-lg pl-2 py-2">
+                <p className="text-gray-600 hover:text-orange leading-5 text-sm py-1">
                   {translate ? item.courseE : item.course}
                 </p>
               </Link>
@@ -52,13 +56,17 @@ const App = ({ handleCloseDropdowns }: IProps) => {
       <div className="col-span-1">
         <div className="flex items-center justify-between">
           {translate ? (
-            <p className="text-lg text-gray-800 py-3 underline underline-offset-4 whitespace-nowrap px-4 w-full font-semibold">
-              Design
-            </p>
+            <Link href={"/courses/design"}>
+              <p className=" text-gray-800 py-1 underline cursor-pointer underline-offset-4 whitespace-nowrap w-full font-semibold">
+                Design
+              </p>
+            </Link>
           ) : (
-            <p className="text-lg text-gray-800 py-3 underline underline-offset-4 whitespace-nowrap px-4 w-full font-semibold">
-              Thiết kế
-            </p>
+            <Link href={"/courses/design"}>
+              <p className=" text-gray-800 py-1 underline cursor-pointer underline-offset-4 whitespace-nowrap w-full font-semibold">
+                Thiết kế
+              </p>
+            </Link>
           )}
         </div>
         <div className="flex items-start justify-center flex-col">
@@ -72,7 +80,7 @@ const App = ({ handleCloseDropdowns }: IProps) => {
                 href={item.link}
                 className="cursor-pointer text-sm text-gray-600 hover:text-iwanttoColor"
               >
-                <p className="text-gray-600 hover:text-orange leading-5 text-lg pl-2 py-2">
+                <p className="text-gray-600 hover:text-orange leading-5 text-sm py-1">
                   {translate ? item.courseE : item.course}
                 </p>
               </Link>
@@ -83,13 +91,17 @@ const App = ({ handleCloseDropdowns }: IProps) => {
       <div className="col-span-1">
         <div className="flex items-center justify-between">
           {translate ? (
-            <p className="text-lg text-gray-800 py-3 underline underline-offset-4 whitespace-nowrap px-4 w-full font-semibold">
-              Management
-            </p>
+            <Link href={"/courses/management"}>
+              <p className=" text-gray-800 py-1 underline cursor-pointer underline-offset-4 whitespace-nowrap w-full font-semibold">
+                Management
+              </p>
+            </Link>
           ) : (
-            <p className="text-lg text-gray-800 py-3 underline underline-offset-4 whitespace-nowrap px-4 w-full font-semibold">
-              Quản lý
-            </p>
+            <Link href={"/courses/management"}>
+              <p className=" text-gray-800 py-1 underline cursor-pointer underline-offset-4 whitespace-nowrap w-full font-semibold">
+                Quản lý
+              </p>
+            </Link>
           )}
         </div>
         <div className="flex items-start justify-center flex-col">
@@ -103,7 +115,7 @@ const App = ({ handleCloseDropdowns }: IProps) => {
                 href={item.link}
                 className="cursor-pointer text-sm text-gray-600 hover:text-iwanttoColor"
               >
-                <p className="text-gray-600 hover:text-orange leading-5 text-lg pl-2 py-2">
+                <p className="text-gray-600 hover:text-orange leading-5 text-sm py-1">
                   {translate ? item.courseE : item.course}
                 </p>
               </Link>
@@ -114,13 +126,17 @@ const App = ({ handleCloseDropdowns }: IProps) => {
       <div className="col-span-1">
         <div className="flex items-center justify-between">
           {translate ? (
-            <p className="text-lg text-gray-800 py-3 underline underline-offset-4 whitespace-nowrap px-4 w-full font-semibold">
-              Health
-            </p>
+            <Link href={"/courses/health"}>
+              <p className=" text-gray-800 py-1 underline cursor-pointer underline-offset-4 whitespace-nowrap w-full font-semibold">
+                Health
+              </p>
+            </Link>
           ) : (
-            <p className="text-lg text-gray-800 py-3 underline underline-offset-4 whitespace-nowrap px-4 w-full font-semibold">
-              Sức khỏe
-            </p>
+            <Link href={"/courses/health"}>
+              <p className=" text-gray-800 py-1 underline cursor-pointer underline-offset-4 whitespace-nowrap w-full font-semibold">
+                Sức khỏe
+              </p>
+            </Link>
           )}
         </div>
         <div className="flex items-start justify-center flex-col">
@@ -134,7 +150,7 @@ const App = ({ handleCloseDropdowns }: IProps) => {
                 href={item.link}
                 className="cursor-pointer text-sm text-gray-600 hover:text-iwanttoColor"
               >
-                <p className="text-gray-600 hover:text-orange leading-5 text-lg pl-2 py-2">
+                <p className="text-gray-600 hover:text-orange leading-5 text-sm py-1">
                   {translate ? item.courseE : item.course}
                 </p>
               </Link>
@@ -145,13 +161,17 @@ const App = ({ handleCloseDropdowns }: IProps) => {
       <div className="col-span-1">
         <div className="flex items-center justify-between">
           {translate ? (
-            <p className="text-lg text-gray-800 py-3 underline underline-offset-4 whitespace-nowrap px-4 w-full font-semibold">
-              Hospitality
-            </p>
+            <Link href={"/courses/hospitality"}>
+              <p className=" text-gray-800 py-1 underline cursor-pointer underline-offset-4 whitespace-nowrap w-full font-semibold">
+                Hospitality
+              </p>
+            </Link>
           ) : (
-            <p className="text-lg text-gray-800 py-3 underline underline-offset-4 whitespace-nowrap px-4 w-full font-semibold">
-              Nhà hàng khách sạn{" "}
-            </p>
+            <Link href={"/courses/hospitality"}>
+              <p className=" text-gray-800 py-1 underline cursor-pointer underline-offset-4 whitespace-nowrap w-full font-semibold">
+                Nhà hàng khách sạn{" "}
+              </p>
+            </Link>
           )}
         </div>
         <div className="flex items-start justify-center flex-col">
@@ -165,7 +185,7 @@ const App = ({ handleCloseDropdowns }: IProps) => {
                 href={item.link}
                 className="cursor-pointer text-sm text-gray-600 hover:text-iwanttoColor"
               >
-                <p className="text-gray-600 hover:text-orange leading-5 text-lg pl-2 py-2">
+                <p className="text-gray-600 hover:text-orange leading-5 text-sm py-1">
                   {translate ? item.courseE : item.course}
                 </p>
               </Link>
@@ -176,13 +196,17 @@ const App = ({ handleCloseDropdowns }: IProps) => {
       <div className="col-span-1">
         <div className="flex items-center justify-between">
           {translate ? (
-            <p className="text-lg text-gray-800 py-3 underline underline-offset-4 whitespace-nowrap px-4 w-full font-semibold">
-              Trades and Sports
-            </p>
+            <Link href={"/courses/trades"}>
+              <p className=" text-gray-800 py-1 underline cursor-pointer underline-offset-4 whitespace-nowrap w-full font-semibold">
+                Trades and Sports
+              </p>
+            </Link>
           ) : (
-            <p className="text-lg text-gray-800 py-3 underline underline-offset-4 whitespace-nowrap px-4 w-full font-semibold">
-              Thương mại & Thể thao
-            </p>
+            <Link href={"/courses/trades"}>
+              <p className=" text-gray-800 py-1 underline cursor-pointer underline-offset-4 whitespace-nowrap w-full font-semibold">
+                Thương mại & Thể thao
+              </p>
+            </Link>
           )}
         </div>
         <div className="flex items-start justify-center flex-col">
@@ -196,7 +220,7 @@ const App = ({ handleCloseDropdowns }: IProps) => {
                 href={item.link}
                 className="cursor-pointer text-sm text-gray-600 hover:text-iwanttoColor"
               >
-                <p className="text-gray-600 hover:text-orange leading-5 text-lg pl-2 py-2">
+                <p className="text-gray-600 hover:text-orange leading-5 text-sm py-1">
                   {translate ? item.courseE : item.course}
                 </p>
               </Link>

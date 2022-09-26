@@ -4,6 +4,7 @@ import { ParsedUrlQuery } from "querystring";
 import { useState } from "react";
 import BlogMain from "../../components/Blog/BlogMain";
 import MainForm from "../../components/MainForm";
+import UserInterestedForm from "../../components/UserInterestedForm";
 import { BlogPost } from "../../types";
 
 interface IBlogPost {
@@ -28,7 +29,7 @@ export default function Blog({ data }: IBlogPost) {
   };
 
   return (
-    <div className="container">
+    <div className="container mx-auto">
       <BlogMain data={data} handleEdit={handleEdit} handleAdd={handleAdd} />
       {showForm && (
         <MainForm
@@ -38,6 +39,7 @@ export default function Blog({ data }: IBlogPost) {
           handleClose={() => setShowForm(false)}
         />
       )}
+      <UserInterestedForm />
     </div>
   );
 }

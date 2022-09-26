@@ -20,7 +20,7 @@ const Footer = () => {
   return (
     <>
       <motion.div
-        className="hidden md:block"
+        className="hidden md:block mt-12"
         initial={{ opacity: 0 }}
         whileInView={{
           opacity: 1,

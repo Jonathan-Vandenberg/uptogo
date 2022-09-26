@@ -11,6 +11,7 @@ import {
   Trades,
 } from "../../types";
 import prisma from "../../lib/prisma";
+import UserInterestedForm from "../../components/UserInterestedForm";
 
 interface IProps {
   it: It;
@@ -44,6 +45,7 @@ export default function App({
           management={management}
         />
       </div>
+      <UserInterestedForm />
     </>
   );
 }

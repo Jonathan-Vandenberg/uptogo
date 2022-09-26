@@ -67,6 +67,7 @@ import {
   Trades,
   CurrentEvent,
 } from "../../types";
+import { useAppSelector } from "../../redux-hooks/hooks";
 
 interface IHeroProps {
   data:
@@ -371,11 +372,15 @@ export default function App({ data }: IHeroProps) {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
+  const translate = useAppSelector((state) => state.translationState.translate);
+
   return (
     <div className="px-5 md:mb-8 md:px-0 max-w-[678px] md:max-w-[900px] mx-auto w-full h-full container">
       <div className="bg-sky-50 md:px-0 px-8  md:flex-row flex-col-reverse flex items-center justify-evenly">
         <div className="bg-sky-50 px-4 flex items-start flex-col justify-start w-full h-full md:w-2/5 py-6">
-          <p className="text-gray-400 text-lg">{data?.category}</p>
+          <p className="text-gray-400 text-lg">
+            {translate ? "News" : "Tin Tức"}
+          </p>
           <div className="flex flex-col items-center justify-between space-y-5">
             <h1 className="text-gray-700 logoFont text-3xl leading-12">
               {data?.title}
@@ -385,7 +390,7 @@ export default function App({ data }: IHeroProps) {
             </p>
             <Link href={slug}>
               <p className="text-xl text-center text-gray-700 text-thin border-b-8 border-orange cursor-pointer">
-                READ MORE
+                {translate ? "READ MORE" : "Đọc thêm"}
               </p>
             </Link>
           </div>
