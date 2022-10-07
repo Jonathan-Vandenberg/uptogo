@@ -53,13 +53,17 @@ const AddClientForm = () => {
     setEmail("");
   };
 
+  const submitText = translate ? "Submit" : "Gửi";
+
   return (
-    <div className="pt-8 max-w-[678px] md:max-w-[900px] mx-auto flex flex-col items-center juistify-center container">
-      <div className="p-2 w-auto rounded-full bg-white shadow-md flex items-center justify-center -mb-6">
+    <div className="max-w-[678px] md:max-w-[900px] mx-auto flex flex-col items-center juistify-center container mt-12">
+      <div className="p-2 w-auto rounded-full bg-white shadow-md flex items-center justify-center">
         <Image src={logo} alt="logo" width={60} height={60} />
       </div>
-      <p className="pt-12 text-center px-5 pb-6 text-xl text-gray-700 container mx-auto logoFont">
-        Để lại thông tin của bạn và chúng tôi sẽ liên hệ với bạn
+      <p className="pt-6 text-center px-5 pb-6 text-xl text-gray-700 container mx-auto logoFont">
+        {translate
+          ? "Leave your information and we'll get back to you"
+          : "Để lại thông tin của bạn và chúng tôi sẽ liên hệ với bạn"}
       </p>
       <form onSubmit={onFinish} className="space-y-3 pb-12 w-full">
         <div className="px-8 flex items-start space-y-3 justify-center flex-col pt-3">
@@ -67,7 +71,7 @@ const AddClientForm = () => {
             required
             id="name"
             value={name as string}
-            placeholder="Full Name"
+            placeholder={translate ? "Full Name" : "Họ và tên"}
             onChange={(e) => setName(e.target.value)}
             className="border-2 border-gray-200 p-3 rounded-xl w-full"
           />
@@ -89,7 +93,7 @@ const AddClientForm = () => {
             required
             id="mobile"
             value={mobile as string}
-            placeholder="Mobile"
+            placeholder={translate ? "Mobile" : "Điện thoại"}
             onChange={(e) => setMobile(e.target.value)}
             className="border-2 border-gray-200 p-3 rounded-xl w-full"
           />
@@ -132,7 +136,7 @@ const AddClientForm = () => {
             ) : (
               <BsPlus size={25} className="text-green-500 hover:text-white" />
             )}
-            {submitted ? "" : "Submit"}
+            {submitted ? "" : submitText}
           </button>
         </motion.div>
       </form>

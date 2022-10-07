@@ -1,5 +1,6 @@
 import { GraphQLYogaError } from "@graphql-yoga/node";
 import { GetStaticProps } from "next";
+import Head from "next/head";
 import { useRouter } from "next/router";
 import { useState } from "react";
 import CoursesMainPage from "../components/Courses/CoursesMainPage";
@@ -53,34 +54,60 @@ export default function App({ data }: IProps) {
   };
 
   return (
-    <div className="mx-auto container">
-      {data ? (
-        <CoursesMainPage
-          data={data}
-          handleEdit={handleEdit}
-          handleAdd={handleAdd}
+    <>
+      <Head>
+        <title>{`Uptogo | ${data?.title}`}</title>
+        <meta name="description" content={`Uptogo | ${data?.subtitle1}`} />
+        <link rel="shortcut icon" href="/uptogoFavicon.png" />
+        <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content={`Uptogo | ${data?.title}`} />
+        <meta
+          property="og:description"
+          content={`Uptogo | ${data?.subtitle1}`}
         />
-      ) : (
-        <div>
-          <p>Loading...</p>
-        </div>
-      )}
-      {showForm && (
-        <div>
-          {data ? (
-            <MainForm
-              details={data}
-              add={add}
-              edit={edit}
-              handleClose={() => setShowForm(false)}
-            />
-          ) : (
-            <div>
-              <p>Loading..</p>
-            </div>
-          )}
-        </div>
-      )}
-    </div>
+        <meta property="og:url" content="https://www.uptogo.org/events" />
+        <meta property="og:image:type" content="image/png" />
+        <meta
+          property="og:image"
+          content="https://www.uptogo.org/fullLogo.png”"
+        />
+        <meta property="og:image:width" content="600" />
+        <meta property="og:image:height" content="600" />
+        <meta property="og:image:alt" content="Lotus Angel Logo of Uptogo" />
+        <meta property="og:locale" content="vi_VN" />
+        <meta property="og:locale:alternate" content="en_GB" />
+      </Head>
+      <div className="mx-auto container">
+        {data ? (
+          <CoursesMainPage
+            data={data}
+            handleEdit={handleEdit}
+            handleAdd={handleAdd}
+          />
+        ) : (
+          <div>
+            <p>Loading...</p>
+          </div>
+        )}
+        {showForm && (
+          <div>
+            {data ? (
+              <MainForm
+                details={data}
+                add={add}
+                edit={edit}
+                handleClose={() => setShowForm(false)}
+              />
+            ) : (
+              <div>
+                <p>Loading..</p>
+              </div>
+            )}
+          </div>
+        )}
+      </div>
+    </>
   );
 }

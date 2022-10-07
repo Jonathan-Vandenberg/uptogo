@@ -1,146 +1,135 @@
+import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
+import { BsPlus } from "react-icons/bs";
 import {
-  ComputerNetworking,
-  SoftwareDevelopment,
-  useAddSoftwareDevelopmentMutation,
-  useUpdateSoftwareDevelopmentMutation,
-  CloudComputing,
-  BusinessAnalysis,
-  Telecommunication,
-  GameProgramming,
-  WebDevelopment,
-  MachineLearning,
-  DataManagement,
-  Blockchain,
-  Ai,
-  useAddComputerNetworkingMutation,
-  useAddAiMutation,
-  useAddBlockchainMutation,
-  useAddBusinessAnalysisMutation,
-  useAddCloudComputingMutation,
-  useAddDataManagementMutation,
-  useAddGameProgrammingMutation,
-  useAddMachineLearningMutation,
-  useAddTelecommunicationMutation,
-  useAddWebDevelopmentMutation,
-  useUpdateAiMutation,
-  useUpdateBlockchainMutation,
-  useUpdateBusinessAnalysisMutation,
-  useUpdateCloudComputingMutation,
-  useUpdateComputerNetworkingMutation,
-  useUpdateDataManagementMutation,
-  useUpdateGameProgrammingMutation,
-  useUpdateMachineLearningMutation,
-  useUpdateTelecommunicationMutation,
-  useUpdateWebDevelopmentMutation,
-  useUpdateDesignMutation,
-  useUpdateCurrentEventMutation,
-  BlogPost,
-  useUpdateBlogPostMutation,
-  useUpdateItMutation,
-  It,
-  Design,
-  Music,
-  useUpdateMusicMutation,
   Acting,
-  Animation3D,
-  DigitalMedia,
-  FashionDesign,
-  Film,
-  GraphicDesign,
-  InteriorDesign,
-  Landscape,
-  Events,
   AgedCare,
   AgribusinessManagement,
+  Ai,
+  Animation3D,
   Automotive,
   Baking,
   BankingManagement,
   Beauty,
+  Blockchain,
+  BlogPost,
+  BusinessAnalysis,
   BusinessManagement,
   Carpentry,
+  CloudComputing,
+  ComputerNetworking,
   Construction,
   Cookery,
+  CurrentEvent,
+  DataManagement,
   Dental,
+  Design,
+  DigitalMedia,
   Education,
+  Events,
+  FashionDesign,
+  Film,
   Fitness,
+  GameProgramming,
+  GraphicDesign,
+  Guidance,
   Hairdressing,
   Health,
   Horticulture,
+  Hospitality,
   HospitalityManagement,
   HotelManagement,
   HumanResources,
+  InteriorDesign,
   IntlBusiness,
+  It,
+  Landscape,
   LeadershipManagement,
+  MachineLearning,
+  Management,
   Massage,
   Medicine,
   MentalHealth,
+  Music,
   Nursing,
   Nutrition,
   ProjectManagement,
   PublicHealth,
   SocialMediaMarketing,
+  SoftwareDevelopment,
   SportDevelopment,
   SupplyManagement,
-  TravelTourism,
-  Veterinary,
-  Yoga,
-  Hospitality,
+  Telecommunication,
   Trades,
-  Management,
-  CurrentEvent,
-  useUpdateFashionDesignMutation,
+  TravelTourism,
+  useAddBlogPostMutation,
   useUpdateActingMutation,
-  useUpdateAnimation3DMutation,
-  useUpdateDigitalMediaMutation,
-  useUpdateFilmMutation,
-  useUpdateGraphicDesignMutation,
-  useUpdateInteriorDesignMutation,
-  useUpdateLandscapeMutation,
   useUpdateAgedCareMutation,
+  useUpdateAgribusinessManagementMutation,
+  useUpdateAiMutation,
+  useUpdateAnimation3DMutation,
+  useUpdateAutomotiveMutation,
+  useUpdateBakingMutation,
+  useUpdateBankingManagementMutation,
+  useUpdateBeautyMutation,
+  useUpdateBlockchainMutation,
+  useUpdateBlogPostMutation,
+  useUpdateBusinessAnalysisMutation,
+  useUpdateBusinessManagementMutation,
+  useUpdateCarpentryMutation,
+  useUpdateCloudComputingMutation,
+  useUpdateComputerNetworkingMutation,
+  useUpdateConstructionMutation,
+  useUpdateCookeryMutation,
+  useUpdateCurrentEventMutation,
+  useUpdateDataManagementMutation,
   useUpdateDentalMutation,
+  useUpdateDesignMutation,
+  useUpdateDigitalMediaMutation,
+  useUpdateEducationMutation,
+  useUpdateEventsMutation,
+  useUpdateFashionDesignMutation,
+  useUpdateFilmMutation,
+  useUpdateFitnessMutation,
+  useUpdateGameProgrammingMutation,
+  useUpdateGraphicDesignMutation,
+  useUpdateGuidanceMutation,
+  useUpdateHairdressingMutation,
+  useUpdateHealthMutation,
+  useUpdateHorticultureMutation,
+  useUpdateHospitalityManagementMutation,
+  useUpdateHospitalityMutation,
+  useUpdateHotelManagementMutation,
+  useUpdateHumanResourcesMutation,
+  useUpdateInteriorDesignMutation,
+  useUpdateIntlBusinessMutation,
+  useUpdateItMutation,
+  useUpdateLandscapeMutation,
+  useUpdateLeadershipManagementMutation,
+  useUpdateMachineLearningMutation,
+  useUpdateManagementMutation,
   useUpdateMassageMutation,
   useUpdateMedicineMutation,
   useUpdateMentalHealthMutation,
+  useUpdateMusicMutation,
   useUpdateNursingMutation,
   useUpdateNutritionMutation,
-  useUpdatePublicHealthMutation,
-  useUpdateVeterinaryMutation,
-  useUpdateHealthMutation,
-  useUpdateHospitalityMutation,
-  useUpdateBakingMutation,
-  useUpdateCookeryMutation,
-  useUpdateEventsMutation,
-  useUpdateHospitalityManagementMutation,
-  useUpdateHotelManagementMutation,
-  useUpdateTravelTourismMutation,
-  useUpdateAutomotiveMutation,
-  useUpdateBeautyMutation,
-  useUpdateCarpentryMutation,
-  useUpdateConstructionMutation,
-  useUpdateEducationMutation,
-  useUpdateFitnessMutation,
-  useUpdateHairdressingMutation,
-  useUpdateHorticultureMutation,
-  useUpdateSportDevelopmentMutation,
-  useUpdateYogaMutation,
-  UpdateTradesDocument,
-  useUpdateTradesMutation,
-  UpdateManagementDocument,
-  useUpdateAgribusinessManagementMutation,
-  useUpdateBankingManagementMutation,
-  useUpdateBusinessManagementMutation,
-  useUpdateHumanResourcesMutation,
-  useUpdateIntlBusinessMutation,
-  useUpdateManagementMutation,
   useUpdateProjectManagementMutation,
+  useUpdatePublicHealthMutation,
   useUpdateSocialMediaMarketingMutation,
-  useUpdateLeadershipManagementMutation,
+  useUpdateSoftwareDevelopmentMutation,
+  useUpdateSportDevelopmentMutation,
   useUpdateSupplyManagementMutation,
+  useUpdateTelecommunicationMutation,
+  useUpdateTradesMutation,
+  useUpdateTravelTourismMutation,
+  useUpdateVeterinaryMutation,
+  useUpdateWebDevelopmentMutation,
+  useUpdateYogaMutation,
+  Veterinary,
+  WebDevelopment,
+  Yoga,
 } from "../types";
-import { options } from "../lib/categories";
-import { BsPlus } from "react-icons/bs";
-import { motion } from "framer-motion";
 
 interface IProps {
   details:
@@ -206,6 +195,7 @@ interface IProps {
     | Hospitality
     | Management
     | Trades
+    | Guidance
     | undefined
     | null;
   add: boolean;
@@ -266,7 +256,7 @@ const AddClientForm = ({ details, add, edit, handleClose }: IProps) => {
   const [subtitle1, setSubtitle1] = useState(Dsubtitle1);
   const [subtitle2, setSubtitle2] = useState(Dsubtitle2);
   const [subtitle3, setSubtitle3] = useState(Dsubtitle3);
-  const [subtitle4, setSubtitle4] = useState(Dsubtitle3);
+  const [subtitle4, setSubtitle4] = useState(Dsubtitle4);
   const [tableContents1, setTableContents1] = useState(DtableContents1);
   const [tableContents2, setTableContents2] = useState(DtableContents2);
   const [tableContents3, setTableContents3] = useState(DtableContents3);
@@ -306,6 +296,8 @@ const AddClientForm = ({ details, add, edit, handleClose }: IProps) => {
   const [publishedDate, setPublishedDate] = useState(DpublishedDate);
   const [mainImage, setMainImage] = useState(DmainImage);
   const [photoCredit, setPhotoCredit] = useState(DphotoCredit);
+
+  const [addBlogPost] = useAddBlogPostMutation();
 
   // const [addSoftwareDevelopment] = useAddSoftwareDevelopmentMutation();
   // addSoftwareDevelopment;
@@ -396,7 +388,10 @@ const AddClientForm = ({ details, add, edit, handleClose }: IProps) => {
   const [updateLeadershipManagement] = useUpdateLeadershipManagementMutation();
 
   const [updateCurrentEvent] = useUpdateCurrentEventMutation();
-  const [authorNameLength, setAuthorNameLength] = useState(0);
+  const [updateGuidance] = useUpdateGuidanceMutation();
+
+  const [titleLength, setTitleLength] = useState(0);
+  const [descriptionLength, setDescriptionLength] = useState(0);
 
   let form = {
     variables: {
@@ -460,10 +455,15 @@ const AddClientForm = ({ details, add, edit, handleClose }: IProps) => {
     e.preventDefault();
 
     function sendForm() {
-      console.log(category);
+      if (add) {
+        if (category === "BLOG") {
+          addBlogPost(form);
+        }
+      }
       if (edit) {
         if (category === "BLOG") updateBlogPost(form);
         if (category === "CURRENT_EVENT") updateCurrentEvent(form);
+        if (category === "GUIDANCE") updateGuidance(form);
 
         /* Software Development */
         if (category === "SOFTWARE_DEVELOPMENT")
@@ -506,7 +506,7 @@ const AddClientForm = ({ details, add, edit, handleClose }: IProps) => {
         if (category === "MENTAL_HEALTH") updateMentalHealth(form);
 
         /* Hospitality */
-        if (category === "HOSPITALITY") updateHospitality();
+        if (category === "HOSPITALITY") updateHospitality(form);
         if (category === "BAKING") updateBaking(form);
         if (category === "COMMERCIAL_COOKING") updateCookery(form);
         if (category === "HOPITALITY_MANAGEMENT")
@@ -551,131 +551,158 @@ const AddClientForm = ({ details, add, edit, handleClose }: IProps) => {
 
     sendForm();
 
-    setCategory("");
-    setTitle("");
-    setSubtitle1("");
-    setSubtitle2("");
-    setSubtitle3("");
-    setSubtitle4("");
-    setTableContents1("");
-    setTableContents2("");
-    setTableContents3("");
-    setTableContents4("");
-    setP1("");
-    setP2("");
-    setP3("");
-    setP4("");
-    setP5("");
-    setL1("");
-    setL2("");
-    setL3("");
-    setL4("");
-    setL5("");
-    setL6("");
-    setL7("");
-    setL8("");
-    setL9("");
-    setL10("");
-    setL11("");
-    setL12("");
-    setL13("");
-    setL14("");
-    setL15("");
-    setP6("");
-    setP7("");
-    setP8("");
-    setConclusion1("");
-    setConclusion2("");
-    setConclusion3("");
-    setReference1("");
-    setReference2("");
-    setAuthorName("");
-    setAuthorAbout("");
-    setAuthorLink("");
-    setEditedBy("");
-    setPublishedDate("");
-    setMainImage("");
-    setPhotoCredit("");
+    setTimeout(() => {
+      setCategory("");
+      setTitle("");
+      setSubtitle1("");
+      setSubtitle2("");
+      setSubtitle3("");
+      setSubtitle4("");
+      setTableContents1("");
+      setTableContents2("");
+      setTableContents3("");
+      setTableContents4("");
+      setP1("");
+      setP2("");
+      setP3("");
+      setP4("");
+      setP5("");
+      setL1("");
+      setL2("");
+      setL3("");
+      setL4("");
+      setL5("");
+      setL6("");
+      setL7("");
+      setL8("");
+      setL9("");
+      setL10("");
+      setL11("");
+      setL12("");
+      setL13("");
+      setL14("");
+      setL15("");
+      setP6("");
+      setP7("");
+      setP8("");
+      setConclusion1("");
+      setConclusion2("");
+      setConclusion3("");
+      setReference1("");
+      setReference2("");
+      setAuthorName("");
+      setAuthorAbout("");
+      setAuthorLink("");
+      setEditedBy("");
+      setPublishedDate("");
+      setMainImage("");
+      setPhotoCredit("");
+    }, 1000);
   };
 
-  console.log(`The Authors\'s name takes up ${authorName?.length} characters`);
+  console.log(`title length: ${title?.length}`);
+
+  const titleStyle =
+    title?.length !== undefined && title?.length > 40 && title?.length < 50
+      ? "border-2 border-orange p-3 rounded-xl w-full"
+      : title?.length !== undefined && title?.length > 50 && title?.length < 62
+      ? "border-2 border-green-500 p-3 rounded-xl w-full"
+      : title?.length !== undefined && title?.length > 62
+      ? "border-2 border-red-500 p-3 rounded-xl w-full"
+      : "border-2 border-gray-200 p-3 rounded-xl w-full";
+
+  const descriptionStyle =
+    subtitle1?.length !== undefined &&
+    subtitle1?.length > 140 &&
+    subtitle1?.length < 150
+      ? "border-2 border-orange p-3 rounded-xl w-full"
+      : subtitle1?.length !== undefined &&
+        subtitle1?.length > 150 &&
+        subtitle1?.length < 162
+      ? "border-2 border-green-500 p-3 rounded-xl w-full"
+      : subtitle1?.length !== undefined && subtitle1?.length > 162
+      ? "border-2 border-red-500 p-3 rounded-xl w-full"
+      : "border-2 border-gray-200 p-3 rounded-xl w-full";
 
   return (
     <div className="px-5 max-w-[678px] md:max-w-[900px] mx-auto">
       <form onSubmit={onFinish} className="space-y-3 py-12">
-        {/* <div className="px-8 ">
-          <select
-            value={category as string}
-            onChange={(e) => setCategory(e.target.value)}
-            required
-          >
-            {options.map((o, i) => (
-              <option key={i} value={o.value}>
-                {o.label}
-              </option>
-            ))}
-          </select>
-        </div> */}
+        {/* {category === "ADVICE" ||
+          ("GUIDANCE" && (
+            <div className="px-8 ">
+              <select
+                value={category as string}
+                onChange={(e) => setCategory(e.target.value)}
+                required
+              >
+                <option value={"GUIDANCE"}>
+                  {translate ? "Career Guidance" : "Hướng dẫn nghề nghiệp"}
+                </option>
+                <option value={"ADVICE"}>
+                  {translate ? "Career Advice" : "Lời khuyên nghề nghiệp"}
+                </option>
+              </select>
+            </div>
+          ))} */}
 
-        <div className="px-8 flex items-start space-y-3 justify-center flex-col pt-3">
-          <input
-            id="form"
-            value={publishedDate as string}
-            placeholder="Ngày xuất bản"
-            onChange={(e) => setPublishedDate(e.target.value)}
-            className="border-2 border-gray-200 p-3 rounded-xl w-full"
-          />
-        </div>
-
-        <div className="px-8 flex items-start space-y-3 justify-center flex-col">
-          <input
-            id="authorName"
-            value={authorName as string}
-            placeholder="Tên tác giả"
-            onChange={(e) => setAuthorName(e.target.value)}
-            className="border-2 border-gray-200 p-3 rounded-xl w-full"
-          />
-        </div>
-
-        <div className="px-8 flex items-start space-y-3 justify-center flex-col">
-          <input
-            id="authorAbout"
-            value={authorAbout as string}
-            placeholder="Thông tin về các Tác giả"
-            onChange={(e) => setAuthorAbout(e.target.value)}
-            className="border-2 border-gray-200 p-3 rounded-xl w-full"
-          />
-        </div>
-
-        <div className="px-8 flex items-start space-y-3 justify-center flex-col">
-          <input
-            id="authorLink"
-            value={authorLink as string}
-            placeholder="Hồ sơ của tác giả / Liên kết trang web"
-            onChange={(e) => setAuthorLink(e.target.value)}
-            className="border-2 border-gray-200 p-3 rounded-xl w-full"
-          />
-        </div>
-
-        <div className="px-8 flex items-start space-y-3 justify-center flex-col">
-          <input
-            id="editedBy"
-            value={editedBy as string}
-            placeholder="Sửa bởi"
-            onChange={(e) => setEditedBy(e.target.value)}
-            className="border-2 border-gray-200 p-3 rounded-xl w-full"
-          />
-        </div>
-
-        <div className="px-8 flex items-start space-y-3 justify-center flex-col">
-          <input
-            id="photoCredit"
-            value={photoCredit as string}
-            placeholder="Tín dụng hình ảnh"
-            onChange={(e) => setPhotoCredit(e.target.value)}
-            className="border-2 border-gray-200 p-3 rounded-xl w-full"
-          />
-        </div>
+        {category === "BLOG" && (
+          <>
+            <div className="px-8 flex items-start space-y-3 justify-center flex-col pt-3">
+              <input
+                id="form"
+                value={publishedDate as string}
+                placeholder="Ngày xuất bản"
+                onChange={(e) => setPublishedDate(e.target.value)}
+                className="border-2 border-gray-200 p-3 rounded-xl w-full"
+              />
+            </div>
+            <div className="px-8 flex items-start space-y-3 justify-center flex-col">
+              <input
+                id="authorName"
+                value={authorName as string}
+                placeholder="Tên tác giả"
+                onChange={(e) => setAuthorName(e.target.value)}
+                className="border-2 border-gray-200 p-3 rounded-xl w-full"
+              />
+            </div>
+            <div className="px-8 flex items-start space-y-3 justify-center flex-col">
+              <input
+                id="authorAbout"
+                value={authorAbout as string}
+                placeholder="Thông tin về các Tác giả"
+                onChange={(e) => setAuthorAbout(e.target.value)}
+                className="border-2 border-gray-200 p-3 rounded-xl w-full"
+              />
+            </div>
+            <div className="px-8 flex items-start space-y-3 justify-center flex-col">
+              <input
+                id="authorLink"
+                value={authorLink as string}
+                placeholder="Hồ sơ của tác giả / Liên kết trang web"
+                onChange={(e) => setAuthorLink(e.target.value)}
+                className="border-2 border-gray-200 p-3 rounded-xl w-full"
+              />
+            </div>
+            <div className="px-8 flex items-start space-y-3 justify-center flex-col">
+              <input
+                id="editedBy"
+                value={editedBy as string}
+                placeholder="Sửa bởi"
+                onChange={(e) => setEditedBy(e.target.value)}
+                className="border-2 border-gray-200 p-3 rounded-xl w-full"
+              />
+            </div>
+            <div className="px-8 flex items-start space-y-3 justify-center flex-col">
+              <input
+                id="photoCredit"
+                value={photoCredit as string}
+                placeholder="Tín dụng hình ảnh"
+                onChange={(e) => setPhotoCredit(e.target.value)}
+                className="border-2 border-gray-200 p-3 rounded-xl w-full"
+              />
+            </div>
+          </>
+        )}
 
         <div className="px-8 flex items-start space-y-3 justify-center flex-col pt-10">
           <input
@@ -683,7 +710,7 @@ const AddClientForm = ({ details, add, edit, handleClose }: IProps) => {
             value={title as string}
             placeholder="Tiêu đề"
             onChange={(e) => setTitle(e.target.value)}
-            className="border-2 border-gray-200 p-3 rounded-xl w-full"
+            className={titleStyle}
           />
         </div>
 
@@ -693,7 +720,7 @@ const AddClientForm = ({ details, add, edit, handleClose }: IProps) => {
             value={subtitle1 as string}
             placeholder="Phụ đề 1"
             onChange={(e) => setSubtitle1(e.target.value)}
-            className="border-2 border-gray-200 p-3 rounded-xl w-full"
+            className={descriptionStyle}
           />
         </div>
 

@@ -19,7 +19,10 @@ const App = ({ handleCloseDropdowns }: IProps) => {
   return (
     <div className="flex items-start justify-between px-12 2xl:container mx-auto py-6">
       <div className="col-span-1">
-        <div className="flex items-center justify-between">
+        <div
+          className="flex items-center justify-between"
+          onClick={() => handleCloseDropdowns()}
+        >
           {translate ? (
             <Link href="/courses/information-technology">
               <p className="text-gray-800 py-1 underline cursor-pointer underline-offset-4 whitespace-nowrap w-full font-semibold">
@@ -54,7 +57,10 @@ const App = ({ handleCloseDropdowns }: IProps) => {
         </div>
       </div>
       <div className="col-span-1">
-        <div className="flex items-center justify-between">
+        <div
+          className="flex items-center justify-between"
+          onClick={() => handleCloseDropdowns()}
+        >
           {translate ? (
             <Link href={"/courses/design"}>
               <p className=" text-gray-800 py-1 underline cursor-pointer underline-offset-4 whitespace-nowrap w-full font-semibold">
@@ -89,7 +95,10 @@ const App = ({ handleCloseDropdowns }: IProps) => {
         </div>
       </div>
       <div className="col-span-1">
-        <div className="flex items-center justify-between">
+        <div
+          className="flex items-center justify-between"
+          onClick={() => handleCloseDropdowns()}
+        >
           {translate ? (
             <Link href={"/courses/management"}>
               <p className=" text-gray-800 py-1 underline cursor-pointer underline-offset-4 whitespace-nowrap w-full font-semibold">
@@ -124,7 +133,10 @@ const App = ({ handleCloseDropdowns }: IProps) => {
         </div>
       </div>
       <div className="col-span-1">
-        <div className="flex items-center justify-between">
+        <div
+          className="flex items-center justify-between"
+          onClick={() => handleCloseDropdowns()}
+        >
           {translate ? (
             <Link href={"/courses/health"}>
               <p className=" text-gray-800 py-1 underline cursor-pointer underline-offset-4 whitespace-nowrap w-full font-semibold">
@@ -159,7 +171,10 @@ const App = ({ handleCloseDropdowns }: IProps) => {
         </div>
       </div>
       <div className="col-span-1">
-        <div className="flex items-center justify-between">
+        <div
+          className="flex items-center justify-between"
+          onClick={() => handleCloseDropdowns()}
+        >
           {translate ? (
             <Link href={"/courses/hospitality"}>
               <p className=" text-gray-800 py-1 underline cursor-pointer underline-offset-4 whitespace-nowrap w-full font-semibold">
@@ -194,7 +209,10 @@ const App = ({ handleCloseDropdowns }: IProps) => {
         </div>
       </div>
       <div className="col-span-1">
-        <div className="flex items-center justify-between">
+        <div
+          className="flex items-center justify-between"
+          onClick={() => handleCloseDropdowns()}
+        >
           {translate ? (
             <Link href={"/courses/trades"}>
               <p className=" text-gray-800 py-1 underline cursor-pointer underline-offset-4 whitespace-nowrap w-full font-semibold">

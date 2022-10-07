@@ -76,6 +76,7 @@ generates:
         Health: "@prisma/client#Health"
         Management: "@prisma/client#Management"
         Design: "@prisma/client#Design"
+        Guidance: "@prisma/client#Guidance"
 
         Session: "@prisma/client#Session"
         User: "@prisma/client#User"

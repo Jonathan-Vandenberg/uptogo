@@ -1,4 +1,3 @@
-import { Prisma } from "@prisma/client";
 import { GetStaticProps } from "next";
 import CoursesDesktopPage from "../../components/Courses/CoursesDesktopPage";
 import CoursesMobilePage from "../../components/MobileIconPages/Index";

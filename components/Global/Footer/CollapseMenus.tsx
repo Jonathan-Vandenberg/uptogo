@@ -13,59 +13,12 @@ import {
 import { useAppSelector } from "../../../redux-hooks/hooks";
 
 const App = ({ handleCategoryStepper, handleMajorStepper }: IStepper) => {
-  const translate = useAppSelector((state) => state.translationState.translate);
   return (
     <div className="divide-y-2 divide-sky-900 border-b-2 border-t-2 border-blue">
       <Courses
         handleCategoryStepper={handleCategoryStepper}
         handleMajorStepper={handleMajorStepper}
       />
-
-      <Collapsible
-        transitionTime={200}
-        trigger={
-          <div className="flex items-center justify-between bg-darkBlue text-gray-100">
-            <p className="p-4 text-blue text-lg">Visa</p>
-            <div className="pr-4">
-              <FaAngleRight color={"white"} fontSize={20} />
-            </div>
-          </div>
-        }
-      >
-        <div className="divide-y-2 divide-gray-300">
-          <p className="cursor-pointer p-4 pl-6 hover:bg-lightBlue text-lg">
-            {translate ? "Visa Application" : "Đơn xin thị thực"}
-          </p>
-          <p className="cursor-pointer p-4 pl-6 hover:bg-lightBlue text-lg">
-            Something Else
-          </p>
-          <p className="cursor-pointer p-4 pl-6 hover:bg-lightBlue border-b-2 border-blue text-lg">
-            Another thing
-          </p>
-        </div>
-      </Collapsible>
-      <Collapsible
-        transitionTime={200}
-        trigger={
-          <div className="flex items-center justify-between bg-darkBlue text-gray-100">
-            <p className="p-4 text-blue text-lg">
-              {translate ? "Things you should know" : "Tìm hiểu thêm"}
-            </p>
-            <div className="pr-4">
-              <FaAngleRight color={"white"} fontSize={20} />
-            </div>
-          </div>
-        }
-      >
-        <div className="divide-y-2 divide-gray-300">
-          <p className="cursor-pointer p-4 pl-6 hover:bg-lightBlue text-lg">
-            Something
-          </p>
-          <p className="cursor-pointer p-4 pl-6 hover:bg-lightBlue text-lg">
-            FAQs
-          </p>
-        </div>
-      </Collapsible>
     </div>
   );
 };

@@ -1,4 +1,3 @@
-import { Prisma, PrismaClient } from "@prisma/client";
 import { GetStaticPaths, GetStaticProps, GetStaticPropsResult } from "next";
 import { ParsedUrlQuery } from "querystring";
 import { useState } from "react";
@@ -6,6 +5,7 @@ import BlogMain from "../../components/Blog/BlogMain";
 import MainForm from "../../components/MainForm";
 import UserInterestedForm from "../../components/UserInterestedForm";
 import { BlogPost } from "../../types";
+import prisma from "../../lib/prisma";
 
 interface IBlogPost {
   data: BlogPost;
@@ -29,7 +29,7 @@ export default function Blog({ data }: IBlogPost) {
   };
 
   return (
-    <div className="container mx-auto">
+    <div className="w-full container mx-auto">
       <BlogMain data={data} handleEdit={handleEdit} handleAdd={handleAdd} />
       {showForm && (
         <MainForm
@@ -45,7 +45,6 @@ export default function Blog({ data }: IBlogPost) {
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const prisma = new PrismaClient();
   const data = await prisma.blogPost.findMany();
   const paths = data?.map((item) => {
     return {
@@ -60,8 +59,6 @@ interface IParams extends ParsedUrlQuery {
 }
 
 export const getStaticProps: GetStaticProps = async (context) => {
-  const prisma = new PrismaClient();
-
   const params = context.params as IParams;
 
   let data = await prisma.blogPost.findUnique({

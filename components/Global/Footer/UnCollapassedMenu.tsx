@@ -12,7 +12,7 @@ import { useAppSelector } from "../../../redux-hooks/hooks";
 const App = () => {
   const translate = useAppSelector((state) => state.translationState.translate);
   return (
-    <div className="hidden border-b-2 py-8 px-28 md:container md:mx-auto md:grid md:grid-cols-3 md:px-0 lg:flex lg:items-start lg:justify-evenly">
+    <div className="hidden border-b-2 py-8 px-28 md:container md:mx-auto md:grid md:grid-cols-3 md:px-5 gap-3 lg:flex lg:items-start lg:justify-evenly">
       <div>
         <div className="flex items-center justify-between">
           <Link href={"/courses/information-technology"}>
@@ -22,12 +22,11 @@ const App = () => {
           </Link>
         </div>
         {itLinks.map((item, index) => (
-          <p
-            className="cursor-pointer py-1 text-sm text-gray-600 hover:text-iwanttoColor"
-            key={index}
-          >
-            {translate ? item.courseE : item.course}
-          </p>
+          <Link key={index} href={item.link}>
+            <p className="cursor-pointer py-1 text-sm text-gray-600 hover:text-iwanttoColor">
+              {translate ? item.courseE : item.course}
+            </p>
+          </Link>
         ))}
       </div>
       <div>
@@ -39,12 +38,11 @@ const App = () => {
           </Link>
         </div>
         {healthLinks.map((item, index) => (
-          <p
-            className="cursor-pointer py-1 text-sm text-gray-600 hover:text-iwanttoColor"
-            key={index}
-          >
-            {translate ? item.courseE : item.course}
-          </p>
+          <Link key={index} href={item.link}>
+            <p className="cursor-pointer py-1 text-sm text-gray-600 hover:text-iwanttoColor">
+              {translate ? item.courseE : item.course}
+            </p>
+          </Link>
         ))}
       </div>
       <div>
@@ -56,12 +54,11 @@ const App = () => {
           </div>
         </Link>
         {hospitalityLinks.map((item, index) => (
-          <p
-            className="cursor-pointer py-1 text-sm text-gray-600 hover:text-iwanttoColor"
-            key={index}
-          >
-            {translate ? item.courseE : item.course}
-          </p>
+          <Link key={index} href={item.link}>
+            <p className="cursor-pointer py-1 text-sm text-gray-600 hover:text-iwanttoColor">
+              {translate ? item.courseE : item.course}
+            </p>
+          </Link>
         ))}
       </div>
       <div>
@@ -73,12 +70,11 @@ const App = () => {
           </div>
         </Link>
         {designLinks.map((item, index) => (
-          <p
-            className="cursor-pointer py-1 text-sm text-gray-600 hover:text-iwanttoColor"
-            key={index}
-          >
-            {translate ? item.courseE : item.course}
-          </p>
+          <Link key={index} href={item.link}>
+            <p className="cursor-pointer py-1 text-sm text-gray-600 hover:text-iwanttoColor">
+              {translate ? item.courseE : item.course}
+            </p>
+          </Link>
         ))}
       </div>
       <div>
@@ -90,12 +86,11 @@ const App = () => {
           </div>
         </Link>
         {managementLinks.map((item, index) => (
-          <p
-            className="cursor-pointer py-1 text-sm text-gray-600 hover:text-iwanttoColor"
-            key={index}
-          >
-            {translate ? item.courseE : item.course}
-          </p>
+          <Link key={index} href={item.link}>
+            <p className="cursor-pointer py-1 text-sm text-gray-600 hover:text-iwanttoColor">
+              {translate ? item.courseE : item.course}
+            </p>
+          </Link>
         ))}
       </div>
       <div>
@@ -107,12 +102,11 @@ const App = () => {
           </div>
         </Link>
         {tradeLinks.map((item, index) => (
-          <p
-            className="cursor-pointer py-1 text-sm text-gray-600 hover:text-iwanttoColor"
-            key={index}
-          >
-            {translate ? item.courseE : item.course}
-          </p>
+          <Link key={index} href={item.link}>
+            <p className="cursor-pointer py-1 text-sm text-gray-600 hover:text-iwanttoColor">
+              {translate ? item.courseE : item.course}
+            </p>
+          </Link>
         ))}
       </div>
     </div>

@@ -1,3 +1,4 @@
+import { useAppSelector } from "../../redux-hooks/hooks";
 import {
   CoursesIT,
   CoursesHealth,
@@ -6,7 +7,7 @@ import {
   CoursesHospitality,
   CoursesTrades,
 } from "../Global/Footer/CollapseMenus";
-import CourseStepper from "./CourseStepper";
+// import CourseStepper from "./CourseStepper";
 
 interface IProps {
   handleMajorStepper: () => void;
@@ -19,19 +20,28 @@ export default function App({
   handleCategoryStepper,
   step,
 }: IProps) {
+  const translate = useAppSelector((state) => state.translationState.translate);
   return (
-    <div className="max-w-[678px] md:max-w-[900px] md:my-12 mx-auto container border-t-gray-300 md:border-none border-2">
+    <div className=" w-full my-6 mx-auto container bg-sky-50">
       <div className="mb-6">
         <div className="pt-5 text-center ">
           <h2 className="logoFont text-3xl md:text-5xl text-gray-700 py-1 md:py-3">
-            Ready to Explore?
+            {translate
+              ? "Ready to Explore?"
+              : "Bạn đã sẵn sàng để khám phá chưa?"}
           </h2>
-          <h2 className="logoFont text-xl md:text-3xl text-gray-700 py-1">
-            Let&apos;s go step-by-step
-          </h2>
+          {translate ? (
+            <h2 className="logoFont text-xl md:text-3xl text-gray-700 py-1">
+              Let&apos;s go step-by-step
+            </h2>
+          ) : (
+            <h2 className="logoFont text-xl md:text-3xl text-gray-700 py-1">
+              Hãy đi từng bước
+            </h2>
+          )}
         </div>
         <div className="flex flex-col items-center justify-center space-y-12 py-12 px-10">
-          <CourseStepper step={step} />
+          {/* <CourseStepper step={step} /> */}
           <div className="flex -tems-center-justify-center space-y-1 flex-col">
             <CoursesIT
               handleMajorStepper={handleMajorStepper}

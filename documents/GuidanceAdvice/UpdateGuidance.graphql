@@ -1,0 +1,7 @@
+# import Guidance from './GuidanceFragment.graphql'
+
+mutation UpdateGuidance($input: GuidanceInput!) {
+  updateGuidance(input: $input) {
+    ...Guidance
+  }
+}

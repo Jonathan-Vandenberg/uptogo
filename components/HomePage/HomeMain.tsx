@@ -49,32 +49,29 @@ export default function App() {
         </div>
         <span className="absolute w-screen h-full left-0 top-0 bg-gradient-to-t from-transparent to-sky-500/20" />
       </div>
-      <div className="pt-2 md:pt-16">
-        <WhyUptogo whyUptogoImage={graduationWeb} />
+      <div className="flex items-center justify-center container mx-auto my-12">
+        <Popup />
       </div>
-      <div className="w-full block container mx-auto mt-16">
+      <div className="w-full block container mx-auto my-6">
         <Image src={banner1} alt="uptogo banner" layout="responsive" />
       </div>
       <div className="container mx-auto">
-        <div className="pt-12 flex items-center justify-center">
-          <Popup />
+        <div className="my-6 lg:container lg:mx-auto">
+          <WhyUptogo whyUptogoImage={graduationWeb} />
         </div>
         <ReadyToExplore
           handleMajorStepper={handleMajorStepper}
           handleCategoryStepper={handleCategoryStepper}
           step={step}
         />
-        <div className="block w-full pb-20">
+        <div className="block w-full py-6">
           <Image src={banner3} alt={"uptogo banner"} layout="responsive" />
         </div>
-        <CustomerReview reviews={reviews} />
+        <div className="pt-6">
+          <CustomerReview reviews={reviews} />
+        </div>
         <UserInterestedForm />
       </div>
-      {/* <CourseCard
-        course={"Yoga"}
-        description={"Learn Yoga in London with the professionals"}
-        category={"Yoa"}
-      /> */}
     </>
   );
 }

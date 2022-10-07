@@ -1,10 +1,12 @@
 import { useEffect, useState } from "react";
+import { useAppSelector } from "../../redux-hooks/hooks";
 import { useBlogPostsQuery } from "../../types";
 import BlogPageHero from "../Blog/BlogPageHero";
 import FavoritesHeader from "./FavoritesHeader";
 
 const FavoriteServicesCards = () => {
   const [localStorageKeys, setLocalStorageKeys] = useState([""]);
+  const translate = useAppSelector((state) => state.translationState.translate);
 
   useEffect(() => {
     const allKeys = Object.keys(localStorage);
@@ -23,7 +25,7 @@ const FavoriteServicesCards = () => {
     <>
       <FavoritesHeader
         localStorageKeys={localStorageKeys}
-        favoriteType="Blog Favorite"
+        favoriteType={translate ? "Blog Favorite" : "tin yêu thích"}
         findMoreLink="/blogs"
       />
       <div className="md:px-12 lg:container lg:mx-auto lg:px-0">

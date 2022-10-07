@@ -1,4 +1,4 @@
-import { Button } from "@material-ui/core";
+import { Button } from "@mui/material";
 import { signIn } from "next-auth/react";
 import React from "react";
 

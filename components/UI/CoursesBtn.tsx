@@ -16,7 +16,7 @@ export default function App({ title }: IProps) {
       className="z-10"
     >
       <Link href={"/courses"}>
-        <p className="md:text-lg lg:text-xl  cursor-pointer text-gray-700 border-b-8 rounded-full px-6 py-2 mt-12 border-orange border-2">
+        <p className="md:text-lg lg:text-xl logoFont cursor-pointer text-gray-700 border-b-8 rounded-full px-6 py-2 mt-12 border-orange border-2">
           {title}
         </p>
       </Link>

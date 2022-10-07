@@ -42,8 +42,8 @@ export default function App({
     <>
       <div className="snap-y h-screen overflow-y-scroll snap-proximity relative">
         <div className="snap-start relative">
-          <div className="h-screen mx-auto max-w-[900px]">
-            <div className="block">
+          <div className="h-screen mx-auto max-w-[900px] container">
+            <div className="block max-w-[600px]">
               <Image src={hero} layout="responsive" alt="eduaction image" />
             </div>
           </div>
@@ -162,16 +162,16 @@ const Category = ({
 }: ICategory) => {
   const backgroundClasses = {
     purple1:
-      "snap-start h-screen flex items-center justify-center flex-col bg-gradient-to-r from-purple-200 via-white to-white lg:flex-row w-full",
+      "snap-start h-screen flex items-end justify-center flex-col flex-col-reverse bg-gradient-to-r from-purple-200 via-white to-white lg:items-center lg:flex-row w-full",
     blue1:
-      "snap-start h-screen flex items-center justify-center flex-col bg-gradient-to-r from-sky-200 via-white to-white lg:flex-row w-full",
+      "snap-start h-screen flex items-end justify-center flex-col flex-col-reverse bg-gradient-to-r from-sky-200 via-white to-white lg:flex-row w-full lg:items-center",
     yellow:
-      "snap-start h-screen flex items-center justify-center flex-col bg-gradient-to-r from-yellow-300 via-white to-white lg:flex-row w-full",
-    red: "snap-start h-screen flex items-center justify-center flex-col bg-gradient-to-r from-red-300 via-white to-white lg:flex-row w-full",
+      "snap-start h-screen flex items-end justify-center flex-col flex-col-reverse bg-gradient-to-r from-yellow-300 via-white to-white lg:flex-row w-full lg:items-center",
+    red: "snap-start h-screen flex items-end justify-center flex-col flex-col-reverse bg-gradient-to-r from-red-300 via-white to-white lg:flex-row w-full lg:items-center",
     purple2:
-      "snap-start h-screen flex items-center justify-center flex-col bg-gradient-to-r from-purple-300 via-white to-white lg:flex-row w-full",
+      "snap-start h-screen flex items-end justify-center flex-col flex-col-reverse bg-gradient-to-r from-purple-300 via-white to-white lg:flex-row w-full lg:items-center",
     blue2:
-      "h-screen flex items-center justify-center flex-col bg-gradient-to-r from-sky-300 via-white to-white lg:flex-row w-full",
+      "h-screen flex items-end justify-center flex-col bg-gradient-to-r flex-col-reverse from-sky-300 via-white to-white lg:flex-row w-full lg:items-center",
   };
 
   let style;
@@ -209,7 +209,7 @@ const Category = ({
           whileInView={{ x: 0, transition: { duration: 0.5 } }}
           className=" max-w-[1200px] container flex flex-col items-center justify-start w-full lg:w-1/2 pb-20 px-20 pt-6"
         >
-          <div className="p-6">
+          <div className="pb-6">
             <Link href={link as string}>
               <div className="flex items-center justify-center text-3xl text-darkBlue">
                 {translate ? Etitle : title}
@@ -239,7 +239,7 @@ const Category = ({
               </div>
             </ul>
           </div>
-          <div className="px-4 py-2 border-2 hover:bg-darkBlue/20 hover:text-black text-white bg-darkBlue rounded-full mt-12">
+          <div className="px-4 py-2 border-2 hover:bg-darkBlue/20 hover:text-black text-white bg-darkBlue rounded-full mt-6">
             <Link href={link as string}>
               <div className="border-b-6 border-orange flex items-center justify-center text-lg">
                 {translate ? "Read More" : "Đọc thêm"}
@@ -253,7 +253,7 @@ const Category = ({
             opacity: 1,
             transition: { delay: 0.3, duration: 0.7 },
           }}
-          className="h-full max-w-[600px] lg:w-1/2 block"
+          className="max-w-[600px] w-1/2 lg:w-1/2 lg:mt-[25%] lg:block p-12 hidden"
         >
           <Image src={image as string} alt="IT image" layout="responsive" />
         </motion.div>

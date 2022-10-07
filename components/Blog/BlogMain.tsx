@@ -1,5 +1,5 @@
 import BlogHeader from "./BlogHeader";
-import BlogPostMarkup from "./BlogPostMarkup";
+import BlogPostMarkup from "../Markup";
 import {
   It,
   BlogPost,
@@ -139,7 +139,7 @@ export default function BlogMain({ data, handleEdit, handleAdd }: IFormProps) {
   return (
     <div className="container mx-auto">
       <BlogHeader data={data} />
-      <div className="px-5 max-w-[678px] md:max-w-[900px] mx-auto">
+      <div className="px-5 mx-auto">
         <BlogPostMarkup
           data={data}
           handleEdit={handleEdit}

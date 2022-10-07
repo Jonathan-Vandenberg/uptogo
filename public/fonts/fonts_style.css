@@ -1,22 +1,16 @@
- @font-face {
-   font-family: 'Raleway';
-   font-style: normal;
-   font-weight: 400;
-   /* IE9 Compat Modes */
-   src: local(''),
-     url('./ClearSans-Regular.ttf') format('embedded-opentype'),
-     /* IE6-IE8 */
-     url('./ClearSans-Regular.ttf') format('woff2'),
-     /* Super Modern Browsers */
-    url('./ClearSans-Italic.ttf') format('woff'),
-    url('./ClearSans-Bold.ttf') format('woff'),
-    url('./ClearSans-Light.ttf') format('woff'),
-    url('./ClearSans-Medium.ttf') format('woff'),
-    url('./ClearSans-Regular.ttf') format('woff'),
-
-     /* Modern Browsers */
-     url('./ClearSans-Regular.ttf') format('truetype'),
-     /* Safari, Android, iOS */
-     url('./ClearSans-Regular.ttf') format('svg');
-   /* Legacy iOS */
- }
+@font-face {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 400;
+  /* IE9 Compat Modes */
+  src: local(""), url("./ClearSans-Regular.ttf") format("embedded-opentype"),
+    /* IE6-IE8 */ url("./ClearSans-Regular.ttf") format("woff2"),
+    /* Super Modern Browsers */ url("./ClearSans-Italic.ttf") format("woff"),
+    url("./ClearSans-Bold.ttf") format("woff"),
+    url("./ClearSans-Light.ttf") format("woff"),
+    url("./ClearSans-Medium.ttf") format("woff"),
+    url("./ClearSans-Regular.ttf") format("woff"),
+    /* Modern Browsers */ url("./ClearSans-Regular.ttf") format("truetype"),
+    /* Safari, Android, iOS */ url("./ClearSans-Regular.ttf") format("svg");
+  /* Legacy iOS */
+}

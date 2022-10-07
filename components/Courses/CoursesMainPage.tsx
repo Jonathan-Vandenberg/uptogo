@@ -1,7 +1,6 @@
-import Spline from "@splinetool/react-spline";
 import Image from "next/image";
 import logo from "../../public/fullLogo.png";
-import BlogPostMarkup from "../Blog/BlogPostMarkup";
+import BlogPostMarkup from "../Markup";
 import type {
   Ai,
   Blockchain,
@@ -65,9 +64,10 @@ import type {
   Management,
   Trades,
   CurrentEvent,
+  Advice,
+  Guidance,
 } from "../../types";
 import UserInterestedForm from "../UserInterestedForm";
-import { Suspense } from "react";
 
 interface IFormProps {
   data:
@@ -133,6 +133,7 @@ interface IFormProps {
     | Management
     | Trades
     | CurrentEvent
+    | Guidance
     | undefined
     | null;
   handleAdd: () => void;
@@ -140,42 +141,38 @@ interface IFormProps {
 }
 
 export default function BlogMain({ data, handleEdit, handleAdd }: IFormProps) {
-  const styles = data?.mainImage ? "pb-8 block" : "block p-20";
+  const styles = data?.mainImage
+    ? "pb-8 block max-w-[600px] mx-auto"
+    : "block p-20";
 
   return (
-    <div className="max-w-[678px] md:max-w-[900px] mx-auto md:py-12">
+    <div className="md:py-12">
       <div className="pb-4 px-6 md:px-0 md:pb-10">
-        <div className="logoFont text-darkBlue text-2xl md:text-3xl lg:text-4xl">
+        <h1 className="logoFont text-darkBlue text-center text-2xl px-5 lg:px-0 md:text-3xl lg:text-4xl">
           {data?.title}
-        </div>
+        </h1>
       </div>
-      {/* {data?.id === "632477c6ef7048971301fe08" ? (
-        <div className="flex items-center justify-center">
-          <Animation />
-        </div>
-      ) : ( */}
 
       <div className={styles}>
         <Image
           src={data?.mainImage || logo}
-          width={data?.mainImage ? 600 : 300}
-          height={data?.mainImage ? 339 : 300}
+          width={data?.mainImage ? 900 : 300}
+          height={data?.mainImage ? 510 : 300}
           alt="image"
           layout="responsive"
           priority
         />
       </div>
 
-      {/* )} */}
       <div className="pb-6 px-6 md:px-0 md:pb-10">
         <div
           id="subtitle1"
-          className="text-gray-700 text-xl pb-3 md:text-xl lg:text-2xl scroll-mt-20"
+          className="text-gray-700 text-xl pb-3 md:text-xl lg:text-2xl scroll-mt-20 px-5 lg:px-0"
         >
           {data?.subtitle1}
         </div>
       </div>
-      <div className="px-5 md:px-0">
+      <div className="px-5 lg:px-0">
         <BlogPostMarkup
           data={data}
           handleEdit={handleEdit}

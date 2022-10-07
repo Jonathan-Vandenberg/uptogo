@@ -1,5 +1,14 @@
+import Head from "next/head";
 import HospitalityPage from "../components/MobileIconPages/HospitalityPage";
 
 export default function App() {
-  return <HospitalityPage />;
+  return (
+    <>
+      <Head>
+        <title>Uptogo | The Easiest Way To Study Abroad</title>
+        <meta name="robots" content="noindex, nofollow" />
+      </Head>
+      <HospitalityPage />
+    </>
+  );
 }

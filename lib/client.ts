@@ -23,4 +23,4 @@ export const useClient = () => {
     []
   );
   return client;
-}
+};

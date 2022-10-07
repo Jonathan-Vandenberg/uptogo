@@ -1,5 +1,14 @@
+import Head from "next/head";
 import TradesPage from "../components/MobileIconPages/TradesPage";
 
 export default function App() {
-  return <TradesPage />;
+  return (
+    <>
+      <Head>
+        <title>Uptogo | The Easiest Way To Study Abroad</title>
+        <meta name="robots" content="noindex, nofollow" />
+      </Head>
+      <TradesPage />
+    </>
+  );
 }

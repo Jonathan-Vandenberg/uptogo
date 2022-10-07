@@ -1,5 +1,14 @@
+import Head from "next/head";
 import DesignPage from "../components/MobileIconPages/DesignPage";
 
 export default function App() {
-  return <DesignPage />;
+  return (
+    <>
+      <Head>
+        <title>Uptogo | The Easiest Way To Study Abroad</title>
+        <meta name="robots" content="noindex, nofollow" />
+      </Head>
+      <DesignPage />
+    </>
+  );
 }

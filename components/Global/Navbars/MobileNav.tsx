@@ -8,15 +8,11 @@ import Link from "next/link";
 import * as React from "react";
 import { useState } from "react";
 import { FaHeart } from "react-icons/fa";
-import { HiColorSwatch, HiOutlineLocationMarker } from "react-icons/hi";
+import { HiOutlineLocationMarker } from "react-icons/hi";
 import {
   MdAdminPanelSettings,
-  MdChangeCircle,
-  MdColorLens,
-  MdFormatColorFill,
   MdOutlineArrowBackIos,
   MdOutlineArrowForwardIos,
-  MdOutlineColorize,
 } from "react-icons/md";
 import fullLogo from "../../../public/fullLogo.png";
 import faviconLogo from "../../../public/uptogoFavicon.png";
@@ -24,8 +20,6 @@ import AuthBtn from "../../UI/AuthBtn";
 import TranslateBtn from "../../UI/TranslateBtn";
 
 import { useAppSelector } from "../../../redux-hooks/hooks";
-import { useAppDispatch } from "../../../redux-hooks/hooks";
-import { iconState } from "../../../slices/colorSlice";
 
 const style = {
   position: "absolute" as "absolute",
@@ -41,9 +35,6 @@ const SideNavModal = () => {
   const [open, setOpen] = React.useState(false);
 
   const [showMajors, setShowMajors] = useState(false);
-  const [showHouseholdMenu, setShowHouseholdMenu] = useState(false);
-  const [showSMEMenu, setShowSMEMenu] = useState(false);
-  const [showCorporate, setShowCorporate] = useState(false);
 
   const btnRef = React.useRef<HTMLButtonElement>();
   const menuRef = React.useRef<HTMLDivElement>();
@@ -57,11 +48,8 @@ const SideNavModal = () => {
 
   const handleClose = () => {
     btnRef?.current?.classList.toggle("open");
-    setOpen(false),
-      setShowCorporate(false),
-      setShowMajors(false),
-      setShowHouseholdMenu(false),
-      setShowSMEMenu(false);
+    setOpen(false);
+    setShowMajors(false);
   };
 
   const MainMenu = () => (
@@ -89,28 +77,37 @@ const SideNavModal = () => {
         </div>
       </div>
 
-      <div
-        onClick={() => setShowHouseholdMenu(!showHouseholdMenu)}
-        className="flex items-center justify-between"
-      >
-        {translate ? (
-          <p className="font-semibold pb-1 pl-4 text-xl logoFont text-gray-700 cursor-pointer">
-            Events
-          </p>
-        ) : (
-          <p className="font-semibold pb-1 pl-4 text-xl logoFont text-gray-700 cursor-pointer">
-            Sự kiện
-          </p>
-        )}
-        <div className="px-4">
-          <MdOutlineArrowForwardIos />
+      <Link href={"/events"}>
+        <div
+          className="flex items-center justify-between"
+          onClick={() => {
+            handleClose();
+          }}
+        >
+          {translate ? (
+            <p className="font-semibold pb-1 pl-4 text-xl logoFont text-gray-700 cursor-pointer">
+              Events
+            </p>
+          ) : (
+            <p className="font-semibold pb-1 pl-4 text-xl logoFont text-gray-700 cursor-pointer">
+              Sự kiện
+            </p>
+          )}
         </div>
-      </div>
+      </Link>
 
       <div onClick={() => handleClose()}>
         <Link href={"/blogs"}>
           <p className="font-semibold pb-1 pl-4 text-xl logoFont text-gray-700 cursor-pointer">
-            Blog
+            {translate ? "News" : "Tin tức"}
+          </p>
+        </Link>
+      </div>
+
+      <div onClick={() => handleClose()}>
+        <Link href={"/career"}>
+          <p className="font-semibold pb-1 pl-4 text-xl logoFont text-gray-700 cursor-pointer">
+            {translate ? "Career" : "Định Hướng"}
           </p>
         </Link>
       </div>
@@ -266,126 +263,7 @@ const SideNavModal = () => {
     );
   };
 
-  const HouseholdMenu = () => (
-    <div className="w-[80vw]">
-      <div
-        className="flex w-full"
-        onClick={() => setShowHouseholdMenu(!showHouseholdMenu)}
-      >
-        <div className="p-3">
-          <MdOutlineArrowBackIos />
-        </div>
-        <div className=" p-2 text-xl font-semibold text-iwanttoColor">
-          Events
-        </div>
-      </div>
-
-      <div className="flex flex-col items-start justify-center">
-        <div className="w-full cursor-pointer p-3 pl-6 pt-6 font-semibold">
-          Lorem
-        </div>
-        <div className="w-full cursor-pointer p-3 pl-6 font-semibold">
-          Lorem
-        </div>
-        <div className="w-full cursor-pointer p-3 pl-6 font-semibold">
-          Lorem
-        </div>
-        <div className="w-full cursor-pointer p-3 pl-6 font-semibold">
-          Lorem
-        </div>
-      </div>
-    </div>
-  );
-
-  const SMEMenu = () => (
-    <div className="w-[80vw]">
-      <div className="flex w-full" onClick={() => setShowSMEMenu(!showSMEMenu)}>
-        <div className="p-3">
-          <MdOutlineArrowBackIos />
-        </div>
-        <div className=" p-2 text-xl font-semibold text-iwanttoColor">Visa</div>
-      </div>
-
-      <div className="flex flex-col items-start justify-center">
-        <div className="w-full cursor-pointer p-3 pl-6 pt-6 font-semibold">
-          Lorem
-        </div>
-        <div className="w-full cursor-pointer p-3 pl-6 font-semibold">
-          Lorem
-        </div>
-        <div className="w-full cursor-pointer p-3 pl-6 font-semibold">
-          Lorem
-        </div>
-        <div className="w-full cursor-pointer p-3 pl-6 font-semibold">
-          Lorem
-        </div>
-        <div className="w-full cursor-pointer p-3 pl-6 font-semibold">
-          Lorem
-        </div>
-        <div className="w-full cursor-pointer p-3 pl-6 font-semibold">
-          Lorem
-        </div>
-        <div className="w-full cursor-pointer p-3 pl-6 font-semibold">
-          Lorem
-        </div>
-        <div className="w-full cursor-pointer p-3 pl-6 font-semibold">
-          Lorem
-        </div>
-        <div className="w-full cursor-pointer p-3 pl-6 font-semibold">
-          Lorem
-        </div>
-        <div className="w-full cursor-pointer p-3 pl-6 font-semibold">
-          Lorem
-        </div>
-      </div>
-    </div>
-  );
-
-  const CorporateMenu = () => (
-    <div className="w-[80vw]">
-      <div
-        className="justify-startflex flex w-full items-center"
-        onClick={() => setShowCorporate(!showCorporate)}
-      >
-        <div className="p-3">
-          <MdOutlineArrowBackIos />
-        </div>
-        <div className=" p-2 text-xl font-semibold text-iwanttoColor">
-          English
-        </div>
-      </div>
-
-      <div className="flex flex-col items-start justify-center">
-        <div className="w-full cursor-pointer p-3 pl-6 pt-6 font-semibold">
-          Lorem
-        </div>
-        <div className="w-full cursor-pointer p-3 pl-6 font-semibold">
-          Lorem
-        </div>
-        <div className="w-full cursor-pointer p-3 pl-6 font-semibold">
-          Lorem
-        </div>
-        <div className="w-full cursor-pointer p-3 pl-6 font-semibold">
-          Lorem
-        </div>
-        <div className="w-full cursor-pointer p-3 pl-6 font-semibold">
-          Lorem
-        </div>
-        <div className="w-full cursor-pointer p-3 pl-6 font-semibold">
-          Lorem
-        </div>
-        <div className="w-full cursor-pointer p-3 pl-6 font-semibold">
-          Lorem
-        </div>
-        <div className="w-full cursor-pointer p-3 pl-6 font-semibold">
-          Lorem
-        </div>
-      </div>
-    </div>
-  );
-
   const color = useAppSelector((state) => state.iconState.color);
-  const dispatch = useAppDispatch();
 
   const styleBG = color
     ? "sticky bg-darkBlue top-0 z-40 flex items-center justify-between p-2 sm:px-4 lg:hidden"
@@ -437,14 +315,8 @@ const SideNavModal = () => {
               id="menu"
               className="items-left mt-4 flex flex-col justify-center space-y-4 overflow-y-auto"
             >
-              {!showMajors &&
-                !showHouseholdMenu &&
-                !showSMEMenu &&
-                !showCorporate && <MainMenu />}
+              {!showMajors && <MainMenu />}
               {showMajors && <MajorsMenu />}
-              {showHouseholdMenu && <HouseholdMenu />}
-              {showSMEMenu && <SMEMenu />}
-              {showCorporate && <CorporateMenu />}
             </motion.div>
           </Box>
         </Fade>

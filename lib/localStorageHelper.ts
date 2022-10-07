@@ -15,4 +15,3 @@ export const getFromStorage = (key: string) => {
   }
   return storedItem;
 };
-

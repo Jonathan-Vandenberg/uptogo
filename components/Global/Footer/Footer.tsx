@@ -39,20 +39,27 @@ const Footer = () => {
               <a href="tel:+84926561080">0926 561 080</a>
             </p>
           </div>
-          <div className="flex items-center justify-center bg-gradient-to-r from-startColor to-endColor p-6">
-            <div className="rounded-full bg-white p-3 text-3xl text-gray-700">
-              <GrMapLocation />
+          <Link
+            href={
+              "https://www.google.com/maps/place/117%2F17+X%C3%B4+Vi%E1%BA%BFt+Ngh%E1%BB%87+T%C4%A9nh,+Ph%C6%B0%E1%BB%9Dng+17,+B%C3%ACnh+Th%E1%BA%A1nh,+Th%C3%A0nh+ph%E1%BB%91+H%E1%BB%93+Ch%C3%AD+Minh,+Vietnam/@10.7944839,106.7060835,18z/data=!3m1!4b1!4m9!1m2!2m1!1zMTE3LzE3IFjDtCBWaeG6v3QgTmdo4buHIFTEqW5oLCBQaMaw4budbmcgMTcsIELDrG5oIFRo4bqhbmgsIFRow6BuaCBwaOG7kSBI4buTIENow60gTWluaCwgVmlldG5hbQ!3m5!1s0x317528b17bff2909:0xf1acfd12d73d4c63!8m2!3d10.7944813!4d106.7083258!15sCmExMTcvMTcgWMO0IFZp4bq_dCBOZ2jhu4cgVMSpbmgsIFBoxrDhu51uZyAxNywgQsOsbmggVGjhuqFuaCwgVGjDoG5oIHBo4buRIEjhu5MgQ2jDrSBNaW5oLCBWaWV0bmFtkgEQZ2VvY29kZWRfYWRkcmVzc-ABAA"
+            }
+            target="_blank"
+          >
+            <div className="flex items-center justify-center bg-gradient-to-r from-startColor to-endColor p-6">
+              <div className="rounded-full bg-white p-3 text-3xl text-gray-700">
+                <GrMapLocation />
+              </div>
+              {translate ? (
+                <p className="p-3 text-xl font-semibold text-gray-700">
+                  Visit Us
+                </p>
+              ) : (
+                <p className="p-3 text-xl font-semibold text-gray-700">
+                  Ghé thăm chúng tôi
+                </p>
+              )}
             </div>
-            {translate ? (
-              <p className="p-3 text-xl font-semibold text-gray-700">
-                Find locations to study at
-              </p>
-            ) : (
-              <p className="p-3 text-xl font-semibold text-gray-700">
-                Tìm địa điểm học tại
-              </p>
-            )}
-          </div>
+          </Link>
           <div className="flex items-center justify-center p-6">
             <div className="p-3 text-3xl">
               <AiOutlineMail />
@@ -96,15 +103,17 @@ const Footer = () => {
           </Link>
           <div className="space-y-1">
             <p className="whitespace-nowrap text-center text-sm font-semibold">
-              Uptogo Joint-Stock Company (Uptogo)
+              {translate ? "Uptogo Company Limited" : "Công ty TNHH Uptogo"}
             </p>
             {translate ? (
               <p className="text-grey-800 text-md text-center">
-                Head Office: 89 Lang Ha Str., Dong Da Dist., HCMC
+                Head address: 117/17 Xo Viet Nghe Tinh, 17 Ward, Bình Thạnh
+                District, HCMC
               </p>
             ) : (
               <p className="text-grey-800 text-md text-center">
-                Văn phòng Chính: 89 Lang Ha Str., Dong Da Dist., HCMC
+                Địa chỉ: 117/17 Xô Viết Nghệ Tĩnh, phường 17, quận Bình Thạnh,
+                HCMC
               </p>
             )}
           </div>
@@ -166,14 +175,27 @@ const MobileFooterHeader = () => {
             <a href="tel:+84926561080">0926 561 080</a>
           </p>
         </div>
-        <div className="flex items-center justify-center bg-gradient-to-r from-startColor to-endColor p-6">
-          <div className="rounded-full bg-white p-3 text-3xl">
-            <GrMapLocation />
+        <Link
+          href={
+            "https://www.google.com/maps/place/117%2F17+X%C3%B4+Vi%E1%BA%BFt+Ngh%E1%BB%87+T%C4%A9nh,+Ph%C6%B0%E1%BB%9Dng+17,+B%C3%ACnh+Th%E1%BA%A1nh,+Th%C3%A0nh+ph%E1%BB%91+H%E1%BB%93+Ch%C3%AD+Minh,+Vietnam/@10.7944839,106.7060835,18z/data=!3m1!4b1!4m9!1m2!2m1!1zMTE3LzE3IFjDtCBWaeG6v3QgTmdo4buHIFTEqW5oLCBQaMaw4budbmcgMTcsIELDrG5oIFRo4bqhbmgsIFRow6BuaCBwaOG7kSBI4buTIENow60gTWluaCwgVmlldG5hbQ!3m5!1s0x317528b17bff2909:0xf1acfd12d73d4c63!8m2!3d10.7944813!4d106.7083258!15sCmExMTcvMTcgWMO0IFZp4bq_dCBOZ2jhu4cgVMSpbmgsIFBoxrDhu51uZyAxNywgQsOsbmggVGjhuqFuaCwgVGjDoG5oIHBo4buRIEjhu5MgQ2jDrSBNaW5oLCBWaWV0bmFtkgEQZ2VvY29kZWRfYWRkcmVzc-ABAA"
+          }
+          target="_blank"
+        >
+          <div className="flex items-center justify-center bg-gradient-to-r from-startColor to-endColor p-6">
+            <div className="rounded-full bg-white p-3 text-3xl text-gray-700">
+              <GrMapLocation />
+            </div>
+            {translate ? (
+              <p className="p-3 text-xl font-semibold text-gray-700">
+                Visit Us
+              </p>
+            ) : (
+              <p className="p-3 text-xl font-semibold text-gray-700">
+                Ghé thăm chúng tôi
+              </p>
+            )}
           </div>
-          <p className="p-3 text-xl font-semibold text-gray-700">
-            Find locations to study at
-          </p>
-        </div>
+        </Link>
         <div className="flex items-center justify-center p-6">
           <div className="p-3 text-3xl">
             <AiOutlineMail />
