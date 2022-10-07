@@ -6,7 +6,7 @@
     "studio": "prisma studio",
     "dev": "next dev",
     "build": "next build",
-    "start": "next start -H 0.0.0.0 -p ${PORT:-8080}",
+    "start": "next start",
     "lint": "next lint",
     "format": "prettier --ignore-path .gitignore --write \"**/*.{ts,js,tsx,jsx,css,scss}\"",
     "watch": "next build tailwindcss -i ./styles/input.css -o ./dist/output.css --watch",
