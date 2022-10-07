@@ -10,7 +10,6 @@ export default function Login() {
     <>
       <Head>
         <title>Uptogo | The Easiest Way To Study Abroad</title>
-        <meta name="robots" content="noindex, nofollow" />
       </Head>
       <div className="relative">
         <div className="fixed md:static top-0 left-0 w-screen h-screen bg-white z-40 md:z-0">

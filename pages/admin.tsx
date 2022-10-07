@@ -6,7 +6,6 @@ export default function App() {
     <>
       <Head>
         <title>Uptogo | The Easiest Way To Study Abroad</title>
-        <meta name="robots" content="noindex, nofollow" />
       </Head>
       <Admin />
     </>

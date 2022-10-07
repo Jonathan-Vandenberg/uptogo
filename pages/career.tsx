@@ -67,7 +67,6 @@ export default function App({ guidanceData }: IProps) {
         <meta property="og:image:alt" content="Lotus Angel Logo of Uptogo" />
         <meta property="og:locale" content="vi_VN" />
         <meta property="og:locale:alternate" content="en_GB" />
-        <meta name="robots" content="noindex, nofollow" />
       </Head>
       <div className="container mx-auto md:pt-12 pb-8">
         <CoursesMainPage
