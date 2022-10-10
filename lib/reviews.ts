@@ -14,7 +14,7 @@ export const reviews = [
   {
     name: "Thanh Triều",
     review:
-      "Cảm ơn Uptogo đã hỗ trợ rất nhiều tình trong quá trình apply và xin visa ạ. Mình đánh giá Uptogo là nơi uy tín để thực hiện các kế hoạch đi du học ạ.",
+      "Mình đã tham khảo nhiều công ty tư vấn du học khác nhau, nhưng mình cảm thấy dịch vụ ở Uptogo tốt. Khi mà mình thắc mắc và hỏi các anh chị thì các anh chị trả lời rất nhiệt tình, thân thiện giải đáp cặn kẽ vấn đề của mình. Mình biết hồ sơ của mình chưa được tốt lắm nhưng mấy anh chị vẫn giúp đỡ tạo thêm các điều kiện để mình hoàn thiện hồ sơ.",
     image: "https://picsum.photos/id/87/32/32",
   },
 ];
