@@ -233,7 +233,7 @@ export default function BlogPostMarkup({
       <ul>
         {data?.l1 && (
           <li className="py-4 text-xl">
-            <div className="flex items-center justify-1tart space-x-5">
+            <div className="flex items-center justify-start space-x-5">
               <CheckIcon className="text-green-500" fontSize="large" />
               <p className="text-gray-600">{data?.l1}</p>
             </div>
@@ -241,7 +241,7 @@ export default function BlogPostMarkup({
         )}
         {data?.l2 && (
           <li className="py-4 text-xl">
-            <div className="flex items-center justify-1tart space-x-5">
+            <div className="flex items-center justify-start space-x-5">
               <CheckIcon className="text-green-500" fontSize="large" />
               <p className="text-gray-600">{data?.l2}</p>
             </div>
@@ -249,7 +249,7 @@ export default function BlogPostMarkup({
         )}
         {data?.l3 && (
           <li className="py-4 text-xl">
-            <div className="flex items-center justify-1tart space-x-5">
+            <div className="flex items-center justify-start space-x-5">
               <CheckIcon className="text-green-500" fontSize="large" />
               <p className="text-gray-600">{data?.l3}</p>
             </div>
@@ -257,7 +257,7 @@ export default function BlogPostMarkup({
         )}
         {data?.l4 && (
           <li className="py-4 text-xl">
-            <div className="flex items-center justify-1tart space-x-5">
+            <div className="flex items-center justify-start space-x-5">
               <CheckIcon className="text-green-500" fontSize="large" />
               <p className="text-gray-600">{data?.l4}</p>
             </div>
@@ -265,7 +265,7 @@ export default function BlogPostMarkup({
         )}
         {data?.l5 && (
           <li className="py-4 text-xl">
-            <div className="flex items-center justify-1tart space-x-5">
+            <div className="flex items-center justify-start space-x-5">
               <CheckIcon className="text-green-500" fontSize="large" />
               <p className="text-gray-600">{data?.l5}</p>
             </div>
@@ -285,7 +285,7 @@ export default function BlogPostMarkup({
       <ul>
         {data?.l6 && (
           <li className="py-4 text-xl">
-            <div className="flex items-center justify-1tart space-x-5">
+            <div className="flex items-center justify-start space-x-5">
               <BsCircleFill
                 size={14}
                 className="text-darkBlue"
@@ -297,7 +297,7 @@ export default function BlogPostMarkup({
         )}
         {data?.l7 && (
           <li className="py-4 text-xl">
-            <div className="flex items-center justify-1tart space-x-5">
+            <div className="flex items-center justify-start space-x-5">
               <BsCircleFill
                 size={14}
                 className="text-darkBlue"
@@ -309,7 +309,7 @@ export default function BlogPostMarkup({
         )}
         {data?.l8 && (
           <li className="py-4 text-xl">
-            <div className="flex items-center justify-1tart space-x-5">
+            <div className="flex items-center justify-start space-x-5">
               <BsCircleFill
                 size={14}
                 className="text-darkBlue"
@@ -321,7 +321,7 @@ export default function BlogPostMarkup({
         )}
         {data?.l9 && (
           <li className="py-4 text-xl">
-            <div className="flex items-center justify-1tart space-x-5">
+            <div className="flex items-center justify-start space-x-5">
               <BsCircleFill
                 size={14}
                 className="text-darkBlue"
@@ -333,7 +333,7 @@ export default function BlogPostMarkup({
         )}
         {data?.l10 && (
           <li className="py-4 text-xl">
-            <div className="flex items-center justify-1tart space-x-5">
+            <div className="flex items-center justify-start space-x-5">
               <BsCircleFill
                 size={14}
                 className="text-darkBlue"
@@ -345,7 +345,7 @@ export default function BlogPostMarkup({
         )}
         {data?.l11 && (
           <li className="py-4 text-xl">
-            <div className="flex items-center justify-1tart space-x-5">
+            <div className="flex items-center justify-start space-x-5">
               <BsCircleFill
                 size={14}
                 className="text-darkBlue"
@@ -357,7 +357,7 @@ export default function BlogPostMarkup({
         )}
         {data?.l12 && (
           <li className="py-4 text-xl">
-            <div className="flex items-center justify-1tart space-x-5">
+            <div className="flex items-center justify-start space-x-5">
               <BsCircleFill
                 size={14}
                 className="text-darkBlue"
@@ -369,7 +369,7 @@ export default function BlogPostMarkup({
         )}
         {data?.l13 && (
           <li className="py-4 text-xl">
-            <div className="flex items-center justify-1tart space-x-5">
+            <div className="flex items-center justify-start space-x-5">
               <BsCircleFill
                 size={14}
                 className="text-darkBlue"
@@ -381,7 +381,7 @@ export default function BlogPostMarkup({
         )}
         {data?.l14 && (
           <li className="py-4 text-xl">
-            <div className="flex items-center justify-1tart space-x-5">
+            <div className="flex items-center justify-start space-x-5">
               <BsCircleFill
                 size={14}
                 className="text-darkBlue"
@@ -393,7 +393,7 @@ export default function BlogPostMarkup({
         )}
         {data?.l15 && (
           <li className="py-4 text-xl">
-            <div className="flex items-center justify-1tart space-x-5">
+            <div className="flex items-center justify-start space-x-5">
               <BsCircleFill
                 size={14}
                 className="text-darkBlue"

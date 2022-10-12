@@ -597,10 +597,8 @@ const AddClientForm = ({ details, add, edit, handleClose }: IProps) => {
       setPublishedDate("");
       setMainImage("");
       setPhotoCredit("");
-    }, 1000);
+    }, 4000);
   };
-
-  console.log(`title length: ${title?.length}`);
 
   const titleStyle =
     title?.length !== undefined && title?.length > 40 && title?.length < 50
