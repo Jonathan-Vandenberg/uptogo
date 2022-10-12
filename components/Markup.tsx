@@ -233,7 +233,7 @@ export default function BlogPostMarkup({
       <ul>
         {data?.l1 && (
           <li className="py-4 text-xl">
-            <div className="flex items-center justify-start space-x-5">
+            <div className="flex items-center justify-s space-x-5">
               <CheckIcon className="text-green-500" fontSize="large" />
               <p className="text-gray-600">{data?.l1}</p>
             </div>
@@ -241,7 +241,7 @@ export default function BlogPostMarkup({
         )}
         {data?.l2 && (
           <li className="py-4 text-xl">
-            <div className="flex items-center justify-start space-x-5">
+            <div className="flex items-center justify-s space-x-5">
               <CheckIcon className="text-green-500" fontSize="large" />
               <p className="text-gray-600">{data?.l2}</p>
             </div>
@@ -249,7 +249,7 @@ export default function BlogPostMarkup({
         )}
         {data?.l3 && (
           <li className="py-4 text-xl">
-            <div className="flex items-center justify-start space-x-5">
+            <div className="flex items-center justify-s space-x-5">
               <CheckIcon className="text-green-500" fontSize="large" />
               <p className="text-gray-600">{data?.l3}</p>
             </div>
@@ -257,7 +257,7 @@ export default function BlogPostMarkup({
         )}
         {data?.l4 && (
           <li className="py-4 text-xl">
-            <div className="flex items-center justify-start space-x-5">
+            <div className="flex items-center justify-s space-x-5">
               <CheckIcon className="text-green-500" fontSize="large" />
               <p className="text-gray-600">{data?.l4}</p>
             </div>
@@ -265,7 +265,7 @@ export default function BlogPostMarkup({
         )}
         {data?.l5 && (
           <li className="py-4 text-xl">
-            <div className="flex items-center justify-start space-x-5">
+            <div className="flex items-center justify-s space-x-5">
               <CheckIcon className="text-green-500" fontSize="large" />
               <p className="text-gray-600">{data?.l5}</p>
             </div>
@@ -285,120 +285,140 @@ export default function BlogPostMarkup({
       <ul>
         {data?.l6 && (
           <li className="py-4 text-xl">
-            <div className="flex items-center justify-start space-x-5">
-              <BsCircleFill
-                size={14}
-                className="text-darkBlue"
-                fontSize="large"
-              />
+            <div className="flex items-center justify-s space-x-5">
+              <div className="w-2">
+                <BsCircleFill
+                  size={14}
+                  className="text-darkBlue"
+                  fontSize="large"
+                />
+              </div>
               <p className="text-gray-600">{data?.l6}</p>
             </div>
           </li>
         )}
         {data?.l7 && (
           <li className="py-4 text-xl">
-            <div className="flex items-center justify-start space-x-5">
-              <BsCircleFill
-                size={14}
-                className="text-darkBlue"
-                fontSize="large"
-              />
+            <div className="flex items-center justify-s space-x-5">
+              <div className="w-2">
+                <BsCircleFill
+                  size={14}
+                  className="text-darkBlue"
+                  fontSize="large"
+                />
+              </div>
               <p className="text-gray-600">{data?.l7}</p>
             </div>
           </li>
         )}
         {data?.l8 && (
           <li className="py-4 text-xl">
-            <div className="flex items-center justify-start space-x-5">
-              <BsCircleFill
-                size={14}
-                className="text-darkBlue"
-                fontSize="large"
-              />
+            <div className="flex items-center justify-s space-x-5">
+              <div className="w-2">
+                <BsCircleFill
+                  size={14}
+                  className="text-darkBlue"
+                  fontSize="large"
+                />
+              </div>
               <p className="text-gray-600">{data?.l8}</p>
             </div>
           </li>
         )}
         {data?.l9 && (
           <li className="py-4 text-xl">
-            <div className="flex items-center justify-start space-x-5">
-              <BsCircleFill
-                size={14}
-                className="text-darkBlue"
-                fontSize="large"
-              />
+            <div className="flex items-center justify-s space-x-5">
+              <div className="w-2">
+                <BsCircleFill
+                  size={14}
+                  className="text-darkBlue"
+                  fontSize="large"
+                />
+              </div>
               <p className="text-gray-600">{data?.l9}</p>
             </div>
           </li>
         )}
         {data?.l10 && (
           <li className="py-4 text-xl">
-            <div className="flex items-center justify-start space-x-5">
-              <BsCircleFill
-                size={14}
-                className="text-darkBlue"
-                fontSize="large"
-              />
+            <div className="flex items-center justify-s space-x-5">
+              <div className="w-2">
+                <BsCircleFill
+                  size={14}
+                  className="text-darkBlue"
+                  fontSize="large"
+                />
+              </div>
               <p className="text-gray-600">{data?.l10}</p>
             </div>
           </li>
         )}
         {data?.l11 && (
           <li className="py-4 text-xl">
-            <div className="flex items-center justify-start space-x-5">
-              <BsCircleFill
-                size={14}
-                className="text-darkBlue"
-                fontSize="large"
-              />
+            <div className="flex items-center justify-s space-x-5">
+              <div className="w-2">
+                <BsCircleFill
+                  size={14}
+                  className="text-darkBlue"
+                  fontSize="large"
+                />
+              </div>
               <p className="text-gray-600">{data?.l11}</p>
             </div>
           </li>
         )}
         {data?.l12 && (
           <li className="py-4 text-xl">
-            <div className="flex items-center justify-start space-x-5">
-              <BsCircleFill
-                size={14}
-                className="text-darkBlue"
-                fontSize="large"
-              />
+            <div className="flex items-center justify-s space-x-5">
+              <div className="w-2">
+                <BsCircleFill
+                  size={14}
+                  className="text-darkBlue"
+                  fontSize="large"
+                />
+              </div>
               <p className="text-gray-600">{data?.l12}</p>
             </div>
           </li>
         )}
         {data?.l13 && (
           <li className="py-4 text-xl">
-            <div className="flex items-center justify-start space-x-5">
-              <BsCircleFill
-                size={14}
-                className="text-darkBlue"
-                fontSize="large"
-              />
+            <div className="flex items-center justify-s space-x-5">
+              <div className="w-2">
+                <BsCircleFill
+                  size={14}
+                  className="text-darkBlue"
+                  fontSize="large"
+                />
+              </div>
               <p className="text-gray-600">{data?.l13}</p>
             </div>
           </li>
         )}
         {data?.l14 && (
           <li className="py-4 text-xl">
-            <div className="flex items-center justify-start space-x-5">
-              <BsCircleFill
-                size={14}
-                className="text-darkBlue"
-                fontSize="large"
-              />
+            <div className="flex items-center justify-s space-x-5">
+              <div className="w-2">
+                <BsCircleFill
+                  size={14}
+                  className="text-darkBlue"
+                  fontSize="large"
+                />
+              </div>
               <p className="text-gray-600">{data?.l14}</p>
             </div>
           </li>
         )}
         {data?.l15 && (
           <li className="py-4 text-xl">
-            <div className="flex items-center justify-start space-x-5">
-              <BsCircleFill
-                size={14}
-                className="text-darkBlue"
-                fontSize="large"
-              />
+            <div className="flex items-center justify-s space-x-5">
+              <div className="w-2">
+                <BsCircleFill
+                  size={14}
+                  className="text-darkBlue"
+                  fontSize="large"
+                />
+              </div>
               <p className="text-gray-600">{data?.l15}</p>
             </div>
           </li>
