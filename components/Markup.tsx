@@ -453,7 +453,7 @@ export default function BlogPostMarkup({
         <p className="text-gray-500 py-1 text">Reference: {data?.reference2}</p>
       )}
       {session?.user?.email === process.env.ADMIN_EMAIL ||
-        (process.env.ADMIN_KRYSTAL && (
+        ("streetfighter010812@gmail.com" && (
           <div className="flex space-x-5 justify-center items-center py-6">
             <a
               href="#form"
