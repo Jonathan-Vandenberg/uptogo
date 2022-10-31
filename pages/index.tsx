@@ -6,7 +6,7 @@ export default function App() {
   return (
     <>
       {/* <Head>
-        <title>Uptogo | The Easiest Way To Study Abroad</title>
+        <title>Uptogo | Easiest Way To Study Abroad</title>
         <meta
           name="description"
           content="Uptogo helps Vietnamese students achieve thier dream to study abroad."
