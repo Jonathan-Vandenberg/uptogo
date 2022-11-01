@@ -456,18 +456,14 @@ export default function BlogPostMarkup({
       {session?.user?.email === "urbangentryjon@gmail.com" ||
         ("streetfighter010812@gmail.com" && (
           <div className="flex space-x-5 justify-center items-center py-6">
-            <a
-              href="#form"
-              className="flex items-center space-x-1"
-              onClick={handleEdit}
-            >
+            <div className="flex items-center space-x-1" onClick={handleEdit}>
               <div className="text-xl ">
                 <FaEdit size={25} className="text-red-600" />
               </div>
               <p className="text-lg text-red-600">
                 {translate ? "Edit" : "Chỉnh Sửa"}
               </p>
-            </a>
+            </div>
             {data?.category === "BLOG" && (
               <div className="flex items-center space-x-1" onClick={handleAdd}>
                 <div className="text-xl text-green-600">
