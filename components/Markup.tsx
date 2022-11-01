@@ -150,6 +150,7 @@ export default function BlogPostMarkup({
   handleEdit,
 }: IProps) {
   const { data: session, status } = useSession();
+  console.log(session?.user?.email);
   const translate = useAppSelector((state) => state.translationState.translate);
   return (
     <div>
@@ -477,12 +478,6 @@ export default function BlogPostMarkup({
                 </p>
               </div>
             )}
-            {/* <div className="flex items-center space-x-1">
-          <div className="text-xl">
-            <MdDeleteForever size={25} className="text-red-500" />
-          </div>
-          <p className="text-lg text-red-500">Delete</p>
-        </div> */}
           </div>
         ))}
     </div>
