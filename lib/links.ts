@@ -169,7 +169,7 @@ export const hospitalityLinks = [
 export const itLinks = [
   {
     courseE: "Software Development",
-    course: "Phát triển phần mền",
+    course: "Phát triển phần mềm",
     link: "/courses/information-technology/software-development",
   },
   {
