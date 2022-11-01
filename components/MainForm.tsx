@@ -624,6 +624,11 @@ const AddClientForm = ({ details, add, edit, handleClose }: IProps) => {
 
   return (
     <div className="px-5 max-w-[678px] md:max-w-[900px] mx-auto">
+      <div className="flex items-center justify-center">
+        <p className="text-2xl text-gray-700 font-bold text-center p-3">
+          ADMIN
+        </p>
+      </div>
       <form onSubmit={onFinish} className="space-y-3 py-12">
         {/* {category === "ADVICE" ||
           ("GUIDANCE" && (
