@@ -68,7 +68,7 @@ const AddClientForm = () => {
       <form onSubmit={onFinish} className="space-y-3 pb-12 w-full">
         <div className="px-8 flex items-start space-y-3 justify-center flex-col pt-3">
           <input
-            required
+            required={true}
             id="name"
             value={name as string}
             placeholder={translate ? "Full Name" : "Họ và tên"}
@@ -79,7 +79,7 @@ const AddClientForm = () => {
 
         <div className="px-8 flex items-start space-y-3 justify-center flex-col pt-3">
           <input
-            required
+            required={true}
             id="email"
             value={email as string}
             placeholder="Email"
@@ -90,7 +90,7 @@ const AddClientForm = () => {
 
         <div className="px-8 flex items-start space-y-3 justify-center flex-col pt-3">
           <input
-            required
+            required={true}
             id="mobile"
             value={mobile as string}
             placeholder={translate ? "Mobile" : "Điện thoại"}
