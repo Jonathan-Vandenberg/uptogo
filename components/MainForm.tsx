@@ -703,6 +703,7 @@ const AddClientForm = ({ details, add, edit, handleClose }: IProps) => {
         )}
 
         <div className="px-8 flex items-start space-y-3 justify-center flex-col pt-10">
+          <label htmlFor="html">Ngoài ra SEO tiêu đề - max 60 char</label>
           <input
             id="title"
             value={title as string}
@@ -713,6 +714,7 @@ const AddClientForm = ({ details, add, edit, handleClose }: IProps) => {
         </div>
 
         <div className="px-8 flex items-start space-y-3 justify-center flex-col">
+          <label htmlFor="html">Ngoài ra mô tả SEO - max 160 char</label>
           <input
             id="subtitle1"
             value={subtitle1 as string}
