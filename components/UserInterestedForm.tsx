@@ -134,7 +134,7 @@ const AddClientForm = () => {
                 <CheckIcon className="text-green-500" fontSize="large" />
               </div>
             ) : (
-              <BsPlus size={25} className="text-green-500 hover:text-white" />
+              <BsPlus size={25} className="text-green-500" />
             )}
             {submitted ? "" : submitText}
           </button>

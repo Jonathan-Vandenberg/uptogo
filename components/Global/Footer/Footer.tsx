@@ -31,7 +31,7 @@ const Footer = () => {
       >
         <div className="h-[2px] bg-gradient-to-r from-startColor to-endColor"></div>
         <div className="drop-shadow lg:flex lg:items-center lg:justify-evenly">
-          <div className="flex items-center justify-center p-6">
+          <div className="flex items-center justify-center p-6 cursor-pointer">
             <div className="p-3 text-2xl text-green-500">
               <BsFillTelephoneOutboundFill />
             </div>
@@ -45,7 +45,7 @@ const Footer = () => {
             }
             target="_blank"
           >
-            <div className="flex items-center justify-center bg-gradient-to-r from-startColor to-endColor p-6">
+            <div className="flex items-center cursor-pointer justify-center bg-gradient-to-r from-startColor to-endColor p-6">
               <div className="rounded-full bg-white p-3 text-3xl text-gray-700">
                 <GrMapLocation />
               </div>
@@ -60,7 +60,7 @@ const Footer = () => {
               )}
             </div>
           </Link>
-          <div className="flex items-center justify-center p-6">
+          <div className="flex items-center justify-center p-6 cursor-pointer">
             <div className="p-3 text-3xl">
               <AiOutlineMail />
             </div>
