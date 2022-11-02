@@ -204,6 +204,8 @@ interface IProps {
 }
 
 const AddClientForm = ({ details, add, edit, handleClose }: IProps) => {
+  const [formSent, setFormSent] = useState(false);
+
   const Dtitle = add ? "" : details?.title;
   const Dcategory = add ? "" : details?.category;
   const Dsubtitle1 = add ? "" : details?.subtitle1;
@@ -543,10 +545,9 @@ const AddClientForm = ({ details, add, edit, handleClose }: IProps) => {
         if (category === "LEADERSHIP_MANAGEMENT")
           updateLeadershipManagement(form);
       }
-
-      // if (add) {
-      //   addSoftwareDevelopment(form);
-      // }
+      setTimeout(() => {
+        setFormSent(!formSent);
+      }, 1000);
     }
 
     sendForm();
@@ -1103,8 +1104,13 @@ const AddClientForm = ({ details, add, edit, handleClose }: IProps) => {
             className="flex items-center justify-between space-x-2 px-4 h-10 rounded-full text-green-500 bg-white border-2 border-green-500"
           >
             <BsPlus size={25} className="text-green-500 hover:text-white" />
-            Cập Nhật
+            {formSent ? "đã được cập nhật" : "Cập Nhật"}
           </button>
+          {formSent && (
+            <p className="text-xl text-gray-800 font-semibold text-center">
+              Chờ 1 phút rồi làm mới để xem kết quả
+            </p>
+          )}
         </motion.div>
       </form>
     </div>

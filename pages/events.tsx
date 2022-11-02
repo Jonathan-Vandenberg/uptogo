@@ -27,6 +27,7 @@ export const getStaticProps: GetStaticProps = async () => {
 
   return {
     props: { data },
+    revalidate: 60,
   };
 };
 
@@ -34,12 +35,6 @@ export default function App({ data }: IProps) {
   const [showForm, setShowForm] = useState(false);
   const [edit, setEdit] = useState(false);
   const [add, setAdd] = useState(false);
-
-  const { asPath } = useRouter();
-
-  function Crubs() {
-    return <p>home!{asPath}</p>;
-  }
 
   const handleAdd = () => {
     setShowForm(!showForm);
