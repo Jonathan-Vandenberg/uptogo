@@ -1097,7 +1097,7 @@ const AddClientForm = ({ details, add, edit, handleClose }: IProps) => {
             transition: { duration: 0.2 },
           }}
           whileTap={{ scale: 0.98 }}
-          className="flex items-center justify-center border-green-600"
+          className="flex flex-col space-y-2 items-center justify-center border-green-600"
         >
           <button
             type="submit"

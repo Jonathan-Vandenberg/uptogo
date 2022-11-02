@@ -154,7 +154,7 @@ export default function BlogPostMarkup({
   const translate = useAppSelector((state) => state.translationState.translate);
   return (
     <div>
-      <ul className="border-y-2 border-gray-200 py-6 flex flex-col items-start justify-start space-y-5">
+      <ul className="border-y-2 border-gray-200 pb-6 pt-2 flex flex-col items-start justify-start space-y-5">
         {data?.tableContents1 && (
           <li className="text-xl text-gray-700 flex items-center justify-between space-x-4">
             <div>
