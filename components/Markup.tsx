@@ -455,8 +455,8 @@ export default function BlogPostMarkup({
       {session?.user?.email ===
         ("urbangentryjon@gmail.com" || "streetfighter010812@gmail.com") && (
         <div className="flex space-x-5 justify-center items-center py-6">
-          <div className="flex flex-col items-center justify-center space-y-3">
-            <p className="p-2 text-lg">Nhấp một lần và cuộn xuống</p>
+          <div className="flex flex-col items-center justify-center space-y-2">
+            <p className="text-lg text-red-600">Nhấp một lần và cuộn xuống</p>
             <div className="flex items-center space-x-1" onClick={handleEdit}>
               <div className="text-xl cursor-pointer">
                 <FaEdit size={25} className="text-red-600" />
