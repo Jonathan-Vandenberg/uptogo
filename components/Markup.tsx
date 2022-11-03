@@ -453,7 +453,9 @@ export default function BlogPostMarkup({
         <p className="text-gray-500 py-1 text">Reference: {data?.reference2}</p>
       )}
       {session?.user?.email ===
-        ("urbangentryjon@gmail.com" || "streetfighter010812@gmail.com") && (
+        ("urbangentryjon@gmail.com" ||
+          "streetfighter010812@gmail.com" ||
+          "marketing.uptogo@gmail.com") && (
         <div className="flex space-x-5 justify-center items-center py-6">
           <div className="flex flex-col items-center justify-center space-y-2">
             <p className="text-lg text-red-600">Nhấp một lần và cuộn xuống</p>
