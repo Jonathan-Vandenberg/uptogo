@@ -177,7 +177,7 @@ const MobileFooterHeader = () => {
         </div>
         <Link
           href={
-            "https://www.google.com/maps/place/117%2F17+X%C3%B4+Vi%E1%BA%BFt+Ngh%E1%BB%87+T%C4%A9nh,+Ph%C6%B0%E1%BB%9Dng+17,+B%C3%ACnh+Th%E1%BA%A1nh,+Th%C3%A0nh+ph%E1%BB%91+H%E1%BB%93+Ch%C3%AD+Minh,+Vietnam/@10.7944839,106.7060835,18z/data=!3m1!4b1!4m9!1m2!2m1!1zMTE3LzE3IFjDtCBWaeG6v3QgTmdo4buHIFTEqW5oLCBQaMaw4budbmcgMTcsIELDrG5oIFRo4bqhbmgsIFRow6BuaCBwaOG7kSBI4buTIENow60gTWluaCwgVmlldG5hbQ!3m5!1s0x317528b17bff2909:0xf1acfd12d73d4c63!8m2!3d10.7944813!4d106.7083258!15sCmExMTcvMTcgWMO0IFZp4bq_dCBOZ2jhu4cgVMSpbmgsIFBoxrDhu51uZyAxNywgQsOsbmggVGjhuqFuaCwgVGjDoG5oIHBo4buRIEjhu5MgQ2jDrSBNaW5oLCBWaWV0bmFtkgEQZ2VvY29kZWRfYWRkcmVzc-ABAA"
+            "https://www.google.com/maps/place/38+%C4%90.+T%C3%A2n+C%E1%BA%A3ng,+Ph%C6%B0%E1%BB%9Dng+25,+B%C3%ACnh+Th%E1%BA%A1nh,+Th%C3%A0nh+ph%E1%BB%91+H%E1%BB%93+Ch%C3%AD+Minh,+Vi%E1%BB%87t+Nam/@10.7998113,106.7190144,17z/data=!3m1!4b1!4m5!3m4!1s0x317528a7c84d2503:0x1f0575d1ad7c9982!8m2!3d10.799806!4d106.7212031"
           }
           target="_blank"
         >
