@@ -36,11 +36,14 @@ export default function App({ data }: IProps) {
         <meta property="og:locale:alternate" content="en_GB" />
       </Head>
       <div className="flex flex-col space-y-12 mx-auto md:pt-20 container">
-        {data?.map((post) => (
-          <div key={post?.id} className="w-full">
-            <BlogPageHero data={post} />
-          </div>
-        ))}
+        {data
+          ?.map((post) => (
+            <div key={post?.id} className="w-full">
+              <BlogPageHero data={post} />
+            </div>
+          ))
+          .slice(0)
+          .reverse()}
       </div>
     </>
   );
