@@ -452,34 +452,37 @@ export default function BlogPostMarkup({
       {data?.reference2 && (
         <p className="text-gray-500 py-1 text">Reference: {data?.reference2}</p>
       )}
-      {session?.user?.email ===
+      {/* {session?.user?.email ===
         ("urbangentryjon@gmail.com" ||
           "streetfighter010812@gmail.com" ||
-          "marketing.uptogo@gmail.com") && (
-        <div className="flex space-x-5 justify-center items-center py-6">
-          <div className="flex flex-col items-center justify-center space-y-2">
-            <p className="text-lg text-red-600">Nhấp một lần và cuộn xuống</p>
-            <div className="flex items-center space-x-1" onClick={handleEdit}>
-              <div className="text-xl cursor-pointer">
-                <FaEdit size={25} className="text-red-600" />
-              </div>
-              <p className="text-lg text-red-600 cursor-pointer">
-                {translate ? "Edit" : "Chỉnh Sửa"}
-              </p>
+          "marketing.uptogo@gmail.com") && ( */}
+      <div
+        className="flex cursor-pointer space-x-5 justify-center items-center py-6 border-4 border-red-500 rounded-xl w-auto"
+        onClick={handleEdit}
+      >
+        <div className="flex flex-col items-center justify-center space-y-2">
+          <p className="text-lg text-red-600">Nhấp một lần và cuộn xuống</p>
+          <div className="flex items-center space-x-1">
+            <div className="text-xl cursor-pointer">
+              <FaEdit size={25} className="text-red-600" />
             </div>
+            <p className="text-lg text-red-600 cursor-pointer">
+              {translate ? "Edit" : "Chỉnh Sửa"}
+            </p>
           </div>
-          {data?.category === "BLOG" && (
-            <div className="flex items-center space-x-1" onClick={handleAdd}>
-              <div className="text-xl text-green-600">
-                <MdAddCircleOutline size={25} />
-              </div>
-              <p className="text-lg text-green-600">
-                {translate ? "Add" : "Cộng"}
-              </p>
-            </div>
-          )}
         </div>
-      )}
+        {data?.category === "BLOG" && (
+          <div className="flex items-center space-x-1" onClick={handleAdd}>
+            <div className="text-xl text-green-600">
+              <MdAddCircleOutline size={25} />
+            </div>
+            <p className="text-lg text-green-600">
+              {translate ? "Add" : "Cộng"}
+            </p>
+          </div>
+        )}
+      </div>
+      {/* )} */}
     </div>
   );
 }

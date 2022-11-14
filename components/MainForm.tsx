@@ -626,7 +626,7 @@ const AddClientForm = ({ details, add, edit, handleClose }: IProps) => {
   return (
     <div className="px-5 max-w-[678px] md:max-w-[900px] mx-auto">
       <div className="flex items-center justify-center">
-        <p className="text-3xl text-gray-700 font-bold text-center underline underline-offset-2">
+        <p className="text-3xl text-red-600 font-bold text-center underline underline-offset-2">
           ADMIN
         </p>
       </div>
