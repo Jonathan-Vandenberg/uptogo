@@ -455,7 +455,7 @@ export default function BlogPostMarkup({
       {session?.user?.email ===
         ("urbangentryjon@gmail.com" ||
           "streetfighter010812@gmail.com" ||
-          "events.uptogo@gmail.com") && (
+          "event.uptogo@gmail.com") && (
         <div
           className="flex cursor-pointer space-x-5 justify-center items-center py-6 border-4 border-red-500 rounded-xl w-auto"
           onClick={handleEdit}
