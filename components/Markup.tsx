@@ -72,6 +72,7 @@ import type {
 import EmailButton from "./UI/EmailButton";
 import { useAppSelector } from "../redux-hooks/hooks";
 import ThreeD from "./UI/ThreeD";
+import { useState } from "react";
 
 interface IProps {
   data:
@@ -151,6 +152,8 @@ export default function BlogPostMarkup({
 }: IProps) {
   const { data: session, status } = useSession();
   const translate = useAppSelector((state) => state.translationState.translate);
+  const [editActivated, setEditActivated] = useState(false);
+
   return (
     <div>
       <ul className="border-y-2 border-gray-200 pb-6 pt-2 flex flex-col items-start justify-start space-y-5">
@@ -452,37 +455,53 @@ export default function BlogPostMarkup({
       {data?.reference2 && (
         <p className="text-gray-500 py-1 text">Reference: {data?.reference2}</p>
       )}
-      {session?.user?.email ===
+      {/* {session?.user?.email ===
         ("urbangentryjon@gmail.com" ||
           "streetfighter010812@gmail.com" ||
-          "event.uptogo@gmail.com") && (
-        <div
-          className="flex cursor-pointer space-x-5 justify-center items-center py-6 border-4 border-red-500 rounded-xl w-auto"
-          onClick={handleEdit}
-        >
-          <div className="flex flex-col items-center justify-center space-y-2">
-            <p className="text-lg text-red-600">Nhấp một lần và cuộn xuống</p>
-            <div className="flex items-center space-x-1">
-              <div className="text-xl cursor-pointer">
-                <FaEdit size={25} className="text-red-600" />
-              </div>
-              <p className="text-lg text-red-600 cursor-pointer">
-                {translate ? "Edit" : "Chỉnh Sửa"}
-              </p>
-            </div>
+          "event.uptogo@gmail.com") && ( */}
+      <div
+        className={
+          editActivated
+            ? "flex cursor-pointer space-x-5 justify-center items-center py-6 border-4 border-green-600 rounded-xl w-auto"
+            : "flex cursor-pointer space-x-5 justify-center items-center py-6 border-4 border-red-500 rounded-xl w-auto"
+        }
+        onClick={() => {
+          handleEdit(), setEditActivated(!editActivated);
+        }}
+      >
+        <div className="flex flex-col items-center justify-center space-y-2">
+          <p
+            className={
+              editActivated ? "text-lg text-green-600" : "text-lg text-red-600"
+            }
+          >
+            {editActivated ? "Cuộn xuống" : "Nhấp một lần và cuộn xuống"}
+          </p>
+          <div className="flex items-center space-x-1">
+            {!editActivated && (
+              <>
+                <div className="text-xl cursor-pointer">
+                  <FaEdit size={25} className="text-red-600" />
+                </div>
+                <p className="text-lg text-red-600 cursor-pointer">
+                  {translate ? "Edit" : "Chỉnh Sửa"}
+                </p>
+              </>
+            )}
           </div>
-          {data?.category === "BLOG" && (
-            <div className="flex items-center space-x-1" onClick={handleAdd}>
-              <div className="text-xl text-green-600">
-                <MdAddCircleOutline size={25} />
-              </div>
-              <p className="text-lg text-green-600">
-                {translate ? "Add" : "Cộng"}
-              </p>
-            </div>
-          )}
         </div>
-      )}
+        {data?.category === "BLOG" && (
+          <div className="flex items-center space-x-1" onClick={handleAdd}>
+            <div className="text-xl text-green-600">
+              <MdAddCircleOutline size={25} />
+            </div>
+            <p className="text-lg text-green-600">
+              {translate ? "Add" : "Cộng"}
+            </p>
+          </div>
+        )}
+      </div>
+      {/* )} */}
     </div>
   );
 }
