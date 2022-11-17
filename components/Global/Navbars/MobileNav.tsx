@@ -18,6 +18,7 @@ import fullLogo from "../../../public/fullLogo.png";
 import faviconLogo from "../../../public/uptogoFavicon.png";
 import AuthBtn from "../../UI/AuthBtn";
 import TranslateBtn from "../../UI/TranslateBtn";
+import { useSession } from "next-auth/react";
 
 import { useAppSelector } from "../../../redux-hooks/hooks";
 
@@ -33,13 +34,11 @@ const style = {
 
 const SideNavModal = () => {
   const [open, setOpen] = React.useState(false);
-
   const [showMajors, setShowMajors] = useState(false);
-
   const btnRef = React.useRef<HTMLButtonElement>();
   const menuRef = React.useRef<HTMLDivElement>();
-
   const translate = useAppSelector((state) => state.translationState.translate);
+  const { data: session, status } = useSession();
 
   const openMenu = () => {
     setOpen(true);
@@ -121,7 +120,7 @@ const SideNavModal = () => {
         </div>
       </Link>
 
-      <div onClick={() => handleClose()}>
+      <div>
         <TranslateBtn />
       </div>
 
@@ -168,16 +167,21 @@ const SideNavModal = () => {
         </div>
       </Link>
 
-      <Link href={"/admin"}>
-        <div
-          className="flex cursor-pointer items-center justify-start space-x-2 px-4"
-          onClick={() => handleClose()}
-        >
-          <div className="text-xl">
-            <MdAdminPanelSettings />
+      {session?.user?.email ===
+        ("urbangentryjon@gmail.com" ||
+          "streetfighter010812@gmail.com" ||
+          "event.uptogo@gmail.com") && (
+        <Link href={"/admin"}>
+          <div
+            className="flex cursor-pointer items-center justify-start space-x-2 px-4"
+            onClick={() => handleClose()}
+          >
+            <div className="text-xl">
+              <MdAdminPanelSettings />
+            </div>
           </div>
-        </div>
-      </Link>
+        </Link>
+      )}
     </div>
   );
 
