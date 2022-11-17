@@ -52,7 +52,7 @@ const SideNavModal = () => {
   };
 
   const MainMenu = () => (
-    <div className="h-[screen] w-[80vw] space-y-3 bg-sky-50">
+    <div className="h-[screen] w-[80vw] space-y-4 bg-sky-50">
       <div className="flex items-center justify-center mt-4">
         <AuthBtn />
       </div>
@@ -113,7 +113,7 @@ const SideNavModal = () => {
 
       <Link href={"/"}>
         <div
-          className="flex cursor-pointer items-center justify-center"
+          className="flex cursor-pointer items-center justify-center py-5"
           onClick={handleClose}
         >
           <Image src={fullLogo} width="100" height="100" alt="logo" />
@@ -124,19 +124,11 @@ const SideNavModal = () => {
         <TranslateBtn />
       </div>
 
-      <div className="flex flex-col items-center">
-        <Link href="/about">
-          <a className="cursor-pointer px-2">
-            {translate ? <p>About Us</p> : <p>Về chúng tôi</p>}
-          </a>
-        </Link>
-
-        <div>
-          <a className="cursor-pointer px-2">
-            {translate ? <p>Recruit</p> : <p>Tuyển dụng</p>}
-          </a>
-        </div>
-      </div>
+      <Link href="/about">
+        <a className="cursor-pointer px-2 flex items-center justify-center pb-3">
+          {translate ? <p>About Us</p> : <p>Về chúng tôi</p>}
+        </a>
+      </Link>
 
       <div onClick={handleClose}>
         <Link href={"/favorites"}>
