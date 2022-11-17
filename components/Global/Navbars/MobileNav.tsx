@@ -53,7 +53,7 @@ const SideNavModal = () => {
   };
 
   const MainMenu = () => (
-    <div className="h-[screen] w-[80vw] space-y-5 bg-sky-50">
+    <div className="h-[screen] w-[80vw] space-y-3 bg-sky-50">
       <div className="flex items-center justify-center mt-4">
         <AuthBtn />
       </div>
@@ -64,11 +64,11 @@ const SideNavModal = () => {
         className="flex items-center justify-between pt-2"
       >
         {translate ? (
-          <p className="font-semibold pb-1 pl-4 text-xl logoFont text-gray-700 cursor-pointer">
+          <p className="font-semibold pl-4 text-lg logoFont text-gray-700 cursor-pointer">
             Majors
           </p>
         ) : (
-          <p className="font-semibold pb-1 pl-4 text-xl logoFont text-gray-700 cursor-pointer">
+          <p className="font-semibold pl-4 text-lg logoFont text-gray-700 cursor-pointer">
             Ngành Học
           </p>
         )}
@@ -85,11 +85,11 @@ const SideNavModal = () => {
           }}
         >
           {translate ? (
-            <p className="font-semibold pb-1 pl-4 text-xl logoFont text-gray-700 cursor-pointer">
+            <p className="font-semibold pl-4 text-lg logoFont text-gray-700 cursor-pointer">
               Events
             </p>
           ) : (
-            <p className="font-semibold pb-1 pl-4 text-xl logoFont text-gray-700 cursor-pointer">
+            <p className="font-semibold pl-4 text-lg logoFont text-gray-700 cursor-pointer">
               Sự kiện
             </p>
           )}
@@ -98,7 +98,7 @@ const SideNavModal = () => {
 
       <div onClick={() => handleClose()}>
         <Link href={"/blogs"}>
-          <p className="font-semibold pb-1 pl-4 text-xl logoFont text-gray-700 cursor-pointer">
+          <p className="font-semibold pl-4 text-lg logoFont text-gray-700 cursor-pointer">
             {translate ? "News" : "Tin tức"}
           </p>
         </Link>
@@ -106,7 +106,7 @@ const SideNavModal = () => {
 
       <div onClick={() => handleClose()}>
         <Link href={"/career"}>
-          <p className="font-semibold pb-1 pl-4 text-xl logoFont text-gray-700 cursor-pointer">
+          <p className="font-semibold pl-4 text-lg logoFont text-gray-700 cursor-pointer">
             {translate ? "Career" : "Định Hướng"}
           </p>
         </Link>

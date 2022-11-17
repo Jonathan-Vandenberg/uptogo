@@ -197,7 +197,12 @@ const MobileFooterHeader = () => {
             <AiOutlineMail />
           </div>
           {translate ? (
-            <p className="p-3 text-xl text-gray-700 logoFont">Email Us</p>
+            <a
+              className="p-3 text-xl logoFont text-iwanttoColor"
+              href="mailto: info@uptogo.org"
+            >
+              Email Us
+            </a>
           ) : (
             <a
               className="p-3 text-xl logoFont text-iwanttoColor"
