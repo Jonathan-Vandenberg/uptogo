@@ -40,9 +40,7 @@ const Footer = () => {
             </p>
           </div>
           <Link
-            href={
-              "https://www.google.com/maps/place/38+%C4%90.+T%C3%A2n+C%E1%BA%A3ng,+Ph%C6%B0%E1%BB%9Dng+25,+B%C3%ACnh+Th%E1%BA%A1nh,+Th%C3%A0nh+ph%E1%BB%91+H%E1%BB%93+Ch%C3%AD+Minh,+Vi%E1%BB%87t+Nam/@10.7998113,106.7190144,17z/data=!3m1!4b1!4m5!3m4!1s0x317528a7c84d2503:0x1f0575d1ad7c9982!8m2!3d10.799806!4d106.7212031"
-            }
+            href={"https://maps.app.goo.gl/GGLo7AFCEsPrcciL6"}
             target="_blank"
           >
             <div className="flex items-center cursor-pointer justify-center bg-gradient-to-r from-startColor to-endColor p-6">
@@ -176,9 +174,7 @@ const MobileFooterHeader = () => {
           </p>
         </div>
         <Link
-          href={
-            "https://www.google.com/maps/place/38+%C4%90.+T%C3%A2n+C%E1%BA%A3ng,+Ph%C6%B0%E1%BB%9Dng+25,+B%C3%ACnh+Th%E1%BA%A1nh,+Th%C3%A0nh+ph%E1%BB%91+H%E1%BB%93+Ch%C3%AD+Minh,+Vi%E1%BB%87t+Nam/@10.7998113,106.7190144,17z/data=!3m1!4b1!4m5!3m4!1s0x317528a7c84d2503:0x1f0575d1ad7c9982!8m2!3d10.799806!4d106.7212031"
-          }
+          href={"https://maps.app.goo.gl/GGLo7AFCEsPrcciL6"}
           target="_blank"
         >
           <div className="flex items-center justify-center bg-gradient-to-r from-startColor to-endColor p-6">
