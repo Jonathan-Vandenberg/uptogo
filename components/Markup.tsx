@@ -4,6 +4,8 @@ import { AiTwotoneCheckCircle } from "react-icons/ai";
 import { BsCircleFill } from "react-icons/bs";
 import { FaEdit } from "react-icons/fa";
 import { MdAddCircleOutline, MdDeleteForever } from "react-icons/md";
+import Image from "next/image";
+import blockchainImage from "public/courseMain/it/BlockchainExtra/Why-Study-Blockchain_-1060x596.webp";
 import type {
   Acting,
   AgedCare,
@@ -232,6 +234,9 @@ export default function BlogPostMarkup({
         </h2>
       )}
       {data?.p4 && <p className="text-gray-600 py-4 text-xl">{data?.p4}</p>}
+      {data?.category === "BLOCKCHAIN_TECH" && (
+        <Image src={blockchainImage} alt="blockchain image"></Image>
+      )}
       {data?.p5 && <p className="text-gray-600 py-4 text-xl">{data?.p5}</p>}
       <ul>
         {data?.l1 && (
