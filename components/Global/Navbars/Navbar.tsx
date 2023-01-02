@@ -16,34 +16,34 @@ const NavbarBottom: NextPage = () => {
 
   const translate = useAppSelector((state) => state.translationState.translate);
 
-  const [lastScrollY, setLastScrollY] = useState(0);
+  // const [lastScrollY, setLastScrollY] = useState(0);
 
-  const controlNavbar = () => {
-    if (typeof window !== "undefined") {
-      if (window.scrollY > lastScrollY) {
-        // if scroll down hide the navbar
-        controls.start({ translateY: -65 });
-      } else {
-        // if scroll up show the navbar
-        controls.start({ translateY: 0 });
-      }
+  // const controlNavbar = () => {
+  //   if (typeof window !== "undefined") {
+  //     if (window.scrollY > lastScrollY) {
+  //       // if scroll down hide the navbar
+  //       controls.start({ translateY: -65 });
+  //     } else {
+  //       // if scroll up show the navbar
+  //       controls.start({ translateY: 0 });
+  //     }
 
-      // remember current page location to use in the next move
-      setLastScrollY(window.scrollY);
-    }
-  };
+  //     // remember current page location to use in the next move
+  //     setLastScrollY(window.scrollY);
+  //   }
+  // };
 
-  useEffect(() => {
-    if (typeof window !== "undefined") {
-      window.addEventListener("scroll", controlNavbar);
+  // useEffect(() => {
+  //   if (typeof window !== "undefined") {
+  //     window.addEventListener("scroll", controlNavbar);
 
-      // cleanup function
-      return () => {
-        window.removeEventListener("scroll", controlNavbar);
-      };
-    }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [lastScrollY]);
+  //     // cleanup function
+  //     return () => {
+  //       window.removeEventListener("scroll", controlNavbar);
+  //     };
+  //   }
+  //   // eslint-disable-next-line react-hooks/exhaustive-deps
+  // }, [lastScrollY]);
 
   const router = useRouter();
 
@@ -51,11 +51,11 @@ const NavbarBottom: NextPage = () => {
     setMajorsDropdown(false);
   };
 
-  const controls = useAnimationControls();
+  // const controls = useAnimationControls();
 
   return (
     <motion.div
-      animate={controls}
+      // animate={controls}
       className="sticky top-0  z-50 hidden bg-white/90 border-b-4 border-orange lg:block"
       onMouseLeave={handleCloseDropdowns}
     >

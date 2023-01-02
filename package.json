@@ -10,10 +10,9 @@
     "lint": "next lint",
     "format": "prettier --ignore-path .gitignore --write \"**/*.{ts,js,tsx,jsx,css,scss}\"",
     "watch": "next build tailwindcss -i ./styles/input.css -o ./dist/output.css --watch",
-    "codegen": "graphql-codegen --config codegen.yml",
-    "prepare": "husky install"
+    "codegen": "graphql-codegen --config codegen.yml"
   },
-   "engines": {
+  "engines": {
     "node": ">=12.x.x <=16.x.x",
     "npm": ">=6.0.0"
   },
