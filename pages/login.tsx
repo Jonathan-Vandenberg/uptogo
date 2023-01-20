@@ -12,7 +12,7 @@ export default function Login() {
   const router = useRouter();
 
   useEffect(() => {
-    router.push("/");
+    if (session) router.push("/");
   }, [session]);
 
   return (
