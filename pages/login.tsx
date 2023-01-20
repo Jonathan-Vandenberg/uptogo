@@ -1,11 +1,20 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Image from "next/image";
 import logo from "../public/fullLogo.png";
 import { signIn } from "next-auth/react";
 import { motion } from "framer-motion";
 import Head from "next/head";
+import { useRouter } from "next/router";
+import { useSession } from "next-auth/react";
 
 export default function Login() {
+  const { data: session } = useSession();
+  const router = useRouter();
+
+  useEffect(() => {
+    router.push("/");
+  }, [session]);
+
   return (
     <>
       <Head>
